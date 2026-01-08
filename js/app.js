@@ -144,48 +144,42 @@ NUR valides JSON.`;
     const werte = Object.values(antworten);
     const durchschnitt = werte.reduce((a, b) => a + b, 0) / werte.length;
     const radikalCount = werte.filter(v => v >= 4).length;
-    const moderatCount = werte.filter(v => v <= 2).length;
     
-    prompt = `Du vergleichst die Nutzer-Positionen mit dem Erfurter Programm der Linken (2011).
+    prompt = `Vergleiche Nutzer-Positionen mit dem Erfurter Programm der Linken (2011).
 
-SKALA: 1 = moderat/reformistisch, 5 = radikal/systemkritisch
-
-PROGRAMM-POSITIONEN (entsprechen etwa Stufe 3-4):
-- EIGENTUM: Vergesellschaftung strategischer Sektoren, öffentliches Eigentum
-- ARBEIT: Gute Arbeit, Mindestlohn, Tarifbindung, 30h-Woche als Ziel
-- STAAT: Sozialstaat ausbauen, mehr Demokratie
-- ÖKOLOGIE: Sozial-ökologischer Umbau
-- PLANUNG: Regulierung, öffentliche Daseinsvorsorge
-- FEMINISMUS: Gleichstellung, Care-Arbeit anerkennen
-- GLOBAL: Internationale Solidarität, EU reformieren
-- MIGRATION: Humanitäre Flüchtlingspolitik
+SKALA: 1 = moderat, 5 = radikal. PROGRAMM = etwa Stufe 3-4.
 
 NUTZER-PROFIL:
 ${profilText}
 
-STATISTIK: Durchschnitt ${durchschnitt.toFixed(1)}/5, ${radikalCount} radikale (4-5), ${moderatCount} moderate (1-2) Positionen
+STATISTIK: Durchschnitt ${durchschnitt.toFixed(1)}/5, ${radikalCount} radikale Positionen (4-5)
 
-AUFGABE: Analysiere EHRLICH wo der Nutzer im Verhältnis zum Programm steht.
+REGEL:
+- Durchschnitt > 3.5 → verhältnis = "radikaler"
+- Durchschnitt 2.5-3.5 → verhältnis = "auf_linie"  
+- Durchschnitt < 2.5 → verhältnis = "moderater"
 
-- Wenn Durchschnitt < 2.5: Nutzer ist MODERATER als das Programm
-- Wenn Durchschnitt 2.5-3.5: Nutzer ist ETWA AUF PROGRAMMLINIE
-- Wenn Durchschnitt > 3.5: Nutzer ist RADIKALER als das Programm
-
-Antworte als JSON:
+JSON-Antwort:
 {
-  "ueberschrift": "Passende Überschrift je nach Ergebnis",
-  "einleitung": "1-2 Sätze in Du-Form die das Verhältnis zum Programm beschreiben",
-  "verhältnis": "moderater" oder "auf_linie" oder "radikaler",
+  "ueberschrift": "Kurze Überschrift",
+  "einleitung": "1-2 Sätze in Du-Form",
+  "verhältnis": "radikaler" oder "auf_linie" oder "moderater",
   "spannungsfelder": [
-    NUR wenn verhältnis="radikaler": Zeige wo Nutzer über Programm hinausgeht
-    Bei "moderater": Zeige wo Programm weiter geht als Nutzer
-    Bei "auf_linie": Leeres Array [] oder 1-2 kleine Unterschiede
+    {
+      "thema": "THEMENNAME",
+      "deine_position": "Was der Nutzer will (konkret!)",
+      "programm_position": "Was das Programm sagt (konkret!)",
+      "luecke": "Kurze Erklärung der Differenz"
+    }
   ],
-  "programm_kritik": "Bei 'radikaler': Warum hinkt Programm hinterher. Bei 'moderater': Warum ist Programm schon gut/radikal. Bei 'auf_linie': Kurze Würdigung",
-  "einladung": "Passender Aufruf: Bei 'radikaler': Programm verändern! Bei 'moderater': Tiefer einsteigen, radikaler denken! Bei 'auf_linie': Gemeinsam kämpfen!"
+  "einladung": "NUR bei radikaler: Aufruf das Programm zu verändern. Sonst null"
 }
 
-WICHTIG: Sei EHRLICH. Wenn jemand moderate Werte (1-2) wählt, ist er NICHT radikaler als das Programm!
+WICHTIG für spannungsfelder:
+- NUR bei verhältnis="radikaler" befüllen, sonst leeres Array []
+- Jedes Feld MUSS deine_position und programm_position haben
+- Sei KONKRET, keine Platzhalter!
+
 NUR valides JSON.`;
   }
 
@@ -670,8 +664,7 @@ const AnalyseBox = ({ analyse, typ, antworten, params, onGenerateAntrag, showAnt
         {/* Header */}
         <div style={{ textAlign: 'center', marginBottom: '2rem' }}>
           <div style={{ fontSize: '3rem', marginBottom: '0.5rem' }}>
-            {analyse.verhältnis === 'radikaler' ? '🔥' : 
-             analyse.verhältnis === 'moderater' ? '📚' : '✓'}
+            {analyse.verhältnis === 'radikaler' ? '🔥' : '✓'}
           </div>
           <h2 style={{ margin: '0 0 0.5rem', color: COLORS.weiss }}>
             {analyse.ueberschrift || 'Dein Profil & das Parteiprogramm'}
@@ -687,34 +680,32 @@ const AnalyseBox = ({ analyse, typ, antworten, params, onGenerateAntrag, showAnt
           </div>
         )}
         
-        {/* Spannungsfelder - Label je nach Verhältnis */}
-        {hatSpannungen && (
+        {/* Spannungsfelder - NUR bei radikaler */}
+        {analyse.verhältnis === 'radikaler' && hatSpannungen && (
           <div style={{ marginBottom: '1.5rem' }}>
             <div className="label" style={{ marginBottom: '1rem', textAlign: 'center' }}>
-              {analyse.verhältnis === 'radikaler' ? '⚡ WO DU ÜBER DAS PROGRAMM HINAUSGEHST' : 
-               analyse.verhältnis === 'moderater' ? '📋 WO DAS PROGRAMM WEITER GEHT' :
-               '↔️ UNTERSCHIEDE ZUM PROGRAMM'}
+              ⚡ WO DU ÜBER DAS PROGRAMM HINAUSGEHST
             </div>
             {spannungen.map((s, i) => (
-              <div key={i} className="card" style={{ marginBottom: '0.75rem', borderLeft: `4px solid ${analyse.verhältnis === 'radikaler' ? COLORS.orange : COLORS.gruen}` }}>
+              <div key={i} className="card" style={{ marginBottom: '0.75rem', borderLeft: `4px solid ${COLORS.orange}` }}>
                 <div className="card-body">
-                  <div style={{ fontWeight: 700, color: analyse.verhältnis === 'radikaler' ? COLORS.rot : COLORS.gruen, marginBottom: '0.75rem', fontSize: '0.85rem', letterSpacing: '0.05em' }}>
+                  <div style={{ fontWeight: 700, color: COLORS.rot, marginBottom: '0.75rem', fontSize: '0.85rem', letterSpacing: '0.05em' }}>
                     {s.thema}
                   </div>
-                  <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem', marginBottom: '0.75rem' }}>
+                  <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem', marginBottom: s.luecke ? '0.75rem' : 0 }}>
                     <div>
                       <div style={{ fontSize: '0.65rem', color: '#888', marginBottom: '0.25rem', letterSpacing: '0.05em' }}>DEINE POSITION</div>
-                      <div style={{ fontSize: '0.9rem', color: COLORS.weiss }}>{s.deine_position}</div>
+                      <div style={{ fontSize: '0.9rem', color: COLORS.weiss }}>{s.deine_position || '–'}</div>
                     </div>
                     <div>
                       <div style={{ fontSize: '0.65rem', color: '#888', marginBottom: '0.25rem', letterSpacing: '0.05em' }}>DAS PROGRAMM</div>
-                      <div style={{ fontSize: '0.9rem', color: '#AAA' }}>{s.programm_position}</div>
+                      <div style={{ fontSize: '0.9rem', color: '#AAA' }}>{s.programm_position || '–'}</div>
                     </div>
                   </div>
                   {s.luecke && (
                     <div style={{ 
                       fontSize: '0.85rem', 
-                      color: analyse.verhältnis === 'radikaler' ? COLORS.orange : COLORS.gruen, 
+                      color: COLORS.orange, 
                       fontStyle: 'italic',
                       paddingTop: '0.5rem',
                       borderTop: '1px solid #444'
@@ -728,57 +719,38 @@ const AnalyseBox = ({ analyse, typ, antworten, params, onGenerateAntrag, showAnt
           </div>
         )}
         
-        {/* Programm-Kritik / Würdigung */}
-        {analyse.programm_kritik && (
-          <div className="card" style={{ marginBottom: '1.5rem', background: '#333' }}>
-            <div className="card-body">
-              <div className="label" style={{ marginBottom: '0.5rem' }}>
-                {analyse.verhältnis === 'radikaler' ? 'WARUM HINKT DAS PROGRAMM HINTERHER?' : 
-                 analyse.verhältnis === 'moderater' ? 'WARUM IST DAS PROGRAMM SCHON GUT?' :
-                 'ZUM PROGRAMM'}
-              </div>
-              <p style={{ margin: 0, lineHeight: 1.6, color: '#CCC' }}>{analyse.programm_kritik}</p>
+        {/* Einladung mit Antrags-Button - NUR bei radikaler */}
+        {analyse.verhältnis === 'radikaler' && analyse.einladung && (
+          <div className="card" style={{ background: COLORS.rot, color: COLORS.weiss }}>
+            <div className="card-body" style={{ textAlign: 'center' }}>
+              <p style={{ margin: showAntragButton ? '0 0 1rem' : 0, fontSize: '1.1rem', lineHeight: 1.5 }}>{analyse.einladung}</p>
+              {showAntragButton && onGenerateAntrag && (
+                <button
+                  onClick={onGenerateAntrag}
+                  style={{ 
+                    padding: '0.75rem 1.5rem', 
+                    background: 'rgba(255,255,255,0.25)', 
+                    border: '2px solid rgba(255,255,255,0.5)',
+                    borderRadius: '8px', 
+                    fontWeight: 600,
+                    fontSize: '0.95rem',
+                    color: 'white',
+                    cursor: 'pointer',
+                    transition: 'all 0.2s'
+                  }}
+                  onMouseEnter={(e) => {
+                    e.target.style.background = 'rgba(255,255,255,0.4)';
+                  }}
+                  onMouseLeave={(e) => {
+                    e.target.style.background = 'rgba(255,255,255,0.25)';
+                  }}
+                >
+                  ✍️ Antrag generieren
+                </button>
+              )}
             </div>
           </div>
         )}
-        
-        {/* Einladung - Farbe je nach Verhältnis */}
-        <div className="card" style={{ 
-          background: analyse.verhältnis === 'radikaler' ? COLORS.rot : 
-                      analyse.verhältnis === 'moderater' ? COLORS.orange : 
-                      COLORS.gruen, 
-          color: COLORS.weiss 
-        }}>
-          <div className="card-body" style={{ textAlign: 'center' }}>
-            {analyse.einladung && (
-              <p style={{ margin: showAntragButton ? '0 0 1rem' : 0, fontSize: '1.1rem', lineHeight: 1.5 }}>{analyse.einladung}</p>
-            )}
-            {showAntragButton && onGenerateAntrag && (
-              <button
-                onClick={onGenerateAntrag}
-                style={{ 
-                  padding: '0.75rem 1.5rem', 
-                  background: 'rgba(255,255,255,0.25)', 
-                  border: '2px solid rgba(255,255,255,0.5)',
-                  borderRadius: '8px', 
-                  fontWeight: 600,
-                  fontSize: '0.95rem',
-                  color: 'white',
-                  cursor: 'pointer',
-                  transition: 'all 0.2s'
-                }}
-                onMouseEnter={(e) => {
-                  e.target.style.background = 'rgba(255,255,255,0.4)';
-                }}
-                onMouseLeave={(e) => {
-                  e.target.style.background = 'rgba(255,255,255,0.25)';
-                }}
-              >
-                ✍️ Antrag generieren
-              </button>
-            )}
-          </div>
-        </div>
       </div>
     );
   }
