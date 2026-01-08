@@ -1166,7 +1166,7 @@ const Layer3 = ({ profilL1, profilL2, onBack, apiKey, paramsL1, paramsL2 }) => {
               typ="layer3" 
               onGenerateAntrag={handleGenerateAntrag}
               showAntragButton={analyse?.verhältnis === 'radikaler' && analyse?.spannungsfelder?.length > 0 && !showAntrag}
-            />}
+            />
             
             {/* Antrags-Anzeige */}
             {showAntrag && (
