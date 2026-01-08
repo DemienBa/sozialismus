@@ -88,11 +88,15 @@ const PARAMETER_L2_BASE = [
 const analyzeWithGroq = async (antworten, params, apiKey, analyseTyp) => {
   if (!apiKey) return null;
   
+  console.log('analyzeWithGroq called with:', analyseTyp, 'params:', params?.length); // Debug
+  
   const profilText = params.map(p => {
     const wert = antworten[p.id];
     const stufe = p.stufen?.find(s => s.wert === wert);
     return `${p.titel} (${p.kurz}): ${wert}/5 - "${stufe?.label || ''}"`;
   }).join('\n');
+  
+  console.log('profilText:', profilText.substring(0, 200)); // Debug
 
   let prompt = '';
   
@@ -123,22 +127,20 @@ Für abgrenzung_spd_gruene:
 
 NUR JSON.`;
   } else if (analyseTyp === 'layer2') {
-    prompt = `Du analysierst einen Sozialismus-Typ. Schreibe in DU-FORM.
+    prompt = `Analysiere diesen Sozialismus-Typ basierend auf dem Profil. Schreibe in DU-FORM.
 
 PROFIL:
 ${profilText}
 
-Antworte als JSON:
+Antworte NUR mit diesem JSON (keine anderen Texte):
 {
-  "archetyp": "Name für deinen Sozialismus (z.B. Libertärer Ökosozialismus, Rätedemokratischer Kommunismus)",
-  "beschreibung": "2-3 Sätze in Du-Form (z.B. 'Du verbindest... mit...')",
-  "theoretiker": ["Denker*in 1 (Schlagwort)", "Denker*in 2 (Schlagwort)"],
-  "staerken": ["Stärke deines Ansatzes 1", "Stärke 2"],
-  "spannungen": ["Interne Spannung/Herausforderung 1", "Spannung 2"],
-  "slogan": "Dein Slogan (max 6 Wörter)"
-}
-
-NUR valides JSON.`;
+  "archetyp": "Kreativer Name für diesen Sozialismus-Typ (z.B. Libertärer Ökosozialismus, Rätedemokratischer Kommunismus, Feministischer Mutualismus)",
+  "beschreibung": "2-3 Sätze in Du-Form die beschreiben was diesen Typ ausmacht",
+  "theoretiker": ["Name 1 (Schlagwort)", "Name 2 (Schlagwort)"],
+  "staerken": ["Stärke 1", "Stärke 2"],
+  "spannungen": ["Interne Spannung 1", "Spannung 2"],
+  "slogan": "Kurzer Slogan (max 6 Wörter)"
+}`;
   } else if (analyseTyp === 'layer3') {
     // Berechne Durchschnitt um Radikalität einzuschätzen
     const werte = Object.values(antworten);
@@ -222,6 +224,13 @@ NUR valides JSON.`;
     }
   }
 
+  console.log('Prompt length:', prompt.length, 'Type:', analyseTyp); // Debug
+  
+  if (!prompt) {
+    console.error('Prompt ist leer für analyseTyp:', analyseTyp);
+    return null;
+  }
+
   try {
     const response = await fetch(GROQ_API_URL, {
       method: 'POST',
@@ -246,17 +255,32 @@ NUR valides JSON.`;
     }
     
     const text = data.choices?.[0]?.message?.content || '';
-    console.log('Raw text:', text.substring(0, 200)); // Debug
+    console.log('Raw text:', text.substring(0, 300)); // Debug
     
-    const jsonMatch = text.match(/\{[\s\S]*\}/);
+    // Versuche JSON zu extrahieren (auch aus Markdown Code-Blocks)
+    let jsonStr = text;
+    
+    // Entferne Markdown Code-Block falls vorhanden
+    const codeBlockMatch = text.match(/```(?:json)?\s*([\s\S]*?)```/);
+    if (codeBlockMatch) {
+      jsonStr = codeBlockMatch[1];
+    }
+    
+    // Finde JSON-Objekt
+    const jsonMatch = jsonStr.match(/\{[\s\S]*\}/);
     if (jsonMatch) {
       try {
-        return JSON.parse(jsonMatch[0]);
+        const parsed = JSON.parse(jsonMatch[0]);
+        console.log('Parsed JSON:', parsed); // Debug
+        return parsed;
       } catch (parseError) {
-        console.error('JSON Parse Error:', parseError, jsonMatch[0].substring(0, 200));
+        console.error('JSON Parse Error:', parseError.message);
+        console.error('Attempted to parse:', jsonMatch[0].substring(0, 300));
         return null;
       }
     }
+    
+    console.error('No JSON found in response');
     return null;
   } catch (error) {
     console.error('Groq Fetch Fehler:', error);
@@ -516,7 +540,17 @@ const DetailModal = ({ parameter, value, onChange, onClose, darkMode = false }) 
 
 // Analyse-Anzeige
 const AnalyseBox = ({ analyse, typ, antworten, params, onGenerateAntrag, showAntragButton }) => {
-  if (!analyse) return <div style={{ textAlign: 'center', color: COLORS.grau }}>Analyse konnte nicht geladen werden.</div>;
+  if (!analyse) {
+    return (
+      <div className="card" style={{ textAlign: 'center', padding: '2rem' }}>
+        <div style={{ fontSize: '2rem', marginBottom: '1rem' }}>⚠️</div>
+        <p style={{ color: COLORS.grau, margin: 0 }}>
+          Analyse konnte nicht geladen werden.<br/>
+          <span style={{ fontSize: '0.8rem' }}>Prüfe die Browser-Konsole (F12) für Details.</span>
+        </p>
+      </div>
+    );
+  }
   
   if (typ === 'layer1') {
     // Parameter-Bewertung im Frontend berechnen
