@@ -231,61 +231,86 @@ NUR valides JSON.`;
     return null;
   }
 
-  try {
-    const response = await fetch(GROQ_API_URL, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        'Authorization': `Bearer ${apiKey}`
-      },
-      body: JSON.stringify({
-        model: GROQ_MODEL,
-        messages: [{ role: 'user', content: prompt }],
-        max_tokens: 2000,
-        temperature: 0.7
-      })
-    });
+  // Retry-Logik für Rate Limiting (429 Errors)
+  const maxRetries = 3;
+  let lastError = null;
+  
+  for (let attempt = 1; attempt <= maxRetries; attempt++) {
+    try {
+      const response = await fetch(GROQ_API_URL, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': `Bearer ${apiKey}`
+        },
+        body: JSON.stringify({
+          model: GROQ_MODEL,
+          messages: [{ role: 'user', content: prompt }],
+          max_tokens: 2000,
+          temperature: 0.7
+        })
+      });
 
-    const data = await response.json();
-    console.log('Groq Response:', data); // Debug
-    
-    if (data.error) {
-      console.error('Groq API Error:', data.error);
-      return null;
-    }
-    
-    const text = data.choices?.[0]?.message?.content || '';
-    console.log('Raw text:', text.substring(0, 300)); // Debug
-    
-    // Versuche JSON zu extrahieren (auch aus Markdown Code-Blocks)
-    let jsonStr = text;
-    
-    // Entferne Markdown Code-Block falls vorhanden
-    const codeBlockMatch = text.match(/```(?:json)?\s*([\s\S]*?)```/);
-    if (codeBlockMatch) {
-      jsonStr = codeBlockMatch[1];
-    }
-    
-    // Finde JSON-Objekt
-    const jsonMatch = jsonStr.match(/\{[\s\S]*\}/);
-    if (jsonMatch) {
-      try {
-        const parsed = JSON.parse(jsonMatch[0]);
-        console.log('Parsed JSON:', parsed); // Debug
-        return parsed;
-      } catch (parseError) {
-        console.error('JSON Parse Error:', parseError.message);
-        console.error('Attempted to parse:', jsonMatch[0].substring(0, 300));
+      // Rate Limit Error - warten und retry
+      if (response.status === 429) {
+        const waitTime = attempt * 2000; // 2s, 4s, 6s
+        console.log(`Rate limit erreicht. Warte ${waitTime/1000}s... (Versuch ${attempt}/${maxRetries})`);
+        await new Promise(resolve => setTimeout(resolve, waitTime));
+        continue;
+      }
+
+      const data = await response.json();
+      console.log('Groq Response:', data); // Debug
+      
+      if (data.error) {
+        console.error('Groq API Error:', data.error);
+        lastError = data.error;
+        if (data.error.code === 'rate_limit_exceeded') {
+          const waitTime = attempt * 2000;
+          console.log(`Rate limit (error). Warte ${waitTime/1000}s...`);
+          await new Promise(resolve => setTimeout(resolve, waitTime));
+          continue;
+        }
         return null;
       }
+      
+      const text = data.choices?.[0]?.message?.content || '';
+      console.log('Raw text:', text.substring(0, 300)); // Debug
+      
+      // Versuche JSON zu extrahieren (auch aus Markdown Code-Blocks)
+      let jsonStr = text;
+      
+      // Entferne Markdown Code-Block falls vorhanden
+      const codeBlockMatch = text.match(/```(?:json)?\s*([\s\S]*?)```/);
+      if (codeBlockMatch) {
+        jsonStr = codeBlockMatch[1];
+      }
+      
+      // Finde JSON-Objekt
+      const jsonMatch = jsonStr.match(/\{[\s\S]*\}/);
+      if (jsonMatch) {
+        try {
+          const parsed = JSON.parse(jsonMatch[0]);
+          console.log('Parsed JSON:', parsed); // Debug
+          return parsed;
+        } catch (parseError) {
+          console.error('JSON Parse Error:', parseError.message);
+          console.error('Attempted to parse:', jsonMatch[0].substring(0, 300));
+          return null;
+        }
+      }
+      
+      console.error('No JSON found in response');
+      return null;
+      
+    } catch (error) {
+      console.error('Groq Fetch Fehler:', error);
+      lastError = error;
     }
-    
-    console.error('No JSON found in response');
-    return null;
-  } catch (error) {
-    console.error('Groq Fetch Fehler:', error);
-    return null;
   }
+  
+  console.error('Alle Versuche fehlgeschlagen:', lastError);
+  return null;
 };
 
 // ═══════════════════════════════════════════════════════════════════════════
@@ -543,11 +568,18 @@ const AnalyseBox = ({ analyse, typ, antworten, params, onGenerateAntrag, showAnt
   if (!analyse) {
     return (
       <div className="card" style={{ textAlign: 'center', padding: '2rem' }}>
-        <div style={{ fontSize: '2rem', marginBottom: '1rem' }}>⚠️</div>
-        <p style={{ color: COLORS.grau, margin: 0 }}>
-          Analyse konnte nicht geladen werden.<br/>
-          <span style={{ fontSize: '0.8rem' }}>Prüfe die Browser-Konsole (F12) für Details.</span>
+        <div style={{ fontSize: '2rem', marginBottom: '1rem' }}>⏳</div>
+        <p style={{ color: COLORS.grau, margin: '0 0 1rem' }}>
+          Die KI-API ist gerade überlastet.<br/>
+          <strong>Bitte warte kurz und lade die Seite neu.</strong>
         </p>
+        <button 
+          onClick={() => window.location.reload()} 
+          className="btn btn-secondary"
+          style={{ fontSize: '0.85rem' }}
+        >
+          🔄 Seite neu laden
+        </button>
       </div>
     );
   }
