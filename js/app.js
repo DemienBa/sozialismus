@@ -143,56 +143,83 @@ NUR valides JSON.`;
     // Berechne Durchschnitt um Radikalität einzuschätzen
     const werte = Object.values(antworten);
     const durchschnitt = werte.reduce((a, b) => a + b, 0) / werte.length;
-    const radikalCount = werte.filter(v => v >= 4).length;
+    const istRadikal = durchschnitt > 3.5;
+    const istModerat = durchschnitt < 2.5;
     
-    prompt = `Du vergleichst die Nutzer-Positionen mit dem Erfurter Programm der Linken (2011).
-
-SKALA: 1 = moderat/reformistisch, 5 = radikal/systemkritisch
-
+    const programmPositionen = `
 PROGRAMM-POSITIONEN (entsprechen etwa Stufe 3-4):
-- EIGENTUM: "Öffentliches Eigentum", "Vergesellschaftung strategischer Sektoren" – primär staatlich gedacht
-- ARBEIT: "Gute Arbeit für alle", Mindestlohn, Tarifbindung, 30h-Woche als Fernziel
-- STAAT: "Sozialstaat ausbauen", "Demokratie erweitern" – aber keine Überwindungsperspektive
-- ÖKOLOGIE: "Sozial-ökologischer Umbau" – aber kein konsequentes Degrowth
-- PLANUNG: Regulierung und öffentliche Daseinsvorsorge – aber keine demokratische Planwirtschaft
+- EIGENTUM: Öffentliches Eigentum, Vergesellschaftung strategischer Sektoren – primär staatlich gedacht, wenig Commons
+- ARBEIT: Gute Arbeit, Mindestlohn, Tarifbindung, 30h-Woche als Fernziel – aber kein Post-Work
+- STAAT: Sozialstaat ausbauen, mehr Demokratie – aber keine Überwindungsperspektive
+- ÖKOLOGIE: Sozial-ökologischer Umbau – aber kein konsequentes Degrowth
+- PLANUNG: Regulierung, öffentliche Daseinsvorsorge – aber keine demokratische Planwirtschaft
 - FEMINISMUS: Gleichstellung, Care-Arbeit anerkennen
-- GLOBAL: Internationale Solidarität – aber nationalstaatlich orientiert
-- MIGRATION: Humanitäre Flüchtlingspolitik – "offene Grenzen" fehlt
+- GLOBAL: Internationale Solidarität – aber nationalstaatlich orientiert, EU reformieren
+- MIGRATION: Humanitäre Flüchtlingspolitik – "offene Grenzen" fehlt`;
 
-NUTZER-PROFIL:
+    if (istRadikal) {
+      prompt = `Vergleiche Nutzer-Positionen mit dem Erfurter Programm der Linken (2011).
+${programmPositionen}
+
+NUTZER-PROFIL (Durchschnitt ${durchschnitt.toFixed(1)}/5 – radikaler als Programm):
 ${profilText}
 
-STATISTIK: Durchschnitt ${durchschnitt.toFixed(1)}/5, ${radikalCount} radikale Positionen (4-5)
-
-AUFGABE: Analysiere wo der Nutzer im Verhältnis zum Programm steht.
-
-- Durchschnitt > 3.5 → verhältnis = "radikaler" (Nutzer geht über Programm hinaus)
-- Durchschnitt 2.5-3.5 → verhältnis = "uebereinstimmend" (Nutzer entspricht etwa dem Programm)
-- Durchschnitt < 2.5 → verhältnis = "moderater" (Programm ist radikaler als Nutzer)
+Der Nutzer ist RADIKALER als das Programm. Zeige 2-4 konkrete Spannungsfelder wo der Nutzer über das Programm hinausgeht.
 
 Antworte als JSON:
 {
-  "ueberschrift": "Passende Überschrift (z.B. 'Du gehst über das Programm hinaus' oder 'Du bist mit dem Programm übereinstimmend' oder 'Das Programm ist radikaler als du')",
-  "einleitung": "2-3 Sätze in Du-Form die das Verhältnis zum Programm beschreiben. Sei konkret!",
-  "verhältnis": "radikaler" oder "uebereinstimmend" oder "moderater",
+  "ueberschrift": "Du gehst über das Programm hinaus",
+  "einleitung": "2-3 Sätze in Du-Form: Beschreibe konkret wo und warum der Nutzer radikaler ist",
+  "verhältnis": "radikaler",
   "spannungsfelder": [
     {
       "thema": "z.B. EIGENTUM",
-      "deine_position": "KONKRET was der Nutzer will basierend auf seinem Profil (z.B. 'Du willst Commons und Selbstverwaltung statt Staatseigentum')",
-      "programm_position": "KONKRET was das Programm sagt (z.B. 'Das Programm setzt auf öffentliches/staatliches Eigentum')",
-      "luecke": "Wo die Differenz liegt"
+      "deine_position": "Konkret was der Nutzer will basierend auf seinen hohen Werten (4-5)",
+      "programm_position": "Konkret was das Erfurter Programm dazu sagt",
+      "luecke": "Wo das Programm hinterherhinkt"
     }
   ],
-  "einladung": "NUR bei verhältnis=radikaler: Motivierender Aufruf das Programm zu verändern (2 Sätze). Bei uebereinstimmend/moderater: null"
+  "einladung": "Motivierender Aufruf (2 Sätze): Programm verändern, Antrag schreiben!"
 }
 
-WICHTIG für spannungsfelder:
-- NUR bei verhältnis="radikaler" befüllen mit 2-4 konkreten Spannungsfeldern
-- Bei "uebereinstimmend" oder "moderater": leeres Array []
-- deine_position und programm_position müssen KONKRETE INHALTE haben, keine Platzhalter!
-- Beziehe dich auf die tatsächlichen Werte im Profil!
+Beziehe dich auf die KONKRETEN hohen Werte (4-5) im Profil! NUR valides JSON.`;
+    } else if (istModerat) {
+      prompt = `Vergleiche Nutzer-Positionen mit dem Erfurter Programm der Linken (2011).
+${programmPositionen}
+
+NUTZER-PROFIL (Durchschnitt ${durchschnitt.toFixed(1)}/5 – moderater als Programm):
+${profilText}
+
+Der Nutzer ist MODERATER als das Programm.
+
+Antworte als JSON:
+{
+  "ueberschrift": "Das Programm ist radikaler als du",
+  "einleitung": "2-3 Sätze in Du-Form: Beschreibe konkret wo das Programm weiter geht als die Positionen des Nutzers. Sei ermutigend, nicht belehrend.",
+  "verhältnis": "moderater",
+  "spannungsfelder": []
+}
 
 NUR valides JSON.`;
+    } else {
+      prompt = `Vergleiche Nutzer-Positionen mit dem Erfurter Programm der Linken (2011).
+${programmPositionen}
+
+NUTZER-PROFIL (Durchschnitt ${durchschnitt.toFixed(1)}/5 – entspricht etwa dem Programm):
+${profilText}
+
+Der Nutzer stimmt weitgehend mit dem Programm überein.
+
+Antworte als JSON:
+{
+  "ueberschrift": "Du passt zum Programm",
+  "einleitung": "2-3 Sätze in Du-Form: Beschreibe wo der Nutzer mit dem Erfurter Programm übereinstimmt. Sei wertschätzend.",
+  "verhältnis": "uebereinstimmend",
+  "spannungsfelder": []
+}
+
+NUR valides JSON.`;
+    }
   }
 
   try {
