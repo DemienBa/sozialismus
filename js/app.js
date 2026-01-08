@@ -867,7 +867,26 @@ const AnalyseBox = ({ analyse, typ, antworten, params, onGenerateAntrag, showAnt
 // LAYER 1
 // ═══════════════════════════════════════════════════════════════════════════
 
-const Layer1 = ({ params, onComplete, apiKey }) => {
+// Offline-Analyse für Layer 1
+const getOfflineAnalyseL1 = (antworten, analysen) => {
+  if (!analysen) return null;
+  
+  const werte = Object.values(antworten);
+  const durchschnitt = werte.reduce((a, b) => a + b, 0) / werte.length;
+  
+  // Kategorie basierend auf Durchschnitt
+  let kategorie;
+  if (durchschnitt >= 4.2) kategorie = 'sehr_links';
+  else if (durchschnitt >= 3.5) kategorie = 'links';
+  else if (durchschnitt >= 2.8) kategorie = 'mitte_links';
+  else if (durchschnitt >= 2.0) kategorie = 'mitte';
+  else kategorie = 'eher_rechts';
+  
+  console.log('Offline L1:', durchschnitt.toFixed(2), '→', kategorie);
+  return analysen[kategorie] || null;
+};
+
+const Layer1 = ({ params, onComplete, apiKey, analysen }) => {
   const [antworten, setAntworten] = useState(() => {
     const init = {};
     params.forEach(p => { init[p.id] = 3; });
@@ -881,6 +900,16 @@ const Layer1 = ({ params, onComplete, apiKey }) => {
   const startAnalyse = async () => {
     setPhase('analyse');
     setLoading(true);
+    
+    // Erst Offline-Analyse versuchen
+    const offlineResult = getOfflineAnalyseL1(antworten, analysen);
+    if (offlineResult) {
+      setAnalyse(offlineResult);
+      setLoading(false);
+      return;
+    }
+    
+    // Fallback: KI-Analyse
     const result = await analyzeWithGroq(antworten, params, apiKey, 'layer1');
     setAnalyse(result);
     setLoading(false);
@@ -981,7 +1010,60 @@ const Layer1 = ({ params, onComplete, apiKey }) => {
 // LAYER 2
 // ═══════════════════════════════════════════════════════════════════════════
 
-const Layer2 = ({ params, onComplete, onBack, apiKey }) => {
+// Offline-Analyse für Layer 2 - findet passendsten Archetyp via gewichtete Distanz
+const getOfflineAnalyseL2 = (antworten, analysen) => {
+  if (!analysen?.archetypen) return null;
+  
+  let bestMatch = null;
+  let bestScore = Infinity; // Niedrigere Distanz = besser
+  
+  for (const arch of analysen.archetypen) {
+    if (!arch.ideal) continue;
+    
+    let totalDistance = 0;
+    let totalWeight = 0;
+    
+    // Berechne gewichtete Distanz zu Idealvektor
+    for (const [paramId, idealValue] of Object.entries(arch.ideal)) {
+      const userValue = antworten[paramId];
+      if (userValue === undefined) continue;
+      
+      // Gewicht: aus gewichte-Objekt oder 1 als Default
+      const weight = arch.gewichte?.[paramId] || 1;
+      
+      // Quadratische Distanz (bestraft große Abweichungen stärker)
+      const diff = Math.abs(userValue - idealValue);
+      totalDistance += weight * (diff * diff);
+      totalWeight += weight;
+    }
+    
+    // Normalisierte Distanz
+    const normalizedDistance = totalWeight > 0 ? totalDistance / totalWeight : Infinity;
+    
+    if (normalizedDistance < bestScore) {
+      bestScore = normalizedDistance;
+      bestMatch = arch;
+    }
+  }
+  
+  console.log('Offline L2: Best match:', bestMatch?.archetyp, 'Distance:', bestScore.toFixed(2));
+  
+  if (bestMatch) {
+    return {
+      id: bestMatch.id,
+      archetyp: bestMatch.archetyp,
+      beschreibung: bestMatch.beschreibung,
+      theoretiker: bestMatch.theoretiker,
+      staerken: bestMatch.staerken,
+      spannungen: bestMatch.spannungen,
+      slogan: bestMatch.slogan
+    };
+  }
+  
+  return null;
+};
+
+const Layer2 = ({ params, onComplete, onLiteratur, onBack, apiKey, analysen }) => {
   const [antworten, setAntworten] = useState(() => {
     const init = {};
     params.forEach(p => { init[p.id] = 3; });
@@ -995,6 +1077,16 @@ const Layer2 = ({ params, onComplete, onBack, apiKey }) => {
   const startAnalyse = async () => {
     setPhase('analyse');
     setLoading(true);
+    
+    // Erst Offline-Analyse versuchen
+    const offlineResult = getOfflineAnalyseL2(antworten, analysen);
+    if (offlineResult) {
+      setAnalyse(offlineResult);
+      setLoading(false);
+      return;
+    }
+    
+    // Fallback: KI-Analyse
     const result = await analyzeWithGroq(antworten, params, apiKey, 'layer2');
     setAnalyse(result);
     setLoading(false);
@@ -1081,9 +1173,34 @@ const Layer2 = ({ params, onComplete, onBack, apiKey }) => {
           ) : (
             <>
               <AnalyseBox analyse={analyse} typ="layer2" />
-              <div style={{ display: 'flex', gap: '1rem', marginTop: '2rem' }}>
+              
+              {/* Literatur-Button */}
+              <div style={{ 
+                marginTop: '1.5rem', 
+                padding: '1rem', 
+                background: '#2E2E2E', 
+                borderRadius: '8px',
+                border: '1px solid #444'
+              }}>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
+                  <span style={{ fontSize: '1.5rem' }}>📚</span>
+                  <div style={{ flex: 1 }}>
+                    <div style={{ color: COLORS.weiss, fontWeight: 600 }}>Literatur zu deinem Sozialismus</div>
+                    <div style={{ color: '#AAA', fontSize: '0.85rem' }}>Bücher, Videos, Podcasts passend zu "{analyse?.archetyp}"</div>
+                  </div>
+                  <button 
+                    onClick={() => onLiteratur && onLiteratur(antworten, analyse?.id, analyse?.archetyp)} 
+                    className="btn btn-secondary"
+                    style={{ color: COLORS.weiss, borderColor: COLORS.rot, background: 'transparent' }}
+                  >
+                    Entdecken →
+                  </button>
+                </div>
+              </div>
+              
+              <div style={{ display: 'flex', gap: '1rem', marginTop: '1.5rem' }}>
                 <button onClick={() => setPhase('fragen')} className="btn btn-secondary" style={{ color: '#AAA', borderColor: '#666' }}>← Anpassen</button>
-                <button onClick={() => onComplete(antworten)} className="btn btn-primary btn-large" style={{ flex: 1 }}>
+                <button onClick={() => onComplete(antworten, analyse?.id, analyse?.archetyp)} className="btn btn-primary btn-large" style={{ flex: 1 }}>
                   Weiter: Parteiprogramm →
                 </button>
               </div>
@@ -1179,7 +1296,66 @@ const downloadAsTxt = (text, filename) => {
   URL.revokeObjectURL(url);
 };
 
-const Layer3 = ({ profilL1, profilL2, onBack, apiKey, paramsL1, paramsL2 }) => {
+// Offline-Analyse für Layer 3
+const getOfflineAnalyseL3 = (profilL1, profilL2, analysen, paramsL1) => {
+  if (!analysen?.kategorien) return null;
+  
+  // Kombiniere beide Profile
+  const kombiniert = { ...profilL1, ...profilL2 };
+  const alleWerte = Object.values(kombiniert);
+  const durchschnitt = alleWerte.reduce((a, b) => a + b, 0) / alleWerte.length;
+  
+  // Kategorie bestimmen
+  let kategorie;
+  if (durchschnitt > 3.5) kategorie = 'radikaler';
+  else if (durchschnitt < 2.5) kategorie = 'moderater';
+  else kategorie = 'uebereinstimmend';
+  
+  const kat = analysen.kategorien[kategorie];
+  if (!kat) return null;
+  
+  // Zufällige Einleitung wählen
+  const einleitung = kat.einleitungen[Math.floor(Math.random() * kat.einleitungen.length)];
+  
+  // Spannungsfelder nur bei "radikaler"
+  let spannungsfelder = [];
+  if (kategorie === 'radikaler') {
+    // Layer 1 Spannungsfelder (Parameter mit Wert 4 oder 5)
+    if (analysen.spannungsfelder) {
+      for (const [paramId, wert] of Object.entries(profilL1)) {
+        if (wert >= 4 && analysen.spannungsfelder[paramId]) {
+          spannungsfelder.push(analysen.spannungsfelder[paramId]);
+        }
+      }
+    }
+    
+    // Layer 2 Spannungsfelder (Parameter mit Wert 4 oder 5)
+    if (analysen.layer2_spannungen) {
+      for (const [paramId, wert] of Object.entries(profilL2)) {
+        if (wert >= 4 && analysen.layer2_spannungen[paramId]) {
+          spannungsfelder.push(analysen.layer2_spannungen[paramId]);
+        }
+      }
+    }
+    
+    // Maximal 4 Spannungsfelder zeigen
+    if (spannungsfelder.length > 4) {
+      spannungsfelder = spannungsfelder.slice(0, 4);
+    }
+  }
+  
+  console.log('Offline L3:', durchschnitt.toFixed(2), '→', kategorie, ', Spannungen:', spannungsfelder.length);
+  
+  return {
+    ueberschrift: kat.ueberschrift,
+    einleitung: einleitung,
+    verhältnis: kategorie,
+    spannungsfelder: spannungsfelder,
+    einladung: kategorie === 'radikaler' ? kat.einladung : null
+  };
+};
+
+const Layer3 = ({ profilL1, profilL2, onBack, onLiteratur, apiKey, paramsL1, paramsL2, analysen, archetypName }) => {
   const [analyse, setAnalyse] = useState(null);
   const [loading, setLoading] = useState(true);
   const [antrag, setAntrag] = useState(null);
@@ -1188,6 +1364,15 @@ const Layer3 = ({ profilL1, profilL2, onBack, apiKey, paramsL1, paramsL2 }) => {
 
   useEffect(() => {
     const run = async () => {
+      // Erst Offline-Analyse versuchen
+      const offlineResult = getOfflineAnalyseL3(profilL1, profilL2, analysen, paramsL1);
+      if (offlineResult) {
+        setAnalyse(offlineResult);
+        setLoading(false);
+        return;
+      }
+      
+      // Fallback: KI-Analyse
       const kombiniert = { ...profilL1, ...profilL2 };
       const allParams = [...paramsL1, ...paramsL2];
       const result = await analyzeWithGroq(kombiniert, allParams, apiKey, 'layer3');
@@ -1195,7 +1380,7 @@ const Layer3 = ({ profilL1, profilL2, onBack, apiKey, paramsL1, paramsL2 }) => {
       setLoading(false);
     };
     run();
-  }, [profilL1, profilL2, apiKey, paramsL1, paramsL2]);
+  }, [profilL1, profilL2, apiKey, paramsL1, paramsL2, analysen]);
 
   const handleGenerateAntrag = async () => {
     setAntragLoading(true);
@@ -1280,7 +1465,33 @@ const Layer3 = ({ profilL1, profilL2, onBack, apiKey, paramsL1, paramsL2 }) => {
               </div>
             )}
             
-            <button onClick={onBack} className="btn btn-secondary btn-block" style={{ marginTop: '2rem', color: '#AAA', borderColor: '#666' }}>
+            {/* Literatur-Button */}
+            {archetypName && onLiteratur && (
+              <div style={{ 
+                marginTop: '2rem', 
+                padding: '1rem', 
+                background: '#2E2E2E', 
+                borderRadius: '8px',
+                border: '1px solid #444'
+              }}>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
+                  <span style={{ fontSize: '1.5rem' }}>📚</span>
+                  <div style={{ flex: 1 }}>
+                    <div style={{ color: COLORS.weiss, fontWeight: 600 }}>Literatur zu "{archetypName}"</div>
+                    <div style={{ color: '#AAA', fontSize: '0.85rem' }}>Bücher, Videos, Podcasts für deine Vertiefung</div>
+                  </div>
+                  <button 
+                    onClick={onLiteratur} 
+                    className="btn btn-secondary"
+                    style={{ color: COLORS.weiss, borderColor: COLORS.rot, background: 'transparent' }}
+                  >
+                    Entdecken →
+                  </button>
+                </div>
+              </div>
+            )}
+            
+            <button onClick={onBack} className="btn btn-secondary btn-block" style={{ marginTop: '1.5rem', color: '#AAA', borderColor: '#666' }}>
               ← Nochmal von vorne
             </button>
           </>
@@ -1572,6 +1783,192 @@ const Layer0 = ({ onStart }) => {
 };
 
 // ═══════════════════════════════════════════════════════════════════════════
+// LAYER 4: LITERATUR
+// ═══════════════════════════════════════════════════════════════════════════
+
+const Layer4 = ({ archetypId, archetypName, literatur, onBack }) => {
+  const data = literatur?.archetypen?.[archetypId];
+  
+  const LiteraturKarte = ({ item, highlight }) => (
+    <div style={{
+      background: highlight ? '#FFF8E1' : COLORS.weiss,
+      border: highlight ? `2px solid ${COLORS.orange}` : '1px solid #DDD',
+      padding: '1rem',
+      marginBottom: '0.75rem',
+      borderRadius: '4px'
+    }}>
+      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '0.5rem' }}>
+        <strong style={{ color: COLORS.schwarz }}>{item.titel}</strong>
+        {item.frei && <span style={{ fontSize: '0.7rem', background: COLORS.gruen, color: COLORS.weiss, padding: '2px 6px', borderRadius: '2px' }}>FREI</span>}
+      </div>
+      {item.autor && <div style={{ fontSize: '0.85rem', color: COLORS.grau }}>{item.autor} {item.jahr && `(${item.jahr})`}</div>}
+      {item.warum && <p style={{ fontSize: '0.85rem', margin: '0.5rem 0', fontStyle: 'italic' }}>{item.warum}</p>}
+      {item.schwierigkeit && (
+        <div style={{ fontSize: '0.75rem', color: COLORS.grau }}>
+          Schwierigkeit: {'★'.repeat(item.schwierigkeit)}{'☆'.repeat(5 - item.schwierigkeit)}
+        </div>
+      )}
+      {item.url && (
+        <a href={item.url} target="_blank" rel="noopener noreferrer" style={{ 
+          display: 'inline-block', 
+          marginTop: '0.5rem', 
+          fontSize: '0.85rem', 
+          color: COLORS.rot,
+          textDecoration: 'none'
+        }}>
+          → Jetzt lesen
+        </a>
+      )}
+    </div>
+  );
+
+  const VideoKarte = ({ item }) => (
+    <div style={{
+      background: COLORS.weiss,
+      border: '1px solid #DDD',
+      padding: '1rem',
+      marginBottom: '0.75rem',
+      borderRadius: '4px'
+    }}>
+      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start' }}>
+        <strong style={{ color: COLORS.schwarz }}>{item.titel}</strong>
+        <span style={{ fontSize: '0.75rem', color: COLORS.grau }}>{item.laenge}</span>
+      </div>
+      {item.kanal && <div style={{ fontSize: '0.85rem', color: COLORS.grau }}>{item.kanal}</div>}
+      {item.warum && <p style={{ fontSize: '0.85rem', margin: '0.5rem 0', fontStyle: 'italic' }}>{item.warum}</p>}
+      {item.url && (
+        <a href={item.url} target="_blank" rel="noopener noreferrer" style={{ 
+          display: 'inline-block', 
+          marginTop: '0.5rem', 
+          fontSize: '0.85rem', 
+          color: COLORS.rot,
+          textDecoration: 'none'
+        }}>
+          ▶ Ansehen
+        </a>
+      )}
+    </div>
+  );
+
+  if (!data) {
+    return (
+      <div style={{ minHeight: '100vh', padding: '2rem 1rem', background: COLORS.creme }}>
+        <div className="container">
+          <h1>Literatur wird noch ergänzt</h1>
+          <p>Für "{archetypName}" sind noch keine Literaturempfehlungen verfügbar.</p>
+          <button onClick={onBack} className="btn btn-secondary" style={{ marginTop: '2rem' }}>← Zurück</button>
+        </div>
+      </div>
+    );
+  }
+
+  return (
+    <div style={{ minHeight: '100vh', padding: '2rem 1rem', background: COLORS.creme }}>
+      <div className="container">
+        <div style={{ textAlign: 'center', marginBottom: '2rem' }}>
+          <div className="label">LAYER 4: DEIN LESEPLAN</div>
+          <h1 style={{ marginTop: '0.5rem' }}>Literatur für {data.name || archetypName}</h1>
+        </div>
+
+        {data.warnung && (
+          <div style={{ background: '#FFF3E0', padding: '1rem', borderLeft: `4px solid ${COLORS.orange}`, marginBottom: '2rem', fontSize: '0.9rem' }}>
+            ⚠️ {data.warnung}
+          </div>
+        )}
+
+        {data.hinweis && (
+          <div style={{ background: '#E3F2FD', padding: '1rem', borderLeft: `4px solid #2196F3`, marginBottom: '2rem', fontSize: '0.9rem' }}>
+            💡 {data.hinweis}
+          </div>
+        )}
+
+        {/* Einstieg */}
+        {data.einstieg?.length > 0 && (
+          <div style={{ marginBottom: '2rem' }}>
+            <h2 style={{ fontSize: '1.1rem', color: COLORS.rot, marginBottom: '1rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+              <span>📖</span> Einstieg – Hier anfangen!
+            </h2>
+            {data.einstieg.map((item, i) => <LiteraturKarte key={i} item={item} highlight={i === 0} />)}
+          </div>
+        )}
+
+        {/* Vertiefung */}
+        {data.vertiefung?.length > 0 && (
+          <div style={{ marginBottom: '2rem' }}>
+            <h2 style={{ fontSize: '1.1rem', color: COLORS.schwarz, marginBottom: '1rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+              <span>📚</span> Vertiefung
+            </h2>
+            {data.vertiefung.map((item, i) => <LiteraturKarte key={i} item={item} />)}
+          </div>
+        )}
+
+        {/* Klassiker */}
+        {data.klassiker?.length > 0 && (
+          <div style={{ marginBottom: '2rem' }}>
+            <h2 style={{ fontSize: '1.1rem', color: COLORS.schwarz, marginBottom: '1rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+              <span>🏛️</span> Klassiker
+            </h2>
+            {data.klassiker.map((item, i) => <LiteraturKarte key={i} item={item} />)}
+          </div>
+        )}
+
+        {/* Videos */}
+        {data.videos?.length > 0 && (
+          <div style={{ marginBottom: '2rem' }}>
+            <h2 style={{ fontSize: '1.1rem', color: COLORS.schwarz, marginBottom: '1rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+              <span>🎬</span> Videos
+            </h2>
+            {data.videos.map((item, i) => <VideoKarte key={i} item={item} />)}
+          </div>
+        )}
+
+        {/* Podcasts */}
+        {data.podcasts?.length > 0 && (
+          <div style={{ marginBottom: '2rem' }}>
+            <h2 style={{ fontSize: '1.1rem', color: COLORS.schwarz, marginBottom: '1rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+              <span>🎧</span> Podcasts
+            </h2>
+            {data.podcasts.map((item, i) => <VideoKarte key={i} item={item} />)}
+          </div>
+        )}
+
+        {/* Praxis */}
+        {data.praxis?.length > 0 && (
+          <div style={{ marginBottom: '2rem' }}>
+            <h2 style={{ fontSize: '1.1rem', color: COLORS.gruen, marginBottom: '1rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+              <span>✊</span> Praxis – Mitmachen!
+            </h2>
+            {data.praxis.map((item, i) => (
+              <div key={i} style={{ background: '#E8F5E9', border: `1px solid ${COLORS.gruen}`, padding: '1rem', marginBottom: '0.75rem', borderRadius: '4px' }}>
+                <strong>{item.name}</strong>
+                {item.was && <p style={{ fontSize: '0.85rem', margin: '0.5rem 0' }}>{item.was}</p>}
+                {item.url && <a href={item.url} target="_blank" rel="noopener noreferrer" style={{ color: COLORS.gruen, fontSize: '0.85rem' }}>→ Website</a>}
+              </div>
+            ))}
+          </div>
+        )}
+
+        {/* Allgemeine Bibliotheken */}
+        <div style={{ marginTop: '3rem', padding: '1.5rem', background: '#F5F5F5', borderRadius: '8px' }}>
+          <h3 style={{ fontSize: '1rem', marginBottom: '1rem' }}>📁 Freie Online-Bibliotheken</h3>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '0.75rem' }}>
+            <a href="https://www.marxists.org/deutsch/" target="_blank" rel="noopener noreferrer" style={{ color: COLORS.rot, fontSize: '0.9rem' }}>Marxists.org (Klassiker)</a>
+            <a href="https://theanarchistlibrary.org/" target="_blank" rel="noopener noreferrer" style={{ color: COLORS.rot, fontSize: '0.9rem' }}>Anarchist Library</a>
+            <a href="https://libcom.org/" target="_blank" rel="noopener noreferrer" style={{ color: COLORS.rot, fontSize: '0.9rem' }}>libcom.org</a>
+            <a href="https://anarchistischebibliothek.org/" target="_blank" rel="noopener noreferrer" style={{ color: COLORS.rot, fontSize: '0.9rem' }}>Anarchistische Bibliothek</a>
+          </div>
+        </div>
+
+        {/* Navigation */}
+        <div style={{ display: 'flex', gap: '1rem', marginTop: '2rem' }}>
+          <button onClick={onBack} className="btn btn-secondary">← Zurück zum Ergebnis</button>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+// ═══════════════════════════════════════════════════════════════════════════
 // APP
 // ═══════════════════════════════════════════════════════════════════════════
 
@@ -1583,14 +1980,38 @@ const App = () => {
   const [detailsL2, setDetailsL2] = useState(null);
   const [loading, setLoading] = useState(true);
   const [apiKey] = useState(DEFAULT_API_KEY);
+  const [analysenL1, setAnalysenL1] = useState(null);
+  const [analysenL2, setAnalysenL2] = useState(null);
+  const [analysenL3, setAnalysenL3] = useState(null);
+  const [literatur, setLiteratur] = useState(null);
+  const [archetypId, setArchetypId] = useState(null);
+  const [archetypName, setArchetypName] = useState(null);
 
   useEffect(() => {
     Promise.all([
       fetch('data/layer1.json').then(r => r.json()).catch(() => null),
-      fetch('data/layer2.json').then(r => r.json()).catch(() => null)
-    ]).then(([l1, l2]) => {
+      fetch('data/layer2.json').then(r => r.json()).catch(() => null),
+      fetch('data/analysen-layer1.json').then(r => r.json()).catch(() => null),
+      fetch('data/analysen-layer2.json').then(r => r.json()).catch(() => null),
+      fetch('data/analysen-layer3.json').then(r => r.json()).catch(() => null),
+      fetch('data/literatur.json').then(r => {
+        if (!r.ok) {
+          console.error('literatur.json nicht gefunden! Status:', r.status);
+          return null;
+        }
+        return r.json();
+      }).catch(err => {
+        console.error('Fehler beim Laden von literatur.json:', err);
+        return null;
+      })
+    ]).then(([l1, l2, a1, a2, a3, lit]) => {
+      console.log('Literatur geladen:', lit ? 'JA (' + Object.keys(lit.archetypen || {}).length + ' Archetypen)' : 'NEIN');
       setDetailsL1(l1);
       setDetailsL2(l2);
+      setAnalysenL1(a1);
+      setAnalysenL2(a2);
+      setAnalysenL3(a3);
+      setLiteratur(lit);
       setLoading(false);
     });
   }, []);
@@ -1612,15 +2033,51 @@ const App = () => {
   }
 
   if (layer === 1) {
-    return <Layer1 params={paramsL1} onComplete={(p) => { setProfilL1(p); setLayer(2); }} apiKey={apiKey} />;
+    return <Layer1 params={paramsL1} onComplete={(p) => { setProfilL1(p); setLayer(2); }} apiKey={apiKey} analysen={analysenL1} />;
   }
 
   if (layer === 2) {
-    return <Layer2 params={paramsL2} onComplete={(p) => { setProfilL2(p); setLayer(3); }} onBack={() => setLayer(1)} apiKey={apiKey} />;
+    return <Layer2 
+      params={paramsL2} 
+      onComplete={(p, id, name) => { 
+        setProfilL2(p); 
+        setArchetypId(id);
+        setArchetypName(name);
+        setLayer(3); 
+      }} 
+      onLiteratur={(p, id, name) => {
+        setProfilL2(p);
+        setArchetypId(id);
+        setArchetypName(name);
+        setLayer(4);
+      }}
+      onBack={() => setLayer(1)} 
+      apiKey={apiKey} 
+      analysen={analysenL2} 
+    />;
   }
 
   if (layer === 3) {
-    return <Layer3 profilL1={profilL1} profilL2={profilL2} onBack={() => { setLayer(0); setProfilL1(null); setProfilL2(null); }} apiKey={apiKey} paramsL1={paramsL1} paramsL2={paramsL2} />;
+    return <Layer3 
+      profilL1={profilL1} 
+      profilL2={profilL2} 
+      onBack={() => { setLayer(0); setProfilL1(null); setProfilL2(null); setArchetypId(null); setArchetypName(null); }} 
+      onLiteratur={() => setLayer(4)}
+      apiKey={apiKey} 
+      paramsL1={paramsL1} 
+      paramsL2={paramsL2} 
+      analysen={analysenL3} 
+      archetypName={archetypName}
+    />;
+  }
+
+  if (layer === 4) {
+    return <Layer4 
+      archetypId={archetypId} 
+      archetypName={archetypName} 
+      literatur={literatur} 
+      onBack={() => setLayer(2)}
+    />;
   }
 
   return null;

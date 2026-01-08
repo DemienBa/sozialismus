@@ -1,0 +1,196 @@
+{
+  "achse": "B2",
+  "name": "BESITZ",
+  "frage": "Wem gehören die Produktionsmittel?",
+  "pole": {
+    "1": "Dem Staat (Verstaatlichung)",
+    "5": "Den Arbeitenden selbst (Selbstverwaltung)"
+  },
+  
+  "stufen": {
+    "1": {
+      "position": "Zentrales Staatseigentum",
+      "kurzform": "Verstaatlichung",
+      "beschreibung": "Produktionsmittel gehören dem sozialistischen Staat.",
+      
+      "klassiker": [
+        {
+          "titel": "Die Entwicklung des Sozialismus von der Utopie zur Wissenschaft",
+          "autor": "Friedrich Engels",
+          "jahr": 1880,
+          "schwierigkeit": 2,
+          "frei": true,
+          "url_de": "https://www.marxists.org/deutsch/archiv/marx-engels/1880/utopie/index.htm"
+        }
+      ],
+      
+      "kritische_analyse": [
+        {
+          "titel": "Staatskapitalismus in der Sowjetunion",
+          "autor": "Tony Cliff",
+          "schwierigkeit": 4,
+          "kernthese": "UdSSR war kein Sozialismus sondern Staatskapitalismus",
+          "frei": true,
+          "url_en": "https://www.marxists.org/archive/cliff/works/1955/statecap/"
+        }
+      ],
+      
+      "vertreter_historisch": ["Stalin", "DDR"],
+      "kritik": ["Bürokratie", "Keine demokratische Kontrolle"]
+    },
+    
+    "2": {
+      "position": "Öffentliches Eigentum mit demokratischer Kontrolle",
+      "kurzform": "Demokratische Verstaatlichung",
+      "beschreibung": "Schlüsselindustrien öffentlich, demokratisch kontrolliert.",
+      
+      "zeitgenoessisch": [
+        {
+          "titel": "Vergesellschaftung - Ein Reader",
+          "autor": "Rosa-Luxemburg-Stiftung",
+          "schwierigkeit": 2,
+          "frei": true,
+          "url_de": "https://www.rosalux.de/publikation/id/42675/vergesellschaftung"
+        }
+      ],
+      
+      "vertreter_heute": ["DW Enteignen", "Die Linke"],
+      "staerken": ["Demokratisch legitimiert"],
+      "kritik": ["Staatsbürokratie"]
+    },
+    
+    "3": {
+      "position": "Gemischte Eigentumsformen",
+      "kurzform": "Marktsozialismus",
+      "beschreibung": "Staatlich, genossenschaftlich, kommunal nebeneinander.",
+      
+      "zeitgenoessisch": [
+        {
+          "titel": "The People's Republic of Walmart",
+          "autor": "Phillips & Rozworski",
+          "jahr": 2019,
+          "schwierigkeit": 2,
+          "kernthese": "Konzerne planen intern schon – warum nicht alle?",
+          "frei": false,
+          "bibliothek_tipp": "Jacobin Verlag"
+        }
+      ],
+      
+      "praxis": ["Mondragon", "Jugoslawien"],
+      "staerken": ["Flexibilität"],
+      "kritik": ["Marktlogik bleibt"]
+    },
+    
+    "4": {
+      "position": "Genossenschaften und Commons",
+      "kurzform": "Commons-Ökonomie",
+      "beschreibung": "Gemeingüter, selbstverwaltet, jenseits von Staat und Markt.",
+      
+      "zeitgenoessisch": [
+        {
+          "titel": "Die Welt der Commons",
+          "autor": "Helfrich & Bollier",
+          "jahr": 2015,
+          "schwierigkeit": 2,
+          "kernthese": "Commons als dritten Weg",
+          "frei": true,
+          "url_de": "https://www.transcript-verlag.de/978-3-8376-3245-3/die-welt-der-commons/"
+        },
+        {
+          "titel": "Frei, Fair und Lebendig",
+          "autor": "Helfrich & Bollier",
+          "jahr": 2019,
+          "schwierigkeit": 2,
+          "frei": true,
+          "url_de": "https://freifairundlebendig.de/",
+          "empfehlung": "Sehr zugänglich!"
+        },
+        {
+          "titel": "Ecommony",
+          "autor": "Friederike Habermann",
+          "schwierigkeit": 2,
+          "kernthese": "Beitragen statt Tauschen",
+          "frei": true,
+          "url_de": "https://keimform.de/2016/ecommony/"
+        }
+      ],
+      
+      "videos": [
+        {
+          "titel": "Was sind Commons?",
+          "kanal": "Commons-Institut",
+          "sprache": "de",
+          "laenge_min": 10,
+          "frei": true,
+          "url": "https://commons-institut.org/was-sind-commons"
+        }
+      ],
+      
+      "praxis": ["Mietshäuser Syndikat", "Cecosesola"],
+      "vertreter_heute": ["Silke Helfrich †", "Commons-Institut"],
+      "staerken": ["Praktisch erprobt", "Nachhaltig"],
+      "kritik": ["Skalierbarkeit"]
+    },
+    
+    "5": {
+      "position": "Vollständige Arbeiterselbstverwaltung",
+      "kurzform": "Rätewirtschaft",
+      "beschreibung": "Arbeiter*innen kontrollieren direkt ihre Betriebe, Räte koordinieren.",
+      
+      "klassiker": [
+        {
+          "titel": "Arbeiterräte",
+          "autor": "Anton Pannekoek",
+          "jahr": 1946,
+          "schwierigkeit": 3,
+          "kernthese": "Räte als einzige echte Arbeiterdemokratie",
+          "frei": true,
+          "url_de": "https://www.marxists.org/deutsch/archiv/pannekoek/1946/arbeiterraete/index.htm",
+          "muss_lesen": true
+        },
+        {
+          "titel": "Die proletarische Revolution und ihr Programm",
+          "autor": "Cornelius Castoriadis",
+          "schwierigkeit": 4,
+          "frei": true,
+          "url_en": "https://libcom.org/article/proletarian-revolution-cornelius-castoriadis"
+        }
+      ],
+      
+      "zeitgenoessisch": [
+        {
+          "titel": "Parecon - Participatory Economics",
+          "autor": "Michael Albert",
+          "schwierigkeit": 2,
+          "kernthese": "Detaillierte Blaupause für demokratische Planung",
+          "frei": true,
+          "url_en": "https://zcomm.org/znetarticle/parecon-introduction/"
+        }
+      ],
+      
+      "videos": [
+        {
+          "titel": "The Take (2004)",
+          "typ": "dokumentarfilm",
+          "schwierigkeit": 1,
+          "beschreibung": "Besetzte Fabriken in Argentinien",
+          "frei": true,
+          "url": "https://archive.org/details/the-take-2004"
+        }
+      ],
+      
+      "praxis": ["Russland 1917-18", "Spanien 1936", "Argentinien 2001"],
+      "vertreter_historisch": ["Pannekoek", "Castoriadis", "Mattick"],
+      "staerken": ["Echte Demokratie am Arbeitsplatz"],
+      "kritik": ["Komplexe Koordination"]
+    }
+  },
+  
+  "bibliotheken": [
+    {
+      "name": "libcom.org - Räte & Selbstverwaltung",
+      "url": "https://libcom.org/tags/workers-councils",
+      "sprache": "en"
+    }
+  ]
+}
