@@ -1,0 +1,284 @@
+{
+  "achse": "A3",
+  "name": "STAAT",
+  "frage": "Was tun mit dem Staat?",
+  "pole": {
+    "1": "Erobern & als Hauptinstrument nutzen",
+    "5": "Langfristig überwinden"
+  },
+  
+  "stufen": {
+    "1": {
+      "position": "Staat als Hauptinstrument der Transformation",
+      "kurzform": "Etatismus",
+      "beschreibung": "Der bürgerliche Staat kann und muss für sozialistische Ziele genutzt werden.",
+      
+      "klassiker": [
+        {
+          "titel": "Kritik des Gothaer Programms",
+          "autor": "Karl Marx",
+          "jahr": 1875,
+          "schwierigkeit": 3,
+          "kernthese": "Marx kritisiert den Lassalleanischen Staatsglauben",
+          "frei": true,
+          "url_de": "https://www.marxists.org/deutsch/archiv/marx-engels/1875/kritik/index.htm",
+          "url_en": "https://www.marxists.org/archive/marx/works/1875/gotha/"
+        },
+        {
+          "titel": "Die Voraussetzungen des Sozialismus",
+          "autor": "Eduard Bernstein",
+          "jahr": 1899,
+          "schwierigkeit": 3,
+          "kernthese": "Revisionismus – der Weg ist alles, das Ziel nichts",
+          "frei": true,
+          "url_de": "https://www.marxists.org/deutsch/archiv/bernstein/1899/voraus/index.html"
+        },
+        {
+          "titel": "Sozialreform oder Revolution?",
+          "autor": "Rosa Luxemburg",
+          "jahr": 1899,
+          "schwierigkeit": 3,
+          "kernthese": "Kritik des Reformismus",
+          "frei": true,
+          "url_de": "https://www.marxists.org/deutsch/archiv/luxemburg/1899/sozam/index.htm",
+          "url_en": "https://www.marxists.org/archive/luxemburg/1900/reform-revolution/"
+        }
+      ],
+      
+      "vertreter_historisch": ["Ferdinand Lassalle", "Karl Kautsky", "Eduard Bernstein"],
+      "staerken": ["Demokratisch legitimiert", "Konkrete Verbesserungen möglich"],
+      "kritik": ["Systemintegration", "SPD 1914"]
+    },
+    
+    "2": {
+      "position": "Staat erobern und als Übergangs-Instrument nutzen",
+      "kurzform": "Leninismus",
+      "beschreibung": "Der bürgerliche Staat muss zerschlagen und durch einen Arbeiterstaat ersetzt werden.",
+      
+      "klassiker": [
+        {
+          "titel": "Staat und Revolution",
+          "autor": "W.I. Lenin",
+          "jahr": 1917,
+          "schwierigkeit": 3,
+          "kernthese": "Bürgerlicher Staat zerschlagen, Räte, Absterben",
+          "frei": true,
+          "url_de": "https://www.marxists.org/deutsch/archiv/lenin/1917/staatrev/index.htm",
+          "url_en": "https://www.marxists.org/archive/lenin/works/1917/staterev/",
+          "muss_lesen": true
+        },
+        {
+          "titel": "Was tun?",
+          "autor": "W.I. Lenin",
+          "jahr": 1902,
+          "schwierigkeit": 3,
+          "kernthese": "Avantgarde-Partei bringt Bewusstsein",
+          "frei": true,
+          "url_de": "https://www.marxists.org/deutsch/archiv/lenin/1902/wastun/index.htm"
+        },
+        {
+          "titel": "Gefängnishefte (Auswahl)",
+          "autor": "Antonio Gramsci",
+          "schwierigkeit": 5,
+          "kernthese": "Hegemonie – Staat ist Gewalt + Konsens",
+          "frei": true,
+          "url_en": "https://www.marxists.org/archive/gramsci/prison_notebooks/index.htm"
+        }
+      ],
+      
+      "videos": [
+        {
+          "titel": "Gramsci und Hegemonie",
+          "kanal": "Then & Now",
+          "sprache": "en",
+          "laenge_min": 12,
+          "frei": true,
+          "url": "https://www.youtube.com/watch?v=X98uzqpQ3JM"
+        }
+      ],
+      
+      "vertreter_historisch": ["Lenin", "Gramsci", "Luxemburg"],
+      "staerken": ["Klare Strategie", "1917"],
+      "kritik": ["Bürokratisierung", "Staat stirbt nicht ab"]
+    },
+    
+    "3": {
+      "position": "Staat pragmatisch nutzen und transformieren",
+      "kurzform": "Linkspopulismus",
+      "beschreibung": "Staat als umkämpftes Terrain, Hegemonie-Kämpfe.",
+      
+      "klassiker": [
+        {
+          "titel": "Hegemonie und radikale Demokratie",
+          "autor": "Laclau & Mouffe",
+          "jahr": 1985,
+          "schwierigkeit": 4,
+          "kernthese": "Post-marxistische Hegemonietheorie",
+          "frei": true,
+          "url_en": "https://archive.org/details/hegemonyand-socialist-strategy"
+        }
+      ],
+      
+      "videos": [
+        {
+          "titel": "Chantal Mouffe: For a Left Populism",
+          "kanal": "Verso Books",
+          "sprache": "en",
+          "laenge_min": 45,
+          "frei": true,
+          "url": "https://www.youtube.com/watch?v=v0P1y6x5z6Y"
+        }
+      ],
+      
+      "vertreter_heute": ["Chantal Mouffe", "Podemos (früh)"],
+      "staerken": ["Vermeidet Determinismus", "Kulturelle Dimension"],
+      "kritik": ["Unscharf", "Syriza/Podemos gescheitert"]
+    },
+    
+    "4": {
+      "position": "Staat durch Gegen-Macht aushöhlen",
+      "kurzform": "Autonomismus",
+      "beschreibung": "Nicht erobern, sondern Alternativen aufbauen.",
+      
+      "klassiker": [
+        {
+          "titel": "Die Welt verändern, ohne die Macht zu übernehmen",
+          "autor": "John Holloway",
+          "jahr": 2002,
+          "schwierigkeit": 3,
+          "kernthese": "Revolution als Negation, nicht Machtergreifung",
+          "frei": true,
+          "url_en": "https://libcom.org/article/change-world-without-taking-power-john-holloway"
+        },
+        {
+          "titel": "Empire",
+          "autor": "Hardt & Negri",
+          "jahr": 2000,
+          "schwierigkeit": 4,
+          "kernthese": "Multitude, Exodus, konstituierende Macht",
+          "frei": true,
+          "url_en": "https://archive.org/details/HardtMichaelNegriAntonioEmpire"
+        },
+        {
+          "titel": "Crack Capitalism",
+          "autor": "John Holloway",
+          "jahr": 2010,
+          "schwierigkeit": 2,
+          "kernthese": "In den Rissen entstehen Alternativen",
+          "frei": true,
+          "url_en": "https://libcom.org/article/crack-capitalism-john-holloway"
+        }
+      ],
+      
+      "vertreter_heute": ["John Holloway", "Zapatistas", "Commons-Bewegung"],
+      "staerken": ["Präfigurative Politik", "Vermeidet Staatsfalle"],
+      "kritik": ["Repression?", "Skalierbarkeit?"]
+    },
+    
+    "5": {
+      "position": "Staat vollständig überwinden",
+      "kurzform": "Anarchismus",
+      "beschreibung": "Jeder Staat ist Herrschaft.",
+      
+      "klassiker": [
+        {
+          "titel": "Gott und der Staat",
+          "autor": "Michail Bakunin",
+          "jahr": 1882,
+          "schwierigkeit": 3,
+          "kernthese": "Jede Autorität bekämpfen",
+          "frei": true,
+          "url_de": "https://www.anarchismus.at/anarchistische-klassiker/michail-bakunin/6919-michail-bakunin-gott-und-der-staat",
+          "url_en": "https://theanarchistlibrary.org/library/michail-bakunin-god-and-the-state"
+        },
+        {
+          "titel": "Gegenseitige Hilfe",
+          "autor": "Peter Kropotkin",
+          "jahr": 1902,
+          "schwierigkeit": 2,
+          "kernthese": "Kooperation ist natürlich",
+          "frei": true,
+          "url_de": "https://www.anarchismus.at/anarchistische-klassiker/peter-kropotkin/6866-peter-kropotkin-gegenseitige-hilfe-in-der-tier-und-menschenwelt",
+          "url_en": "https://theanarchistlibrary.org/library/petr-kropotkin-mutual-aid-a-factor-of-evolution"
+        },
+        {
+          "titel": "Die Eroberung des Brotes",
+          "autor": "Peter Kropotkin",
+          "jahr": 1892,
+          "schwierigkeit": 2,
+          "kernthese": "Praktische anarchistische Gesellschaft",
+          "frei": true,
+          "url_de": "https://www.anarchismus.at/anarchistische-klassiker/peter-kropotkin/6865-peter-kropotkin-die-eroberung-des-brotes",
+          "url_en": "https://theanarchistlibrary.org/library/petr-kropotkin-the-conquest-of-bread"
+        }
+      ],
+      
+      "zeitgenoessisch": [
+        {
+          "titel": "Anarchie! Idee, Geschichte, Perspektiven",
+          "autor": "Horst Stowasser",
+          "jahr": 2007,
+          "schwierigkeit": 1,
+          "kernthese": "Beste deutschsprachige Einführung",
+          "frei": true,
+          "url_de": "https://anarchistischebibliothek.org/library/horst-stowasser-anarchie",
+          "empfehlung": "BESTER EINSTIEG!"
+        },
+        {
+          "titel": "Fragments of an Anarchist Anthropology",
+          "autor": "David Graeber",
+          "jahr": 2004,
+          "schwierigkeit": 2,
+          "frei": true,
+          "url_en": "https://theanarchistlibrary.org/library/david-graeber-fragments-of-an-anarchist-anthropology"
+        }
+      ],
+      
+      "videos": [
+        {
+          "titel": "David Graeber on Bureaucracy",
+          "kanal": "Google Talks",
+          "sprache": "en",
+          "laenge_min": 60,
+          "frei": true,
+          "url": "https://www.youtube.com/watch?v=K0VgqCesBXg"
+        },
+        {
+          "titel": "Noam Chomsky on Anarchism",
+          "sprache": "en",
+          "laenge_min": 30,
+          "frei": true,
+          "url": "https://www.youtube.com/watch?v=7_Bv2MKY7uI"
+        }
+      ],
+      
+      "bibliotheken": [
+        {
+          "name": "Anarchistische Bibliothek",
+          "url": "https://anarchistischebibliothek.org/",
+          "sprache": "de"
+        },
+        {
+          "name": "The Anarchist Library",
+          "url": "https://theanarchistlibrary.org/",
+          "sprache": "en"
+        },
+        {
+          "name": "Anarchismus.at",
+          "url": "https://www.anarchismus.at/",
+          "sprache": "de"
+        },
+        {
+          "name": "libcom.org",
+          "url": "https://libcom.org/",
+          "sprache": "en"
+        }
+      ],
+      
+      "vertreter_historisch": ["Bakunin", "Kropotkin", "Goldman", "Mühsam"],
+      "vertreter_heute": ["Graeber †", "Chomsky"],
+      "staerken": ["Konsequente Herrschaftskritik"],
+      "kritik": ["Verteidigung?", "Koordination?"]
+    }
+  }
+}

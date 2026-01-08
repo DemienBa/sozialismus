@@ -1,0 +1,225 @@
+{
+  "kategorien": {
+    "radikaler": {
+      "ueberschrift": "Du gehst über das Programm hinaus",
+      "einleitungen": [
+        "Deine Positionen sind radikaler als das Erfurter Programm der Linken. Du denkst weiter, forderst mehr, willst grundlegendere Veränderungen. Das ist kein Widerspruch zur Partei – es ist eine Einladung, sie zu verändern.",
+        "Du stehst links vom Parteiprogramm. Während das Erfurter Programm wichtige Forderungen aufstellt, gehst du in mehreren Bereichen darüber hinaus. Die Linke braucht Menschen wie dich, die das Programm weiterentwickeln.",
+        "Dein Profil zeigt: Du willst mehr als das aktuelle Programm verspricht. Das Erfurter Programm von 2011 war ein Kompromiss – und Kompromisse können überholt werden. Von Menschen wie dir."
+      ],
+      "einladung": "Das Parteiprogramm ist nicht in Stein gemeißelt. Es wurde von Menschen geschrieben und kann von Menschen verändert werden. Schreib einen Antrag, bring deine Positionen ein, verändere Die Linke von innen!"
+    },
+    "uebereinstimmend": {
+      "ueberschrift": "Du passt zum Programm",
+      "einleitungen": [
+        "Deine Positionen entsprechen weitgehend dem Erfurter Programm der Linken. Du teilst die Grundüberzeugungen der Partei: soziale Gerechtigkeit, Frieden, ökologischer Umbau, demokratische Teilhabe.",
+        "Du und das Parteiprogramm – das passt. Deine Überzeugungen decken sich mit den zentralen Forderungen der Linken: Umverteilung, gute Arbeit, internationale Solidarität.",
+        "Das Erfurter Programm spricht deine Sprache. Du findest dich in den Grundwerten der Linken wieder und kannst die Partei mit gutem Gewissen unterstützen."
+      ]
+    },
+    "moderater": {
+      "ueberschrift": "Das Programm ist radikaler als du",
+      "einleitungen": [
+        "Deine Positionen sind in einigen Bereichen moderater als das Erfurter Programm. Das ist okay – Die Linke ist eine breite Partei mit Raum für verschiedene Strömungen.",
+        "Du stehst etwas rechts vom Parteiprogramm. Das bedeutet nicht, dass du nicht zur Linken gehörst – aber vielleicht lohnt es sich, manche Positionen des Programms genauer kennenzulernen.",
+        "Das Erfurter Programm geht in einigen Punkten weiter als deine aktuellen Positionen. Vielleicht findest du bei genauerer Beschäftigung noch Argumente, die dich überzeugen?"
+      ]
+    }
+  },
+  "spannungsfelder": {
+    "1": {
+      "thema": "EIGENTUM",
+      "deine_position": "Du willst weitergehende Vergesellschaftung – Commons, Selbstverwaltung, demokratische Kontrolle von unten statt Staatseigentum.",
+      "programm_position": "Das Erfurter Programm fordert Vergesellschaftung strategischer Bereiche, denkt aber primär in Kategorien öffentlichen/staatlichen Eigentums.",
+      "luecke": "Das Programm bleibt beim Staatseigentum stehen, du denkst an selbstverwaltete Alternativen."
+    },
+    "2": {
+      "thema": "ARBEIT",
+      "deine_position": "Du hinterfragst Lohnarbeit grundsätzlich – Arbeitszeitverkürzung, Grundeinkommen, oder sogar eine Gesellschaft jenseits der Arbeit.",
+      "programm_position": "Das Programm fordert 'gute Arbeit', Mindestlohn, Tarifbindung und langfristig die 30-Stunden-Woche.",
+      "luecke": "Das Programm will bessere Arbeit, du fragst: Muss es überhaupt so viel Arbeit sein?"
+    },
+    "3": {
+      "thema": "SOZIALSTAAT",
+      "deine_position": "Du siehst den Sozialstaat kritisch – er verwaltet Armut statt sie abzuschaffen, oder du willst ihn durch Selbstorganisation ersetzen.",
+      "programm_position": "Das Programm will den Sozialstaat ausbauen und verteidigen: Rente, Gesundheit, Pflege, Bildung.",
+      "luecke": "Das Programm verteidigt den Sozialstaat, du fragst nach Alternativen jenseits staatlicher Fürsorge."
+    },
+    "4": {
+      "thema": "STEUERN",
+      "deine_position": "Du willst radikale Umverteilung – Enteignung von Milliardären, Abschaffung von Erbschaft, oder Überwindung des Geldsystems.",
+      "programm_position": "Das Programm fordert Millionärssteuer, höhere Erbschaftssteuer, Finanztransaktionssteuer.",
+      "luecke": "Das Programm will umverteilen, du fragst: Warum gibt es überhaupt Milliardäre?"
+    },
+    "5": {
+      "thema": "WOHNEN",
+      "deine_position": "Du willst Wohnen komplett dem Markt entziehen – Enteignung aller Immobilienkonzerne, kommunales Eigentum, oder selbstverwaltete Wohnprojekte.",
+      "programm_position": "Das Programm fordert Mietpreisbremse, sozialen Wohnungsbau, und perspektivisch Vergesellschaftung großer Wohnungsunternehmen.",
+      "luecke": "Das Programm will den Wohnungsmarkt regulieren, du willst ihn abschaffen."
+    },
+    "6": {
+      "thema": "GESUNDHEIT",
+      "deine_position": "Du willst Gesundheit grundlegend anders denken – jenseits von Pharmaindustrie, mit Fokus auf Prävention, Selbstbestimmung, Community Care.",
+      "programm_position": "Das Programm fordert Bürgerversicherung, Abschaffung der Zwei-Klassen-Medizin, solidarische Finanzierung.",
+      "luecke": "Das Programm reformiert das Gesundheitssystem, du hinterfragst seine Grundlogik."
+    },
+    "7": {
+      "thema": "BILDUNG",
+      "deine_position": "Du willst Bildung radikal demokratisieren – Schule ohne Noten, selbstbestimmtes Lernen, oder Bildung jenseits staatlicher Institutionen.",
+      "programm_position": "Das Programm fordert Gemeinschaftsschule, kostenlose Bildung, bessere Ausstattung.",
+      "luecke": "Das Programm verbessert das Bildungssystem, du willst es grundlegend umbauen."
+    },
+    "8": {
+      "thema": "DIGITALISIERUNG",
+      "deine_position": "Du siehst in Technologie entweder ein Herrschaftsinstrument das es zu bekämpfen gilt, oder einen Befreiungshebel für Post-Work und Überfluss.",
+      "programm_position": "Das Programm fordert digitale Teilhabe, Datenschutz, öffentliche Infrastruktur.",
+      "luecke": "Das Programm will Digitalisierung gestalten, du denkst radikaler über ihre Potenziale oder Gefahren."
+    },
+    "9": {
+      "thema": "ÖKOLOGIE",
+      "deine_position": "Du forderst Degrowth – weniger Produktion, weniger Konsum, ein grundlegend anderes Verhältnis zur Natur.",
+      "programm_position": "Das Programm fordert sozial-ökologischen Umbau, erneuerbare Energien, Verkehrswende.",
+      "luecke": "Das Programm will grünes Wachstum, du sagst: Wachstum selbst ist das Problem."
+    },
+    "10": {
+      "thema": "MOBILITÄT",
+      "deine_position": "Du willst nicht nur besseren ÖPNV, sondern hinterfragst Mobilität grundsätzlich – weniger Bewegung nötig durch lokale Strukturen.",
+      "programm_position": "Das Programm fordert kostenlosen ÖPNV, Ausbau der Bahn, Verkehrswende.",
+      "luecke": "Das Programm will andere Verkehrsmittel, du fragst: Warum müssen wir so viel fahren?"
+    },
+    "11": {
+      "thema": "EUROPA",
+      "deine_position": "Du lehnst die EU grundsätzlich ab – als neoliberales Projekt, Festung Europa, oder du forderst eine ganz andere europäische Integration von unten.",
+      "programm_position": "Das Programm will die EU demokratisieren und sozial umbauen, kritisiert aber auch Neoliberalismus und Militarisierung.",
+      "luecke": "Das Programm will die EU reformieren, du fragst: Ist sie überhaupt reformierbar?"
+    },
+    "12": {
+      "thema": "FRIEDEN",
+      "deine_position": "Du vertrittst radikalen Antimilitarismus – sofortige Abschaffung der Bundeswehr, keine Kompromisse bei Waffenexporten, internationale Solidarität mit allen Befreiungsbewegungen.",
+      "programm_position": "Das Programm fordert Abrüstung, Stopp von Waffenexporten, Auflösung der NATO, keine Auslandseinsätze.",
+      "luecke": "Das Programm ist pazifistisch, du gehst noch weiter in der antimilitaristischen Konsequenz."
+    },
+    "13": {
+      "thema": "MIGRATION",
+      "deine_position": "Du forderst offene Grenzen – Bewegungsfreiheit als Menschenrecht, Abschaffung von Frontex, Bleiberecht für alle.",
+      "programm_position": "Das Programm fordert humane Flüchtlingspolitik, Seenotrettung, Familiennachzug, kritisiert Abschottung.",
+      "luecke": "Das Programm will humanere Grenzen, du fragst: Warum überhaupt Grenzen?"
+    },
+    "14": {
+      "thema": "INTERNATIONALISMUS",
+      "deine_position": "Du denkst global – Solidarität mit dem globalen Süden, gegen jeden Nationalismus, für eine weltweite Bewegung.",
+      "programm_position": "Das Programm bekennt sich zu internationaler Solidarität, bleibt aber oft nationalstaatlich orientiert.",
+      "luecke": "Das Programm denkt von Deutschland aus, du denkst von der Welt aus."
+    },
+    "15": {
+      "thema": "DEMOKRATIE",
+      "deine_position": "Du willst radikale Demokratie – Räte, Basisdemokratie, direkte Entscheidungen, oder sogar Überwindung des Staates.",
+      "programm_position": "Das Programm fordert mehr direkte Demokratie, Volksentscheide, Stärkung der Parlamente.",
+      "luecke": "Das Programm will mehr Demokratie im System, du fragst: Ist das System selbst demokratisch genug?"
+    },
+    "16": {
+      "thema": "FEMINISMUS",
+      "deine_position": "Du verstehst Feminismus als grundlegende Gesellschaftskritik – Patriarchat und Kapitalismus sind verwoben, ohne Feminismus kein Sozialismus.",
+      "programm_position": "Das Programm fordert Gleichstellung, Entgeltgleichheit, Schutz vor Gewalt, Quote.",
+      "luecke": "Das Programm fordert Gleichstellung, du siehst Feminismus als Systemfrage."
+    },
+    "17": {
+      "thema": "ANTIFASCHISMUS",
+      "deine_position": "Du verstehst Antifaschismus als permanenten Kampf – nicht nur gegen Nazis, sondern gegen alle autoritären Strukturen, auch in der 'Mitte'.",
+      "programm_position": "Das Programm bekennt sich zum Antifaschismus, fordert Verbot faschistischer Organisationen.",
+      "luecke": "Das Programm ist antifaschistisch, du siehst Faschismus als systemisches Problem das radikalere Antworten braucht."
+    }
+  },
+  "layer2_spannungen": {
+    "A1": {
+      "thema": "STRATEGIE",
+      "deine_position": "Du setzt auf radikalen Bruch – Revolution statt Reform, grundlegende Systemveränderung.",
+      "programm_position": "Das Programm verbindet konkrete Reformen mit dem Ziel einer anderen Gesellschaft.",
+      "luecke": "Das Programm ist strategisch offen, du bist klar revolutionär orientiert."
+    },
+    "A2": {
+      "thema": "SUBJEKT",
+      "deine_position": "Du siehst alle Unterdrückten als Träger*innen der Veränderung – intersektional, nicht nur die klassische Arbeiterklasse.",
+      "programm_position": "Das Programm bezieht sich auf Erwerbslose, Arbeiter*innen, sozial Benachteiligte.",
+      "luecke": "Das Programm denkt noch oft klassisch in Klassen, du denkst breiter."
+    },
+    "A3": {
+      "thema": "STAAT",
+      "deine_position": "Du willst den Staat langfristig überwinden – nicht nur erobern, sondern durch demokratischere Formen ersetzen.",
+      "programm_position": "Das Programm will den Staat demokratisieren und für soziale Ziele nutzen.",
+      "luecke": "Das Programm setzt auf den Staat, du siehst ihn kritischer."
+    },
+    "B1": {
+      "thema": "PLANUNG",
+      "deine_position": "Du willst demokratische Planwirtschaft – bewusste gesellschaftliche Koordination statt Marktchaos.",
+      "programm_position": "Das Programm fordert Regulierung, öffentliche Daseinsvorsorge, aber keine explizite Planwirtschaft.",
+      "luecke": "Das Programm will regulierten Markt, du willst darüber hinaus."
+    },
+    "B2": {
+      "thema": "SELBSTVERWALTUNG",
+      "deine_position": "Du willst, dass die Arbeitenden selbst kontrollieren – Genossenschaften, Räte, Commons statt Staatsbetriebe.",
+      "programm_position": "Das Programm fordert öffentliches Eigentum, primär staatlich gedacht.",
+      "luecke": "Das Programm denkt Vergesellschaftung staatlich, du denkst sie von unten."
+    },
+    "B3": {
+      "thema": "POST-WORK",
+      "deine_position": "Du willst nicht nur weniger, sondern grundlegend andere oder gar keine Lohnarbeit mehr.",
+      "programm_position": "Das Programm fordert 30-Stunden-Woche, gute Arbeit für alle.",
+      "luecke": "Das Programm will bessere Arbeit, du fragst ob es Arbeit sein muss."
+    },
+    "C1": {
+      "thema": "INTERSEKTIONALITÄT",
+      "deine_position": "Du siehst Klasse, Geschlecht, Race als untrennbar verwoben – kein 'Klasse zuerst'.",
+      "programm_position": "Das Programm behandelt verschiedene Diskriminierungsformen, teils nebeneinander.",
+      "luecke": "Das Programm addiert Themen, du siehst sie als System."
+    },
+    "C2": {
+      "thema": "NATURVERHÄLTNIS",
+      "deine_position": "Du siehst die Natur als Eigenrecht habend – nicht nur Ressource für Menschen.",
+      "programm_position": "Das Programm fordert Umweltschutz, sozial-ökologischen Umbau.",
+      "luecke": "Das Programm schützt Natur für Menschen, du gibst ihr Eigenwert."
+    },
+    "C3": {
+      "thema": "GLOBALISMUS",
+      "deine_position": "Du denkst von Anfang an global – nationale Lösungen sind keine.",
+      "programm_position": "Das Programm ist international solidarisch, aber national orientiert.",
+      "luecke": "Das Programm denkt von Deutschland aus, du von der Welt."
+    },
+    "D1": {
+      "thema": "UTOPIE",
+      "deine_position": "Du willst konkrete Utopien – ausmalen wie eine andere Gesellschaft aussehen könnte.",
+      "programm_position": "Das Programm formuliert Kritik und Forderungen, weniger Visionen.",
+      "luecke": "Das Programm sagt was weg soll, du fragst was kommen soll."
+    },
+    "D2": {
+      "thema": "TRANSFORMATION",
+      "deine_position": "Du setzt auf ständige Transformation – keine neuen festen Institutionen, permanente Demokratie.",
+      "programm_position": "Das Programm will neue, bessere Institutionen aufbauen.",
+      "luecke": "Das Programm baut Institutionen, du misstraust ihnen grundsätzlich."
+    },
+    "D3": {
+      "thema": "SPIRITUALITÄT",
+      "deine_position": "Du bist offen für Transzendenz, Spiritualität, nicht-materialistische Perspektiven.",
+      "programm_position": "Das Programm ist säkular orientiert.",
+      "luecke": "Das Programm trennt Politik und Spiritualität, du nicht unbedingt."
+    },
+    "E1": {
+      "thema": "BEWEGUNGEN",
+      "deine_position": "Du setzt auf Vernetzung aller Bewegungen – über die klassische Arbeiterbewegung hinaus.",
+      "programm_position": "Das Programm bezieht sich auf Gewerkschaften und soziale Bewegungen.",
+      "luecke": "Das Programm kooperiert mit Bewegungen, du siehst sie als zentral."
+    },
+    "E2": {
+      "thema": "EBENEN",
+      "deine_position": "Du setzt auf lokal + global gleichzeitig – nicht auf Bundespolitik.",
+      "programm_position": "Das Programm fokussiert auf bundespolitische Forderungen.",
+      "luecke": "Das Programm denkt an Regierung, du an Kommune und Welt."
+    },
+    "E3": {
+      "thema": "PRAXIS",
+      "deine_position": "Du lernst Sozialismus durch gemeinsame Erfahrung – nicht durch Theorie von oben.",
+      "programm_position": "Das Programm setzt auf politische Bildung und Aufklärung.",
+      "luecke": "Das Programm bildet, du willst gemeinsam erfahren."
+    }
+  }
+}
