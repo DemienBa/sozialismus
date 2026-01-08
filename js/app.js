@@ -140,42 +140,52 @@ Antworte als JSON:
 
 NUR valides JSON.`;
   } else if (analyseTyp === 'layer3') {
+    // Berechne Durchschnitt um Radikalität einzuschätzen
+    const werte = Object.values(antworten);
+    const durchschnitt = werte.reduce((a, b) => a + b, 0) / werte.length;
+    const radikalCount = werte.filter(v => v >= 4).length;
+    const moderatCount = werte.filter(v => v <= 2).length;
+    
     prompt = `Du vergleichst die Nutzer-Positionen mit dem Erfurter Programm der Linken (2011).
 
-WICHTIG: Das Erfurter Programm ist in vielen Punkten STRUKTURKONSERVATIV und bleibt hinter radikalen linken Positionen zurück:
+SKALA: 1 = moderat/reformistisch, 5 = radikal/systemkritisch
 
-KONKRETE PROGRAMM-POSITIONEN (vereinfacht):
-- EIGENTUM: "Öffentliches Eigentum", "Vergesellschaftung strategischer Sektoren" – aber primär STAATLICH gedacht, wenig zu Commons/Genossenschaften
-- ARBEIT: "Gute Arbeit für alle", Mindestlohn, Tarifbindung – aber KEINE radikale Arbeitszeitverkürzung, kein Post-Work-Denken
-- STAAT: "Sozialstaat ausbauen", "Demokratie erweitern" – aber KEINE Staatskritik, keine Überwindungsperspektive
-- ÖKOLOGIE: "Sozial-ökologischer Umbau" – aber KEIN konsequentes Degrowth, bleibt bei "grünem Wachstum"
-- PLANUNG: Regulierung und öffentliche Daseinsvorsorge – aber KEINE demokratische Planwirtschaft
-- FEMINISMUS: Gleichstellung, Care-Arbeit anerkennen – aber untergeordnet, nicht intersektional gedacht
-- GLOBAL: Internationale Solidarität – aber NATIONALSTAATLICH orientiert, EU-Reform statt Überwindung
-- MIGRATION: "Offene Grenzen" fehlt, bleibt bei "humanitärer Flüchtlingspolitik"
+PROGRAMM-POSITIONEN (entsprechen etwa Stufe 3-4):
+- EIGENTUM: Vergesellschaftung strategischer Sektoren, öffentliches Eigentum
+- ARBEIT: Gute Arbeit, Mindestlohn, Tarifbindung, 30h-Woche als Ziel
+- STAAT: Sozialstaat ausbauen, mehr Demokratie
+- ÖKOLOGIE: Sozial-ökologischer Umbau
+- PLANUNG: Regulierung, öffentliche Daseinsvorsorge
+- FEMINISMUS: Gleichstellung, Care-Arbeit anerkennen
+- GLOBAL: Internationale Solidarität, EU reformieren
+- MIGRATION: Humanitäre Flüchtlingspolitik
 
 NUTZER-PROFIL:
 ${profilText}
 
-AUFGABE: Zeige in DU-FORM, wo die radikalen Positionen des Nutzers ÜBER das Programm hinausgehen. Lade ein, das Programm zu verändern.
+STATISTIK: Durchschnitt ${durchschnitt.toFixed(1)}/5, ${radikalCount} radikale (4-5), ${moderatCount} moderate (1-2) Positionen
+
+AUFGABE: Analysiere EHRLICH wo der Nutzer im Verhältnis zum Programm steht.
+
+- Wenn Durchschnitt < 2.5: Nutzer ist MODERATER als das Programm
+- Wenn Durchschnitt 2.5-3.5: Nutzer ist ETWA AUF PROGRAMMLINIE
+- Wenn Durchschnitt > 3.5: Nutzer ist RADIKALER als das Programm
 
 Antworte als JSON:
 {
-  "ueberschrift": "Kurze Überschrift (z.B. 'Du bist radikaler als das Programm')",
-  "einleitung": "1-2 Sätze in Du-Form: Deine Positionen gehen in X Punkten über das Erfurter Programm hinaus...",
+  "ueberschrift": "Passende Überschrift je nach Ergebnis",
+  "einleitung": "1-2 Sätze in Du-Form die das Verhältnis zum Programm beschreiben",
+  "verhältnis": "moderater" oder "auf_linie" oder "radikaler",
   "spannungsfelder": [
-    {
-      "thema": "z.B. EIGENTUM",
-      "deine_position": "Was du willst (z.B. Commons, Selbstverwaltung)",
-      "programm_position": "Was das Programm sagt (z.B. öffentliches/staatliches Eigentum)",
-      "luecke": "Wo das Programm hinterherhinkt"
-    }
+    NUR wenn verhältnis="radikaler": Zeige wo Nutzer über Programm hinausgeht
+    Bei "moderater": Zeige wo Programm weiter geht als Nutzer
+    Bei "auf_linie": Leeres Array [] oder 1-2 kleine Unterschiede
   ],
-  "programm_kritik": "1-2 Sätze: Warum ist das Programm strukturkonservativ? (z.B. 2011 geschrieben, Kompromiss, etc.)",
-  "einladung": "Motivierender Aufruf (1-2 Sätze): Z.B. 'Schreib einen Antrag für den Programmparteitag und trage dazu bei, das Programm zu verändern und die Linke zu einer radikalen Kraft zu machen!'"
+  "programm_kritik": "Bei 'radikaler': Warum hinkt Programm hinterher. Bei 'moderater': Warum ist Programm schon gut/radikal. Bei 'auf_linie': Kurze Würdigung",
+  "einladung": "Passender Aufruf: Bei 'radikaler': Programm verändern! Bei 'moderater': Tiefer einsteigen, radikaler denken! Bei 'auf_linie': Gemeinsam kämpfen!"
 }
 
-Wenn der Nutzer moderate Positionen hat, zeige weniger Spannungen. Bei sehr radikalen Positionen, zeige viele.
+WICHTIG: Sei EHRLICH. Wenn jemand moderate Werte (1-2) wählt, ist er NICHT radikaler als das Programm!
 NUR valides JSON.`;
   }
 
@@ -660,7 +670,8 @@ const AnalyseBox = ({ analyse, typ, antworten, params, onGenerateAntrag, showAnt
         {/* Header */}
         <div style={{ textAlign: 'center', marginBottom: '2rem' }}>
           <div style={{ fontSize: '3rem', marginBottom: '0.5rem' }}>
-            {hatSpannungen ? '📜' : '✓'}
+            {analyse.verhältnis === 'radikaler' ? '🔥' : 
+             analyse.verhältnis === 'moderater' ? '📚' : '✓'}
           </div>
           <h2 style={{ margin: '0 0 0.5rem', color: COLORS.weiss }}>
             {analyse.ueberschrift || 'Dein Profil & das Parteiprogramm'}
@@ -676,16 +687,18 @@ const AnalyseBox = ({ analyse, typ, antworten, params, onGenerateAntrag, showAnt
           </div>
         )}
         
-        {/* Spannungsfelder */}
+        {/* Spannungsfelder - Label je nach Verhältnis */}
         {hatSpannungen && (
           <div style={{ marginBottom: '1.5rem' }}>
             <div className="label" style={{ marginBottom: '1rem', textAlign: 'center' }}>
-              ⚡ WO DU ÜBER DAS PROGRAMM HINAUSGEHST
+              {analyse.verhältnis === 'radikaler' ? '⚡ WO DU ÜBER DAS PROGRAMM HINAUSGEHST' : 
+               analyse.verhältnis === 'moderater' ? '📋 WO DAS PROGRAMM WEITER GEHT' :
+               '↔️ UNTERSCHIEDE ZUM PROGRAMM'}
             </div>
             {spannungen.map((s, i) => (
-              <div key={i} className="card" style={{ marginBottom: '0.75rem', borderLeft: `4px solid ${COLORS.orange}` }}>
+              <div key={i} className="card" style={{ marginBottom: '0.75rem', borderLeft: `4px solid ${analyse.verhältnis === 'radikaler' ? COLORS.orange : COLORS.gruen}` }}>
                 <div className="card-body">
-                  <div style={{ fontWeight: 700, color: COLORS.rot, marginBottom: '0.75rem', fontSize: '0.85rem', letterSpacing: '0.05em' }}>
+                  <div style={{ fontWeight: 700, color: analyse.verhältnis === 'radikaler' ? COLORS.rot : COLORS.gruen, marginBottom: '0.75rem', fontSize: '0.85rem', letterSpacing: '0.05em' }}>
                     {s.thema}
                   </div>
                   <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem', marginBottom: '0.75rem' }}>
@@ -701,7 +714,7 @@ const AnalyseBox = ({ analyse, typ, antworten, params, onGenerateAntrag, showAnt
                   {s.luecke && (
                     <div style={{ 
                       fontSize: '0.85rem', 
-                      color: COLORS.orange, 
+                      color: analyse.verhältnis === 'radikaler' ? COLORS.orange : COLORS.gruen, 
                       fontStyle: 'italic',
                       paddingTop: '0.5rem',
                       borderTop: '1px solid #444'
@@ -715,23 +728,32 @@ const AnalyseBox = ({ analyse, typ, antworten, params, onGenerateAntrag, showAnt
           </div>
         )}
         
-        {/* Programm-Kritik */}
+        {/* Programm-Kritik / Würdigung */}
         {analyse.programm_kritik && (
           <div className="card" style={{ marginBottom: '1.5rem', background: '#333' }}>
             <div className="card-body">
-              <div className="label" style={{ marginBottom: '0.5rem' }}>WARUM IST DAS SO?</div>
+              <div className="label" style={{ marginBottom: '0.5rem' }}>
+                {analyse.verhältnis === 'radikaler' ? 'WARUM HINKT DAS PROGRAMM HINTERHER?' : 
+                 analyse.verhältnis === 'moderater' ? 'WARUM IST DAS PROGRAMM SCHON GUT?' :
+                 'ZUM PROGRAMM'}
+              </div>
               <p style={{ margin: 0, lineHeight: 1.6, color: '#CCC' }}>{analyse.programm_kritik}</p>
             </div>
           </div>
         )}
         
-        {/* Einladung & Call to Action mit Antrags-Button */}
-        <div className="card" style={{ background: COLORS.rot, color: COLORS.weiss }}>
+        {/* Einladung - Farbe je nach Verhältnis */}
+        <div className="card" style={{ 
+          background: analyse.verhältnis === 'radikaler' ? COLORS.rot : 
+                      analyse.verhältnis === 'moderater' ? COLORS.orange : 
+                      COLORS.gruen, 
+          color: COLORS.weiss 
+        }}>
           <div className="card-body" style={{ textAlign: 'center' }}>
             {analyse.einladung && (
-              <p style={{ margin: '0 0 1rem', fontSize: '1.1rem', lineHeight: 1.5 }}>{analyse.einladung}</p>
+              <p style={{ margin: showAntragButton ? '0 0 1rem' : 0, fontSize: '1.1rem', lineHeight: 1.5 }}>{analyse.einladung}</p>
             )}
-            {showAntragButton && onGenerateAntrag ? (
+            {showAntragButton && onGenerateAntrag && (
               <button
                 onClick={onGenerateAntrag}
                 style={{ 
@@ -754,16 +776,6 @@ const AnalyseBox = ({ analyse, typ, antworten, params, onGenerateAntrag, showAnt
               >
                 ✍️ Antrag generieren
               </button>
-            ) : analyse.call_to_action && (
-              <div style={{ 
-                padding: '0.75rem 1rem', 
-                background: 'rgba(255,255,255,0.2)', 
-                borderRadius: '8px', 
-                fontWeight: 600,
-                fontSize: '0.95rem'
-              }}>
-                → {analyse.call_to_action}
-              </div>
             )}
           </div>
         </div>
@@ -1142,7 +1154,7 @@ const Layer3 = ({ profilL1, profilL2, onBack, apiKey, paramsL1, paramsL2 }) => {
               analyse={analyse} 
               typ="layer3" 
               onGenerateAntrag={handleGenerateAntrag}
-              showAntragButton={analyse?.spannungsfelder?.length > 0 && !showAntrag}
+              showAntragButton={analyse?.verhältnis === 'radikaler' && analyse?.spannungsfelder?.length > 0 && !showAntrag}
             />}
             
             {/* Antrags-Anzeige */}
