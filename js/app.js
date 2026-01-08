@@ -145,40 +145,52 @@ NUR valides JSON.`;
     const durchschnitt = werte.reduce((a, b) => a + b, 0) / werte.length;
     const radikalCount = werte.filter(v => v >= 4).length;
     
-    prompt = `Vergleiche Nutzer-Positionen mit dem Erfurter Programm der Linken (2011).
+    prompt = `Du vergleichst die Nutzer-Positionen mit dem Erfurter Programm der Linken (2011).
 
-SKALA: 1 = moderat, 5 = radikal. PROGRAMM = etwa Stufe 3-4.
+SKALA: 1 = moderat/reformistisch, 5 = radikal/systemkritisch
+
+PROGRAMM-POSITIONEN (entsprechen etwa Stufe 3-4):
+- EIGENTUM: "Öffentliches Eigentum", "Vergesellschaftung strategischer Sektoren" – primär staatlich gedacht
+- ARBEIT: "Gute Arbeit für alle", Mindestlohn, Tarifbindung, 30h-Woche als Fernziel
+- STAAT: "Sozialstaat ausbauen", "Demokratie erweitern" – aber keine Überwindungsperspektive
+- ÖKOLOGIE: "Sozial-ökologischer Umbau" – aber kein konsequentes Degrowth
+- PLANUNG: Regulierung und öffentliche Daseinsvorsorge – aber keine demokratische Planwirtschaft
+- FEMINISMUS: Gleichstellung, Care-Arbeit anerkennen
+- GLOBAL: Internationale Solidarität – aber nationalstaatlich orientiert
+- MIGRATION: Humanitäre Flüchtlingspolitik – "offene Grenzen" fehlt
 
 NUTZER-PROFIL:
 ${profilText}
 
 STATISTIK: Durchschnitt ${durchschnitt.toFixed(1)}/5, ${radikalCount} radikale Positionen (4-5)
 
-REGEL:
-- Durchschnitt > 3.5 → verhältnis = "radikaler"
-- Durchschnitt 2.5-3.5 → verhältnis = "auf_linie"  
-- Durchschnitt < 2.5 → verhältnis = "moderater"
+AUFGABE: Analysiere wo der Nutzer im Verhältnis zum Programm steht.
 
-JSON-Antwort:
+- Durchschnitt > 3.5 → verhältnis = "radikaler" (Nutzer geht über Programm hinaus)
+- Durchschnitt 2.5-3.5 → verhältnis = "uebereinstimmend" (Nutzer entspricht etwa dem Programm)
+- Durchschnitt < 2.5 → verhältnis = "moderater" (Programm ist radikaler als Nutzer)
+
+Antworte als JSON:
 {
-  "ueberschrift": "Kurze Überschrift",
-  "einleitung": "1-2 Sätze in Du-Form",
-  "verhältnis": "radikaler" oder "auf_linie" oder "moderater",
+  "ueberschrift": "Passende Überschrift (z.B. 'Du gehst über das Programm hinaus' oder 'Du bist mit dem Programm übereinstimmend' oder 'Das Programm ist radikaler als du')",
+  "einleitung": "2-3 Sätze in Du-Form die das Verhältnis zum Programm beschreiben. Sei konkret!",
+  "verhältnis": "radikaler" oder "uebereinstimmend" oder "moderater",
   "spannungsfelder": [
     {
-      "thema": "THEMENNAME",
-      "deine_position": "Was der Nutzer will (konkret!)",
-      "programm_position": "Was das Programm sagt (konkret!)",
-      "luecke": "Kurze Erklärung der Differenz"
+      "thema": "z.B. EIGENTUM",
+      "deine_position": "KONKRET was der Nutzer will basierend auf seinem Profil (z.B. 'Du willst Commons und Selbstverwaltung statt Staatseigentum')",
+      "programm_position": "KONKRET was das Programm sagt (z.B. 'Das Programm setzt auf öffentliches/staatliches Eigentum')",
+      "luecke": "Wo die Differenz liegt"
     }
   ],
-  "einladung": "NUR bei radikaler: Aufruf das Programm zu verändern. Sonst null"
+  "einladung": "NUR bei verhältnis=radikaler: Motivierender Aufruf das Programm zu verändern (2 Sätze). Bei uebereinstimmend/moderater: null"
 }
 
 WICHTIG für spannungsfelder:
-- NUR bei verhältnis="radikaler" befüllen, sonst leeres Array []
-- Jedes Feld MUSS deine_position und programm_position haben
-- Sei KONKRET, keine Platzhalter!
+- NUR bei verhältnis="radikaler" befüllen mit 2-4 konkreten Spannungsfeldern
+- Bei "uebereinstimmend" oder "moderater": leeres Array []
+- deine_position und programm_position müssen KONKRETE INHALTE haben, keine Platzhalter!
+- Beziehe dich auf die tatsächlichen Werte im Profil!
 
 NUR valides JSON.`;
   }
