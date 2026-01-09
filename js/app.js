@@ -1063,15 +1063,16 @@ const getOfflineAnalyseL2 = (antworten, analysen) => {
   return null;
 };
 
-const Layer2 = ({ params, onComplete, onLiteratur, onBack, apiKey, analysen }) => {
+const Layer2 = ({ params, onComplete, onLiteratur, onBack, apiKey, analysen, initialPhase = 'intro', initialAnalyse = null, initialAntworten = null }) => {
   const [antworten, setAntworten] = useState(() => {
+    if (initialAntworten) return initialAntworten;
     const init = {};
     params.forEach(p => { init[p.id] = 3; });
     return init;
   });
   const [expanded, setExpanded] = useState(null);
-  const [phase, setPhase] = useState('intro');
-  const [analyse, setAnalyse] = useState(null);
+  const [phase, setPhase] = useState(initialPhase);
+  const [analyse, setAnalyse] = useState(initialAnalyse);
   const [loading, setLoading] = useState(false);
 
   const startAnalyse = async () => {
@@ -1189,7 +1190,7 @@ const Layer2 = ({ params, onComplete, onLiteratur, onBack, apiKey, analysen }) =
                     <div style={{ color: '#AAA', fontSize: '0.85rem' }}>Bücher, Videos, Podcasts passend zu "{analyse?.archetyp}"</div>
                   </div>
                   <button 
-                    onClick={() => onLiteratur && onLiteratur(antworten, analyse?.id, analyse?.archetyp)} 
+                    onClick={() => onLiteratur && onLiteratur(antworten, analyse?.id, analyse?.archetyp, analyse)} 
                     className="btn btn-secondary"
                     style={{ color: COLORS.weiss, borderColor: COLORS.rot, background: 'transparent' }}
                   >
@@ -1974,8 +1975,11 @@ const Layer4 = ({ archetypId, archetypName, literatur, onBack }) => {
 
 const App = () => {
   const [layer, setLayer] = useState(0);
+  const [previousLayer, setPreviousLayer] = useState(null); // Merkt sich, woher man zu Layer 4 kam
+  const [returnToL2Analyse, setReturnToL2Analyse] = useState(false); // Flag: Soll Layer2 direkt zur Analyse?
   const [profilL1, setProfilL1] = useState(null);
   const [profilL2, setProfilL2] = useState(null);
+  const [analyseL2, setAnalyseL2] = useState(null); // Speichert Layer2 Analyse für Rückkehr
   const [detailsL1, setDetailsL1] = useState(null);
   const [detailsL2, setDetailsL2] = useState(null);
   const [loading, setLoading] = useState(true);
@@ -2043,17 +2047,28 @@ const App = () => {
         setProfilL2(p); 
         setArchetypId(id);
         setArchetypName(name);
+        setAnalyseL2({ id, archetyp: name }); // Speichere Analyse
+        setReturnToL2Analyse(false); // Reset Flag
         setLayer(3); 
       }} 
-      onLiteratur={(p, id, name) => {
+      onLiteratur={(p, id, name, fullAnalyse) => {
         setProfilL2(p);
         setArchetypId(id);
         setArchetypName(name);
+        setAnalyseL2(fullAnalyse); // Speichere vollständige Analyse
+        setPreviousLayer(2); // Merken: kam von Layer 2
+        setReturnToL2Analyse(true); // Flag setzen
         setLayer(4);
       }}
-      onBack={() => setLayer(1)} 
+      onBack={() => {
+        setReturnToL2Analyse(false); // Reset Flag
+        setLayer(1);
+      }} 
       apiKey={apiKey} 
-      analysen={analysenL2} 
+      analysen={analysenL2}
+      initialPhase={returnToL2Analyse ? 'analyse' : 'intro'}
+      initialAnalyse={returnToL2Analyse ? analyseL2 : null}
+      initialAntworten={returnToL2Analyse ? profilL2 : null}
     />;
   }
 
@@ -2062,7 +2077,10 @@ const App = () => {
       profilL1={profilL1} 
       profilL2={profilL2} 
       onBack={() => { setLayer(0); setProfilL1(null); setProfilL2(null); setArchetypId(null); setArchetypName(null); }} 
-      onLiteratur={() => setLayer(4)}
+      onLiteratur={() => {
+        setPreviousLayer(3); // Merken: kam von Layer 3
+        setLayer(4);
+      }}
       apiKey={apiKey} 
       paramsL1={paramsL1} 
       paramsL2={paramsL2} 
@@ -2076,7 +2094,12 @@ const App = () => {
       archetypId={archetypId} 
       archetypName={archetypName} 
       literatur={literatur} 
-      onBack={() => setLayer(2)}
+      onBack={() => {
+        const goTo = previousLayer || 2;
+        setPreviousLayer(null);
+        // Flag wird NICHT hier zurückgesetzt, sondern erst wenn Layer2 verlassen wird
+        setLayer(goTo);
+      }}
     />;
   }
 
