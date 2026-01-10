@@ -2547,6 +2547,28 @@
       background: rgba(0,0,0,0.8);
       z-index: 999;
     }
+    
+    /* Animation für Willkommens-Banner */
+    @keyframes fadeInDown {
+      from {
+        opacity: 0;
+        transform: translateX(-50%) translateY(-20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(-50%) translateY(0);
+      }
+    }
+    
+    /* Highlight für Generator-Knoten */
+    .generator-highlight {
+      animation: pulseHighlight 2s infinite;
+    }
+    
+    @keyframes pulseHighlight {
+      0%, 100% { box-shadow: 0 0 10px rgba(198,40,40,0.5); }
+      50% { box-shadow: 0 0 25px rgba(198,40,40,0.9); }
+    }
   </style>
 </head>
 <body>
@@ -9271,6 +9293,119 @@ function parseUrlParams() {
   const posParam = params.get('pos');
   if (posParam && knotenData[posParam]) {
     setTimeout(() => showKnoten(posParam), 500);
+  }
+  
+  // === NEU: Vom Sozialismus-Generator ===
+  
+  // Archetyp (z.B. "oekosozialismus")
+  const archetypParam = params.get('archetyp');
+  
+  // Knoten (z.B. "C2-4,B3-4,A1-4")
+  const knotenParam = params.get('knoten');
+  if (knotenParam) {
+    const knoten = knotenParam.split(',');
+    console.log('Generator-Knoten:', knoten);
+    
+    // Zeige Willkommens-Banner
+    setTimeout(() => {
+      const zimmer = params.get('zimmer') || 'Dein Ort im Wesen';
+      showWelcomeBanner(zimmer, knoten, archetypParam);
+    }, 800);
+    
+    // Highlighte die Knoten im Netzwerk
+    setTimeout(() => {
+      highlightGeneratorKnoten(knoten);
+    }, 1200);
+  }
+  
+  // Zimmer (poetische Beschreibung)
+  const zimmerParam = params.get('zimmer');
+  if (zimmerParam) {
+    console.log('Generator-Zimmer:', zimmerParam);
+  }
+}
+
+// Willkommens-Banner für Generator-Besucher
+function showWelcomeBanner(zimmer, knoten, archetyp) {
+  const banner = document.createElement('div');
+  banner.id = 'welcome-banner';
+  banner.innerHTML = `
+    <div style="
+      position: fixed;
+      top: 60px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+      border: 2px solid #C62828;
+      border-radius: 12px;
+      padding: 1.25rem 2rem;
+      z-index: 10000;
+      max-width: 500px;
+      box-shadow: 0 8px 32px rgba(198,40,40,0.3);
+      animation: fadeInDown 0.5s ease;
+    ">
+      <div style="display: flex; align-items: center; gap: 1rem;">
+        <span style="font-size: 2rem;">🏠</span>
+        <div style="flex: 1;">
+          <div style="color: #fff; font-weight: 700; font-size: 1.1rem; margin-bottom: 0.25rem;">
+            Willkommen in deinem Zimmer!
+          </div>
+          <div style="color: #AAA; font-size: 0.9rem;">
+            ${zimmer}
+          </div>
+          <div style="color: #888; font-size: 0.8rem; margin-top: 0.5rem;">
+            Deine Positionen: ${knoten.join(' · ')}
+          </div>
+        </div>
+        <button onclick="document.getElementById('welcome-banner').remove()" style="
+          background: transparent;
+          border: 1px solid #666;
+          color: #AAA;
+          padding: 0.25rem 0.75rem;
+          border-radius: 4px;
+          cursor: pointer;
+        ">×</button>
+      </div>
+    </div>
+  `;
+  document.body.appendChild(banner);
+  
+  // Auto-hide nach 8 Sekunden
+  setTimeout(() => {
+    const b = document.getElementById('welcome-banner');
+    if (b) b.style.opacity = '0';
+    setTimeout(() => {
+      const b2 = document.getElementById('welcome-banner');
+      if (b2) b2.remove();
+    }, 500);
+  }, 8000);
+}
+
+// Highlighte Knoten aus dem Generator
+function highlightGeneratorKnoten(knotenIds) {
+  // Im 3D-Netzwerk: Knoten hervorheben
+  if (nodes3d && nodes3d.length > 0) {
+    nodes3d.forEach(node => {
+      if (knotenIds.includes(node.id)) {
+        node.highlighted = true;
+        node.size = 1.5; // Größer
+      }
+    });
+    renderNetzwerk3D();
+  }
+  
+  // Im 2D-Modus: Rahmen hinzufügen
+  knotenIds.forEach(id => {
+    const el = document.querySelector(`[data-knoten-id="${id}"]`);
+    if (el) {
+      el.style.boxShadow = '0 0 20px rgba(198,40,40,0.8)';
+      el.style.border = '2px solid #C62828';
+    }
+  });
+  
+  // Öffne das erste Knoten-Detail nach kurzer Verzögerung
+  if (knotenIds.length > 0 && knotenData[knotenIds[0]]) {
+    setTimeout(() => showKnoten(knotenIds[0]), 2000);
   }
 }
 
