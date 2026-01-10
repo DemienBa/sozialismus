@@ -1,0 +1,180 @@
+{
+  "archetypen": [
+    {
+      "id": "marxismus_leninismus",
+      "archetyp": "Orthodoxer Marxismus-Leninismus",
+      "beschreibung": "Du setzt auf die historische Mission der Arbeiterklasse und eine disziplinierte Parteiorganisation. Der Staat ist für dich ein Werkzeug im Klassenkampf, das nach dem Sieg der Revolution genutzt werden muss.",
+      "theoretiker": ["Lenin (Avantgarde-Partei)", "Rosa Luxemburg (Massenstreik)", "Gramsci (Hegemonie)"],
+      "staerken": ["Klare strategische Analyse", "Organisatorische Schlagkraft"],
+      "spannungen": ["Bürokratisierungsgefahr", "Verhältnis von Partei und Masse"],
+      "slogan": "Alle Macht den Räten!",
+      "ideal": {"A1":4, "A2":2, "A3":2, "B1":5, "B2":2, "B3":2, "C1":2, "C2":2, "C3":4, "D1":2, "D2":2, "D3":1, "E1":2, "E2":2, "E3":1},
+      "gewichte": {"A3":3, "B1":3, "E3":3, "A2":2, "B2":2, "C1":2}
+    },
+    {
+      "id": "libertaerer_sozialismus",
+      "archetyp": "Libertärer Sozialismus",
+      "beschreibung": "Du verbindest radikale Gesellschaftskritik mit dem Traum von Selbstverwaltung und Herrschaftsfreiheit. Staat und Kapital sind für dich zwei Seiten derselben Medaille.",
+      "theoretiker": ["Bakunin (Kollektivismus)", "Murray Bookchin (Kommunalismus)", "David Graeber (Direkte Aktion)"],
+      "staerken": ["Konsequente Herrschaftskritik", "Basisdemokratische Praxis"],
+      "spannungen": ["Koordination im großen Maßstab", "Umgang mit Machtfragen"],
+      "slogan": "Keine Götter, keine Herren!",
+      "ideal": {"A1":4, "A2":4, "A3":5, "B1":3, "B2":5, "B3":4, "C1":4, "C2":4, "C3":4, "D1":3, "D2":5, "D3":3, "E1":5, "E2":5, "E3":5},
+      "gewichte": {"A3":3, "B2":3, "E2":3, "D2":2, "E1":2}
+    },
+    {
+      "id": "raetekommunismus",
+      "archetyp": "Rätekommunismus",
+      "beschreibung": "Du setzt auf die Selbstorganisation der Arbeiter*innen in Räten – gegen Parteibürokratie und Gewerkschaftsapparat. Die Revolution muss von unten kommen.",
+      "theoretiker": ["Anton Pannekoek (Arbeiterräte)", "Paul Mattick (Antibolschewismus)", "Karl Korsch (Marxismus)"],
+      "staerken": ["Radikale Basisdemokratie", "Anti-Bürokratismus"],
+      "spannungen": ["Spontaneität vs. Organisation", "Historische Niederlagen"],
+      "slogan": "Die Befreiung ist das Werk der Arbeiter selbst!",
+      "ideal": {"A1":5, "A2":2, "A3":5, "B1":4, "B2":5, "B3":3, "C1":2, "C2":3, "C3":5, "D1":2, "D2":4, "D3":1, "E1":2, "E2":3, "E3":5},
+      "gewichte": {"B2":3, "A3":3, "A1":3, "E3":2}
+    },
+    {
+      "id": "oekosozialismus",
+      "archetyp": "Ökosozialismus",
+      "beschreibung": "Du siehst die ökologische Krise als Ausdruck des Kapitalismus. Soziale Befreiung und Naturschutz sind für dich untrennbar – Degrowth statt grünem Kapitalismus.",
+      "theoretiker": ["John Bellamy Foster (Metabolischer Bruch)", "Kohei Saito (Degrowth-Kommunismus)", "Naomi Klein (System Change)"],
+      "staerken": ["Verbindung von sozialer und ökologischer Frage", "Zeitgemäße Kapitalismuskritik"],
+      "spannungen": ["Wachstumsfrage vs. Arbeitsplätze", "Globaler Süden"],
+      "slogan": "System Change, Not Climate Change!",
+      "ideal": {"A1":4, "A2":4, "A3":3, "B1":4, "B2":4, "B3":5, "C1":4, "C2":5, "C3":5, "D1":4, "D2":3, "D3":3, "E1":4, "E2":5, "E3":4},
+      "gewichte": {"C2":3, "B3":3, "C3":3, "A1":2}
+    },
+    {
+      "id": "feministischer_sozialismus",
+      "archetyp": "Feministischer Sozialismus",
+      "beschreibung": "Du verstehst Patriarchat und Kapitalismus als verwobene Herrschaftssysteme. Ohne Feminismus kein Sozialismus – und umgekehrt.",
+      "theoretiker": ["Silvia Federici (Reproduktionsarbeit)", "Nancy Fraser (Kapitalismuskritik)", "Judith Butler (Geschlecht)"],
+      "staerken": ["Intersektionale Analyse", "Erweiterung des Klassenbegriffs"],
+      "spannungen": ["Verhältnis zu traditioneller Linken", "Identitätspolitik-Debatte"],
+      "slogan": "Das Private ist politisch!",
+      "ideal": {"A1":3, "A2":5, "A3":3, "B1":3, "B2":4, "B3":5, "C1":5, "C2":4, "C3":4, "D1":4, "D2":4, "D3":3, "E1":5, "E2":4, "E3":5},
+      "gewichte": {"C1":3, "A2":3, "B3":3, "E1":2}
+    },
+    {
+      "id": "demokratischer_sozialismus",
+      "archetyp": "Demokratischer Sozialismus",
+      "beschreibung": "Du willst den Kapitalismus Schritt für Schritt überwinden – durch Demokratie, nicht gegen sie. Reformen sind für dich keine Kapitulation, sondern Etappen.",
+      "theoretiker": ["Rosa Luxemburg (Reform & Revolution)", "Bernie Sanders (Politische Revolution)", "Wolfgang Abendroth (Verfassungskampf)"],
+      "staerken": ["Mehrheitsfähigkeit", "Konkrete Verbesserungen"],
+      "spannungen": ["Reformismus-Gefahr", "Systemintegration"],
+      "slogan": "Sozialismus ist radikale Demokratie!",
+      "ideal": {"A1":2, "A2":3, "A3":2, "B1":2, "B2":3, "B3":3, "C1":3, "C2":3, "C3":3, "D1":3, "D2":2, "D3":2, "E1":4, "E2":2, "E3":2},
+      "gewichte": {"A1":3, "A3":3, "D2":3, "E2":2}
+    },
+    {
+      "id": "postkapitalismus",
+      "archetyp": "Postkapitalistischer Akzelerationismus",
+      "beschreibung": "Du setzt auf Technologie und Automatisierung als Hebel für Befreiung. Weniger arbeiten, besser leben – die Produktivkräfte für alle nutzen!",
+      "theoretiker": ["Nick Srnicek (Plattform-Kapitalismus)", "Paul Mason (Postkapitalismus)", "Aaron Bastani (Luxus-Kommunismus)"],
+      "staerken": ["Technologieoptimismus", "Konkrete Utopie"],
+      "spannungen": ["Ökologische Grenzen", "Technik-Determinismus"],
+      "slogan": "Fully Automated Luxury Communism!",
+      "ideal": {"A1":3, "A2":4, "A3":3, "B1":4, "B2":4, "B3":5, "C1":4, "C2":3, "C3":5, "D1":5, "D2":4, "D3":3, "E1":4, "E2":5, "E3":4},
+      "gewichte": {"B3":3, "D1":3, "C3":3, "B1":2}
+    },
+    {
+      "id": "buen_vivir",
+      "archetyp": "Buen Vivir – Das gute Leben",
+      "beschreibung": "Du orientierst dich an indigenen Konzepten des guten Lebens. Genug statt immer mehr, Harmonie mit der Natur statt Wachstumszwang.",
+      "theoretiker": ["Eduardo Gudynas (Post-Extraktivismus)", "Alberto Acosta (Buen Vivir)", "Vandana Shiva (Ökofeminismus)"],
+      "staerken": ["Dekoloniale Perspektive", "Radikale Wachstumskritik"],
+      "spannungen": ["Übertragbarkeit auf Industriegesellschaften", "Romantisierungsgefahr"],
+      "slogan": "Leben in Fülle, nicht in Überfluss!",
+      "ideal": {"A1":3, "A2":5, "A3":4, "B1":3, "B2":5, "B3":5, "C1":5, "C2":5, "C3":4, "D1":5, "D2":4, "D3":5, "E1":5, "E2":5, "E3":5},
+      "gewichte": {"C2":3, "D3":3, "B3":3, "E2":2}
+    },
+    {
+      "id": "autonomismus",
+      "archetyp": "Autonomer Marxismus",
+      "beschreibung": "Du setzt auf die Selbstmacht der Bewegungen – gegen Partei, Gewerkschaft und alle Stellvertreter. Die Multitude ist stärker als jede Organisation.",
+      "theoretiker": ["Antonio Negri (Multitude)", "Michael Hardt (Empire)", "Silvia Federici (Commoning)"],
+      "staerken": ["Bewegungsorientierung", "Offene politische Form"],
+      "spannungen": ["Strategische Schwäche", "Organisierungsfrage"],
+      "slogan": "Unsere Stärke ist unsere Vielheit!",
+      "ideal": {"A1":4, "A2":5, "A3":4, "B1":3, "B2":5, "B3":4, "C1":5, "C2":4, "C3":5, "D1":4, "D2":5, "D3":3, "E1":5, "E2":5, "E3":5},
+      "gewichte": {"A2":3, "D2":3, "E1":3, "B2":2}
+    },
+    {
+      "id": "municipalismus",
+      "archetyp": "Libertärer Munizipalismus",
+      "beschreibung": "Du setzt auf die Kommune als Keimzelle der Veränderung. Von unten, lokal, konkret – und dann vernetzt zu einer demokratischen Konföderation.",
+      "theoretiker": ["Murray Bookchin (Kommunalismus)", "Barcelona en Comú (Munizipalismus)", "Abdullah Öcalan (Demokratischer Konföderalismus)"],
+      "staerken": ["Konkrete lokale Erfolge", "Neue Institutionen schaffen"],
+      "spannungen": ["Skalierung", "Verhältnis zur Staatsmacht"],
+      "slogan": "Die Stadt gehört allen!",
+      "ideal": {"A1":4, "A2":4, "A3":5, "B1":4, "B2":5, "B3":3, "C1":4, "C2":5, "C3":4, "D1":5, "D2":4, "D3":3, "E1":4, "E2":5, "E3":5},
+      "gewichte": {"E2":3, "A3":3, "B2":3, "C2":2}
+    },
+    {
+      "id": "trotzkismus",
+      "archetyp": "Trotzkismus – Permanente Revolution",
+      "beschreibung": "Du siehst Revolution als internationalen Prozess – kein Sozialismus in einem Land! Die Arbeiterklasse muss sich weltweit organisieren.",
+      "theoretiker": ["Leo Trotzki (Permanente Revolution)", "Ernest Mandel (Spätkapitalismus)", "Daniel Bensaïd (Strategie)"],
+      "staerken": ["Internationalismus", "Revolutionäre Kontinuität"],
+      "spannungen": ["Sektierismus-Tendenz", "Historische Spaltungen"],
+      "slogan": "Proletarier aller Länder, vereinigt euch!",
+      "ideal": {"A1":5, "A2":2, "A3":3, "B1":5, "B2":3, "B3":2, "C1":3, "C2":2, "C3":5, "D1":3, "D2":5, "D3":1, "E1":2, "E2":5, "E3":2},
+      "gewichte": {"C3":3, "A1":3, "D2":3, "B1":2}
+    },
+    {
+      "id": "commons_bewegung",
+      "archetyp": "Commons-Bewegung",
+      "beschreibung": "Du setzt auf Gemeingüter und solidarische Ökonomie. Nicht Staat, nicht Markt – sondern selbstorganisierte Gemeinschaften, die ihre Ressourcen teilen.",
+      "theoretiker": ["Elinor Ostrom (Gemeingüter)", "Silke Helfrich (Commons)", "Friederike Habermann (Ecommony)"],
+      "staerken": ["Praktische Alternativen jetzt", "Jenseits von Markt und Staat"],
+      "spannungen": ["Systemische Reichweite", "Kapitalismus-Kompatibilität"],
+      "slogan": "Commons, nicht Kapitalismus!",
+      "ideal": {"A1":3, "A2":4, "A3":4, "B1":3, "B2":5, "B3":4, "C1":4, "C2":5, "C3":4, "D1":5, "D2":4, "D3":3, "E1":5, "E2":4, "E3":5},
+      "gewichte": {"B2":3, "D1":3, "E3":3, "C2":2}
+    },
+    {
+      "id": "eurokommunismus",
+      "archetyp": "Eurokommunismus / Neue Linke",
+      "beschreibung": "Du suchst einen demokratischen Weg zum Sozialismus – kritisch gegenüber dem Sowjetmodell, offen für breite Bündnisse und zivilgesellschaftliche Verankerung.",
+      "theoretiker": ["Enrico Berlinguer (Historischer Kompromiss)", "Nicos Poulantzas (Staatstheorie)", "Chantal Mouffe (Linkspopulismus)"],
+      "staerken": ["Demokratische Legitimität", "Breite Bündnisse"],
+      "spannungen": ["Radikalitätsverlust", "Sozialdemokratisierung"],
+      "slogan": "Sozialismus in Freiheit!",
+      "ideal": {"A1":2, "A2":4, "A3":2, "B1":3, "B2":3, "B3":3, "C1":4, "C2":3, "C3":3, "D1":3, "D2":2, "D3":2, "E1":5, "E2":3, "E3":3},
+      "gewichte": {"E1":3, "A1":3, "A3":3, "A2":2}
+    },
+    {
+      "id": "maoismus",
+      "archetyp": "Maoismus / Volkskrieg",
+      "beschreibung": "Du siehst Bauern und unterdrückte Völker als revolutionäre Kraft – nicht nur die klassische Industriearbeiterschaft. Der Kampf geht vom Land aus.",
+      "theoretiker": ["Mao Zedong (Massenlinie)", "Frantz Fanon (Die Verdammten)", "Charu Majumdar (Naxalismus)"],
+      "staerken": ["Antiimperialismus", "Mobilisierung der Marginalisierten"],
+      "spannungen": ["Autoritarismus", "Gewaltfrage"],
+      "slogan": "Dem Volke dienen!",
+      "ideal": {"A1":5, "A2":5, "A3":2, "B1":5, "B2":2, "B3":2, "C1":3, "C2":2, "C3":3, "D1":3, "D2":4, "D3":1, "E1":5, "E2":3, "E3":3},
+      "gewichte": {"A1":3, "A2":3, "E1":3, "D2":2}
+    },
+    {
+      "id": "reformsozialismus",
+      "archetyp": "Reformsozialismus",
+      "beschreibung": "Du glaubst an den schrittweisen Umbau der Gesellschaft durch staatliche Politik. Soziale Marktwirtschaft war erst der Anfang – jetzt geht es um mehr Demokratie in der Wirtschaft.",
+      "theoretiker": ["John Maynard Keynes (Staatsintervention)", "Thomas Piketty (Umverteilung)", "Axel Honneth (Soziale Freiheit)"],
+      "staerken": ["Realistische Reformperspektive", "Mehrheitsfähigkeit"],
+      "spannungen": ["Systemstabilisierung", "Mangelnde Transformationskraft"],
+      "slogan": "Schritt für Schritt zum Sozialismus!",
+      "ideal": {"A1":1, "A2":3, "A3":1, "B1":2, "B2":2, "B3":3, "C1":3, "C2":3, "C3":2, "D1":2, "D2":1, "D3":2, "E1":3, "E2":1, "E3":2},
+      "gewichte": {"A1":3, "A3":3, "D2":3, "E2":2}
+    },
+    {
+      "id": "syndikalismus",
+      "archetyp": "Revolutionärer Syndikalismus",
+      "beschreibung": "Du setzt auf die Gewerkschaft als revolutionäre Kraft. Der Generalstreik wird den Kapitalismus stürzen – danach verwalten die Arbeiter*innen selbst die Produktion.",
+      "theoretiker": ["Georges Sorel (Mythos Generalstreik)", "Rudolf Rocker (Anarcho-Syndikalismus)", "IWW (Industrial Workers)"],
+      "staerken": ["Verankerung im Betrieb", "Direkte Aktion"],
+      "spannungen": ["Gewerkschaftsbürokratie", "Politische Strategie"],
+      "slogan": "One Big Union!",
+      "ideal": {"A1":5, "A2":2, "A3":5, "B1":4, "B2":5, "B3":3, "C1":2, "C2":3, "C3":4, "D1":3, "D2":4, "D3":2, "E1":2, "E2":3, "E3":4},
+      "gewichte": {"A1":3, "B2":3, "A3":3, "E1":2}
+    }
+  ]
+}

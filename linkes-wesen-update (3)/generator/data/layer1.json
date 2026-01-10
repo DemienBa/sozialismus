@@ -1,0 +1,1021 @@
+{
+  "1": {
+    "titel": "EIGENTUM",
+    "stufen": [
+      {
+        "wert": 1,
+        "label": "Privateigentum als Motor der Wirtschaft",
+        "beschreibung": "Fabriken, Wohnungen und Infrastruktur gehören Einzelpersonen oder Firmen. Wer das Risiko trägt, entscheidet auch, was mit dem Besitz geschieht. Der Markt regelt die Verteilung durch Preis und Nachfrage.",
+        "vertiefung": "Diese Position stützt sich auf den klassischen Liberalismus (Adam Smith). Das Recht auf Eigentum wird als Grundpfeiler individueller Freiheit gesehen. Kritik kommt von links: Privateigentum an Produktionsmitteln führe zwangsläufig zur Ausbeutung derer, die nichts besitzen außer ihrer Arbeitskraft.",
+        "beispiel": "Du mietest eine Wohnung von einem großen Immobilienkonzern, der die Miete so hoch ansetzt, wie der Markt es hergibt."
+      },
+      {
+        "wert": 2,
+        "label": "Eigentum verpflichtet das Gemeinwohl",
+        "beschreibung": "Privatbesitz ist erlaubt, aber der Staat setzt klare Grenzen. Es gibt Gesetze gegen Monopole, Mietpreisbremsen oder strenge Umweltauflagen für Fabriken.",
+        "vertiefung": "Dies entspricht der Tradition des Ordoliberalismus und der frühen Sozialdemokratie. \"Eigentum verpflichtet\" steht sogar im deutschen Grundgesetz. Kritiker sagen, dass Regulation oft umgangen wird, solange die Profitlogik im Kern unangetastet bleibt.",
+        "beispiel": "Die Miete für deine Wohnung ist gedeckelt, aber der Konzern findet Wege, über Modernisierungskosten die Preise doch zu heben."
+      },
+      {
+        "wert": 3,
+        "label": "Strategische Bereiche in öffentliche Hand",
+        "beschreibung": "Schlüsselindustrien wie Bahn, Energie, Wasser und Krankenhäuser gehören dem Staat oder den Kommunen. Konsumgüter (Handys, Kleidung) bleiben privatwirtschaftlich organisiert.",
+        "vertiefung": "Dieses Modell war prägend für die Nachkriegszeit in Europa (Keynesianismus). Ziel ist die Daseinsvorsorge: Wichtige Infrastruktur darf nicht dem Profitstreben geopfert werden. Linke kritisieren, dass der private Sektor den öffentlichen oft \"aushöhlt\".",
+        "beispiel": "Du fährst mit einer staatlichen Bahn zur Arbeit, kaufst dein Brötchen aber in einer privaten Bäckereikette."
+      },
+      {
+        "wert": 4,
+        "label": "Demokratische Kontrolle statt Staatsbesitz",
+        "beschreibung": "Große Konzerne und Grundbesitz werden in Gemeineigentum überführt. Sie gehören nicht einfach \"dem Staat\", sondern werden von Beschäftigten, Nutzern und der Gesellschaft demokratisch verwaltet.",
+        "vertiefung": "Inspiriert von Initiativen wie \"Deutsche Wohnen & Co. enteignen\". Theoretisch fußt dies auf der Idee der Wirtschaftsdemokratie (Fritz Naphtali). Es geht darum, die Macht des Kapitals zu brechen, ohne in einen zentralistischen Staatssozialismus zu verfallen.",
+        "beispiel": "Dein Mietshaus gehört einer Genossenschaft, in der alle Mieter stimmberechtigt über Sanierungen und Mieten entscheiden."
+      },
+      {
+        "wert": 5,
+        "label": "Alles gehört allen – Nutzen statt Besitzen",
+        "beschreibung": "Die Unterscheidung zwischen \"mein\" und \"dein\" verschwindet bei den Lebensgrundlagen. Ressourcen werden gemeinschaftlich gepflegt und genutzt (Commoning). Niemand kann anderen den Zugang zu Land oder Wissen verwehren.",
+        "vertiefung": "Diese Vision knüpft an vorkapitalistische Allmende-Traditionen an, wird aber modern gedacht (Elinor Ostrom). Es ist die radikale Absage an die Warenform. Kritiker bezweifeln die Effizienz bei komplexen Industrieprodukten.",
+        "beispiel": "Du nimmst dir aus dem Gemeinschaftsgarten, was du brauchst, und hilfst im Gegenzug beim Jäten und Gießen."
+      }
+    ],
+    "frage": "Wem sollen Fabriken, Wohnungen und Infrastruktur gehören?",
+    "linkePosition": {
+      "position": "Vergesellschaftung der Daseinsvorsorge",
+      "begruendung": "Die Linke fordert die Überführung von Konzernen der Daseinsvorsorge in öffentliches oder genossenschaftliches Eigentum. Wohnen, Energie, Gesundheit und Mobilität dürfen keine Waren sein.",
+      "gegenargument": "Privateigentum an Produktionsmitteln bedeutet: Wenige entscheiden über das Leben von Millionen."
+    },
+    "rechteGegenrede": {
+      "titel": "WARUM PRIVATEIGENTUM NICHT SAKROSANKT IST",
+      "text": "Der Immobilienkonzern hat das Haus nicht gebaut. Er hat es gekauft – mit Geld, das andere erarbeitet haben. Eigentum ist kein Naturrecht, sondern ein Gesellschaftsvertrag."
+    },
+    "konkret": "Die Linke fordert: Vergesellschaftung großer Wohnungskonzerne, Mietenstopp, Rekommunalisierung von Krankenhäusern."
+  },
+  "2": {
+    "titel": "PLANUNG",
+    "stufen": [
+      {
+        "wert": 1,
+        "label": "Angebot und Nachfrage regeln alles",
+        "beschreibung": "Unternehmen produzieren, was Gewinn verspricht. Konsumenten entscheiden durch ihren Kauf, was Erfolg hat. Der Preis ist das Signal, das Knappheit oder Überfluss anzeigt.",
+        "vertiefung": "Basierend auf der \"unsichtbaren Hand\" von Adam Smith. Effizienz steht an erster Stelle. Linke Kritik: Der Markt erkennt zwar Wünsche von Reichen (Yachten), ignoriert aber Bedürfnisse von Armen (Medikamente), wenn diese nicht zahlen können.",
+        "beispiel": "Es gibt 20 Sorten Müsli im Regal, aber in deinem Viertel macht der einzige Supermarkt zu, weil er nicht rentabel genug ist."
+      },
+      {
+        "wert": 2,
+        "label": "Markt mit staatlichem Leitplanken",
+        "beschreibung": "Der Markt bleibt der Hauptmechanismus, aber der Staat greift ein, um Exzesse zu verhindern. Es gibt Subventionen für gewünschte Branchen und Steuern auf schädliche Produkte.",
+        "vertiefung": "Das Modell der frühen Bundesrepublik (Ludwig Erhard). Es verbindet wirtschaftliche Freiheit mit sozialem Ausgleich. Aus linker Sicht ist dies oft nur eine \"Reparaturwerkstatt\" des Kapitalismus, die die Krisenursachen nicht behebt.",
+        "beispiel": "Elektroautos werden staatlich gefördert, während Verbrenner durch Steuern teurer werden – der Markt entscheidet den Rest."
+      },
+      {
+        "wert": 3,
+        "label": "Die Politik setzt den Rahmen der Produktion",
+        "beschreibung": "Nicht alles, was Profit bringt, darf produziert werden. Strenge Gemeinwohl-Vorgaben bestimmen, welche Produkte zulässig sind (z.B. Verbot von Einwegplastik, feste Quoten für sozialen Wohnungsbau).",
+        "vertiefung": "Dies ist ein Übergang zur aktiven Industriepolitik. Der Staat moderiert zwischen Gewerkschaften, Umweltverbänden und Unternehmen. Ziel ist eine Wirtschaft, die gesellschaftliche Ziele verfolgt, ohne die Betriebe direkt zu verstaatlichen.",
+        "beispiel": "Ein Unternehmen muss nachweisen, dass seine Lieferkette ohne Kinderarbeit auskommt, bevor es Waren verkaufen darf."
+      },
+      {
+        "wert": 4,
+        "label": "Räte und Bürger planen gemeinsam",
+        "beschreibung": "Produktion wird nicht dem Zufall des Marktes überlassen, sondern in demokratischen Räten abgestimmt. Beschäftigte und Konsumenten verhandeln gemeinsam, was in der kommenden Periode wirklich gebraucht wird.",
+        "vertiefung": "Konzepte wie \"Parecon\" (Michael Albert). Es ist der Versuch, Planung ohne die Fehler der sowjetischen Kommandowirtschaft zu gestalten – dezentral und von unten. Kritiker fürchten hohen bürokratischen Aufwand (\"zu viele Meetings\").",
+        "beispiel": "Dein Stadtviertel-Rat beschließt, dass weniger Luxus-Lofts und mehr Kitas gebaut werden sollen; die Bau-Räte setzen das um."
+      },
+      {
+        "wert": 5,
+        "label": "Produktion direkt für das gute Leben",
+        "beschreibung": "Die Logik des Geldes und Profits ist abgeschafft. Es wird genau das produziert, was Menschen für ein würdevolles Leben angemeldet haben. Verteilung erfolgt nach dem Prinzip: \"Jeder nach seinen Fähigkeiten, jedem nach seinen Bedürfnissen.\"",
+        "vertiefung": "Die klassische kommunistische Vision (Marx). Technik und Automatisierung sollen so weit fortgeschritten sein, dass Mangel kein Thema mehr ist. Skeptiker halten dies für utopisch, solange Ressourcen (wie Land oder Zeit) endlich sind.",
+        "beispiel": "Du bestellst online ein neues Fahrrad, das ohne Bezahlung geliefert wird, weil die Gesellschaft beschlossen hat, dass Mobilität ein Grundrecht ist."
+      }
+    ],
+    "frage": "Wer entscheidet, was produziert wird?",
+    "linkePosition": {
+      "position": "Demokratische Wirtschaftsplanung",
+      "begruendung": "Nicht Profitinteressen, sondern gesellschaftliche Bedürfnisse sollen die Produktion steuern.",
+      "gegenargument": "Der Markt produziert, was Gewinn bringt – nicht was gebraucht wird."
+    },
+    "rechteGegenrede": {
+      "titel": "DER MARKT IST NICHT NEUTRAL",
+      "text": "Der Markt erkennt nur zahlungsfähige Nachfrage. Wer kein Geld hat, dessen Bedürfnisse existieren nicht."
+    },
+    "konkret": "Die Linke fordert: Gemeinwohlorientierte Industriepolitik, öffentliche Investitionsprogramme."
+  },
+  "3": {
+    "titel": "WACHSTUM",
+    "stufen": [
+      {
+        "wert": 1,
+        "label": "Nur Wachstum schafft Wohlstand",
+        "beschreibung": "Wirtschaftliches Wachstum (BIP) ist der wichtigste Indikator für Erfolg. Mehr Produktion bedeutet mehr Jobs und mehr Steuern. Umweltprobleme werden durch künftige technologische Innovationen gelöst, die durch Wachstum finanziert werden.",
+        "vertiefung": "Klassische neoliberale Lehre. Wachstum wird als \"Flut, die alle Boote hebt\" gesehen. Kritik: Auf einem endlichen Planeten ist unendliches Wachstum physikalisch unmöglich.",
+        "beispiel": "Du freust dich über eine Lohnerhöhung, während gleichzeitig der Energieverbrauch des Landes neue Rekordwerte erreicht."
+      },
+      {
+        "wert": 2,
+        "label": "Wachstum durch grüne Technik",
+        "beschreibung": "Wir wachsen weiter, aber \"sauber\". Durch Effizienz und erneuerbare Energien soll der Ressourcenverbrauch vom Wirtschaftswachstum entkoppelt werden. Elektroautos und Windkraft sind die Motoren.",
+        "vertiefung": "Aktueller Mainstream der EU-Politik (Green Deal). Die Hoffnung liegt auf technologischem Fortschritt. Kritiker verweisen auf den Rebound-Effekt: Effizientere Geräte führen oft dazu, dass wir einfach mehr davon nutzen.",
+        "beispiel": "Du kaufst ein neues, sparsames E-Auto, fährst damit aber doppelt so viel wie früher mit dem Benziner."
+      },
+      {
+        "wert": 3,
+        "label": "Wachstum nur dort, wo es nützt",
+        "beschreibung": "Wir brauchen kein Wachstum bei Panzern oder Plastikmüll, aber Wachstum bei Bildung, Pflege und erneuerbaren Energien. Der Fokus verschiebt sich vom Geldwert (BIP) hin zur Lebensqualität.",
+        "vertiefung": "Konzepte wie der \"Wohlfahrtsindex\". Es geht um gezielte Steuerung. In der Linken ist dies ein Kompromiss zwischen ökologischer Notwendigkeit und dem Wunsch nach sozialem Fortschritt.",
+        "beispiel": "Es gibt weniger neue Autobahnen, dafür werden massiv neue Pflegestellen und Schulen geschaffen."
+      },
+      {
+        "wert": 4,
+        "label": "Ein gutes Leben jenseits des BIP",
+        "beschreibung": "Die Wirtschaft soll stabil bleiben, ohne wachsen zu müssen (Suffizienz). Wir teilen mehr, reparieren Dinge und arbeiten weniger. Wohlstand wird durch Zeit und soziale Beziehungen definiert, nicht durch Konsum.",
+        "vertiefung": "Niko Paech ist ein bekannter Vertreter. Es geht um die Befreiung vom Konsumzwang. Kritiker warnen vor Massenarbeitslosigkeit, wenn das aktuelle System aufhört zu wachsen, ohne grundlegend umgebaut zu sein.",
+        "beispiel": "Statt ein neues Handy zu kaufen, gehst du ins Repair-Café und genießt den freien Nachmittag im Park."
+      },
+      {
+        "wert": 5,
+        "label": "Gezielte Schrumpfung für das Klima",
+        "beschreibung": "Wir müssen die Produktion in den reichen Ländern aktiv und geplant reduzieren, um die Biosphäre zu retten. Das bedeutet: weniger Autos, weniger Flüge, weniger Fleisch, aber dafür eine gerechte globale Verteilung.",
+        "vertiefung": "Inspiriert von Jason Hickel oder Giorgos Kallis. Degrowth ist eine radikale Antwort auf den ökologischen Kollaps und den Neokolonialismus. Gegner nennen es \"Verzichtsdiktatur\" und fürchten den sozialen Abstieg.",
+        "beispiel": "Flugreisen sind nur noch in seltenen Ausnahmen möglich; der Fleischkonsum sinkt drastisch, während lokale Versorgung Vorrang hat."
+      }
+    ],
+    "frage": "Kann die Wirtschaft wachsen und das Klima retten?",
+    "linkePosition": {
+      "position": "Sozial-ökologischer Umbau statt Wachstumszwang",
+      "begruendung": "Wir brauchen nicht mehr Produktion, sondern bessere Verteilung und Umbau zu nachhaltiger Wirtschaft.",
+      "gegenargument": "Unendliches Wachstum auf einem endlichen Planeten ist unmöglich."
+    },
+    "rechteGegenrede": {
+      "titel": "WACHSTUM FÜR WEN?",
+      "text": "Das BIP wächst, aber dein Lohn stagniert. Wachstum heißt heute: Die Reichen werden reicher."
+    },
+    "konkret": "Die Linke fordert: Investitionen in Pflege statt SUVs, Arbeitszeitverkürzung, ökologische Transformation."
+  },
+  "4": {
+    "titel": "ARBEIT",
+    "stufen": [
+      {
+        "wert": 1,
+        "label": "Wer nicht arbeitet, soll auch nicht essen",
+        "beschreibung": "Erwerbsarbeit wird als moralische Pflicht gegenüber der Gemeinschaft gesehen. Sozialleistungen sind an die Bereitschaft geknüpft, jede zumutbare Arbeit anzunehmen.",
+        "vertiefung": "Diese Position wurzelt im preußischen Arbeitsethos und findet sich paradoxerweise sowohl im frühen Industriekapitalismus als auch in autoritären sozialistischen Modellen. Kritik: Sie ignoriert unbezahlte Care-Arbeit und zwingt Menschen in entfremdete Tätigkeiten.",
+        "beispiel": "Du musst beim Amt nachweisen, dass du dich aktiv bewirbst, sonst wird dir die Unterstützung gekürzt."
+      },
+      {
+        "wert": 2,
+        "label": "Aufstieg durch eigene Leistung",
+        "beschreibung": "Arbeit ist der Weg zu Anerkennung und Wohlstand. Der Staat soll dafür sorgen, dass jede*r die Chance hat, sich durch Bildung und Fleiß eine gute Position zu erarbeiten.",
+        "vertiefung": "Das Ideal der Meritokratie (Leistungsgesellschaft). Es betont die individuelle Verantwortung, setzt aber faire Startbedingungen voraus. Linke bezweifeln, dass im Kapitalismus echte Chancengleichheit existieren kann.",
+        "beispiel": "Du machst Überstunden und Fortbildungen, um die nächste Karrierestufe zu erreichen und mehr zu verdienen."
+      },
+      {
+        "wert": 3,
+        "label": "Würdige Bedingungen für alle Lohnabhängigen",
+        "beschreibung": "Arbeit muss sicher, fair bezahlt und gesundheitsschonend sein. Starke Gewerkschaften und Tarifverträge sorgen dafür, dass die Beschäftigten nicht ausgebeutet werden.",
+        "vertiefung": "Kernanliegen der klassischen Sozialdemokratie und Gewerkschaftsbewegung. Fokus auf Mitbestimmung im Betrieb. Kritiker sagen, dass dies nur die Symptome der Ausbeutung lindert, aber das Prinzip der Lohnarbeit nicht infrage stellt.",
+        "beispiel": "Dank deines Tarifvertrags hast du geregelte Pausen, Urlaubsgeld und Schutz vor willkürlicher Kündigung."
+      },
+      {
+        "wert": 4,
+        "label": "Weniger schuften, mehr leben",
+        "beschreibung": "Die Produktivitätsgewinne durch Technik werden genutzt, um die Wochenarbeitszeit massiv zu senken (z. B. 30-Stunden-Woche). Arbeit wird umverteilt, damit alle Zeit für Familie, Politik und Kultur haben.",
+        "vertiefung": "Prominent vertreten durch Frigga Haug (4-in-1-Perspektive). Ziel ist die Gleichverteilung von Erwerbsarbeit, Reproduktionsarbeit, Gemeinwesenarbeit und Eigenzeit. Kritiker fürchten um die Wettbewerbsfähigkeit der Industrie.",
+        "beispiel": "Dein Feierabend beginnt am Donnerstagmittag; den Rest der Woche nutzt du für dein Hobby oder Ehrenamt."
+      },
+      {
+        "wert": 5,
+        "label": "Befreite Tätigkeit statt Lohnzwang",
+        "beschreibung": "Die Trennung zwischen \"Arbeit\" und \"Freizeit\" wird aufgehoben. Menschen tun das, was sie für sinnvoll halten, weil Maschinen die notwendige Plackerei übernehmen.",
+        "vertiefung": "Die Vision des \"ganzen Menschen\" beim frühen Marx (jagen, fischen, kritisieren). Es geht um die Überwindung der Entfremdung. Skeptiker fragen: Wer putzt dann die Toiletten oder baut die Maschinen?",
+        "beispiel": "Du reparierst Fahrräder, weil es dir Freude macht und die Gemeinschaft es braucht, nicht weil du eine Miete erwirtschaften musst."
+      }
+    ],
+    "frage": "Ist Arbeit Sinn des Lebens – oder Mittel zum Leben?",
+    "linkePosition": {
+      "position": "Gute Arbeit und Arbeitszeitverkürzung",
+      "begruendung": "Die Linke fordert sichere Arbeitsplätze, faire Löhne und eine 4-Tage-Woche bei vollem Lohnausgleich.",
+      "gegenargument": "Produktivität ist enorm gestiegen, aber wir arbeiten nicht weniger. Der Gewinn geht an Aktionäre."
+    },
+    "rechteGegenrede": {
+      "titel": "ARBEIT IST KEIN SELBSTZWECK",
+      "text": "Warum sollen Menschen 40 Stunden schuften, während andere keine Arbeit finden? Umverteilung der Arbeit ist möglich."
+    },
+    "konkret": "Die Linke fordert: 30-Stunden-Woche, Mindestlohn von 15€, Verbot von sachgrundlosen Befristungen."
+  },
+  "5": {
+    "titel": "EINKOMMEN",
+    "stufen": [
+      {
+        "wert": 1,
+        "label": "Wer mehr leistet, bekommt mehr",
+        "beschreibung": "Das Einkommen richtet sich streng nach der individuellen Leistung am Markt. Hohe Qualifikation und hohes Risiko werden durch hohe Gehälter belohnt.",
+        "vertiefung": "Klassisch-liberales Leistungsprinzip. Kritik: \"Leistung\" wird hier oft nur als Marktwert definiert, während gesellschaftlich wertvolle Arbeit (Pflege, Erziehung) oft schlecht bezahlt wird.",
+        "beispiel": "Ein Investmentbanker verdient das Hundertfache einer Pflegekraft, weil sein \"Marktwert\" höher eingeschätzt wird."
+      },
+      {
+        "wert": 2,
+        "label": "Ein soziales Netz für den Notfall",
+        "beschreibung": "Wer nicht arbeiten kann oder keine Arbeit findet, wird durch den Staat unterstützt. Das Einkommen soll das Existenzminimum sichern, ist aber an Bedingungen geknüpft.",
+        "vertiefung": "Das Modell des Bismarckschen Sozialstaats oder Hartz IV. Hilfe ist eine Almose des Staates an die \"Bedürftigen\". Kritiker bemängeln das damit verbundene Stigma und den Kontrolldruck.",
+        "beispiel": "Du verlierst deinen Job und erhältst Unterstützung, musst aber regelmäßig Rechenschaft über deine Finanzen ablegen."
+      },
+      {
+        "wert": 3,
+        "label": "Sanktionsfreie Grundsicherung",
+        "beschreibung": "Jede*r hat ein Recht auf ein Leben in Würde, ohne Angst vor Kürzungen. Der Staat garantiert ein Einkommen, das über dem Minimum liegt und gesellschaftliche Teilhabe ermöglicht.",
+        "vertiefung": "Aktuelle Forderung vieler Linker. Es bricht mit dem Prinzip von \"Zuckerbrot und Peitsche\" im Sozialstaat. Gegner fürchten, dass dadurch der Anreiz zur Aufnahme ungeliebter Arbeit sinkt.",
+        "beispiel": "Auch wenn du ein Jobangebot ablehnst, das nicht zu dir passt, bleibt dein Grundeinkommen unangetastet."
+      },
+      {
+        "wert": 4,
+        "label": "Für alle, bedingungslos, monatlich",
+        "beschreibung": "Jeder Bürgerin erhält automatisch einen festen Betrag, unabhängig von Vermögen oder Arbeitsstatus. Existenz und Teilhabe sind ein Grundrecht, keine staatliche Gnade.",
+        "vertiefung": "Konzepte von Philippe Van Parijs oder Götz Werner. Es soll individuelle Freiheit garantieren und Verhandlungsmacht gegenüber Arbeitgebern stärken. Kritiker innerhalb der Linken fürchten den Abbau anderer Sozialleistungen.",
+        "beispiel": "Jeden ersten des Monats landen 1.200 Euro auf deinem Konto, egal ob du arbeitest, studierst oder malst."
+      },
+      {
+        "wert": 5,
+        "label": "Jede*r nach Bedürfnissen",
+        "beschreibung": "Geld spielt keine Rolle mehr. Wer besondere Bedürfnisse hat (z. B. wegen Krankheit oder großer Familie), erhält entsprechenden Zugang zu Gütern und Dienstleistungen.",
+        "vertiefung": "Die höchste Stufe der marxistischen Verteilungsgerechtigkeit. Es setzt voraus, dass die Gesellschaft genug produziert, um alle Bedürfnisse zu decken. Skeptiker bezweifeln, dass Bedürfnisse jemals \"gesättigt\" sein können.",
+        "beispiel": "Du benötigst ein spezielles Medikament oder eine größere Wohnung? Die Gemeinschaft stellt es bereit, ohne dass ein Kontostand geprüft wird."
+      }
+    ],
+    "frage": "Wovon sollen Menschen leben können?",
+    "linkePosition": {
+      "position": "Umverteilung von oben nach unten",
+      "begruendung": "Die Linke fordert höhere Steuern für Reiche und Konzerne, um Sozialstaat und öffentliche Infrastruktur zu finanzieren.",
+      "gegenargument": "Die reichsten 1% besitzen so viel wie die unteren 50%. Das ist kein Naturgesetz."
+    },
+    "rechteGegenrede": {
+      "titel": "REICHTUM IST NICHT VERDIENT",
+      "text": "Niemand wird durch harte Arbeit Milliardär. Großer Reichtum entsteht durch Ausbeutung, Erbschaft oder Monopole."
+    },
+    "konkret": "Die Linke fordert: Vermögenssteuer, Erbschaftssteuer für Superreiche, Mindestrente von 1.200€."
+  },
+  "6": {
+    "titel": "STAAT",
+    "stufen": [
+      {
+        "wert": 1,
+        "label": "Nachtwächterstaat",
+        "beschreibung": "Der Staat beschränkt sich auf den Schutz von Eigentum, Verträgen und die innere/äußere Sicherheit. Er greift nicht in die Wirtschaft ein und überlässt die soziale Vorsorge dem Individuum.",
+        "vertiefung": "Diese Position wird im Libertarismus (z. B. Robert Nozick) vertreten. Das Ziel ist maximale individuelle Freiheit durch minimalen staatlichen Zwang. Linke Kritik: Ohne staatlichen Ausgleich führt dies zur Herrschaft der Reichen über die Armen.",
+        "beispiel": "Du musst deine Krankenversicherung und Rente komplett privat ansparen; der Staat hilft nicht, wenn das Geld im Alter nicht reicht."
+      },
+      {
+        "wert": 2,
+        "label": "Regeln durchsetzen",
+        "beschreibung": "Der Staat setzt den rechtlichen Rahmen, innerhalb dessen der Wettbewerb stattfindet. Er sorgt für funktionierende Märkte, greift aber kaum direkt in die Produktion oder Verteilung ein.",
+        "vertiefung": "Entspricht dem Ordoliberalismus der frühen Bundesrepublik. Der Staat ist der \"Schiedsrichter\" auf dem Spielfeld des Marktes. Kritiker sagen, dass dieser Staat oft zum Instrument der mächtigsten Wirtschaftsakteure wird.",
+        "beispiel": "Der Staat achtet darauf, dass Firmen keine Kartelle bilden, überlässt es aber den Firmen, wie viel sie ihren Angestellten zahlen."
+      },
+      {
+        "wert": 3,
+        "label": "Umverteilen und Schützen",
+        "beschreibung": "Der Staat korrigiert Marktergebnisse durch Steuern und Sozialtransfers. Er garantiert Grundrechte auf Bildung, Gesundheit und soziale Absicherung.",
+        "vertiefung": "Das Modell des rheinischen Kapitalismus. Der Staat puffert die Lebensrisiken ab, lässt die Eigentumsverhältnisse aber unangetastet. Aus radikaler linker Sicht ist er eine \"Stillhalteprämie\", die das System stabilisiert, statt es zu ändern.",
+        "beispiel": "Du zahlst Steuern und Sozialbeiträge, bekommst dafür aber im Falle von Arbeitslosigkeit oder Krankheit eine staatliche Absicherung."
+      },
+      {
+        "wert": 4,
+        "label": "Aktiv gestalten",
+        "beschreibung": "Der Staat ist kein neutraler Akteur, sondern gestaltet die Wirtschaft aktiv im Sinne des Gemeinwohls. Er investiert in ökologische Transformation und demokratisiert öffentliche Verwaltungen.",
+        "vertiefung": "Diese Position knüpft an Konzepte der Wirtschaftsdemokratie an. Der Staat wird als Werkzeug genutzt, um gesellschaftliche Mehrheiten gegen Kapitalinteressen durchzusetzen. Kritiker fürchten eine Überlastung der staatlichen Bürokratie.",
+        "beispiel": "Der Staat baut nicht nur Schienen, sondern betreibt auch die Züge zu günstigen Preisen, um Mobilität für alle sicherzustellen."
+      },
+      {
+        "wert": 5,
+        "label": "Von unten organisiert",
+        "beschreibung": "Der zentralisierte Staatsapparat wird aufgelöst und durch eine Föderation von Basisräten ersetzt. Entscheidungen werden dort getroffen, wo sie die Menschen betreffen: im Betrieb und im Viertel.",
+        "vertiefung": "Diese Vision geht auf die Pariser Kommune und Rosa Luxemburg zurück. Das Ziel ist die Überwindung der Trennung von Regierenden und Regierten. Skeptiker bezweifeln die Handlungsfähigkeit bei komplexen globalen Problemen.",
+        "beispiel": "In deiner Nachbarschaftsversammlung entscheidest du direkt mit, wie das lokale Budget verwendet wird, statt auf Beschlüsse aus der fernen Hauptstadt zu warten."
+      }
+    ],
+    "frage": "Wie viel Staat brauchen wir?",
+    "linkePosition": {
+      "position": "Starker Sozialstaat mit demokratischer Kontrolle",
+      "begruendung": "Der Staat muss Daseinsvorsorge garantieren und die Macht des Kapitals begrenzen.",
+      "gegenargument": "Ein schwacher Staat bedeutet: Die Starken setzen sich durch, die Schwachen bleiben auf der Strecke."
+    },
+    "rechteGegenrede": {
+      "titel": "STAAT ODER KONZERN – WER ENTSCHEIDET?",
+      "text": "Wer den Staat schwächt, stärkt Amazon, BlackRock und Vonovia. Dann entscheiden Konzerne über dein Leben."
+    },
+    "konkret": "Die Linke fordert: Rekommunalisierung, Ausbau des öffentlichen Dienstes, demokratische Kontrolle."
+  },
+  "7": {
+    "titel": "DEMOKRATIE",
+    "stufen": [
+      {
+        "wert": 1,
+        "label": "Profis regieren",
+        "beschreibung": "Die Bürger wählen Vertreter, die für sie entscheiden. Die politische Arbeit wird Experten überlassen, die in Parteien und Parlamenten organisiert sind.",
+        "vertiefung": "Basierend auf Joseph Schumpeters Elitentheorie. Stabilität und Effizienz stehen im Vordergrund. Linke Kritik: Diese Form der Demokratie ist \"marktkonform\" und entfremdet die Menschen von der Politik.",
+        "beispiel": "Du gibst alle vier Jahre deine Stimme ab und verfolgst danach die Entscheidungen in den Nachrichten, ohne selbst eingreifen zu können."
+      },
+      {
+        "wert": 2,
+        "label": "Bürgerräte und Anhörungen",
+        "beschreibung": "Das Parlament bleibt das Hauptentscheidungsorgan, wird aber durch beratende Gremien wie Bürgerräte ergänzt. Die Politik holt sich Feedback ein, bevor sie Gesetze verabschiedet.",
+        "vertiefung": "Ein moderner Ansatz zur Belebung der Demokratie. Es soll das Vertrauen stärken, ohne die repräsentative Struktur aufzulösen. Kritiker nennen es \"Beteiligungssimulation\", wenn die Ergebnisse nicht verbindlich sind.",
+        "beispiel": "Du wirst per Los in einen Bürgerrat zum Thema Klimaschutz gewählt und erarbeitest Empfehlungen für die Regierung."
+      },
+      {
+        "wert": 3,
+        "label": "Volksentscheide",
+        "beschreibung": "Bürger können über Sachthemen direkt abstimmen. Volksbegehren und Volksentscheide sind verbindlich und können Parlamentsbeschlüsse korrigieren.",
+        "vertiefung": "Orientiert am Schweizer Modell. Es bricht das Monopol der Parteien. In der Linken beliebt, um große Reformen (wie Enteignungen) gegen den Widerstand von Regierungen durchzusetzen.",
+        "beispiel": "Deine Stadt stimmt darüber ab, ob das lokale Stromnetz zurück in öffentliche Hand gekauft werden soll."
+      },
+      {
+        "wert": 4,
+        "label": "Mitbestimmen überall",
+        "beschreibung": "Demokratie darf nicht an der Fabrikpforte oder an der Wohnungstür aufhören. Auch in der Wirtschaft und im Alltag müssen demokratische Prinzipien gelten.",
+        "vertiefung": "Konzepte der \"radikalen Demokratie\" (Chantal Mouffe). Es geht um die Ausweitung des Politischen auf alle Lebensbereiche. Kritiker fürchten eine Politisierung jeder Alltagsentscheidung.",
+        "beispiel": "In deiner Firma wird der Vorstand nicht von Aktionären ernannt, sondern von der Belegschaft gewählt."
+      },
+      {
+        "wert": 5,
+        "label": "Alle entscheiden alles",
+        "beschreibung": "Hierarchien werden konsequent abgelehnt. Entscheidungen werden im Konsens oder mit großen Mehrheiten in Vollversammlungen getroffen. Es gibt keine festen Anführer.",
+        "vertiefung": "Tradition der anarchistischen Bewegungen oder der frühen Grünen. Es setzt hohe Verantwortungsbereitschaft voraus. Gegner sehen darin eine Blockadegefahr für dringende Entscheidungen.",
+        "beispiel": "Bevor eine neue Straße in deinem Ort gebaut wird, muss die gesamte Gemeinde in einer Versammlung zustimmen – ohne Gegenstimme."
+      }
+    ],
+    "frage": "Reicht wählen alle vier Jahre?",
+    "linkePosition": {
+      "position": "Demokratie überall – auch in der Wirtschaft",
+      "begruendung": "Demokratie darf nicht am Fabriktor aufhören. Die Linke fordert Wirtschaftsdemokratie und Mitbestimmung.",
+      "gegenargument": "In der Politik gilt: Eine Person, eine Stimme. In der Wirtschaft gilt: Ein Euro, eine Stimme. Das ist kein Zufall."
+    },
+    "rechteGegenrede": {
+      "titel": "DEMOKRATIE IST UNTEILBAR",
+      "text": "Wir wählen Parlamente, aber nicht Konzernvorstände. Die wichtigsten Entscheidungen werden undemokratisch getroffen."
+    },
+    "konkret": "Die Linke fordert: Volksentscheide, Bürgerräte, paritätische Mitbestimmung in allen Unternehmen."
+  },
+  "8": {
+    "titel": "KLASSE",
+    "stufen": [
+      {
+        "wert": 1,
+        "label": "Jeder ist seines Glückes Schmied",
+        "beschreibung": "Der soziale Status ist das Ergebnis individueller Anstrengung. Es gibt keine festen Klassen, sondern nur Menschen mit unterschiedlichem Erfolg am Markt.",
+        "vertiefung": "Das Ideal der Meritokratie. Reichtum wird als Beweis für Fleiß und Talent gesehen. Kritik: Diese Sichtweise blendet strukturelle Hindernisse wie Erbschaften oder Herkunft völlig aus.",
+        "beispiel": "Du glaubst, dass du es allein durch harte Arbeit vom Tellerwäscher zum Millionär schaffen kannst."
+      },
+      {
+        "wert": 2,
+        "label": "Gleiche Startbedingungen",
+        "beschreibung": "Es wird anerkannt, dass Menschen ungleich starten. Der Staat soll durch Bildung und Förderung dafür sorgen, dass der Erfolg nicht vom Elternhaus abhängt.",
+        "vertiefung": "Ein Kernversprechen des liberalen Sozialstaats. Man will den Wettbewerb \"fairer\" machen, ohne die Unterschiede im Ergebnis infrage zu stellen. Linke sagen: Echte Chancengleichheit ist im Kapitalismus eine Illusion.",
+        "beispiel": "Kinder aus armen Familien erhalten Stipendien, um dieselben Elite-Universitäten wie Reiche besuchen zu können."
+      },
+      {
+        "wert": 3,
+        "label": "Oben und Unten",
+        "beschreibung": "Die Gesellschaft ist in Schichten unterteilt, die sich kaum mischen. Wer oben ist, hat mehr Macht, Geld und Bildungschancen; wer unten ist, bleibt oft dort.",
+        "vertiefung": "Soziologische Analyse (z. B. Pierre Bourdieu). Es geht um \"kulturelles Kapital\". Linke nutzen diesen Begriff, um auf die Ungerechtigkeit des Systems hinzuweisen, ohne direkt zur Revolution aufzurufen.",
+        "beispiel": "Du merkst, dass du trotz Studium in bestimmten Kreisen nicht dazugehörst, weil dir die Codes der \"Oberschicht\" fehlen."
+      },
+      {
+        "wert": 4,
+        "label": "Interessen sind unversöhnlich",
+        "beschreibung": "Es gibt einen grundlegenden Konflikt zwischen denen, die besitzen (Kapital), und denen, die für Lohn arbeiten müssen. Dieser Konflikt kann nur durch Organisation und Kampf gelöst werden.",
+        "vertiefung": "Klassischer Marxismus. Die Arbeiterklasse muss sich ihrer Lage bewusst werden und für ihre Rechte kämpfen. Kritiker halten den Begriff für veraltet, da die Arbeitswelt heute vielfältiger ist.",
+        "beispiel": "Du organisierst mit deinen Kollegen einen Streik, weil der Gewinn der Firma steigt, aber eure Löhne stagnieren."
+      },
+      {
+        "wert": 5,
+        "label": "Ziel: Keine Klassen mehr",
+        "beschreibung": "Das Ziel ist eine Gesellschaft, in der niemand mehr über Produktionsmittel herrscht und somit niemand mehr ausgebeutet wird. Unterschiede in Macht und Besitz werden aufgelöst.",
+        "vertiefung": "Die kommunistische Utopie. Arbeit ist keine Last mehr, sondern freie Tätigkeit. Skeptiker bezweifeln, dass Menschen jemals ohne Hierarchien und Statusunterschiede zusammenleben können.",
+        "beispiel": "Es gibt keinen Chef und keinen Untergebenen mehr; alle Aufgaben werden nach Absprache und Neigung verteilt."
+      }
+    ],
+    "frage": "Gibt es noch Klassen?",
+    "linkePosition": {
+      "position": "Klassenkampf ist Realität",
+      "begruendung": "Die Linke steht auf der Seite der arbeitenden Menschen gegen die Interessen des Kapitals.",
+      "gegenargument": "Wer sagt, es gäbe keine Klassen mehr, hat schon eine Seite gewählt – die der Reichen."
+    },
+    "rechteGegenrede": {
+      "titel": "KLASSEN GIBT ES NOCH",
+      "text": "Dein Chef kann dich feuern, du ihn nicht. Das ist keine individuelle Beziehung, das ist ein Machtverhältnis."
+    },
+    "konkret": "Die Linke fordert: Stärkung der Gewerkschaften, Streikrecht ausweiten, Tarifbindung erhöhen."
+  },
+  "9": {
+    "titel": "GESCHLECHT",
+    "stufen": [
+      {
+        "wert": 1,
+        "label": "Natur bestimmt Rollen",
+        "beschreibung": "Geschlechterrollen basieren auf biologischen Unterschieden zwischen Mann und Frau. Diese Arbeitsteilung (z. B. Frau für Fürsorge, Mann für Erwerb) wird als stabilisierendes Element der Gesellschaft gesehen.",
+        "vertiefung": "Diese Position stützt sich auf essentialistische Annahmen. In der Geschichte wurde dies oft genutzt, um Frauen den Zugang zu politischer Macht zu verwehren. Kritik: Biologie wird hier als Schicksal missverstanden, um soziale Hierarchien zu rechtfertigen.",
+        "beispiel": "In deiner Familie wird wie selbstverständlich erwartet, dass die Mutter bei Krankheit der Kinder zu Hause bleibt, während der Vater Überstunden macht."
+      },
+      {
+        "wert": 2,
+        "label": "Gleiche Rechte für alle",
+        "beschreibung": "Alle Menschen haben vor dem Gesetz die gleichen Rechte, unabhängig von ihrem Geschlecht. Diskriminierung ist verboten, und der Zugang zu allen Berufen steht allen offen.",
+        "vertiefung": "Dies entspricht dem liberalen Feminismus. Das Ziel ist die formale Gleichheit im bestehenden System. Kritik: Formale Rechte reichen nicht aus, wenn strukturelle Hürden (wie fehlende Kitas) die tatsächliche Teilhabe verhindern.",
+        "beispiel": "Eine Frau bewirbt sich auf eine Führungsposition und hat rechtlich denselben Anspruch auf faire Behandlung wie ihre männlichen Mitbewerber."
+      },
+      {
+        "wert": 3,
+        "label": "Aktiv fördern",
+        "beschreibung": "Der Staat greift ein, um faktische Nachteile auszugleichen. Durch Quoten, gezielte Frauenförderung und Vätermonate in der Elternzeit wird versucht, echte Parität herzustellen.",
+        "vertiefung": "Fokus auf Ergebnisgleichheit statt nur Chancengleichheit. Es wird anerkannt, dass das System männlich geprägt ist. Kritiker bezeichnen Quoten als \"unfaire Bevorzugung\" und fordern eine rein leistungsorientierte Auswahl.",
+        "beispiel": "Ein Aufsichtsrat muss zu mindestens 30 % mit Frauen besetzt sein, um die männliche Dominanz in Machtpositionen zu brechen."
+      },
+      {
+        "wert": 4,
+        "label": "Patriarchat überwinden",
+        "beschreibung": "Geschlechterverhältnisse werden als Machtverhältnisse (Patriarchat) verstanden. Ziel ist die Befreiung von Unterdrückungsstrukturen, die sowohl die Ökonomie als auch das Privatleben durchziehen.",
+        "vertiefung": "Sozialistischer Feminismus (z. B. Silvia Federici) betont, dass Kapitalismus auf der Ausbeutung unbezahlter Hausarbeit basiert. Es geht nicht nur um Mitmachen, sondern um die Veränderung der gesamten Gesellschaftsstruktur.",
+        "beispiel": "Sorgearbeit wird gesellschaftlich genauso hoch wertgeschätzt und entlohnt wie industrielle Produktion."
+      },
+      {
+        "wert": 5,
+        "label": "Kategorien auflösen",
+        "beschreibung": "Die binäre Einteilung in \"Mann\" und \"Frau\" wird als soziale Konstruktion abgelehnt. Jede Person definiert ihre Identität selbst; Geschlecht wird als flüssig und vielfältig begriffen.",
+        "vertiefung": "Basiert auf der Queer Theory (z. B. Judith Butler). Geschlecht ist etwas, das wir durch Handlungen ständig \"performen\". Kritik: Ohne die Kategorie \"Frau\" verlören feministische Kämpfe ihr Subjekt.",
+        "beispiel": "In öffentlichen Formularen gibt es keine Geschlechtsangabe mehr oder eine Vielzahl an Optionen jenseits von m/w/d."
+      }
+    ],
+    "linkePosition": {
+      "position": "Feminismus ist Klassenkampf",
+      "begruendung": "Patriarchat und Kapitalismus sind verwoben. Ohne Feminismus kein Sozialismus.",
+      "gegenargument": "Frauen leisten unbezahlte Care-Arbeit im Wert von Billionen. Das System funktioniert nur, weil diese Arbeit unsichtbar bleibt."
+    },
+    "rechteGegenrede": {
+      "titel": "DAS PATRIARCHAT SCHADET ALLEN",
+      "text": "Starre Geschlechterrollen schaden auch Männern. Befreiung heißt: Alle können leben, wie sie wollen."
+    },
+    "konkret": "Die Linke fordert: Equal Pay, Aufwertung von Care-Berufen, kostenloses Menstruationsmaterial."
+  },
+  "10": {
+    "titel": "MIGRATION",
+    "stufen": [
+      {
+        "wert": 1,
+        "label": "Deutschland zuerst",
+        "beschreibung": "Zuwanderung wird strikt begrenzt, um die nationale Identität und den Sozialstaat zu schützen. Grenzen werden massiv kontrolliert; Abschiebungen sind das vorrangige Mittel.",
+        "vertiefung": "Diese Position basiert auf einem exklusiven Verständnis von Solidarität, das nur für die eigene Nation gilt. Kritik: Es ignoriert die ökonomische Abhängigkeit von Migration und verletzt universelle Menschenrechte.",
+        "beispiel": "Du erlebst, wie die Grenzen geschlossen werden und Menschen an den Außengrenzen abgewiesen werden, um \"Ruhe im Land\" zu bewahren."
+      },
+      {
+        "wert": 2,
+        "label": "Fachkräfte ja, andere nein",
+        "beschreibung": "Migration wird nach ökonomischem Nutzen gesteuert. Wer Qualifikationen mitbringt, die der Wirtschaft fehlen, darf kommen. Humanitäre Migration wird auf ein Minimum reduziert.",
+        "vertiefung": "Ein utilitaristischer Ansatz (Nützlichkeitsprinzip). Menschen werden als Humankapital betrachtet. Kritiker bemängeln den \"Brain Drain\", bei dem ärmeren Ländern ihre am besten ausgebildeten Leute entzogen werden.",
+        "beispiel": "Ein Informatiker aus Indien erhält sofort ein Visum, während ein ungelernter Geflüchteter keine Bleibeperspektive hat."
+      },
+      {
+        "wert": 3,
+        "label": "Flucht ist Menschenrecht",
+        "beschreibung": "Menschen, die vor Krieg und Verfolgung fliehen, finden Aufnahme. Das individuelle Recht auf Asyl wird geschützt, die Integration wird staatlich gefördert.",
+        "vertiefung": "Orientiert an der Genfer Flüchtlingskonvention. Es ist eine ethische Verpflichtung, Leben zu retten. Kritiker warnen vor einer Überlastung der sozialen Infrastruktur bei ungesteuertem Zuzug.",
+        "beispiel": "Deine Stadt stellt Wohnraum und Sprachkurse für Menschen aus Kriegsgebieten bereit, damit sie hier sicher ankommen können."
+      },
+      {
+        "wert": 4,
+        "label": "Fluchtursachen bekämpfen",
+        "beschreibung": "Fokus auf die globalen Gründe für Migration: ungerechter Welthandel, Waffenexporte und Klimawandel. Menschen migrieren nicht freiwillig, sondern weil das globale System ihre Heimat zerstört.",
+        "vertiefung": "Diese Position sieht Migration als Ergebnis imperialer Lebensweisen im globalen Norden. Echte Solidarität bedeutet, die Ausbeutung des globalen Südens zu beenden. Kritik: Die Bekämpfung von Ursachen dauert Jahrzehnte und hilft akut Suchenden kaum.",
+        "beispiel": "Deutschland stoppt Patente auf Medikamente und faire Handelsabkommen, damit Menschen in ihren Herkunftsländern eine Perspektive haben."
+      },
+      {
+        "wert": 5,
+        "label": "Bewegungsfreiheit für alle",
+        "beschreibung": "Jede Person hat das Recht, dort zu leben und zu arbeiten, wo sie möchte. Grenzen werden als willkürliche Instrumente der Herrschaft abgelehnt.",
+        "vertiefung": "Die \"No Borders\"-Bewegung. Freiheit ist nur universell denkbar. Wenn Kapital und Waren frei zirkulieren dürfen, müssen es Menschen auch. Kritiker fürchten den Kollaps nationaler Sozialsysteme.",
+        "beispiel": "Du kannst ohne Reisepass und Visum von jedem Ort der Welt an jeden anderen ziehen, um dort Teil der Gesellschaft zu werden."
+      }
+    ],
+    "frage": "Wer darf hier leben?",
+    "linkePosition": {
+      "position": "Solidarität kennt keine Grenzen",
+      "begruendung": "Die Linke steht für offene Grenzen und sichere Fluchtwege. Menschen sind keine 'illegalen' Wesen.",
+      "gegenargument": "Wer vor Krieg und Armut flieht, hat das Recht auf Schutz. Das steht in der Genfer Konvention."
+    },
+    "rechteGegenrede": {
+      "titel": "MIGRATION IST NICHT DAS PROBLEM",
+      "text": "Nicht Geflüchtete senken deinen Lohn, sondern Arbeitgeber. Die Rechten lenken vom echten Gegner ab."
+    },
+    "konkret": "Die Linke fordert: Seenotrettung, Familiennachzug, Arbeitserlaubnis für alle, Bleiberecht."
+  },
+  "11": {
+    "titel": "FRIEDEN",
+    "stufen": [
+      {
+        "wert": 1,
+        "label": "Abschreckung sichert Frieden",
+        "beschreibung": "Frieden ist nur möglich, wenn man so stark ist, dass niemand einen Angriff wagt. Investitionen in Rüstung und moderne Armeen sind lebensnotwendig.",
+        "vertiefung": "Realpolitische Denkschule. Sicherheit wird durch Machtgleichgewichte garantiert. Linke Kritik: Wettrüsten führt zwangsläufig zu Spannungen und Ressourcenverschwendung, die für Soziales fehlt.",
+        "beispiel": "Du liest in der Zeitung von massiven Erhöhungen des Verteidigungsetats, während Schulen saniert werden müssten."
+      },
+      {
+        "wert": 2,
+        "label": "Bündnis verteidigt uns",
+        "beschreibung": "Sicherheit gibt es nur im Kollektiv mit Partnern. Die Einbettung in die NATO garantiert Schutz durch gegenseitige Beistandsverpflichtung.",
+        "vertiefung": "Transatlantische Sicherheitsarchitektur. Es geht um die Verteidigung westlicher Werte. Kritiker innerhalb der Linken sehen die NATO als Instrument für imperiale Interessen der USA.",
+        "beispiel": "Deutsche Soldaten nehmen an Manövern in Osteuropa teil, um Präsenz und Bündnissolidarität zu zeigen."
+      },
+      {
+        "wert": 3,
+        "label": "Verhandeln statt schießen",
+        "beschreibung": "Konflikte müssen am Verhandlungstisch gelöst werden. Internationale Organisationen (UN, OSZE) müssen gestärkt werden, um zivile Lösungen zu finden.",
+        "vertiefung": "Fokus auf Soft Power und Multilateralismus. Das Ziel ist eine regelbasierte Weltordnung. Kritiker sagen, Diplomatie sei machtlos gegen Aggressoren, die sich nicht an Regeln halten.",
+        "beispiel": "Bei einem internationalen Konflikt schickt Deutschland keine Waffen, sondern Diplomaten, um einen Waffenstillstand auszuhandeln."
+      },
+      {
+        "wert": 4,
+        "label": "Weniger Waffen = mehr Sicherheit",
+        "beschreibung": "Sicherheit entsteht nicht durch mehr Waffen, sondern durch deren Reduzierung. Deutschland geht mit einseitigen Abrüstungsschritten voran, um Vertrauen aufzubauen.",
+        "vertiefung": "Tradition der Friedensbewegung. Waffenexporte werden gestoppt, die Rüstungsindustrie wird auf zivile Produktion umgestellt. Kritiker warnen vor Schutzlosigkeit gegenüber hochgerüsteten Nachbarn.",
+        "beispiel": "Eine Panzerfabrik in deiner Region wird geschlossen und baut fortan moderne Straßenbahnen für den Nahverkehr."
+      },
+      {
+        "wert": 5,
+        "label": "Bundeswehr auflösen",
+        "beschreibung": "Militär wird als prinzipielles Problem gesehen. Gewaltfreiheit ist der einzige Weg. Die Bundeswehr wird aufgelöst und durch Konzepte der sozialen Verteidigung ersetzt.",
+        "vertiefung": "Radikaler Pazifismus (z. B. Bertha von Suttner). Krieg beginnt im Kopf und in der Kaserne. Skeptiker halten dies für naiv in einer Welt, die von autoritären Regimen geprägt ist.",
+        "beispiel": "Es gibt keine Kasernen mehr; stattdessen lernt die Bevölkerung Methoden des gewaltfreien Widerstands gegen Besatzer."
+      }
+    ],
+    "frage": "Wie sichern wir Frieden?",
+    "linkePosition": {
+      "position": "Abrüstung und zivile Konfliktlösung",
+      "begruendung": "Die Linke lehnt Aufrüstung und Kriegseinsätze ab. Frieden schafft man nicht mit Waffen.",
+      "gegenargument": "Deutschland ist der viertgrößte Waffenexporteur der Welt. Unsere Waffen töten im Jemen, in der Türkei, überall."
+    },
+    "rechteGegenrede": {
+      "titel": "AUFRÜSTUNG MACHT NICHT SICHER",
+      "text": "100 Milliarden für die Bundeswehr, aber kein Geld für Pflege? Jede Rakete ist eine Schule, die nicht gebaut wird."
+    },
+    "konkret": "Die Linke fordert: Stopp aller Waffenexporte, Austritt aus Atomwaffen-Teilhabe, Investitionen in zivile Konfliktlösung."
+  },
+  "12": {
+    "titel": "EUROPA",
+    "stufen": [
+      {
+        "wert": 1,
+        "label": "Nationale Souveränität",
+        "beschreibung": "Die EU wird als undemokratisches Projekt der Eliten abgelehnt. Entscheidungen sollen wieder allein im nationalen Parlament getroffen werden (Lexit).",
+        "vertiefung": "Kritik an der neoliberalen Ausrichtung der EU-Verträge, die Privatisierungen erzwingen. Ziel ist die Rückgewinnung demokratischer Kontrolle. Gegner fürchten wirtschaftliche Isolation und Nationalismus.",
+        "beispiel": "An den Grenzen gibt es wieder Zollkontrollen, und die nationale Währung wird wiedereingeführt."
+      },
+      {
+        "wert": 2,
+        "label": "Nur Wirtschaft",
+        "beschreibung": "Die EU soll sich auf den freien Binnenmarkt beschränken. Politische Einmischung in Sozialstandards oder Umweltregeln wird abgelehnt.",
+        "vertiefung": "Euroskeptizismus von rechts und marktliberaler Seite. Der Nationalstaat bleibt die primäre politische Bühne. Linke Kritik: Ein reiner Markt ohne soziale Regeln führt zum Unterbietungswettbewerb bei Löhnen.",
+        "beispiel": "Firmen können europaweit Waren verkaufen, aber es gibt keine EU-weiten Mindestlohnregeln oder Umweltstandards."
+      },
+      {
+        "wert": 3,
+        "label": "Soziales Europa",
+        "beschreibung": "Die EU bleibt bestehen, muss aber grundlegend reformiert werden. Soziale Rechte müssen Vorrang vor Marktfreiheiten haben; Investitionsprogramme gegen Armut werden gestärkt.",
+        "vertiefung": "Das Konzept eines \"Europa der Menschen\". Es geht um Mindeststandards bei Sozialversicherungen und Steuergerechtigkeit. Kritiker sagen, die EU-Strukturen seien zu starr für echte soziale Reformen.",
+        "beispiel": "Ein EU-weites Gesetz sorgt dafür, dass überall ein Mindestlohn gezahlt wird, der vor Armut schützt."
+      },
+      {
+        "wert": 4,
+        "label": "Echte Republik",
+        "beschreibung": "Die Macht verlagert sich vom Rat der Regierungen hin zum direkt gewählten EU-Parlament. Europa wird zu einem demokratischen Bundesstaat mit eigener Verfassung.",
+        "vertiefung": "Vision einer \"Europäischen Republik\" (Ulrike Guérot). Bürgerrechte gelten grenzüberschreitend. Kritiker befürchten den Verlust regionaler Besonderheiten und lokaler Selbstbestimmung.",
+        "beispiel": "Du wählst eine europäische Regierung direkt, die über ein gemeinsames Budget für ganz Europa entscheidet."
+      },
+      {
+        "wert": 5,
+        "label": "Sozialistische EU",
+        "beschreibung": "Die EU wird zum Labor für einen grenzüberschreitenden Sozialismus. Gemeinsame Planung der Produktion, Vergesellschaftung europäischer Konzerne und radikale Umverteilung von Nord nach Süd.",
+        "vertiefung": "Internationalismus pur. Das Ziel ist die Überwindung der Konkurrenz zwischen den Arbeiterklassen verschiedener Länder. Skeptiker halten dies aufgrund der kulturellen Unterschiede für unmöglich.",
+        "beispiel": "Ein europaweiter Verbund von Energiebetrieben sorgt dafür, dass Strom überall als öffentliches Gut kostenlos zur Verfügung steht."
+      }
+    ],
+    "frage": "Was tun mit der EU?",
+    "linkePosition": {
+      "position": "Solidarisches Europa von unten",
+      "begruendung": "Die Linke will ein anderes Europa – sozial, demokratisch, friedlich. Gegen das Europa der Banken und Konzerne.",
+      "gegenargument": "Die EU setzt Austerität durch, während Konzerne keine Steuern zahlen. Das ist nicht das Europa, das wir wollen."
+    },
+    "rechteGegenrede": {
+      "titel": "EUROPA MUSS ANDERS WERDEN",
+      "text": "Die EU der Reichen oder ein Europa der Völker – das ist die Wahl. Wir kämpfen für Letzteres."
+    },
+    "konkret": "Die Linke fordert: Europäischer Mindestlohn, Steuergerechtigkeit, Ende der Frontex-Politik."
+  },
+  "13": {
+    "titel": "KLIMA",
+    "stufen": [
+      {
+        "wert": 1,
+        "label": "Innovation statt Verbote",
+        "beschreibung": "Der Klimawandel wird durch technischen Fortschritt und Marktanreize (z. B. CO2-Zertifikate) gelöst. Wer CO2 ausstößt, zahlt; wer sauber produziert, spart.",
+        "vertiefung": "Basiert auf ökologischer Modernisierung. Der Kapitalismus soll sich \"selbst heilen\". Linke Kritik: Reiche können sich das Verschmutzen weiter leisten, während Arme unter hohen Energiepreisen leiden.",
+        "beispiel": "Benzin wird teurer, aber du hoffst darauf, dass die Industrie bald billige synthetische Kraftstoffe erfindet."
+      },
+      {
+        "wert": 2,
+        "label": "CO2-Preis und Förderung",
+        "beschreibung": "Der Staat lenkt den Markt durch gezielte Subventionen für grüne Technologien (Solar, E-Autos) und macht klimaschädliches Verhalten teurer.",
+        "vertiefung": "Mainstream-Klimapolitik der Industrieländer. Ziel ist die Transformation ohne harten Bruch. Kritiker verweisen auf den Rebound-Effekt: Effizientere Technik führt oft zu mehr Konsum.",
+        "beispiel": "Du bekommst eine staatliche Prämie, wenn du deine alte Ölheizung gegen eine moderne Wärmepumpe tauschst."
+      },
+      {
+        "wert": 3,
+        "label": "1,5 Grad gesetzlich",
+        "beschreibung": "Klimaschutz ist keine Option, sondern eine gesetzliche Pflicht. Harte Ausstiegsdaten für Kohle und Gas sowie klare Verbote (z. B. für Kurzstreckenflüge) sichern das Überleben.",
+        "vertiefung": "Orientiert am Urteil des Bundesverfassungsgerichts. Freiheit ist nur möglich, wenn die Lebensgrundlagen erhalten bleiben. Gegner warnen vor einer \"Öko-Diktatur\" und dem Verlust von Arbeitsplätzen.",
+        "beispiel": "Bestimmte Produkte, die die Klimaziele gefährden, verschwinden schlichtweg aus dem Regal, weil ihre Produktion verboten wurde."
+      },
+      {
+        "wert": 4,
+        "label": "Kapitalismus ist das Problem",
+        "beschreibung": "Man erkennt an, dass die Logik des ewigen Wachstums die Erde zerstört. Klimaschutz erfordert den Umbau der Wirtschaft weg vom Profit hin zur Bedarfsdeckung.",
+        "vertiefung": "Degrowth-Perspektive. Wir müssen weniger produzieren und konsumieren, um innerhalb der planetaren Grenzen zu bleiben. Kritiker befürchten soziale Instabilität, wenn die Wachstumsmaschine stoppt.",
+        "beispiel": "Es wird nicht mehr für den Export produziert, sondern nur noch das, was lokal wirklich gebraucht wird, um Ressourcen zu sparen."
+      },
+      {
+        "wert": 5,
+        "label": "Klimagerechtigkeit oder Barbarei",
+        "beschreibung": "Nur die komplette Überführung der Produktionsmittel in Gemeineigentum ermöglicht eine demokratische Planung des Ressourcenverbrauchs. Klimaschutz ist Klassenkampf.",
+        "vertiefung": "Basiert auf der Theorie der \"ökologischen Kluft\" (John Bellamy Foster). Der Stoffwechsel zwischen Mensch und Natur muss geheilt werden. Skeptiker bezweifeln, dass eine Planwirtschaft ökologisch klüger agiert.",
+        "beispiel": "Die gesamte Energiewirtschaft gehört der Allgemeinheit; Strom wird nach ökologischen Prioritäten zugeteilt, statt verkauft zu werden."
+      }
+    ],
+    "frage": "Wie radikal muss Klimapolitik sein?",
+    "linkePosition": {
+      "position": "Klimagerechtigkeit – System Change, not Climate Change",
+      "begruendung": "Die Klimakrise ist eine Systemkrise. Grüner Kapitalismus reicht nicht – wir brauchen einen Systemwechsel.",
+      "gegenargument": "100 Konzerne verursachen 71% der Emissionen. Das ist kein individuelles Problem."
+    },
+    "rechteGegenrede": {
+      "titel": "KLIMASCHUTZ GEHT NUR SOZIAL",
+      "text": "CO2-Steuer ohne Umverteilung trifft die Armen. Echte Klimapolitik nimmt sich die Konzerne vor, nicht die Pendler."
+    },
+    "konkret": "Die Linke fordert: Kostenloser ÖPNV, Vergesellschaftung der Energiekonzerne, Kohleausstieg bis 2030."
+  },
+  "14": {
+    "titel": "VERÄNDERUNG",
+    "stufen": [
+      {
+        "wert": 1,
+        "label": "System funktioniert",
+        "beschreibung": "Es gibt keinen Grund für grundlegende Änderungen. Das bestehende System aus Demokratie und Marktwirtschaft ist der beste Weg, um Probleme zu lösen.",
+        "vertiefung": "Konservative und neoliberale Haltung. Man setzt auf Stabilität und bewährte Institutionen. Linke Kritik: Wer sich nicht ändert, wird von den Krisen des Systems (Klima, Armut) überrollt.",
+        "beispiel": "Du vertraust darauf, dass Wahlen und technischer Fortschritt alles schon irgendwie regeln werden."
+      },
+      {
+        "wert": 2,
+        "label": "Schritt für Schritt",
+        "beschreibung": "Veränderungen erfolgen durch kleine, gesetzliche Anpassungen. Man arbeitet innerhalb der bestehenden Institutionen an Verbesserungen.",
+        "vertiefung": "Klassischer Reformismus (z. B. Eduard Bernstein). Das System wird allmählich sozialer gemacht. Kritiker sagen, dass diese kleinen Schritte die Macht des Kapitals niemals wirklich brechen.",
+        "beispiel": "Der Mindestlohn wird um 50 Cent erhöht, und die Kindergrundsicherung wird minimal verbessert."
+      },
+      {
+        "wert": 3,
+        "label": "Das System ändern",
+        "beschreibung": "Reformen werden so gewählt, dass sie die Logik des Systems stören (z. B. Mietendeckel). Sie schaffen Inseln der Nicht-Marktlogik inmitten des Kapitalismus.",
+        "vertiefung": "Konzepte von André Gorz (\"Nicht-reformistische Reformen\"). Jede Reform soll die Macht der Herrschenden schwächen und die der Beherrschten stärken. Kritiker halten dies für eine Illusion, da das System zurückschlägt.",
+        "beispiel": "Die Verstaatlichung eines großen Immobilienkonzerns dient als Hebel, um den gesamten Wohnungsmarkt dem Profit zu entziehen."
+      },
+      {
+        "wert": 4,
+        "label": "Grundlegend anders",
+        "beschreibung": "Ein tiefer Umbau aller Lebensbereiche (Wirtschaft, Politik, Kultur) über einen längeren Zeitraum. Alte Strukturen werden gezielt abgebaut, neue aufgebaut.",
+        "vertiefung": "Ein Prozess der \"Revolution in Raten\". Man kombiniert Parlamentsarbeit mit außerparlamentarischem Druck. Kritiker bezweifeln, dass mächtige Akteure diesen schleichenden Machtverlust tatenlos zusehen.",
+        "beispiel": "Innerhalb von zehn Jahren wird die Wirtschaft komplett auf Genossenschaften umgestellt, ohne dass es einen blutigen Umsturz gibt."
+      },
+      {
+        "wert": 5,
+        "label": "Bruch mit allem",
+        "beschreibung": "Die alte Ordnung wird in einem kurzen, intensiven Ereignis gestürzt. Es gibt keinen Kompromiss mit den alten Eliten; ein kompletter Neuanfang wird erzwungen.",
+        "vertiefung": "Marxistisch-leninistische Tradition. Nur ein radikaler Bruch kann die Machtverhältnisse wirklich umkehren. Kritiker verweisen auf das Risiko von Gewalt, Chaos und neuer autoritärer Herrschaft.",
+        "beispiel": "Innerhalb weniger Tage werden Banken und Fabriken besetzt, die Regierung wird abgesetzt und durch Räte ersetzt."
+      }
+    ],
+    "frage": "Wie kommt der Wandel?",
+    "linkePosition": {
+      "position": "Veränderung durch Bewegung und Parlament",
+      "begruendung": "Die Linke setzt auf außerparlamentarischen Druck UND parlamentarische Arbeit. Streiks, Demos und Wahlen gehören zusammen.",
+      "gegenargument": "Noch nie wurde etwas Grundlegendes durch bittende Anträge erreicht. Veränderung kommt durch Druck von unten."
+    },
+    "rechteGegenrede": {
+      "titel": "VERÄNDERUNG KOMMT VON UNTEN",
+      "text": "Frauenwahlrecht, 8-Stunden-Tag, Arbeitsschutz – alles wurde erkämpft, nicht erbeten."
+    },
+    "konkret": "Die Linke fordert: Politisches Streikrecht, Unterstützung sozialer Bewegungen, Volksentscheide."
+  },
+  "15": {
+    "titel": "PARTEI",
+    "stufen": [
+      {
+        "wert": 1,
+        "label": "SPD reicht",
+        "beschreibung": "Eine linke Partei jenseits der Sozialdemokratie wird nicht gebraucht. Fortschritte werden durch Kompromisse in der politischen Mitte erzielt.",
+        "vertiefung": "Sichtweise des pragmatischen Mitte-Links-Lagers. Splitterparteien schwächen nur die Schlagkraft gegen rechts. Linke Kritik: Ohne Druck von links rutscht die Mitte immer weiter nach rechts ab.",
+        "beispiel": "Du wählst die größte linke Volkspartei, um eine konservative Regierung zu verhindern, nimmst dafür aber Abstriche in Kauf."
+      },
+      {
+        "wert": 2,
+        "label": "SPD unter Druck setzen",
+        "beschreibung": "Die Linke ist dazu da, die anderen Parteien an ihre sozialen Versprechen zu erinnern. Sie ist das schlechte Gewissen der Regierung.",
+        "vertiefung": "Oppositionelle Rolle. Man stellt Anträge, die die anderen zwingen, Farbe zu bekennen. Kritiker sagen, dies sei eine Rolle der Ohnmacht, die nichts am Status Quo ändert.",
+        "beispiel": "Die Linke fordert 15 Euro Mindestlohn, damit die Regierung sich wenigstens auf 12 Euro einigt."
+      },
+      {
+        "wert": 3,
+        "label": "Regieren für Verbesserungen",
+        "beschreibung": "Die Partei übernimmt Regierungsverantwortung (z. B. auf Landesebene), um konkret das Leben der Menschen zu verbessern (Schulspeisung, Sozialticket).",
+        "vertiefung": "Regierungssozialismus. Man lernt die Zwänge der Verwaltung kennen. Kritiker werfen der Partei \"Anpassung\" vor und sagen, sie werde Teil des Systems, das sie bekämpfen wollte.",
+        "beispiel": "Die Linke stellt den Kultusminister und sorgt dafür, dass Kitas in deinem Bundesland kostenfrei werden."
+      },
+      {
+        "wert": 4,
+        "label": "Über Kapitalismus hinaus",
+        "beschreibung": "Die Partei nutzt Parlamente als Bühne, ist aber tief in sozialen Bewegungen und Betrieben verwurzelt. Sie bereitet den Boden für den Systemwechsel vor.",
+        "vertiefung": "Modell der \"Mosaik-Linken\". Sie verbindet verschiedene Kämpfe (Klima, Arbeit, Feminismus) zu einem gemeinsamen Projekt. Kritiker halten dies für strategisch zu diffus und schwer vermittelbar.",
+        "beispiel": "Deine lokale Parteigruppe unterstützt nicht nur Wahlkämpfe, sondern organisiert auch Mieterstreiks und Solidaritätsküchen."
+      },
+      {
+        "wert": 5,
+        "label": "Systemwechsel organisieren",
+        "beschreibung": "Die Partei ist die Avantgarde, die den revolutionären Bruch anführt. Sie bildet Kader aus und bereitet sich darauf vor, im Moment der Krise die Macht zu übernehmen.",
+        "vertiefung": "Leninistisches Parteikonzept. Disziplin und klare Ideologie stehen im Vordergrund. Kritiker sehen darin die Gefahr von Sektierertum und die Abkoppelung von der Lebensrealität der Mehrheit.",
+        "beispiel": "Die Partei tritt nur zu Wahlen an, um die \"Lächerlichkeit des Parlaments\" bloßzustellen und Arbeiterräte aufzubauen."
+      }
+    ],
+    "frage": "Was ist Die Linke?",
+    "linkePosition": {
+      "position": "Die Linke als Bewegungspartei",
+      "begruendung": "Die Linke versteht sich als Teil einer breiteren Bewegung, nicht als ihr Kommando.",
+      "gegenargument": "Parteien allein verändern nichts. Aber ohne politische Organisation verpufft Protest."
+    },
+    "rechteGegenrede": {
+      "titel": "WARUM PARTEI?",
+      "text": "Soziale Bewegungen brauchen einen Arm im Parlament. Sonst bleiben sie auf der Straße verhallen."
+    },
+    "konkret": "Die Linke will: Schnittstelle zwischen Bewegung und Parlament sein, nicht Selbstzweck."
+  },
+  "16": {
+    "titel": "FREIHEIT",
+    "stufen": [
+      {
+        "wert": 1,
+        "label": "In Ruhe gelassen werden",
+        "beschreibung": "Freiheit bedeutet die Abwesenheit von Zwang. Der Staat und andere Menschen sollen sich nicht in meine Angelegenheiten einmischen.",
+        "vertiefung": "Klassischer Liberalismus (Isaiah Berlin). Freiheit ist ein Schutzraum. Linke Kritik: Was nützt die Freiheit, unter einer Brücke zu schlafen? Ohne Mittel ist diese Freiheit wertlos.",
+        "beispiel": "Du kannst sagen, was du willst, und hingehen, wo du willst, solange du niemandem schadest."
+      },
+      {
+        "wert": 2,
+        "label": "Schutz vor Willkür",
+        "beschreibung": "Freiheit ist durch Rechte garantiert: Meinungsfreiheit, Versammlungsfreiheit, Schutz der Privatsphäre. Der Staat muss diese Rechte aktiv schützen.",
+        "vertiefung": "Rechtsstaatliches Freiheitsverständnis. Institutionen sichern die individuelle Autonomie. Kritiker bemängeln, dass diese Rechte oft nur denjenigen nützen, die sie sich leisten können (z. B. teure Anwälte).",
+        "beispiel": "Du gehst auf eine Demonstration und vertraust darauf, dass die Polizei dich schützt, statt dich willkürlich festzunehmen."
+      },
+      {
+        "wert": 3,
+        "label": "Frei durch Sicherheit",
+        "beschreibung": "Freiheit braucht ein Fundament. Nur wer keine Angst vor Hunger oder Obdachlosigkeit hat, kann wirklich frei entscheiden und am Leben teilhaben.",
+        "vertiefung": "Sozialistisches Freiheitsverständnis (Axel Honneth). Freiheit ist eine soziale Beziehung. Ohne soziale Sicherheit bleibt Freiheit ein Privileg der Reichen. Kritiker fürchten die Bevormundung durch einen \"Nanny-Staat\".",
+        "beispiel": "Du kündigst einen schlechten Job, ohne Angst zu haben, weil das soziale Netz dich auffängt und dir Zeit für Neues gibt."
+      },
+      {
+        "wert": 4,
+        "label": "Frei zu etwas sein",
+        "beschreibung": "Freiheit bedeutet die tatsächliche Möglichkeit, sein Leben nach eigenen Vorstellungen zu gestalten und an der Gesellschaft mitzuwirken.",
+        "vertiefung": "Freiheit als Selbstverwirklichung und Mitbestimmung. Es geht um Bildung und Ressourcen, um Fähigkeiten zu entfalten. Kritiker sehen darin die Gefahr, dass der Staat vorschreibt, was ein \"gutes Leben\" ist.",
+        "beispiel": "Dir stehen kostenlose Bildung und Ateliers zur Verfügung, damit du dein Talent als Künstler entdecken und ausleben kannst."
+      },
+      {
+        "wert": 5,
+        "label": "Frei sind alle oder keiner",
+        "beschreibung": "Freiheit ist kein individueller Besitz, sondern ein Zustand der gesamten Gesellschaft. Solange Unterdrückung irgendwo existiert, ist niemand wirklich frei.",
+        "vertiefung": "Bakunin: \"Ich bin erst dann wirklich frei, wenn alle Menschen um mich herum [...] gleichermaßen frei sind.\" Ziel ist die Befreiung von jeder Form von Herrschaft. Skeptiker halten dies für ein unerreichbares Ideal.",
+        "beispiel": "Du kämpfst für die Rechte von Menschen am anderen Ende der Welt, weil du spürst, dass deren Unfreiheit auch deine eigene Freiheit einschränkt."
+      }
+    ],
+    "frage": "Was ist Freiheit?",
+    "linkePosition": {
+      "position": "Freiheit durch Sicherheit",
+      "begruendung": "Echte Freiheit braucht materielle Grundlagen. Wer Angst vor Armut hat, ist nicht frei.",
+      "gegenargument": "Die Freiheit des Millionärs ist nicht die Freiheit der Kassiererin. Freiheit ohne Gleichheit ist Privileg."
+    },
+    "rechteGegenrede": {
+      "titel": "FREIHEIT FÜR ALLE",
+      "text": "Was nützt Reisefreiheit, wenn du dir keinen Urlaub leisten kannst? Echte Freiheit braucht Ressourcen."
+    },
+    "konkret": "Die Linke fordert: Sanktionsfreie Grundsicherung, Recht auf Wohnen, kostenlose Bildung."
+  },
+  "17": {
+    "titel": "SOLIDARITÄT",
+    "stufen": [
+      {
+        "wert": 1,
+        "label": "Die Eigenen zuerst",
+        "beschreibung": "Solidarität gilt dem engsten Umfeld. Man hilft Verwandten und Freunden; darüber hinaus gibt es keine Verpflichtung zur Hilfe.",
+        "vertiefung": "Partikulare Solidarität. Fokus auf Blutsbande und Loyalität. Linke Kritik: Dies führt zu Korruption, Vetternwirtschaft und der Vernachlässigung derjenigen, die keine Familie haben.",
+        "beispiel": "Du leihst deinem Bruder Geld für eine Reparatur, würdest aber niemals für einen Fremden in Not spenden."
+      },
+      {
+        "wert": 2,
+        "label": "Deutsche zuerst",
+        "beschreibung": "Solidarität gilt den Mitbürgern innerhalb des eigenen Landes. Der Sozialstaat ist eine Solidargemeinschaft der Staatsangehörigen.",
+        "vertiefung": "Wohlfahrtschauvinismus. Man sorgt für die \"eigenen Leute\", grenzt aber Nicht-Staatsbürger aus. Kritiker sagen, dies spalte die internationale Arbeiterklasse und fördere Rassismus.",
+        "beispiel": "Du forderst höhere Renten für Inländer, willst aber gleichzeitig die Sozialleistungen für Geflüchtete streichen."
+      },
+      {
+        "wert": 3,
+        "label": "Arbeiter*innen aller Länder",
+        "beschreibung": "Solidarität gilt allen, die in derselben sozialen Lage sind, egal aus welchem Land. Der gemeinsame Kampf gegen Ausbeutung verbindet die Lohnabhängigen weltweit.",
+        "vertiefung": "Klassischer Internationalismus. \"Proletarier aller Länder, vereinigt euch!\" Ziel ist die Überwindung nationaler Identitäten. Kritiker halten Klassenidentität heute für zu schwach, um Menschen wirklich zu einen.",
+        "beispiel": "Du unterstützt einen Streik von Textilarbeiterinnen in Bangladesch, weil ihr Kampf derselbe ist wie deiner in Deutschland."
+      },
+      {
+        "wert": 4,
+        "label": "Universelle Solidarität",
+        "beschreibung": "Jeder Mensch hat denselben Wert und Anspruch auf Hilfe, unabhängig von Herkunft, Klasse oder Geschlecht. Menschsein allein begründet die Pflicht zur Solidarität.",
+        "vertiefung": "Humanistischer Ansatz. Solidarität als universelle Menschenpflicht. Kritiker bemängeln, dass eine Solidarität, die \"alle\" meint, oft unverbindlich bleibt und konkrete Kämpfe vernachlässigt.",
+        "beispiel": "Du spendest für die Opfer eines Erdbebens, egal wo es passiert ist, weil Leid kein Masstab der Nationalität kennt."
+      },
+      {
+        "wert": 5,
+        "label": "Auch Tiere, auch Natur",
+        "beschreibung": "Solidarität endet nicht beim Menschen. Wir tragen Verantwortung für alle Lebewesen und die Integrität der Ökosysteme, von denen wir abhängen.",
+        "vertiefung": "Holistische Sichtweise (Deep Ecology). Der Mensch ist Teil eines Netzes des Lebens. Ausbeutung von Natur und Tieren wird mit der Ausbeutung von Menschen gleichgesetzt. Skeptiker fragen nach der Grenze der Solidarität (z. B. bei Schädlingen).",
+        "beispiel": "Du setzt dich für die Rechte von Wäldern und Flüssen ein, die als Rechtssubjekte vor Gericht geschützt werden müssen."
+      }
+    ],
+    "frage": "Wem schulden wir Solidarität?",
+    "linkePosition": {
+      "position": "Internationale Solidarität",
+      "begruendung": "Die Linke steht für Solidarität ohne Grenzen. Arbeiter*innen aller Länder haben gemeinsame Interessen.",
+      "gegenargument": "Wenn wir uns spalten lassen nach Nation, Geschlecht oder Herkunft, gewinnen nur die da oben."
+    },
+    "rechteGegenrede": {
+      "titel": "SOLIDARITÄT STATT SPALTUNG",
+      "text": "Die Rechten wollen uns spalten: Deutsche gegen Ausländer, Männer gegen Frauen. Wir halten zusammen."
+    },
+    "konkret": "Die Linke fordert: Internationale Gewerkschaftsarbeit, globale Mindeststandards, Solidarität mit Kämpfen weltweit."
+  },
+  "18": {
+    "titel": "NATO",
+    "stufen": [
+      {
+        "wert": 1,
+        "label": "NATO stärken und ausbauen",
+        "beschreibung": "Die NATO ist der Garant für Sicherheit und Frieden in Europa. Deutschland muss das 2%-Ziel erreichen und sich stärker militärisch engagieren.",
+        "vertiefung": "Transatlantische Position. Die NATO wird als Verteidigungsbündnis gegen autoritäre Mächte gesehen. Linke Kritik: Die NATO ist ein Instrument US-amerikanischer Hegemonie und hat selbst völkerrechtswidrige Kriege geführt (Jugoslawien, Libyen).",
+        "beispiel": "Du befürwortest die Stationierung von mehr NATO-Truppen an der Ostflanke und höhere Rüstungsausgaben."
+      },
+      {
+        "wert": 2,
+        "label": "NATO reformieren",
+        "beschreibung": "Die NATO bleibt wichtig, muss aber stärker auf Diplomatie setzen. Abrüstungsverhandlungen und Entspannungspolitik sollen Vorrang haben.",
+        "vertiefung": "Sozialdemokratische Position der 1970er Jahre (Ostpolitik). Die NATO als Sicherheitsanker, aber ohne aggressive Osterweiterung. Kritiker von links sehen auch dies als Festhalten an einem Militärbündnis.",
+        "beispiel": "Du unterstützt die NATO-Mitgliedschaft, forderst aber gleichzeitig neue Abrüstungsverträge mit Russland."
+      },
+      {
+        "wert": 3,
+        "label": "Europäische Sicherheit statt NATO",
+        "beschreibung": "Europa braucht eine eigenständige Sicherheitsarchitektur unter Einschluss Russlands. Die NATO ist ein Relikt des Kalten Krieges.",
+        "vertiefung": "Position eines Teils der europäischen Linken. Ziel ist ein gemeinsames Sicherheitssystem von Lissabon bis Wladiwostok. Kritiker fragen, wie Europa sich ohne die USA gegen Bedrohungen schützen soll.",
+        "beispiel": "Du trittst für eine OSZE-basierte Sicherheitsordnung ein, in der alle europäischen Länder gleichberechtigt sind."
+      },
+      {
+        "wert": 4,
+        "label": "Aus der NATO austreten",
+        "beschreibung": "Deutschland sollte die NATO verlassen und eine Politik der militärischen Bündnisfreiheit verfolgen. Keine Beteiligung an fremden Kriegen.",
+        "vertiefung": "Klassische friedenspolitische Position der Linken. Orientiert an neutralen Ländern wie Österreich oder der Schweiz. Kritiker warnen vor einem Sicherheitsvakuum.",
+        "beispiel": "Du forderst den Abzug aller US-Atomwaffen aus Deutschland und ein Ende der deutschen NATO-Mitgliedschaft."
+      },
+      {
+        "wert": 5,
+        "label": "Alle Militärbündnisse auflösen",
+        "beschreibung": "Militärbündnisse sind Teil des Problems, nicht der Lösung. Ziel ist die weltweite Abrüstung und die Auflösung aller Armeen.",
+        "vertiefung": "Radikalpazifistische Position. Konflikte werden durch Dialog, nicht durch Waffen gelöst. Orientiert an anarchistischen und pazifistischen Traditionen. Skeptiker halten dies angesichts realer Bedrohungen für naiv.",
+        "beispiel": "Du engagierst dich für eine Welt ohne Armeen, in der internationale Konflikte durch Verhandlungen und zivile Mittel gelöst werden."
+      }
+    ],
+    "frage": "Wie stehst du zur NATO?",
+    "linkePosition": {
+      "position": "Raus aus der NATO, rein in eine neue Friedensordnung",
+      "begruendung": "Die NATO ist kein Verteidigungsbündnis, sondern ein Instrument US-amerikanischer Hegemonie. Die Linke fordert eine neue europäische Sicherheitsarchitektur.",
+      "gegenargument": "Die NATO hat Jugoslawien und Libyen bombardiert. Sie ist Teil des Problems, nicht der Lösung."
+    },
+    "rechteGegenrede": {
+      "titel": "NATO HEISST NICHT FRIEDEN",
+      "text": "Jeder Euro für NATO-Aufrüstung fehlt bei Schulen und Krankenhäusern. Sicherheit entsteht durch Diplomatie, nicht durch Raketen."
+    },
+    "konkret": "Die Linke fordert: Austritt aus der NATO, Abzug aller US-Atomwaffen, Aufbau einer gesamteuropäischen Sicherheitsordnung."
+  },
+  "19": {
+    "titel": "POLIZEI",
+    "stufen": [
+      {
+        "wert": 1,
+        "label": "Mehr Polizei, mehr Sicherheit",
+        "beschreibung": "Die Polizei braucht mehr Personal, bessere Ausrüstung und erweiterte Befugnisse. Nur so kann sie Kriminalität effektiv bekämpfen.",
+        "vertiefung": "Law-and-Order-Position. Der Staat muss hart durchgreifen. Linke Kritik: Mehr Polizei führt nicht zu weniger Kriminalität, sondern zu mehr Überwachung und Repression gegen marginalisierte Gruppen.",
+        "beispiel": "Du befürwortest Videoüberwachung auf öffentlichen Plätzen und härtere Strafen für Kleinkriminelle."
+      },
+      {
+        "wert": 2,
+        "label": "Polizei reformieren",
+        "beschreibung": "Die Polizei muss demokratischer kontrolliert werden. Es braucht unabhängige Beschwerdestellen, bessere Ausbildung und Kennzeichnungspflicht.",
+        "vertiefung": "Reformerische Position. Die Polizei ist notwendig, aber verbesserungsbedürftig. Struktureller Rassismus und Polizeigewalt müssen bekämpft werden. Kritiker sagen, Reformen reichen nicht, solange die Institution selbst das Problem ist.",
+        "beispiel": "Du forderst eine unabhängige Behörde, die Beschwerden gegen Polizeibeamte untersucht, und Anti-Rassismus-Trainings."
+      },
+      {
+        "wert": 3,
+        "label": "Weniger Polizei, mehr Sozialarbeit",
+        "beschreibung": "Viele Aufgaben, die heute die Polizei übernimmt, könnten besser von Sozialarbeitern, Mediatoren oder Gesundheitspersonal erledigt werden.",
+        "vertiefung": "Defund-Ansatz. Kriminalität hat soziale Ursachen wie Armut und Ausgrenzung. Investitionen in Prävention sind effektiver als Repression. Kritiker fragen, wer bei akuter Gewalt eingreift.",
+        "beispiel": "Statt bewaffneter Polizei schickt deine Stadt bei psychischen Krisen ein Team aus Sozialarbeitern und Therapeuten."
+      },
+      {
+        "wert": 4,
+        "label": "Polizei drastisch zurückbauen",
+        "beschreibung": "Die Polizei ist ein Instrument zur Aufrechterhaltung ungerechter Verhältnisse. Sie schützt Eigentum, nicht Menschen. Ihre Macht muss radikal beschnitten werden.",
+        "vertiefung": "Abolitionistische Perspektive. Die Polizei ist historisch aus der Sklavenpatrouille und der Niederschlagung von Arbeiteraufständen entstanden. Sicherheit entsteht durch Gemeinschaft, nicht durch Uniformen.",
+        "beispiel": "Du setzt dich dafür ein, dass die Polizei keine Waffen mehr trägt und ihre Befugnisse auf ein Minimum reduziert werden."
+      },
+      {
+        "wert": 5,
+        "label": "Polizei abschaffen",
+        "beschreibung": "Eine befreite Gesellschaft braucht keine Polizei. Konflikte werden in der Gemeinschaft gelöst, durch Mediation, transformative Gerechtigkeit und gegenseitige Hilfe.",
+        "vertiefung": "Anarchistische Position. Die Polizei ist nicht reformierbar, weil ihre Funktion die Aufrechterhaltung von Herrschaft ist. Skeptiker fragen, wie mit Gewalttätern umgegangen werden soll.",
+        "beispiel": "In deinem Viertel gibt es Nachbarschaftsräte, die bei Konflikten vermitteln, und kollektive Strukturen, die Betroffenen helfen."
+      }
+    ],
+    "frage": "Wie hältst du es mit der Polizei?",
+    "linkePosition": {
+      "position": "Polizeireform und demokratische Kontrolle",
+      "begruendung": "Die Linke fordert eine grundlegende Polizeireform: Kennzeichnungspflicht, unabhängige Beschwerdestellen, Abbau von Racial Profiling.",
+      "gegenargument": "Polizeigewalt und Rassismus sind strukturelle Probleme, keine Einzelfälle. Reformen sind überfällig."
+    },
+    "rechteGegenrede": {
+      "titel": "WEM DIENT DIE POLIZEI?",
+      "text": "Die Polizei räumt Klimacamps, aber nicht die Konzernzentralen der Umweltzerstörer. Sie schützt Eigentum, nicht Menschen."
+    },
+    "konkret": "Die Linke fordert: Kennzeichnungspflicht, unabhängige Ermittlungsstellen bei Polizeigewalt, Entkriminalisierung von Bagatelldelikten."
+  },
+  "20": {
+    "titel": "WOHNEN",
+    "stufen": [
+      {
+        "wert": 1,
+        "label": "Wohnen ist Privatsache",
+        "beschreibung": "Der Markt regelt das Wohnen am besten. Angebot und Nachfrage bestimmen die Mieten. Wer mehr zahlen kann, wohnt besser.",
+        "vertiefung": "Neoliberale Position. Regulierung führt zu Wohnungsmangel, weil Investoren abgeschreckt werden. Linke Kritik: Der Markt produziert Luxuswohnungen für Reiche, während Arme verdrängt werden.",
+        "beispiel": "In deiner Stadt gibt es keine Mietpreisbremse. Die Mieten steigen, aber es wird auch viel gebaut – vor allem teure Apartments."
+      },
+      {
+        "wert": 2,
+        "label": "Mieten deckeln",
+        "beschreibung": "Der Staat greift in den Wohnungsmarkt ein, um Mieter zu schützen. Mietpreisbremsen, Kündigungsschutz und Milieuschutz verhindern Verdrängung.",
+        "vertiefung": "Sozialdemokratische Wohnungspolitik. Der Markt wird gezähmt, aber nicht ersetzt. Kritiker sagen, dass Vermieter immer Schlupflöcher finden und die Regulierung nicht weit genug geht.",
+        "beispiel": "Deine Miete darf bei Neuvermietung nur 10% über der ortsüblichen Vergleichsmiete liegen."
+      },
+      {
+        "wert": 3,
+        "label": "Mehr sozialer Wohnungsbau",
+        "beschreibung": "Der Staat baut selbst Wohnungen und vermietet sie günstig. Mindestens 30% aller Neubauten sollten Sozialwohnungen sein.",
+        "vertiefung": "Traditionelle Wohnungspolitik der Nachkriegszeit. Ziel ist ein starker öffentlicher Sektor neben dem Markt. Kritiker bemängeln die Stigmatisierung von Sozialwohnungen und fordern universelle Lösungen.",
+        "beispiel": "In deinem Viertel entstehen neue kommunale Wohnblocks mit Mieten, die sich auch Geringverdiener leisten können."
+      },
+      {
+        "wert": 4,
+        "label": "Große Vermieter enteignen",
+        "beschreibung": "Konzerne, die zehntausende Wohnungen besitzen, werden vergesellschaftet. Die Wohnungen kommen in öffentliche oder genossenschaftliche Hand.",
+        "vertiefung": "Position der Initiative 'Deutsche Wohnen & Co. enteignen'. Wohnen ist keine Ware, sondern Grundrecht. Enteignung ist nach Artikel 15 GG möglich. Kritiker warnen vor den Kosten und rechtlichen Hürden.",
+        "beispiel": "Die großen Immobilienkonzerne in deiner Stadt werden enteignet. Die Mieten sinken, weil kein Profit mehr abgeschöpft wird."
+      },
+      {
+        "wert": 5,
+        "label": "Wohnen ohne Miete",
+        "beschreibung": "Grund und Boden gehören niemandem. Wohnraum wird als Commons verwaltet. Jeder Mensch hat ein Recht auf angemessenes Wohnen – ohne dafür zu zahlen.",
+        "vertiefung": "Radikale Position. Boden kann nicht produziert werden und sollte daher kein Privateigentum sein. Orientiert an Konzepten wie dem Mietshäuser Syndikat. Skeptiker fragen nach der Finanzierung von Bau und Instandhaltung.",
+        "beispiel": "Du wohnst in einem Haus, das der Gemeinschaft gehört. Es gibt keine Miete, nur einen Beitrag zu den Betriebskosten."
+      }
+    ],
+    "frage": "Wem gehört die Stadt?",
+    "linkePosition": {
+      "position": "Wohnen ist ein Menschenrecht",
+      "begruendung": "Die Linke fordert die Enteignung großer Wohnungskonzerne und einen massiven Ausbau des sozialen Wohnungsbaus.",
+      "gegenargument": "In den letzten 20 Jahren wurden 2 Millionen Sozialwohnungen privatisiert. Das ist politisch gewollt – und umkehrbar."
+    },
+    "rechteGegenrede": {
+      "titel": "WOHNEN DARF KEINE WARE SEIN",
+      "text": "Vonovia, Deutsche Wohnen & Co. machen Milliarden mit deiner Miete. Dieses Geld gehört in bezahlbaren Wohnraum, nicht in Aktionärstaschen."
+    },
+    "konkret": "Die Linke fordert: Bundesweiter Mietendeckel, Enteignung großer Wohnungskonzerne, 250.000 neue Sozialwohnungen pro Jahr."
+  }
+}
