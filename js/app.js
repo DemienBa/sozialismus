@@ -45,33 +45,51 @@ const SOZIALISMUS_ENGINE = {
   },
 
   stroemungen: [
-    { name: "Anarcho-Kommunismus", kurzform: "Anarchistisch", icon: "Ⓐ",
+    { name: "Anarcho-Kommunismus", kurzform: "Anarchistisch", icon: "Ⓐ", id: "libertaer",
       bedingungen: (p) => p.A3 >= 4 && p.A4 >= 4 && p.B2 >= 4,
-      beschreibung: "Du willst den Staat abschaffen und durch freie Assoziationen ersetzen. Eigentum wird gemeinschaftlich verwaltet, ohne zentrale Autorität." },
-    { name: "Rätekommunismus", kurzform: "Rätedemokratisch", icon: "☭",
+      beschreibung: "Du willst den Staat abschaffen und durch freie Assoziationen ersetzen. Eigentum wird gemeinschaftlich verwaltet, ohne zentrale Autorität.",
+      wesenKnoten: ["A3-5", "B2-5", "E2-5"],
+      wesenZimmer: "Der Garten - hier wächst alles wild, aber zusammen" },
+    { name: "Rätekommunismus", kurzform: "Rätedemokratisch", icon: "☭", id: "raetekommunismus",
       bedingungen: (p) => p.A1 >= 4 && p.A3 >= 3 && p.A4 >= 4 && p.B1 <= 3,
-      beschreibung: "Du setzt auf Arbeiterräte als Organe der Selbstverwaltung. Die Basis entscheidet – in Betrieb und Stadtteil." },
-    { name: "Autonomer Sozialismus", kurzform: "Autonom", icon: "🏴",
+      beschreibung: "Du setzt auf Arbeiterräte als Organe der Selbstverwaltung. Die Basis entscheidet – in Betrieb und Stadtteil.",
+      wesenKnoten: ["A3-4", "B2-5", "E3-4"],
+      wesenZimmer: "Die Versammlungshalle - hier entscheiden alle gemeinsam" },
+    { name: "Autonomer Sozialismus", kurzform: "Autonom", icon: "🏴", id: "autonomer-marxismus",
       bedingungen: (p) => p.A1 >= 4 && p.A4 >= 4 && p.E1 >= 3,
-      beschreibung: "Du glaubst an Veränderung durch Bewegung, nicht durch Parteien. Die neue Gesellschaft wird im Widerstand geboren." },
-    { name: "Demokratischer Sozialismus", kurzform: "Demokratisch", icon: "🌹",
+      beschreibung: "Du glaubst an Veränderung durch Bewegung, nicht durch Parteien. Die neue Gesellschaft wird im Widerstand geboren.",
+      wesenKnoten: ["A2-4", "A3-4", "B3-4"],
+      wesenZimmer: "Der Korridor - hier kreuzen sich alle Kämpfe" },
+    { name: "Demokratischer Sozialismus", kurzform: "Demokratisch", icon: "🌹", id: "demokratischer-sozialismus",
       bedingungen: (p) => p.A1 <= 3 && p.A3 <= 3 && p.A4 <= 3,
-      beschreibung: "Du willst den Sozialismus durch demokratische Reformen erreichen. Schritt für Schritt, Mehrheit für Mehrheit." },
-    { name: "Libertärer Kommunalismus", kurzform: "Kommunalistisch", icon: "🌻",
+      beschreibung: "Du willst den Sozialismus durch demokratische Reformen erreichen. Schritt für Schritt, Mehrheit für Mehrheit.",
+      wesenKnoten: ["A1-2", "A3-2", "D2-2"],
+      wesenZimmer: "Der Salon - hier wird debattiert und abgestimmt" },
+    { name: "Libertärer Kommunalismus", kurzform: "Kommunalistisch", icon: "🌻", id: "munizipalismus",
       bedingungen: (p) => p.A3 >= 4 && p.E2 <= 2 && p.C2 >= 3,
-      beschreibung: "Du setzt auf kommunale Selbstverwaltung und direkte Demokratie. Föderationen freier Kommunen ersetzen den Nationalstaat." },
-    { name: "Ökosozialismus", kurzform: "Ökosozialistisch", icon: "🌍",
+      beschreibung: "Du setzt auf kommunale Selbstverwaltung und direkte Demokratie. Föderationen freier Kommunen ersetzen den Nationalstaat.",
+      wesenKnoten: ["E2-5", "A3-4", "B2-4"],
+      wesenZimmer: "Der Innenhof - hier versammelt sich die Nachbarschaft" },
+    { name: "Ökosozialismus", kurzform: "Ökosozialistisch", icon: "🌍", id: "oekosozialismus",
       bedingungen: (p) => p.C2 >= 4 && p.B3 >= 3,
-      beschreibung: "Ökologische und soziale Krise sind zwei Seiten derselben Medaille. Nur ein Systemwechsel kann beide lösen." },
-    { name: "Feministischer Sozialismus", kurzform: "Feministisch", icon: "♀️",
+      beschreibung: "Ökologische und soziale Krise sind zwei Seiten derselben Medaille. Nur ein Systemwechsel kann beide lösen.",
+      wesenKnoten: ["C2-4", "B3-4", "A1-4"],
+      wesenZimmer: "Der Wintergarten - hier wächst die Zukunft unter Glas" },
+    { name: "Feministischer Sozialismus", kurzform: "Feministisch", icon: "♀️", id: "feministischer-sozialismus",
       bedingungen: (p) => p.C1 >= 4 && (p.B3 >= 3 || p.A2 >= 3),
-      beschreibung: "Patriarchat und Kapitalismus sind verwobene Herrschaftssysteme. Care-Arbeit und Geschlecht stehen im Zentrum." },
-    { name: "Postkolonialer Sozialismus", kurzform: "Antiimperialistisch", icon: "✊🏾",
+      beschreibung: "Patriarchat und Kapitalismus sind verwobene Herrschaftssysteme. Care-Arbeit und Geschlecht stehen im Zentrum.",
+      wesenKnoten: ["C1-4", "B3-3", "A2-4"],
+      wesenZimmer: "Die Küche - hier wird die unsichtbare Arbeit sichtbar" },
+    { name: "Postkolonialer Sozialismus", kurzform: "Antiimperialistisch", icon: "✊🏾", id: "buen-vivir",
       bedingungen: (p) => p.C3 >= 4 && p.E4 >= 3,
-      beschreibung: "Sozialismus ohne Dekolonisierung ist unvollständig. Die Kämpfe im globalen Süden sind zentral." },
-    { name: "Reformorientierter Sozialismus", kurzform: "Reformistisch", icon: "📜",
+      beschreibung: "Sozialismus ohne Dekolonisierung ist unvollständig. Die Kämpfe im globalen Süden sind zentral.",
+      wesenKnoten: ["C2-5", "D3-4", "C3-4"],
+      wesenZimmer: "Die Terrasse - hier weht der Wind aus allen Richtungen" },
+    { name: "Reformorientierter Sozialismus", kurzform: "Reformistisch", icon: "📜", id: "reformsozialismus",
       bedingungen: (p) => p.A1 <= 2 && p.E4 <= 2,
-      beschreibung: "Du glaubst an den parlamentarischen Weg. Reformen verbessern das Leben und bereiten größere Veränderungen vor." }
+      beschreibung: "Du glaubst an den parlamentarischen Weg. Reformen verbessern das Leben und bereiten größere Veränderungen vor.",
+      wesenKnoten: ["A1-2", "D2-2", "B1-2"],
+      wesenZimmer: "Das Büro - hier wird an den Details gearbeitet" }
   ],
 
   spannungen: [
@@ -138,8 +156,10 @@ const SOZIALISMUS_ENGINE = {
       }
     }
     if (!hauptstroemung) {
-      hauptstroemung = { name: "Eigenständiger Sozialismus", kurzform: "Eigenständig", icon: "🔥",
-        beschreibung: "Dein Profil passt in keine klassische Schublade – du kombinierst Elemente verschiedener Strömungen auf eigene Weise." };
+      hauptstroemung = { name: "Eigenständiger Sozialismus", kurzform: "Eigenständig", icon: "🔥", id: "eigenstaendig",
+        beschreibung: "Dein Profil passt in keine klassische Schublade – du kombinierst Elemente verschiedener Strömungen auf eigene Weise.",
+        wesenKnoten: ["A1-3", "B1-3", "C1-3"],
+        wesenZimmer: "Die Lobby - ein Übergangsraum zum Erkunden" };
     }
     
     // 2. Theoretiker finden
@@ -193,12 +213,15 @@ const SOZIALISMUS_ENGINE = {
     
     return {
       name, kurzform: hauptstroemung.kurzform, icon: hauptstroemung.icon,
+      id: hauptstroemung.id || 'eigenstaendig',
       slogan: slogans[hauptstroemung.name] || "Eine andere Welt ist möglich!",
       beschreibung: hauptstroemung.beschreibung,
       theoretiker: passende_theoretiker.slice(0, 4),
       spannungen: gefundene_spannungen.slice(0, 3),
       positionen, staerken: staerken.slice(0, 3),
-      nebenstroemungen: nebenstroemungen.map(s => s.name).slice(0, 2)
+      nebenstroemungen: nebenstroemungen.map(s => s.name).slice(0, 2),
+      wesenKnoten: hauptstroemung.wesenKnoten || ["A1-3", "B1-3", "C1-3"],
+      wesenZimmer: hauptstroemung.wesenZimmer || "Die Lobby - ein Übergangsraum"
     };
   }
 };
@@ -2043,7 +2066,18 @@ const Layer2 = ({ params, onComplete, onLiteratur, onBack, apiKey, analysen, ini
                 {/* Option 2: Linkes Wesen */}
                 <div 
                   onClick={() => {
-                    window.open('haus/index.html', '_blank');
+                    // Baue URL mit Archetyp-Info
+                    const wesenUrl = new URL('haus/index.html', window.location.href);
+                    if (analyse?.id) {
+                      wesenUrl.searchParams.set('archetyp', analyse.id);
+                    }
+                    if (analyse?.wesenKnoten?.length) {
+                      wesenUrl.searchParams.set('knoten', analyse.wesenKnoten.join(','));
+                    }
+                    if (analyse?.wesenZimmer) {
+                      wesenUrl.searchParams.set('zimmer', analyse.wesenZimmer);
+                    }
+                    window.open(wesenUrl.toString(), '_blank');
                   }}
                   style={{ 
                     background: 'linear-gradient(135deg, #1a1a2e 0%, #16213e 100%)', 
@@ -2068,6 +2102,11 @@ const Layer2 = ({ params, onComplete, onLiteratur, onBack, apiKey, analysen, ini
                       <div style={{ color: COLORS.weiss, fontWeight: 700, fontSize: '1.1rem' }}>
                         Zum Linken Wesen
                       </div>
+                      {analyse?.wesenZimmer && (
+                        <div style={{ color: '#AAA', fontSize: '0.85rem', marginTop: '0.25rem' }}>
+                          Dein Ort: {analyse.wesenZimmer}
+                        </div>
+                      )}
                     </div>
                     <span style={{ color: COLORS.rot, fontSize: '1.5rem' }}>↗</span>
                   </div>
