@@ -320,20 +320,22 @@
     .linse {
       width: 40px;
       height: 40px;
-      border-radius: 50%;
+      border-radius: 20px;
       background: var(--bg-tertiary);
       border: 2px solid var(--border);
       display: flex;
       align-items: center;
       justify-content: center;
       font-size: 1.2rem;
-      cursor: grab;
+      cursor: pointer;
       transition: all 0.2s ease;
       position: relative;
+      flex-shrink: 0;
+      overflow: hidden;
     }
     
     .linse:hover {
-      transform: scale(1.1);
+      transform: scale(1.05);
       border-color: var(--accent);
       box-shadow: 0 0 15px var(--glow);
     }
@@ -353,42 +355,30 @@
     .linse.werkzeug { border-color: #9C27B0; }
     .linse.werkzeug:hover, .linse.werkzeug.active { background: rgba(156, 39, 176, 0.3); }
     
-    /* Kombinierbare Linsen - entfernt */
-    
+    /* Label versteckt im collapsed state */
     .linse-label {
-      position: absolute;
-      left: 50px;
-      top: 50%;
-      transform: translateY(-50%);
-      background: var(--bg-secondary);
-      border: 1px solid var(--border);
-      padding: 0.3rem 0.6rem;
-      border-radius: 4px;
-      font-size: 0.75rem;
-      color: var(--text-primary);
-      white-space: nowrap;
-      opacity: 0;
-      pointer-events: none;
-      transition: opacity 0.2s;
+      display: none;
     }
     
-    .linse:hover .linse-label {
-      opacity: 1;
+    /* Wrapper */
+    .linse-wrapper {
+      display: flex;
+      align-items: center;
+    }
+    
+    /* EXPANDED STATE */
+    .linsen-palette.expanded .linse {
+      width: auto;
+      min-width: 40px;
+      padding-right: 12px;
+      gap: 8px;
     }
     
     .linsen-palette.expanded .linse-label {
-      position: static;
-      transform: none;
-      opacity: 1;
-      margin-left: 0.5rem;
-      background: none;
-      border: none;
-      padding: 0;
-    }
-    
-    .linsen-palette.expanded .linse-wrapper {
-      display: flex;
-      align-items: center;
+      display: inline;
+      font-size: 0.75rem;
+      color: var(--text-primary);
+      white-space: nowrap;
     }
     
     /* Schwebende Linse (folgt Cursor) */
@@ -844,19 +834,21 @@
       overflow: hidden;
       min-height: 500px;
       height: calc(100vh - 50px);
-      display: block;
+      display: none;
       background: var(--bg-primary);
     }
     
     #netzwerk-container.hidden {
-      display: none !important;
+      display: none;
     }
     
     #netzwerk3d {
       width: 100%;
       height: 100%;
       display: block;
-      position: relative;
+      position: absolute;
+      top: 0;
+      left: 0;
       z-index: 1;
     }
     
@@ -1170,11 +1162,16 @@
       position: absolute;
       bottom: 1rem;
       left: 1rem;
-      background: #222;
+      background: rgba(30, 30, 30, 0.95);
       padding: 0.75rem 1rem;
-      border-radius: 4px;
+      border-radius: 8px;
       font-size: 0.75rem;
       color: #888;
+      z-index: 50;
+      backdrop-filter: blur(5px);
+      border: 1px solid rgba(255,255,255,0.1);
+      max-height: 80vh;
+      overflow-y: auto;
     }
     
     .legende-item {
@@ -1196,6 +1193,118 @@
     .legende-linie.gruen { background: #4CAF50; }
     .legende-linie.orange { background: #FF9800; }
     .legende-linie.grau { background: #555; }
+    
+    /* Filter-Legenden (dynamisch) */
+    .legende-filter {
+      display: none;
+      margin-top: 0.75rem;
+      padding-top: 0.75rem;
+      border-top: 1px solid #444;
+    }
+    
+    .legende-filter.visible {
+      display: block;
+    }
+    
+    .legende-filter-titel {
+      font-weight: bold;
+      color: #ccc;
+      margin-bottom: 0.5rem;
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    
+    /* Fieber-Gradient */
+    .legende-fieber-gradient {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-bottom: 0.4rem;
+    }
+    
+    .fieber-gradient-bar {
+      width: 80px;
+      height: 12px;
+      border-radius: 6px;
+      background: linear-gradient(to right, #2196F3, #4CAF50, #FFEB3B, #FF9800, #E53935);
+    }
+    
+    .fieber-labels {
+      display: flex;
+      justify-content: space-between;
+      width: 80px;
+      font-size: 0.6rem;
+      color: #666;
+    }
+    
+    /* Konflikte-Legende */
+    .legende-konflikt-linie {
+      width: 24px;
+      height: 3px;
+      background: #FF9800;
+      border-style: dashed;
+    }
+    
+    .legende-kugel {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      display: inline-block;
+    }
+    
+    .legende-kugel.klein { transform: scale(0.7); }
+    .legende-kugel.gross { transform: scale(1.3); }
+    
+    .legende-section {
+      margin-bottom: 0.6rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid #333;
+    }
+    .legende-section:last-of-type {
+      border-bottom: none;
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+    .legende-section-titel {
+      font-size: 0.7rem;
+      color: #888;
+      margin-bottom: 0.4rem;
+      font-weight: 500;
+    }
+    
+    /* Globale Filter-Info (unten rechts, immer sichtbar) */
+    .filter-info-global {
+      position: fixed;
+      bottom: 1rem;
+      right: 1rem;
+      background: rgba(30, 30, 30, 0.95);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 0.75rem 1rem;
+      font-size: 0.75rem;
+      color: #aaa;
+      z-index: 90;
+      display: none;
+      max-width: 200px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    }
+    
+    .filter-info-global.visible {
+      display: block;
+    }
+    
+    .filter-info-global .filter-info-item {
+      margin-bottom: 0.75rem;
+      padding-bottom: 0.75rem;
+      border-bottom: 1px solid #444;
+    }
+    
+    .filter-info-global .filter-info-item:last-child {
+      margin-bottom: 0;
+      padding-bottom: 0;
+      border-bottom: none;
+    }
 
     /* Liste */
     #liste-container {
@@ -1203,52 +1312,146 @@
       display: none;
       padding: 2rem;
       overflow-y: auto;
+      background: linear-gradient(135deg, var(--bg-primary) 0%, #1a1a1a 100%);
     }
     
     #liste-container.active {
       display: block;
     }
     
-    .liste-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-      gap: 1rem;
-      max-width: 1200px;
-      margin: 0 auto;
+    .liste-header {
+      text-align: center;
+      margin-bottom: 2rem;
     }
     
-    .liste-item {
-      background: #222;
-      border: 1px solid #333;
-      padding: 1rem;
-      border-radius: 4px;
+    .liste-header h2 {
+      font-size: 1.5rem;
+      font-weight: 300;
+      color: var(--text-primary);
+      margin-bottom: 0.5rem;
+    }
+    
+    .liste-header p {
+      color: var(--text-muted);
+      font-size: 0.85rem;
+    }
+    
+    .liste-filter-bar {
+      display: flex;
+      justify-content: center;
+      gap: 0.5rem;
+      margin-bottom: 1.5rem;
+      flex-wrap: wrap;
+    }
+    
+    .liste-filter-btn {
+      padding: 0.4rem 0.8rem;
+      background: var(--bg-tertiary);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      color: var(--text-secondary);
+      font-size: 0.75rem;
       cursor: pointer;
       transition: all 0.2s;
     }
     
+    .liste-filter-btn:hover, .liste-filter-btn.active {
+      background: var(--accent);
+      border-color: var(--accent);
+      color: #fff;
+    }
+    
+    .liste-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 1rem;
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+    
+    .liste-item {
+      background: var(--bg-secondary);
+      border: 1px solid var(--border);
+      border-left: 4px solid var(--accent);
+      padding: 1rem 1.25rem;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.2s;
+      position: relative;
+    }
+    
     .liste-item:hover {
-      border-color: #E53935;
-      background: #2a2a2a;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+      border-color: var(--accent);
+    }
+    
+    .liste-item .item-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 0.5rem;
     }
     
     .liste-item .name {
       font-weight: 600;
-      color: #fff;
-      margin-bottom: 0.25rem;
+      color: var(--text-primary);
+      font-size: 1rem;
+      line-height: 1.3;
     }
     
-    .liste-item .achse {
-      font-size: 0.7rem;
+    .liste-item .achse-badge {
+      font-size: 0.65rem;
+      padding: 0.2rem 0.5rem;
+      border-radius: 10px;
+      background: rgba(229, 57, 53, 0.2);
       color: #E53935;
-      margin-bottom: 0.5rem;
+      white-space: nowrap;
+      flex-shrink: 0;
+      margin-left: 0.5rem;
     }
     
     .liste-item .beschreibung {
       font-size: 0.8rem;
-      color: #888;
-      line-height: 1.4;
+      color: var(--text-muted);
+      line-height: 1.5;
       margin: 0;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
     }
+    
+    .liste-item .item-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 0.75rem;
+      padding-top: 0.5rem;
+      border-top: 1px solid var(--border);
+      font-size: 0.7rem;
+      color: var(--text-muted);
+    }
+    
+    .liste-item .verbindungen {
+      display: flex;
+      align-items: center;
+      gap: 0.3rem;
+    }
+    
+    /* Achsen-Farben für Border */
+    .liste-item[data-achse^="A"] { border-left-color: #E53935; }
+    .liste-item[data-achse^="A"] .achse-badge { background: rgba(229, 57, 53, 0.2); color: #E53935; }
+    .liste-item[data-achse^="B"] { border-left-color: #4CAF50; }
+    .liste-item[data-achse^="B"] .achse-badge { background: rgba(76, 175, 80, 0.2); color: #4CAF50; }
+    .liste-item[data-achse^="C"] { border-left-color: #2196F3; }
+    .liste-item[data-achse^="C"] .achse-badge { background: rgba(33, 150, 243, 0.2); color: #2196F3; }
+    .liste-item[data-achse^="D"] { border-left-color: #9C27B0; }
+    .liste-item[data-achse^="D"] .achse-badge { background: rgba(156, 39, 176, 0.2); color: #9C27B0; }
+    .liste-item[data-achse^="E"] { border-left-color: #FF9800; }
+    .liste-item[data-achse^="E"] .achse-badge { background: rgba(255, 152, 0, 0.2); color: #FF9800; }
+    .liste-item[data-achse^="F"] { border-left-color: #00BCD4; }
+    .liste-item[data-achse^="F"] .achse-badge { background: rgba(0, 188, 212, 0.2); color: #00BCD4; }
 
     /* Karte */
     #karte-container {
@@ -1256,33 +1459,98 @@
       display: none;
       padding: 2rem;
       overflow: auto;
+      background: linear-gradient(135deg, var(--bg-primary) 0%, #0d1117 100%);
     }
     #karte-container.active { display: block; }
     
+    .karte-header {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+    
+    .karte-header h2 {
+      font-size: 1.8rem;
+      font-weight: 300;
+      color: var(--text-primary);
+      margin-bottom: 0.5rem;
+    }
+    
+    .karte-header p {
+      color: var(--text-muted);
+      font-size: 0.85rem;
+    }
+    
+    .karte-legende {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      margin-bottom: 1.5rem;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+    
+    .karte-legende span {
+      display: flex;
+      align-items: center;
+      gap: 0.3rem;
+    }
+    
     .karte-wrapper {
-      max-width: 1000px;
+      max-width: 1100px;
       margin: 0 auto;
     }
     
-    .karte-header {
-      text-align: center;
-      margin-bottom: 1rem;
-      color: #666;
-      font-size: 0.8rem;
+    .karte-achse-group {
+      margin-bottom: 1.5rem;
+      background: var(--bg-secondary);
+      border-radius: 12px;
+      overflow: hidden;
+      border: 1px solid var(--border);
+    }
+    
+    .karte-achse-header {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      padding: 0.75rem 1rem;
+      background: var(--bg-tertiary);
+      border-bottom: 1px solid var(--border);
+    }
+    
+    .karte-achse-code {
+      font-size: 0.75rem;
+      font-weight: 700;
+      padding: 0.25rem 0.5rem;
+      border-radius: 4px;
+      color: #fff;
+    }
+    
+    .karte-achse-name {
+      font-size: 0.9rem;
+      color: var(--text-primary);
+      font-weight: 500;
+    }
+    
+    .karte-skala {
+      display: flex;
+      justify-content: space-between;
+      padding: 0 1rem;
+      font-size: 0.65rem;
+      color: var(--text-muted);
+      margin-top: 0.3rem;
     }
     
     .karte-grid {
       display: grid;
       grid-template-columns: repeat(5, 1fr);
-      gap: 2px;
-      background: #333;
-      border: 1px solid #333;
+      gap: 3px;
+      padding: 0.5rem;
     }
     
     .karte-cell {
-      background: #222;
-      padding: 0.5rem;
-      min-height: 60px;
+      background: var(--bg-primary);
+      padding: 0.6rem 0.4rem;
+      min-height: 55px;
       cursor: pointer;
       transition: all 0.2s;
       display: flex;
@@ -1290,33 +1558,55 @@
       justify-content: center;
       align-items: center;
       text-align: center;
+      border-radius: 6px;
+      border: 1px solid transparent;
     }
     
     .karte-cell:hover {
-      background: #2a2a2a;
       transform: scale(1.05);
       z-index: 10;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+    }
+    
+    .karte-cell.filled {
+      border-color: var(--border);
+    }
+    
+    .karte-cell.filled:hover {
+      border-color: var(--accent);
     }
     
     .karte-cell .name {
       font-size: 0.7rem;
       font-weight: 500;
-      color: #fff;
+      color: var(--text-primary);
+      line-height: 1.2;
     }
     
-    .karte-cell .id {
+    .karte-cell .position {
       font-size: 0.6rem;
-      color: #666;
+      color: var(--text-muted);
+      margin-top: 0.2rem;
     }
     
-    .karte-achse-label {
-      background: #E53935;
-      color: #fff;
-      font-size: 0.7rem;
-      font-weight: 600;
-      padding: 0.5rem;
-      text-align: center;
+    .karte-cell.empty {
+      opacity: 0.3;
+      cursor: default;
     }
+    
+    /* Achsen-Farben */
+    .karte-achse-group[data-achse^="A"] .karte-achse-code { background: #E53935; }
+    .karte-achse-group[data-achse^="A"] .karte-cell.filled:hover { border-color: #E53935; }
+    .karte-achse-group[data-achse^="B"] .karte-achse-code { background: #4CAF50; }
+    .karte-achse-group[data-achse^="B"] .karte-cell.filled:hover { border-color: #4CAF50; }
+    .karte-achse-group[data-achse^="C"] .karte-achse-code { background: #2196F3; }
+    .karte-achse-group[data-achse^="C"] .karte-cell.filled:hover { border-color: #2196F3; }
+    .karte-achse-group[data-achse^="D"] .karte-achse-code { background: #9C27B0; }
+    .karte-achse-group[data-achse^="D"] .karte-cell.filled:hover { border-color: #9C27B0; }
+    .karte-achse-group[data-achse^="E"] .karte-achse-code { background: #FF9800; }
+    .karte-achse-group[data-achse^="E"] .karte-cell.filled:hover { border-color: #FF9800; }
+    .karte-achse-group[data-achse^="F"] .karte-achse-code { background: #00BCD4; }
+    .karte-achse-group[data-achse^="F"] .karte-cell.filled:hover { border-color: #00BCD4; }
 
     /* Zeitleiste */
     #zeitleiste-container {
@@ -1324,8 +1614,185 @@
       display: none;
       padding: 2rem;
       overflow-y: auto;
+      background: linear-gradient(180deg, var(--bg-primary) 0%, #12121a 100%);
     }
     #zeitleiste-container.active { display: block; }
+    
+    .zeitleiste-header {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+    
+    .zeitleiste-header h2 {
+      font-size: 1.8rem;
+      font-weight: 300;
+      color: #E53935;
+      margin-bottom: 0.5rem;
+    }
+    
+    .zeitleiste-header p {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+    }
+    
+    .zeitleiste-filter {
+      display: flex;
+      justify-content: center;
+      gap: 0.5rem;
+      margin-bottom: 2rem;
+      flex-wrap: wrap;
+    }
+    
+    .zeitleiste-filter-btn {
+      padding: 0.4rem 0.8rem;
+      background: var(--bg-tertiary);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      color: var(--text-secondary);
+      font-size: 0.75rem;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    
+    .zeitleiste-filter-btn:hover, .zeitleiste-filter-btn.active {
+      background: #E53935;
+      border-color: #E53935;
+      color: #fff;
+    }
+    
+    .zeitleiste-wrapper {
+      max-width: 900px;
+      margin: 0 auto;
+      position: relative;
+      padding-left: 100px;
+    }
+    
+    /* Vertikale Timeline-Linie */
+    .zeitleiste-wrapper::before {
+      content: '';
+      position: absolute;
+      left: 85px;
+      top: 0;
+      bottom: 0;
+      width: 3px;
+      background: linear-gradient(to bottom, #E53935, #9C27B0, #2196F3);
+      border-radius: 3px;
+    }
+    
+    .zeitleiste-item {
+      position: relative;
+      margin-bottom: 1.5rem;
+      padding-left: 2rem;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    
+    .zeitleiste-item:hover {
+      transform: translateX(5px);
+    }
+    
+    .zeitleiste-item:hover .zeitleiste-card {
+      border-color: #E53935;
+      box-shadow: 0 4px 20px rgba(229, 57, 53, 0.2);
+    }
+    
+    /* Punkt auf der Timeline */
+    .zeitleiste-item::before {
+      content: '';
+      position: absolute;
+      left: -22px;
+      top: 12px;
+      width: 12px;
+      height: 12px;
+      background: var(--bg-primary);
+      border: 3px solid #E53935;
+      border-radius: 50%;
+      z-index: 1;
+    }
+    
+    .zeitleiste-item[data-typ="praxis"]::before { border-color: #4CAF50; }
+    .zeitleiste-item[data-typ="text"]::before { border-color: #2196F3; }
+    .zeitleiste-item[data-typ="geburt"]::before { border-color: #FF9800; }
+    
+    .zeitleiste-jahr {
+      position: absolute;
+      left: -95px;
+      top: 8px;
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: #E53935;
+      width: 60px;
+      text-align: right;
+    }
+    
+    .zeitleiste-card {
+      background: var(--bg-secondary);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 1rem;
+      transition: all 0.2s;
+    }
+    
+    .zeitleiste-card-header {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-bottom: 0.5rem;
+    }
+    
+    .zeitleiste-icon {
+      font-size: 1.2rem;
+    }
+    
+    .zeitleiste-card h3 {
+      font-size: 0.95rem;
+      color: var(--text-primary);
+      font-weight: 600;
+      margin: 0;
+    }
+    
+    .zeitleiste-card p {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      margin: 0;
+      line-height: 1.4;
+    }
+    
+    .zeitleiste-card .ort {
+      font-size: 0.75rem;
+      color: #666;
+      margin-top: 0.3rem;
+    }
+    
+    .zeitleiste-card .tag {
+      display: inline-block;
+      font-size: 0.65rem;
+      padding: 0.15rem 0.4rem;
+      border-radius: 8px;
+      margin-top: 0.5rem;
+    }
+    
+    .zeitleiste-card .tag.praxis { background: rgba(76, 175, 80, 0.2); color: #4CAF50; }
+    .zeitleiste-card .tag.text { background: rgba(33, 150, 243, 0.2); color: #2196F3; }
+    .zeitleiste-card .tag.geburt { background: rgba(255, 152, 0, 0.2); color: #FF9800; }
+    
+    /* Epochen-Marker */
+    .zeitleiste-epoche {
+      position: relative;
+      margin: 2rem 0;
+      padding-left: 2rem;
+    }
+    
+    .zeitleiste-epoche-label {
+      background: rgba(229, 57, 53, 0.2);
+      color: #E53935;
+      padding: 0.3rem 0.8rem;
+      border-radius: 4px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
     
     /* Stammbaum */
     #stammbaum-container {
@@ -1339,13 +1806,14 @@
     
     .stammbaum-wrapper {
       min-width: 1200px;
-      padding: 2rem;
+      padding: 1rem;
+      overflow-x: auto;
     }
     
     .stammbaum-svg {
       width: 100%;
       height: auto;
-      min-height: 800px;
+      min-height: 700px;
     }
     
     .stammbaum-epoche {
@@ -1368,49 +1836,54 @@
     }
     
     .stammbaum-person:hover {
-      transform: scale(1.1);
+      filter: brightness(1.3);
+    }
+    
+    .stammbaum-person:hover .stammbaum-label {
+      fill: #fff;
+      font-weight: bold;
     }
     
     .stammbaum-person circle {
-      stroke-width: 2;
-      stroke: #fff;
+      stroke-width: 1;
+      stroke: rgba(255,255,255,0.3);
     }
     
     .stammbaum-linie {
       stroke: #555;
-      stroke-width: 2;
+      stroke-width: 1;
       fill: none;
-      opacity: 0.6;
+      opacity: 0.4;
     }
     
     .stammbaum-linie.einfluss {
       stroke: #4CAF50;
-      stroke-dasharray: 5,5;
+      stroke-dasharray: 4,3;
     }
     
     .stammbaum-linie.konflikt {
       stroke: #f44336;
-      stroke-dasharray: 3,3;
+      stroke-dasharray: 2,2;
     }
     
     .stammbaum-label {
-      fill: #fff;
-      font-size: 11px;
+      fill: #ccc;
+      font-size: 9px;
       text-anchor: middle;
       pointer-events: none;
     }
     
     .stammbaum-epoche-label {
       fill: #fff;
-      font-size: 14px;
+      font-size: 12px;
       font-weight: 600;
-      text-anchor: middle;
+      text-anchor: start;
     }
     
     .stammbaum-zeit-label {
       fill: #888;
-      font-size: 10px;
-      text-anchor: middle;
+      font-size: 9px;
+      text-anchor: start;
     }
     
     .stammbaum-legende {
@@ -1436,43 +1909,6 @@
       height: 3px;
     }
     
-    .zeitleiste-wrapper {
-      max-width: 800px;
-      margin: 0 auto;
-    }
-    
-    .zeitleiste-item {
-      display: flex;
-      gap: 1.5rem;
-      margin-bottom: 1.5rem;
-      padding-bottom: 1.5rem;
-      border-bottom: 1px solid #333;
-    }
-    
-    .zeitleiste-jahr {
-      min-width: 80px;
-      font-size: 1.2rem;
-      font-weight: 600;
-      color: #E53935;
-    }
-    
-    .zeitleiste-content h3 {
-      font-size: 1rem;
-      color: #fff;
-      margin-bottom: 0.3rem;
-    }
-    
-    .zeitleiste-content p {
-      font-size: 0.85rem;
-      color: #888;
-      margin-bottom: 0.5rem;
-    }
-    
-    .zeitleiste-content .personen {
-      font-size: 0.75rem;
-      color: #666;
-    }
-
     /* Bibliothek */
     #bibliothek-container {
       flex: 1;
@@ -2075,46 +2511,1192 @@
       display: none;
       flex: 1;
       flex-direction: column;
-      padding: 2rem;
+      padding: 1.5rem;
       overflow-y: auto;
     }
-    .wg-haus {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 1rem;
-      max-width: 1200px;
-      margin: 0 auto;
+    
+    /* Haus Header */
+    .haus-header {
+      text-align: center;
+      margin-bottom: 1rem;
     }
-    .wg-stockwerk {
-      grid-column: 1 / -1;
-      background: linear-gradient(to right, #2a2a2a, #333, #2a2a2a);
-      padding: 0.5rem 1rem;
-      border-radius: 4px;
-      font-size: 0.9rem;
-      color: #888;
-      margin: 0.5rem 0;
+    .haus-header h2 {
+      color: #E53935;
+      font-size: 1.4rem;
+      margin-bottom: 0.2rem;
     }
-    .wg-zimmer {
+    .haus-header p {
+      color: #666;
+      font-size: 0.85rem;
+      margin-bottom: 0.75rem;
+    }
+    .haus-tabs {
+      display: flex;
+      gap: 0.35rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .haus-tab {
+      padding: 0.4rem 0.8rem;
       background: #252525;
       border: 1px solid #333;
-      border-radius: 8px;
-      padding: 1rem;
+      border-radius: 16px;
+      color: #888;
+      font-size: 0.75rem;
       cursor: pointer;
       transition: all 0.2s;
     }
-    .wg-zimmer:hover {
+    .haus-tab:hover { border-color: #555; color: #fff; }
+    .haus-tab.active { background: #C62828; border-color: #C62828; color: #fff; }
+    
+    /* Banner */
+    .haus-banner {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      padding: 0.75rem 1rem;
+      margin-bottom: 1rem;
+      border-radius: 10px;
+      animation: fadeIn 0.3s ease;
+    }
+    .haus-banner.funktional { background: linear-gradient(135deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02)); border: 1px solid rgba(255,255,255,0.1); }
+    .haus-banner.harmonie { background: linear-gradient(135deg, rgba(76,175,80,0.1), rgba(76,175,80,0.03)); border: 1px solid rgba(76,175,80,0.2); }
+    .haus-banner.konflikt { background: linear-gradient(135deg, rgba(229,57,53,0.1), rgba(229,57,53,0.03)); border: 1px solid rgba(229,57,53,0.2); }
+    .haus-banner.epochen { background: linear-gradient(135deg, rgba(255,152,0,0.1), rgba(255,152,0,0.03)); border: 1px solid rgba(255,152,0,0.2); }
+    .haus-banner.chaos { background: linear-gradient(135deg, rgba(156,39,176,0.1), rgba(156,39,176,0.03)); border: 1px solid rgba(156,39,176,0.2); }
+    .banner-icon { font-size: 1.5rem; }
+    .banner-text strong { display: block; color: #fff; font-size: 0.95rem; margin-bottom: 0.1rem; }
+    .banner-text span { color: #888; font-size: 0.8rem; }
+    .chaos-neu-btn {
+      margin-left: auto;
+      padding: 0.35rem 0.75rem;
+      background: linear-gradient(135deg, #9C27B0, #673AB7);
+      border: none;
+      border-radius: 12px;
+      color: #fff;
+      font-size: 0.75rem;
+      cursor: pointer;
+    }
+    .chaos-neu-btn:hover { transform: scale(1.05); }
+    
+    /* Haus Gebäude */
+    .haus-gebaeude {
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+    }
+    
+    /* Etagen */
+    .haus-etage {
+      background: #1a1a1a;
+      border: 1px solid #2a2a2a;
+      border-left: 4px solid #444;
+      border-radius: 8px;
+      padding: 0.75rem 1rem;
+      transition: all 0.2s;
+    }
+    .haus-etage:hover { border-color: #555; }
+    .haus-etage.aktiv { border-left-color: #C62828; background: rgba(198,40,40,0.03); }
+    
+    .etage-header {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      margin-bottom: 0.6rem;
+    }
+    .etage-icon { font-size: 1.25rem; }
+    .etage-info h3 { color: #ddd; font-size: 0.9rem; margin: 0; }
+    .etage-untertitel { font-size: 0.75rem; color: #666; }
+    
+    /* Zimmer Grid */
+    .etage-zimmer {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+      gap: 0.5rem;
+    }
+    
+    /* Einzelnes Zimmer */
+    .haus-zimmer {
+      background: #222;
+      border: 1px solid #333;
+      border-radius: 6px;
+      padding: 0.5rem 0.6rem;
+      cursor: pointer;
+      transition: all 0.15s;
+    }
+    .haus-zimmer:hover { border-color: #555; background: #282828; }
+    
+    /* Zimmer Hervorhebungen */
+    .haus-zimmer.meine-position { border-left: 3px solid #C62828; background: rgba(198,40,40,0.08); }
+    .haus-zimmer.wg-position { border-color: #4CAF50; background: rgba(76,175,80,0.05); }
+    .haus-zimmer.konflikt-achse { border-color: #E53935; }
+    .haus-zimmer.epochen-position { border-color: #FF9800; background: rgba(255,152,0,0.05); }
+    .haus-zimmer.chaos-position { border-color: #9C27B0; background: rgba(156,39,176,0.05); }
+    
+    .zimmer-kopf {
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      margin-bottom: 0.4rem;
+    }
+    .zimmer-achse {
+      background: #333;
+      padding: 0.1rem 0.35rem;
+      border-radius: 3px;
+      font-size: 0.6rem;
+      font-weight: 600;
+      color: #888;
+    }
+    .haus-zimmer.meine-position .zimmer-achse { background: #C62828; color: #fff; }
+    .zimmer-name { font-size: 0.75rem; color: #bbb; }
+    
+    /* Spektrum */
+    .zimmer-spektrum {
+      display: flex;
+      gap: 2px;
+    }
+    .spektrum-pos {
+      flex: 1;
+      background: #2a2a2a;
+      border: 1px solid #333;
+      border-radius: 3px;
+      padding: 0.25rem 0;
+      text-align: center;
+      cursor: pointer;
+      transition: all 0.1s;
+      position: relative;
+    }
+    .spektrum-pos:hover { border-color: #666; background: #333; }
+    .spektrum-pos.meine { background: #C62828; border-color: #E53935; }
+    .spektrum-pos.wg-match { border-color: #4CAF50; }
+    .spektrum-pos.epochen-match { border-color: #FF9800; }
+    .spektrum-pos.chaos-match { border-color: #9C27B0; background: rgba(156,39,176,0.2); }
+    .pos-zahl { font-size: 0.7rem; color: #666; }
+    .spektrum-pos.meine .pos-zahl { color: #fff; font-weight: 600; }
+    .pos-du { position: absolute; bottom: -10px; left: 50%; transform: translateX(-50%); font-size: 0.5rem; color: #C62828; }
+    
+    .zimmer-pole {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 0.25rem;
+      font-size: 0.55rem;
+      color: #555;
+    }
+    .zimmer-zusatz {
+      margin-top: 0.3rem;
+      padding-top: 0.3rem;
+      border-top: 1px solid #333;
+      font-size: 0.65rem;
+      color: #888;
+    }
+    
+    /* Zimmer Detail Popup */
+    .zimmer-detail-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.8);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 10000;
+      animation: fadeIn 0.2s ease;
+    }
+    .zimmer-detail-popup {
+      background: #1a1a1a;
+      border: 1px solid #333;
+      border-radius: 12px;
+      padding: 1.5rem;
+      max-width: 450px;
+      width: 90%;
+      position: relative;
+    }
+    .zimmer-detail-close {
+      position: absolute;
+      top: 0.75rem;
+      right: 0.75rem;
+      background: none;
+      border: none;
+      color: #666;
+      font-size: 1.5rem;
+      cursor: pointer;
+    }
+    .zimmer-detail-close:hover { color: #fff; }
+    .zimmer-detail-popup h3 {
+      color: #E53935;
+      font-size: 1.1rem;
+      margin-bottom: 0.5rem;
+    }
+    .zimmer-frage {
+      color: #888;
+      font-size: 0.9rem;
+      margin-bottom: 0.75rem;
+    }
+    .zimmer-meine-pos {
+      background: rgba(198,40,40,0.1);
+      border-left: 3px solid #C62828;
+      padding: 0.5rem 0.75rem;
+      margin-bottom: 0.75rem;
+      font-size: 0.85rem;
+      color: #ccc;
+    }
+    .zimmer-einbringen {
+      background: #222;
+      border-radius: 8px;
+      padding: 0.75rem;
+      margin-bottom: 0.75rem;
+    }
+    .zimmer-einbringen h4 {
+      color: #4CAF50;
+      font-size: 0.85rem;
+      margin-bottom: 0.4rem;
+    }
+    .zimmer-einbringen p {
+      color: #aaa;
+      font-size: 0.85rem;
+    }
+    .zimmer-future {
+      background: rgba(156,39,176,0.1);
+      border: 1px dashed rgba(156,39,176,0.3);
+      border-radius: 6px;
+      padding: 0.5rem 0.75rem;
+    }
+    .zimmer-future span {
+      color: #9C27B0;
+      font-size: 0.8rem;
+    }
+    
+    @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+    
+    /* ═══════════════════════════════════════════════════════════════
+       WG-MODUS: Social(ist) Media
+       ═══════════════════════════════════════════════════════════════ */
+    .haus-banner.wg {
+      background: linear-gradient(135deg, rgba(156,39,176,0.1), rgba(103,58,183,0.05));
+      border: 1px solid rgba(156,39,176,0.2);
+    }
+    
+    .wg-intro {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      padding: 0.75rem 1rem;
+      background: #1a1a1a;
+      border-radius: 8px;
+      margin-bottom: 1rem;
+    }
+    .wg-intro p {
+      color: #888;
+      font-size: 0.85rem;
+      margin: 0;
+    }
+    .wg-neu-btn {
+      padding: 0.5rem 1rem;
+      background: linear-gradient(135deg, #9C27B0, #673AB7);
+      border: none;
+      border-radius: 20px;
+      color: #fff;
+      font-size: 0.8rem;
+      cursor: pointer;
+      white-space: nowrap;
+      transition: all 0.2s;
+    }
+    .wg-neu-btn:hover {
+      transform: scale(1.05);
+      box-shadow: 0 4px 15px rgba(156,39,176,0.4);
+    }
+    
+    .wg-liste {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 1rem;
+    }
+    
+    .wg-karte {
+      background: #1a1a1a;
+      border: 1px solid #333;
+      border-radius: 12px;
+      padding: 1rem;
+      transition: all 0.2s;
+      cursor: pointer;
+    }
+    .wg-karte:hover {
       border-color: #555;
       transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
     }
-    .wg-zimmer h3 { font-size: 0.9rem; color: #fff; margin-bottom: 0.5rem; }
-    .wg-zimmer .bewohner { font-size: 0.75rem; color: #888; }
-    .wg-zimmer .atmosphaere { 
-      font-size: 0.7rem; 
-      color: #666; 
-      margin-top: 0.5rem;
-      padding-top: 0.5rem;
-      border-top: 1px solid #333;
+    .wg-karte.meine-wg {
+      border: 2px solid #9C27B0;
+      background: rgba(156,39,176,0.05);
+      box-shadow: 0 0 20px rgba(156,39,176,0.15);
+    }
+    
+    .wg-karte-header {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      margin-bottom: 0.75rem;
+      padding-bottom: 0.6rem;
+      border-bottom: 1px solid #333;
+    }
+    .wg-icon {
+      font-size: 1.5rem;
+    }
+    .wg-karte-header h3 {
+      color: #fff;
+      font-size: 1rem;
+      margin: 0;
+      flex: 1;
+    }
+    .wg-badge {
+      background: #9C27B0;
+      padding: 0.25rem 0.6rem;
+      border-radius: 12px;
+      font-size: 0.7rem;
+      color: #fff;
+      font-weight: 600;
+    }
+    
+    .wg-bewohner {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+    
+    .wg-person {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      padding: 0.5rem 0.6rem;
+      background: #222;
+      border: 1px solid #333;
+      border-left: 3px solid var(--accent, #666);
+      border-radius: 6px;
+      transition: all 0.15s;
+    }
+    .wg-person:hover {
+      background: #282828;
+      border-color: #444;
+    }
+    .wg-person.ich {
+      background: rgba(156,39,176,0.1);
+      border-color: #9C27B0;
+    }
+    
+    .person-icon {
+      font-size: 1.25rem;
+    }
+    .person-info {
+      flex: 1;
+      min-width: 0;
+    }
+    .person-name {
+      display: block;
+      color: #ddd;
+      font-size: 0.8rem;
+      font-weight: 500;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .person-slogan {
+      display: block;
+      color: #666;
+      font-size: 0.7rem;
       font-style: italic;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .ich-badge {
+      background: #C62828;
+      padding: 0.15rem 0.5rem;
+      border-radius: 10px;
+      font-size: 0.65rem;
+      color: #fff;
+      font-weight: 600;
+    }
+    
+    .wg-footer {
+      margin-top: 0.75rem;
+      padding-top: 0.6rem;
+      border-top: 1px solid #333;
+    }
+    .wg-potential {
+      color: #666;
+      font-size: 0.75rem;
+    }
+    
+    .wg-zukunft {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.75rem;
+      margin-top: 1.5rem;
+      padding: 1rem;
+      background: rgba(156,39,176,0.08);
+      border: 1px dashed rgba(156,39,176,0.3);
+      border-radius: 10px;
+    }
+    .wg-zukunft span:first-child {
+      font-size: 1.5rem;
+    }
+    .wg-zukunft strong {
+      display: block;
+      color: #9C27B0;
+      font-size: 0.9rem;
+      margin-bottom: 0.25rem;
+    }
+    .wg-zukunft p {
+      color: #888;
+      font-size: 0.8rem;
+      margin: 0;
+    }
+    
+    /* ═══════════════════════════════════════════════════════════════
+       TALKSHOW-GENERATOR
+       ═══════════════════════════════════════════════════════════════ */
+    .talkshow-header {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      padding: 1rem 1.25rem;
+      background: linear-gradient(135deg, rgba(156,39,176,0.15), rgba(103,58,183,0.08));
+      border: 1px solid rgba(156,39,176,0.2);
+      border-radius: 12px;
+      margin-bottom: 1rem;
+    }
+    .talkshow-logo {
+      font-size: 2.5rem;
+    }
+    .talkshow-titel {
+      flex: 1;
+    }
+    .talkshow-titel h2 {
+      color: #fff;
+      font-size: 1.3rem;
+      margin: 0 0 0.2rem 0;
+    }
+    .talkshow-titel p {
+      color: #888;
+      font-size: 0.85rem;
+      margin: 0;
+    }
+    .talkshow-neu-btn {
+      padding: 0.6rem 1rem;
+      background: linear-gradient(135deg, #9C27B0, #673AB7);
+      border: none;
+      border-radius: 20px;
+      color: #fff;
+      font-size: 0.85rem;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .talkshow-neu-btn:hover {
+      transform: scale(1.05);
+      box-shadow: 0 4px 15px rgba(156,39,176,0.4);
+    }
+    
+    .talkshow-gaeste {
+      background: #1a1a1a;
+      border: 1px solid #333;
+      border-radius: 12px;
+      padding: 1rem;
+      margin-bottom: 1rem;
+    }
+    .gaeste-label {
+      color: #888;
+      font-size: 0.85rem;
+      margin-bottom: 0.75rem;
+    }
+    .gaeste-reihe {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      gap: 0.75rem;
+    }
+    .gast-karte {
+      background: #222;
+      border: 1px solid #333;
+      border-left: 3px solid var(--accent, #666);
+      border-radius: 8px;
+      padding: 0.75rem;
+      text-align: center;
+      transition: all 0.2s;
+    }
+    .gast-karte:hover {
+      background: #282828;
+      border-color: #444;
+    }
+    .gast-icon {
+      font-size: 1.75rem;
+      margin-bottom: 0.4rem;
+    }
+    .gast-name {
+      color: #ddd;
+      font-size: 0.75rem;
+      font-weight: 500;
+      margin-bottom: 0.25rem;
+      line-height: 1.3;
+    }
+    .gast-slogan {
+      color: #666;
+      font-size: 0.65rem;
+      font-style: italic;
+    }
+    
+    .talkshow-user {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      padding: 0.75rem 1rem;
+      background: rgba(76,175,80,0.1);
+      border: 1px solid rgba(76,175,80,0.2);
+      border-radius: 10px;
+      margin-bottom: 1rem;
+    }
+    .talkshow-user.kein-archetyp {
+      justify-content: flex-start;
+      background: rgba(255,255,255,0.03);
+      border-color: #333;
+    }
+    .talkshow-user.kein-archetyp span {
+      font-size: 1.5rem;
+    }
+    .talkshow-user.kein-archetyp p {
+      color: #888;
+      font-size: 0.85rem;
+      margin: 0;
+    }
+    .user-badge {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      padding: 0.4rem 0.75rem;
+      background: #222;
+      border: 1px solid var(--accent, #4CAF50);
+      border-radius: 20px;
+    }
+    .user-icon {
+      font-size: 1.25rem;
+    }
+    .user-info {
+      display: flex;
+      flex-direction: column;
+    }
+    .user-label {
+      color: #888;
+      font-size: 0.65rem;
+    }
+    .user-name {
+      color: #ddd;
+      font-size: 0.8rem;
+      font-weight: 500;
+    }
+    .user-einschalten {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+    .einschalten-teaser {
+      color: #888;
+      font-size: 0.8rem;
+    }
+    .einschalten-btn {
+      padding: 0.4rem 0.75rem;
+      background: #4CAF50;
+      border-radius: 15px;
+      color: #fff;
+      font-size: 0.75rem;
+      text-decoration: none;
+      transition: all 0.2s;
+    }
+    .einschalten-btn:hover {
+      background: #66BB6A;
+      transform: scale(1.05);
+    }
+    
+    .talkshow-start {
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+    .debatte-starten-btn {
+      padding: 0.75rem 2rem;
+      background: linear-gradient(135deg, #E53935, #C62828);
+      border: none;
+      border-radius: 25px;
+      color: #fff;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .debatte-starten-btn:hover {
+      transform: scale(1.05);
+      box-shadow: 0 4px 20px rgba(229,57,53,0.4);
+    }
+    
+    .talkshow-zukunft {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.75rem;
+      padding: 1rem;
+      background: rgba(156,39,176,0.08);
+      border: 1px dashed rgba(156,39,176,0.3);
+      border-radius: 10px;
+    }
+    .talkshow-zukunft span:first-child {
+      font-size: 1.5rem;
+    }
+    .talkshow-zukunft strong {
+      display: block;
+      color: #9C27B0;
+      font-size: 0.9rem;
+      margin-bottom: 0.25rem;
+    }
+    .talkshow-zukunft p {
+      color: #888;
+      font-size: 0.8rem;
+      margin: 0;
+    }
+    
+    /* TALKSHOW POPUP */
+    .talkshow-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.9);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 10000;
+      animation: fadeIn 0.2s ease;
+      padding: 1rem;
+      overflow-y: auto;
+    }
+    .talkshow-popup {
+      background: #1a1a1a;
+      border: 1px solid #333;
+      border-radius: 16px;
+      max-width: 600px;
+      width: 100%;
+      max-height: 90vh;
+      overflow-y: auto;
+      position: relative;
+    }
+    .talkshow-close {
+      position: absolute;
+      top: 0.75rem;
+      right: 0.75rem;
+      background: none;
+      border: none;
+      color: #666;
+      font-size: 1.5rem;
+      cursor: pointer;
+      z-index: 1;
+    }
+    .talkshow-close:hover { color: #fff; }
+    
+    .talkshow-popup-header {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      padding: 1.25rem;
+      background: linear-gradient(135deg, rgba(156,39,176,0.15), transparent);
+      border-bottom: 1px solid #333;
+    }
+    .talkshow-popup-logo {
+      font-size: 2rem;
+    }
+    .talkshow-popup-header h3 {
+      color: #fff;
+      font-size: 1.1rem;
+      margin: 0 0 0.2rem 0;
+    }
+    .talkshow-popup-header p {
+      color: #888;
+      font-size: 0.8rem;
+      margin: 0;
+    }
+    
+    .talkshow-popup-gaeste {
+      display: flex;
+      justify-content: center;
+      gap: 0.5rem;
+      padding: 0.75rem 1rem;
+      border-bottom: 1px solid #333;
+      flex-wrap: wrap;
+    }
+    .popup-gast {
+      display: flex;
+      align-items: center;
+      gap: 0.35rem;
+      padding: 0.35rem 0.6rem;
+      background: #222;
+      border: 1px solid var(--accent, #666);
+      border-radius: 20px;
+      font-size: 0.75rem;
+      color: #ccc;
+    }
+    .popup-gast span:first-child {
+      font-size: 1rem;
+    }
+    
+    .talkshow-thema {
+      padding: 1rem;
+      border-bottom: 1px solid #333;
+    }
+    .thema-header {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-bottom: 0.6rem;
+    }
+    .thema-nummer {
+      padding: 0.2rem 0.5rem;
+      background: #E53935;
+      border-radius: 10px;
+      font-size: 0.7rem;
+      font-weight: 600;
+      color: #fff;
+    }
+    .thema-name {
+      color: #E53935;
+      font-weight: 600;
+      font-size: 0.9rem;
+    }
+    .thema-frage {
+      background: rgba(229,57,53,0.08);
+      border-radius: 8px;
+      padding: 0.6rem 0.75rem;
+      color: #ddd;
+      font-size: 0.9rem;
+      font-style: italic;
+      margin-bottom: 0.75rem;
+    }
+    
+    .thema-statements {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+    .statement {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.5rem;
+      padding: 0.5rem 0.6rem;
+      background: #222;
+      border-left: 3px solid var(--accent, #666);
+      border-radius: 6px;
+    }
+    .statement-icon {
+      font-size: 1.1rem;
+      flex-shrink: 0;
+    }
+    .statement-text {
+      flex: 1;
+    }
+    .statement-name {
+      color: #aaa;
+      font-size: 0.75rem;
+      font-weight: 600;
+    }
+    .statement-text {
+      color: #ccc;
+      font-size: 0.8rem;
+      line-height: 1.4;
+    }
+    
+    .talkshow-harmonie {
+      padding: 2rem;
+      text-align: center;
+      color: #888;
+    }
+    
+    .talkshow-abschluss {
+      padding: 1rem;
+      background: rgba(76,175,80,0.05);
+      border-bottom: 1px solid #333;
+    }
+    .abschluss-header {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-bottom: 0.6rem;
+    }
+    .abschluss-header span {
+      font-size: 1.25rem;
+    }
+    .abschluss-header h4 {
+      color: #4CAF50;
+      font-size: 0.9rem;
+      margin: 0;
+    }
+    .abschluss-gemeinsamkeiten {
+      margin-bottom: 0.75rem;
+    }
+    .gem-intro {
+      color: #4CAF50;
+      font-size: 0.8rem;
+      margin-bottom: 0.4rem;
+    }
+    .gem-tag {
+      display: inline-block;
+      padding: 0.25rem 0.5rem;
+      background: rgba(76,175,80,0.15);
+      border-radius: 12px;
+      font-size: 0.75rem;
+      color: #aaa;
+      margin: 0.15rem;
+    }
+    .abschluss-frage {
+      background: rgba(76,175,80,0.1);
+      border-radius: 8px;
+      padding: 0.6rem 0.75rem;
+      color: #ccc;
+      font-size: 0.85rem;
+      font-style: italic;
+      margin-bottom: 0.6rem;
+    }
+    .abschluss-note {
+      color: #888;
+      font-size: 0.8rem;
+    }
+    
+    .talkshow-einschalten {
+      padding: 1rem;
+      background: rgba(76,175,80,0.08);
+      border-bottom: 1px solid #333;
+    }
+    .einschalten-header {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      margin-bottom: 0.6rem;
+    }
+    .einschalten-header span {
+      font-size: 1.5rem;
+    }
+    .einschalten-header strong {
+      display: block;
+      color: #fff;
+      font-size: 0.9rem;
+    }
+    .einschalten-header p {
+      color: #888;
+      font-size: 0.75rem;
+      margin: 0;
+    }
+    .einschalten-mail-btn {
+      display: inline-block;
+      padding: 0.5rem 1rem;
+      background: #4CAF50;
+      border-radius: 20px;
+      color: #fff;
+      font-size: 0.85rem;
+      text-decoration: none;
+      transition: all 0.2s;
+    }
+    .einschalten-mail-btn:hover {
+      background: #66BB6A;
+      transform: scale(1.03);
+    }
+    
+    .talkshow-popup-footer {
+      padding: 0.75rem 1rem;
+      background: rgba(156,39,176,0.1);
+      text-align: center;
+    }
+    .talkshow-popup-footer span {
+      color: #9C27B0;
+      font-size: 0.8rem;
+    }
+    
+    /* ═══════════════════════════════════════════════════════════════
+       WG-DEBATTE POPUP
+       ═══════════════════════════════════════════════════════════════ */
+    .wg-debatte-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.85);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 10000;
+      animation: fadeIn 0.2s ease;
+      padding: 1rem;
+    }
+    .wg-debatte-popup {
+      background: #1a1a1a;
+      border: 1px solid #333;
+      border-radius: 16px;
+      max-width: 500px;
+      width: 100%;
+      max-height: 90vh;
+      overflow-y: auto;
+      position: relative;
+    }
+    .wg-debatte-close {
+      position: absolute;
+      top: 0.75rem;
+      right: 0.75rem;
+      background: none;
+      border: none;
+      color: #666;
+      font-size: 1.5rem;
+      cursor: pointer;
+      z-index: 1;
+    }
+    .wg-debatte-close:hover { color: #fff; }
+    
+    .wg-debatte-header {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      padding: 1.25rem;
+      background: linear-gradient(135deg, rgba(156,39,176,0.15), rgba(103,58,183,0.05));
+      border-bottom: 1px solid #333;
+    }
+    .wg-debatte-icon {
+      font-size: 2rem;
+    }
+    .wg-debatte-header h3 {
+      color: #fff;
+      font-size: 1.1rem;
+      margin: 0 0 0.2rem 0;
+    }
+    .wg-debatte-header p {
+      color: #888;
+      font-size: 0.8rem;
+      margin: 0;
+    }
+    
+    .wg-debatte-bewohner {
+      display: flex;
+      justify-content: center;
+      gap: 0.5rem;
+      padding: 1rem;
+      border-bottom: 1px solid #333;
+      flex-wrap: wrap;
+    }
+    .debatte-person {
+      display: flex;
+      align-items: center;
+      gap: 0.35rem;
+      padding: 0.35rem 0.6rem;
+      background: #222;
+      border: 1px solid var(--accent, #666);
+      border-radius: 20px;
+      font-size: 0.75rem;
+      color: #ccc;
+    }
+    .debatte-person span:first-child {
+      font-size: 1rem;
+    }
+    
+    .wg-debatte-spannungen {
+      padding: 1rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+    
+    .spannung-karte {
+      background: #222;
+      border: 1px solid #333;
+      border-left: 3px solid #E53935;
+      border-radius: 8px;
+      padding: 0.75rem;
+    }
+    .spannung-header {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-bottom: 0.5rem;
+    }
+    .spannung-nummer {
+      width: 22px;
+      height: 22px;
+      background: #E53935;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.7rem;
+      font-weight: 600;
+      color: #fff;
+    }
+    .spannung-name {
+      color: #E53935;
+      font-weight: 600;
+      font-size: 0.85rem;
+    }
+    
+    .spannung-kontrahenten {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      margin-bottom: 0.6rem;
+      flex-wrap: wrap;
+    }
+    .spannung-kontrahenten .kontrahent {
+      display: flex;
+      align-items: center;
+      gap: 0.3rem;
+      padding: 0.25rem 0.5rem;
+      background: rgba(255,255,255,0.05);
+      border: 1px solid var(--accent, #666);
+      border-radius: 12px;
+      font-size: 0.7rem;
+      color: #ccc;
+    }
+    .spannung-kontrahenten .vs {
+      color: #666;
+      font-size: 0.8rem;
+    }
+    
+    .spannung-frage {
+      background: rgba(229,57,53,0.08);
+      border-radius: 6px;
+      padding: 0.6rem 0.75rem;
+      color: #ddd;
+      font-size: 0.85rem;
+      font-style: italic;
+      line-height: 1.4;
+    }
+    
+    .keine-spannungen {
+      text-align: center;
+      padding: 1.5rem;
+      color: #888;
+    }
+    .keine-spannungen p:first-child {
+      font-size: 1.1rem;
+      margin-bottom: 0.5rem;
+    }
+    
+    .wg-debatte-footer {
+      padding: 0.75rem 1rem;
+      background: rgba(156,39,176,0.1);
+      border-top: 1px solid #333;
+      text-align: center;
+    }
+    .wg-debatte-footer span {
+      color: #9C27B0;
+      font-size: 0.8rem;
+    }
+    
+    /* Sections im Debatte-Popup */
+    .wg-debatte-section {
+      border-bottom: 1px solid #333;
+    }
+    .wg-debatte-section:last-of-type {
+      border-bottom: none;
+    }
+    
+    .section-header {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      padding: 0.75rem 1rem;
+      background: rgba(255,255,255,0.03);
+    }
+    .section-header.debatte {
+      background: linear-gradient(135deg, rgba(229,57,53,0.1), transparent);
+    }
+    .section-header.gemeinsam {
+      background: linear-gradient(135deg, rgba(76,175,80,0.1), transparent);
+    }
+    .section-icon {
+      font-size: 1.25rem;
+    }
+    .section-header h4 {
+      color: #fff;
+      font-size: 0.9rem;
+      margin: 0;
+    }
+    .section-header p {
+      color: #888;
+      font-size: 0.75rem;
+      margin: 0;
+    }
+    
+    .wg-debatte-spannungen {
+      padding: 0.75rem 1rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+    }
+    
+    /* Gemeinsamer Raum */
+    .gemeinsamer-raum {
+      padding: 0.75rem 1rem;
+    }
+    
+    .gemeinsamkeiten {
+      margin-bottom: 0.75rem;
+    }
+    .gemeinsamkeiten-intro {
+      color: #4CAF50;
+      font-size: 0.8rem;
+      font-weight: 600;
+      margin-bottom: 0.4rem;
+    }
+    .gemeinsamkeit {
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.3rem 0;
+      color: #aaa;
+      font-size: 0.8rem;
+    }
+    .gem-icon {
+      color: #4CAF50;
+      font-size: 0.7rem;
+    }
+    
+    .dialog-fragen {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      margin-bottom: 0.75rem;
+    }
+    .dialog-frage {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.5rem;
+      padding: 0.6rem 0.75rem;
+      background: rgba(76,175,80,0.08);
+      border: 1px solid rgba(76,175,80,0.2);
+      border-radius: 8px;
+    }
+    .dialog-icon {
+      font-size: 1rem;
+      flex-shrink: 0;
+    }
+    .dialog-frage span:last-child {
+      color: #ccc;
+      font-size: 0.85rem;
+      font-style: italic;
+      line-height: 1.4;
+    }
+    
+    .solidaritaet-note {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.5rem;
+      padding: 0.6rem 0.75rem;
+      background: linear-gradient(135deg, rgba(76,175,80,0.15), rgba(76,175,80,0.05));
+      border-radius: 8px;
+      border-left: 3px solid #4CAF50;
+    }
+    .solidaritaet-note span {
+      font-size: 1rem;
+    }
+    .solidaritaet-note p {
+      color: #aaa;
+      font-size: 0.8rem;
+      margin: 0;
+      line-height: 1.4;
     }
     
     /* Ökosystem-Container */
@@ -2255,31 +3837,171 @@
       flex-direction: column;
       padding: 2rem;
       overflow-y: auto;
+      background: linear-gradient(180deg, var(--bg-primary) 0%, #0d1117 100%);
     }
+    
+    .stammbaum-header {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+    
+    .stammbaum-header h2 {
+      font-size: 1.8rem;
+      font-weight: 300;
+      color: #4CAF50;
+      margin-bottom: 0.5rem;
+    }
+    
+    .stammbaum-header p {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+    }
+    
+    .stammbaum-timeline {
+      position: relative;
+      max-width: 900px;
+      margin: 0 auto;
+      padding-left: 60px;
+    }
+    
+    /* Vertikale Linie */
+    .stammbaum-timeline::before {
+      content: '';
+      position: absolute;
+      left: 25px;
+      top: 0;
+      bottom: 0;
+      width: 3px;
+      background: linear-gradient(to bottom, #4CAF50, #2196F3, #9C27B0, #E53935);
+      border-radius: 3px;
+    }
+    
+    .stammbaum-epoche {
+      position: relative;
+      margin-bottom: 2.5rem;
+    }
+    
+    /* Zeitmarker */
+    .stammbaum-epoche::before {
+      content: '';
+      position: absolute;
+      left: -47px;
+      top: 8px;
+      width: 16px;
+      height: 16px;
+      background: var(--bg-primary);
+      border: 3px solid #4CAF50;
+      border-radius: 50%;
+      z-index: 1;
+    }
+    
+    .stammbaum-epoche:nth-child(2)::before { border-color: #66BB6A; }
+    .stammbaum-epoche:nth-child(3)::before { border-color: #42A5F5; }
+    .stammbaum-epoche:nth-child(4)::before { border-color: #7E57C2; }
+    .stammbaum-epoche:nth-child(5)::before { border-color: #FF7043; }
+    .stammbaum-epoche:nth-child(6)::before { border-color: #EC407A; }
+    
+    .stammbaum-zeit {
+      font-size: 0.8rem;
+      color: #4CAF50;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 0.75rem;
+    }
+    
+    .stammbaum-epoche:nth-child(2) .stammbaum-zeit { color: #66BB6A; }
+    .stammbaum-epoche:nth-child(3) .stammbaum-zeit { color: #42A5F5; }
+    .stammbaum-epoche:nth-child(4) .stammbaum-zeit { color: #7E57C2; }
+    .stammbaum-epoche:nth-child(5) .stammbaum-zeit { color: #FF7043; }
+    .stammbaum-epoche:nth-child(6) .stammbaum-zeit { color: #EC407A; }
+    
     .stammbaum-generation {
       display: flex;
-      justify-content: center;
-      gap: 1rem;
-      margin-bottom: 2rem;
+      gap: 0.75rem;
       flex-wrap: wrap;
     }
+    
     .stammbaum-knoten {
-      background: #252525;
-      border: 1px solid #444;
-      border-radius: 8px;
+      background: var(--bg-secondary);
+      border: 1px solid var(--border);
+      border-radius: 12px;
       padding: 0.75rem 1rem;
       text-align: center;
       cursor: pointer;
-      min-width: 120px;
+      min-width: 110px;
+      transition: all 0.2s;
+      position: relative;
     }
-    .stammbaum-knoten:hover { border-color: #E53935; }
-    .stammbaum-knoten .name { font-weight: 500; }
-    .stammbaum-knoten .zeit { font-size: 0.75rem; color: #666; }
-    .stammbaum-linie {
-      width: 2px;
-      height: 30px;
-      background: #444;
-      margin: 0 auto;
+    
+    .stammbaum-knoten:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+      border-color: #4CAF50;
+    }
+    
+    .stammbaum-knoten.clickable {
+      border-left: 3px solid #4CAF50;
+    }
+    
+    .stammbaum-knoten.clickable::after {
+      content: '→';
+      position: absolute;
+      right: 8px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: #4CAF50;
+      opacity: 0;
+      transition: opacity 0.2s;
+    }
+    
+    .stammbaum-knoten.clickable:hover::after {
+      opacity: 1;
+    }
+    
+    .stammbaum-knoten .name {
+      font-weight: 600;
+      color: var(--text-primary);
+      font-size: 0.9rem;
+      margin-bottom: 0.2rem;
+    }
+    
+    .stammbaum-knoten .zeit {
+      font-size: 0.7rem;
+      color: var(--text-muted);
+    }
+    
+    .stammbaum-knoten .einfluss-tags {
+      display: flex;
+      gap: 0.25rem;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 0.5rem;
+    }
+    
+    .stammbaum-knoten .einfluss-tag {
+      font-size: 0.6rem;
+      padding: 0.15rem 0.4rem;
+      background: rgba(76, 175, 80, 0.15);
+      color: #4CAF50;
+      border-radius: 8px;
+    }
+    
+    .stammbaum-footer {
+      margin-top: 2rem;
+      padding: 1rem;
+      background: var(--bg-secondary);
+      border-radius: 8px;
+      color: var(--text-muted);
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center;
+      font-size: 0.85rem;
+    }
+    
+    .stammbaum-footer strong {
+      color: #4CAF50;
     }
     
     /* Dialoge-Container */
@@ -2361,46 +4083,285 @@
       display: none;
       flex: 1;
       flex-direction: column;
-      padding: 2rem;
+      padding: 1.5rem;
       overflow-y: auto;
+      background: linear-gradient(180deg, var(--bg-primary) 0%, #0d0d12 100%);
     }
+    
+    /* Generator-Header - kompakt */
+    .konfig-generator-header {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      padding: 1rem 1.25rem;
+      background: linear-gradient(135deg, rgba(198,40,40,0.15) 0%, rgba(156,39,176,0.1) 100%);
+      border: 1px solid rgba(198,40,40,0.3);
+      border-radius: 10px;
+      margin-bottom: 1rem;
+    }
+    .konfig-generator-icon {
+      font-size: 2rem;
+    }
+    .konfig-generator-header h2 {
+      color: #fff;
+      font-size: 1.2rem;
+      font-weight: 600;
+      margin-bottom: 0.15rem;
+    }
+    .konfig-generator-header .archetyp-name {
+      color: #C62828;
+      font-size: 1rem;
+      font-weight: 600;
+    }
+    .konfig-generator-header .konfig-subtitle {
+      color: var(--text-muted);
+      font-size: 0.8rem;
+    }
+    
+    /* Normaler Header - kompakt */
+    .konfig-header {
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+    .konfig-header h2 {
+      color: #9C27B0;
+      font-size: 1.4rem;
+      margin-bottom: 0.25rem;
+    }
+    .konfig-header p {
+      color: var(--text-muted);
+      font-size: 0.85rem;
+    }
+    .konfig-hint {
+      margin-top: 0.5rem;
+      padding: 0.5rem;
+      background: rgba(156,39,176,0.1);
+      border-radius: 6px;
+      font-size: 0.8rem;
+      display: inline-block;
+    }
+    
+    /* Haupt-Layout: Zwei Spalten */
+    .konfig-main {
+      display: grid;
+      grid-template-columns: 1fr 320px;
+      gap: 1.5rem;
+      align-items: start;
+    }
+    
+    @media (max-width: 1000px) {
+      .konfig-main {
+        grid-template-columns: 1fr;
+      }
+    }
+    
+    /* Linke Spalte: Achsen-Grid */
+    .konfig-achsen {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 0.5rem;
+    }
+    .konfig-achsen-header {
+      grid-column: 1 / -1;
+      color: var(--text-muted);
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 0.25rem;
+    }
+    
+    /* Einzelne Achsen-Box */
     .konfig-achse {
-      margin-bottom: 2rem;
-      max-width: 800px;
-      margin-left: auto;
-      margin-right: auto;
+      background: var(--bg-secondary);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 0.5rem;
+      transition: all 0.2s;
     }
-    .konfig-achse h3 {
-      color: #aaa;
-      font-size: 0.9rem;
-      margin-bottom: 0.75rem;
+    .konfig-achse.has-value {
+      border-left: 3px solid #C62828;
     }
+    .konfig-achse-header {
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      margin-bottom: 0.4rem;
+    }
+    .konfig-achse-id {
+      background: var(--bg-tertiary);
+      padding: 0.1rem 0.3rem;
+      border-radius: 3px;
+      font-size: 0.65rem;
+      font-weight: 600;
+      color: var(--text-muted);
+    }
+    .konfig-achse-name {
+      font-size: 0.75rem;
+      color: var(--text-primary);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    
+    /* Slider kompakt */
     .konfig-slider {
       display: flex;
-      gap: 0.5rem;
+      gap: 2px;
     }
     .konfig-option {
       flex: 1;
-      background: #252525;
-      border: 1px solid #333;
-      padding: 0.5rem;
+      background: var(--bg-tertiary);
+      border: 1px solid var(--border);
+      padding: 0.3rem 0.15rem;
       text-align: center;
       cursor: pointer;
-      font-size: 0.8rem;
-      border-radius: 4px;
+      font-size: 0.7rem;
+      color: var(--text-muted);
+      border-radius: 3px;
+      transition: all 0.15s;
+    }
+    .konfig-option:hover { 
+      border-color: #666;
+      color: var(--text-primary);
+    }
+    .konfig-option.selected { 
+      background: #C62828; 
+      border-color: #C62828; 
+      color: #fff;
+      font-weight: 600;
+    }
+    .konfig-pole-labels {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 0.2rem;
+      font-size: 0.6rem;
+      color: var(--text-muted);
+    }
+    
+    /* Rechte Spalte: Nachbarn */
+    .konfig-sidebar {
+      position: sticky;
+      top: 1rem;
+    }
+    
+    .konfig-nachbarn {
+      background: var(--bg-secondary);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 1rem;
+    }
+    .konfig-nachbarn h3 {
+      color: var(--text-primary);
+      font-size: 0.9rem;
+      margin-bottom: 0.75rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .nachbarn-gruppe {
+      margin-bottom: 0.75rem;
+    }
+    .nachbarn-label {
+      font-size: 0.7rem;
+      color: var(--text-muted);
+      margin-bottom: 0.3rem;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+    }
+    .nachbarn-liste {
+      display: flex;
+      flex-direction: column;
+      gap: 0.3rem;
+    }
+    .nachbar-card {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.4rem 0.6rem;
+      background: var(--bg-tertiary);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      cursor: pointer;
       transition: all 0.2s;
     }
-    .konfig-option:hover { border-color: #666; }
-    .konfig-option.selected { background: #E53935; border-color: #E53935; color: #fff; }
+    .nachbar-card:hover {
+      transform: translateX(3px);
+      border-color: #666;
+    }
+    .nachbar-card.exakt {
+      border-color: #C62828;
+      background: rgba(198,40,40,0.15);
+    }
+    .nachbar-card.exakt:hover {
+      border-color: #E53935;
+    }
+    .nachbar-name {
+      color: var(--text-primary);
+      font-size: 0.8rem;
+    }
+    .nachbar-id, .nachbar-match {
+      font-size: 0.7rem;
+      font-weight: 600;
+    }
+    .nachbar-id { color: #C62828; }
+    .nachbar-match { color: #4CAF50; }
+    
+    /* Actions kompakt */
+    .konfig-actions {
+      display: flex;
+      gap: 0.5rem;
+      margin-top: 1rem;
+    }
+    .konfig-btn {
+      flex: 1;
+      padding: 0.5rem 0.75rem;
+      background: var(--bg-tertiary);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      color: var(--text-secondary);
+      font-size: 0.75rem;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .konfig-btn:hover {
+      border-color: #666;
+    }
+    .konfig-btn.primary {
+      background: #C62828;
+      border-color: #C62828;
+      color: #fff;
+    }
+    .konfig-btn.primary:hover {
+      background: #E53935;
+    }
+    
+    /* Ergebnis-Bereich (manueller Modus) */
     .konfig-result {
-      background: #1a1a1a;
-      border: 1px solid #333;
-      border-radius: 8px;
-      padding: 2rem;
-      margin-top: 2rem;
-      max-width: 800px;
-      margin-left: auto;
-      margin-right: auto;
+      background: var(--bg-secondary);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 1rem;
+    }
+    .konfig-result h3 {
+      font-size: 0.9rem;
+      margin-bottom: 0.75rem;
+    }
+    
+    /* Hinweis wenn noch nicht genug gewählt */
+    .konfig-hint-box {
+      text-align: center;
+      padding: 1.5rem;
+      color: var(--text-muted);
+      font-size: 0.85rem;
+    }
+    .konfig-hint-box .count {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #9C27B0;
+      display: block;
+      margin-bottom: 0.25rem;
     }
     
     /* Fieber-Container */
@@ -2595,7 +4556,7 @@
     <div class="palette-section">
       <span class="palette-section-label">Ansicht</span>
       <div class="linse-wrapper">
-        <div class="linse ansicht active" data-typ="ansicht" data-id="netzwerk" onclick="setAnsicht('netzwerk')" title="Netzwerk">
+        <div class="linse ansicht" data-typ="ansicht" data-id="netzwerk" onclick="setAnsicht('netzwerk')" title="Netzwerk">
           🕸️
           <span class="linse-label">Netzwerk</span>
         </div>
@@ -2677,7 +4638,7 @@
     <div class="palette-section">
       <span class="palette-section-label">Werkzeuge</span>
       <div class="linse-wrapper">
-        <div class="linse werkzeug" data-typ="werkzeug" data-id="zufall" onclick="openWerkzeug('zufall')" title="Zufall">
+        <div class="linse werkzeug" data-typ="werkzeug" data-id="zufall" onclick="zeigeZufall()" title="Zufall">
           🎲
           <span class="linse-label">Zufall</span>
         </div>
@@ -2701,7 +4662,7 @@
         </div>
       </div>
       <div class="linse-wrapper">
-        <div class="linse werkzeug" data-typ="werkzeug" data-id="wesen" onclick="openWerkzeug('wesen')" title="Das Wesen">
+        <div class="linse werkzeug active" data-typ="werkzeug" data-id="wesen" onclick="openWerkzeug('wesen')" title="Das Wesen">
           🫀
           <span class="linse-label">Das Wesen</span>
         </div>
@@ -2856,20 +4817,63 @@
   
   <main>
     <!-- WESEN: Animierter Einstieg -->
-    <div id="wesen-container" style="display: none;">
+    <div id="wesen-container">
       <canvas id="wesen-canvas"></canvas>
     </div>
     
     <div id="netzwerk-container">
       <canvas id="netzwerk3d"></canvas>
       <div class="legende">
-        <div class="legende-item"><div class="legende-linie gruen"></div> Hohe Affinität</div>
-        <div class="legende-item"><div class="legende-linie orange" style="border-style: dashed;"></div> Debatte/Konflikt</div>
-        <div class="legende-item"><div class="legende-linie grau"></div> Verbindung</div>
+        <div class="legende-section">
+          <div class="legende-section-titel">🔵 Kugel-Farben = Themenbereich</div>
+          <div class="legende-item"><div class="legende-kugel" style="background: #E53935;"></div> A: Strategie & Subjekt</div>
+          <div class="legende-item"><div class="legende-kugel" style="background: #4CAF50;"></div> B: Ökonomie & Arbeit</div>
+          <div class="legende-item"><div class="legende-kugel" style="background: #2196F3;"></div> C: Gesellschaft & Welt</div>
+          <div class="legende-item"><div class="legende-kugel" style="background: #9C27B0;"></div> D: Visionen & Utopie</div>
+          <div class="legende-item"><div class="legende-kugel" style="background: #FF9800;"></div> E: Praxis & Mittel</div>
+        </div>
+        
+        <div class="legende-section">
+          <div class="legende-section-titel">➖ Linien = Verbindungen</div>
+          <div class="legende-item"><div class="legende-linie gruen"></div> Hohe Affinität</div>
+          <div class="legende-item"><div class="legende-linie orange" style="border-style: dashed;"></div> Debatte/Konflikt</div>
+          <div class="legende-item"><div class="legende-linie grau"></div> Verbindung</div>
+        </div>
+        
+        <!-- Fieber-Legende (dynamisch) -->
+        <div class="legende-filter" id="legende-fieber">
+          <div class="legende-filter-titel">🌡️ Fieber = Aktualität</div>
+          <div class="legende-fieber-gradient">
+            <div class="fieber-gradient-bar"></div>
+          </div>
+          <div class="fieber-labels">
+            <span>kalt</span>
+            <span>heiß</span>
+          </div>
+          <div style="font-size: 0.65rem; color: #888; margin-top: 0.3rem;">
+            Größe = Relevanz in aktuellen Debatten
+          </div>
+        </div>
+        
+        <!-- Konflikte-Legende (dynamisch) -->
+        <div class="legende-filter" id="legende-konflikte">
+          <div class="legende-filter-titel">⚔️ Konflikte</div>
+          <div class="legende-item">
+            <div class="legende-linie orange" style="border-style: dashed;"></div>
+            <span>Historische Debatte</span>
+          </div>
+          <div class="legende-item">
+            <div class="legende-linie orange" style="opacity: 0.5;"></div>
+            <span>Spannung/Widerspruch</span>
+          </div>
+          <div style="font-size: 0.65rem; color: #888; margin-top: 0.3rem;">
+            Klick auf Linie für Details
+          </div>
+        </div>
+        
         <div style="margin-top: 0.75rem; padding-top: 0.5rem; border-top: 1px solid #444; font-size: 0.65rem;">
           🖱️ Drag = Drehen<br>
-          Scroll = Zoom<br>
-          🎯 Knoten → Knoten = Verbinden
+          Scroll = Zoom
         </div>
       </div>
     </div>
@@ -2948,6 +4952,48 @@
       <div id="detail-content"></div>
     </div>
   </main>
+  
+  <!-- Globale Filter-Info (erscheint bei aktivem Filter in jeder Ansicht) -->
+  <div class="filter-info-global" id="filter-info-global">
+    <div class="filter-info-item" id="filter-info-fieber" style="display: none;">
+      <div class="legende-filter-titel">🌡️ Fieber = Aktualität</div>
+      <div class="legende-fieber-gradient">
+        <div class="fieber-gradient-bar"></div>
+      </div>
+      <div class="fieber-labels">
+        <span>kalt</span>
+        <span>heiß</span>
+      </div>
+      <div style="font-size: 0.65rem; color: #888; margin-top: 0.3rem;">
+        Größe = Relevanz in aktuellen Debatten
+      </div>
+    </div>
+    
+    <div class="filter-info-item" id="filter-info-konflikte" style="display: none;">
+      <div class="legende-filter-titel">⚔️ Konflikte</div>
+      <div class="legende-item">
+        <div class="legende-linie orange" style="border-style: dashed;"></div>
+        <span>Historische Debatte</span>
+      </div>
+      <div style="font-size: 0.65rem; color: #888; margin-top: 0.3rem;">
+        Orange = umstrittene Verbindung
+      </div>
+    </div>
+    
+    <div class="filter-info-item" id="filter-info-epoche" style="display: none;">
+      <div class="legende-filter-titel">🌀 Epoche</div>
+      <div style="font-size: 0.65rem; color: #888;">
+        Nur Positionen bis zum gewählten Jahr
+      </div>
+    </div>
+    
+    <div class="filter-info-item" id="filter-info-personen" style="display: none;">
+      <div class="legende-filter-titel">👤 Personen</div>
+      <div style="font-size: 0.65rem; color: #888;">
+        Zeigt verknüpfte Denker*innen
+      </div>
+    </div>
+  </div>
 
   <script src="https://d3js.org/d3.v7.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
@@ -2958,9 +5004,6 @@ window.onerror = function(msg, url, line, col, error) {
   console.error('Fehler:', msg, 'Zeile:', line);
   return false;
 };
-console.log('=== SCRIPT START ===');
-console.log('D3:', typeof d3 !== 'undefined' ? 'OK' : 'FEHLT');
-console.log('THREE:', typeof THREE !== 'undefined' ? 'OK' : 'FEHLT');
 
 // ══════════════════════════════════════════════════════════════════════
 // DATEN: KNOTEN
@@ -5539,7 +7582,6 @@ function applyFiltersToNetzwerk(filter, epoche) {
   // Knoten aktualisieren
   nodes3d.forEach(node => {
     const sphere = nodeObjects[node.id];
-    const label = nodeObjects[node.id + '_label'];
     if (!sphere) return;
     
     // Epochen-Filter
@@ -5547,21 +7589,16 @@ function applyFiltersToNetzwerk(filter, epoche) {
       const entstehung = getEpocheForPosition(node.id);
       const sichtbar = entstehung <= epoche;
       sphere.visible = sichtbar;
-      if (label) label.visible = sichtbar;
     } else {
       sphere.visible = true;
-      if (label) label.visible = true;
     }
     
-    // Fieber-Filter
+    // Fieber-Filter (Skalierung)
     if (hasFieber && sphere.visible) {
       const temp = temperaturCache[node.id] || 0;
-      sphere.material.color.setHex(getFieberFarbe(temp));
       const scale = 0.8 + (temp / 100) * 0.8;
       sphere.scale.set(scale, scale, scale);
     } else {
-      const achse = knotenData[node.id]?.achse?.charAt(0) || 'A';
-      sphere.material.color.setHex(achsenFarben[achse] || 0xE53935);
       sphere.scale.set(1, 1, 1);
     }
   });
@@ -5863,8 +7900,7 @@ function initNetzwerk() {
     vx: 0, vy: 0, vz: 0
   }));
   
-  console.log('Nodes3d erstellt:', nodes3d.length);
-  
+    
   links3d = verbindungenData.map(v => ({
     source: v.von,
     target: v.zu,
@@ -5873,39 +7909,103 @@ function initNetzwerk() {
     beschreibung: v.beschreibung
   }));
   
-  // Knoten erstellen
-  const nodeGeometry = new THREE.SphereGeometry(12, 16, 16);
+  // Knoten erstellen - mit Textur-Beschriftung auf der Kugel
   const achsenFarben = {
     'A': 0xE53935, 'B': 0x4CAF50, 'C': 0x2196F3, 'D': 0x9C27B0, 'E': 0xFF9800, 'F': 0x00BCD4
   };
   
+  // Funktion: Textur mit Text für Kugel erstellen
+  function createLabeledSphereTexture(name, baseColor) {
+    const canvas = document.createElement('canvas');
+    canvas.width = 512;
+    canvas.height = 256;
+    const ctx = canvas.getContext('2d');
+    
+    // Hintergrund mit Achsen-Farbe
+    const hexColor = '#' + baseColor.toString(16).padStart(6, '0');
+    ctx.fillStyle = hexColor;
+    ctx.fillRect(0, 0, 512, 256);
+    
+    // Leichter Gradient für 3D-Effekt
+    const gradient = ctx.createLinearGradient(0, 0, 0, 256);
+    gradient.addColorStop(0, 'rgba(255,255,255,0.2)');
+    gradient.addColorStop(0.5, 'rgba(255,255,255,0)');
+    gradient.addColorStop(1, 'rgba(0,0,0,0.3)');
+    ctx.fillStyle = gradient;
+    ctx.fillRect(0, 0, 512, 256);
+    
+    // Text umbrechen
+    function wrapText(text, maxWidth) {
+      const words = text.split(' ');
+      const lines = [];
+      let currentLine = '';
+      words.forEach(word => {
+        const testLine = currentLine ? currentLine + ' ' + word : word;
+        if (ctx.measureText(testLine).width > maxWidth && currentLine) {
+          lines.push(currentLine);
+          currentLine = word;
+        } else {
+          currentLine = testLine;
+        }
+      });
+      if (currentLine) lines.push(currentLine);
+      return lines;
+    }
+    
+    // Text-Konfiguration - kleine Schrift
+    const maxWidth = 460;
+    const maxLines = 3;
+    let fontSize = 19;
+    let lines = [];
+    
+    // Schriftgröße anpassen bis es passt
+    while (fontSize >= 10) {
+      ctx.font = `bold ${fontSize}px Arial`;
+      lines = wrapText(name, maxWidth);
+      if (lines.length <= maxLines) break;
+      fontSize -= 2;
+    }
+    
+    // Falls immer noch zu viele Zeilen, kürzen
+    if (lines.length > maxLines) {
+      lines = lines.slice(0, maxLines);
+      lines[maxLines - 1] = lines[maxLines - 1].slice(0, -3) + '…';
+    }
+    
+    // Text zeichnen
+    ctx.font = `bold ${fontSize}px Arial`;
+    ctx.textAlign = 'center';
+    ctx.textBaseline = 'middle';
+    
+    const lineHeight = fontSize * 1.2;
+    const totalHeight = lines.length * lineHeight;
+    const startY = (256 - totalHeight) / 2 + lineHeight / 2;
+    
+    lines.forEach((line, i) => {
+      const y = startY + i * lineHeight;
+      // Schatten
+      ctx.fillStyle = 'rgba(0,0,0,0.5)';
+      ctx.fillText(line, 258, y + 2);
+      // Haupttext
+      ctx.fillStyle = '#ffffff';
+      ctx.fillText(line, 256, y);
+    });
+    
+    return new THREE.CanvasTexture(canvas);
+  }
+  
   nodes3d.forEach(node => {
     const farbe = achsenFarben[node.achse[0]] || 0xffffff;
-    const material = new THREE.MeshBasicMaterial({ color: farbe });
+    
+    // Kugel mit Textur-Label
+    const texture = createLabeledSphereTexture(node.name, farbe);
+    const material = new THREE.MeshBasicMaterial({ map: texture });
+    const nodeGeometry = new THREE.SphereGeometry(12, 32, 32);
     const sphere = new THREE.Mesh(nodeGeometry, material);
     sphere.position.set(node.x, node.y, node.z);
     sphere.userData = { id: node.id, name: node.name };
     scene.add(sphere);
     nodeObjects[node.id] = sphere;
-    
-    // Label
-    const labelCanvas = document.createElement('canvas');
-    labelCanvas.width = 256;
-    labelCanvas.height = 64;
-    const ctx = labelCanvas.getContext('2d');
-    ctx.fillStyle = '#ffffff';
-    ctx.font = '24px Arial';
-    ctx.textAlign = 'center';
-    const displayName = node.name.length > 14 ? node.name.substring(0, 12) + '…' : node.name;
-    ctx.fillText(displayName, 128, 40);
-    
-    const labelTexture = new THREE.CanvasTexture(labelCanvas);
-    const labelMaterial = new THREE.SpriteMaterial({ map: labelTexture, transparent: true });
-    const label = new THREE.Sprite(labelMaterial);
-    label.scale.set(80, 20, 1);
-    label.position.set(node.x, node.y + 20, node.z);
-    scene.add(label);
-    nodeObjects[node.id + '_label'] = label;
   });
   
   // Verbindungen erstellen
@@ -6065,9 +8165,7 @@ function initNetzwerk() {
     
     nodes3d.forEach(node => {
       const sphere = nodeObjects[node.id];
-      const label = nodeObjects[node.id + '_label'];
       if (sphere) sphere.position.set(node.x, node.y, node.z);
-      if (label) label.position.set(node.x, node.y + 20, node.z);
     });
     
     linkObjects.forEach(line => {
@@ -6090,8 +8188,7 @@ function initNetzwerk() {
   const loadingEl = document.getElementById('netzwerk-loading');
   if (loadingEl) loadingEl.style.display = 'none';
   
-  console.log('Netzwerk init abgeschlossen');
-  
+    
   window.addEventListener('resize', () => {
     let w = container.clientWidth || container.offsetWidth;
     let h = container.clientHeight || container.offsetHeight;
@@ -6261,7 +8358,48 @@ function showReaktion(idA, idB) {
 }
 
 function initListe() {
+  const container = document.getElementById('liste-container');
   const grid = document.getElementById('liste-grid');
+  
+  // Header hinzufügen
+  const header = document.createElement('div');
+  header.className = 'liste-header';
+  header.innerHTML = `
+    <h2>📋 Alle Positionen</h2>
+    <p>${Object.keys(knotenData).length} Strömungen und Konzepte des linken Denkens</p>
+  `;
+  container.insertBefore(header, grid);
+  
+  // Filter-Bar hinzufügen
+  const filterBar = document.createElement('div');
+  filterBar.className = 'liste-filter-bar';
+  filterBar.innerHTML = `
+    <button class="liste-filter-btn active" data-filter="alle">Alle</button>
+    <button class="liste-filter-btn" data-filter="A">A: Staat</button>
+    <button class="liste-filter-btn" data-filter="B">B: Wirtschaft</button>
+    <button class="liste-filter-btn" data-filter="C">C: Gesellschaft</button>
+    <button class="liste-filter-btn" data-filter="D">D: Strategie</button>
+    <button class="liste-filter-btn" data-filter="E">E: Theorie</button>
+    <button class="liste-filter-btn" data-filter="F">F: Ökologie</button>
+  `;
+  container.insertBefore(filterBar, grid);
+  
+  // Filter-Buttons aktivieren
+  filterBar.querySelectorAll('.liste-filter-btn').forEach(btn => {
+    btn.onclick = () => {
+      filterBar.querySelectorAll('.liste-filter-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      filterListeByAchse(btn.dataset.filter);
+    };
+  });
+  
+  // Verbindungen zählen
+  const verbindungCount = {};
+  verbindungenData.forEach(v => {
+    verbindungCount[v.von] = (verbindungCount[v.von] || 0) + 1;
+    verbindungCount[v.zu] = (verbindungCount[v.zu] || 0) + 1;
+  });
+  
   const sortedNodes = Object.values(knotenData).sort((a, b) => {
     if (a.achse < b.achse) return -1;
     if (a.achse > b.achse) return 1;
@@ -6271,13 +8409,32 @@ function initListe() {
   sortedNodes.forEach(k => {
     const div = document.createElement('div');
     div.className = 'liste-item';
+    div.dataset.achse = k.achse;
+    const verbindungen = verbindungCount[k.id] || 0;
     div.innerHTML = `
-      <div class="achse">${k.achse}-${k.position}</div>
-      <div class="name">${k.name}</div>
-      <p class="beschreibung">${k.beschreibung?.substring(0, 100) || ''}...</p>
+      <div class="item-header">
+        <div class="name">${k.name}</div>
+        <span class="achse-badge">${k.achse}-${k.position}</span>
+      </div>
+      <p class="beschreibung">${k.beschreibung?.substring(0, 120) || ''}${k.beschreibung?.length > 120 ? '…' : ''}</p>
+      <div class="item-footer">
+        <span class="verbindungen">🔗 ${verbindungen} Verbindungen</span>
+        <span>→ Details</span>
+      </div>
     `;
     div.onclick = () => showKnoten(k.id);
     grid.appendChild(div);
+  });
+}
+
+function filterListeByAchse(filter) {
+  const items = document.querySelectorAll('.liste-item');
+  items.forEach(item => {
+    if (filter === 'alle' || item.dataset.achse.startsWith(filter)) {
+      item.style.display = 'block';
+    } else {
+      item.style.display = 'none';
+    }
   });
 }
 
@@ -6340,7 +8497,29 @@ function showKnoten(id) {
 
 // Person suchen und alle ihre Positionen zeigen
 function searchPerson(name) {
-  // Finde alle Knoten wo diese Person vorkommt
+  // Erst in personenData suchen (reichhaltige Daten)
+  const cleanName = name.replace(/\s*\(\d{4}.*?\)\s*/g, '').replace(/\s*\(\*\d{4}\)\s*/g, '').trim().toLowerCase();
+  
+  // Mehrere Matching-Strategien
+  const personInDb = personenData.find(p => {
+    const pName = p.name.toLowerCase();
+    // Exakter Match
+    if (pName === cleanName) return true;
+    // Enthält (für Teilnamen)
+    if (pName.includes(cleanName) || cleanName.includes(pName)) return true;
+    // Nachname-Match (letztes Wort)
+    const nachname = cleanName.split(' ').pop();
+    if (nachname.length > 3 && pName.includes(nachname)) return true;
+    return false;
+  });
+  
+  if (personInDb) {
+    // Person gefunden in personenData -> zeige reichhaltige Ansicht
+    showPerson(personInDb.id);
+    return;
+  }
+  
+  // Fallback: Finde alle Knoten wo diese Person vorkommt
   const gefunden = [];
   Object.values(knotenData).forEach(k => {
     const alleNamen = [
@@ -6504,48 +8683,75 @@ function initKarte() {
   const container = document.getElementById('karte-container');
   
   const achsen = [
-    { id: 'A1', name: 'Reform/Revolution' },
-    { id: 'A2', name: 'Subjekt' },
-    { id: 'A3', name: 'Staat' },
-    { id: 'B1', name: 'Markt/Plan' },
-    { id: 'B2', name: 'Besitz' },
-    { id: 'B3', name: 'Arbeit' },
-    { id: 'C1', name: 'Feminismus' },
-    { id: 'C2', name: 'Natur' },
-    { id: 'C3', name: 'International' },
-    { id: 'D1', name: 'Utopie' },
-    { id: 'D2', name: 'Transformation' },
-    { id: 'D3', name: 'Spiritualität' },
-    { id: 'E1', name: 'Bündnisse' },
-    { id: 'E2', name: 'Ebenen' },
-    { id: 'E3', name: 'Bildung' },
-    { id: 'F1', name: 'Technologie' },
-    { id: 'F2', name: 'Demokratieform' },
-    { id: 'F3', name: 'Gewalt/Mittel' }
+    { id: 'A1', name: 'Reform vs. Revolution', kategorie: 'A' },
+    { id: 'A2', name: 'Revolutionäres Subjekt', kategorie: 'A' },
+    { id: 'A3', name: 'Rolle des Staates', kategorie: 'A' },
+    { id: 'B1', name: 'Markt vs. Plan', kategorie: 'B' },
+    { id: 'B2', name: 'Eigentumsformen', kategorie: 'B' },
+    { id: 'B3', name: 'Zukunft der Arbeit', kategorie: 'B' },
+    { id: 'C1', name: 'Feminismus', kategorie: 'C' },
+    { id: 'C2', name: 'Mensch & Natur', kategorie: 'C' },
+    { id: 'C3', name: 'Internationalismus', kategorie: 'C' },
+    { id: 'D1', name: 'Utopie & Pragmatismus', kategorie: 'D' },
+    { id: 'D2', name: 'Transformationswege', kategorie: 'D' },
+    { id: 'D3', name: 'Spiritualität', kategorie: 'D' },
+    { id: 'E1', name: 'Bündnispolitik', kategorie: 'E' },
+    { id: 'E2', name: 'Politische Ebenen', kategorie: 'E' },
+    { id: 'E3', name: 'Bildung & Kultur', kategorie: 'E' },
+    { id: 'F1', name: 'Technologie', kategorie: 'F' },
+    { id: 'F2', name: 'Demokratieformen', kategorie: 'F' },
+    { id: 'F3', name: 'Mittel & Gewalt', kategorie: 'F' }
   ];
   
-  let html = '<div class="karte-wrapper">';
-  html += '<div class="karte-header">← gemäßigt | radikal →</div>';
+  const kategorieNamen = {
+    'A': 'Staat & Transformation',
+    'B': 'Wirtschaft',
+    'C': 'Gesellschaft',
+    'D': 'Strategie',
+    'E': 'Organisation',
+    'F': 'Praxis'
+  };
+  
+  let html = `
+    <div class="karte-header">
+      <h2>🗺️ Politische Landkarte</h2>
+      <p>90 Positionen auf 18 Achsen — von gemäßigt bis radikal</p>
+    </div>
+    
+    <div class="karte-legende">
+      <span>← gemäßigt</span>
+      <span>1 — 2 — 3 — 4 — 5</span>
+      <span>radikal →</span>
+    </div>
+    
+    <div class="karte-wrapper">
+  `;
   
   achsen.forEach(achse => {
-    html += `<div class="karte-grid" style="margin-bottom: 1rem;">`;
-    html += `<div class="karte-achse-label" style="grid-column: 1 / -1;">${achse.id}: ${achse.name}</div>`;
+    html += `<div class="karte-achse-group" data-achse="${achse.id}">`;
+    html += `<div class="karte-achse-header">
+      <span class="karte-achse-code">${achse.id}</span>
+      <span class="karte-achse-name">${achse.name}</span>
+    </div>`;
+    
+    html += `<div class="karte-grid">`;
     
     for (let pos = 1; pos <= 5; pos++) {
       const id = `${achse.id}-${pos}`;
       const knoten = knotenData[id];
       if (knoten) {
-        html += `<div class="karte-cell" onclick="showKnoten('${id}')">
+        html += `<div class="karte-cell filled" onclick="showKnoten('${id}')">
           <div class="name">${knoten.name}</div>
-          <div class="id">${id}</div>
+          <div class="position">${pos}</div>
         </div>`;
       } else {
-        html += `<div class="karte-cell" style="opacity: 0.3;">
-          <div class="id">${id}</div>
+        html += `<div class="karte-cell empty">
+          <div class="position">${pos}</div>
         </div>`;
       }
     }
-    html += '</div>';
+    
+    html += '</div></div>';
   });
   
   html += '</div>';
@@ -6618,18 +8824,54 @@ function initZeitleiste() {
     return true;
   });
   
-  let html = '<div class="zeitleiste-wrapper">';
-  html += '<h2 style="color: #E53935; margin-bottom: 1.5rem;">Geschichte des linken Denkens</h2>';
+  const icons = { praxis: '✊', text: '📖', geburt: '👤' };
+  const typLabels = { praxis: 'Praxis', text: 'Werk', geburt: 'Person' };
   
-  unique.slice(0, 50).forEach(e => {
-    const icon = e.typ === 'praxis' ? '✊' : e.typ === 'text' ? '📖' : '👤';
+  let html = `
+    <div class="zeitleiste-header">
+      <h2>⏳ Geschichte des linken Denkens</h2>
+      <p>${unique.length} Ereignisse von ${unique[0]?.jahr || '?'} bis ${unique[unique.length-1]?.jahr || '?'}</p>
+    </div>
+    
+    <div class="zeitleiste-filter">
+      <button class="zeitleiste-filter-btn active" data-filter="alle">Alle</button>
+      <button class="zeitleiste-filter-btn" data-filter="praxis">✊ Praxis</button>
+      <button class="zeitleiste-filter-btn" data-filter="text">📖 Werke</button>
+      <button class="zeitleiste-filter-btn" data-filter="geburt">👤 Personen</button>
+    </div>
+    
+    <div class="zeitleiste-wrapper">
+  `;
+  
+  let lastEpoche = '';
+  
+  unique.slice(0, 60).forEach(e => {
+    // Epochen-Marker einfügen
+    let epoche = '';
+    if (e.jahr < 1800) epoche = 'Aufklärung';
+    else if (e.jahr < 1850) epoche = 'Frühsozialismus';
+    else if (e.jahr < 1890) epoche = 'Klassiker';
+    else if (e.jahr < 1920) epoche = 'Zweite Internationale';
+    else if (e.jahr < 1945) epoche = 'Revolutionszeit';
+    else if (e.jahr < 1990) epoche = 'Nachkriegslinke';
+    else epoche = 'Gegenwart';
+    
+    if (epoche !== lastEpoche) {
+      html += `<div class="zeitleiste-epoche"><span class="zeitleiste-epoche-label">${epoche}</span></div>`;
+      lastEpoche = epoche;
+    }
+    
     html += `
-      <div class="zeitleiste-item" onclick="showKnoten('${e.kontext}')" style="cursor: pointer;">
+      <div class="zeitleiste-item" data-typ="${e.typ}" onclick="showKnoten('${e.kontext}')">
         <div class="zeitleiste-jahr">${e.jahr}</div>
-        <div class="zeitleiste-content">
-          <h3>${icon} ${e.titel}</h3>
+        <div class="zeitleiste-card">
+          <div class="zeitleiste-card-header">
+            <span class="zeitleiste-icon">${icons[e.typ]}</span>
+            <h3>${e.titel}</h3>
+          </div>
           <p>${e.beschreibung}</p>
-          ${e.ort ? `<p style="color: #666;">${e.ort}</p>` : ''}
+          ${e.ort ? `<p class="ort">📍 ${e.ort}</p>` : ''}
+          <span class="tag ${e.typ}">${typLabels[e.typ]}</span>
         </div>
       </div>
     `;
@@ -6637,6 +8879,22 @@ function initZeitleiste() {
   
   html += '</div>';
   container.innerHTML = html;
+  
+  // Filter-Buttons aktivieren
+  container.querySelectorAll('.zeitleiste-filter-btn').forEach(btn => {
+    btn.onclick = () => {
+      container.querySelectorAll('.zeitleiste-filter-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      const filter = btn.dataset.filter;
+      container.querySelectorAll('.zeitleiste-item').forEach(item => {
+        if (filter === 'alle' || item.dataset.typ === filter) {
+          item.style.display = 'block';
+        } else {
+          item.style.display = 'none';
+        }
+      });
+    };
+  });
 }
 
 // ══════════════════════════════════════════════════════════════════════
@@ -7004,77 +9262,936 @@ function updateKosmos() {
 function initWG() {
   const container = document.getElementById('wg-container');
   
-  // Stockwerke und Zimmer definieren
-  const stockwerke = [
+  // ═══════════════════════════════════════════════════════════════
+  // DIE 15 ARCHETYPEN (vom Generator) mit Ideal-Werten
+  // ═══════════════════════════════════════════════════════════════
+  
+  window.archetypen = {
+    marxismus_leninismus: { 
+      name: "Orthodoxer Marxismus-Leninismus", 
+      icon: "☭", 
+      slogan: "Alle Macht den Räten!", 
+      farbe: "#B71C1C",
+      ideal: {A1:4, A2:2, A3:2, B1:5, B2:2, B3:2, C1:2, C2:2, C3:4, D1:2, D2:2, D3:1, E1:2, E2:2, E3:1}
+    },
+    libertaerer_sozialismus: { 
+      name: "Libertärer Sozialismus", 
+      icon: "Ⓐ", 
+      slogan: "Keine Götter, keine Herren!", 
+      farbe: "#212121",
+      ideal: {A1:4, A2:4, A3:5, B1:3, B2:5, B3:4, C1:4, C2:4, C3:4, D1:3, D2:5, D3:3, E1:5, E2:5, E3:5}
+    },
+    raetekommunismus: { 
+      name: "Rätekommunismus", 
+      icon: "⚙️", 
+      slogan: "Die Befreiung ist das Werk der Arbeiter selbst!", 
+      farbe: "#C62828",
+      ideal: {A1:5, A2:2, A3:5, B1:4, B2:5, B3:3, C1:2, C2:3, C3:5, D1:2, D2:4, D3:1, E1:2, E2:3, E3:5}
+    },
+    oekosozialismus: { 
+      name: "Ökosozialismus", 
+      icon: "🌍", 
+      slogan: "System Change, Not Climate Change!", 
+      farbe: "#2E7D32",
+      ideal: {A1:4, A2:4, A3:3, B1:4, B2:4, B3:5, C1:4, C2:5, C3:5, D1:4, D2:3, D3:3, E1:4, E2:5, E3:4}
+    },
+    feministischer_sozialismus: { 
+      name: "Feministischer Sozialismus", 
+      icon: "♀", 
+      slogan: "Das Private ist politisch!", 
+      farbe: "#7B1FA2",
+      ideal: {A1:3, A2:5, A3:3, B1:3, B2:4, B3:5, C1:5, C2:4, C3:4, D1:4, D2:4, D3:3, E1:5, E2:4, E3:5}
+    },
+    demokratischer_sozialismus: { 
+      name: "Demokratischer Sozialismus", 
+      icon: "🌹", 
+      slogan: "Sozialismus ist radikale Demokratie!", 
+      farbe: "#E91E63",
+      ideal: {A1:2, A2:3, A3:2, B1:2, B2:3, B3:3, C1:3, C2:3, C3:3, D1:3, D2:2, D3:2, E1:4, E2:2, E3:2}
+    },
+    postkapitalismus: { 
+      name: "Postkapitalistischer Akzelerationismus", 
+      icon: "🚀", 
+      slogan: "Fully Automated Luxury Communism!", 
+      farbe: "#00BCD4",
+      ideal: {A1:3, A2:4, A3:3, B1:4, B2:4, B3:5, C1:4, C2:3, C3:5, D1:5, D2:4, D3:3, E1:4, E2:5, E3:4}
+    },
+    buen_vivir: { 
+      name: "Buen Vivir – Das gute Leben", 
+      icon: "🌺", 
+      slogan: "Leben in Fülle, nicht in Überfluss!", 
+      farbe: "#FF9800",
+      ideal: {A1:3, A2:5, A3:4, B1:3, B2:5, B3:5, C1:5, C2:5, C3:4, D1:5, D2:4, D3:5, E1:5, E2:5, E3:5}
+    },
+    autonomismus: { 
+      name: "Autonomer Marxismus", 
+      icon: "🏴", 
+      slogan: "Unsere Stärke ist unsere Vielheit!", 
+      farbe: "#424242",
+      ideal: {A1:4, A2:5, A3:4, B1:3, B2:5, B3:4, C1:5, C2:4, C3:5, D1:4, D2:5, D3:3, E1:5, E2:5, E3:5}
+    },
+    municipalismus: { 
+      name: "Libertärer Munizipalismus", 
+      icon: "🏛️", 
+      slogan: "Die Stadt gehört allen!", 
+      farbe: "#5C6BC0",
+      ideal: {A1:3, A2:4, A3:4, B1:3, B2:5, B3:4, C1:4, C2:5, C3:3, D1:4, D2:3, D3:3, E1:4, E2:5, E3:4}
+    },
+    trotzkismus: { 
+      name: "Trotzkismus", 
+      icon: "🔥", 
+      slogan: "Permanente Revolution!", 
+      farbe: "#D32F2F",
+      ideal: {A1:5, A2:2, A3:2, B1:5, B2:3, B3:2, C1:2, C2:2, C3:5, D1:3, D2:5, D3:1, E1:3, E2:2, E3:2}
+    },
+    commons_bewegung: { 
+      name: "Commons-Bewegung", 
+      icon: "🤲", 
+      slogan: "Gemeingüter statt Privateigentum!", 
+      farbe: "#43A047",
+      ideal: {A1:3, A2:4, A3:4, B1:3, B2:5, B3:4, C1:4, C2:5, C3:4, D1:4, D2:3, D3:3, E1:5, E2:5, E3:5}
+    },
+    eurokommunismus: { 
+      name: "Eurokommunismus", 
+      icon: "🇪🇺", 
+      slogan: "Sozialismus in Freiheit!", 
+      farbe: "#1565C0",
+      ideal: {A1:3, A2:3, A3:2, B1:4, B2:3, B3:3, C1:3, C2:3, C3:4, D1:3, D2:2, D3:2, E1:4, E2:3, E3:3}
+    },
+    reformsozialismus: { 
+      name: "Reformsozialismus", 
+      icon: "📈", 
+      slogan: "Schritt für Schritt zum Sozialismus!", 
+      farbe: "#F06292",
+      ideal: {A1:1, A2:3, A3:1, B1:2, B2:2, B3:3, C1:3, C2:3, C3:2, D1:2, D2:1, D3:2, E1:3, E2:1, E3:2}
+    },
+    syndikalismus: { 
+      name: "Syndikalismus", 
+      icon: "✊", 
+      slogan: "Direkte Aktion!", 
+      farbe: "#D84315",
+      ideal: {A1:4, A2:2, A3:5, B1:3, B2:5, B3:3, C1:2, C2:3, C3:4, D1:3, D2:4, D3:1, E1:3, E2:5, E3:4}
+    }
+  };
+  
+  // ═══════════════════════════════════════════════════════════════
+  // SPANNUNGSFELDER: Welche Achsen erzeugen interessante Debatten?
+  // ═══════════════════════════════════════════════════════════════
+  
+  window.spannungsFelder = {
+    A1: {
+      name: "Reform vs. Revolution",
+      fragen: [
+        "Kann man den Kapitalismus von innen überwinden, oder braucht es einen Bruch?",
+        "Sind Wahlen ein Weg zur Transformation oder eine Sackgasse?",
+        "Wie viel Kompromiss verträgt radikale Politik?"
+      ]
+    },
+    A2: {
+      name: "Wer ist das revolutionäre Subjekt?",
+      fragen: [
+        "Ist die Arbeiterklasse noch der Motor der Veränderung?",
+        "Können verschiedene Kämpfe vereint werden, ohne ihre Eigenheit zu verlieren?",
+        "Wer spricht für wen – und wer sollte schweigen?"
+      ]
+    },
+    A3: {
+      name: "Staat: Werkzeug oder Feind?",
+      fragen: [
+        "Kann der Staat ein Instrument der Befreiung sein?",
+        "Wie verhindert man, dass Revolution in neue Herrschaft umschlägt?",
+        "Brauchen wir Institutionen oder Autonomie?"
+      ]
+    },
+    B1: {
+      name: "Markt oder Plan?",
+      fragen: [
+        "Wer entscheidet, was produziert wird – und wie?",
+        "Kann demokratische Planung funktionieren ohne Bürokratie?",
+        "Gibt es einen Sozialismus mit Markt?"
+      ]
+    },
+    B2: {
+      name: "Eigentum neu denken",
+      fragen: [
+        "Was gehört allen – und wie verwalten wir es?",
+        "Staatseigentum oder Commons: Was ist sozialistischer?",
+        "Kann Eigentum überhaupt abgeschafft werden?"
+      ]
+    },
+    B3: {
+      name: "Zukunft der Arbeit",
+      fragen: [
+        "Weniger arbeiten oder besser arbeiten?",
+        "Ist eine Welt ohne Lohnarbeit möglich?",
+        "Wer macht die Drecksarbeit in der Utopie?"
+      ]
+    },
+    C1: {
+      name: "Feminismus & Klasse",
+      fragen: [
+        "Ist Patriarchat ein Nebenwiderspruch?",
+        "Können Männer Feministen sein – und was bedeutet das?",
+        "Was kommt zuerst: Klassenkampf oder Geschlechterkampf?"
+      ]
+    },
+    C2: {
+      name: "Ökologie & Sozialismus",
+      fragen: [
+        "Kann es grünes Wachstum geben – oder brauchen wir Degrowth?",
+        "Wie verteilen wir die Kosten der ökologischen Transformation gerecht?",
+        "Haben Tiere und Natur eigene Rechte?"
+      ]
+    },
+    C3: {
+      name: "Internationalismus",
+      fragen: [
+        "Sozialismus in einem Land – oder weltweit oder gar nicht?",
+        "Wie solidarisch können wir sein ohne Grenzen aufzulösen?",
+        "Was schulden wir dem Globalen Süden?"
+      ]
+    },
+    D1: {
+      name: "Utopie: Ja oder Nein?",
+      fragen: [
+        "Brauchen wir ein Bild vom Ziel – oder ist das gefährlich?",
+        "Wie konkret darf Utopie sein?",
+        "Ist der Weg das Ziel – oder gibt es ein Ankommen?"
+      ]
+    },
+    D2: {
+      name: "Transformation: Wie radikal?",
+      fragen: [
+        "Kann man die Welt langsam ändern – oder braucht es einen Bruch?",
+        "Sind Reformen Etappen oder Ablenkung?",
+        "Wie viel Gewalt verträgt die Revolution?"
+      ]
+    },
+    D3: {
+      name: "Spiritualität & Politik",
+      fragen: [
+        "Hat Sozialismus eine spirituelle Dimension?",
+        "Können religiöse Menschen gute Sozialist*innen sein?",
+        "Braucht Widerstand innere Transformation?"
+      ]
+    },
+    E1: {
+      name: "Bündnispolitik",
+      fragen: [
+        "Mit wem können wir Bündnisse eingehen – und mit wem nicht?",
+        "Verwässern breite Bündnisse unsere Ziele?",
+        "Wie umgehen mit Liberalen, die sich links fühlen?"
+      ]
+    },
+    E2: {
+      name: "Politische Ebenen",
+      fragen: [
+        "Lokal handeln oder zentral organisieren?",
+        "Kann man Kommune und Weltrevolution zusammendenken?",
+        "Wer koordiniert den Widerstand?"
+      ]
+    },
+    E3: {
+      name: "Bildung & Bewusstsein",
+      fragen: [
+        "Kann man Menschen zum Sozialismus erziehen?",
+        "Theorie oder Praxis: Was kommt zuerst?",
+        "Wie lernen wir aus vergangenen Fehlern?"
+      ]
+    },
+    E4: {
+      name: "Mittel & Gewalt",
+      fragen: [
+        "Heiligt der Zweck die Mittel?",
+        "Ist Gewalt gegen Sachen auch Gewalt?",
+        "Wie radikal darf Widerstand sein?"
+      ]
+    }
+  };
+  
+  // WG-Namen für zufällige Zuweisung
+  window.wgNamen = [
+    { name: "Rote Flora", icon: "🌺" },
+    { name: "Barrikade", icon: "🚧" },
+    { name: "Treibhaus", icon: "🌱" },
+    { name: "Salon Rosa", icon: "🌹" },
+    { name: "Freiraum", icon: "🏴" },
+    { name: "Kollektiv", icon: "⚙️" },
+    { name: "Utopia", icon: "✨" },
+    { name: "Commune", icon: "🤝" }
+  ];
+  
+  // ═══════════════════════════════════════════════════════════════
+  // HAUS-STRUKTUR (für Funktional-Modus)
+  // ═══════════════════════════════════════════════════════════════
+  
+  window.hausStruktur = [
     {
-      name: "🏔️ DACHGESCHOSS — Visionen & Träume",
-      beschreibung: "Hier wird geträumt, meditiert, in die Ferne geschaut",
+      name: "Dachgeschoss",
+      icon: "🏔️",
+      untertitel: "Visionen & Träume",
+      beschreibung: "Hier wird geträumt, in die Ferne geschaut, das Unmögliche gedacht.",
       zimmer: [
-        { achse: "D1", name: "Utopie-Zimmer", atmosphaere: "Bücher bis zur Decke, Fenster nach Nirgendwo" },
-        { achse: "D2", name: "Transformations-Labor", atmosphaere: "Baupläne, Modelle, halb fertige Prototypen" },
-        { achse: "D3", name: "Meditationsraum", atmosphaere: "Still, Kerzen, ein leises Summen" }
+        { achse: "D1", name: "Utopie-Zimmer", beschreibung: "Wie soll die Welt aussehen?", einbringen: "Entwickle konkrete Zukunftsbilder und teile sie mit anderen." },
+        { achse: "D2", name: "Transformations-Labor", beschreibung: "Wie kommen wir dahin?", einbringen: "Experimentiere mit neuen Wegen des Wandels." },
+        { achse: "D3", name: "Sinn-Raum", beschreibung: "Was trägt uns?", einbringen: "Erkunde die spirituellen und emotionalen Dimensionen." }
       ]
     },
     {
-      name: "🏛️ ERSTER STOCK — Strategie & Subjekt",
-      beschreibung: "Hier wird geplant, debattiert, organisiert",
+      name: "Erster Stock",
+      icon: "🏛️",
+      untertitel: "Strategie & Subjekt",
+      beschreibung: "Hier wird geplant, debattiert, organisiert.",
       zimmer: [
-        { achse: "A1", name: "Taktik-Büro", atmosphaere: "Whiteboards, Zeitpläne, kalter Kaffee" },
-        { achse: "A2", name: "Subjekt-Werkstatt", atmosphaere: "Wer sind wir? Poster, Spiegel, Fragezeichen" },
-        { achse: "A3", name: "Staatstheorie-Bibliothek", atmosphaere: "Schwere Regale, Staub, verbotene Bücher" }
+        { achse: "A1", name: "Taktik-Büro", beschreibung: "Reform oder Revolution?", einbringen: "Diskutiere Strategien und entwickle Aktionspläne." },
+        { achse: "A2", name: "Subjekt-Werkstatt", beschreibung: "Wer macht die Veränderung?", einbringen: "Vernetze verschiedene Gruppen und Bewegungen." },
+        { achse: "A3", name: "Staatstheorie-Bibliothek", beschreibung: "Was tun mit dem Staat?", einbringen: "Analysiere Machtstrukturen und entwickle Alternativen." },
+        { achse: "A4", name: "Orga-Zentrale", beschreibung: "Wie organisieren wir uns?", einbringen: "Baue demokratische Strukturen auf und verbessere sie." }
       ]
     },
     {
-      name: "🏭 ERDGESCHOSS — Ökonomie & Arbeit",
-      beschreibung: "Hier wird produziert, verteilt, gestritten",
+      name: "Erdgeschoss",
+      icon: "🏭",
+      untertitel: "Ökonomie & Arbeit",
+      beschreibung: "Hier wird produziert, verteilt, gestritten ums Materielle.",
       zimmer: [
-        { achse: "B1", name: "Plan-Küche", atmosphaere: "Große Tische, Listen, wer kocht heute?" },
-        { achse: "B2", name: "Eigentums-Kammer", atmosphaere: "Schlüssel, Verträge, gemeinsame Kassen" },
-        { achse: "B3", name: "Arbeits-Werkstatt", atmosphaere: "Maschinen, Werkzeuge, Pausengong" }
+        { achse: "B1", name: "Plan-Küche", beschreibung: "Markt oder Plan?", einbringen: "Entwickle konkrete Wirtschaftsmodelle und teste sie." },
+        { achse: "B2", name: "Eigentums-Kammer", beschreibung: "Wem gehört was?", einbringen: "Erforsche und erprobe neue Eigentumsformen." },
+        { achse: "B3", name: "Arbeits-Werkstatt", beschreibung: "Wie wollen wir arbeiten?", einbringen: "Kämpfe für bessere Arbeitsbedingungen oder weniger Arbeit." }
       ]
     },
     {
-      name: "🌍 SOUTERRAIN — Gesellschaft & Welt",
-      beschreibung: "Hier werden die Fundamente gelegt",
+      name: "Souterrain",
+      icon: "🌍",
+      untertitel: "Gesellschaft & Welt",
+      beschreibung: "Hier werden die Fundamente gelegt, die Verbindungen geknüpft.",
       zimmer: [
-        { achse: "C1", name: "Feminismus-Salon", atmosphaere: "Violette Vorhänge, intensive Gespräche" },
-        { achse: "C2", name: "Natur-Gewächshaus", atmosphaere: "Pflanzen, Erde, das Summen von Bienen" },
-        { achse: "C3", name: "Internationalismus-Karte", atmosphaere: "Weltkarten, Fähnchen, Zeitzonen" }
+        { achse: "C1", name: "Feminismus-Salon", beschreibung: "Geschlecht und Klasse?", einbringen: "Verbinde verschiedene Kämpfe und Perspektiven." },
+        { achse: "C2", name: "Natur-Gewächshaus", beschreibung: "Mensch und Natur?", einbringen: "Entwickle ökosozialistische Praxis." },
+        { achse: "C3", name: "Internationalismus-Karte", beschreibung: "Lokal oder global?", einbringen: "Knüpfe internationale Verbindungen." }
       ]
     },
     {
-      name: "🔧 KELLER — Organisation & Praxis",
-      beschreibung: "Hier wird konkret, hier passiert es",
+      name: "Keller",
+      icon: "🔧",
+      untertitel: "Praxis & Mittel",
+      beschreibung: "Hier wird es konkret. Hier passiert es.",
       zimmer: [
-        { achse: "E1", name: "Bündnis-Schmiede", atmosphaere: "Viele Stühle, ein runder Tisch" },
-        { achse: "E2", name: "Ebenen-Zentrale", atmosphaere: "Organigramme, Funkgeräte, Kaffee" },
-        { achse: "E3", name: "Bildungs-Keller", atmosphaere: "Kreide, Tafeln, Stapel von Flyern" }
+        { achse: "E1", name: "Bündnis-Schmiede", beschreibung: "Mit wem zusammen?", einbringen: "Baue Brücken zwischen Bewegungen und Gruppen." },
+        { achse: "E2", name: "Ebenen-Zentrale", beschreibung: "Auf welcher Ebene kämpfen?", einbringen: "Koordiniere lokale, regionale und nationale Arbeit." },
+        { achse: "E3", name: "Bildungs-Keller", beschreibung: "Wie lernen wir?", einbringen: "Organisiere Workshops, Lesekreise, Bildungsarbeit." },
+        { achse: "E4", name: "Aktions-Kammer", beschreibung: "Welche Mittel?", einbringen: "Plane und führe Aktionen durch." }
       ]
     }
   ];
   
-  let html = '<h2 style="color: #E53935; margin-bottom: 0.5rem;">🏠 Die WG des linken Denkens</h2>';
-  html += '<p style="color: #888; margin-bottom: 2rem;">Das Haus als bewohnter Raum. Jedes Stockwerk eine Dimension, jedes Zimmer eine Achse, jede Position ein Bewohner.</p>';
+  // Achsen-Metadaten
+  window.achsenMeta = {
+    A1: { pole: ["Reform", "Strukturref.", "Doppelstrat.", "Hegemonie", "Revolution"] },
+    A2: { pole: ["Arbeiter", "Lohnabh.", "Multitude", "Intersekt.", "Alles Leben"] },
+    A3: { pole: ["Erobern", "Umbauen", "Terrain", "Ignorieren", "Abschaffen"] },
+    A4: { pole: ["Zentralist.", "Partei", "Bewegung", "Netzwerk", "Basisdem."] },
+    B1: { pole: ["Markt", "Reguliert", "Mischung", "Dem.Plan", "Vollplanung"] },
+    B2: { pole: ["Staatsbesitz", "Öffentlich", "Gemischt", "Genossen.", "Commons"] },
+    B3: { pole: ["Vollbesch.", "Gute Arbeit", "Reduktion", "BGE", "Post-Work"] },
+    C1: { pole: ["Klasse erst", "Sozial.", "Dual", "Intersekt.", "Radikal"] },
+    C2: { pole: ["Produktiv.", "Grün", "Nachhaltig", "Ökosoz.", "Naturrechte"] },
+    C3: { pole: ["National", "Solidarität", "Kooperation", "Global", "No Border"] },
+    D1: { pole: ["Anti", "Negativ", "Prozess", "Real-Utop.", "Konkret"] },
+    D2: { pole: ["Graduell", "Interstit.", "Symbiotisch", "Rupturell", "Revolution"] },
+    D3: { pole: ["Säkular", "Offen", "Ökumenisch", "Spirituell", "Mystisch"] },
+    E1: { pole: ["Klassenlinie", "Kern", "Breite", "Bewegungen", "Alle"] },
+    E2: { pole: ["Zentral", "Föderal", "Mehrebenen", "Kommunal", "Basisdem."] },
+    E3: { pole: ["Aufklärung", "Theorie", "Praxis", "Erfahrung", "Präfigur."] },
+    E4: { pole: ["Strikt legal", "Zivil", "Aktionen", "Militant", "Alle Mittel"] }
+  };
   
-  stockwerke.forEach(stock => {
-    html += `<div class="wg-stockwerk">${stock.name}<br><span style="font-size: 0.75rem; color: #666;">${stock.beschreibung}</span></div>`;
-    html += '<div class="wg-haus">';
-    
-    stock.zimmer.forEach(zimmer => {
-      const achsenKnoten = Object.values(knotenData).filter(k => k.achse === zimmer.achse);
-      const bewohner = achsenKnoten.map(k => k.name).join(', ');
-      
-      html += `<div class="wg-zimmer" onclick="showKnoten('${achsenKnoten[2]?.id || achsenKnoten[0]?.id}')">
-        <h3>${zimmer.name}</h3>
-        <div class="bewohner">${bewohner}</div>
-        <div class="atmosphaere">"${zimmer.atmosphaere}"</div>
-      </div>`;
-    });
-    
-    html += '</div>';
-  });
+  // Initial rendern
+  renderHaus('funktional');
+}
+
+// ═══════════════════════════════════════════════════════════════
+// HAUPT-RENDER: Zwei Modi
+// ═══════════════════════════════════════════════════════════════
+
+function renderHaus(modus) {
+  const container = document.getElementById('wg-container');
+  const profil = generatorProfil || konfigAuswahl || {};
+  const archetyp = generatorArchetyp || null;
+  
+  let html = '';
+  
+  // Header mit 2 Tabs
+  html += `
+    <div class="haus-header">
+      <h2>🏠 Das Haus des linken Denkens</h2>
+      <div class="haus-tabs">
+        <button class="haus-tab ${modus === 'funktional' ? 'active' : ''}" onclick="renderHaus('funktional')">🏠 Funktional</button>
+        <button class="haus-tab ${modus === 'wg' ? 'active' : ''}" onclick="renderHaus('wg')">📺 Talkshow</button>
+      </div>
+    </div>
+  `;
+  
+  // Inhalt je nach Modus
+  if (modus === 'funktional') {
+    html += renderFunktionalModus(profil);
+  } else {
+    html += renderWGModus(archetyp);
+  }
   
   container.innerHTML = html;
+}
+
+// ═══════════════════════════════════════════════════════════════
+// FUNKTIONAL-MODUS: Das echte Haus
+// ═══════════════════════════════════════════════════════════════
+
+function renderFunktionalModus(profil) {
+  const hatProfil = Object.keys(profil).length > 0;
+  
+  let html = `
+    <div class="haus-banner funktional">
+      <span class="banner-icon">🏠</span>
+      <div class="banner-text">
+        <strong>Beweg dich frei im Haus und bring dich ein, wo du willst.</strong>
+        <span>${hatProfil ? 'Deine Positionen leuchten rot. Klicke auf ein Zimmer für Details.' : 'Fülle den Konfigurator aus, um deine Positionen zu sehen.'}</span>
+      </div>
+    </div>
+    <div class="haus-gebaeude">
+  `;
+  
+  window.hausStruktur.forEach(etage => {
+    const hatAktive = etage.zimmer.some(z => profil[z.achse] !== undefined);
+    
+    html += `
+      <div class="haus-etage ${hatAktive ? 'aktiv' : ''}">
+        <div class="etage-header">
+          <span class="etage-icon">${etage.icon}</span>
+          <div class="etage-info">
+            <h3>${etage.name}</h3>
+            <span class="etage-untertitel">${etage.untertitel}</span>
+          </div>
+        </div>
+        <div class="etage-zimmer">
+    `;
+    
+    etage.zimmer.forEach(zimmer => {
+      const achse = zimmer.achse;
+      const meinePos = profil[achse];
+      const meta = window.achsenMeta[achse] || { pole: ['1','2','3','4','5'] };
+      
+      html += `
+        <div class="haus-zimmer ${meinePos ? 'meine-position' : ''}" onclick="zeigeZimmerDetail('${achse}')">
+          <div class="zimmer-kopf">
+            <span class="zimmer-achse">${achse}</span>
+            <span class="zimmer-name">${zimmer.name}</span>
+          </div>
+          <div class="zimmer-spektrum">
+            ${[1,2,3,4,5].map(pos => {
+              const knotenId = `${achse}-${pos}`;
+              const istMeins = meinePos === pos;
+              return `
+                <div class="spektrum-pos ${istMeins ? 'meine' : ''}" 
+                     onclick="event.stopPropagation(); showKnoten('${knotenId}')"
+                     title="${meta.pole[pos-1]}">
+                  <span class="pos-zahl">${pos}</span>
+                  ${istMeins ? '<span class="pos-du">●</span>' : ''}
+                </div>
+              `;
+            }).join('')}
+          </div>
+          <div class="zimmer-pole">
+            <span>${meta.pole[0]}</span>
+            <span>${meta.pole[4]}</span>
+          </div>
+        </div>
+      `;
+    });
+    
+    html += `
+        </div>
+      </div>
+    `;
+  });
+  
+  html += `</div>`;
+  return html;
+}
+
+// ═══════════════════════════════════════════════════════════════
+// WG-MODUS: Zufällige WGs mit Archetypen
+// ═══════════════════════════════════════════════════════════════
+
+function renderWGModus(userArchetyp) {
+  const archetypen = window.archetypen;
+  
+  // Alle Archetyp-IDs
+  const alleArchetypen = Object.keys(archetypen);
+  
+  // Mische und wähle 4 Gäste
+  const gemischt = [...alleArchetypen].sort(() => Math.random() - 0.5);
+  const gaeste = gemischt.slice(0, 4);
+  
+  // Falls User-Archetyp dabei ist, entfernen (User ist separater 5. Gast)
+  if (userArchetyp && gaeste.includes(userArchetyp)) {
+    const idx = gaeste.indexOf(userArchetyp);
+    gaeste[idx] = gemischt.find(a => !gaeste.includes(a) && a !== userArchetyp);
+  }
+  
+  // Global speichern
+  window.aktuelleGaeste = gaeste;
+  window.userArchetyp = userArchetyp;
+  
+  // User-Archetyp Info
+  const userArchetypInfo = userArchetyp ? archetypen[userArchetyp] : null;
+  
+  let html = '';
+  
+  // Header
+  html += `
+    <div class="talkshow-header">
+      <div class="talkshow-logo">📺</div>
+      <div class="talkshow-titel">
+        <h2>Talkshow-Generator</h2>
+        <p>Vier Strömungen, eine Debatte, offene Fragen</p>
+      </div>
+      <button class="talkshow-neu-btn" onclick="renderHaus('wg')">🎲 Neue Gäste</button>
+    </div>
+  `;
+  
+  // Gäste-Vorstellung
+  html += `
+    <div class="talkshow-gaeste">
+      <div class="gaeste-label">🎤 Heute zu Gast:</div>
+      <div class="gaeste-reihe">
+        ${gaeste.map(id => {
+          const g = archetypen[id];
+          return `
+            <div class="gast-karte" style="--accent: ${g.farbe}">
+              <div class="gast-icon">${g.icon}</div>
+              <div class="gast-name">${g.name}</div>
+              <div class="gast-slogan">"${g.slogan}"</div>
+            </div>
+          `;
+        }).join('')}
+      </div>
+    </div>
+  `;
+  
+  // User-Einschaltung (Teaser)
+  if (userArchetypInfo) {
+    html += `
+      <div class="talkshow-user">
+        <div class="user-badge" style="--accent: ${userArchetypInfo.farbe}">
+          <span class="user-icon">${userArchetypInfo.icon}</span>
+          <div class="user-info">
+            <span class="user-label">Du als:</span>
+            <span class="user-name">${userArchetypInfo.name}</span>
+          </div>
+        </div>
+        <div class="user-einschalten">
+          <span class="einschalten-teaser">📞 Einschalten?</span>
+          <a href="mailto:info@das-linke-wesen.de?subject=Talkshow-Einschaltung&body=Ich möchte mich als ${encodeURIComponent(userArchetypInfo.name)} in die Talkshow einschalten!" class="einschalten-btn">
+            Schreib uns!
+          </a>
+        </div>
+      </div>
+    `;
+  } else {
+    html += `
+      <div class="talkshow-user kein-archetyp">
+        <span>🎭</span>
+        <p>Mach den <strong>Generator</strong>, um deinen Archetyp zu finden und dich später einzuschalten!</p>
+      </div>
+    `;
+  }
+  
+  // Debatte starten Button
+  html += `
+    <div class="talkshow-start">
+      <button class="debatte-starten-btn" onclick="zeigeTalkshow()">
+        🎬 Debatte starten
+      </button>
+    </div>
+  `;
+  
+  // Zukunfts-Teaser
+  html += `
+    <div class="talkshow-zukunft">
+      <span>🔜</span>
+      <div>
+        <strong>Bald: Social(ist) Media Network</strong>
+        <p>Echte Menschen übernehmen die Rollen. Live-Debatten. Du mittendrin.</p>
+      </div>
+    </div>
+  `;
+  
+  return html;
+}
+
+// ═══════════════════════════════════════════════════════════════
+// ZIMMER-DETAIL Popup
+// ═══════════════════════════════════════════════════════════════
+
+function zeigeZimmerDetail(achse) {
+  const zimmer = window.hausStruktur
+    .flatMap(e => e.zimmer)
+    .find(z => z.achse === achse);
+  
+  if (!zimmer) return;
+  
+  const profil = generatorProfil || konfigAuswahl || {};
+  const meinePos = profil[achse];
+  const meta = window.achsenMeta[achse];
+  
+  let posText = '';
+  if (meinePos) {
+    posText = `<p class="zimmer-meine-pos">Deine Position: <strong>${meinePos}</strong> — ${meta?.pole[meinePos-1] || meinePos}</p>`;
+  }
+  
+  const html = `
+    <div class="zimmer-detail-overlay" onclick="this.remove()">
+      <div class="zimmer-detail-popup" onclick="event.stopPropagation()">
+        <button class="zimmer-detail-close" onclick="this.parentElement.parentElement.remove()">×</button>
+        <h3>${zimmer.achse} — ${zimmer.name}</h3>
+        <p class="zimmer-frage">${zimmer.beschreibung}</p>
+        ${posText}
+        <div class="zimmer-einbringen">
+          <h4>💡 Wie du dich einbringen kannst:</h4>
+          <p>${zimmer.einbringen}</p>
+        </div>
+        <div class="zimmer-future">
+          <span>🔜 Bald: Dieser Raum wird ein Chatraum für gemeinsame Diskussionen.</span>
+        </div>
+      </div>
+    </div>
+  `;
+  
+  document.body.insertAdjacentHTML('beforeend', html);
+}
+
+// Legacy-Funktionen
+function switchWGTyp(typ) { renderHaus(typ); }
+function regenerateChaosWG() { renderHaus('wg'); }
+function renderWGHaus(modus) { renderHaus(modus || 'funktional'); }
+
+// ═══════════════════════════════════════════════════════════════
+// TALKSHOW ANZEIGEN
+// ═══════════════════════════════════════════════════════════════
+
+function zeigeTalkshow() {
+  const gaeste = window.aktuelleGaeste;
+  const userArchetyp = window.userArchetyp;
+  const archetypen = window.archetypen;
+  const spannungsFelder = window.spannungsFelder;
+  
+  if (!gaeste || gaeste.length < 4) return;
+  
+  // Hole Gäste-Daten
+  const gaesteDaten = gaeste.map(id => ({
+    id,
+    ...archetypen[id]
+  }));
+  
+  // Berechne Spannungen
+  const achsen = ['A1', 'A2', 'A3', 'B1', 'B2', 'B3', 'C1', 'C2', 'C3', 'D1', 'D2', 'D3', 'E1', 'E2', 'E3'];
+  const spannungen = [];
+  
+  achsen.forEach(achse => {
+    const werte = gaesteDaten.map(g => g.ideal?.[achse] || 3);
+    const min = Math.min(...werte);
+    const max = Math.max(...werte);
+    const diff = max - min;
+    
+    if (diff >= 2) {
+      const minGast = gaesteDaten.find(g => (g.ideal?.[achse] || 3) === min);
+      const maxGast = gaesteDaten.find(g => (g.ideal?.[achse] || 3) === max);
+      
+      spannungen.push({
+        achse,
+        diff,
+        minGast,
+        maxGast,
+        feld: spannungsFelder[achse]
+      });
+    }
+  });
+  
+  spannungen.sort((a, b) => b.diff - a.diff);
+  const topThemen = spannungen.slice(0, 3);
+  
+  // Finde Gemeinsamkeiten
+  const gemeinsamkeiten = findeGemeinsamkeiten(gaesteDaten, achsen);
+  
+  // User-Info
+  const userInfo = userArchetyp ? archetypen[userArchetyp] : null;
+  
+  // Popup generieren
+  const html = `
+    <div class="talkshow-overlay" onclick="this.remove()">
+      <div class="talkshow-popup" onclick="event.stopPropagation()">
+        <button class="talkshow-close" onclick="this.parentElement.parentElement.remove()">×</button>
+        
+        <div class="talkshow-popup-header">
+          <span class="talkshow-popup-logo">📺</span>
+          <div>
+            <h3>Talkshow-Generator</h3>
+            <p>Vier Perspektiven auf die großen Fragen</p>
+          </div>
+        </div>
+        
+        <div class="talkshow-popup-gaeste">
+          ${gaesteDaten.map(g => `
+            <div class="popup-gast" style="--accent: ${g.farbe}">
+              <span>${g.icon}</span>
+              <span>${g.name.split(' ')[0]}</span>
+            </div>
+          `).join('')}
+        </div>
+        
+        <!-- THEMEN / DEBATTEN -->
+        ${topThemen.length > 0 ? topThemen.map((t, i) => `
+          <div class="talkshow-thema">
+            <div class="thema-header">
+              <span class="thema-nummer">Thema ${i + 1}</span>
+              <span class="thema-name">${t.feld?.name || t.achse}</span>
+            </div>
+            
+            <div class="thema-frage">
+              🎙️ "${t.feld?.fragen[Math.floor(Math.random() * t.feld.fragen.length)] || 'Wie seht ihr das?'}"
+            </div>
+            
+            <div class="thema-statements">
+              ${gaesteDaten.map(g => {
+                const statement = generiereStatement(g, t.achse, t);
+                return `
+                  <div class="statement" style="--accent: ${g.farbe}">
+                    <span class="statement-icon">${g.icon}</span>
+                    <div class="statement-text">
+                      <span class="statement-name">${g.name.split(' ')[0]}:</span>
+                      "${statement}"
+                    </div>
+                  </div>
+                `;
+              }).join('')}
+            </div>
+          </div>
+        `).join('') : `
+          <div class="talkshow-harmonie">
+            <p>🕊️ Diese Runde ist überraschend einig!</p>
+          </div>
+        `}
+        
+        <!-- ABSCHLUSSRUNDE -->
+        <div class="talkshow-abschluss">
+          <div class="abschluss-header">
+            <span>🤝</span>
+            <h4>Abschlussrunde</h4>
+          </div>
+          
+          ${gemeinsamkeiten.length > 0 ? `
+            <div class="abschluss-gemeinsamkeiten">
+              <p class="gem-intro">Was diese Runde verbindet:</p>
+              ${gemeinsamkeiten.map(g => `<span class="gem-tag">✓ ${g}</span>`).join('')}
+            </div>
+          ` : ''}
+          
+          <div class="abschluss-frage">
+            💬 "Wofür würdet ihr trotz aller Differenzen gemeinsam auf die Straße gehen?"
+          </div>
+          
+          <div class="abschluss-note">
+            💚 Linke Einheit heißt nicht Uniformität – sondern solidarisch streiten.
+          </div>
+        </div>
+        
+        <!-- USER EINSCHALTEN -->
+        ${userInfo ? `
+          <div class="talkshow-einschalten">
+            <div class="einschalten-header">
+              <span>${userInfo.icon}</span>
+              <div>
+                <strong>Du als ${userInfo.name}</strong>
+                <p>Was würdest du zu dieser Debatte sagen?</p>
+              </div>
+            </div>
+            <a href="mailto:info@das-linke-wesen.de?subject=Talkshow: Meine Perspektive&body=Ich bin ${encodeURIComponent(userInfo.name)} und möchte folgendes einwerfen:%0A%0A" class="einschalten-mail-btn">
+              ✉️ Schreib uns deine Meinung!
+            </a>
+          </div>
+        ` : ''}
+        
+        <div class="talkshow-popup-footer">
+          <span>🔜 Bald: Live-Debatten mit echten Menschen</span>
+        </div>
+      </div>
+    </div>
+  `;
+  
+  document.body.insertAdjacentHTML('beforeend', html);
+}
+
+// ═══════════════════════════════════════════════════════════════
+// STATEMENT GENERIEREN (ein Satz pro Archetyp + Achse)
+// ═══════════════════════════════════════════════════════════════
+
+function generiereStatement(gast, achse, spannung) {
+  const wert = gast.ideal?.[achse] || 3;
+  
+  // Basis-Statements je nach Achse und Position
+  const statements = {
+    A1: {
+      low: "Wir müssen die Menschen dort abholen, wo sie sind – mit konkreten Verbesserungen.",
+      mid: "Reform und Revolution sind keine Gegensätze, sondern Etappen desselben Weges.",
+      high: "Solange wir im System spielen, reproduzieren wir es – wir brauchen den Bruch."
+    },
+    A2: {
+      low: "Die Arbeiterklasse bleibt das zentrale revolutionäre Subjekt.",
+      mid: "Wir müssen verschiedene Kämpfe verbinden, ohne sie zu hierarchisieren.",
+      high: "Alle Unterdrückten und das Leben selbst – das ist unser Subjekt."
+    },
+    A3: {
+      low: "Den Staat erobern und für unsere Zwecke nutzen – das ist der Weg.",
+      mid: "Der Staat ist ein umkämpftes Terrain, nicht Freund und nicht Feind.",
+      high: "Jede Staatsmacht reproduziert Herrschaft – wir müssen sie auflösen."
+    },
+    B1: {
+      low: "Märkte können sozial reguliert werden – Sozialismus braucht keine Zentralplanung.",
+      mid: "Demokratische Planung und Markt müssen klug kombiniert werden.",
+      high: "Nur demokratische Planung überwindet die Anarchie des Marktes."
+    },
+    B2: {
+      low: "Öffentliches Eigentum unter staatlicher Kontrolle ist die Basis.",
+      mid: "Verschiedene Eigentumsformen haben verschiedene Stärken.",
+      high: "Commons und Gemeineigentum von unten – nicht Staatseigentum."
+    },
+    B3: {
+      low: "Gute Arbeit für alle muss unser Ziel sein.",
+      mid: "Arbeitszeitverkürzung bei vollem Lohnausgleich – jetzt!",
+      high: "Die Befreiung von der Lohnarbeit ist das eigentliche Ziel."
+    },
+    C1: {
+      low: "Der Klassenkampf muss Priorität haben – alles andere folgt.",
+      mid: "Klasse und Geschlecht sind verwoben und müssen zusammen bekämpft werden.",
+      high: "Ohne Sturz des Patriarchats kein Sozialismus – Feminismus ist zentral."
+    },
+    C2: {
+      low: "Erst müssen wir die Produktivkräfte entwickeln, dann können wir ökologisch werden.",
+      mid: "Soziale und ökologische Frage gehören zusammen.",
+      high: "Die Natur hat eigene Rechte – Sozialismus muss ökozentrisch sein."
+    },
+    C3: {
+      low: "Wir müssen erst im eigenen Land stark werden.",
+      mid: "Internationale Solidarität braucht lokale Verankerung.",
+      high: "Sozialismus ist global oder gar nicht – No Borders, No Nations."
+    },
+    D1: {
+      low: "Utopien sind gefährlich – wir wissen nur, was wir nicht wollen.",
+      mid: "Der Weg ist das Ziel, aber wir brauchen eine Richtung.",
+      high: "Konkrete Utopien zeigen, dass eine andere Welt möglich ist."
+    },
+    D2: {
+      low: "Schrittweise Transformation ist realistischer als Revolutionsromantik.",
+      mid: "Wir brauchen Brüche und Kontinuität zugleich.",
+      high: "Nur ein radikaler Bruch kann das System überwinden."
+    },
+    D3: {
+      low: "Religion ist Opium – Sozialismus ist säkular.",
+      mid: "Spiritualität kann persönlich wertvoll sein, aber Politik ist weltlich.",
+      high: "Befreiung hat auch eine spirituelle Dimension."
+    },
+    E1: {
+      low: "Klare Klassenlinie – keine Verwässerung durch liberale Bündnisse.",
+      mid: "Breite Bündnisse, aber mit klarem sozialistischen Kern.",
+      high: "Alle progressiven Kräfte zusammen – Massenlinie!"
+    },
+    E2: {
+      low: "Zentrale Koordination ist für wirksamen Kampf unerlässlich.",
+      mid: "Mehrebenen-Politik: lokal handeln, global denken.",
+      high: "Von unten, dezentral, basisdemokratisch – das ist unsere Stärke."
+    },
+    E3: {
+      low: "Ohne revolutionäre Theorie keine revolutionäre Praxis.",
+      mid: "Theorie und Praxis müssen sich gegenseitig befruchten.",
+      high: "Wir lernen im Kampf, nicht im Seminar – Praxis zuerst."
+    },
+    E4: {
+      low: "Strikt legale Mittel – alles andere schadet der Bewegung.",
+      mid: "Ziviler Ungehorsam hat seinen Platz.",
+      high: "Die Frage der Mittel ist eine taktische, keine moralische."
+    }
+  };
+  
+  const achsenStatements = statements[achse];
+  if (!achsenStatements) return "Das müssen wir gemeinsam diskutieren.";
+  
+  if (wert <= 2) return achsenStatements.low;
+  if (wert >= 4) return achsenStatements.high;
+  return achsenStatements.mid;
+}
+
+// Legacy-Funktion für Kompatibilität
+function zeigeWGDebatte(index) { zeigeTalkshow(); }
+
+// Finde Gemeinsamkeiten zwischen den 4 Archetypen
+function findeGemeinsamkeiten(bewohnerDaten, achsen) {
+  const dominated = [];
+  const achsenMeta = window.achsenMeta;
+  
+  achsen.forEach(achse => {
+    const werte = bewohnerDaten.map(b => b.ideal?.[achse] || 3);
+    const min = Math.min(...werte);
+    const max = Math.max(...werte);
+    const durchschnitt = werte.reduce((a, b) => a + b, 0) / werte.length;
+    
+    // Wenn alle ähnlich (Differenz <= 1), ist das eine Gemeinsamkeit
+    if (max - min <= 1) {
+      const meta = achsenMeta[achse];
+      if (meta) {
+        const posIndex = Math.round(durchschnitt) - 1;
+        const position = meta.pole[posIndex] || '';
+        
+        // Generiere Beschreibung basierend auf Achse und Position
+        const beschreibung = generiereGemeinsamkeitsBeschreibung(achse, durchschnitt);
+        if (beschreibung) {
+          dominated.push(beschreibung);
+        }
+      }
+    }
+  });
+  
+  return dominated.slice(0, 3); // Max 3 Gemeinsamkeiten
+}
+
+function generiereGemeinsamkeitsBeschreibung(achse, wert) {
+  const beschreibungen = {
+    A1: wert >= 4 ? "Ihr seid euch einig: Es braucht grundlegende Veränderung" : 
+        wert <= 2 ? "Ihr bevorzugt alle schrittweise Reformen" : null,
+    A2: wert >= 4 ? "Ihr seht ein breites gesellschaftliches Subjekt" :
+        wert <= 2 ? "Ihr fokussiert auf die Arbeiterklasse" : null,
+    A3: wert >= 4 ? "Ihr seid staatskritisch" :
+        wert <= 2 ? "Ihr seht den Staat als wichtiges Werkzeug" : null,
+    B2: wert >= 4 ? "Ihr favorisiert Gemeineigentum und Commons" :
+        wert <= 2 ? "Ihr setzt auf öffentliches Eigentum" : null,
+    B3: wert >= 4 ? "Ihr wollt Arbeit radikal reduzieren oder abschaffen" :
+        wert <= 2 ? "Ihr betont den Wert guter Arbeit" : null,
+    C1: wert >= 4 ? "Feminismus ist für euch zentral" :
+        wert <= 2 ? "Ihr priorisiert den Klassenkampf" : null,
+    C2: wert >= 4 ? "Ökologie hat für euch höchste Priorität" :
+        wert <= 2 ? "Ihr seht Produktion als notwendig" : null,
+    C3: wert >= 4 ? "Ihr denkt global und internationalistisch" :
+        wert <= 2 ? "Ihr fokussiert auf nationale Strategien" : null,
+    D1: wert >= 4 ? "Ihr glaubt an konkrete Utopien" :
+        wert <= 2 ? "Ihr seid skeptisch gegenüber Utopien" : null,
+    E1: wert >= 4 ? "Ihr setzt auf breite Bündnisse" :
+        wert <= 2 ? "Ihr bevorzugt klare Klassenlinien" : null,
+    E2: wert >= 4 ? "Ihr favorisiert dezentrale Organisation" :
+        wert <= 2 ? "Ihr seht Zentralismus als notwendig" : null,
+    E3: wert >= 4 ? "Ihr betont Praxis und Erfahrung" :
+        wert <= 2 ? "Ihr betont Theorie und Aufklärung" : null
+  };
+  
+  return beschreibungen[achse] || null;
 }
 
 // ══════════════════════════════════════════════════════════════════════
@@ -7443,31 +10560,38 @@ function initStammbaum() {
     }
   ];
   
-  let html = '<h2 style="color: #4CAF50; margin-bottom: 0.5rem;">🌳 Genealogie der Ideen</h2>';
-  html += '<p style="color: #888; margin-bottom: 2rem;">Wer beeinflusste wen? Die Ahnenreihen des linken Denkens.</p>';
+  let html = `
+    <div class="stammbaum-header">
+      <h2>🌳 Genealogie der Ideen</h2>
+      <p>Wer beeinflusste wen? Die Ahnenreihen des linken Denkens.</p>
+    </div>
+    <div class="stammbaum-timeline">
+  `;
   
   generationen.forEach((gen, i) => {
-    html += `<div style="text-align: center; color: #666; font-size: 0.85rem; margin-bottom: 0.5rem;">${gen.zeit}</div>`;
+    html += `<div class="stammbaum-epoche">`;
+    html += `<div class="stammbaum-zeit">${gen.zeit}</div>`;
     html += '<div class="stammbaum-generation">';
     
     gen.denker.forEach(d => {
       const clickHandler = d.id ? `onclick="showKnoten('${d.id}')"` : '';
-      const style = d.id ? 'cursor: pointer;' : 'opacity: 0.7;';
-      html += `<div class="stammbaum-knoten" ${clickHandler} style="${style}">
+      const clickableClass = d.id ? 'clickable' : '';
+      const einflussTags = d.einfluss.slice(0, 2).map(e => `<span class="einfluss-tag">${e}</span>`).join('');
+      
+      html += `<div class="stammbaum-knoten ${clickableClass}" ${clickHandler}>
         <div class="name">${d.name}</div>
         <div class="zeit">${d.jahre}</div>
+        <div class="einfluss-tags">${einflussTags}</div>
       </div>`;
     });
     
-    html += '</div>';
-    
-    if (i < generationen.length - 1) {
-      html += '<div class="stammbaum-linie"></div>';
-    }
+    html += '</div></div>';
   });
   
-  html += `<div style="margin-top: 2rem; padding: 1rem; background: #252525; border-radius: 8px; color: #888; max-width: 600px; margin-left: auto; margin-right: auto;">
-    <strong style="color: #4CAF50;">Lesehinweis:</strong> Klickbare Namen führen zu Positionen im Haus. Nicht alle Denker*innen sind als eigene Position erfasst — manche sind über ihre Ideen präsent.
+  html += '</div>';
+  
+  html += `<div class="stammbaum-footer">
+    <strong>Lesehinweis:</strong> Klickbare Namen (mit grünem Rand) führen zu Positionen im Netzwerk. Nicht alle Denker*innen sind als eigene Position erfasst — manche sind über ihre Ideen präsent.
   </div>`;
   
   container.innerHTML = html;
@@ -7622,103 +10746,22 @@ function initZitate() {
 
 let konfigAuswahl = {};
 
+// Generator-Profil Variablen (werden von URL-Params oder Generator gesetzt)
+let generatorProfil = null;
+let generatorArchetyp = null;
+let generatorName = null;
+let generatorKnoten = null; // z.B. ["C2-4", "B3-4", "A1-4"]
+
 function initKonfigurator() {
-  const container = document.getElementById('konfigurator-container');
-  
-  const achsenKurz = [
-    { id: 'A1', name: 'Reform ↔ Revolution', pole: ['Reform', 'Radikale Reform', 'Doppelstrategie', 'Prozess', 'Revolution'] },
-    { id: 'A2', name: 'Subjekt', pole: ['Industrie-Proletariat', 'Klasse', 'Erweiterte Klasse', 'Multitude', 'Prozess-Subjekt'] },
-    { id: 'A3', name: 'Staat', pole: ['Etatismus', 'Leninismus', 'Terrain', 'Autonomismus', 'Anarchismus'] },
-    { id: 'B1', name: 'Markt ↔ Plan', pole: ['Marktsozialismus', 'Regulierung', 'Mischsystem', 'Dem. Planung', 'Zentralplanung'] },
-    { id: 'B2', name: 'Eigentum', pole: ['Verstaatlichung', 'Öffentlich', 'Gemischt', 'Genossenschaften', 'Selbstverwaltung'] },
-    { id: 'B3', name: 'Arbeit', pole: ['Vollbeschäftigung', 'Gute Arbeit', 'Reduktion', 'Grundeinkommen', 'Post-Work'] },
-    { id: 'C1', name: 'Feminismus', pole: ['Klassenprimat', 'Sozialistisch', 'Intersektional', 'Care-Fokus', 'Radikal'] },
-    { id: 'C2', name: 'Natur', pole: ['Produktivismus', 'Grünes Wachstum', 'Nachhaltig', 'Ökosozialismus', 'Naturrechte'] },
-    { id: 'D1', name: 'Utopie', pole: ['Anti-Utopie', 'Negativ', 'Prozess', 'Real-Utopien', 'Konkret'] },
-    { id: 'D2', name: 'Transformation', pole: ['Graduell', 'Interstitiell', 'Symbiotisch', 'Rupturell', 'Revolution'] },
-    { id: 'E2', name: 'Ebenen', pole: ['Zentralismus', 'Föderalismus', 'Mehrebenen', 'Kommunal', 'Basisdemokratie'] }
-  ];
-  
-  let html = '<h2 style="color: #9C27B0; margin-bottom: 0.5rem;">🎛️ Positions-Konfigurator</h2>';
-  html += '<p style="color: #888; margin-bottom: 2rem;">Wo stehst du? Wähle auf jeder Achse deine Position und finde deine Nachbarn.</p>';
-  
-  achsenKurz.forEach(achse => {
-    html += `<div class="konfig-achse">
-      <h3>${achse.name}</h3>
-      <div class="konfig-slider">`;
-    
-    achse.pole.forEach((pol, i) => {
-      const id = `${achse.id}-${i + 1}`;
-      const selected = konfigAuswahl[achse.id] === (i + 1) ? 'selected' : '';
-      html += `<div class="konfig-option ${selected}" onclick="selectKonfig('${achse.id}', ${i + 1})">${pol}</div>`;
-    });
-    
-    html += '</div></div>';
-  });
-  
-  html += '<div id="konfig-result" class="konfig-result" style="display: none;"></div>';
-  
-  container.innerHTML = html;
+  // Verwende die neue Render-Funktion (unterstützt sowohl Generator-Profil als auch manuellen Modus)
+  renderKonfiguratorMitProfil();
 }
 
 function selectKonfig(achse, pos) {
   konfigAuswahl[achse] = pos;
   
-  // UI aktualisieren
-  document.querySelectorAll(`.konfig-achse`).forEach(div => {
-    const h3 = div.querySelector('h3');
-    if (h3 && h3.textContent.includes(achse.replace(/[0-9]/g, ''))) {
-      div.querySelectorAll('.konfig-option').forEach((opt, i) => {
-        opt.classList.toggle('selected', i + 1 === pos);
-      });
-    }
-  });
-  
-  // Ergebnis berechnen wenn genug ausgewählt
-  const anzahl = Object.keys(konfigAuswahl).length;
-  const resultDiv = document.getElementById('konfig-result');
-  
-  if (anzahl >= 3) {
-    resultDiv.style.display = 'block';
-    
-    // Finde ähnlichste Positionen
-    const scores = {};
-    Object.values(knotenData).forEach(k => {
-      let score = 0;
-      let matches = 0;
-      
-      Object.entries(konfigAuswahl).forEach(([achse, pos]) => {
-        if (k.achse === achse) {
-          const diff = Math.abs(k.position - pos);
-          score += (5 - diff);
-          matches++;
-        }
-      });
-      
-      if (matches > 0) {
-        scores[k.id] = { knoten: k, score: score / matches };
-      }
-    });
-    
-    const sorted = Object.values(scores).sort((a, b) => b.score - a.score).slice(0, 5);
-    
-    let resultHtml = '<h3 style="color: #9C27B0; margin-bottom: 1rem;">Deine nächsten Nachbarn:</h3>';
-    sorted.forEach((s, i) => {
-      const opacity = 1 - (i * 0.15);
-      resultHtml += `<div style="display: flex; justify-content: space-between; padding: 0.5rem; background: rgba(156, 39, 176, ${opacity * 0.2}); margin-bottom: 0.5rem; border-radius: 4px; cursor: pointer;" onclick="showKnoten('${s.knoten.id}')">
-        <span>${s.knoten.name}</span>
-        <span style="color: #666;">${Math.round(s.score * 20)}% Übereinstimmung</span>
-      </div>`;
-    });
-    
-    resultHtml += `<p style="color: #666; margin-top: 1rem; font-size: 0.85rem;">${anzahl} von 11 Achsen ausgewählt. Je mehr du wählst, desto präziser das Ergebnis.</p>`;
-    resultHtml += `<button onclick="konfigAuswahl={}; initKonfigurator();" style="margin-top: 1rem; background: #333; border: none; color: #aaa; padding: 0.5rem 1rem; cursor: pointer; border-radius: 4px;">🔄 Zurücksetzen</button>`;
-    
-    resultDiv.innerHTML = resultHtml;
-  } else {
-    resultDiv.innerHTML = `<p style="color: #666;">Wähle mindestens 3 Positionen, um deine Nachbarn zu finden. (${anzahl}/3)</p>`;
-    resultDiv.style.display = 'block';
-  }
+  // Komplett neu rendern mit neuer Auswahl
+  renderKonfiguratorMitProfil();
 }
 
 // ══════════════════════════════════════════════════════════════════════
@@ -7954,27 +10997,50 @@ function initStammbaum() {
   const container = document.getElementById('stammbaum-container');
   
   // SVG-Dimensionen
-  const width = 1400;
-  const height = 1000;
-  const marginLeft = 100;
-  const marginTop = 80;
-  const epocheHeight = 120;
-  const personRadius = 20;
+  const width = 1600;
+  const marginLeft = 180;
+  const marginTop = 60;
+  const epocheHeight = 100;
+  const personRadius = 14;
   
-  // Epoche Y-Positionen
+  // Personen pro Epoche gruppieren
+  const personenProEpoche = {};
+  stammbaumData.epochen.forEach(e => personenProEpoche[e.id] = []);
+  stammbaumData.stroemungen.forEach(s => {
+    if (personenProEpoche[s.epoche]) {
+      personenProEpoche[s.epoche].push(s);
+    }
+  });
+  
+  // Höhe berechnen
+  const height = marginTop + stammbaumData.epochen.length * epocheHeight + 100;
+  
+  // Epoche Y-Position
   const getY = (epocheId) => {
     const epoche = stammbaumData.epochen.find(e => e.id === epocheId);
     return marginTop + (epoche ? epoche.y * epocheHeight : 0) + epocheHeight / 2;
   };
   
-  // Person X-Position (x ist relativ: -2 bis +2)
-  const getX = (x) => width / 2 + x * 150;
+  // Person X-Position automatisch berechnen
+  const getX = (personId) => {
+    const person = stammbaumData.stroemungen.find(s => s.id === personId);
+    if (!person) return width / 2;
+    
+    const personen = personenProEpoche[person.epoche];
+    const index = personen.findIndex(p => p.id === personId);
+    const count = personen.length;
+    
+    // Verfügbare Breite
+    const availableWidth = width - marginLeft - 100;
+    const spacing = availableWidth / (count + 1);
+    
+    return marginLeft + spacing * (index + 1);
+  };
   
-  // Finde Position einer Strömung/Person
   const getPos = (id) => {
     const s = stammbaumData.stroemungen.find(st => st.id === id);
     if (!s) return { x: width/2, y: height/2 };
-    return { x: getX(s.x), y: getY(s.epoche) };
+    return { x: getX(s.id), y: getY(s.epoche) };
   };
   
   // SVG erstellen
@@ -7984,39 +11050,43 @@ function initStammbaum() {
   stammbaumData.epochen.forEach(epoche => {
     const y = marginTop + epoche.y * epocheHeight;
     svg += `
-      <g class="stammbaum-epoche" onclick="showEpoche('${epoche.id}')">
-        <rect x="20" y="${y}" width="${width - 40}" height="${epocheHeight - 10}" 
-              fill="${epoche.farbe}" opacity="0.15"/>
-        <text x="60" y="${y + 25}" class="stammbaum-epoche-label">${epoche.name}</text>
-        <text x="60" y="${y + 45}" class="stammbaum-zeit-label">${epoche.zeit}</text>
+      <g class="stammbaum-epoche">
+        <rect x="10" y="${y}" width="${width - 20}" height="${epocheHeight - 8}" 
+              fill="${epoche.farbe}" opacity="0.1" rx="4"/>
+        <text x="25" y="${y + 20}" class="stammbaum-epoche-label">${epoche.name}</text>
+        <text x="25" y="${y + 35}" class="stammbaum-zeit-label">${epoche.zeit}</text>
       </g>
     `;
   });
   
-  // Verbindungslinien
+  // Verbindungslinien - dünner
   stammbaumData.verbindungen.forEach(v => {
     const von = getPos(v.von);
     const zu = getPos(v.zu);
     const klasse = v.typ === 'konflikt' ? 'konflikt' : 'einfluss';
     
-    // Curved line
+    // Sanfte Kurve
     const midY = (von.y + zu.y) / 2;
+    const ctrlX = (von.x + zu.x) / 2;
     svg += `<path class="stammbaum-linie ${klasse}" 
-                  d="M ${von.x} ${von.y} Q ${von.x} ${midY} ${(von.x + zu.x)/2} ${midY} T ${zu.x} ${zu.y}"/>`;
+                  d="M ${von.x} ${von.y} C ${von.x} ${midY}, ${zu.x} ${midY}, ${zu.x} ${zu.y}"/>`;
   });
   
   // Personen/Strömungen
-  stammbaumData.stroemungen.forEach(s => {
+  stammbaumData.stroemungen.forEach((s) => {
     const pos = getPos(s.id);
-    const r = s.wichtig ? personRadius + 5 : personRadius;
+    const r = s.wichtig ? personRadius + 3 : personRadius;
     const epoche = stammbaumData.epochen.find(e => e.id === s.epoche);
     const farbe = epoche ? epoche.farbe : '#888';
+    
+    // Kurzer Name (max 12 Zeichen)
+    const kurzName = s.name.length > 12 ? s.name.substring(0, 11) + '…' : s.name;
     
     svg += `
       <g class="stammbaum-person" onclick="showStammbaumPerson('${s.id}')" transform="translate(${pos.x}, ${pos.y})">
         <circle r="${r}" fill="${farbe}" opacity="0.9"/>
-        ${s.wichtig ? `<circle r="${r + 4}" fill="none" stroke="${farbe}" stroke-width="2" opacity="0.5"/>` : ''}
-        <text y="${r + 15}" class="stammbaum-label">${s.name}</text>
+        ${s.wichtig ? `<circle r="${r + 3}" fill="none" stroke="${farbe}" stroke-width="2" opacity="0.5"/>` : ''}
+        <text y="${r + 12}" class="stammbaum-label">${kurzName}</text>
       </g>
     `;
   });
@@ -8027,7 +11097,7 @@ function initStammbaum() {
   const legende = `
     <div class="stammbaum-legende">
       <div class="stammbaum-legende-item">
-        <div class="stammbaum-legende-linie" style="background: #4CAF50; border-style: dashed;"></div>
+        <div class="stammbaum-legende-linie" style="background: #4CAF50;"></div>
         <span>Einfluss</span>
       </div>
       <div class="stammbaum-legende-item">
@@ -8035,7 +11105,7 @@ function initStammbaum() {
         <span>Konflikt</span>
       </div>
       <div class="stammbaum-legende-item">
-        <span style="display:inline-block;width:20px;height:20px;border-radius:50%;border:3px solid #888;margin-right:0.5rem;"></span>
+        <span style="display:inline-block;width:14px;height:14px;border-radius:50%;border:2px solid #888;margin-right:0.5rem;"></span>
         <span>Zentrale Figur</span>
       </div>
     </div>
@@ -8139,158 +11209,41 @@ function showStammbaumPerson(personId) {
 // PERSONEN: Alle Bewohner*innen des Hauses
 // ══════════════════════════════════════════════════════════════════════
 
-const personenData = [
-  // Gründergeneration
-  { id: "marx", name: "Karl Marx", leben: "1818-1883", kategorie: "klassiker", 
-    bio: "Begründer des wissenschaftlichen Sozialismus, Philosoph und Ökonom",
-    positionen: ["A2-2", "D3-1", "B2-1"], beeinflusst: ["lenin", "luxemburg", "gramsci"] },
-  { id: "engels", name: "Friedrich Engels", leben: "1820-1895", kategorie: "klassiker",
-    bio: "Mitbegründer des Marxismus, Theoretiker der Frauenunterdrückung",
-    positionen: ["A2-2", "C1-2"], beeinflusst: ["zetkin", "kollontai"] },
-  { id: "bakunin", name: "Michail Bakunin", leben: "1814-1876", kategorie: "klassiker",
-    bio: "Anarchistischer Revolutionär, Gegenspieler von Marx in der Ersten Internationale",
-    positionen: ["A3-5", "E2-5"], beeinflusst: ["kropotkin", "goldman"] },
-  { id: "luxemburg", name: "Rosa Luxemburg", leben: "1871-1919", kategorie: "klassiker",
-    bio: "Revolutionäre Sozialistin, Kritikerin von Reformismus und Leninismus",
-    positionen: ["A1-3", "A2-2", "D2-4"], beeinflusst: ["gramsci", "arendt"] },
-  { id: "kropotkin", name: "Peter Kropotkin", leben: "1842-1921", kategorie: "klassiker",
-    bio: "Anarcho-Kommunist, Theoretiker der gegenseitigen Hilfe",
-    positionen: ["A3-5", "B2-5", "C2-3"], beeinflusst: ["bookchin", "graeber"] },
-  
-  // Revolutionäre Generation
-  { id: "lenin", name: "Wladimir Lenin", leben: "1870-1924", kategorie: "revolutionaer",
-    bio: "Führer der Oktoberrevolution, Theoretiker der Avantgarde-Partei",
-    positionen: ["A3-2", "E3-1", "E2-1"], beeinflusst: ["gramsci", "lukacs"] },
-  { id: "trotzki", name: "Leo Trotzki", leben: "1879-1940", kategorie: "revolutionaer",
-    bio: "Theoretiker der permanenten Revolution, Kritiker des Stalinismus",
-    positionen: ["D2-4", "C3-3"], beeinflusst: ["mandel", "cliff"] },
-  { id: "gramsci", name: "Antonio Gramsci", leben: "1891-1937", kategorie: "revolutionaer",
-    bio: "Theoretiker der kulturellen Hegemonie, des Stellungskriegs",
-    positionen: ["A3-3", "E3-3", "D3-1"], beeinflusst: ["hall", "mouffe", "laclau"] },
-  { id: "kollontai", name: "Alexandra Kollontai", leben: "1872-1952", kategorie: "revolutionaer",
-    bio: "Bolschewistische Feministin, Theoretikerin der freien Liebe",
-    positionen: ["C1-4", "D1-5"], beeinflusst: ["federici"] },
-  { id: "goldman", name: "Emma Goldman", leben: "1869-1940", kategorie: "revolutionaer",
-    bio: "Anarcha-Feministin, Aktivistin für Redefreiheit und Geburtenkontrolle",
-    positionen: ["A3-5", "C1-5"], beeinflusst: ["davis"] },
-  
-  // Frankfurter Schule
-  { id: "adorno", name: "Theodor W. Adorno", leben: "1903-1969", kategorie: "frankfurt",
-    bio: "Kritische Theorie, Kulturindustrie, negative Dialektik",
-    positionen: ["D1-2", "D3-1"], beeinflusst: ["habermas", "honneth"] },
-  { id: "benjamin", name: "Walter Benjamin", leben: "1892-1940", kategorie: "frankfurt",
-    bio: "Kulturkritiker, Geschichtsphilosoph, Flaneur",
-    positionen: ["D3-1", "D1-3"], beeinflusst: ["adorno", "agamben"] },
-  { id: "marcuse", name: "Herbert Marcuse", leben: "1898-1979", kategorie: "frankfurt",
-    bio: "Theoretiker der Neuen Linken, der großen Weigerung",
-    positionen: ["D1-3", "A2-3"], beeinflusst: ["davis", "1968er"] },
-  { id: "bloch", name: "Ernst Bloch", leben: "1885-1977", kategorie: "frankfurt",
-    bio: "Philosoph der Hoffnung, des Noch-Nicht-Bewussten",
-    positionen: ["D1-3", "D3-3"], beeinflusst: ["moltmann"] },
-  
-  // Feminismus
-  { id: "beauvoir", name: "Simone de Beauvoir", leben: "1908-1986", kategorie: "feminismus",
-    bio: "Pionierin des Feminismus: 'Man wird nicht als Frau geboren'",
-    positionen: ["C1-5", "D3-1"], beeinflusst: ["butler", "firestone"] },
-  { id: "federici", name: "Silvia Federici", leben: "*1942", kategorie: "feminismus",
-    bio: "Marxistische Feministin, Theoretikerin der Reproduktionsarbeit",
-    positionen: ["C1-4", "B3-3", "A2-3"], beeinflusst: ["bhattacharya", "arruzza"] },
-  { id: "butler", name: "Judith Butler", leben: "*1956", kategorie: "feminismus",
-    bio: "Queer-Theoretikerin, Performativität des Geschlechts",
-    positionen: ["C1-3", "C1-5", "D3-2"], beeinflusst: ["preciado"] },
-  { id: "hooks", name: "bell hooks", leben: "1952-2021", kategorie: "feminismus",
-    bio: "Schwarze Feministin, Kulturkritikerin, Bildungstheoretikerin",
-    positionen: ["C1-3", "E3-3"], beeinflusst: ["taylor"] },
-  { id: "davis", name: "Angela Davis", leben: "*1944", kategorie: "feminismus",
-    bio: "Schwarze Revolutionärin, Abolitionistin, Intersektionalität",
-    positionen: ["C1-3", "A3-4", "C3-3"], beeinflusst: ["taylor"] },
-  { id: "fraser", name: "Nancy Fraser", leben: "*1947", kategorie: "feminismus",
-    bio: "Kritische Theoretikerin, Umverteilung & Anerkennung",
-    positionen: ["C1-3", "B1-3", "D3-2"], beeinflusst: ["honneth-debatte"] },
-  { id: "haraway", name: "Donna Haraway", leben: "*1944", kategorie: "feminismus",
-    bio: "Cyborg-Manifest, Kritik der Naturalisierung",
-    positionen: ["C2-4", "C1-3", "D1-5"], beeinflusst: ["posthumanismus"] },
-  
-  // Ökologie
-  { id: "bookchin", name: "Murray Bookchin", leben: "1921-2006", kategorie: "oekologie",
-    bio: "Begründer der Sozialökologie, des kommunalistischen Anarchismus",
-    positionen: ["C2-5", "E2-4", "A3-5"], beeinflusst: ["öcalan", "rojava"] },
-  { id: "gorz", name: "André Gorz", leben: "1923-2007", kategorie: "oekologie",
-    bio: "Ökosozialist, Kritiker der Arbeitsgesellschaft",
-    positionen: ["C2-4", "B3-4"], beeinflusst: ["srnicek", "weeks"] },
-  { id: "malm", name: "Andreas Malm", leben: "*1977", kategorie: "oekologie",
-    bio: "Klimahistoriker, Theoretiker der Klimagerechtigkeit",
-    positionen: ["C2-4", "A1-4"], beeinflusst: ["xr-kritik"] },
-  { id: "saito", name: "Kohei Saito", leben: "*1987", kategorie: "oekologie",
-    bio: "Marx-Philologe, Degrowth-Kommunismus",
-    positionen: ["C2-4", "D3-1", "B1-4"], beeinflusst: ["degrowth-bewegung"] },
-  
-  // Autonomie & Anarchismus
-  { id: "debord", name: "Guy Debord", leben: "1931-1994", kategorie: "autonomie",
-    bio: "Situationist, Theoretiker der Spektakelgesellschaft",
-    positionen: ["D3-1", "A3-4"], beeinflusst: ["tiqqun", "unsichtbares-komitee"] },
-  { id: "graeber", name: "David Graeber", leben: "1961-2020", kategorie: "autonomie",
-    bio: "Anarchistischer Anthropologe, Occupy-Aktivist, 'Bullshit Jobs'",
-    positionen: ["A3-5", "B3-5", "E2-5"], beeinflusst: ["occupy"] },
-  { id: "holloway", name: "John Holloway", leben: "*1947", kategorie: "autonomie",
-    bio: "Open Marxist, 'Die Welt verändern ohne die Macht zu übernehmen'",
-    positionen: ["A3-4", "D2-2"], beeinflusst: ["zapatismus-theorie"] },
-  
-  // Post-Operaismus
-  { id: "negri", name: "Antonio Negri", leben: "*1933", kategorie: "operaismus",
-    bio: "Post-Operaist, Theoretiker von Empire und Multitude",
-    positionen: ["A2-4", "A3-4", "D2-4"], beeinflusst: ["hardt", "virno"] },
-  { id: "hardt", name: "Michael Hardt", leben: "*1960", kategorie: "operaismus",
-    bio: "Ko-Autor von 'Empire', Theoretiker des Gemeinsamen",
-    positionen: ["A2-4", "D1-4", "B2-5"], beeinflusst: [] },
-  { id: "bifo", name: "Franco Berardi (Bifo)", leben: "*1948", kategorie: "operaismus",
-    bio: "Medientheoretiker, Psychopathologie des Kapitalismus",
-    positionen: ["A2-4", "B3-5", "D1-2"], beeinflusst: ["fisher"] },
-  
-  // Zeitgenössisch
-  { id: "zizek", name: "Slavoj Žižek", leben: "*1949", kategorie: "zeitgenössisch",
-    bio: "Lacanianischer Marxist, Popkultur-Kritiker",
-    positionen: ["D3-1", "A3-2"], beeinflusst: ["poplinks"] },
-  { id: "fisher", name: "Mark Fisher", leben: "1968-2017", kategorie: "zeitgenössisch",
-    bio: "Kulturkritiker, 'Kapitalistischer Realismus', Hauntology",
-    positionen: ["D1-2", "B3-5", "D3-1"], beeinflusst: ["acid-communism"] },
-  { id: "mouffe", name: "Chantal Mouffe", leben: "*1943", kategorie: "zeitgenössisch",
-    bio: "Theoretikerin des Linkspopulismus, des Agonismus",
-    positionen: ["A3-3", "E1-3"], beeinflusst: ["laclau", "podemos-theorie"] },
-  { id: "srnicek", name: "Nick Srnicek", leben: "*1982", kategorie: "zeitgenössisch",
-    bio: "Akzelerationist, Plattform-Kapitalismus-Kritiker",
-    positionen: ["B3-5", "D1-5", "B1-4"], beeinflusst: ["post-work"] },
-  { id: "brown", name: "Wendy Brown", leben: "*1955", kategorie: "zeitgenössisch",
-    bio: "Politische Theoretikerin, Neoliberalismus-Kritik",
-    positionen: ["A3-3", "D3-1"], beeinflusst: [] },
-  
-  // Postkolonial
-  { id: "fanon", name: "Frantz Fanon", leben: "1925-1961", kategorie: "postkolonial",
-    bio: "Antikolonialer Revolutionär, Psychoanalytiker der Kolonisierten",
-    positionen: ["C3-3", "A1-5"], beeinflusst: ["biko", "said"] },
-  { id: "spivak", name: "Gayatri Spivak", leben: "*1942", kategorie: "postkolonial",
-    bio: "Postkoloniale Theoretikerin, 'Can the Subaltern Speak?'",
-    positionen: ["C3-3", "C1-3"], beeinflusst: [] },
-  { id: "said", name: "Edward Said", leben: "1935-2003", kategorie: "postkolonial",
-    bio: "Literaturwissenschaftler, 'Orientalismus'",
-    positionen: ["C3-3", "D3-1"], beeinflusst: [] },
-  
-  // Deutschsprachig
-  { id: "adamczak", name: "Bini Adamczak", leben: "*1979", kategorie: "deutsch",
-    bio: "Queer-kommunistische Theoretikerin, 'Beziehungsweise Revolution'",
-    positionen: ["D1-3", "C1-3", "D3-3"], beeinflusst: [] },
-  { id: "jaeggi", name: "Rahel Jaeggi", leben: "*1967", kategorie: "deutsch",
-    bio: "Kritische Theoretikerin, Lebensformen, Kapitalismuskritik",
-    positionen: ["D3-1", "D3-2"], beeinflusst: [] },
-  { id: "dörre", name: "Klaus Dörre", leben: "*1957", kategorie: "deutsch",
-    bio: "Arbeitssoziologe, Landnahme-Theorie",
-    positionen: ["A2-3", "B3-2"], beeinflusst: [] },
-];
+let personenData = [];
+
+// Personen-Daten aus externer JSON laden
+async function loadPersonenData() {
+  try {
+    const response = await fetch('../data/personen.json');
+    if (!response.ok) throw new Error(`HTTP ${response.status}`);
+    const data = await response.json();
+    personenData = data.personen;
+    // Stats aktualisieren
+    document.getElementById('stats').textContent = `${Object.keys(knotenData).length} Positionen · ${verbindungenData.length} Verbindungen · ${personenData.length} Personen`;
+  } catch (e) {
+    console.error('Fehler beim Laden der Personen:', e);
+    document.getElementById('stats').textContent = `${Object.keys(knotenData).length} Positionen · ${verbindungenData.length} Verbindungen · Personen: Ladefehler`;
+  }
+}
 
 let personenFilter = 'alle';
 
 function initPersonen() {
   const container = document.getElementById('personen-container');
+  
+  // Loading-Indikator wenn noch keine Daten
+  if (personenData.length === 0) {
+    container.innerHTML = `
+      <div style="text-align: center; padding: 3rem; color: #888;">
+        <div style="font-size: 2rem; margin-bottom: 1rem;">⏳</div>
+        <div>Lade Personen-Daten...</div>
+        <div style="font-size: 0.8rem; margin-top: 0.5rem; color: #666;">
+          Falls dies nicht funktioniert, prüfe ob personen.json im data/-Ordner liegt.
+        </div>
+      </div>
+    `;
+    return;
+  }
   
   const kategorien = {
     'alle': 'Alle',
@@ -8301,7 +11254,8 @@ function initPersonen() {
     'oekologie': '🌿 Ökologie',
     'autonomie': '🏴 Autonomie',
     'operaismus': '⚙️ Operaismus',
-    'zeitgenössisch': '🔮 Zeitgenössisch',
+    'analytisch': '🧮 Analytisch',
+    'zeitgenoessisch': '🔮 Zeitgenössisch',
     'postkolonial': '🌍 Postkolonial',
     'deutsch': '🇩🇪 Deutschsprachig'
   };
@@ -8326,19 +11280,20 @@ function initPersonen() {
   
   gefiltert.forEach(p => {
     const initialen = p.name.split(' ').map(n => n[0]).join('').substring(0, 2);
-    const lebt = p.leben.startsWith('*') ? '🟢' : '';
+    const lebenStr = p.leben || (p.gestorben ? `${p.geboren}-${p.gestorben}` : `*${p.geboren}`);
+    const lebt = p.leben ? p.leben.startsWith('*') : (p.gestorben === null);
     
     html += `<div class="person-card" onclick="showPerson('${p.id}')">
       <div class="header">
         <div class="avatar">${initialen}</div>
         <div class="info">
-          <div class="name">${p.name} ${lebt}</div>
-          <div class="leben">${p.leben}</div>
+          <div class="name">${p.name} ${lebt ? '🟢' : ''}</div>
+          <div class="leben">${lebenStr}</div>
         </div>
       </div>
-      <div class="bio">${p.bio}</div>
+      <div class="bio">${p.bio || p.kurzbio || ''}</div>
       <div class="positionen">
-        ${p.positionen.slice(0, 3).map(pos => {
+        ${(p.positionen || p.hauptzimmer || []).slice(0, 3).map(pos => {
           const k = knotenData[pos];
           return k ? `<span class="pos-tag" onclick="event.stopPropagation(); showKnoten('${pos}')">${k.name}</span>` : '';
         }).join('')}
@@ -8349,7 +11304,7 @@ function initPersonen() {
   html += '</div>';
   
   html += `<div style="margin-top: 2rem; text-align: center; color: #666;">
-    ${personenData.length} Denker*innen · ${personenData.filter(p => p.leben.startsWith('*')).length} leben noch
+    ${personenData.length} Denker*innen · ${personenData.filter(p => p.leben ? p.leben.startsWith('*') : p.gestorben === null).length} leben noch
   </div>`;
   
   container.innerHTML = html;
@@ -8364,6 +11319,18 @@ function showPerson(id) {
   const p = personenData.find(x => x.id === id);
   if (!p) return;
   
+  // Hilfsfunktion: ID zu lesbarem Namen
+  const idToName = (bid) => {
+    const b = personenData.find(x => x.id === bid);
+    if (b) {
+      return `<span style="cursor: pointer; text-decoration: underline; color: #aaa;" onclick="showPerson('${bid}')">${b.name}</span>`;
+    } else {
+      // ID zu lesbarem Namen konvertieren (z.B. "von_parijs" → "Von Parijs")
+      const readable = bid.split('_').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ');
+      return `<span style="color: #666;" title="Nicht in Datenbank">${readable}</span>`;
+    }
+  };
+  
   // Overlay
   const overlay = document.createElement('div');
   overlay.className = 'person-overlay';
@@ -8374,39 +11341,105 @@ function showPerson(id) {
   const detail = document.createElement('div');
   detail.className = 'person-detail';
   
-  const lebt = p.leben.startsWith('*');
+  // Leben-String erstellen (unterstützt beide Formate)
+  const lebenStr = p.leben || (p.gestorben ? `${p.geboren}-${p.gestorben}` : `*${p.geboren}`);
+  const lebt = p.leben ? p.leben.startsWith('*') : (p.gestorben === null);
+  
+  // Zitate HTML
+  const zitateHtml = p.zitate && p.zitate.length > 0 ? `
+    <h3 style="color: #FF9800; font-size: 0.9rem; margin-bottom: 0.5rem;">💬 Zitate:</h3>
+    <div style="margin-bottom: 1.5rem;">
+      ${p.zitate.slice(0, 2).map(z => `
+        <blockquote style="border-left: 2px solid #FF9800; padding-left: 1rem; margin: 0.5rem 0; color: #ccc; font-style: italic;">
+          „${z.text}"
+          <footer style="color: #666; font-size: 0.8rem; font-style: normal; margin-top: 0.3rem;">— ${z.quelle}${z.jahr ? ` (${z.jahr})` : ''}</footer>
+        </blockquote>
+      `).join('')}
+    </div>
+  ` : '';
+  
+  // Werke HTML
+  const werkeHtml = p.hauptwerke && p.hauptwerke.length > 0 ? `
+    <h3 style="color: #2196F3; font-size: 0.9rem; margin-bottom: 0.5rem;">📚 Hauptwerke:</h3>
+    <div style="margin-bottom: 1.5rem; color: #aaa; font-size: 0.85rem;">
+      ${p.hauptwerke.slice(0, 4).map(w => `<div>• ${w.titel} (${w.jahr})</div>`).join('')}
+    </div>
+  ` : '';
+  
+  // Beeinflusst von HTML
+  const beeinflusstVonHtml = p.beeinflusst_von && p.beeinflusst_von.length > 0 ? `
+    <h3 style="color: #9C27B0; font-size: 0.9rem; margin-bottom: 0.5rem;">← Beeinflusst von:</h3>
+    <div style="color: #888; margin-bottom: 1rem; font-size: 0.85rem;">
+      ${p.beeinflusst_von.map(idToName).join(', ')}
+    </div>
+  ` : '';
+  
+  // Beeinflusste HTML
+  const beeinflussteHtml = p.beeinflusst && p.beeinflusst.length > 0 ? `
+    <h3 style="color: #4CAF50; font-size: 0.9rem; margin-bottom: 0.5rem;">→ Beeinflusste:</h3>
+    <div style="color: #888; margin-bottom: 1rem; font-size: 0.85rem;">
+      ${p.beeinflusst.map(idToName).join(', ')}
+    </div>
+  ` : '';
+  
+  // Debattierte mit HTML
+  const debattenHtml = p.debattiert_mit && p.debattiert_mit.length > 0 ? `
+    <h3 style="color: #f44336; font-size: 0.9rem; margin-bottom: 0.5rem;">⚔️ Debattierte mit:</h3>
+    <div style="color: #888; margin-bottom: 1rem; font-size: 0.85rem;">
+      ${p.debattiert_mit.map(idToName).join(', ')}
+    </div>
+  ` : '';
+  
+  // Tags HTML
+  const tagsHtml = p.tags && p.tags.length > 0 ? `
+    <div style="display: flex; flex-wrap: wrap; gap: 0.3rem; margin-top: 1rem;">
+      ${p.tags.map(t => `<span style="background: #333; color: #888; padding: 0.2rem 0.5rem; border-radius: 3px; font-size: 0.7rem;">#${t}</span>`).join('')}
+    </div>
+  ` : '';
   
   detail.innerHTML = `
     <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 1rem;">
       <div>
         <h2 style="color: #fff; margin: 0;">${p.name}</h2>
-        <div style="color: #666;">${p.leben} ${lebt ? '(lebt)' : ''}</div>
+        <div style="color: #666;">${lebenStr} ${lebt ? '🟢' : ''} ${p.herkunft ? `· ${p.herkunft}` : ''}</div>
       </div>
       <button onclick="this.closest('.person-detail').remove(); document.querySelector('.person-overlay').remove();" style="background: none; border: none; color: #666; font-size: 1.5rem; cursor: pointer;">×</button>
     </div>
     
     <p style="color: #aaa; line-height: 1.6; margin-bottom: 1.5rem;">${p.bio}</p>
     
+    ${zitateHtml}
+    
     <h3 style="color: #E53935; font-size: 0.9rem; margin-bottom: 0.5rem;">🏠 Wohnt in:</h3>
-    <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1.5rem;">
-      ${p.positionen.map(pos => {
+    <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1rem;">
+      ${(p.positionen || p.hauptzimmer || []).map(pos => {
         const k = knotenData[pos];
         return k ? `<span style="background: rgba(229,57,53,0.2); color: #E53935; padding: 0.3rem 0.6rem; border-radius: 4px; cursor: pointer; font-size: 0.85rem;" onclick="showKnoten('${pos}'); this.closest('.person-detail').remove(); document.querySelector('.person-overlay').remove();">${k.name}</span>` : '';
       }).join('')}
     </div>
     
-    ${p.beeinflusst && p.beeinflusst.length > 0 ? `
-      <h3 style="color: #4CAF50; font-size: 0.9rem; margin-bottom: 0.5rem;">→ Beeinflusste:</h3>
-      <div style="color: #888; margin-bottom: 1.5rem;">
-        ${p.beeinflusst.map(bid => {
-          const b = personenData.find(x => x.id === bid);
-          return b ? `<span style="cursor: pointer; text-decoration: underline;" onclick="showPerson('${bid}')">${b.name}</span>` : bid;
+    ${p.besucht && p.besucht.length > 0 ? `
+      <div style="color: #666; font-size: 0.8rem; margin-bottom: 1.5rem;">
+        Besucht auch: ${p.besucht.map(pos => {
+          const k = knotenData[pos];
+          return k ? `<span style="cursor: pointer; text-decoration: underline;" onclick="showKnoten('${pos}'); this.closest('.person-detail').remove(); document.querySelector('.person-overlay').remove();">${k.name}</span>` : '';
         }).join(', ')}
       </div>
     ` : ''}
     
-    <div style="margin-top: 1rem; padding-top: 1rem; border-top: 1px solid #333; color: #666; font-size: 0.8rem;">
-      Klicke auf eine Position, um mehr zu erfahren.
+    ${werkeHtml}
+    
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+      <div>${beeinflusstVonHtml}</div>
+      <div>${beeinflussteHtml}</div>
+    </div>
+    
+    ${debattenHtml}
+    
+    ${tagsHtml}
+    
+    <div style="margin-top: 1.5rem; padding-top: 1rem; border-top: 1px solid #333; color: #666; font-size: 0.8rem;">
+      Klicke auf Positionen oder Namen um mehr zu erfahren.
     </div>
   `;
   
@@ -8592,7 +11625,7 @@ const werkzeugContainer = ['konfigurator', 'labor', 'zufall', 'fragen', 'wesen']
 const alleContainer = [...ansichtContainer, ...werkzeugContainer, 'zeit', 'stammbaum', 'dialoge', 'zitate', 'bibliothek', 'praxis', 'fieber', 'personen', 'kosmos', 'debatten'];
 
 // Aktueller Zustand
-let aktiveAnsicht = 'netzwerk';
+let aktiveAnsicht = 'wesen';
 let aktiveFilter = new Set(); // 'personen', 'fieber', 'debatten', 'epoche'
 let epocheWert = 2025;
 
@@ -8616,8 +11649,7 @@ function setAnsicht(ansicht) {
     if (el) {
       if (c === ansicht) {
         el.style.display = 'block';
-        el.style.visibility = 'visible';
-        el.style.opacity = '1';
+        el.classList.remove('hidden');
       } else {
         el.style.display = 'none';
       }
@@ -8636,8 +11668,7 @@ function setAnsicht(ansicht) {
 
 // Filter toggle
 function toggleFilter(filter) {
-  console.log('Toggle Filter:', filter);
-  
+    
   if (aktiveFilter.has(filter)) {
     aktiveFilter.delete(filter);
   } else {
@@ -8655,9 +11686,41 @@ function toggleFilter(filter) {
     epocheSlider.classList.toggle('visible', aktiveFilter.has('epoche'));
   }
   
+  // Filter-Legenden im Netzwerk zeigen/verstecken
+  const legendeFieber = document.getElementById('legende-fieber');
+  const legendeKonflikte = document.getElementById('legende-konflikte');
+  if (legendeFieber) {
+    legendeFieber.classList.toggle('visible', aktiveFilter.has('fieber'));
+  }
+  if (legendeKonflikte) {
+    legendeKonflikte.classList.toggle('visible', aktiveFilter.has('debatten'));
+  }
+  
+  // Globale Filter-Info-Box aktualisieren
+  updateGlobalFilterInfo();
+  
   // Filter anwenden
   applyFilters();
   updateActiveLinsenDisplay();
+}
+
+// Globale Filter-Info aktualisieren
+function updateGlobalFilterInfo() {
+  const container = document.getElementById('filter-info-global');
+  if (!container) return;
+  
+  const hasFieber = aktiveFilter.has('fieber');
+  const hasKonflikte = aktiveFilter.has('debatten');
+  const hasEpoche = aktiveFilter.has('epoche');
+  const hasPersonen = aktiveFilter.has('personen');
+  
+  document.getElementById('filter-info-fieber').style.display = hasFieber ? 'block' : 'none';
+  document.getElementById('filter-info-konflikte').style.display = hasKonflikte ? 'block' : 'none';
+  document.getElementById('filter-info-epoche').style.display = hasEpoche ? 'block' : 'none';
+  document.getElementById('filter-info-personen').style.display = hasPersonen ? 'block' : 'none';
+  
+  // Container nur zeigen wenn mindestens ein Filter aktiv
+  container.classList.toggle('visible', hasFieber || hasKonflikte || hasEpoche || hasPersonen);
 }
 
 // Filter-Bar aktualisieren
@@ -8699,7 +11762,6 @@ function updateEpoche(wert) {
 
 // Filter auf aktuelle Ansicht anwenden
 function applyFilters() {
-  console.log('Wende Filter an:', Array.from(aktiveFilter), 'Epoche:', epocheWert, 'Ansicht:', aktiveAnsicht);
   
   // Netzwerk
   if (aktiveAnsicht === 'netzwerk' && typeof applyFiltersToNetzwerk === 'function') {
@@ -8719,8 +11781,7 @@ function applyFilters() {
 
 // Werkzeug öffnen
 function openWerkzeug(werkzeug) {
-  console.log('Öffne Werkzeug:', werkzeug);
-  
+    
   // Linsen in Palette aktualisieren
   document.querySelectorAll('.linse.ansicht').forEach(l => l.classList.remove('active'));
   document.querySelectorAll('.linse.werkzeug').forEach(l => {
@@ -8750,8 +11811,12 @@ function openWerkzeug(werkzeug) {
   updateActiveLinsenDisplay();
 }
 
+// Schließt alle Werkzeug-Container und zeigt das Netzwerk
+function closeAllWerkzeuge() {
+  setAnsicht('netzwerk');
+}
+
 // Event-Listener registrieren
-console.log('Navigation-Setup gestartet');
 
 // Ansicht-Buttons
 document.querySelectorAll('.ansicht-btn').forEach(btn => {
@@ -8770,10 +11835,8 @@ document.querySelectorAll('.werkzeug-btn').forEach(btn => {
 
 // Init alle Ansichten
 try {
-  console.log('Starte initWesen...');
-  initWesen();
-  console.log('initWesen fertig');
-} catch(e) {
+    initWesen();
+  } catch(e) {
   console.error('Fehler in initWesen:', e);
 }
 initKarte();
@@ -8791,13 +11854,17 @@ initDialoge();
 initZitate();
 initKonfigurator();
 initFieber();
-initPersonen();
 
-// Stats aktualisieren
-document.getElementById('stats').textContent = `${Object.keys(knotenData).length} Positionen · ${verbindungenData.length} Verbindungen · ${personenData.length} Personen`;
+// Personen async laden, dann initialisieren
+loadPersonenData().then(() => {
+  initPersonen();
+});
 
-// Initiale Ansicht
-setAnsicht('netzwerk');
+// Stats aktualisieren (wird später durch loadPersonenData aktualisiert)
+document.getElementById('stats').textContent = `${Object.keys(knotenData).length} Positionen · ${verbindungenData.length} Verbindungen · Personen laden...`;
+
+// Initiale Ansicht: Das Wesen
+openWerkzeug('wesen');
 
 // Netzwerk nach Layout-Reflow erneut initialisieren
 setTimeout(() => {
@@ -8806,14 +11873,12 @@ setTimeout(() => {
   if (container && canvas && renderer) {
     const width = container.clientWidth || window.innerWidth - 100;
     const height = container.clientHeight || window.innerHeight - 100;
-    console.log('Netzwerk resize:', width, 'x', height);
     renderer.setSize(width, height);
     camera.aspect = width / height;
     camera.updateProjectionMatrix();
   }
 }, 100);
 
-console.log('=== ALLE INIT FERTIG ===');
 
 // ══════════════════════════════════════════════════════════════════════
 // LINSEN-INTERAKTION (Spielerisches Interface)
@@ -8889,8 +11954,7 @@ function pickupLinse(element) {
   // Element hervorheben
   element.style.opacity = '0.5';
   
-  console.log('Linse aufgenommen:', typ, id);
-}
+  }
 
 // Linse anwenden (Klick auf Viewport)
 function applyFloatingLinse() {
@@ -9099,12 +12163,8 @@ document.addEventListener('contextmenu', (e) => {
 updateActiveLinsenDisplay();
 highlightCombinable('ansicht', 'netzwerk');
 
-// Netzwerk-Container sichtbar machen
-const netzwerkContainer = document.getElementById('netzwerk-container');
-if (netzwerkContainer) {
-  netzwerkContainer.style.display = 'block';
-  netzwerkContainer.classList.remove('hidden');
-}
+// Netzwerk-Container wird durch setAnsicht/openWerkzeug gesteuert
+// (nicht mehr manuell sichtbar machen)
 
 // ══════════════════════════════════════════════════════════════════════
 // THEME-SYSTEM
@@ -9295,26 +12355,38 @@ function parseUrlParams() {
     setTimeout(() => showKnoten(posParam), 500);
   }
   
-  // === NEU: Vom Sozialismus-Generator ===
+  // === GENERATOR-VERBINDUNG ===
   
   // Archetyp (z.B. "oekosozialismus")
   const archetypParam = params.get('archetyp');
   
-  // Knoten (z.B. "C2-4,B3-4,A1-4")
+  // Knoten (z.B. "C2-4,B3-4,A1-4") - IMMER speichern wenn vorhanden
   const knotenParam = params.get('knoten');
   if (knotenParam) {
-    const knoten = knotenParam.split(',');
-    console.log('Generator-Knoten:', knoten);
+    generatorKnoten = knotenParam.split(',');
+    console.log('Generator-Knoten:', generatorKnoten);
+  }
+  
+  // Volles Profil vom Generator (z.B. "A1:3,A2:4,B1:2,...")
+  const profilParam = params.get('profil');
+  if (profilParam) {
+    const profil = parseGeneratorProfil(profilParam);
+    console.log('Generator-Profil:', profil);
     
-    // Zeige Willkommens-Banner
+    // Öffne "Wo stehe ich?" mit dem Profil
+    setTimeout(() => {
+      openWerkzeug('konfigurator');
+      showGeneratorProfil(profil, archetypParam, params.get('name'));
+    }, 500);
+  } else if (knotenParam) {
+    // Nur Knoten ohne Profil - alte Logik
     setTimeout(() => {
       const zimmer = params.get('zimmer') || 'Dein Ort im Wesen';
-      showWelcomeBanner(zimmer, knoten, archetypParam);
+      showWelcomeBanner(zimmer, generatorKnoten, archetypParam);
     }, 800);
     
-    // Highlighte die Knoten im Netzwerk
     setTimeout(() => {
-      highlightGeneratorKnoten(knoten);
+      highlightGeneratorKnoten(generatorKnoten);
     }, 1200);
   }
   
@@ -9383,17 +12455,6 @@ function showWelcomeBanner(zimmer, knoten, archetyp) {
 
 // Highlighte Knoten aus dem Generator
 function highlightGeneratorKnoten(knotenIds) {
-  // Im 3D-Netzwerk: Knoten hervorheben
-  if (nodes3d && nodes3d.length > 0) {
-    nodes3d.forEach(node => {
-      if (knotenIds.includes(node.id)) {
-        node.highlighted = true;
-        node.size = 1.5; // Größer
-      }
-    });
-    renderNetzwerk3D();
-  }
-  
   // Im 2D-Modus: Rahmen hinzufügen
   knotenIds.forEach(id => {
     const el = document.querySelector(`[data-knoten-id="${id}"]`);
@@ -9407,6 +12468,263 @@ function highlightGeneratorKnoten(knotenIds) {
   if (knotenIds.length > 0 && knotenData[knotenIds[0]]) {
     setTimeout(() => showKnoten(knotenIds[0]), 2000);
   }
+}
+
+// ══════════════════════════════════════════════════════════════════════
+// GENERATOR-PROFIL VERARBEITUNG
+// ══════════════════════════════════════════════════════════════════════
+
+// Parse "A1:3,A2:4,B1:2,..." zu {A1: 3, A2: 4, B1: 2, ...}
+function parseGeneratorProfil(profilString) {
+  const profil = {};
+  profilString.split(',').forEach(pair => {
+    const [achse, wert] = pair.split(':');
+    if (achse && wert) {
+      profil[achse.trim()] = parseInt(wert.trim());
+    }
+  });
+  return profil;
+}
+
+// Zeigt das Generator-Profil im Konfigurator
+function showGeneratorProfil(profil, archetyp, name) {
+  generatorProfil = profil;
+  generatorArchetyp = archetyp;
+  generatorName = name;
+  
+  // Setze die Auswahl im Konfigurator
+  Object.entries(profil).forEach(([achse, wert]) => {
+    konfigAuswahl[achse] = wert;
+  });
+  
+  // Konfigurator mit Generator-Modus neu rendern
+  renderKonfiguratorMitProfil();
+}
+
+// Berechnet Ähnlichkeit zwischen Profil und einem Knoten
+function berechneProfilMatch(profil, knotenId) {
+  const knoten = knotenData[knotenId];
+  if (!knoten) return 0;
+  
+  // Extrahiere Achse und Position aus Knoten-ID (z.B. "A1-3" → A1, 3)
+  const match = knotenId.match(/^([A-F]\d)-(\d)$/);
+  if (!match) return 0;
+  
+  const achse = match[1];
+  const position = parseInt(match[2]);
+  
+  // Hat das Profil einen Wert für diese Achse?
+  if (profil[achse] !== undefined) {
+    const diff = Math.abs(profil[achse] - position);
+    return Math.max(0, 100 - diff * 25); // 0 diff = 100%, 1 diff = 75%, etc.
+  }
+  
+  return 0;
+}
+
+// Finde alle Knoten sortiert nach Übereinstimmung mit dem Profil
+function findeNachbarn(profil, limit = 10) {
+  const ergebnisse = [];
+  
+  Object.keys(knotenData).forEach(id => {
+    // Für jeden Knoten: Berechne Gesamtübereinstimmung
+    const match = id.match(/^([A-F]\d)-(\d)$/);
+    if (!match) return;
+    
+    const achse = match[1];
+    const position = parseInt(match[2]);
+    
+    if (profil[achse] !== undefined) {
+      const diff = Math.abs(profil[achse] - position);
+      const score = 100 - diff * 25;
+      
+      if (score > 0) {
+        ergebnisse.push({
+          id,
+          knoten: knotenData[id],
+          achse,
+          position,
+          profilWert: profil[achse],
+          score,
+          exakt: diff === 0
+        });
+      }
+    }
+  });
+  
+  // Sortiere nach Score (höchste zuerst)
+  ergebnisse.sort((a, b) => b.score - a.score);
+  
+  return ergebnisse.slice(0, limit);
+}
+
+// Rendert den Konfigurator mit dem Generator-Profil
+function renderKonfiguratorMitProfil() {
+  const container = document.getElementById('konfigurator-container');
+  if (!container) return;
+  
+  const profil = generatorProfil || {};
+  const archetyp = generatorArchetyp;
+  const name = generatorName;
+  
+  // Achsen-Definition
+  const achsen = [
+    { id: 'A1', name: 'Reform ↔ Revolution', pole: ['Reform', 'Strukturref.', 'Doppel', 'Hegemonie', 'Alternativ'] },
+    { id: 'A2', name: 'Rev. Subjekt', pole: ['Industrie', 'Lohnabh.', 'Multitude', 'Intersekt.', 'Leben'] },
+    { id: 'A3', name: 'Staat', pole: ['Erobern', 'Umbauen', 'Terrain', 'Ignorieren', 'Abschaffen'] },
+    { id: 'A4', name: 'Organisation', pole: ['Zentral', 'Partei', 'Bewegung', 'Netzwerk', 'Basis'] },
+    { id: 'B1', name: 'Markt ↔ Plan', pole: ['Markt', 'Reguliert', 'Mischung', 'Dem.Plan', 'Vollplan'] },
+    { id: 'B2', name: 'Eigentum', pole: ['Staat', 'Öffentl.', 'Gemischt', 'Genoss.', 'Commons'] },
+    { id: 'B3', name: 'Arbeit', pole: ['Vollbesch.', 'Gute Arb.', 'Reduktion', 'BGE', 'Post-Work'] },
+    { id: 'C1', name: 'Feminismus', pole: ['Klasse', 'Sozial.', 'Dual', 'Intersekt.', 'Radikal'] },
+    { id: 'C2', name: 'Natur', pole: ['Produktiv.', 'Grün', 'Nachhaltig', 'Ökosoz.', 'Rechte'] },
+    { id: 'C3', name: 'International', pole: ['National', 'Solidar.', 'Kooper.', 'Global', 'No Border'] },
+    { id: 'D1', name: 'Utopie', pole: ['Anti', 'Negativ', 'Prozess', 'Real', 'Konkret'] },
+    { id: 'D2', name: 'Transformation', pole: ['Graduell', 'Interstit.', 'Symbiot.', 'Rupturell', 'Revolution'] },
+    { id: 'D3', name: 'Spiritualität', pole: ['Säkular', 'Offen', 'Ökumen.', 'Spirit.', 'Mystisch'] },
+    { id: 'E1', name: 'Bündnisse', pole: ['Klasse', 'Kern', 'Breit', 'Bewegung', 'Alle'] },
+    { id: 'E2', name: 'Ebenen', pole: ['Zentral', 'Föderal', 'Multi', 'Kommun.', 'Basis'] },
+    { id: 'E3', name: 'Bildung', pole: ['Aufklär.', 'Theorie', 'Praxis', 'Erfahrung', 'Präfig.'] },
+    { id: 'E4', name: 'Mittel', pole: ['Legal', 'Zivil', 'Aktionen', 'Militant', 'Alles'] }
+  ];
+  
+  const hatProfil = Object.keys(profil).length > 0;
+  const aktuelleAuswahl = hatProfil ? profil : konfigAuswahl;
+  const anzahlGewählt = Object.keys(aktuelleAuswahl).length;
+  
+  let html = '';
+  
+  // Header
+  if (hatProfil) {
+    html += `
+      <div class="konfig-generator-header">
+        <div class="konfig-generator-icon">🎯</div>
+        <div>
+          <h2>Dein Profil im Wesen</h2>
+          ${archetyp ? `<p class="archetyp-name">${archetyp}</p>` : ''}
+          <p class="konfig-subtitle">Vom Sozialismus-Generator</p>
+        </div>
+      </div>
+    `;
+  } else {
+    html += `
+      <div class="konfig-header">
+        <h2>🎛️ Wo stehe ich?</h2>
+        <p>Wähle auf jeder Achse deine Position</p>
+        <span class="konfig-hint">💡 <a href="../" style="color: #C62828;">Sozialismus-Generator</a> für ausführliche Analyse</span>
+      </div>
+    `;
+  }
+  
+  // Haupt-Layout: Zwei Spalten
+  html += `<div class="konfig-main">`;
+  
+  // Linke Spalte: Achsen-Grid
+  html += `<div class="konfig-achsen">`;
+  html += `<div class="konfig-achsen-header">${hatProfil ? 'Dein Profil auf 17 Achsen' : 'Wähle deine Positionen'}</div>`;
+  
+  achsen.forEach(achse => {
+    const wert = aktuelleAuswahl[achse.id];
+    const hatWert = wert !== undefined;
+    
+    html += `<div class="konfig-achse ${hatWert ? 'has-value' : ''}">`;
+    html += `<div class="konfig-achse-header">`;
+    html += `<span class="konfig-achse-id">${achse.id}</span>`;
+    html += `<span class="konfig-achse-name">${achse.name}</span>`;
+    html += `</div>`;
+    
+    html += `<div class="konfig-slider">`;
+    achse.pole.forEach((pol, i) => {
+      const pos = i + 1;
+      const selected = wert === pos ? 'selected' : '';
+      const clickable = !hatProfil ? `onclick="selectKonfig('${achse.id}', ${pos})"` : '';
+      html += `<div class="konfig-option ${selected}" ${clickable} title="${pol}">${pos}</div>`;
+    });
+    html += `</div>`;
+    
+    html += `</div>`;
+  });
+  
+  html += `</div>`; // Ende Achsen
+  
+  // Rechte Spalte: Sidebar mit Nachbarn
+  html += `<div class="konfig-sidebar">`;
+  
+  if (anzahlGewählt >= 3) {
+    const nachbarn = findeNachbarn(aktuelleAuswahl, 10);
+    const exakte = nachbarn.filter(n => n.exakt);
+    const nahe = nachbarn.filter(n => !n.exakt);
+    
+    html += `<div class="konfig-nachbarn">`;
+    html += `<h3>🏠 Deine Positionen</h3>`;
+    
+    if (exakte.length > 0) {
+      html += `<div class="nachbarn-gruppe">`;
+      html += `<div class="nachbarn-label">Genau deine Position</div>`;
+      html += `<div class="nachbarn-liste">`;
+      exakte.forEach(n => {
+        html += `<div class="nachbar-card exakt" onclick="showKnoten('${n.id}'); closeAllWerkzeuge();">
+          <span class="nachbar-name">${n.knoten.name}</span>
+          <span class="nachbar-id">${n.id}</span>
+        </div>`;
+      });
+      html += `</div></div>`;
+    }
+    
+    if (nahe.length > 0) {
+      html += `<div class="nachbarn-gruppe">`;
+      html += `<div class="nachbarn-label">In deiner Nähe</div>`;
+      html += `<div class="nachbarn-liste">`;
+      nahe.slice(0, 6).forEach(n => {
+        html += `<div class="nachbar-card nahe" onclick="showKnoten('${n.id}'); closeAllWerkzeuge();">
+          <span class="nachbar-name">${n.knoten.name}</span>
+          <span class="nachbar-match">${n.score}%</span>
+        </div>`;
+      });
+      html += `</div></div>`;
+    }
+    
+    // Actions
+    html += `<div class="konfig-actions">`;
+    html += `<button class="konfig-btn primary" onclick="zeigeProfilImHaus();">🏠 Ins eigene Zimmer</button>`;
+    if (hatProfil) {
+      html += `<button class="konfig-btn" onclick="generatorProfil=null; konfigAuswahl={}; renderKonfiguratorMitProfil();">🔄 Manuell</button>`;
+    } else {
+      html += `<button class="konfig-btn" onclick="konfigAuswahl={}; renderKonfiguratorMitProfil();">🔄 Reset</button>`;
+    }
+    html += `</div>`;
+    
+    html += `</div>`; // Ende Nachbarn
+  } else {
+    // Noch nicht genug gewählt
+    html += `<div class="konfig-nachbarn">`;
+    html += `<div class="konfig-hint-box">`;
+    html += `<span class="count">${anzahlGewählt}/3</span>`;
+    html += `Wähle mindestens 3 Achsen um deine Nachbarn zu sehen`;
+    html += `</div>`;
+    html += `</div>`;
+  }
+  
+  html += `</div>`; // Ende Sidebar
+  html += `</div>`; // Ende Main
+  
+  container.innerHTML = html;
+}
+
+// Zeigt das Profil in der WG/Haus-Ansicht
+function zeigeProfilImHaus() {
+  // Zur WG-Ansicht wechseln und Funktional-Modus rendern (Default)
+  setAnsicht('wg');
+  
+  // Kurz warten, dann rendern mit Profil
+  setTimeout(() => {
+    renderHaus('funktional');
+  }, 100);
+}
+
+// Legacy-Funktion für Kompatibilität
+function highlightMeineWG(knoten, profil) {
+  // Wird jetzt direkt in renderHaus gemacht
 }
 
 parseUrlParams();
