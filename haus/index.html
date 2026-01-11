@@ -2907,31 +2907,6 @@
       gap: 1.5rem;
     }
     
-    /* ═══════════════════════════════════════════════════════════════
-       TABLET: Fixes für mittlere Bildschirme (600-900px)
-       ═══════════════════════════════════════════════════════════════ */
-    @media (max-width: 900px) and (min-width: 601px) {
-      .drei-zimmer-grid {
-        grid-template-columns: 1fr !important;
-        gap: 1rem;
-      }
-      
-      .empfohlenes-zimmer {
-        padding: 1rem;
-      }
-      
-      .dein-platz {
-        padding: 1rem;
-        margin: 0 0.5rem 1rem 0.5rem;
-      }
-      
-      .dein-platz-header {
-        flex-direction: column;
-        text-align: center;
-        gap: 0.5rem;
-      }
-    }
-    
     @media (max-width: 800px) {
       .reaktor-body {
         grid-template-columns: 1fr;
@@ -4524,6 +4499,48 @@
     }
     .empf-popup-mehr:hover {
       background: rgba(229,57,53,0.3);
+    }
+    
+    /* ═══════════════════════════════════════════════════════════════
+       MOBILE/TABLET: Hier wirst du gebraucht - Cards untereinander
+       ═══════════════════════════════════════════════════════════════ */
+    @media (max-width: 900px) {
+      .dein-platz {
+        padding: 1rem;
+        margin: 0 0 1rem 0;
+        overflow: hidden;
+      }
+      
+      .dein-platz-header {
+        flex-direction: column;
+        text-align: center;
+        gap: 0.5rem;
+      }
+      
+      .dein-platz-header h2 {
+        font-size: 1.1rem;
+      }
+      
+      .dein-platz-header p {
+        font-size: 0.8rem;
+      }
+      
+      .drei-zimmer-grid {
+        grid-template-columns: 1fr !important;
+        gap: 0.75rem;
+      }
+      
+      .empfohlenes-zimmer {
+        padding: 0.85rem;
+      }
+      
+      .empf-zimmer-name {
+        font-size: 0.95rem;
+      }
+      
+      .empf-zimmer-frage {
+        font-size: 0.75rem;
+      }
     }
     
     /* ═══════════════════════════════════════════════════════════════
@@ -15178,7 +15195,8 @@ function highlightGeneratorKnoten(knotenIds) {
   });
   
   // Öffne das erste Knoten-Detail nach kurzer Verzögerung
-  if (knotenIds.length > 0 && knotenData[knotenIds[0]]) {
+  // NUR auf Desktop - auf Mobile stört das Fullscreen-Panel
+  if (knotenIds.length > 0 && knotenData[knotenIds[0]] && window.innerWidth > 768) {
     setTimeout(() => showKnoten(knotenIds[0]), 2000);
   }
 }
