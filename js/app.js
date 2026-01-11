@@ -2647,8 +2647,9 @@ const Layer3 = ({ profilL1, profilL2, onBack, onLiteratur, apiKey, paramsL1, par
 // LAYER 0 - STARTSEITE (BAUHAUS)
 // ═══════════════════════════════════════════════════════════════════════════
 
-const Layer0 = ({ onStart }) => {
+const Layer0 = ({ onStart, onStartL2, onWesen }) => {
   const [showInfo, setShowInfo] = useState(false);
+  const [showOptions, setShowOptions] = useState(false);
   
   return (
     <div style={{ 
@@ -2716,113 +2717,147 @@ const Layer0 = ({ onStart }) => {
       {/* Hauptinhalt */}
       <div style={{ textAlign: 'center', maxWidth: '800px', zIndex: 1 }}>
         
-        {/* Titel - Bauhaus-Stil */}
-        <div style={{ marginBottom: '1rem' }}>
-          <span style={{
-            display: 'inline-block',
-            background: COLORS.rot,
-            color: 'white',
-            padding: '0.5rem 1.5rem',
-            fontSize: '1rem',
-            fontWeight: 700,
-            letterSpacing: '0.2em',
-            textTransform: 'uppercase'
-          }}>
-            Die Linke
-          </span>
-        </div>
-        
-        <h1 style={{
-          fontSize: 'clamp(3rem, 10vw, 6rem)',
-          fontWeight: 900,
-          color: COLORS.schwarz,
-          margin: '0 0 0.5rem',
-          lineHeight: 0.95,
-          letterSpacing: '-0.03em'
-        }}>
+        {/* Klickbarer Titel */}
+        <h1 
+          onClick={() => setShowOptions(!showOptions)}
+          style={{
+            fontSize: 'clamp(3rem, 10vw, 6rem)',
+            fontWeight: 900,
+            color: COLORS.schwarz,
+            margin: '0 0 2rem',
+            lineHeight: 0.95,
+            letterSpacing: '-0.03em',
+            cursor: 'pointer',
+            transition: 'all 0.3s',
+            userSelect: 'none'
+          }}
+          onMouseEnter={(e) => {
+            e.target.style.color = COLORS.rot;
+          }}
+          onMouseLeave={(e) => {
+            e.target.style.color = COLORS.schwarz;
+          }}
+        >
           SOZIALISMUS
         </h1>
         
-        <h2 style={{
-          fontSize: 'clamp(2rem, 6vw, 3.5rem)',
-          fontWeight: 300,
-          color: COLORS.rot,
-          margin: '0 0 2rem',
-          letterSpacing: '0.1em'
-        }}>
-          GENERATOR
-        </h2>
-        
-        {/* Untertitel */}
-        <p style={{
-          fontSize: '1.1rem',
-          color: COLORS.grau,
-          maxWidth: '500px',
-          margin: '0 auto 3rem',
-          lineHeight: 1.6
-        }}>
-          Finde heraus, wie links du bist,<br/>
-          welcher Sozialismus zu dir passt<br/>
-          und wo du über das Parteiprogramm hinausgehst.
-        </p>
-        
-        {/* Start-Button */}
-        <button
-          onClick={onStart}
-          style={{
-            padding: '1.25rem 3rem',
-            fontSize: '1.1rem',
-            fontWeight: 700,
-            background: COLORS.schwarz,
-            color: 'white',
-            border: 'none',
-            cursor: 'pointer',
-            letterSpacing: '0.1em',
-            textTransform: 'uppercase',
-            transition: 'all 0.2s'
-          }}
-          onMouseEnter={(e) => {
-            e.target.style.background = COLORS.rot;
-          }}
-          onMouseLeave={(e) => {
-            e.target.style.background = COLORS.schwarz;
-          }}
-        >
-          Starten →
-        </button>
-        
-        {/* 3 Layer Vorschau */}
+        {/* Drei Optionen - erscheinen nach Klick */}
         <div style={{
-          display: 'flex',
-          justifyContent: 'center',
-          gap: '2rem',
-          marginTop: '4rem',
-          flexWrap: 'wrap'
+          maxHeight: showOptions ? '400px' : '0',
+          overflow: 'hidden',
+          transition: 'max-height 0.5s ease, opacity 0.3s ease',
+          opacity: showOptions ? 1 : 0
         }}>
-          {[
-            { num: '01', title: 'Wie links?', color: COLORS.rot },
-            { num: '02', title: 'Welcher Sozialismus?', color: COLORS.schwarz },
-            { num: '03', title: 'Parteiprogramm-Check', color: COLORS.grau }
-          ].map((item, i) => (
-            <div key={i} style={{ textAlign: 'center' }}>
-              <div style={{
-                fontSize: '2rem',
-                fontWeight: 900,
-                color: item.color,
-                lineHeight: 1
-              }}>
-                {item.num}
-              </div>
-              <div style={{
-                fontSize: '0.75rem',
-                color: COLORS.grau,
+          <div style={{
+            display: 'flex',
+            flexDirection: 'column',
+            gap: '1rem',
+            marginBottom: '2rem',
+            maxWidth: '400px',
+            margin: '0 auto 2rem'
+          }}>
+            {/* Option 1: Bin ich links? */}
+            <button
+              onClick={onStart}
+              style={{
+                padding: '1.25rem 2rem',
+                fontSize: '1.1rem',
+                fontWeight: 700,
+                background: 'transparent',
+                color: COLORS.schwarz,
+                border: `3px solid ${COLORS.schwarz}`,
+                cursor: 'pointer',
                 letterSpacing: '0.05em',
-                marginTop: '0.25rem'
-              }}>
-                {item.title}
+                transition: 'all 0.2s',
+                textAlign: 'left',
+                display: 'flex',
+                alignItems: 'center',
+                gap: '1rem'
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.background = COLORS.schwarz;
+                e.currentTarget.style.color = 'white';
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.background = 'transparent';
+                e.currentTarget.style.color = COLORS.schwarz;
+              }}
+            >
+              <span style={{ fontSize: '1.5rem' }}>❓</span>
+              <div>
+                <div>Bin ich links?</div>
+                <div style={{ fontSize: '0.75rem', fontWeight: 400, opacity: 0.7 }}>Schnelltest in 5 Minuten</div>
               </div>
-            </div>
-          ))}
+            </button>
+            
+            {/* Option 2: Wie links bin ich? */}
+            <button
+              onClick={onStartL2}
+              style={{
+                padding: '1.25rem 2rem',
+                fontSize: '1.1rem',
+                fontWeight: 700,
+                background: 'transparent',
+                color: COLORS.rot,
+                border: `3px solid ${COLORS.rot}`,
+                cursor: 'pointer',
+                letterSpacing: '0.05em',
+                transition: 'all 0.2s',
+                textAlign: 'left',
+                display: 'flex',
+                alignItems: 'center',
+                gap: '1rem'
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.background = COLORS.rot;
+                e.currentTarget.style.color = 'white';
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.background = 'transparent';
+                e.currentTarget.style.color = COLORS.rot;
+              }}
+            >
+              <span style={{ fontSize: '1.5rem' }}>🔍</span>
+              <div>
+                <div>Wie links bin ich?</div>
+                <div style={{ fontSize: '0.75rem', fontWeight: 400, opacity: 0.7 }}>Ausführliche Analyse</div>
+              </div>
+            </button>
+            
+            {/* Option 3: Das Linke Wesen */}
+            <button
+              onClick={onWesen}
+              style={{
+                padding: '1.25rem 2rem',
+                fontSize: '1.1rem',
+                fontWeight: 700,
+                background: 'transparent',
+                color: COLORS.grau,
+                border: `3px solid ${COLORS.grau}`,
+                cursor: 'pointer',
+                letterSpacing: '0.05em',
+                transition: 'all 0.2s',
+                textAlign: 'left',
+                display: 'flex',
+                alignItems: 'center',
+                gap: '1rem'
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.background = COLORS.grau;
+                e.currentTarget.style.color = 'white';
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.background = 'transparent';
+                e.currentTarget.style.color = COLORS.grau;
+              }}
+            >
+              <span style={{ fontSize: '1.5rem' }}>🔮</span>
+              <div>
+                <div>Das Linke Wesen</div>
+                <div style={{ fontSize: '0.75rem', fontWeight: 400, opacity: 0.7 }}>Erkunde alle Positionen</div>
+              </div>
+            </button>
+          </div>
         </div>
       </div>
       
@@ -2861,62 +2896,29 @@ const Layer0 = ({ onStart }) => {
                 border: 'none',
                 fontSize: '1.5rem',
                 cursor: 'pointer',
-                color: COLORS.grau
+                color: COLORS.schwarz
               }}
             >
               ×
             </button>
             
-            <h3 style={{ 
-              margin: '0 0 1.5rem', 
-              color: COLORS.schwarz,
-              fontSize: '1.5rem',
-              fontWeight: 700
-            }}>
-              Über dieses Projekt
-            </h3>
+            <h3 style={{ color: COLORS.schwarz, marginBottom: '1rem' }}>Über dieses Projekt</h3>
             
-            <p style={{ 
-              margin: '0 0 1rem', 
-              lineHeight: 1.7,
-              color: COLORS.schwarz
-            }}>
-              Der <strong>Sozialismus-Generator</strong> ist ein interaktives Tool, 
-              um politische Positionen spielerisch zu erkunden und mit dem 
-              Programm der Linken zu vergleichen.
+            <p style={{ color: COLORS.grau, marginBottom: '1rem', lineHeight: 1.6 }}>
+              Der <strong>Sozialismus-Generator</strong> hilft dir, deine politische Position innerhalb des linken Spektrums zu verorten.
             </p>
             
-            <p style={{ 
-              margin: '0 0 1.5rem', 
-              lineHeight: 1.7,
-              color: COLORS.schwarz
-            }}>
-              Erstellt von <strong>Demien Bartók</strong> (Halle/Saale) unter 
-              Verwendung der KIs <strong>Claude</strong> (Anthropic), 
-              <strong> Gemini</strong> (Google) und <strong>Groq</strong>.
+            <p style={{ color: COLORS.grau, marginBottom: '1rem', lineHeight: 1.6 }}>
+              <strong>Bin ich links?</strong> – Ein Schnelltest zu grundlegenden Fragen.
             </p>
             
-            <div style={{
-              background: '#FFF3E0',
-              padding: '1rem',
-              borderLeft: `4px solid ${COLORS.orange}`,
-              fontSize: '0.85rem',
-              lineHeight: 1.6
-            }}>
-              <strong>Hinweis:</strong> Groq ist ein KI-Infrastruktur-Unternehmen 
-              und hat <em>nichts</em> mit Elon Musks „Grok" zu tun. 
-              Groq ≠ Grok!
-            </div>
+            <p style={{ color: COLORS.grau, marginBottom: '1rem', lineHeight: 1.6 }}>
+              <strong>Wie links bin ich?</strong> – Eine ausführliche Analyse deiner politischen Positionen auf 17 Achsen.
+            </p>
             
-            <div style={{
-              marginTop: '1.5rem',
-              paddingTop: '1.5rem',
-              borderTop: `1px solid ${COLORS.grau}30`,
-              fontSize: '0.8rem',
-              color: COLORS.grau
-            }}>
-              Die Linke · Kreisverband Halle · 2025
-            </div>
+            <p style={{ color: COLORS.grau, marginBottom: '1rem', lineHeight: 1.6 }}>
+              <strong>Das Linke Wesen</strong> – Eine interaktive Kartografie aller linken Ideen, Positionen und Debatten.
+            </p>
           </div>
         </div>
       )}
@@ -3259,7 +3261,11 @@ const App = () => {
 
   // Layer 0 - Intro (keine Nav)
   if (layer === 0) {
-    return <Layer0 onStart={() => { setLayer(1); markVisited(1); }} />;
+    return <Layer0 
+      onStart={() => { setLayer(1); markVisited(1); }}
+      onStartL2={() => { setLayer(2); markVisited(2); }}
+      onWesen={() => { window.location.href = 'haus/index.html'; }}
+    />;
   }
 
   // Wrapper mit Navigation für Layer 1-3
