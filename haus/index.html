@@ -3695,6 +3695,357 @@
     }
     
     /* ═══════════════════════════════════════════════════════════════
+       ZIMMER-FINDER
+       ═══════════════════════════════════════════════════════════════ */
+    .zimmer-finder-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0,0,0,0.85);
+      z-index: 20000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1rem;
+      animation: fadeIn 0.3s ease;
+    }
+    
+    .zimmer-finder-modal {
+      background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+      border: 2px solid #E53935;
+      border-radius: 16px;
+      max-width: 550px;
+      width: 100%;
+      max-height: 90vh;
+      overflow-y: auto;
+      padding: 1.5rem;
+      box-shadow: 0 20px 60px rgba(229,57,53,0.3);
+    }
+    
+    .zimmer-finder-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1.5rem;
+      padding-bottom: 1rem;
+      border-bottom: 1px solid rgba(229,57,53,0.3);
+    }
+    .zimmer-finder-header.ergebnis {
+      flex-direction: column;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    
+    .zimmer-finder-archetyp {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .archetyp-icon {
+      font-size: 1.75rem;
+    }
+    .archetyp-name {
+      color: #fff;
+      font-weight: 600;
+      font-size: 1rem;
+    }
+    
+    .zimmer-finder-progress {
+      color: #888;
+      font-size: 0.85rem;
+    }
+    .zimmer-finder-titel {
+      color: #E53935;
+      font-size: 1.1rem;
+      font-weight: 600;
+    }
+    
+    .zimmer-finder-frage h2 {
+      color: #fff;
+      font-size: 1.3rem;
+      margin: 0 0 0.5rem 0;
+    }
+    .frage-text {
+      color: #aaa;
+      font-size: 0.9rem;
+      margin: 0 0 1.25rem 0;
+    }
+    
+    .zimmer-finder-optionen {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+    
+    .zf-option {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      padding: 0.75rem 1rem;
+      background: rgba(255,255,255,0.03);
+      border: 1px solid #333;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .zf-option:hover {
+      background: rgba(255,255,255,0.06);
+      border-color: #555;
+    }
+    .zf-option.selected {
+      background: rgba(229,57,53,0.1);
+      border-color: #E53935;
+    }
+    
+    .zf-radio {
+      width: 18px;
+      height: 18px;
+      border: 2px solid #555;
+      border-radius: 50%;
+      flex-shrink: 0;
+      position: relative;
+    }
+    .zf-radio.checked {
+      border-color: #E53935;
+    }
+    .zf-radio.checked::after {
+      content: '';
+      position: absolute;
+      top: 3px;
+      left: 3px;
+      width: 8px;
+      height: 8px;
+      background: #E53935;
+      border-radius: 50%;
+    }
+    
+    .zf-option-text {
+      flex: 1;
+      color: #ccc;
+      font-size: 0.9rem;
+      line-height: 1.4;
+    }
+    .zf-option.selected .zf-option-text {
+      color: #fff;
+    }
+    
+    .zf-option-wert {
+      width: 24px;
+      height: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #333;
+      border-radius: 50%;
+      color: #888;
+      font-size: 0.75rem;
+      font-weight: 600;
+    }
+    .zf-option.selected .zf-option-wert {
+      background: #E53935;
+      color: #fff;
+    }
+    
+    .zimmer-finder-actions {
+      display: flex;
+      gap: 0.75rem;
+      margin-top: 1.5rem;
+      padding-top: 1rem;
+      border-top: 1px solid rgba(255,255,255,0.1);
+    }
+    .zimmer-finder-actions.ergebnis {
+      justify-content: center;
+    }
+    
+    .zf-btn {
+      padding: 0.75rem 1.25rem;
+      border-radius: 25px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .zf-btn.primary {
+      flex: 1;
+      background: linear-gradient(135deg, #E53935, #C62828);
+      border: none;
+      color: #fff;
+    }
+    .zf-btn.primary:hover {
+      transform: scale(1.02);
+      box-shadow: 0 4px 15px rgba(229,57,53,0.4);
+    }
+    .zf-btn.primary.gross {
+      padding: 1rem 2rem;
+      font-size: 1rem;
+    }
+    .zf-btn.secondary {
+      background: transparent;
+      border: 1px solid #555;
+      color: #aaa;
+    }
+    .zf-btn.secondary:hover {
+      border-color: #888;
+      color: #ddd;
+    }
+    
+    /* Zimmer-Finder Ergebnis */
+    .zimmer-finder-ergebnis {
+      padding: 0.5rem 0;
+    }
+    
+    .zf-hauptzimmer {
+      background: rgba(229,57,53,0.1);
+      border: 1px solid rgba(229,57,53,0.3);
+      border-radius: 12px;
+      padding: 1rem;
+      margin-bottom: 1rem;
+    }
+    .zf-badge {
+      display: inline-block;
+      padding: 0.2rem 0.6rem;
+      background: #E53935;
+      border-radius: 12px;
+      color: #fff;
+      font-size: 0.7rem;
+      font-weight: 600;
+      margin-bottom: 0.6rem;
+    }
+    .zf-zimmer-header {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.6rem;
+      margin-bottom: 0.75rem;
+    }
+    .zf-etage-icon {
+      font-size: 1.5rem;
+    }
+    .zf-zimmer-header h3 {
+      color: #fff;
+      font-size: 1rem;
+      margin: 0 0 0.2rem 0;
+    }
+    .zf-achse {
+      color: #888;
+      font-size: 0.75rem;
+    }
+    
+    .zf-position {
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      margin-bottom: 0.75rem;
+      padding: 0.4rem 0.6rem;
+      background: rgba(255,255,255,0.05);
+      border-radius: 6px;
+    }
+    .zf-pos-label {
+      color: #888;
+      font-size: 0.75rem;
+    }
+    .zf-pos-wert {
+      width: 22px;
+      height: 22px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #E53935;
+      border-radius: 50%;
+      color: #fff;
+      font-weight: 700;
+      font-size: 0.8rem;
+    }
+    .zf-pos-name {
+      color: #ddd;
+      font-size: 0.85rem;
+      font-weight: 500;
+    }
+    
+    .zf-aufgabe {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.5rem;
+      padding: 0.6rem;
+      background: rgba(76,175,80,0.1);
+      border: 1px solid rgba(76,175,80,0.2);
+      border-radius: 6px;
+    }
+    .zf-aufgabe-icon {
+      font-size: 1rem;
+    }
+    .zf-aufgabe p {
+      color: #bbb;
+      font-size: 0.8rem;
+      line-height: 1.4;
+      margin: 0;
+    }
+    
+    .zf-weitere-titel {
+      color: #888;
+      font-size: 0.8rem;
+      margin-bottom: 0.4rem;
+    }
+    .zf-weitere-liste {
+      display: flex;
+      flex-direction: column;
+      gap: 0.3rem;
+      margin-bottom: 1rem;
+    }
+    .zf-weiteres-zimmer {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.4rem 0.6rem;
+      background: rgba(255,255,255,0.03);
+      border: 1px solid #333;
+      border-radius: 6px;
+    }
+    .zf-weiteres-icon {
+      font-size: 1.1rem;
+    }
+    .zf-weiteres-name {
+      color: #ddd;
+      font-size: 0.8rem;
+      font-weight: 500;
+    }
+    .zf-weiteres-pos {
+      color: #888;
+      font-size: 0.7rem;
+      display: block;
+    }
+    
+    .zf-wg-empfehlung {
+      padding: 0.75rem;
+      background: rgba(156,39,176,0.08);
+      border: 1px solid rgba(156,39,176,0.2);
+      border-radius: 8px;
+    }
+    .zf-wg-label {
+      color: #9C27B0;
+      font-size: 0.8rem;
+      font-weight: 600;
+      margin-bottom: 0.4rem;
+    }
+    .zf-wg-liste {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+    }
+    .zf-wg-item {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.3rem;
+      padding: 0.25rem 0.5rem;
+      background: #222;
+      border: 1px solid var(--accent, #666);
+      border-radius: 15px;
+      font-size: 0.75rem;
+      color: #ccc;
+    }
+    
+    /* ═══════════════════════════════════════════════════════════════
        WG-DEBATTE POPUP
        ═══════════════════════════════════════════════════════════════ */
     .wg-debatte-overlay {
@@ -12666,6 +13017,14 @@ function parseUrlParams() {
       openWerkzeug('konfigurator');
       showGeneratorProfil(profil, archetypParam, params.get('name'));
     }, 500);
+  } else if (archetypParam && window.archetypen && window.archetypen[archetypParam]) {
+    // NUR Archetyp ohne Profil → Zimmer-Finder starten
+    console.log('Archetyp erkannt:', archetypParam);
+    
+    // Zimmer-Finder öffnen
+    setTimeout(() => {
+      starteZimmerFinder(archetypParam);
+    }, 300);
   } else if (knotenParam) {
     // Nur Knoten ohne Profil - alte Logik
     setTimeout(() => {
@@ -13011,8 +13370,491 @@ function zeigeProfilImHaus() {
 }
 
 // ═══════════════════════════════════════════════════════════════
-// DEIN PLATZ IM LINKEN WESEN
+// ZIMMER-FINDER: Personalisierte Fragen nach Archetyp
 // ═══════════════════════════════════════════════════════════════
+
+// Fragen-Texte pro Achse (generisch, für alle Archetypen)
+const zimmerFinderAchsenFragen = {
+  A1: {
+    titel: 'Reform oder Revolution?',
+    frage: 'Wie erreichst du gesellschaftliche Veränderung?',
+    optionen: [
+      { wert: 1, text: 'Schrittweise Reformen im bestehenden System' },
+      { wert: 2, text: 'Strukturreformen, die das System verbessern' },
+      { wert: 3, text: 'Doppelstrategie: Reformen nutzen, Systemwechsel vorbereiten' },
+      { wert: 4, text: 'Gegen-Hegemonie aufbauen, dann transformieren' },
+      { wert: 5, text: 'Revolutionärer Bruch – das System muss fallen' }
+    ]
+  },
+  A2: {
+    titel: 'Wer macht die Revolution?',
+    frage: 'Wer ist das Subjekt der Veränderung?',
+    optionen: [
+      { wert: 1, text: 'Die industrielle Arbeiterklasse' },
+      { wert: 2, text: 'Alle Lohnabhängigen gemeinsam' },
+      { wert: 3, text: 'Die Multitude – alle Ausgebeuteten' },
+      { wert: 4, text: 'Intersektionale Allianzen verschiedener Kämpfe' },
+      { wert: 5, text: 'Alles Leben – Menschen, Tiere, Natur' }
+    ]
+  },
+  A3: {
+    titel: 'Was tun mit dem Staat?',
+    frage: 'Wie stehst du zum Staat als Mittel der Veränderung?',
+    optionen: [
+      { wert: 1, text: 'Den Staat erobern und für uns nutzen' },
+      { wert: 2, text: 'Den Staat demokratisch umbauen' },
+      { wert: 3, text: 'Der Staat ist umkämpftes Terrain' },
+      { wert: 4, text: 'Parallelstrukturen aufbauen, Staat ignorieren' },
+      { wert: 5, text: 'Den Staat abschaffen – er ist Teil des Problems' }
+    ]
+  },
+  A4: {
+    titel: 'Wie organisieren wir uns?',
+    frage: 'Welche Organisationsform bevorzugst du?',
+    optionen: [
+      { wert: 1, text: 'Zentralistische Kaderpartei' },
+      { wert: 2, text: 'Demokratische Massenpartei' },
+      { wert: 3, text: 'Bewegungspartei mit offenem Charakter' },
+      { wert: 4, text: 'Lose Netzwerke und Bündnisse' },
+      { wert: 5, text: 'Basisdemokratische Rätestrukturen' }
+    ]
+  },
+  B1: {
+    titel: 'Markt oder Plan?',
+    frage: 'Wie soll die Wirtschaft koordiniert werden?',
+    optionen: [
+      { wert: 1, text: 'Regulierte Marktwirtschaft' },
+      { wert: 2, text: 'Starke staatliche Steuerung mit Markt' },
+      { wert: 3, text: 'Mischsystem mit verschiedenen Sektoren' },
+      { wert: 4, text: 'Demokratische Planung von unten' },
+      { wert: 5, text: 'Vollständige gesellschaftliche Planung' }
+    ]
+  },
+  B2: {
+    titel: 'Wem gehört was?',
+    frage: 'Wie soll Eigentum organisiert sein?',
+    optionen: [
+      { wert: 1, text: 'Staatseigentum an Schlüsselindustrien' },
+      { wert: 2, text: 'Öffentliches Eigentum mit demokratischer Kontrolle' },
+      { wert: 3, text: 'Mischung verschiedener Eigentumsformen' },
+      { wert: 4, text: 'Genossenschaften und Kollektive' },
+      { wert: 5, text: 'Commons – Gemeineigentum ohne Staat' }
+    ]
+  },
+  B3: {
+    titel: 'Arbeit – wie viel davon?',
+    frage: 'Wie stehst du zur Lohnarbeit?',
+    optionen: [
+      { wert: 1, text: 'Vollbeschäftigung für alle' },
+      { wert: 2, text: 'Gute Arbeit mit fairen Bedingungen' },
+      { wert: 3, text: 'Arbeitszeitverkürzung und Umverteilung' },
+      { wert: 4, text: 'Grundeinkommen und freiwillige Arbeit' },
+      { wert: 5, text: 'Post-Work: Befreiung von der Lohnarbeit' }
+    ]
+  },
+  C1: {
+    titel: 'Klasse und Geschlecht',
+    frage: 'Wie verbindest du Feminismus und Klassenkampf?',
+    optionen: [
+      { wert: 1, text: 'Klassenkampf zuerst – Feminismus kommt danach' },
+      { wert: 2, text: 'Sozialistischer Feminismus im Klassenkampf' },
+      { wert: 3, text: 'Beide Kämpfe gleichwertig verbinden' },
+      { wert: 4, text: 'Intersektionale Analyse aller Unterdrückung' },
+      { wert: 5, text: 'Radikaler Feminismus als Basis aller Befreiung' }
+    ]
+  },
+  C2: {
+    titel: 'Mensch und Natur',
+    frage: 'Wie radikal ist dein Ökologismus?',
+    optionen: [
+      { wert: 1, text: 'Produktivkräfte entwickeln, Natur nutzen' },
+      { wert: 2, text: 'Grünes Wachstum ist möglich' },
+      { wert: 3, text: 'Nachhaltigkeit durch Regulierung' },
+      { wert: 4, text: 'Ökosozialismus: System Change fürs Klima' },
+      { wert: 5, text: 'Eigenrechte der Natur – radikaler Ökosozialismus' }
+    ]
+  },
+  C3: {
+    titel: 'Lokal oder Global?',
+    frage: 'Auf welcher Ebene kämpfst du?',
+    optionen: [
+      { wert: 1, text: 'National – hier können wir etwas ändern' },
+      { wert: 2, text: 'Internationale Solidarität mit nationalem Fokus' },
+      { wert: 3, text: 'Transnationale Kooperation und Vernetzung' },
+      { wert: 4, text: 'Globale Bewegungen und Strukturen' },
+      { wert: 5, text: 'No Borders – Internationalismus radikal gedacht' }
+    ]
+  },
+  D1: {
+    titel: 'Brauchen wir Utopien?',
+    frage: 'Wie konkret soll das Ziel sein?',
+    optionen: [
+      { wert: 1, text: 'Anti-Utopismus: Kritik genügt, keine Blaupausen' },
+      { wert: 2, text: 'Negative Utopie: Wissen was wir NICHT wollen' },
+      { wert: 3, text: 'Der Weg ist das Ziel – prozesshaft denken' },
+      { wert: 4, text: 'Real-Utopien: Machbare Alternativen entwickeln' },
+      { wert: 5, text: 'Konkrete Utopie: Detaillierte Zukunftsbilder' }
+    ]
+  },
+  D2: {
+    titel: 'Wie transformieren?',
+    frage: 'Wie radikal muss der Wandel sein?',
+    optionen: [
+      { wert: 1, text: 'Graduell – Schritt für Schritt' },
+      { wert: 2, text: 'Interstitiell – Alternativen in den Nischen' },
+      { wert: 3, text: 'Symbiotisch – mit dem System arbeiten' },
+      { wert: 4, text: 'Rupturell – Brüche provozieren' },
+      { wert: 5, text: 'Revolutionär – fundamentaler Systembruch' }
+    ]
+  },
+  D3: {
+    titel: 'Spiritualität und Politik',
+    frage: 'Welche Rolle spielt Spiritualität?',
+    optionen: [
+      { wert: 1, text: 'Strikt säkular – Religion ist Privatsache' },
+      { wert: 2, text: 'Offen für religiöse Genoss*innen' },
+      { wert: 3, text: 'Verschiedene Weltanschauungen respektieren' },
+      { wert: 4, text: 'Spirituelle Dimensionen in der Politik' },
+      { wert: 5, text: 'Innere und äußere Transformation verbinden' }
+    ]
+  },
+  E1: {
+    titel: 'Mit wem verbünden?',
+    frage: 'Wie breit sollen Bündnisse sein?',
+    optionen: [
+      { wert: 1, text: 'Klassenlinie halten – keine Verwässerung' },
+      { wert: 2, text: 'Stabiler sozialistischer Kern' },
+      { wert: 3, text: 'Breite Bündnisse mit klaren Prinzipien' },
+      { wert: 4, text: 'Bewegungsübergreifende Allianzen' },
+      { wert: 5, text: 'Alle gegen das System – breiteste Front' }
+    ]
+  },
+  E2: {
+    titel: 'Auf welcher Ebene?',
+    frage: 'Wo setzt politisches Handeln an?',
+    optionen: [
+      { wert: 1, text: 'Zentral – nationale/staatliche Ebene' },
+      { wert: 2, text: 'Föderal – Länder und Regionen' },
+      { wert: 3, text: 'Mehrebenen – je nach Thema' },
+      { wert: 4, text: 'Kommunal – die Stadt als Ausgangspunkt' },
+      { wert: 5, text: 'Basisdemokratisch – von unten aufbauen' }
+    ]
+  },
+  E3: {
+    titel: 'Wie lernen wir?',
+    frage: 'Theorie oder Praxis – was kommt zuerst?',
+    optionen: [
+      { wert: 1, text: 'Aufklärung – Wissen verbreiten' },
+      { wert: 2, text: 'Theoriearbeit als Grundlage' },
+      { wert: 3, text: 'Praxis-Theorie-Praxis-Zyklus' },
+      { wert: 4, text: 'Lernen im Kampf – Erfahrung zählt' },
+      { wert: 5, text: 'Präfiguration – die Zukunft jetzt leben' }
+    ]
+  },
+  E4: {
+    titel: 'Welche Mittel?',
+    frage: 'Wie weit gehst du im Widerstand?',
+    optionen: [
+      { wert: 1, text: 'Strikt legal – alle Rechtswege nutzen' },
+      { wert: 2, text: 'Ziviler Ungehorsam wenn nötig' },
+      { wert: 3, text: 'Direkte Aktionen situativ einsetzen' },
+      { wert: 4, text: 'Militante Aktionen als Option' },
+      { wert: 5, text: 'Alle Mittel – die Situation entscheidet' }
+    ]
+  }
+};
+
+// Zimmer-Finder State
+let zimmerFinderState = {
+  archetyp: null,
+  archetypData: null,
+  fragenAchsen: [],
+  aktuelleFrageIndex: 0,
+  antworten: {}
+};
+
+// Finde die 4 extremsten Achsen eines Archetyps
+function findeExtremeAchsen(ideal, anzahl = 4) {
+  const achsenDistanzen = Object.entries(ideal).map(([achse, wert]) => ({
+    achse,
+    wert,
+    distanz: Math.abs(wert - 3) // Distanz zur Mitte
+  }));
+  
+  // Sortiere nach Extremheit (höchste Distanz zuerst)
+  achsenDistanzen.sort((a, b) => b.distanz - a.distanz);
+  
+  // Nimm die extremsten
+  return achsenDistanzen.slice(0, anzahl).map(a => a.achse);
+}
+
+// Startet den Zimmer-Finder
+function starteZimmerFinder(archetypId) {
+  const archetypen = window.archetypen;
+  if (!archetypen || !archetypen[archetypId]) {
+    console.error('Archetyp nicht gefunden:', archetypId);
+    return;
+  }
+  
+  const archetypData = archetypen[archetypId];
+  const ideal = archetypData.ideal || {};
+  
+  // Finde die 4 extremsten Achsen
+  const fragenAchsen = findeExtremeAchsen(ideal, 4);
+  
+  console.log('Zimmer-Finder gestartet für:', archetypId);
+  console.log('Fragen zu Achsen:', fragenAchsen);
+  
+  // State initialisieren
+  zimmerFinderState = {
+    archetyp: archetypId,
+    archetypData,
+    fragenAchsen,
+    aktuelleFrageIndex: 0,
+    antworten: { ...ideal } // Starte mit ideal-Werten als Default
+  };
+  
+  // UI anzeigen
+  zeigeZimmerFinderPopup();
+}
+
+// Zeigt das Zimmer-Finder Popup
+function zeigeZimmerFinderPopup() {
+  // Entferne altes Popup falls vorhanden
+  const altes = document.getElementById('zimmer-finder-popup');
+  if (altes) altes.remove();
+  
+  const popup = document.createElement('div');
+  popup.id = 'zimmer-finder-popup';
+  popup.innerHTML = renderZimmerFinderInhalt();
+  document.body.appendChild(popup);
+}
+
+// Rendert den aktuellen Inhalt des Zimmer-Finders
+function renderZimmerFinderInhalt() {
+  const { archetyp, archetypData, fragenAchsen, aktuelleFrageIndex, antworten } = zimmerFinderState;
+  const istLetzteFrage = aktuelleFrageIndex >= fragenAchsen.length;
+  
+  let html = `
+    <div class="zimmer-finder-overlay">
+      <div class="zimmer-finder-modal">
+  `;
+  
+  if (istLetzteFrage) {
+    // Ergebnis anzeigen
+    html += renderZimmerFinderErgebnis();
+  } else {
+    // Frage anzeigen
+    const achse = fragenAchsen[aktuelleFrageIndex];
+    const frageData = zimmerFinderAchsenFragen[achse];
+    const aktuellerWert = antworten[achse] || 3;
+    
+    html += `
+      <div class="zimmer-finder-header">
+        <div class="zimmer-finder-archetyp">
+          <span class="archetyp-icon">${archetypData.icon}</span>
+          <span class="archetyp-name">${archetypData.name}</span>
+        </div>
+        <div class="zimmer-finder-progress">
+          Frage ${aktuelleFrageIndex + 1} von ${fragenAchsen.length}
+        </div>
+      </div>
+      
+      <div class="zimmer-finder-frage">
+        <h2>${frageData.titel}</h2>
+        <p class="frage-text">${frageData.frage}</p>
+        
+        <div class="zimmer-finder-optionen">
+          ${frageData.optionen.map(opt => `
+            <label class="zf-option ${opt.wert === aktuellerWert ? 'selected' : ''}" onclick="waehleZimmerFinderOption('${achse}', ${opt.wert})">
+              <span class="zf-radio ${opt.wert === aktuellerWert ? 'checked' : ''}"></span>
+              <span class="zf-option-text">${opt.text}</span>
+              <span class="zf-option-wert">${opt.wert}</span>
+            </label>
+          `).join('')}
+        </div>
+      </div>
+      
+      <div class="zimmer-finder-actions">
+        ${aktuelleFrageIndex > 0 ? `
+          <button class="zf-btn secondary" onclick="zimmerFinderZurueck()">← Zurück</button>
+        ` : `
+          <button class="zf-btn secondary" onclick="zimmerFinderUeberspringen()">Überspringen</button>
+        `}
+        <button class="zf-btn primary" onclick="zimmerFinderWeiter()">
+          ${aktuelleFrageIndex === fragenAchsen.length - 1 ? 'Ergebnis anzeigen' : 'Weiter →'}
+        </button>
+      </div>
+    `;
+  }
+  
+  html += `
+      </div>
+    </div>
+  `;
+  
+  return html;
+}
+
+// Rendert das Ergebnis des Zimmer-Finders
+function renderZimmerFinderErgebnis() {
+  const { archetyp, archetypData, antworten } = zimmerFinderState;
+  
+  // Berechne "Dein Platz" basierend auf den Antworten
+  const platz = berechneDeinenPlatz(antworten);
+  const hauptzimmer = platz?.hauptzimmer;
+  const achsenMeta = window.achsenMeta;
+  
+  let html = `
+    <div class="zimmer-finder-header ergebnis">
+      <div class="zimmer-finder-archetyp">
+        <span class="archetyp-icon">${archetypData.icon}</span>
+        <span class="archetyp-name">${archetypData.name}</span>
+      </div>
+      <div class="zimmer-finder-titel">Dein Platz im Haus</div>
+    </div>
+    
+    <div class="zimmer-finder-ergebnis">
+  `;
+  
+  if (hauptzimmer) {
+    const meta = achsenMeta[hauptzimmer.achse];
+    const posName = meta?.pole[hauptzimmer.profilWert - 1] || hauptzimmer.profilWert;
+    
+    html += `
+      <div class="zf-hauptzimmer">
+        <div class="zf-badge">🔥 Dein Hauptzimmer</div>
+        <div class="zf-zimmer-header">
+          <span class="zf-etage-icon">${hauptzimmer.etageIcon}</span>
+          <div>
+            <h3>${hauptzimmer.zimmer.name}</h3>
+            <span class="zf-achse">${hauptzimmer.achse} — ${hauptzimmer.zimmer.beschreibung}</span>
+          </div>
+        </div>
+        <div class="zf-position">
+          <span class="zf-pos-label">Deine Position:</span>
+          <span class="zf-pos-wert">${hauptzimmer.profilWert}</span>
+          <span class="zf-pos-name">${posName}</span>
+        </div>
+        <div class="zf-aufgabe">
+          <span class="zf-aufgabe-icon">✊</span>
+          <p>${hauptzimmer.aufgabe}</p>
+        </div>
+      </div>
+    `;
+  }
+  
+  // Weitere Zimmer
+  if (platz?.weitereZimmer?.length > 0) {
+    html += `<div class="zf-weitere-titel">💡 Weitere Räume für dich:</div>`;
+    html += `<div class="zf-weitere-liste">`;
+    
+    platz.weitereZimmer.slice(0, 3).forEach(z => {
+      const meta = achsenMeta[z.achse];
+      const posName = meta?.pole[z.profilWert - 1] || z.profilWert;
+      
+      html += `
+        <div class="zf-weiteres-zimmer">
+          <span class="zf-weiteres-icon">${z.etageIcon}</span>
+          <div>
+            <span class="zf-weiteres-name">${z.zimmer.name}</span>
+            <span class="zf-weiteres-pos">Position ${z.profilWert}: ${posName}</span>
+          </div>
+        </div>
+      `;
+    });
+    
+    html += `</div>`;
+  }
+  
+  // Ähnliche Archetypen
+  const aehnliche = findeAehnlicheArchetypen(archetyp, 3);
+  if (aehnliche.length > 0) {
+    html += `
+      <div class="zf-wg-empfehlung">
+        <div class="zf-wg-label">🤝 Du passt gut zu:</div>
+        <div class="zf-wg-liste">
+          ${aehnliche.map(a => `
+            <span class="zf-wg-item" style="--accent: ${a.farbe}">${a.icon} ${a.name}</span>
+          `).join('')}
+        </div>
+      </div>
+    `;
+  }
+  
+  html += `
+    </div>
+    
+    <div class="zimmer-finder-actions ergebnis">
+      <button class="zf-btn primary gross" onclick="zimmerFinderAbschliessen()">
+        🏠 Ins Haus einziehen
+      </button>
+    </div>
+  `;
+  
+  return html;
+}
+
+// Option wählen
+function waehleZimmerFinderOption(achse, wert) {
+  zimmerFinderState.antworten[achse] = wert;
+  
+  // UI aktualisieren
+  const popup = document.getElementById('zimmer-finder-popup');
+  if (popup) {
+    popup.innerHTML = renderZimmerFinderInhalt();
+  }
+}
+
+// Weiter zur nächsten Frage
+function zimmerFinderWeiter() {
+  zimmerFinderState.aktuelleFrageIndex++;
+  
+  const popup = document.getElementById('zimmer-finder-popup');
+  if (popup) {
+    popup.innerHTML = renderZimmerFinderInhalt();
+  }
+}
+
+// Zurück zur vorherigen Frage
+function zimmerFinderZurueck() {
+  if (zimmerFinderState.aktuelleFrageIndex > 0) {
+    zimmerFinderState.aktuelleFrageIndex--;
+    
+    const popup = document.getElementById('zimmer-finder-popup');
+    if (popup) {
+      popup.innerHTML = renderZimmerFinderInhalt();
+    }
+  }
+}
+
+// Überspringen (alle Archetyp-Defaults übernehmen)
+function zimmerFinderUeberspringen() {
+  // Direkt zum Ergebnis
+  zimmerFinderState.aktuelleFrageIndex = zimmerFinderState.fragenAchsen.length;
+  
+  const popup = document.getElementById('zimmer-finder-popup');
+  if (popup) {
+    popup.innerHTML = renderZimmerFinderInhalt();
+  }
+}
+
+// Abschließen und ins Haus wechseln
+function zimmerFinderAbschliessen() {
+  const { archetyp, antworten } = zimmerFinderState;
+  
+  // Profil setzen
+  generatorProfil = antworten;
+  generatorArchetyp = archetyp;
+  
+  // Popup entfernen
+  const popup = document.getElementById('zimmer-finder-popup');
+  if (popup) popup.remove();
+  
+  // Ins Haus wechseln
+  setAnsicht('wg');
+  renderHaus('funktional');
+}
 
 // Berechnet das Hauptzimmer und weitere passende Zimmer basierend auf Profil
 function berechneDeinenPlatz(profil) {
