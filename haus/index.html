@@ -1156,82 +1156,87 @@
       }
       
       /* ═══════════════════════════════════════════════════════════════
-         MOBILE: Linsen-Palette
+         MOBILE: Linsen-Palette - versteckt, nur Toggle sichtbar
          ═══════════════════════════════════════════════════════════════ */
       .linsen-palette {
-        width: 100%;
-        left: 0;
-        top: auto;
-        bottom: 0;
-        max-height: 60vh;
-        border-radius: 16px 16px 0 0;
-        padding: 1rem;
-        transform: translateY(calc(100% - 50px));
+        width: 60px;
+        padding: 0.5rem;
+        transform: translateX(-100%);
+        transition: transform 0.3s ease;
       }
       .linsen-palette.expanded {
-        transform: translateY(0);
+        transform: translateX(0);
+        width: 180px;
       }
-      .palette-toggle {
-        display: flex;
-        justify-content: center;
-        margin-bottom: 0.5rem;
-      }
-      .palette-toggle::before {
-        content: '';
-        width: 40px;
-        height: 4px;
-        background: #555;
-        border-radius: 2px;
-      }
-      .linsen-grid {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        gap: 0.5rem;
+      .palette-section-title {
+        font-size: 0.6rem;
       }
       .linse {
-        padding: 0.5rem;
-        font-size: 1.25rem;
+        padding: 0.4rem;
+        font-size: 1.1rem;
       }
       .linse-label {
+        font-size: 0.7rem;
+      }
+      .linsen-palette:not(.expanded) .linse-label {
         display: none;
       }
-      .linse-gruppe {
-        grid-column: span 4;
+      .linsen-palette:not(.expanded) .gruppe-pfeil {
+        display: none;
       }
       .gruppe-inhalt {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        gap: 0.5rem;
+        max-height: 0 !important;
       }
-      .linse-wrapper.sub {
-        padding-left: 0;
+      .linsen-palette.expanded .linse-gruppe.open .gruppe-inhalt {
+        max-height: 200px !important;
       }
       
       /* ═══════════════════════════════════════════════════════════════
-         MOBILE: Header
+         MOBILE: Header kompakter
          ═══════════════════════════════════════════════════════════════ */
       header {
-        padding: 0.5rem 1rem;
+        padding: 0.5rem 0.75rem;
+        flex-wrap: wrap;
+        gap: 0.5rem;
       }
       header h1 {
-        font-size: 1rem;
+        font-size: 0.85rem;
+      }
+      #stats {
+        font-size: 0.6rem;
+        display: none;
       }
       .suche-input {
-        width: 120px;
-        font-size: 0.8rem;
-      }
-      .suche-ergebnisse {
-        width: calc(100vw - 2rem);
-        right: -1rem;
+        width: 100px;
+        font-size: 0.75rem;
+        padding: 0.3rem 0.5rem;
       }
       
       /* ═══════════════════════════════════════════════════════════════
-         MOBILE: Dein Platz
+         MOBILE: Main Container - Platz für Palette
+         ═══════════════════════════════════════════════════════════════ */
+      main {
+        margin-left: 0 !important;
+      }
+      body.palette-expanded main {
+        margin-left: 180px;
+      }
+      
+      /* ═══════════════════════════════════════════════════════════════
+         MOBILE: Dein Platz - Fullscreen Overlay statt inline
          ═══════════════════════════════════════════════════════════════ */
       .dein-platz {
-        margin: 0.5rem;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: 0;
+        border-radius: 0;
+        z-index: 1000;
+        overflow-y: auto;
         padding: 1rem;
-        border-radius: 12px;
+        padding-top: 60px;
       }
       .dein-platz-header {
         flex-direction: column;
@@ -1244,204 +1249,359 @@
       .dein-platz-header h2 {
         font-size: 1.1rem;
       }
+      .dein-platz-header p {
+        font-size: 0.8rem;
+      }
       .hauptzimmer-karte {
-        padding: 1rem;
+        padding: 0.75rem;
+      }
+      .hauptzimmer-badge {
+        font-size: 0.7rem;
+        padding: 0.2rem 0.5rem;
       }
       .hauptzimmer-header {
         flex-direction: column;
         text-align: center;
+        gap: 0.4rem;
       }
       .hauptzimmer-etage {
-        font-size: 2rem;
+        font-size: 1.5rem;
       }
       .hauptzimmer-header h3 {
-        font-size: 1rem;
+        font-size: 0.95rem;
+      }
+      .hauptzimmer-achse {
+        font-size: 0.7rem;
       }
       .hauptzimmer-position {
         justify-content: center;
         flex-wrap: wrap;
+        padding: 0.4rem;
+        gap: 0.3rem;
+      }
+      .position-label {
+        font-size: 0.7rem;
+      }
+      .position-wert {
+        width: 24px;
+        height: 24px;
+        font-size: 0.8rem;
+      }
+      .position-name {
+        font-size: 0.8rem;
       }
       .hauptzimmer-aufgabe {
         flex-direction: column;
         text-align: center;
+        padding: 0.5rem;
+        gap: 0.4rem;
+      }
+      .aufgabe-icon {
+        font-size: 1rem;
+      }
+      .hauptzimmer-aufgabe p {
+        font-size: 0.75rem;
+      }
+      .weitere-zimmer {
+        margin-bottom: 0.75rem;
+      }
+      .weitere-zimmer-label {
+        font-size: 0.75rem;
       }
       .weitere-zimmer-liste {
-        gap: 0.3rem;
+        gap: 0.25rem;
       }
       .weiteres-zimmer {
-        padding: 0.4rem 0.5rem;
+        padding: 0.35rem 0.5rem;
+      }
+      .weiteres-icon {
+        font-size: 1rem;
+      }
+      .weiteres-name {
+        font-size: 0.75rem;
+      }
+      .weiteres-position {
+        font-size: 0.65rem;
+      }
+      .wg-empfehlung {
+        padding: 0.6rem;
+        margin-bottom: 0.75rem;
+      }
+      .wg-empfehlung-label {
+        font-size: 0.75rem;
+      }
+      .wg-empfehlung p {
+        font-size: 0.75rem;
+        margin-bottom: 0.5rem;
       }
       .aehnliche-archetypen {
         justify-content: center;
+        gap: 0.3rem;
+      }
+      .aehnlicher-archetyp {
+        padding: 0.2rem 0.4rem;
+        font-size: 0.7rem;
       }
       .dein-platz-actions {
-        flex-direction: column;
+        margin-top: 0.75rem;
+      }
+      .dein-platz-btn {
+        padding: 0.6rem 1rem;
+        font-size: 0.85rem;
       }
       
       /* ═══════════════════════════════════════════════════════════════
          MOBILE: Zimmer-Finder
          ═══════════════════════════════════════════════════════════════ */
       .zimmer-finder-overlay {
-        padding: 0.5rem;
-        align-items: flex-start;
-        padding-top: 2rem;
+        padding: 0;
+        align-items: stretch;
       }
       .zimmer-finder-modal {
         padding: 1rem;
-        max-height: 85vh;
-        border-radius: 12px;
+        max-height: 100vh;
+        height: 100vh;
+        border-radius: 0;
+        border: none;
+        overflow-y: auto;
       }
       .zimmer-finder-header {
         flex-direction: column;
         text-align: center;
-        gap: 0.5rem;
+        gap: 0.4rem;
         margin-bottom: 1rem;
-        padding-bottom: 0.75rem;
+        padding-bottom: 0.6rem;
       }
       .archetyp-icon {
-        font-size: 2rem;
+        font-size: 1.75rem;
       }
       .archetyp-name {
-        font-size: 0.9rem;
-      }
-      .zimmer-finder-frage h2 {
-        font-size: 1.1rem;
-      }
-      .frage-text {
         font-size: 0.85rem;
       }
+      .zimmer-finder-progress {
+        font-size: 0.75rem;
+      }
+      .zimmer-finder-frage h2 {
+        font-size: 1rem;
+      }
+      .frage-text {
+        font-size: 0.8rem;
+        margin-bottom: 1rem;
+      }
+      .zimmer-finder-optionen {
+        gap: 0.4rem;
+      }
       .zf-option {
-        padding: 0.6rem 0.75rem;
+        padding: 0.5rem 0.6rem;
+        gap: 0.5rem;
+      }
+      .zf-radio {
+        width: 16px;
+        height: 16px;
+      }
+      .zf-radio.checked::after {
+        top: 2px;
+        left: 2px;
+        width: 8px;
+        height: 8px;
       }
       .zf-option-text {
-        font-size: 0.8rem;
+        font-size: 0.75rem;
       }
       .zf-option-wert {
-        width: 20px;
-        height: 20px;
-        font-size: 0.7rem;
+        width: 18px;
+        height: 18px;
+        font-size: 0.65rem;
       }
       .zimmer-finder-actions {
         flex-direction: column;
-        gap: 0.5rem;
+        gap: 0.4rem;
+        margin-top: 1rem;
+        padding-top: 0.75rem;
       }
       .zf-btn {
         width: 100%;
-        padding: 0.75rem;
+        padding: 0.6rem;
+        font-size: 0.85rem;
       }
+      
+      /* Zimmer-Finder Ergebnis Mobile */
       .zf-hauptzimmer {
-        padding: 0.75rem;
+        padding: 0.6rem;
+      }
+      .zf-badge {
+        font-size: 0.65rem;
+        padding: 0.15rem 0.4rem;
       }
       .zf-zimmer-header {
         flex-direction: column;
         text-align: center;
+        gap: 0.3rem;
       }
       .zf-etage-icon {
-        font-size: 1.75rem;
+        font-size: 1.25rem;
+      }
+      .zf-zimmer-header h3 {
+        font-size: 0.9rem;
+      }
+      .zf-achse {
+        font-size: 0.65rem;
       }
       .zf-position {
         justify-content: center;
-        flex-wrap: wrap;
+        padding: 0.3rem;
+        gap: 0.25rem;
+      }
+      .zf-pos-label {
+        font-size: 0.65rem;
+      }
+      .zf-pos-wert {
+        width: 18px;
+        height: 18px;
+        font-size: 0.7rem;
+      }
+      .zf-pos-name {
+        font-size: 0.75rem;
       }
       .zf-aufgabe {
         flex-direction: column;
         text-align: center;
+        padding: 0.4rem;
+        gap: 0.3rem;
+      }
+      .zf-aufgabe p {
+        font-size: 0.7rem;
+      }
+      .zf-weitere-titel {
+        font-size: 0.7rem;
       }
       .zf-weitere-liste {
-        gap: 0.25rem;
+        gap: 0.2rem;
+      }
+      .zf-weiteres-zimmer {
+        padding: 0.3rem 0.4rem;
+      }
+      .zf-weiteres-icon {
+        font-size: 0.9rem;
+      }
+      .zf-weiteres-name {
+        font-size: 0.7rem;
+      }
+      .zf-weiteres-pos {
+        font-size: 0.6rem;
+      }
+      .zf-wg-empfehlung {
+        padding: 0.5rem;
+      }
+      .zf-wg-label {
+        font-size: 0.7rem;
       }
       .zf-wg-liste {
         justify-content: center;
+        gap: 0.25rem;
+      }
+      .zf-wg-item {
+        padding: 0.2rem 0.35rem;
+        font-size: 0.65rem;
       }
       
       /* ═══════════════════════════════════════════════════════════════
          MOBILE: Haus-Ansicht
          ═══════════════════════════════════════════════════════════════ */
+      #wg-container {
+        padding: 0.5rem;
+      }
       .haus-header {
         flex-direction: column;
-        gap: 0.75rem;
-        padding: 1rem;
+        gap: 0.5rem;
+        padding: 0.75rem;
+        margin-bottom: 0.5rem;
       }
       .haus-header h2 {
-        font-size: 1.1rem;
+        font-size: 1rem;
       }
       .haus-tabs {
         width: 100%;
-        justify-content: center;
       }
       .haus-tab {
         flex: 1;
-        padding: 0.5rem;
-        font-size: 0.8rem;
+        padding: 0.4rem 0.5rem;
+        font-size: 0.75rem;
       }
       .haus-banner {
-        margin: 0.5rem;
-        padding: 0.75rem;
+        margin: 0 0 0.5rem 0;
+        padding: 0.6rem;
         flex-direction: column;
         text-align: center;
-        gap: 0.5rem;
+        gap: 0.4rem;
       }
       .banner-icon {
-        font-size: 1.5rem;
+        font-size: 1.25rem;
+      }
+      .banner-text strong {
+        font-size: 0.8rem;
+      }
+      .banner-text span {
+        font-size: 0.7rem;
       }
       .haus-gebaeude {
-        padding: 0.5rem;
-        gap: 0.75rem;
+        padding: 0;
+        gap: 0.5rem;
       }
       .haus-etage {
-        padding: 0.75rem;
+        padding: 0.5rem;
+        border-radius: 8px;
       }
       .etage-header {
         flex-direction: column;
         text-align: center;
-        gap: 0.5rem;
+        gap: 0.3rem;
+        margin-bottom: 0.5rem;
       }
       .etage-icon {
-        font-size: 1.5rem;
+        font-size: 1.25rem;
       }
       .etage-info h3 {
-        font-size: 1rem;
+        font-size: 0.9rem;
+      }
+      .etage-untertitel {
+        font-size: 0.7rem;
       }
       .etage-zimmer {
         grid-template-columns: 1fr;
-        gap: 0.5rem;
+        gap: 0.4rem;
       }
       .haus-zimmer {
-        padding: 0.75rem;
+        padding: 0.5rem;
       }
       .zimmer-kopf {
-        margin-bottom: 0.5rem;
+        margin-bottom: 0.4rem;
       }
       .zimmer-achse {
-        font-size: 0.7rem;
+        font-size: 0.6rem;
       }
       .zimmer-name {
-        font-size: 0.85rem;
+        font-size: 0.75rem;
+      }
+      .zimmer-spektrum {
+        gap: 0.2rem;
       }
       .spektrum-pos {
-        width: 28px;
-        height: 28px;
+        width: 24px;
+        height: 24px;
       }
       .pos-zahl {
-        font-size: 0.7rem;
+        font-size: 0.6rem;
       }
       
       /* ═══════════════════════════════════════════════════════════════
-         MOBILE: Netzwerk-Container
+         MOBILE: Netzwerk
          ═══════════════════════════════════════════════════════════════ */
       #netzwerk-container {
-        height: calc(100vh - 120px);
+        height: calc(100vh - 100px);
       }
       .legende {
-        top: auto;
-        bottom: 70px;
-        left: 0.5rem;
-        padding: 0.5rem;
-        font-size: 0.7rem;
-        max-width: 150px;
-      }
-      .legende-titel {
-        font-size: 0.65rem;
+        display: none;
       }
       
       /* ═══════════════════════════════════════════════════════════════
@@ -1449,30 +1609,23 @@
          ═══════════════════════════════════════════════════════════════ */
       .talkshow-popup {
         width: 95%;
-        max-width: none;
-        padding: 1rem;
+        padding: 0.75rem;
       }
       .talkshow-popup h2 {
-        font-size: 1.1rem;
+        font-size: 1rem;
       }
       .talkshow-gaeste {
-        grid-template-columns: 1fr 1fr;
-        gap: 0.5rem;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 0.3rem;
       }
       .talkshow-gast {
-        padding: 0.5rem;
+        padding: 0.3rem;
       }
       .gast-icon {
-        font-size: 1.25rem;
+        font-size: 1rem;
       }
       .gast-name {
-        font-size: 0.75rem;
-      }
-      .talkshow-statements {
-        gap: 0.5rem;
-      }
-      .statement-card {
-        padding: 0.75rem;
+        font-size: 0.6rem;
       }
     }
     
