@@ -2179,8 +2179,18 @@ const Layer2 = ({ params, onComplete, onLiteratur, onBack, apiKey, analysen, ini
                 {/* Option 2: Linkes Wesen */}
                 <div 
                   onClick={() => {
-                    // Baue URL mit Archetyp-Info
+                    // Baue URL mit vollständigem Profil
                     const wesenUrl = new URL('haus/index.html', window.location.href);
+                    
+                    // Vollständiges Profil übergeben (A1:3,A2:5,B1:2,...)
+                    if (antworten && Object.keys(antworten).length > 0) {
+                      const profilString = Object.entries(antworten)
+                        .map(([key, value]) => `${key}:${value}`)
+                        .join(',');
+                      wesenUrl.searchParams.set('profil', profilString);
+                    }
+                    
+                    // Archetyp als Zusatzinfo (für Name/Icon)
                     if (analyse?.id) {
                       wesenUrl.searchParams.set('archetyp', analyse.id);
                     }
@@ -3168,12 +3178,8 @@ const LayerNav = ({ currentLayer, visitedLayers, onNavigate }) => {
 // ═══════════════════════════════════════════════════════════════════════════
 
 const App = () => {
-  // URL-Parameter beim Start prüfen
-  const urlParams = new URLSearchParams(window.location.search);
-  const startLayer = urlParams.get('start') === '2' ? 2 : 0;
-  
-  const [layer, setLayer] = useState(startLayer);
-  const [visitedLayers, setVisitedLayers] = useState(startLayer === 2 ? [2] : []);
+  const [layer, setLayer] = useState(0);
+  const [visitedLayers, setVisitedLayers] = useState([]);
   const [previousLayer, setPreviousLayer] = useState(null);
   const [returnToL2Analyse, setReturnToL2Analyse] = useState(false);
   const [profilL1, setProfilL1] = useState(null);
