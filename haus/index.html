@@ -15212,6 +15212,11 @@ function parseUrlParams() {
   if (zimmerParam) {
     console.log('Generator-Zimmer:', zimmerParam);
   }
+  
+  // Konfigurator neu rendern wenn Profil vom Generator kam
+  if (generatorProfil && Object.keys(generatorProfil).length > 0) {
+    renderKonfiguratorMitProfil();
+  }
 }
 
 // Willkommens-Banner für Generator-Besucher
