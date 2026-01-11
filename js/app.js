@@ -3168,8 +3168,12 @@ const LayerNav = ({ currentLayer, visitedLayers, onNavigate }) => {
 // ═══════════════════════════════════════════════════════════════════════════
 
 const App = () => {
-  const [layer, setLayer] = useState(0);
-  const [visitedLayers, setVisitedLayers] = useState([]);
+  // URL-Parameter beim Start prüfen
+  const urlParams = new URLSearchParams(window.location.search);
+  const startLayer = urlParams.get('start') === '2' ? 2 : 0;
+  
+  const [layer, setLayer] = useState(startLayer);
+  const [visitedLayers, setVisitedLayers] = useState(startLayer === 2 ? [2] : []);
   const [previousLayer, setPreviousLayer] = useState(null);
   const [returnToL2Analyse, setReturnToL2Analyse] = useState(false);
   const [profilL1, setProfilL1] = useState(null);
@@ -3232,14 +3236,6 @@ const App = () => {
       setAnalysenL3(a3);
       setLiteratur(lit);
       setLoading(false);
-      
-      // URL-Parameter prüfen: ?start=2 startet direkt bei Layer 2
-      const params = new URLSearchParams(window.location.search);
-      const startParam = params.get('start');
-      if (startParam === '2') {
-        setLayer(2);
-        markVisited(2);
-      }
     });
   }, []);
 
