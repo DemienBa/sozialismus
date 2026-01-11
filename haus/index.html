@@ -1237,23 +1237,26 @@
       }
       
       /* ═══════════════════════════════════════════════════════════════
-         MOBILE: Linsen-Palette UNTER Header als horizontale Leiste
+         MOBILE: Linsen-Palette RECHTS als vertikale Leiste
          ═══════════════════════════════════════════════════════════════ */
       .linsen-palette {
         position: fixed;
-        left: 0;
         right: 0;
-        top: auto;
+        top: 50%;
+        transform: translateY(-50%);
+        left: auto;
         bottom: auto;
-        width: 100%;
-        height: 48px;
-        flex-direction: row;
-        overflow-x: auto;
-        overflow-y: hidden;
-        padding: 0.35rem 0.5rem;
+        width: 44px;
+        height: auto;
+        max-height: 80vh;
+        flex-direction: column;
+        overflow-x: hidden;
+        overflow-y: auto;
+        padding: 0.3rem;
         border-right: none;
-        border-top: 1px solid var(--border);
-        gap: 0.2rem;
+        border-left: 1px solid var(--border);
+        border-radius: 8px 0 0 8px;
+        gap: 0.15rem;
         -webkit-overflow-scrolling: touch;
         scrollbar-width: none;
         z-index: 200;
@@ -1263,9 +1266,8 @@
         display: none;
       }
       .linsen-palette.expanded {
-        width: 100%;
-        height: 48px;
-        padding: 0.35rem 0.5rem;
+        width: 44px;
+        padding: 0.3rem;
       }
       
       /* Toggle verstecken auf Mobile */
@@ -1273,20 +1275,20 @@
         display: none !important;
       }
       
-      /* Sections horizontal */
+      /* Sections vertikal */
       .palette-section {
-        flex-direction: row;
-        gap: 0.15rem;
+        flex-direction: column;
+        gap: 0.1rem;
         padding: 0;
-        border-bottom: none;
-        border-right: 1px solid var(--border);
-        padding-right: 0.3rem;
-        margin-right: 0.15rem;
+        border-bottom: 1px solid var(--border);
+        border-right: none;
+        padding-bottom: 0.2rem;
+        margin-bottom: 0.1rem;
         flex-shrink: 0;
         align-items: center;
       }
       .palette-section:last-child {
-        border-right: none;
+        border-bottom: none;
       }
       .palette-section-label {
         display: none !important;
@@ -1294,11 +1296,12 @@
       
       /* Linsen kompakt */
       .linse {
-        width: 34px;
-        height: 34px;
-        min-width: 34px;
+        width: 32px;
+        height: 32px;
+        min-width: 32px;
+        min-height: 32px;
         padding: 0;
-        font-size: 1rem;
+        font-size: 0.95rem;
         flex-shrink: 0;
         display: flex;
         align-items: center;
@@ -1308,10 +1311,10 @@
         display: none !important;
       }
       .linse-wrapper {
-        flex-direction: row;
+        flex-direction: column;
       }
       .linsen-palette.expanded .linse {
-        width: 34px;
+        width: 32px;
         padding: 0;
       }
       .linsen-palette.expanded .linse-label {
@@ -1319,37 +1322,37 @@
       }
       
       /* ═══════════════════════════════════════════════════════════════
-         MOBILE: Gruppen INLINE expandieren (nicht Dropdown)
+         MOBILE: Gruppen INLINE expandieren (vertikal nach unten)
          ═══════════════════════════════════════════════════════════════ */
       .linse-gruppe {
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         align-items: center;
-        gap: 0.15rem;
+        gap: 0.1rem;
         flex-shrink: 0;
       }
       .linse.gruppe-header {
-        width: 34px;
-        height: 34px;
+        width: 32px;
+        height: 32px;
       }
       .gruppe-pfeil {
         display: none !important;
       }
       
-      /* Gruppe-Inhalt: horizontal inline, versteckt wenn geschlossen */
+      /* Gruppe-Inhalt: vertikal inline */
       .gruppe-inhalt {
         display: flex;
-        flex-direction: row;
-        gap: 0.15rem;
-        max-width: 0;
+        flex-direction: column;
+        gap: 0.1rem;
+        max-height: 0;
         overflow: hidden;
         opacity: 0;
         transition: all 0.25s ease;
       }
       
-      /* Wenn Gruppe offen: Items erscheinen rechts */
+      /* Wenn Gruppe offen: Items erscheinen unten */
       .linse-gruppe.open .gruppe-inhalt {
-        max-width: 200px;
+        max-height: 200px;
         opacity: 1;
       }
       
@@ -1363,10 +1366,10 @@
         padding-left: 0;
       }
       .linse.sub {
-        width: 30px;
-        height: 30px;
-        min-width: 30px;
-        font-size: 0.9rem;
+        width: 28px;
+        height: 28px;
+        min-width: 28px;
+        font-size: 0.85rem;
         border-style: dashed;
       }
       
@@ -1392,12 +1395,13 @@
       }
       
       /* ═══════════════════════════════════════════════════════════════
-         MOBILE: Main Content - dynamisch positioniert
+         MOBILE: Main Content - Platz für rechte Palette
          ═══════════════════════════════════════════════════════════════ */
       main {
         margin-left: 0 !important;
         margin-top: 0 !important;
-        padding-top: 48px; /* Platz für Palette */
+        padding-top: 0;
+        padding-right: 48px; /* Platz für rechte Palette */
       }
       
       /* ═══════════════════════════════════════════════════════════════
