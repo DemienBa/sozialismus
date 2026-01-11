@@ -5,6 +5,116 @@
 const { useState, useEffect, useMemo } = React;
 
 // ═══════════════════════════════════════════════════════════════════════════
+// MOBILE CSS INJECTION
+// ═══════════════════════════════════════════════════════════════════════════
+
+const mobileStyles = document.createElement('style');
+mobileStyles.textContent = `
+  /* Mobile Viewport Fix */
+  @media (max-width: 768px) {
+    body {
+      overflow-x: hidden;
+    }
+    
+    /* Container */
+    .container {
+      padding: 0 0.75rem !important;
+      max-width: 100% !important;
+    }
+    
+    /* Grids */
+    .generator-grid,
+    [style*="gridTemplateColumns: 'repeat(3"] {
+      grid-template-columns: 1fr 1fr !important;
+      gap: 0.5rem !important;
+    }
+    
+    /* Kacheln */
+    .generator-kachel,
+    [style*="padding: '0.75rem'"][style*="borderRadius: '10px'"] {
+      padding: 0.6rem !important;
+    }
+    
+    /* Modals */
+    [style*="maxWidth: '500px'"] {
+      max-width: calc(100vw - 1rem) !important;
+      margin: 0.5rem !important;
+      padding: 1rem !important;
+    }
+    
+    /* Buttons nebeneinander */
+    [style*="display: 'flex'"][style*="gap: '1rem'"] {
+      flex-wrap: wrap !important;
+    }
+    
+    /* Intro */
+    .intro h1 {
+      font-size: 1.5rem !important;
+    }
+    
+    /* Analyse Header */
+    [style*="fontSize: '4rem'"] {
+      font-size: 3rem !important;
+    }
+    
+    /* Cards */
+    .card {
+      padding: 1rem !important;
+    }
+    
+    /* Option Cards Stack */
+    [style*="marginTop: '1rem'"] > [style*="borderRadius: '12px'"] {
+      margin-bottom: 0.75rem !important;
+    }
+    
+    /* Text Sizes */
+    [style*="fontSize: '1.3rem'"],
+    [style*="fontSize: '1.2rem'"] {
+      font-size: 1.1rem !important;
+    }
+    
+    /* Theoretiker */
+    [style*="gridTemplateColumns: 'repeat(2, 1fr)'"]:not(.generator-grid) {
+      grid-template-columns: 1fr !important;
+    }
+    
+    /* Position bubbles - kleinere Größe */
+    [style*="width: '14px'"][style*="height: '14px'"] {
+      width: 12px !important;
+      height: 12px !important;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    /* Noch kleinere Screens - 1 Spalte */
+    .generator-grid {
+      grid-template-columns: 1fr !important;
+    }
+    
+    /* Header */
+    header h1 {
+      font-size: 0.9rem !important;
+    }
+    
+    /* Buttons */
+    .btn {
+      padding: 0.6rem 1rem !important;
+      font-size: 0.85rem !important;
+    }
+    
+    .btn-large {
+      padding: 0.75rem 1.25rem !important;
+    }
+    
+    /* Labels */
+    .label {
+      font-size: 0.6rem !important;
+    }
+  }
+`;
+document.head.appendChild(mobileStyles);
+
+// ═══════════════════════════════════════════════════════════════════════════
 // KONSTANTEN
 // ═══════════════════════════════════════════════════════════════════════════
 
@@ -1951,7 +2061,7 @@ const Layer2 = ({ params, onComplete, onLiteratur, onBack, apiKey, analysen, ini
               <div style={{ fontSize: '0.7rem', fontWeight: 700, letterSpacing: '0.1em', color: COLORS.rot, marginBottom: '0.75rem' }}>
                 {String.fromCharCode(65 + fi)}. {feld}
               </div>
-              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '0.75rem' }}>
+              <div className="generator-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '0.75rem' }}>
                 {params.filter(p => p.feld === feld).map(p => (
                   <Kachel
                     key={p.id}
