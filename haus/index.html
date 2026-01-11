@@ -10283,30 +10283,37 @@ function initZufall() {
   showRandomKnoten();
 }
 
+// Prüft ob Mobile
+function isMobile() {
+  return window.innerWidth <= 600;
+}
+
 function zeigeZufall() {
-  // Wähle zufällige Ansicht
-  const ansichten = ['netzwerk', 'liste', 'chemie', 'stammbaum', 'oekosystem', 'karte', 'zeitleiste'];
-  const zufallsAnsicht = ansichten[Math.floor(Math.random() * ansichten.length)];
-  
   // Wähle zufälligen Knoten
   const ids = Object.keys(knotenData);
   const randomId = ids[Math.floor(Math.random() * ids.length)];
   
-  // Wechsle zur zufälligen Ansicht
-  setAnsicht(zufallsAnsicht);
-  
-  // Zeige den Knoten im Detail-Panel
-  setTimeout(() => {
+  if (isMobile()) {
+    // MOBILE: Nur Info-Panel wechseln, Ansicht bleibt
     showKnoten(randomId);
+  } else {
+    // DESKTOP: Ansicht + Info-Panel wechseln
+    const ansichten = ['netzwerk', 'liste', 'chemie', 'stammbaum', 'oekosystem', 'karte', 'zeitleiste'];
+    const zufallsAnsicht = ansichten[Math.floor(Math.random() * ansichten.length)];
     
-    // Spezielle Aktionen je nach Ansicht
-    if (zufallsAnsicht === 'netzwerk' && nodeObjects[randomId]) {
-      // Fliege im 3D-Netzwerk dorthin
-      const node = nodeObjects[randomId];
-      const targetPos = node.position.clone();
-      animateCameraTo(targetPos);
-    }
-  }, 200);
+    setAnsicht(zufallsAnsicht);
+    
+    setTimeout(() => {
+      showKnoten(randomId);
+      
+      // Spezielle Aktionen je nach Ansicht
+      if (zufallsAnsicht === 'netzwerk' && nodeObjects[randomId]) {
+        const node = nodeObjects[randomId];
+        const targetPos = node.position.clone();
+        animateCameraTo(targetPos);
+      }
+    }, 200);
+  }
 }
 
 function animateCameraTo(targetPos) {
