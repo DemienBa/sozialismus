@@ -381,6 +381,69 @@
       white-space: nowrap;
     }
     
+    /* Linse-Gruppen (aufklappbar) */
+    .linse-gruppe {
+      margin: 0.15rem 0;
+    }
+    .linse.gruppe-header {
+      position: relative;
+      border-color: #444;
+      background: rgba(255,255,255,0.02);
+    }
+    .linse.gruppe-header:hover {
+      border-color: #666;
+      background: rgba(255,255,255,0.05);
+    }
+    .gruppe-pfeil {
+      position: absolute;
+      right: 4px;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 0.6rem;
+      color: #666;
+      transition: transform 0.2s;
+    }
+    .linsen-palette.expanded .gruppe-pfeil {
+      right: 8px;
+    }
+    .linse-gruppe.open .gruppe-pfeil {
+      transform: translateY(-50%) rotate(90deg);
+    }
+    
+    .gruppe-inhalt {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease;
+    }
+    .linse-gruppe.open .gruppe-inhalt {
+      max-height: 200px;
+    }
+    
+    .linse-wrapper.sub {
+      padding-left: 0.5rem;
+    }
+    .linse.sub {
+      font-size: 0.9rem;
+      opacity: 0.85;
+      border-left: 2px solid transparent;
+    }
+    .linse.sub:hover {
+      opacity: 1;
+    }
+    .linse.sub.active {
+      border-left-color: var(--accent);
+    }
+    
+    /* Disabled Extra-Button */
+    .extra-btn.disabled {
+      opacity: 0.4;
+      cursor: not-allowed;
+    }
+    .extra-btn.disabled:hover {
+      background: transparent;
+      transform: none;
+    }
+    
     /* Schwebende Linse (folgt Cursor) */
     .floating-linse {
       display: none !important;
@@ -2367,29 +2430,6 @@
       margin-top: 0.75rem;
     }
     
-    .reaktor-hint {
-      position: fixed;
-      bottom: 1rem;
-      left: 50%;
-      transform: translateX(-50%);
-      background: rgba(0,0,0,0.8);
-      color: #888;
-      padding: 0.5rem 1rem;
-      border-radius: 4px;
-      font-size: 0.75rem;
-      pointer-events: none;
-      z-index: 50;
-    }
-    
-    .node-dragging {
-      opacity: 0.5;
-    }
-    
-    .node-drop-target circle {
-      stroke: #4CAF50 !important;
-      stroke-width: 4px !important;
-    }
-    
     /* Such-System */
     .suche-wrapper {
       position: relative;
@@ -3411,6 +3451,250 @@
     }
     
     /* ═══════════════════════════════════════════════════════════════
+       DEIN PLATZ IM LINKEN WESEN
+       ═══════════════════════════════════════════════════════════════ */
+    .dein-platz {
+      background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+      border: 2px solid #E53935;
+      border-radius: 16px;
+      padding: 1.5rem;
+      margin-bottom: 1.5rem;
+      animation: fadeIn 0.4s ease;
+    }
+    
+    .dein-platz-header {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 1.25rem;
+      padding-bottom: 1rem;
+      border-bottom: 1px solid rgba(229,57,53,0.3);
+    }
+    .dein-platz-icon {
+      font-size: 2.5rem;
+    }
+    .dein-platz-header h2 {
+      color: #fff;
+      font-size: 1.3rem;
+      margin: 0 0 0.25rem 0;
+    }
+    .dein-platz-header p {
+      color: #888;
+      font-size: 0.85rem;
+      margin: 0;
+    }
+    
+    .hauptzimmer-karte {
+      background: rgba(229,57,53,0.1);
+      border: 1px solid rgba(229,57,53,0.3);
+      border-radius: 12px;
+      padding: 1.25rem;
+      margin-bottom: 1rem;
+    }
+    .hauptzimmer-badge {
+      display: inline-block;
+      padding: 0.25rem 0.75rem;
+      background: #E53935;
+      border-radius: 12px;
+      color: #fff;
+      font-size: 0.75rem;
+      font-weight: 600;
+      margin-bottom: 0.75rem;
+    }
+    .hauptzimmer-header {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.75rem;
+      margin-bottom: 1rem;
+    }
+    .hauptzimmer-etage {
+      font-size: 1.75rem;
+    }
+    .hauptzimmer-header h3 {
+      color: #fff;
+      font-size: 1.1rem;
+      margin: 0 0 0.25rem 0;
+    }
+    .hauptzimmer-achse {
+      color: #888;
+      font-size: 0.8rem;
+    }
+    
+    .hauptzimmer-position {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-bottom: 1rem;
+      padding: 0.5rem 0.75rem;
+      background: rgba(255,255,255,0.05);
+      border-radius: 8px;
+    }
+    .position-label {
+      color: #888;
+      font-size: 0.8rem;
+    }
+    .position-wert {
+      width: 28px;
+      height: 28px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #E53935;
+      border-radius: 50%;
+      color: #fff;
+      font-weight: 700;
+      font-size: 0.9rem;
+    }
+    .position-name {
+      color: #ddd;
+      font-size: 0.9rem;
+      font-weight: 500;
+    }
+    
+    .hauptzimmer-aufgabe {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.6rem;
+      padding: 0.75rem;
+      background: rgba(76,175,80,0.1);
+      border: 1px solid rgba(76,175,80,0.2);
+      border-radius: 8px;
+    }
+    .aufgabe-icon {
+      font-size: 1.25rem;
+    }
+    .hauptzimmer-aufgabe p {
+      color: #ccc;
+      font-size: 0.85rem;
+      line-height: 1.5;
+      margin: 0;
+    }
+    
+    .weitere-zimmer {
+      margin-bottom: 1rem;
+    }
+    .weitere-zimmer-label {
+      color: #888;
+      font-size: 0.85rem;
+      margin-bottom: 0.5rem;
+    }
+    .weitere-zimmer-liste {
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+    }
+    .weiteres-zimmer {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      padding: 0.5rem 0.75rem;
+      background: rgba(255,255,255,0.03);
+      border: 1px solid #333;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .weiteres-zimmer:hover {
+      background: rgba(255,255,255,0.06);
+      border-color: #555;
+    }
+    .weiteres-icon {
+      font-size: 1.25rem;
+    }
+    .weiteres-info {
+      display: flex;
+      flex-direction: column;
+    }
+    .weiteres-name {
+      color: #ddd;
+      font-size: 0.85rem;
+      font-weight: 500;
+    }
+    .weiteres-position {
+      color: #888;
+      font-size: 0.7rem;
+    }
+    
+    .wg-empfehlung {
+      padding: 1rem;
+      background: rgba(156,39,176,0.08);
+      border: 1px solid rgba(156,39,176,0.2);
+      border-radius: 10px;
+      margin-bottom: 1rem;
+    }
+    .wg-empfehlung-label {
+      color: #9C27B0;
+      font-size: 0.85rem;
+      font-weight: 600;
+      margin-bottom: 0.4rem;
+    }
+    .wg-empfehlung p {
+      color: #aaa;
+      font-size: 0.85rem;
+      margin: 0 0 0.75rem 0;
+    }
+    .aehnliche-archetypen {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+    .aehnlicher-archetyp {
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.35rem 0.6rem;
+      background: #222;
+      border: 1px solid var(--accent, #666);
+      border-radius: 20px;
+      font-size: 0.8rem;
+      color: #ccc;
+    }
+    .aehnlicher-archetyp span:first-child {
+      font-size: 1rem;
+    }
+    
+    .dein-platz-actions {
+      display: flex;
+      gap: 0.75rem;
+      margin-top: 1rem;
+    }
+    .dein-platz-btn {
+      flex: 1;
+      padding: 0.75rem 1rem;
+      background: linear-gradient(135deg, #E53935, #C62828);
+      border: none;
+      border-radius: 25px;
+      color: #fff;
+      font-size: 0.9rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .dein-platz-btn:hover {
+      transform: scale(1.02);
+      box-shadow: 0 4px 15px rgba(229,57,53,0.4);
+    }
+    .dein-platz-btn.secondary {
+      background: transparent;
+      border: 1px solid #555;
+      color: #aaa;
+    }
+    .dein-platz-btn.secondary:hover {
+      border-color: #888;
+      color: #ddd;
+      box-shadow: none;
+    }
+    
+    /* Highlight-Pulse Animation für Zimmer */
+    @keyframes highlightPulse {
+      0%, 100% { box-shadow: 0 0 0 0 rgba(229,57,53,0); }
+      50% { box-shadow: 0 0 20px 5px rgba(229,57,53,0.4); }
+    }
+    .highlight-pulse {
+      animation: highlightPulse 0.5s ease 3;
+    }
+    
+    /* ═══════════════════════════════════════════════════════════════
        WG-DEBATTE POPUP
        ═══════════════════════════════════════════════════════════════ */
     .wg-debatte-overlay {
@@ -3735,8 +4019,8 @@
     .oeko-art.symbiont { border-color: #2196F3; background: #202a3a; }
     .oeko-art.endangered { border-color: #f44336; background: #3a2020; opacity: 0.7; }
     
-    /* Labor-Container */
-    #labor-container {
+    /* Chemie-Container */
+    #chemie-container {
       display: none;
       flex: 1;
       flex-direction: column;
@@ -4532,7 +4816,7 @@
     }
   </style>
 </head>
-<body>
+<body class="palette-expanded">
   <header>
     <div>
       <h1>DAS WESEN DES LINKEN DENKENS</h1>
@@ -4549,52 +4833,90 @@
   </header>
   
   <!-- NEUE LINSEN-PALETTE -->
-  <aside class="linsen-palette" id="linsen-palette">
+  <aside class="linsen-palette expanded" id="linsen-palette">
     <button class="palette-toggle" onclick="togglePalette()" title="Palette ein-/ausklappen">☰</button>
     
     <!-- Ansichten -->
     <div class="palette-section">
       <span class="palette-section-label">Ansicht</span>
       <div class="linse-wrapper">
-        <div class="linse ansicht" data-typ="ansicht" data-id="netzwerk" onclick="setAnsicht('netzwerk')" title="Netzwerk">
-          🕸️
-          <span class="linse-label">Netzwerk</span>
+        <div class="linse ansicht" data-typ="ansicht" data-id="wesen" onclick="setAnsicht('wesen')" title="Das Wesen">
+          🔴
+          <span class="linse-label">Das Wesen</span>
         </div>
       </div>
       <div class="linse-wrapper">
-        <div class="linse ansicht" data-typ="ansicht" data-id="karte" onclick="setAnsicht('karte')" title="Karte">
-          🗺️
-          <span class="linse-label">Karte</span>
-        </div>
-      </div>
-      <div class="linse-wrapper">
-        <div class="linse ansicht" data-typ="ansicht" data-id="liste" onclick="setAnsicht('liste')" title="Liste">
-          📋
-          <span class="linse-label">Liste</span>
-        </div>
-      </div>
-      <div class="linse-wrapper">
-        <div class="linse ansicht" data-typ="ansicht" data-id="wg" onclick="setAnsicht('wg')" title="WG">
+        <div class="linse ansicht" data-typ="ansicht" data-id="wg" onclick="setAnsicht('wg')" title="Haus">
           🏠
-          <span class="linse-label">WG</span>
+          <span class="linse-label">Haus</span>
         </div>
       </div>
-      <div class="linse-wrapper">
-        <div class="linse ansicht" data-typ="ansicht" data-id="oekosystem" onclick="setAnsicht('oekosystem')" title="Ökosystem">
-          🌿
-          <span class="linse-label">Ökosystem</span>
+      
+      <!-- Labor-Gruppe (aufklappbar) -->
+      <div class="linse-gruppe" id="gruppe-labor">
+        <div class="linse-wrapper">
+          <div class="linse gruppe-header" onclick="toggleGruppe('labor')" title="Labor">
+            ⚗️
+            <span class="linse-label">Labor</span>
+            <span class="gruppe-pfeil">▸</span>
+          </div>
+        </div>
+        <div class="gruppe-inhalt" id="gruppe-labor-inhalt">
+          <div class="linse-wrapper sub">
+            <div class="linse ansicht sub" data-typ="ansicht" data-id="stammbaum" onclick="setAnsicht('stammbaum')" title="Stammbaum">
+              🌳
+              <span class="linse-label">Stammbaum</span>
+            </div>
+          </div>
+          <div class="linse-wrapper sub">
+            <div class="linse ansicht sub" data-typ="ansicht" data-id="oekosystem" onclick="setAnsicht('oekosystem')" title="Ökosystem">
+              🌿
+              <span class="linse-label">Ökosystem</span>
+            </div>
+          </div>
+          <div class="linse-wrapper sub">
+            <div class="linse ansicht sub" data-typ="ansicht" data-id="netzwerk" onclick="setAnsicht('netzwerk')" title="Netzwerk">
+              🕸️
+              <span class="linse-label">Netzwerk</span>
+            </div>
+          </div>
+          <div class="linse-wrapper sub">
+            <div class="linse ansicht sub" data-typ="ansicht" data-id="chemie" onclick="setAnsicht('chemie')" title="Chemie">
+              🧪
+              <span class="linse-label">Chemie</span>
+            </div>
+          </div>
         </div>
       </div>
-      <div class="linse-wrapper">
-        <div class="linse ansicht" data-typ="ansicht" data-id="zeitleiste" onclick="setAnsicht('zeitleiste')" title="Zeit">
-          ⏳
-          <span class="linse-label">Zeit</span>
+      
+      <!-- Archiv-Gruppe (aufklappbar) -->
+      <div class="linse-gruppe" id="gruppe-archiv">
+        <div class="linse-wrapper">
+          <div class="linse gruppe-header" onclick="toggleGruppe('archiv')" title="Archiv">
+            📚
+            <span class="linse-label">Archiv</span>
+            <span class="gruppe-pfeil">▸</span>
+          </div>
         </div>
-      </div>
-      <div class="linse-wrapper">
-        <div class="linse ansicht" data-typ="ansicht" data-id="stammbaum" onclick="setAnsicht('stammbaum')" title="Stammbaum">
-          🌳
-          <span class="linse-label">Stammbaum</span>
+        <div class="gruppe-inhalt" id="gruppe-archiv-inhalt">
+          <div class="linse-wrapper sub">
+            <div class="linse ansicht sub" data-typ="ansicht" data-id="liste" onclick="setAnsicht('liste')" title="Liste">
+              📋
+              <span class="linse-label">Liste</span>
+            </div>
+          </div>
+          <div class="linse-wrapper sub">
+            <div class="linse ansicht sub" data-typ="ansicht" data-id="zeitleiste" onclick="setAnsicht('zeitleiste')" title="Zeit">
+              ⏳
+              <span class="linse-label">Zeit</span>
+            </div>
+          </div>
+          <div class="linse-wrapper sub">
+            <div class="linse ansicht sub" data-typ="ansicht" data-id="karte" onclick="setAnsicht('karte')" title="Karte">
+              🗺️
+              <span class="linse-label">Karte</span>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -4650,21 +4972,15 @@
         </div>
       </div>
       <div class="linse-wrapper">
-        <div class="linse werkzeug" data-typ="werkzeug" data-id="labor" onclick="openWerkzeug('labor')" title="Labor">
-          ⚗️
-          <span class="linse-label">Labor</span>
-        </div>
-      </div>
-      <div class="linse-wrapper">
         <div class="linse werkzeug" data-typ="werkzeug" data-id="fragen" onclick="openWerkzeug('fragen')" title="Fragen">
           ❓
           <span class="linse-label">Fragen</span>
         </div>
       </div>
       <div class="linse-wrapper">
-        <div class="linse werkzeug active" data-typ="werkzeug" data-id="wesen" onclick="openWerkzeug('wesen')" title="Das Wesen">
-          🫀
-          <span class="linse-label">Das Wesen</span>
+        <div class="linse werkzeug" data-typ="werkzeug" data-id="speichern" onclick="openShareModal()" title="Speichern">
+          💾
+          <span class="linse-label">Speichern</span>
         </div>
       </div>
     </div>
@@ -4673,6 +4989,7 @@
     <div class="palette-extras">
       <button class="extra-btn" onclick="openThemeModal()" title="Ästhetik">🎨</button>
       <button class="extra-btn" onclick="openShareModal()" title="Teilen">📤</button>
+      <button class="extra-btn disabled" title="Login (bald verfügbar)">🔐</button>
     </div>
   </aside>
   
@@ -4907,8 +5224,8 @@
     <!-- Ökosystem: Positionen als Arten -->
     <div id="oekosystem-container"></div>
     
-    <!-- Labor: Chemische Reaktionen -->
-    <div id="labor-container"></div>
+    <!-- Chemie: Periodensystem der Ideen -->
+    <div id="chemie-container"></div>
     
     <!-- Epochen: Zeitschichten -->
     <div id="zeit-container"></div>
@@ -4941,10 +5258,6 @@
         <button class="reaktor-close" onclick="closeReaktor()">×</button>
       </div>
       <div class="reaktor-body" id="reaktor-body"></div>
-    </div>
-    
-    <div class="reaktor-hint" id="reaktor-hint" style="display: none;">
-      Ziehe einen Knoten auf einen anderen, um ihre Beziehung zu sehen
     </div>
     
     <div id="detail-panel">
@@ -7811,7 +8124,6 @@ let nodeObjects = {};
 let linkObjects = [];
 let nodes3d = [];
 let links3d = [];
-let magnetPair = null;
 
 function initNetzwerk() {
   const container = document.getElementById('netzwerk-container');
@@ -8065,33 +8377,6 @@ function initNetzwerk() {
           node.x = intersect.x;
           node.y = intersect.y;
           node.z = intersect.z;
-          
-          let nearestDist = Infinity;
-          let nearestNode = null;
-          nodes3d.forEach(other => {
-            if (other.id !== node.id) {
-              const dist = Math.sqrt(
-                Math.pow(other.x - node.x, 2) + 
-                Math.pow(other.y - node.y, 2) + 
-                Math.pow(other.z - node.z, 2)
-              );
-              if (dist < 40 && dist < nearestDist) {
-                nearestDist = dist;
-                nearestNode = other;
-              }
-            }
-          });
-          
-          nodes3d.forEach(n => {
-            const obj = nodeObjects[n.id];
-            if (nearestNode && n.id === nearestNode.id) {
-              obj.scale.set(1.3, 1.3, 1.3);
-            } else if (n.id !== node.id) {
-              obj.scale.set(1, 1, 1);
-            }
-          });
-          
-          draggedNode.dropTarget = nearestNode;
         }
       }
     } else {
@@ -8124,19 +8409,11 @@ function initNetzwerk() {
       const cameraDirection = new THREE.Vector3();
       camera.getWorldDirection(cameraDirection);
       dragPlane.setFromNormalAndCoplanarPoint(cameraDirection, hoveredNode.position);
-      document.getElementById('reaktor-hint').style.display = 'block';
     }
   });
   
   canvas.addEventListener('mouseup', (e) => {
     if (draggedNode) {
-      if (draggedNode.dropTarget) {
-        const sourceId = draggedNode.userData.id;
-        const targetId = draggedNode.dropTarget.id;
-        magnetPair = { source: sourceId, target: targetId };
-        showReaktion(sourceId, targetId);
-      }
-      
       nodes3d.forEach(n => {
         const obj = nodeObjects[n.id];
         obj.scale.set(1, 1, 1);
@@ -8144,7 +8421,6 @@ function initNetzwerk() {
       
       draggedNode = null;
       canvas.style.cursor = hoveredNode ? 'pointer' : 'grab';
-      document.getElementById('reaktor-hint').style.display = 'none';
     }
   });
   
@@ -8246,27 +8522,6 @@ function simulate3D() {
     target.vx -= fx; target.vy -= fy; target.vz -= fz;
   });
   
-  if (magnetPair) {
-    const source = nodes3d.find(n => n.id === magnetPair.source);
-    const target = nodes3d.find(n => n.id === magnetPair.target);
-    if (source && target) {
-      const dx = target.x - source.x;
-      const dy = target.y - source.y;
-      const dz = target.z - source.z;
-      const dist = Math.sqrt(dx * dx + dy * dy + dz * dz);
-      
-      if (dist > 30) {
-        const force = 0.1;
-        source.vx += (dx / dist) * force * dist;
-        source.vy += (dy / dist) * force * dist;
-        source.vz += (dz / dist) * force * dist;
-        target.vx -= (dx / dist) * force * dist;
-        target.vy -= (dy / dist) * force * dist;
-        target.vz -= (dz / dist) * force * dist;
-      }
-    }
-  }
-  
   nodes3d.forEach(node => {
     node.vx -= node.x * centerForce;
     node.vy -= node.y * centerForce;
@@ -8296,7 +8551,7 @@ function showReaktion(idA, idB) {
   
   const panel = document.getElementById('detail-panel');
   panel.innerHTML = `
-    <button class="close-btn" onclick="closePanel(); magnetPair = null;">×</button>
+    <button class="close-btn" onclick="closePanel()">×</button>
     <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem;">
       <h1 style="font-size: 1.2rem; color: #E53935; margin: 0;">${a.name}</h1>
       <span style="font-size: 1.5rem; color: #666;">⟷</span>
@@ -9062,23 +9317,29 @@ function initZufall() {
 }
 
 function zeigeZufall() {
-  // Zeige Zufall-Container
-  setAnsicht('netzwerk'); // Zurück zum Netzwerk
+  // Wähle zufällige Ansicht
+  const ansichten = ['netzwerk', 'liste', 'chemie', 'stammbaum', 'oekosystem', 'karte', 'zeitleiste'];
+  const zufallsAnsicht = ansichten[Math.floor(Math.random() * ansichten.length)];
   
   // Wähle zufälligen Knoten
   const ids = Object.keys(knotenData);
   const randomId = ids[Math.floor(Math.random() * ids.length)];
   
-  // Zeige ihn im Detail-Panel
-  showKnoten(randomId);
+  // Wechsle zur zufälligen Ansicht
+  setAnsicht(zufallsAnsicht);
   
-  // Fliege im 3D-Netzwerk dorthin
-  if (nodeObjects[randomId]) {
-    const node = nodeObjects[randomId];
-    // Sanfte Kamera-Animation zum Knoten
-    const targetPos = node.position.clone();
-    animateCameraTo(targetPos);
-  }
+  // Zeige den Knoten im Detail-Panel
+  setTimeout(() => {
+    showKnoten(randomId);
+    
+    // Spezielle Aktionen je nach Ansicht
+    if (zufallsAnsicht === 'netzwerk' && nodeObjects[randomId]) {
+      // Fliege im 3D-Netzwerk dorthin
+      const node = nodeObjects[randomId];
+      const targetPos = node.position.clone();
+      animateCameraTo(targetPos);
+    }
+  }, 200);
 }
 
 function animateCameraTo(targetPos) {
@@ -9648,8 +9909,16 @@ function renderHaus(modus) {
 
 function renderFunktionalModus(profil) {
   const hatProfil = Object.keys(profil).length > 0;
+  const archetyp = generatorArchetyp || null;
   
-  let html = `
+  let html = '';
+  
+  // "Dein Platz" Karte zeigen wenn Profil vorhanden
+  if (hatProfil) {
+    html += renderDeinPlatz(profil, archetyp);
+  }
+  
+  html += `
     <div class="haus-banner funktional">
       <span class="banner-icon">🏠</span>
       <div class="banner-text">
@@ -9681,7 +9950,7 @@ function renderFunktionalModus(profil) {
       const meta = window.achsenMeta[achse] || { pole: ['1','2','3','4','5'] };
       
       html += `
-        <div class="haus-zimmer ${meinePos ? 'meine-position' : ''}" onclick="zeigeZimmerDetail('${achse}')">
+        <div class="haus-zimmer ${meinePos ? 'meine-position' : ''}" data-achse="${achse}" onclick="zeigeZimmerDetail('${achse}')">
           <div class="zimmer-kopf">
             <span class="zimmer-achse">${achse}</span>
             <span class="zimmer-name">${zimmer.name}</span>
@@ -10295,8 +10564,8 @@ function initOekosystem() {
 // LABOR: Chemische Reaktionen zwischen Ideen
 // ══════════════════════════════════════════════════════════════════════
 
-function initLabor() {
-  const container = document.getElementById('labor-container');
+function initChemie() {
+  const container = document.getElementById('chemie-container');
   
   // Elemente definieren basierend auf Eigenschaften
   const elemente = Object.values(knotenData).map(k => {
@@ -11616,10 +11885,10 @@ function initWesen() {
 // ══════════════════════════════════════════════════════════════════════
 
 // Container für Ansichten
-const ansichtContainer = ['netzwerk', 'karte', 'liste', 'wg', 'oekosystem', 'zeitleiste', 'stammbaum'];
+const ansichtContainer = ['wesen', 'netzwerk', 'karte', 'liste', 'wg', 'oekosystem', 'zeitleiste', 'stammbaum', 'chemie'];
 
 // Container für Werkzeuge (eigene Ansichten)
-const werkzeugContainer = ['konfigurator', 'labor', 'zufall', 'fragen', 'wesen'];
+const werkzeugContainer = ['konfigurator', 'zufall', 'fragen'];
 
 // Alle Container
 const alleContainer = [...ansichtContainer, ...werkzeugContainer, 'zeit', 'stammbaum', 'dialoge', 'zitate', 'bibliothek', 'praxis', 'fieber', 'personen', 'kosmos', 'debatten'];
@@ -11642,6 +11911,20 @@ function setAnsicht(ansicht) {
   document.querySelectorAll('.linse.werkzeug').forEach(l => {
     l.classList.remove('active');
   });
+  
+  // Gruppen automatisch öffnen wenn Kind aktiv
+  const laborAnsichten = ['stammbaum', 'oekosystem', 'netzwerk', 'chemie'];
+  const archivAnsichten = ['liste', 'zeitleiste', 'karte'];
+  
+  const gruppeLabor = document.getElementById('gruppe-labor');
+  const gruppeArchiv = document.getElementById('gruppe-archiv');
+  
+  if (gruppeLabor) {
+    gruppeLabor.classList.toggle('open', laborAnsichten.includes(ansicht));
+  }
+  if (gruppeArchiv) {
+    gruppeArchiv.classList.toggle('open', archivAnsichten.includes(ansicht));
+  }
   
   // Container wechseln - NUR display setzen, keine Klassen
   alleContainer.forEach(c => {
@@ -11847,7 +12130,7 @@ initFragen();
 initKosmos();
 initWG();
 initOekosystem();
-initLabor();
+initChemie();
 initEpochen();
 initStammbaum();
 initDialoge();
@@ -11892,6 +12175,14 @@ function togglePalette() {
   const palette = document.getElementById('linsen-palette');
   palette.classList.toggle('expanded');
   document.body.classList.toggle('palette-expanded');
+}
+
+// Linse-Gruppe auf-/zuklappen
+function toggleGruppe(gruppe) {
+  const gruppeEl = document.getElementById(`gruppe-${gruppe}`);
+  if (gruppeEl) {
+    gruppeEl.classList.toggle('open');
+  }
 }
 
 // Kombinierbare Linsen hervorheben
@@ -12038,14 +12329,8 @@ function executeWerkzeug(id) {
     case 'konfigurator':
       openWerkzeug('konfigurator');
       break;
-    case 'labor':
-      openWerkzeug('labor');
-      break;
     case 'fragen':
       openWerkzeug('fragen');
-      break;
-    case 'wesen':
-      openWerkzeug('wesen');
       break;
   }
 }
@@ -12057,12 +12342,15 @@ function updateActiveLinsenDisplay() {
   
   // Aktive Ansicht
   const ansichtNames = {
+    'wesen': '🔴 Das Wesen',
     'netzwerk': '🕸️ Netzwerk',
     'karte': '🗺️ Karte',
     'liste': '📋 Liste',
-    'wg': '🏠 WG',
+    'wg': '🏠 Haus',
     'oekosystem': '🌿 Ökosystem',
-    'zeitleiste': '⏳ Zeit'
+    'zeitleiste': '⏳ Zeit',
+    'stammbaum': '🌳 Stammbaum',
+    'chemie': '🧪 Chemie'
   };
   
   if (aktiveAnsicht && ansichtNames[aktiveAnsicht]) {
@@ -12719,6 +13007,335 @@ function zeigeProfilImHaus() {
   // Kurz warten, dann rendern mit Profil
   setTimeout(() => {
     renderHaus('funktional');
+  }, 100);
+}
+
+// ═══════════════════════════════════════════════════════════════
+// DEIN PLATZ IM LINKEN WESEN
+// ═══════════════════════════════════════════════════════════════
+
+// Berechnet das Hauptzimmer und weitere passende Zimmer basierend auf Profil
+function berechneDeinenPlatz(profil) {
+  if (!profil || Object.keys(profil).length === 0) return null;
+  
+  const hausStruktur = window.hausStruktur;
+  const achsenMeta = window.achsenMeta;
+  
+  // Sammle alle Zimmer mit Bewertung
+  const bewerteteZimmer = [];
+  
+  hausStruktur.forEach(etage => {
+    etage.zimmer.forEach(zimmer => {
+      const achse = zimmer.achse;
+      const profilWert = profil[achse];
+      
+      if (profilWert !== undefined) {
+        // Extremheit: Wie weit von der Mitte (3) entfernt?
+        const distanzZurMitte = Math.abs(profilWert - 3);
+        
+        bewerteteZimmer.push({
+          achse,
+          zimmer,
+          etage: etage.name,
+          etageIcon: etage.icon,
+          profilWert,
+          extremheit: distanzZurMitte,
+          richtung: profilWert > 3 ? 'progressiv' : profilWert < 3 ? 'traditionell' : 'vermittelnd',
+          aufgabe: generiereAufgabe(achse, profilWert)
+        });
+      }
+    });
+  });
+  
+  // Sortiere nach Extremheit (stärkste Position zuerst)
+  bewerteteZimmer.sort((a, b) => b.extremheit - a.extremheit);
+  
+  return {
+    hauptzimmer: bewerteteZimmer[0] || null,
+    weitereZimmer: bewerteteZimmer.slice(1, 4), // Top 3 weitere
+    alleZimmer: bewerteteZimmer
+  };
+}
+
+// Generiert eine persönliche Aufgabe basierend auf Achse und Position
+function generiereAufgabe(achse, wert) {
+  const aufgaben = {
+    A1: {
+      1: "Du verteidigst realistische Reformen gegen utopische Träumereien und zeigst, dass kleine Schritte zum Ziel führen.",
+      2: "Du bringst pragmatische Perspektiven in revolutionäre Debatten und baust Brücken zwischen Positionen.",
+      3: "Du vermittelst zwischen Reform und Revolution und hältst beide Optionen offen.",
+      4: "Du treibst radikale Transformation voran und zeigst, dass Systemwechsel nötig ist.",
+      5: "Du erinnerst alle daran: Ohne Bruch keine Befreiung. Du hältst die revolutionäre Perspektive wach."
+    },
+    A2: {
+      1: "Du betonst die zentrale Rolle der Arbeiterklasse und organisierst in Betrieben.",
+      2: "Du erweiterst den Blick auf alle Lohnabhängigen und verbindest verschiedene Sektoren.",
+      3: "Du verbindest verschiedene Subjekte und suchst nach Gemeinsamkeiten.",
+      4: "Du bringst intersektionale Perspektiven ein und zeigst Unterdrückungszusammenhänge auf.",
+      5: "Du erweiterst das revolutionäre Subjekt auf alles Leben und denkst radikal inklusiv."
+    },
+    A3: {
+      1: "Du analysierst den Staat als Werkzeug und entwickelst Strategien zu seiner Eroberung.",
+      2: "Du arbeitest an konkreten Staatsreformen und demokratischen Umbaumaßnahmen.",
+      3: "Du siehst den Staat als umkämpftes Terrain und navigierst klug zwischen den Positionen.",
+      4: "Du baust autonome Strukturen jenseits des Staates auf und lebst Alternativen vor.",
+      5: "Du erinnerst an die herrschaftliche Natur des Staates und arbeitest an seiner Überwindung."
+    },
+    A4: {
+      1: "Du organisierst effiziente zentrale Strukturen für koordiniertes Handeln.",
+      2: "Du baust Parteistrukturen auf, die Massenwirkung entfalten können.",
+      3: "Du verbindest verschiedene Organisationsformen und lernst von allen.",
+      4: "Du vernetzt dezentrale Initiativen und stärkst horizontale Strukturen.",
+      5: "Du praktizierst und lehrst basisdemokratische Entscheidungsfindung."
+    },
+    B1: {
+      1: "Du zeigst, wie sozial regulierte Märkte funktionieren können.",
+      2: "Du entwickelst hybride Wirtschaftsmodelle mit starker Regulierung.",
+      3: "Du experimentierst mit verschiedenen Koordinationsmechanismen.",
+      4: "Du arbeitest an demokratischer Wirtschaftsplanung und Partizipation.",
+      5: "Du entwickelst Visionen umfassender demokratischer Planung."
+    },
+    B2: {
+      1: "Du stärkst öffentliches Eigentum und staatliche Daseinsvorsorge.",
+      2: "Du entwickelst Modelle gesellschaftlichen Eigentums mit demokratischer Kontrolle.",
+      3: "Du erforschst verschiedene Eigentumsformen und ihre Stärken.",
+      4: "Du baust genossenschaftliche Strukturen auf und vernetzt sie.",
+      5: "Du praktizierst und verbreitest Commons-basierte Wirtschaft."
+    },
+    B3: {
+      1: "Du kämpfst für gute Arbeit für alle und gegen Arbeitslosigkeit.",
+      2: "Du setzt dich für bessere Arbeitsbedingungen und Mitbestimmung ein.",
+      3: "Du verbindest Arbeitskämpfe mit Arbeitszeitverkürzung.",
+      4: "Du entwickelst Konzepte für ein bedingungsloses Grundeinkommen.",
+      5: "Du denkst radikal über Arbeit hinaus und praktizierst Post-Work-Politik."
+    },
+    C1: {
+      1: "Du betonst den Primat des Klassenkampfs und organisierst auf dieser Basis.",
+      2: "Du verbindest Klassenpolitik mit anderen Kämpfen ohne Hierarchisierung.",
+      3: "Du suchst nach Verbindungen zwischen verschiedenen Unterdrückungsformen.",
+      4: "Du bringst intersektionale Analyse in alle politischen Diskussionen.",
+      5: "Du machst feministischen Kampf zum Zentrum revolutionärer Politik."
+    },
+    C2: {
+      1: "Du betonst die Notwendigkeit von Produktion und materieller Entwicklung.",
+      2: "Du verbindest soziale mit ökologischen Forderungen pragmatisch.",
+      3: "Du suchst nach sozial-ökologischen Win-Win-Lösungen.",
+      4: "Du machst Klimagerechtigkeit zum Kern sozialistischer Politik.",
+      5: "Du vertrittst Eigenrechte der Natur und radikalen Ökosozialismus."
+    },
+    C3: {
+      1: "Du stärkst nationale Handlungsfähigkeit als Basis für Veränderung.",
+      2: "Du praktizierst internationale Solidarität mit lokaler Verankerung.",
+      3: "Du baust internationale Kooperationen auf praktischer Ebene.",
+      4: "Du arbeitest an globalen sozialistischen Netzwerken.",
+      5: "Du praktizierst und predigst Internationalismus ohne Kompromisse."
+    },
+    D1: {
+      1: "Du warnst vor den Gefahren utopischer Entwürfe und betonst Negation.",
+      2: "Du formulierst, was wir nicht wollen, ohne vorschnell Lösungen zu geben.",
+      3: "Du hältst Prozess und Ziel in produktiver Spannung.",
+      4: "Du entwickelst realistische Utopien, die inspirieren und orientieren.",
+      5: "Du malst konkrete Bilder der befreiten Gesellschaft."
+    },
+    D2: {
+      1: "Du entwickelst Strategien gradueller Transformation mit Geduld.",
+      2: "Du baust alternative Strukturen in den Nischen des Systems.",
+      3: "Du kombinierst verschiedene Transformationsstrategien klug.",
+      4: "Du arbeitest auf gesellschaftliche Bruchpunkte hin.",
+      5: "Du hältst die revolutionäre Perspektive eines fundamentalen Bruchs wach."
+    },
+    D3: {
+      1: "Du betonst den säkularen Charakter linker Politik.",
+      2: "Du bist offen für religiöse Genoss*innen ohne Religion zu fördern.",
+      3: "Du verbindest verschiedene Weltanschauungen respektvoll.",
+      4: "Du bringst spirituelle Dimensionen in politische Arbeit ein.",
+      5: "Du verbindest innere und äußere Transformation radikal."
+    },
+    E1: {
+      1: "Du hältst die klare Klassenlinie und warnst vor Verwässerung.",
+      2: "Du baust einen stabilen sozialistischen Kern mit klarer Linie.",
+      3: "Du suchst nach Bündnissen mit klaren Prinzipien.",
+      4: "Du vernetzt verschiedene Bewegungen und findest Gemeinsamkeiten.",
+      5: "Du baust die breitestmögliche Front gegen Kapital und Reaktion."
+    },
+    E2: {
+      1: "Du koordinierst zentral für maximale Schlagkraft.",
+      2: "Du baust föderale Strukturen mit klarer Arbeitsteilung.",
+      3: "Du denkst und handelst auf mehreren Ebenen gleichzeitig.",
+      4: "Du stärkst kommunale Selbstverwaltung und lokale Macht.",
+      5: "Du praktizierst und lehrst Basisdemokratie von unten."
+    },
+    E3: {
+      1: "Du organisierst Aufklärung und politische Bildungsarbeit.",
+      2: "Du verbindest theoretische Arbeit mit Praxisreflexion.",
+      3: "Du lernst aus Theorie und Praxis gleichermaßen.",
+      4: "Du betonst Erfahrungswissen und gemeinsames Lernen im Kampf.",
+      5: "Du lebst schon jetzt vor, wie die befreite Gesellschaft aussieht."
+    },
+    E4: {
+      1: "Du organisierst strikt legalen Widerstand und nutzt alle Rechtswege.",
+      2: "Du praktizierst zivilen Ungehorsam als legitimes Mittel.",
+      3: "Du wählst Mittel situativ und begründest sie kontextabhängig.",
+      4: "Du organisierst militante Aktionen wenn nötig.",
+      5: "Du hältst alle Optionen offen und entscheidest taktisch."
+    }
+  };
+  
+  return aufgaben[achse]?.[wert] || "Du bringst deine einzigartige Perspektive ein.";
+}
+
+// Rendert die "Dein Platz"-Ansicht
+function renderDeinPlatz(profil, archetyp) {
+  const platz = berechneDeinenPlatz(profil);
+  if (!platz || !platz.hauptzimmer) return '';
+  
+  const archetypen = window.archetypen;
+  const archetypInfo = archetyp ? archetypen[archetyp] : null;
+  const achsenMeta = window.achsenMeta;
+  
+  let html = `
+    <div class="dein-platz">
+      <div class="dein-platz-header">
+        <span class="dein-platz-icon">🏠</span>
+        <div>
+          <h2>Dein Platz im Linken Wesen</h2>
+          <p>Basierend auf deinem Profil: Hier wirst du gebraucht</p>
+        </div>
+      </div>
+  `;
+  
+  // Hauptzimmer
+  const haupt = platz.hauptzimmer;
+  const hauptMeta = achsenMeta[haupt.achse];
+  const hauptPosition = hauptMeta?.pole[haupt.profilWert - 1] || haupt.profilWert;
+  
+  html += `
+    <div class="hauptzimmer-karte">
+      <div class="hauptzimmer-badge">🔥 Dein Hauptzimmer</div>
+      <div class="hauptzimmer-header">
+        <span class="hauptzimmer-etage">${haupt.etageIcon}</span>
+        <div>
+          <h3>${haupt.zimmer.name}</h3>
+          <span class="hauptzimmer-achse">${haupt.achse} — ${haupt.zimmer.beschreibung}</span>
+        </div>
+      </div>
+      <div class="hauptzimmer-position">
+        <span class="position-label">Deine Position:</span>
+        <span class="position-wert">${haupt.profilWert}</span>
+        <span class="position-name">${hauptPosition}</span>
+      </div>
+      <div class="hauptzimmer-aufgabe">
+        <span class="aufgabe-icon">✊</span>
+        <p>${haupt.aufgabe}</p>
+      </div>
+    </div>
+  `;
+  
+  // Weitere Zimmer
+  if (platz.weitereZimmer.length > 0) {
+    html += `
+      <div class="weitere-zimmer">
+        <div class="weitere-zimmer-label">💡 Weitere Räume für dich:</div>
+        <div class="weitere-zimmer-liste">
+    `;
+    
+    platz.weitereZimmer.forEach(z => {
+      const meta = achsenMeta[z.achse];
+      const posName = meta?.pole[z.profilWert - 1] || z.profilWert;
+      
+      html += `
+        <div class="weiteres-zimmer" onclick="zeigeZimmerDetail('${z.achse}')">
+          <span class="weiteres-icon">${z.etageIcon}</span>
+          <div class="weiteres-info">
+            <span class="weiteres-name">${z.zimmer.name}</span>
+            <span class="weiteres-position">Position ${z.profilWert}: ${posName}</span>
+          </div>
+        </div>
+      `;
+    });
+    
+    html += `</div></div>`;
+  }
+  
+  // WG-Empfehlung (ähnliche Archetypen)
+  if (archetypInfo) {
+    const aehnliche = findeAehnlicheArchetypen(archetyp, 3);
+    
+    html += `
+      <div class="wg-empfehlung">
+        <div class="wg-empfehlung-label">🤝 Deine WG-Empfehlung:</div>
+        <p>Als <strong>${archetypInfo.name}</strong> passt du gut zu:</p>
+        <div class="aehnliche-archetypen">
+    `;
+    
+    aehnliche.forEach(a => {
+      html += `
+        <div class="aehnlicher-archetyp" style="--accent: ${a.farbe}">
+          <span>${a.icon}</span>
+          <span>${a.name}</span>
+        </div>
+      `;
+    });
+    
+    html += `</div></div>`;
+  }
+  
+  // Action Button
+  html += `
+    <div class="dein-platz-actions">
+      <button class="dein-platz-btn" onclick="scrollToZimmer('${haupt.achse}')">
+        🏠 Zum Hauptzimmer
+      </button>
+      <button class="dein-platz-btn secondary" onclick="document.querySelector('.dein-platz').style.display='none'">
+        Verstanden
+      </button>
+    </div>
+  `;
+  
+  html += `</div>`;
+  
+  return html;
+}
+
+// Findet ähnliche Archetypen basierend auf ideal-Werten
+function findeAehnlicheArchetypen(eigenerArchetyp, anzahl = 3) {
+  const archetypen = window.archetypen;
+  if (!archetypen || !eigenerArchetyp) return [];
+  
+  const eigener = archetypen[eigenerArchetyp];
+  if (!eigener || !eigener.ideal) return [];
+  
+  const distanzen = [];
+  
+  Object.entries(archetypen).forEach(([id, arch]) => {
+    if (id === eigenerArchetyp || !arch.ideal) return;
+    
+    // Berechne Distanz
+    let distanz = 0;
+    Object.keys(eigener.ideal).forEach(achse => {
+      const diff = Math.abs((eigener.ideal[achse] || 3) - (arch.ideal[achse] || 3));
+      distanz += diff;
+    });
+    
+    distanzen.push({ id, ...arch, distanz });
+  });
+  
+  distanzen.sort((a, b) => a.distanz - b.distanz);
+  
+  return distanzen.slice(0, anzahl);
+}
+
+// Scrollt zum Zimmer in der funktionalen Ansicht
+function scrollToZimmer(achse) {
+  document.querySelector('.dein-platz').style.display = 'none';
+  
+  setTimeout(() => {
+    const zimmerEl = document.querySelector(`[data-achse="${achse}"]`);
+    if (zimmerEl) {
+      zimmerEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      zimmerEl.classList.add('highlight-pulse');
+      setTimeout(() => zimmerEl.classList.remove('highlight-pulse'), 2000);
+    }
   }, 100);
 }
 
