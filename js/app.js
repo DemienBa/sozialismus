@@ -45,7 +45,7 @@ const SOZIALISMUS_ENGINE = {
   },
 
   stroemungen: [
-    { name: "Anarcho-Kommunismus", kurzform: "Anarchistisch", icon: "Ⓐ", id: "libertaer",
+    { name: "Anarcho-Kommunismus", kurzform: "Anarchistisch", icon: "Ⓐ", id: "libertaerer_sozialismus",
       bedingungen: (p) => p.A3 >= 4 && p.A4 >= 4 && p.B2 >= 4,
       beschreibung: "Du willst den Staat abschaffen und durch freie Assoziationen ersetzen. Eigentum wird gemeinschaftlich verwaltet, ohne zentrale Autorität.",
       wesenKnoten: ["A3-5", "B2-5", "E2-5"],
@@ -55,17 +55,17 @@ const SOZIALISMUS_ENGINE = {
       beschreibung: "Du setzt auf Arbeiterräte als Organe der Selbstverwaltung. Die Basis entscheidet – in Betrieb und Stadtteil.",
       wesenKnoten: ["A3-4", "B2-5", "E3-4"],
       wesenZimmer: "Die Versammlungshalle - hier entscheiden alle gemeinsam" },
-    { name: "Autonomer Sozialismus", kurzform: "Autonom", icon: "🏴", id: "autonomer-marxismus",
+    { name: "Autonomer Sozialismus", kurzform: "Autonom", icon: "🏴", id: "autonomismus",
       bedingungen: (p) => p.A1 >= 4 && p.A4 >= 4 && p.E1 >= 3,
       beschreibung: "Du glaubst an Veränderung durch Bewegung, nicht durch Parteien. Die neue Gesellschaft wird im Widerstand geboren.",
       wesenKnoten: ["A2-4", "A3-4", "B3-4"],
       wesenZimmer: "Der Korridor - hier kreuzen sich alle Kämpfe" },
-    { name: "Demokratischer Sozialismus", kurzform: "Demokratisch", icon: "🌹", id: "demokratischer-sozialismus",
+    { name: "Demokratischer Sozialismus", kurzform: "Demokratisch", icon: "🌹", id: "demokratischer_sozialismus",
       bedingungen: (p) => p.A1 <= 3 && p.A3 <= 3 && p.A4 <= 3,
       beschreibung: "Du willst den Sozialismus durch demokratische Reformen erreichen. Schritt für Schritt, Mehrheit für Mehrheit.",
       wesenKnoten: ["A1-2", "A3-2", "D2-2"],
       wesenZimmer: "Der Salon - hier wird debattiert und abgestimmt" },
-    { name: "Libertärer Kommunalismus", kurzform: "Kommunalistisch", icon: "🌻", id: "munizipalismus",
+    { name: "Libertärer Kommunalismus", kurzform: "Kommunalistisch", icon: "🌻", id: "municipalismus",
       bedingungen: (p) => p.A3 >= 4 && p.E2 <= 2 && p.C2 >= 3,
       beschreibung: "Du setzt auf kommunale Selbstverwaltung und direkte Demokratie. Föderationen freier Kommunen ersetzen den Nationalstaat.",
       wesenKnoten: ["E2-5", "A3-4", "B2-4"],
@@ -75,17 +75,17 @@ const SOZIALISMUS_ENGINE = {
       beschreibung: "Ökologische und soziale Krise sind zwei Seiten derselben Medaille. Nur ein Systemwechsel kann beide lösen.",
       wesenKnoten: ["C2-4", "B3-4", "A1-4"],
       wesenZimmer: "Der Wintergarten - hier wächst die Zukunft unter Glas" },
-    { name: "Feministischer Sozialismus", kurzform: "Feministisch", icon: "♀️", id: "feministischer-sozialismus",
+    { name: "Feministischer Sozialismus", kurzform: "Feministisch", icon: "♀️", id: "feministischer_sozialismus",
       bedingungen: (p) => p.C1 >= 4 && (p.B3 >= 3 || p.A2 >= 3),
       beschreibung: "Patriarchat und Kapitalismus sind verwobene Herrschaftssysteme. Care-Arbeit und Geschlecht stehen im Zentrum.",
       wesenKnoten: ["C1-4", "B3-3", "A2-4"],
       wesenZimmer: "Die Küche - hier wird die unsichtbare Arbeit sichtbar" },
-    { name: "Postkolonialer Sozialismus", kurzform: "Antiimperialistisch", icon: "✊🏾", id: "buen-vivir",
+    { name: "Postkolonialer Sozialismus", kurzform: "Antiimperialistisch", icon: "✊🏾", id: "buen_vivir",
       bedingungen: (p) => p.C3 >= 4 && p.E4 >= 3,
       beschreibung: "Sozialismus ohne Dekolonisierung ist unvollständig. Die Kämpfe im globalen Süden sind zentral.",
       wesenKnoten: ["C2-5", "D3-4", "C3-4"],
       wesenZimmer: "Die Terrasse - hier weht der Wind aus allen Richtungen" },
-    { name: "Reformorientierter Sozialismus", kurzform: "Reformistisch", icon: "📜", id: "reformsozialismus",
+    { name: "Reformorientierter Sozialismus", kurzform: "Reformistisch", icon: "📜", id: "eurokommunismus",
       bedingungen: (p) => p.A1 <= 2 && p.E4 <= 2,
       beschreibung: "Du glaubst an den parlamentarischen Weg. Reformen verbessern das Leben und bereiten größere Veränderungen vor.",
       wesenKnoten: ["A1-2", "D2-2", "B1-2"],
@@ -1900,6 +1900,7 @@ const Layer2 = ({ params, onComplete, onLiteratur, onBack, apiKey, analysen, ini
     
     // Transformiere in das erwartete Format
     const analyseResult = {
+      id: engineResult.id,
       archetyp: engineResult.name,
       beschreibung: engineResult.beschreibung,
       slogan: engineResult.slogan,
@@ -1909,7 +1910,9 @@ const Layer2 = ({ params, onComplete, onLiteratur, onBack, apiKey, analysen, ini
       spannungen: engineResult.spannungen.map(s => s.titel),
       spannungenDetails: engineResult.spannungen,
       positionen: engineResult.positionen,
-      nebenstroemungen: engineResult.nebenstroemungen
+      nebenstroemungen: engineResult.nebenstroemungen,
+      wesenKnoten: engineResult.wesenKnoten,
+      wesenZimmer: engineResult.wesenZimmer
     };
     
     setAnalyse(analyseResult);
