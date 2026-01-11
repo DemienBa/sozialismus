@@ -1184,6 +1184,35 @@
         right: 0;
         bottom: 0;
         z-index: 100;
+        padding-top: 4.5rem; /* Platz für Header */
+        display: flex;
+        flex-direction: column;
+      }
+      
+      #detail-panel .close-btn {
+        position: fixed;
+        top: auto;
+        bottom: 5rem; /* Über der unteren Navigation */
+        right: 1rem;
+        width: 44px;
+        height: 44px;
+        background: #E53935;
+        border: none;
+        border-radius: 50%;
+        color: #fff;
+        font-size: 1.5rem;
+        cursor: pointer;
+        z-index: 150;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+      }
+      
+      #detail-panel #detail-content {
+        flex: 1;
+        overflow-y: auto;
+        padding-bottom: 4rem; /* Platz für Close-Button */
       }
       
       /* ═══════════════════════════════════════════════════════════════
