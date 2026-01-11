@@ -1371,6 +1371,27 @@
       }
       
       /* ═══════════════════════════════════════════════════════════════
+         MOBILE: Filter-Section komplett verstecken
+         ═══════════════════════════════════════════════════════════════ */
+      .filter-section {
+        display: none !important;
+      }
+      
+      /* ═══════════════════════════════════════════════════════════════
+         MOBILE: Ästhetik-Icon (info-toggle) zentriert in Reihe
+         ═══════════════════════════════════════════════════════════════ */
+      .info-toggle {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        white-space: nowrap;
+        font-size: 0.7rem !important;
+        padding: 0.3rem 0.5rem !important;
+        height: 32px;
+        flex-shrink: 0;
+      }
+      
+      /* ═══════════════════════════════════════════════════════════════
          MOBILE: Main Content - dynamisch positioniert
          ═══════════════════════════════════════════════════════════════ */
       main {
@@ -3153,8 +3174,11 @@
     }
     .haus-zimmer:hover { border-color: #555; background: #282828; }
     
-    /* Zimmer Hervorhebungen */
-    .haus-zimmer.meine-position { border-left: 3px solid #C62828; background: rgba(198,40,40,0.08); }
+    /* Zimmer Hervorhebungen - subtiler, nur als Vorschlag */
+    .haus-zimmer.meine-position { 
+      border-left: 3px solid rgba(198,40,40,0.6); 
+      background: rgba(198,40,40,0.05); 
+    }
     .haus-zimmer.wg-position { border-color: #4CAF50; background: rgba(76,175,80,0.05); }
     .haus-zimmer.konflikt-achse { border-color: #E53935; }
     .haus-zimmer.epochen-position { border-color: #FF9800; background: rgba(255,152,0,0.05); }
@@ -3174,7 +3198,11 @@
       font-weight: 600;
       color: #888;
     }
-    .haus-zimmer.meine-position .zimmer-achse { background: #C62828; color: #fff; }
+    /* Meine Position Zimmer-Achse: dezenter */
+    .haus-zimmer.meine-position .zimmer-achse { 
+      background: rgba(198,40,40,0.4); 
+      color: #ccc; 
+    }
     .zimmer-name { font-size: 0.75rem; color: #bbb; }
     
     /* Spektrum */
@@ -3194,12 +3222,28 @@
       position: relative;
     }
     .spektrum-pos:hover { border-color: #666; background: #333; }
-    .spektrum-pos.meine { background: #C62828; border-color: #E53935; }
+    /* Meine Position: NUR roter Punkt, keine ausgefüllte Fläche */
+    .spektrum-pos.meine { 
+      background: #2a2a2a; /* Gleich wie andere */
+      border-color: #333;
+    }
+    .spektrum-pos.meine::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 8px;
+      height: 8px;
+      background: #E53935;
+      border-radius: 50%;
+      box-shadow: 0 0 6px rgba(229, 57, 53, 0.6);
+    }
     .spektrum-pos.wg-match { border-color: #4CAF50; }
     .spektrum-pos.epochen-match { border-color: #FF9800; }
     .spektrum-pos.chaos-match { border-color: #9C27B0; background: rgba(156,39,176,0.2); }
     .pos-zahl { font-size: 0.7rem; color: #666; }
-    .spektrum-pos.meine .pos-zahl { color: #fff; font-weight: 600; }
+    .spektrum-pos.meine .pos-zahl { color: #888; font-weight: 400; } /* Nicht mehr weiß/bold */
     .pos-du { position: absolute; bottom: -10px; left: 50%; transform: translateX(-50%); font-size: 0.5rem; color: #C62828; }
     
     .zimmer-pole {
@@ -5759,8 +5803,8 @@
       </div>
     </div>
     
-    <!-- Filter -->
-    <div class="palette-section">
+    <!-- Filter (auf Mobile versteckt) -->
+    <div class="palette-section filter-section">
       <span class="palette-section-label">+ Filter</span>
       <div class="linse-wrapper">
         <div class="linse filter" data-typ="filter" data-id="personen" onclick="toggleFilter('personen')" title="Personen">
@@ -13591,35 +13635,32 @@ function parseUrlParams() {
     const profil = parseGeneratorProfil(profilParam);
     console.log('Generator-Profil:', profil);
     
-    // Öffne "Wo stehe ich?" mit dem Profil
-    setTimeout(() => {
-      openWerkzeug('konfigurator');
-      showGeneratorProfil(profil, archetypParam, params.get('name'));
-    }, 500);
+    // Profil setzen für Markierungen im Haus
+    generatorProfil = profil;
+    generatorArchetyp = archetypParam;
+    
+    // Startseite bleibt "Das Wesen" - User kann selbst ins Haus wechseln
+    // Knoten im Netzwerk hervorheben wenn vorhanden
+    if (knotenParam) {
+      setTimeout(() => {
+        highlightGeneratorKnoten(generatorKnoten);
+      }, 1200);
+    }
   } else if (archetypParam && window.archetypen && window.archetypen[archetypParam]) {
-    // NUR Archetyp ohne Profil → Profil aus Archetyp-ideal übernehmen (OHNE Zimmer-Finder)
+    // NUR Archetyp ohne Profil → Profil aus Archetyp-ideal übernehmen
     const archetyp = window.archetypen[archetypParam];
     const profil = archetyp.ideal || {};
     
     console.log('Archetyp erkannt:', archetypParam);
     console.log('Übernommenes Profil:', profil);
     
-    // Profil setzen
+    // Profil setzen für Markierungen im Haus
     generatorProfil = profil;
     generatorArchetyp = archetypParam;
     
-    // Direkt ins Haus wechseln
-    setTimeout(() => {
-      setAnsicht('wg');
-      renderHaus('funktional');
-    }, 300);
+    // Startseite bleibt "Das Wesen" - User kann selbst ins Haus wechseln
   } else if (knotenParam) {
-    // Nur Knoten ohne Profil - alte Logik
-    setTimeout(() => {
-      const zimmer = params.get('zimmer') || 'Dein Ort im Wesen';
-      showWelcomeBanner(zimmer, generatorKnoten, archetypParam);
-    }, 800);
-    
+    // Nur Knoten ohne Profil - Knoten hervorheben
     setTimeout(() => {
       highlightGeneratorKnoten(generatorKnoten);
     }, 1200);
@@ -14375,7 +14416,7 @@ function renderZimmerFinderErgebnis() {
     
     <div class="zimmer-finder-actions ergebnis">
       <button class="zf-btn primary gross" onclick="zimmerFinderAbschliessen()">
-        🏠 Ins Haus einziehen
+        🏠 Haus erkunden
       </button>
     </div>
   `;
@@ -14725,7 +14766,7 @@ function renderDeinPlatz(profil, archetyp) {
   html += `
     <div class="dein-platz-actions">
       <button class="dein-platz-btn" onclick="document.querySelector('.dein-platz').style.display='none'">
-        🏠 Zimmer aussuchen
+        🏠 Haus erkunden
       </button>
     </div>
   `;
