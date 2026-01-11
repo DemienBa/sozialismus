@@ -7372,6 +7372,124 @@ let aktiveAnsicht = 'wesen';
 let aktiveFilter = new Set();
 let epocheWert = 2025;
 
+// ═══════════════════════════════════════════════════════════════
+// DIE 15 ARCHETYPEN (vom Generator) - GLOBAL definiert für URL-Parameter
+// ═══════════════════════════════════════════════════════════════
+window.archetypen = {
+  marxismus_leninismus: { 
+    name: "Orthodoxer Marxismus-Leninismus", 
+    icon: "☭", 
+    slogan: "Alle Macht den Räten!", 
+    farbe: "#B71C1C",
+    ideal: {A1:4, A2:2, A3:2, B1:5, B2:2, B3:2, C1:2, C2:2, C3:4, D1:2, D2:2, D3:1, E1:2, E2:2, E3:1}
+  },
+  libertaerer_sozialismus: { 
+    name: "Libertärer Sozialismus", 
+    icon: "Ⓐ", 
+    slogan: "Keine Götter, keine Herren!", 
+    farbe: "#212121",
+    ideal: {A1:4, A2:4, A3:5, B1:3, B2:5, B3:4, C1:4, C2:4, C3:4, D1:3, D2:5, D3:3, E1:5, E2:5, E3:5}
+  },
+  raetekommunismus: { 
+    name: "Rätekommunismus", 
+    icon: "⚙️", 
+    slogan: "Die Befreiung ist das Werk der Arbeiter selbst!", 
+    farbe: "#C62828",
+    ideal: {A1:5, A2:2, A3:5, B1:4, B2:5, B3:3, C1:2, C2:3, C3:5, D1:2, D2:4, D3:1, E1:2, E2:3, E3:5}
+  },
+  oekosozialismus: { 
+    name: "Ökosozialismus", 
+    icon: "🌍", 
+    slogan: "System Change, Not Climate Change!", 
+    farbe: "#2E7D32",
+    ideal: {A1:4, A2:4, A3:3, B1:4, B2:4, B3:5, C1:4, C2:5, C3:5, D1:4, D2:3, D3:3, E1:4, E2:5, E3:4}
+  },
+  feministischer_sozialismus: { 
+    name: "Feministischer Sozialismus", 
+    icon: "♀", 
+    slogan: "Das Private ist politisch!", 
+    farbe: "#7B1FA2",
+    ideal: {A1:3, A2:5, A3:3, B1:3, B2:4, B3:5, C1:5, C2:4, C3:4, D1:4, D2:4, D3:3, E1:5, E2:4, E3:5}
+  },
+  demokratischer_sozialismus: { 
+    name: "Demokratischer Sozialismus", 
+    icon: "🌹", 
+    slogan: "Sozialismus ist radikale Demokratie!", 
+    farbe: "#E91E63",
+    ideal: {A1:2, A2:3, A3:2, B1:2, B2:3, B3:3, C1:3, C2:3, C3:3, D1:3, D2:2, D3:2, E1:4, E2:2, E3:2}
+  },
+  postkapitalismus: { 
+    name: "Postkapitalistischer Akzelerationismus", 
+    icon: "🚀", 
+    slogan: "Fully Automated Luxury Communism!", 
+    farbe: "#00BCD4",
+    ideal: {A1:3, A2:4, A3:3, B1:4, B2:4, B3:5, C1:4, C2:3, C3:5, D1:5, D2:4, D3:3, E1:4, E2:5, E3:4}
+  },
+  buen_vivir: { 
+    name: "Buen Vivir – Das gute Leben", 
+    icon: "🌺", 
+    slogan: "Leben in Fülle, nicht in Überfluss!", 
+    farbe: "#FF9800",
+    ideal: {A1:3, A2:5, A3:4, B1:3, B2:5, B3:5, C1:5, C2:5, C3:4, D1:5, D2:4, D3:5, E1:5, E2:5, E3:5}
+  },
+  autonomismus: { 
+    name: "Autonomer Marxismus", 
+    icon: "🏴", 
+    slogan: "Unsere Stärke ist unsere Vielheit!", 
+    farbe: "#424242",
+    ideal: {A1:4, A2:5, A3:4, B1:3, B2:5, B3:4, C1:5, C2:4, C3:5, D1:4, D2:5, D3:3, E1:5, E2:5, E3:5}
+  },
+  municipalismus: { 
+    name: "Libertärer Munizipalismus", 
+    icon: "🏛️", 
+    slogan: "Die Stadt gehört allen!", 
+    farbe: "#5C6BC0",
+    ideal: {A1:3, A2:4, A3:4, B1:3, B2:5, B3:4, C1:4, C2:5, C3:3, D1:4, D2:3, D3:3, E1:4, E2:5, E3:4}
+  },
+  trotzkismus: { 
+    name: "Trotzkismus", 
+    icon: "🔥", 
+    slogan: "Permanente Revolution!", 
+    farbe: "#D32F2F",
+    ideal: {A1:5, A2:2, A3:2, B1:5, B2:3, B3:2, C1:2, C2:2, C3:5, D1:3, D2:5, D3:1, E1:3, E2:2, E3:2}
+  },
+  commons_bewegung: { 
+    name: "Commons-Bewegung", 
+    icon: "🤲", 
+    slogan: "Gemeingüter statt Privateigentum!", 
+    farbe: "#43A047",
+    ideal: {A1:3, A2:4, A3:4, B1:3, B2:5, B3:4, C1:4, C2:5, C3:4, D1:4, D2:3, D3:3, E1:5, E2:5, E3:5}
+  },
+  eurokommunismus: { 
+    name: "Eurokommunismus", 
+    icon: "🇪🇺", 
+    slogan: "Sozialismus in Freiheit!", 
+    farbe: "#1565C0",
+    ideal: {A1:3, A2:3, A3:2, B1:4, B2:3, B3:3, C1:3, C2:3, C3:4, D1:3, D2:2, D3:2, E1:4, E2:3, E3:3}
+  },
+  reformsozialismus: { 
+    name: "Reformsozialismus", 
+    icon: "⚖️", 
+    slogan: "Schritt für Schritt zur Gerechtigkeit!", 
+    farbe: "#E91E63",
+    ideal: {A1:1, A2:3, A3:1, B1:2, B2:2, B3:2, C1:3, C2:3, C3:2, D1:2, D2:1, D3:2, E1:4, E2:1, E3:2}
+  },
+  linksnationalismus: { 
+    name: "Linker Nationalismus", 
+    icon: "🏴󠁧󠁢󠁳󠁣󠁴󠁿", 
+    slogan: "Souveränität der Völker!", 
+    farbe: "#D84315",
+    ideal: {A1:4, A2:2, A3:5, B1:3, B2:5, B3:3, C1:2, C2:3, C3:4, D1:3, D2:4, D3:1, E1:3, E2:5, E3:4}
+  },
+  eigenstaendig: { 
+    name: "Eigenständiger Sozialismus", 
+    icon: "🔥", 
+    slogan: "Eine andere Welt ist möglich!", 
+    farbe: "#FF5722",
+    ideal: {A1:3, A2:3, A3:3, B1:3, B2:3, B3:3, C1:3, C2:3, C3:3, D1:3, D2:3, D3:3, E1:3, E2:3, E3:3}
+  }
+};
+
 // Lade Knoten-Daten aus externer JSON
 fetch('knoten_content.json')
   .then(response => {
@@ -7384,7 +7502,11 @@ fetch('knoten_content.json')
     console.log(`✓ ${Object.keys(knotenData).length} Knoten geladen`);
     // Stats aktualisieren
     document.getElementById('stats').textContent = `${Object.keys(knotenData).length} Positionen · ${verbindungenData.length} Verbindungen · 21 Linsen`;
-    // ALLE Initialisierungen nach dem Laden
+    // URL-Parameter ZUERST verarbeiten (setzt generatorProfil etc.)
+    if (typeof parseUrlParams === 'function') {
+      try { parseUrlParams(); } catch(e) { console.error('Fehler in parseUrlParams:', e); }
+    }
+    // DANN alle Initialisierungen
     const initFuncs = [
       'initNetzwerk', 'initListe', 'initDebatten', 'initStammbaum', 'initSuche',
       'initKarte', 'initZeitleiste', 'initChemie', 'initOekosystem', 'initFragen',
@@ -10016,124 +10138,6 @@ function updateKosmos() {
 function initWG() {
   const container = document.getElementById('wg-container');
   
-  // ═══════════════════════════════════════════════════════════════
-  // DIE 15 ARCHETYPEN (vom Generator) mit Ideal-Werten
-  // ═══════════════════════════════════════════════════════════════
-  
-  window.archetypen = {
-    marxismus_leninismus: { 
-      name: "Orthodoxer Marxismus-Leninismus", 
-      icon: "☭", 
-      slogan: "Alle Macht den Räten!", 
-      farbe: "#B71C1C",
-      ideal: {A1:4, A2:2, A3:2, B1:5, B2:2, B3:2, C1:2, C2:2, C3:4, D1:2, D2:2, D3:1, E1:2, E2:2, E3:1}
-    },
-    libertaerer_sozialismus: { 
-      name: "Libertärer Sozialismus", 
-      icon: "Ⓐ", 
-      slogan: "Keine Götter, keine Herren!", 
-      farbe: "#212121",
-      ideal: {A1:4, A2:4, A3:5, B1:3, B2:5, B3:4, C1:4, C2:4, C3:4, D1:3, D2:5, D3:3, E1:5, E2:5, E3:5}
-    },
-    raetekommunismus: { 
-      name: "Rätekommunismus", 
-      icon: "⚙️", 
-      slogan: "Die Befreiung ist das Werk der Arbeiter selbst!", 
-      farbe: "#C62828",
-      ideal: {A1:5, A2:2, A3:5, B1:4, B2:5, B3:3, C1:2, C2:3, C3:5, D1:2, D2:4, D3:1, E1:2, E2:3, E3:5}
-    },
-    oekosozialismus: { 
-      name: "Ökosozialismus", 
-      icon: "🌍", 
-      slogan: "System Change, Not Climate Change!", 
-      farbe: "#2E7D32",
-      ideal: {A1:4, A2:4, A3:3, B1:4, B2:4, B3:5, C1:4, C2:5, C3:5, D1:4, D2:3, D3:3, E1:4, E2:5, E3:4}
-    },
-    feministischer_sozialismus: { 
-      name: "Feministischer Sozialismus", 
-      icon: "♀", 
-      slogan: "Das Private ist politisch!", 
-      farbe: "#7B1FA2",
-      ideal: {A1:3, A2:5, A3:3, B1:3, B2:4, B3:5, C1:5, C2:4, C3:4, D1:4, D2:4, D3:3, E1:5, E2:4, E3:5}
-    },
-    demokratischer_sozialismus: { 
-      name: "Demokratischer Sozialismus", 
-      icon: "🌹", 
-      slogan: "Sozialismus ist radikale Demokratie!", 
-      farbe: "#E91E63",
-      ideal: {A1:2, A2:3, A3:2, B1:2, B2:3, B3:3, C1:3, C2:3, C3:3, D1:3, D2:2, D3:2, E1:4, E2:2, E3:2}
-    },
-    postkapitalismus: { 
-      name: "Postkapitalistischer Akzelerationismus", 
-      icon: "🚀", 
-      slogan: "Fully Automated Luxury Communism!", 
-      farbe: "#00BCD4",
-      ideal: {A1:3, A2:4, A3:3, B1:4, B2:4, B3:5, C1:4, C2:3, C3:5, D1:5, D2:4, D3:3, E1:4, E2:5, E3:4}
-    },
-    buen_vivir: { 
-      name: "Buen Vivir – Das gute Leben", 
-      icon: "🌺", 
-      slogan: "Leben in Fülle, nicht in Überfluss!", 
-      farbe: "#FF9800",
-      ideal: {A1:3, A2:5, A3:4, B1:3, B2:5, B3:5, C1:5, C2:5, C3:4, D1:5, D2:4, D3:5, E1:5, E2:5, E3:5}
-    },
-    autonomismus: { 
-      name: "Autonomer Marxismus", 
-      icon: "🏴", 
-      slogan: "Unsere Stärke ist unsere Vielheit!", 
-      farbe: "#424242",
-      ideal: {A1:4, A2:5, A3:4, B1:3, B2:5, B3:4, C1:5, C2:4, C3:5, D1:4, D2:5, D3:3, E1:5, E2:5, E3:5}
-    },
-    municipalismus: { 
-      name: "Libertärer Munizipalismus", 
-      icon: "🏛️", 
-      slogan: "Die Stadt gehört allen!", 
-      farbe: "#5C6BC0",
-      ideal: {A1:3, A2:4, A3:4, B1:3, B2:5, B3:4, C1:4, C2:5, C3:3, D1:4, D2:3, D3:3, E1:4, E2:5, E3:4}
-    },
-    trotzkismus: { 
-      name: "Trotzkismus", 
-      icon: "🔥", 
-      slogan: "Permanente Revolution!", 
-      farbe: "#D32F2F",
-      ideal: {A1:5, A2:2, A3:2, B1:5, B2:3, B3:2, C1:2, C2:2, C3:5, D1:3, D2:5, D3:1, E1:3, E2:2, E3:2}
-    },
-    commons_bewegung: { 
-      name: "Commons-Bewegung", 
-      icon: "🤲", 
-      slogan: "Gemeingüter statt Privateigentum!", 
-      farbe: "#43A047",
-      ideal: {A1:3, A2:4, A3:4, B1:3, B2:5, B3:4, C1:4, C2:5, C3:4, D1:4, D2:3, D3:3, E1:5, E2:5, E3:5}
-    },
-    eurokommunismus: { 
-      name: "Eurokommunismus", 
-      icon: "🇪🇺", 
-      slogan: "Sozialismus in Freiheit!", 
-      farbe: "#1565C0",
-      ideal: {A1:3, A2:3, A3:2, B1:4, B2:3, B3:3, C1:3, C2:3, C3:4, D1:3, D2:2, D3:2, E1:4, E2:3, E3:3}
-    },
-    reformsozialismus: { 
-      name: "Reformsozialismus", 
-      icon: "📈", 
-      slogan: "Schritt für Schritt zum Sozialismus!", 
-      farbe: "#F06292",
-      ideal: {A1:1, A2:3, A3:1, B1:2, B2:2, B3:3, C1:3, C2:3, C3:2, D1:2, D2:1, D3:2, E1:3, E2:1, E3:2}
-    },
-    syndikalismus: { 
-      name: "Syndikalismus", 
-      icon: "✊", 
-      slogan: "Direkte Aktion!", 
-      farbe: "#D84315",
-      ideal: {A1:4, A2:2, A3:5, B1:3, B2:5, B3:3, C1:2, C2:3, C3:4, D1:3, D2:4, D3:1, E1:3, E2:5, E3:4}
-    },
-    eigenstaendig: { 
-      name: "Eigenständiger Sozialismus", 
-      icon: "🔥", 
-      slogan: "Eine andere Welt ist möglich!", 
-      farbe: "#FF5722",
-      ideal: {A1:3, A2:3, A3:3, B1:3, B2:3, B3:3, C1:3, C2:3, C3:3, D1:3, D2:3, D3:3, E1:3, E2:3, E3:3}
-    }
-  };
   
   // ═══════════════════════════════════════════════════════════════
   // SPANNUNGSFELDER: Welche Achsen erzeugen interessante Debatten?
@@ -15356,7 +15360,7 @@ function highlightMeineWG(knoten, profil) {
   // Wird jetzt direkt in renderHaus gemacht
 }
 
-parseUrlParams();
+// parseUrlParams wird im fetch-Callback aufgerufen (siehe oben)
 
 // ══════════════════════════════════════════════════════════════════════
 // REAKTOR
