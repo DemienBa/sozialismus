@@ -915,6 +915,28 @@
       z-index: 1;
     }
     
+    /* Touch-Hinweis für Mobile */
+    .touch-hint {
+      position: fixed;
+      bottom: 80px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: rgba(0,0,0,0.85);
+      color: #fff;
+      padding: 0.6rem 1.2rem;
+      border-radius: 25px;
+      font-size: 0.8rem;
+      z-index: 500;
+      pointer-events: none;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      white-space: nowrap;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    }
+    .touch-hint.visible {
+      opacity: 1;
+    }
+    
     #detail-panel {
       width: 420px;
       background: #222;
@@ -1156,74 +1178,158 @@
       }
       
       /* ═══════════════════════════════════════════════════════════════
-         MOBILE: Linsen-Palette - versteckt, nur Toggle sichtbar
+         MOBILE: Linsen-Palette OBEN als horizontale Leiste
          ═══════════════════════════════════════════════════════════════ */
       .linsen-palette {
-        width: 60px;
-        padding: 0.5rem;
-        transform: translateX(-100%);
-        transition: transform 0.3s ease;
+        position: fixed;
+        left: 0;
+        right: 0;
+        top: 50px; /* Unter dem Header */
+        bottom: auto;
+        width: 100%;
+        height: auto;
+        max-height: 50px;
+        flex-direction: row;
+        overflow-x: auto;
+        overflow-y: hidden;
+        padding: 0.4rem 0.5rem;
+        border-right: none;
+        border-bottom: 1px solid var(--border);
+        gap: 0.25rem;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+      }
+      .linsen-palette::-webkit-scrollbar {
+        display: none;
       }
       .linsen-palette.expanded {
-        transform: translateX(0);
-        width: 180px;
+        width: 100%;
+        max-height: 50px;
+        padding: 0.4rem 0.5rem;
       }
-      .palette-section-title {
-        font-size: 0.6rem;
+      
+      /* Toggle verstecken auf Mobile */
+      .palette-toggle {
+        display: none;
       }
+      
+      /* Sections horizontal */
+      .palette-section {
+        flex-direction: row;
+        gap: 0.2rem;
+        padding: 0;
+        border-bottom: none;
+        border-right: 1px solid var(--border);
+        padding-right: 0.4rem;
+        margin-right: 0.2rem;
+        flex-shrink: 0;
+      }
+      .palette-section:last-child {
+        border-right: none;
+      }
+      .palette-section-label {
+        display: none !important;
+      }
+      
+      /* Linsen kompakt */
       .linse {
-        padding: 0.4rem;
+        width: 36px;
+        height: 36px;
+        padding: 0;
         font-size: 1.1rem;
+        flex-shrink: 0;
       }
       .linse-label {
-        font-size: 0.7rem;
+        display: none !important;
       }
-      .linsen-palette:not(.expanded) .linse-label {
-        display: none;
+      .linse-wrapper {
+        flex-direction: row;
       }
-      .linsen-palette:not(.expanded) .gruppe-pfeil {
-        display: none;
+      .linsen-palette.expanded .linse {
+        width: 36px;
+        padding: 0;
+      }
+      .linsen-palette.expanded .linse-label {
+        display: none !important;
+      }
+      
+      /* Gruppen als Dropdown */
+      .linse-gruppe {
+        position: relative;
+        flex-shrink: 0;
+      }
+      .linse.gruppe-header {
+        width: 36px;
+        height: 36px;
+      }
+      .gruppe-pfeil {
+        display: none !important;
       }
       .gruppe-inhalt {
-        max-height: 0 !important;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background: var(--bg-secondary);
+        border: 1px solid var(--border);
+        border-radius: 8px;
+        padding: 0.3rem;
+        display: flex;
+        flex-direction: row;
+        gap: 0.2rem;
+        max-height: 0;
+        overflow: hidden;
+        opacity: 0;
+        z-index: 200;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.3);
       }
-      .linsen-palette.expanded .linse-gruppe.open .gruppe-inhalt {
-        max-height: 200px !important;
+      .linse-gruppe.open .gruppe-inhalt {
+        max-height: 200px;
+        opacity: 1;
+        padding: 0.4rem;
+      }
+      .linse-wrapper.sub {
+        padding-left: 0;
+      }
+      .linse.sub {
+        width: 32px;
+        height: 32px;
+        font-size: 1rem;
+      }
+      
+      /* ═══════════════════════════════════════════════════════════════
+         MOBILE: Main Content - Platz für obere Palette
+         ═══════════════════════════════════════════════════════════════ */
+      main {
+        margin-left: 0 !important;
+        margin-top: 50px !important; /* Platz für Palette */
       }
       
       /* ═══════════════════════════════════════════════════════════════
          MOBILE: Header kompakter
          ═══════════════════════════════════════════════════════════════ */
       header {
-        padding: 0.5rem 0.75rem;
-        flex-wrap: wrap;
-        gap: 0.5rem;
+        padding: 0.4rem 0.75rem;
+        height: 50px;
       }
       header h1 {
-        font-size: 0.85rem;
+        font-size: 0.8rem;
       }
       #stats {
-        font-size: 0.6rem;
         display: none;
       }
       .suche-input {
-        width: 100px;
+        width: 90px;
         font-size: 0.75rem;
-        padding: 0.3rem 0.5rem;
+        padding: 0.25rem 0.4rem;
+      }
+      .suche-ergebnisse {
+        width: calc(100vw - 1rem);
+        right: 0;
+        top: 50px;
       }
       
       /* ═══════════════════════════════════════════════════════════════
-         MOBILE: Main Container - Platz für Palette
-         ═══════════════════════════════════════════════════════════════ */
-      main {
-        margin-left: 0 !important;
-      }
-      body.palette-expanded main {
-        margin-left: 180px;
-      }
-      
-      /* ═══════════════════════════════════════════════════════════════
-         MOBILE: Dein Platz - Fullscreen Overlay statt inline
+         MOBILE: Dein Platz - Fullscreen Overlay
          ═══════════════════════════════════════════════════════════════ */
       .dein-platz {
         position: fixed;
@@ -1236,129 +1342,128 @@
         z-index: 1000;
         overflow-y: auto;
         padding: 1rem;
-        padding-top: 60px;
+        padding-top: 1rem;
       }
       .dein-platz-header {
         flex-direction: column;
         text-align: center;
-        gap: 0.5rem;
+        gap: 0.4rem;
       }
       .dein-platz-icon {
-        font-size: 2rem;
+        font-size: 1.75rem;
       }
       .dein-platz-header h2 {
-        font-size: 1.1rem;
+        font-size: 1rem;
       }
       .dein-platz-header p {
-        font-size: 0.8rem;
+        font-size: 0.75rem;
       }
       .hauptzimmer-karte {
-        padding: 0.75rem;
+        padding: 0.6rem;
       }
       .hauptzimmer-badge {
-        font-size: 0.7rem;
-        padding: 0.2rem 0.5rem;
+        font-size: 0.65rem;
+        padding: 0.15rem 0.4rem;
       }
       .hauptzimmer-header {
         flex-direction: column;
         text-align: center;
-        gap: 0.4rem;
+        gap: 0.3rem;
       }
       .hauptzimmer-etage {
-        font-size: 1.5rem;
+        font-size: 1.3rem;
       }
       .hauptzimmer-header h3 {
-        font-size: 0.95rem;
+        font-size: 0.85rem;
       }
       .hauptzimmer-achse {
-        font-size: 0.7rem;
+        font-size: 0.65rem;
       }
       .hauptzimmer-position {
         justify-content: center;
         flex-wrap: wrap;
-        padding: 0.4rem;
-        gap: 0.3rem;
+        padding: 0.3rem;
+        gap: 0.25rem;
       }
       .position-label {
-        font-size: 0.7rem;
+        font-size: 0.65rem;
       }
       .position-wert {
-        width: 24px;
-        height: 24px;
-        font-size: 0.8rem;
+        width: 22px;
+        height: 22px;
+        font-size: 0.75rem;
       }
       .position-name {
-        font-size: 0.8rem;
+        font-size: 0.75rem;
       }
       .hauptzimmer-aufgabe {
         flex-direction: column;
         text-align: center;
-        padding: 0.5rem;
-        gap: 0.4rem;
+        padding: 0.4rem;
+        gap: 0.3rem;
       }
       .aufgabe-icon {
-        font-size: 1rem;
+        font-size: 0.9rem;
       }
       .hauptzimmer-aufgabe p {
-        font-size: 0.75rem;
+        font-size: 0.7rem;
       }
       .weitere-zimmer {
-        margin-bottom: 0.75rem;
+        margin-bottom: 0.6rem;
       }
       .weitere-zimmer-label {
-        font-size: 0.75rem;
+        font-size: 0.7rem;
       }
       .weitere-zimmer-liste {
-        gap: 0.25rem;
+        gap: 0.2rem;
       }
       .weiteres-zimmer {
-        padding: 0.35rem 0.5rem;
+        padding: 0.3rem 0.4rem;
       }
       .weiteres-icon {
-        font-size: 1rem;
+        font-size: 0.9rem;
       }
       .weiteres-name {
-        font-size: 0.75rem;
+        font-size: 0.7rem;
       }
       .weiteres-position {
-        font-size: 0.65rem;
+        font-size: 0.6rem;
       }
       .wg-empfehlung {
-        padding: 0.6rem;
-        margin-bottom: 0.75rem;
+        padding: 0.5rem;
+        margin-bottom: 0.6rem;
       }
       .wg-empfehlung-label {
-        font-size: 0.75rem;
+        font-size: 0.7rem;
       }
       .wg-empfehlung p {
-        font-size: 0.75rem;
-        margin-bottom: 0.5rem;
+        font-size: 0.7rem;
+        margin-bottom: 0.4rem;
       }
       .aehnliche-archetypen {
         justify-content: center;
-        gap: 0.3rem;
+        gap: 0.25rem;
       }
       .aehnlicher-archetyp {
-        padding: 0.2rem 0.4rem;
-        font-size: 0.7rem;
+        padding: 0.15rem 0.35rem;
+        font-size: 0.65rem;
       }
       .dein-platz-actions {
-        margin-top: 0.75rem;
+        margin-top: 0.6rem;
       }
       .dein-platz-btn {
-        padding: 0.6rem 1rem;
-        font-size: 0.85rem;
+        padding: 0.5rem 0.75rem;
+        font-size: 0.8rem;
       }
       
       /* ═══════════════════════════════════════════════════════════════
-         MOBILE: Zimmer-Finder
+         MOBILE: Zimmer-Finder Fullscreen
          ═══════════════════════════════════════════════════════════════ */
       .zimmer-finder-overlay {
         padding: 0;
-        align-items: stretch;
       }
       .zimmer-finder-modal {
-        padding: 1rem;
+        padding: 0.75rem;
         max-height: 100vh;
         height: 100vh;
         border-radius: 0;
@@ -1368,240 +1473,285 @@
       .zimmer-finder-header {
         flex-direction: column;
         text-align: center;
-        gap: 0.4rem;
-        margin-bottom: 1rem;
-        padding-bottom: 0.6rem;
+        gap: 0.3rem;
+        margin-bottom: 0.75rem;
+        padding-bottom: 0.5rem;
       }
       .archetyp-icon {
-        font-size: 1.75rem;
+        font-size: 1.5rem;
       }
       .archetyp-name {
-        font-size: 0.85rem;
+        font-size: 0.8rem;
       }
       .zimmer-finder-progress {
-        font-size: 0.75rem;
+        font-size: 0.7rem;
+      }
+      .zimmer-finder-titel {
+        font-size: 0.9rem;
       }
       .zimmer-finder-frage h2 {
-        font-size: 1rem;
+        font-size: 0.95rem;
       }
       .frage-text {
-        font-size: 0.8rem;
-        margin-bottom: 1rem;
+        font-size: 0.75rem;
+        margin-bottom: 0.75rem;
       }
       .zimmer-finder-optionen {
-        gap: 0.4rem;
+        gap: 0.3rem;
       }
       .zf-option {
-        padding: 0.5rem 0.6rem;
-        gap: 0.5rem;
+        padding: 0.4rem 0.5rem;
+        gap: 0.4rem;
       }
       .zf-radio {
-        width: 16px;
-        height: 16px;
+        width: 14px;
+        height: 14px;
       }
       .zf-radio.checked::after {
         top: 2px;
         left: 2px;
-        width: 8px;
-        height: 8px;
+        width: 6px;
+        height: 6px;
       }
       .zf-option-text {
-        font-size: 0.75rem;
+        font-size: 0.7rem;
+        line-height: 1.3;
       }
       .zf-option-wert {
-        width: 18px;
-        height: 18px;
-        font-size: 0.65rem;
+        width: 16px;
+        height: 16px;
+        font-size: 0.6rem;
       }
       .zimmer-finder-actions {
         flex-direction: column;
-        gap: 0.4rem;
-        margin-top: 1rem;
-        padding-top: 0.75rem;
+        gap: 0.35rem;
+        margin-top: 0.75rem;
+        padding-top: 0.5rem;
       }
       .zf-btn {
         width: 100%;
-        padding: 0.6rem;
+        padding: 0.5rem;
+        font-size: 0.8rem;
+      }
+      .zf-btn.primary.gross {
+        padding: 0.6rem 1rem;
         font-size: 0.85rem;
       }
       
       /* Zimmer-Finder Ergebnis Mobile */
+      .zimmer-finder-ergebnis {
+        padding: 0.25rem 0;
+      }
       .zf-hauptzimmer {
-        padding: 0.6rem;
+        padding: 0.5rem;
+        margin-bottom: 0.6rem;
       }
       .zf-badge {
-        font-size: 0.65rem;
-        padding: 0.15rem 0.4rem;
+        font-size: 0.6rem;
+        padding: 0.1rem 0.35rem;
+        margin-bottom: 0.4rem;
       }
       .zf-zimmer-header {
         flex-direction: column;
         text-align: center;
-        gap: 0.3rem;
+        gap: 0.25rem;
+        margin-bottom: 0.5rem;
       }
       .zf-etage-icon {
-        font-size: 1.25rem;
+        font-size: 1.1rem;
       }
       .zf-zimmer-header h3 {
-        font-size: 0.9rem;
+        font-size: 0.8rem;
+        margin: 0;
       }
       .zf-achse {
-        font-size: 0.65rem;
+        font-size: 0.6rem;
       }
       .zf-position {
         justify-content: center;
-        padding: 0.3rem;
-        gap: 0.25rem;
+        padding: 0.25rem 0.4rem;
+        gap: 0.2rem;
+        margin-bottom: 0.5rem;
       }
       .zf-pos-label {
-        font-size: 0.65rem;
+        font-size: 0.6rem;
       }
       .zf-pos-wert {
-        width: 18px;
-        height: 18px;
-        font-size: 0.7rem;
+        width: 16px;
+        height: 16px;
+        font-size: 0.65rem;
       }
       .zf-pos-name {
-        font-size: 0.75rem;
+        font-size: 0.7rem;
       }
       .zf-aufgabe {
         flex-direction: column;
         text-align: center;
-        padding: 0.4rem;
-        gap: 0.3rem;
+        padding: 0.35rem;
+        gap: 0.25rem;
+      }
+      .zf-aufgabe-icon {
+        font-size: 0.85rem;
       }
       .zf-aufgabe p {
-        font-size: 0.7rem;
+        font-size: 0.65rem;
+        line-height: 1.3;
       }
       .zf-weitere-titel {
-        font-size: 0.7rem;
+        font-size: 0.65rem;
+        margin-bottom: 0.3rem;
       }
       .zf-weitere-liste {
-        gap: 0.2rem;
+        gap: 0.15rem;
+        margin-bottom: 0.6rem;
       }
       .zf-weiteres-zimmer {
-        padding: 0.3rem 0.4rem;
+        padding: 0.25rem 0.35rem;
+        gap: 0.35rem;
       }
       .zf-weiteres-icon {
-        font-size: 0.9rem;
+        font-size: 0.85rem;
       }
       .zf-weiteres-name {
-        font-size: 0.7rem;
+        font-size: 0.65rem;
       }
       .zf-weiteres-pos {
-        font-size: 0.6rem;
+        font-size: 0.55rem;
       }
       .zf-wg-empfehlung {
-        padding: 0.5rem;
+        padding: 0.4rem;
       }
       .zf-wg-label {
-        font-size: 0.7rem;
+        font-size: 0.65rem;
+        margin-bottom: 0.3rem;
       }
       .zf-wg-liste {
         justify-content: center;
-        gap: 0.25rem;
+        gap: 0.2rem;
       }
       .zf-wg-item {
-        padding: 0.2rem 0.35rem;
-        font-size: 0.65rem;
+        padding: 0.15rem 0.3rem;
+        font-size: 0.6rem;
       }
       
       /* ═══════════════════════════════════════════════════════════════
          MOBILE: Haus-Ansicht
          ═══════════════════════════════════════════════════════════════ */
       #wg-container {
-        padding: 0.5rem;
+        padding: 0.4rem;
       }
       .haus-header {
         flex-direction: column;
-        gap: 0.5rem;
-        padding: 0.75rem;
-        margin-bottom: 0.5rem;
+        gap: 0.4rem;
+        padding: 0.5rem;
+        margin-bottom: 0.4rem;
       }
       .haus-header h2 {
-        font-size: 1rem;
+        font-size: 0.9rem;
       }
       .haus-tabs {
         width: 100%;
       }
       .haus-tab {
         flex: 1;
-        padding: 0.4rem 0.5rem;
-        font-size: 0.75rem;
+        padding: 0.35rem 0.4rem;
+        font-size: 0.7rem;
       }
       .haus-banner {
-        margin: 0 0 0.5rem 0;
-        padding: 0.6rem;
+        margin: 0 0 0.4rem 0;
+        padding: 0.5rem;
         flex-direction: column;
         text-align: center;
-        gap: 0.4rem;
+        gap: 0.3rem;
       }
       .banner-icon {
-        font-size: 1.25rem;
+        font-size: 1.1rem;
       }
       .banner-text strong {
-        font-size: 0.8rem;
+        font-size: 0.75rem;
       }
       .banner-text span {
-        font-size: 0.7rem;
+        font-size: 0.65rem;
       }
       .haus-gebaeude {
         padding: 0;
-        gap: 0.5rem;
+        gap: 0.4rem;
       }
       .haus-etage {
-        padding: 0.5rem;
-        border-radius: 8px;
+        padding: 0.4rem;
+        border-radius: 6px;
       }
       .etage-header {
         flex-direction: column;
         text-align: center;
-        gap: 0.3rem;
-        margin-bottom: 0.5rem;
+        gap: 0.2rem;
+        margin-bottom: 0.4rem;
       }
       .etage-icon {
-        font-size: 1.25rem;
+        font-size: 1.1rem;
       }
       .etage-info h3 {
-        font-size: 0.9rem;
+        font-size: 0.8rem;
       }
       .etage-untertitel {
-        font-size: 0.7rem;
+        font-size: 0.65rem;
       }
       .etage-zimmer {
         grid-template-columns: 1fr;
-        gap: 0.4rem;
+        gap: 0.3rem;
       }
       .haus-zimmer {
-        padding: 0.5rem;
+        padding: 0.4rem;
       }
       .zimmer-kopf {
-        margin-bottom: 0.4rem;
+        margin-bottom: 0.3rem;
       }
       .zimmer-achse {
-        font-size: 0.6rem;
+        font-size: 0.55rem;
       }
       .zimmer-name {
-        font-size: 0.75rem;
+        font-size: 0.7rem;
       }
       .zimmer-spektrum {
-        gap: 0.2rem;
+        gap: 0.15rem;
       }
       .spektrum-pos {
-        width: 24px;
-        height: 24px;
+        width: 22px;
+        height: 22px;
       }
       .pos-zahl {
-        font-size: 0.6rem;
+        font-size: 0.55rem;
       }
       
       /* ═══════════════════════════════════════════════════════════════
-         MOBILE: Netzwerk
+         MOBILE: Netzwerk - Touch-optimiert
          ═══════════════════════════════════════════════════════════════ */
       #netzwerk-container {
         height: calc(100vh - 100px);
+        touch-action: none; /* Wichtig für Touch-Gesten */
       }
       .legende {
         display: none;
+      }
+      
+      /* Touch-Hinweis für Netzwerk */
+      .touch-hint {
+        position: fixed;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        background: rgba(0,0,0,0.7);
+        color: #fff;
+        padding: 0.5rem 1rem;
+        border-radius: 20px;
+        font-size: 0.7rem;
+        z-index: 50;
+        pointer-events: none;
+        opacity: 0;
+        transition: opacity 0.3s;
+      }
+      .touch-hint.visible {
+        opacity: 1;
       }
       
       /* ═══════════════════════════════════════════════════════════════
@@ -1609,23 +1759,24 @@
          ═══════════════════════════════════════════════════════════════ */
       .talkshow-popup {
         width: 95%;
-        padding: 0.75rem;
+        padding: 0.6rem;
+        max-height: 85vh;
       }
       .talkshow-popup h2 {
-        font-size: 1rem;
+        font-size: 0.9rem;
       }
       .talkshow-gaeste {
         grid-template-columns: repeat(3, 1fr);
-        gap: 0.3rem;
+        gap: 0.25rem;
       }
       .talkshow-gast {
-        padding: 0.3rem;
+        padding: 0.25rem;
       }
       .gast-icon {
-        font-size: 1rem;
+        font-size: 0.9rem;
       }
       .gast-name {
-        font-size: 0.6rem;
+        font-size: 0.55rem;
       }
     }
     
@@ -9016,6 +9167,91 @@ function initNetzwerk() {
   
   canvas.addEventListener('mouseup', () => { isDragging = false; });
   canvas.addEventListener('mouseleave', () => { isDragging = false; });
+  
+  // ═══════════════════════════════════════════════════════════════
+  // TOUCH EVENTS FÜR MOBILE
+  // ═══════════════════════════════════════════════════════════════
+  let touchStartDistance = 0;
+  let initialCameraZ = camera.position.z;
+  let lastTouchPos = { x: 0, y: 0 };
+  let isTouching = false;
+  let touchHintShown = false;
+  
+  // Touch-Hinweis anzeigen
+  function showTouchHint() {
+    if (touchHintShown) return;
+    touchHintShown = true;
+    
+    let hint = document.querySelector('.touch-hint');
+    if (!hint) {
+      hint = document.createElement('div');
+      hint.className = 'touch-hint';
+      hint.textContent = '👆 Wischen zum Drehen · 🤏 Pinch zum Zoomen';
+      document.body.appendChild(hint);
+    }
+    hint.classList.add('visible');
+    setTimeout(() => hint.classList.remove('visible'), 3000);
+  }
+  
+  // Touch Start
+  canvas.addEventListener('touchstart', (e) => {
+    e.preventDefault();
+    showTouchHint();
+    
+    if (e.touches.length === 1) {
+      // Ein Finger - Drehen
+      isTouching = true;
+      lastTouchPos = { x: e.touches[0].clientX, y: e.touches[0].clientY };
+    } else if (e.touches.length === 2) {
+      // Zwei Finger - Zoom vorbereiten
+      const dx = e.touches[0].clientX - e.touches[1].clientX;
+      const dy = e.touches[0].clientY - e.touches[1].clientY;
+      touchStartDistance = Math.sqrt(dx * dx + dy * dy);
+      initialCameraZ = camera.position.z;
+    }
+  }, { passive: false });
+  
+  // Touch Move
+  canvas.addEventListener('touchmove', (e) => {
+    e.preventDefault();
+    
+    if (e.touches.length === 1 && isTouching) {
+      // Ein Finger - Drehen
+      const touch = e.touches[0];
+      const deltaX = touch.clientX - lastTouchPos.x;
+      const deltaY = touch.clientY - lastTouchPos.y;
+      
+      targetRotation.y += deltaX * 0.008;
+      targetRotation.x += deltaY * 0.008;
+      
+      lastTouchPos = { x: touch.clientX, y: touch.clientY };
+    } else if (e.touches.length === 2 && touchStartDistance > 0) {
+      // Zwei Finger - Zoom (Pinch)
+      const dx = e.touches[0].clientX - e.touches[1].clientX;
+      const dy = e.touches[0].clientY - e.touches[1].clientY;
+      const currentDistance = Math.sqrt(dx * dx + dy * dy);
+      
+      const scale = touchStartDistance / currentDistance;
+      camera.position.z = Math.max(200, Math.min(2000, initialCameraZ * scale));
+    }
+  }, { passive: false });
+  
+  // Touch End
+  canvas.addEventListener('touchend', (e) => {
+    isTouching = false;
+    if (e.touches.length < 2) {
+      touchStartDistance = 0;
+    }
+    if (e.touches.length === 1) {
+      lastTouchPos = { x: e.touches[0].clientX, y: e.touches[0].clientY };
+      isTouching = true;
+    }
+  });
+  
+  canvas.addEventListener('touchcancel', () => {
+    isTouching = false;
+    touchStartDistance = 0;
+  });
   
   // Zoom
   canvas.addEventListener('wheel', (e) => {
