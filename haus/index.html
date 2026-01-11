@@ -1249,7 +1249,7 @@
         height: 48px;
         flex-direction: row;
         overflow-x: auto;
-        overflow-y: visible !important; /* WICHTIG: Dropdowns können rausragen */
+        overflow-y: hidden;
         padding: 0.35rem 0.5rem;
         border-right: none;
         border-top: 1px solid var(--border);
@@ -1258,7 +1258,6 @@
         scrollbar-width: none;
         z-index: 200;
         background: var(--bg-secondary);
-        clip-path: none !important; /* Kein Clipping */
       }
       .linsen-palette::-webkit-scrollbar {
         display: none;
@@ -1267,7 +1266,6 @@
         width: 100%;
         height: 48px;
         padding: 0.35rem 0.5rem;
-        overflow-y: visible !important;
       }
       
       /* Toggle verstecken auf Mobile */
@@ -1275,7 +1273,7 @@
         display: none !important;
       }
       
-      /* Sections horizontal - WICHTIG: overflow visible */
+      /* Sections horizontal */
       .palette-section {
         flex-direction: row;
         gap: 0.15rem;
@@ -1286,7 +1284,6 @@
         margin-right: 0.15rem;
         flex-shrink: 0;
         align-items: center;
-        overflow: visible !important;
       }
       .palette-section:last-child {
         border-right: none;
@@ -1312,7 +1309,6 @@
       }
       .linse-wrapper {
         flex-direction: row;
-        overflow: visible !important;
       }
       .linsen-palette.expanded .linse {
         width: 34px;
@@ -1322,11 +1318,15 @@
         display: none !important;
       }
       
-      /* Gruppen mit Dropdown - KRITISCH */
+      /* ═══════════════════════════════════════════════════════════════
+         MOBILE: Gruppen INLINE expandieren (nicht Dropdown)
+         ═══════════════════════════════════════════════════════════════ */
       .linse-gruppe {
-        position: relative;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 0.15rem;
         flex-shrink: 0;
-        overflow: visible !important;
       }
       .linse.gruppe-header {
         width: 34px;
@@ -1336,51 +1336,38 @@
         display: none !important;
       }
       
-      /* Dropdown-Inhalt - muss aus Container rausragen können */
+      /* Gruppe-Inhalt: horizontal inline, versteckt wenn geschlossen */
       .gruppe-inhalt {
-        position: absolute;
-        top: 42px; /* Direkt unter dem Button */
-        left: 50%;
-        transform: translateX(-50%);
-        background: #2a2a2a;
-        border: 2px solid var(--accent);
-        border-radius: 10px;
-        padding: 0;
         display: flex;
         flex-direction: row;
-        gap: 0.2rem;
-        max-height: 0;
+        gap: 0.15rem;
+        max-width: 0;
         overflow: hidden;
         opacity: 0;
-        visibility: hidden;
-        z-index: 9999 !important; /* Sehr hoch! */
-        box-shadow: 0 8px 25px rgba(0,0,0,0.6);
-        transition: all 0.2s ease;
-        pointer-events: none;
+        transition: all 0.25s ease;
       }
+      
+      /* Wenn Gruppe offen: Items erscheinen rechts */
       .linse-gruppe.open .gruppe-inhalt {
-        max-height: 80px;
+        max-width: 200px;
         opacity: 1;
-        visibility: visible;
-        padding: 0.4rem;
-        overflow: visible;
-        pointer-events: auto;
       }
+      
+      /* Gruppe-Header bekommt Indikator wenn offen */
+      .linse-gruppe.open .linse.gruppe-header {
+        background: rgba(229, 57, 53, 0.3);
+        border-color: var(--accent);
+      }
+      
       .linse-wrapper.sub {
         padding-left: 0;
       }
       .linse.sub {
-        width: 32px;
-        height: 32px;
-        min-width: 32px;
-        font-size: 0.95rem;
-        background: #333;
-        border: 1px solid #555;
-      }
-      .linse.sub:hover,
-      .linse.sub:active {
-        background: var(--accent);
-        border-color: var(--accent);
+        width: 30px;
+        height: 30px;
+        min-width: 30px;
+        font-size: 0.9rem;
+        border-style: dashed;
       }
       
       /* ═══════════════════════════════════════════════════════════════
@@ -1390,8 +1377,6 @@
         margin-left: 0 !important;
         margin-top: 0 !important;
         padding-top: 48px; /* Platz für Palette */
-        position: relative;
-        z-index: 1; /* Niedriger als Dropdown */
       }
       
       /* ═══════════════════════════════════════════════════════════════
