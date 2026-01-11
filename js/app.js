@@ -2179,17 +2179,10 @@ const Layer2 = ({ params, onComplete, onLiteratur, onBack, apiKey, analysen, ini
                 {/* Option 2: Linkes Wesen */}
                 <div 
                   onClick={() => {
-                    // Baue URL mit Archetyp-Info UND vollem Profil
+                    // Baue URL mit Archetyp-Info
                     const wesenUrl = new URL('haus/index.html', window.location.href);
                     if (analyse?.id) {
                       wesenUrl.searchParams.set('archetyp', analyse.id);
-                    }
-                    // WICHTIG: Sende das volle Profil mit allen Achsen!
-                    if (antworten && Object.keys(antworten).length > 0) {
-                      const profilString = Object.entries(antworten)
-                        .map(([achse, wert]) => `${achse}:${wert}`)
-                        .join(',');
-                      wesenUrl.searchParams.set('profil', profilString);
                     }
                     if (analyse?.wesenKnoten?.length) {
                       wesenUrl.searchParams.set('knoten', analyse.wesenKnoten.join(','));
@@ -3239,6 +3232,14 @@ const App = () => {
       setAnalysenL3(a3);
       setLiteratur(lit);
       setLoading(false);
+      
+      // URL-Parameter prüfen: ?start=2 startet direkt bei Layer 2
+      const params = new URLSearchParams(window.location.search);
+      const startParam = params.get('start');
+      if (startParam === '2') {
+        setLayer(2);
+        markVisited(2);
+      }
     });
   }, []);
 
