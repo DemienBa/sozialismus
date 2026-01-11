@@ -4620,6 +4620,273 @@
     }
     
     /* ═══════════════════════════════════════════════════════════════
+       MEIN PROFIL - Kombinierte Ansicht
+       ═══════════════════════════════════════════════════════════════ */
+    
+    .mein-profil-container {
+      padding: 1rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+    
+    .profil-header-card {
+      background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+      border: 2px solid #E53935;
+      border-radius: 16px;
+      padding: 1.25rem;
+    }
+    
+    .profil-header-card.leer {
+      border-color: #444;
+      text-align: center;
+    }
+    
+    .profil-header-top {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 1rem;
+    }
+    
+    .profil-icon {
+      font-size: 2rem;
+    }
+    
+    .profil-info {
+      flex: 1;
+    }
+    
+    .profil-info h3 {
+      color: #fff;
+      font-size: 1.1rem;
+      margin: 0;
+    }
+    
+    .profil-archetyp {
+      color: #E53935;
+      font-size: 0.85rem;
+    }
+    
+    .profil-edit-btn {
+      background: rgba(255,255,255,0.1);
+      border: 1px solid #444;
+      color: #aaa;
+      padding: 0.4rem 0.8rem;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 0.8rem;
+    }
+    
+    .profil-edit-btn:hover {
+      background: rgba(229,57,53,0.2);
+      border-color: #E53935;
+      color: #fff;
+    }
+    
+    .profil-chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+    
+    .profil-chip {
+      background: rgba(229,57,53,0.15);
+      border: 1px solid rgba(229,57,53,0.3);
+      color: #ddd;
+      padding: 0.3rem 0.6rem;
+      border-radius: 4px;
+      font-size: 0.75rem;
+      cursor: pointer;
+    }
+    
+    .profil-chip:hover {
+      background: rgba(229,57,53,0.3);
+    }
+    
+    .profil-actions {
+      display: flex;
+      gap: 0.5rem;
+      margin-top: 1rem;
+      padding-top: 1rem;
+      border-top: 1px solid rgba(255,255,255,0.1);
+    }
+    
+    .profil-action-btn {
+      flex: 1;
+      padding: 0.6rem;
+      border-radius: 8px;
+      border: 1px solid #444;
+      background: rgba(255,255,255,0.05);
+      color: #ccc;
+      cursor: pointer;
+      font-size: 0.85rem;
+    }
+    
+    .profil-action-btn:hover {
+      background: rgba(229,57,53,0.2);
+      border-color: #E53935;
+    }
+    
+    .profil-action-btn.secondary {
+      background: transparent;
+    }
+    
+    /* Profil Editor */
+    .profil-editor-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 0.5rem;
+      margin-bottom: 1rem;
+    }
+    
+    .profil-achse-row {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.3rem;
+      background: rgba(0,0,0,0.2);
+      border-radius: 4px;
+    }
+    
+    .profil-achse-label {
+      font-size: 0.7rem;
+      color: #888;
+      width: 24px;
+    }
+    
+    .profil-achse-slider {
+      display: flex;
+      gap: 2px;
+      flex: 1;
+    }
+    
+    .profil-pos {
+      flex: 1;
+      padding: 0.25rem;
+      background: #333;
+      border: 1px solid #444;
+      color: #888;
+      font-size: 0.7rem;
+      cursor: pointer;
+      border-radius: 2px;
+    }
+    
+    .profil-pos:hover {
+      background: #444;
+    }
+    
+    .profil-pos.selected {
+      background: #E53935;
+      border-color: #E53935;
+      color: #fff;
+    }
+    
+    .profil-editor-actions {
+      display: flex;
+      gap: 0.5rem;
+    }
+    
+    .profil-save-btn, .profil-cancel-btn {
+      flex: 1;
+      padding: 0.5rem;
+      border-radius: 6px;
+      border: none;
+      cursor: pointer;
+      font-size: 0.85rem;
+    }
+    
+    .profil-save-btn {
+      background: #E53935;
+      color: #fff;
+    }
+    
+    .profil-cancel-btn {
+      background: #333;
+      color: #aaa;
+    }
+    
+    /* Leerer Profil-Zustand */
+    .profil-leer-content {
+      padding: 1rem;
+    }
+    
+    .profil-leer-icon {
+      font-size: 3rem;
+      margin-bottom: 0.5rem;
+    }
+    
+    .profil-leer-content h3 {
+      color: #fff;
+      margin: 0 0 0.5rem 0;
+    }
+    
+    .profil-leer-content p {
+      color: #888;
+      font-size: 0.9rem;
+      margin-bottom: 1rem;
+    }
+    
+    .profil-start-options {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+    
+    .profil-start-btn {
+      display: block;
+      padding: 0.75rem;
+      border-radius: 8px;
+      text-align: center;
+      text-decoration: none;
+      font-size: 0.9rem;
+      cursor: pointer;
+      border: none;
+    }
+    
+    .profil-start-btn.primary {
+      background: #E53935;
+      color: #fff;
+    }
+    
+    .profil-start-btn.secondary {
+      background: #333;
+      color: #ccc;
+      border: 1px solid #444;
+    }
+    
+    /* Mein Sozialismus Section */
+    .ms-section {
+      background: #1a1a1a;
+      border: 1px solid #333;
+      border-radius: 12px;
+      padding: 1rem;
+    }
+    
+    .ms-section-header {
+      text-align: center;
+      margin-bottom: 1rem;
+      padding-bottom: 0.75rem;
+      border-bottom: 1px solid #333;
+    }
+    
+    .ms-section-header h3 {
+      color: #E53935;
+      font-size: 1.1rem;
+      margin: 0 0 0.25rem 0;
+    }
+    
+    .ms-section-header p {
+      color: #888;
+      font-size: 0.8rem;
+      margin: 0;
+    }
+    
+    .hidden {
+      display: none !important;
+    }
+    
+    /* ═══════════════════════════════════════════════════════════════
        MEIN SOZIALISMUS - Definition Editor
        ═══════════════════════════════════════════════════════════════ */
     
@@ -6741,9 +7008,9 @@
         </div>
       </div>
       <div class="linse-wrapper">
-        <div class="linse werkzeug" data-typ="werkzeug" data-id="konfigurator" onclick="openWerkzeug('konfigurator')" title="Wo stehe ich?">
-          🎛️
-          <span class="linse-label">Wo stehe ich?</span>
+        <div class="linse werkzeug" data-typ="werkzeug" data-id="profil" onclick="setAnsicht('wg'); setTimeout(() => renderHaus('profil'), 100);" title="Mein Profil">
+          🎯
+          <span class="linse-label">Mein Profil</span>
         </div>
       </div>
       <div class="linse-wrapper">
@@ -11753,7 +12020,7 @@ function initWG() {
   };
   
   // Initial rendern
-  renderHaus('funktional');
+  renderHaus('erkunden');
 }
 
 // ═══════════════════════════════════════════════════════════════
@@ -11772,51 +12039,45 @@ function renderHaus(modus) {
     <div class="haus-header">
       <h2>🏠 Das Haus des linken Denkens</h2>
       <div class="haus-tabs">
-        <button class="haus-tab ${modus === 'funktional' ? 'active' : ''}" onclick="renderHaus('funktional')">🏠 Räume</button>
+        <button class="haus-tab ${modus === 'erkunden' ? 'active' : ''}" onclick="renderHaus('erkunden')">🚪 Erkunden</button>
+        <button class="haus-tab ${modus === 'profil' ? 'active' : ''}" onclick="renderHaus('profil')">🎯 Mein Profil</button>
         <button class="haus-tab ${modus === 'wg' ? 'active' : ''}" onclick="renderHaus('wg')">📺 Talkshow</button>
-        <button class="haus-tab ${modus === 'definition' ? 'active' : ''}" onclick="renderHaus('definition')">🔴 Mein Sozialismus</button>
       </div>
     </div>
   `;
   
   // Inhalt je nach Modus
-  if (modus === 'funktional') {
-    html += renderFunktionalModus(profil);
+  if (modus === 'erkunden' || modus === 'funktional') {
+    html += renderErkundenModus(profil);
+  } else if (modus === 'profil' || modus === 'definition') {
+    html += renderMeinProfilModus(profil, archetyp);
   } else if (modus === 'wg') {
     html += renderWGModus(archetyp);
-  } else if (modus === 'definition') {
-    html += renderMeinSozialismus(profil);
   }
   
   container.innerHTML = html;
   
-  // Nach dem Rendern: Drag & Drop initialisieren wenn Definition-Tab
-  if (modus === 'definition') {
+  // Nach dem Rendern: Drag & Drop initialisieren wenn Profil-Tab
+  if (modus === 'profil' || modus === 'definition') {
     initDefinitionDragDrop();
   }
 }
 
 // ═══════════════════════════════════════════════════════════════
-// FUNKTIONAL-MODUS: Das echte Haus
+// ERKUNDEN-MODUS: Das Haus durchstöbern (ohne persönliches Profil nötig)
 // ═══════════════════════════════════════════════════════════════
 
-function renderFunktionalModus(profil) {
+function renderErkundenModus(profil) {
   const hatProfil = Object.keys(profil).length > 0;
-  const archetyp = generatorArchetyp || null;
   
   let html = '';
   
-  // "Dein Platz" Karte zeigen wenn Profil vorhanden
-  if (hatProfil) {
-    html += renderDeinPlatz(profil, archetyp);
-  }
-  
   html += `
     <div class="haus-banner funktional">
-      <span class="banner-icon">🏠</span>
+      <span class="banner-icon">🚪</span>
       <div class="banner-text">
-        <strong>Beweg dich frei im Haus und bring dich ein, wo du willst.</strong>
-        <span>${hatProfil ? 'Deine Positionen leuchten rot. Klicke auf ein Zimmer für Details.' : 'Fülle den Konfigurator aus, um deine Positionen zu sehen.'}</span>
+        <strong>Erkunde das Haus des linken Denkens</strong>
+        <span>Klicke auf ein Zimmer, um die verschiedenen Positionen zu entdecken.${hatProfil ? ' Deine Positionen leuchten rot.' : ''}</span>
       </div>
     </div>
     <div class="haus-gebaeude">
@@ -12111,6 +12372,302 @@ let meineSozialismusDefinition = {
   eigeneTexte: {}, // Eigene Formulierungen pro Position
   freitext: ''   // Direkter Text
 };
+
+// ═══════════════════════════════════════════════════════════════
+// MEIN PROFIL MODUS: Kombiniert Konfigurator + Empfehlungen + Definition
+// ═══════════════════════════════════════════════════════════════
+
+function renderMeinProfilModus(profil, archetyp) {
+  const hatProfil = Object.keys(profil).length > 0;
+  const achsenMeta = window.achsenMeta;
+  
+  let html = `<div class="mein-profil-container">`;
+  
+  // ═══════════════════════════════════════════════════════════════
+  // SEKTION 1: Profil-Übersicht / Achsen-Auswahl
+  // ═══════════════════════════════════════════════════════════════
+  
+  if (hatProfil) {
+    // Kompakte Profil-Anzeige mit Bearbeiten-Option
+    html += `
+      <div class="profil-header-card">
+        <div class="profil-header-top">
+          <div class="profil-icon">🎯</div>
+          <div class="profil-info">
+            <h3>Dein Profil</h3>
+            ${archetyp ? `<span class="profil-archetyp">${archetyp}</span>` : ''}
+          </div>
+          <button class="profil-edit-btn" onclick="toggleProfilEditor()">✏️ Bearbeiten</button>
+        </div>
+        
+        <div class="profil-kompakt" id="profil-kompakt">
+          ${renderProfilKompakt(profil)}
+        </div>
+        
+        <div class="profil-editor hidden" id="profil-editor">
+          ${renderProfilEditor(profil)}
+        </div>
+        
+        <div class="profil-actions">
+          <button class="profil-action-btn" onclick="generiereProfilUrl()">🔗 Meine URL</button>
+          <button class="profil-action-btn secondary" onclick="window.open('../?start=2', '_blank')">🎲 Im Generator öffnen</button>
+        </div>
+      </div>
+    `;
+  } else {
+    // Kein Profil: Einladung zum Ausfüllen
+    html += `
+      <div class="profil-header-card leer">
+        <div class="profil-leer-content">
+          <div class="profil-leer-icon">🎯</div>
+          <h3>Wo stehst du?</h3>
+          <p>Erstelle dein persönliches Profil, um passende Empfehlungen zu erhalten und deinen Platz im Haus zu finden.</p>
+          <div class="profil-start-options">
+            <button class="profil-start-btn primary" onclick="toggleProfilEditor(); document.getElementById('profil-editor').classList.remove('hidden');">
+              🎛️ Schnell-Profil erstellen
+            </button>
+            <a href="../?start=2" class="profil-start-btn secondary">
+              🎲 Ausführlich im Generator
+            </a>
+          </div>
+        </div>
+        
+        <div class="profil-editor hidden" id="profil-editor">
+          ${renderProfilEditor(profil)}
+        </div>
+      </div>
+    `;
+  }
+  
+  // ═══════════════════════════════════════════════════════════════
+  // SEKTION 2: Hier wirst du gebraucht (wenn Profil vorhanden)
+  // ═══════════════════════════════════════════════════════════════
+  
+  if (hatProfil) {
+    html += renderDeinPlatz(profil, archetyp);
+  }
+  
+  // ═══════════════════════════════════════════════════════════════
+  // SEKTION 3: Mein Sozialismus Definition
+  // ═══════════════════════════════════════════════════════════════
+  
+  html += renderMeinSozialismusIntern(profil);
+  
+  html += `</div>`; // Ende mein-profil-container
+  
+  return html;
+}
+
+// Kompakte Darstellung des Profils (nur ausgefüllte Achsen)
+function renderProfilKompakt(profil) {
+  const achsen = Object.entries(profil);
+  if (achsen.length === 0) return '<p class="profil-leer-text">Noch keine Positionen gewählt</p>';
+  
+  let html = '<div class="profil-chips">';
+  achsen.forEach(([achse, wert]) => {
+    const meta = window.achsenMeta[achse];
+    const polName = meta?.pole[wert - 1] || wert;
+    html += `<span class="profil-chip" onclick="showKnoten('${achse}-${wert}')">${achse}: ${polName}</span>`;
+  });
+  html += '</div>';
+  return html;
+}
+
+// Editor für Profil-Bearbeitung (kompakte Slider)
+function renderProfilEditor(profil) {
+  const achsenDef = [
+    { id: 'A1', name: 'Reform ↔ Revolution' },
+    { id: 'A2', name: 'Rev. Subjekt' },
+    { id: 'A3', name: 'Staat' },
+    { id: 'A4', name: 'Organisation' },
+    { id: 'B1', name: 'Markt ↔ Plan' },
+    { id: 'B2', name: 'Eigentum' },
+    { id: 'B3', name: 'Arbeit' },
+    { id: 'C1', name: 'Feminismus' },
+    { id: 'C2', name: 'Natur' },
+    { id: 'C3', name: 'International' },
+    { id: 'D1', name: 'Utopie' },
+    { id: 'D2', name: 'Transformation' },
+    { id: 'E1', name: 'Bündnisse' },
+    { id: 'E2', name: 'Ebenen' }
+  ];
+  
+  let html = '<div class="profil-editor-grid">';
+  
+  achsenDef.forEach(achse => {
+    const wert = profil[achse.id] || 0;
+    const meta = window.achsenMeta[achse.id] || { pole: ['1','2','3','4','5'] };
+    
+    html += `
+      <div class="profil-achse-row">
+        <span class="profil-achse-label">${achse.id}</span>
+        <div class="profil-achse-slider">
+          ${[1,2,3,4,5].map(pos => `
+            <button class="profil-pos ${wert === pos ? 'selected' : ''}" 
+                    onclick="updateProfilPosition('${achse.id}', ${pos})"
+                    title="${meta.pole[pos-1]}">
+              ${pos}
+            </button>
+          `).join('')}
+        </div>
+      </div>
+    `;
+  });
+  
+  html += '</div>';
+  html += `
+    <div class="profil-editor-actions">
+      <button class="profil-save-btn" onclick="speichereProfilUndRender()">✓ Speichern</button>
+      <button class="profil-cancel-btn" onclick="toggleProfilEditor()">✕ Abbrechen</button>
+    </div>
+  `;
+  
+  return html;
+}
+
+// Toggle für Profil-Editor
+function toggleProfilEditor() {
+  const kompakt = document.getElementById('profil-kompakt');
+  const editor = document.getElementById('profil-editor');
+  
+  if (kompakt) kompakt.classList.toggle('hidden');
+  if (editor) editor.classList.toggle('hidden');
+}
+
+// Position im Profil aktualisieren
+function updateProfilPosition(achse, pos) {
+  if (!konfigAuswahl) konfigAuswahl = {};
+  konfigAuswahl[achse] = pos;
+  
+  // Button-States aktualisieren
+  const row = document.querySelector(`.profil-achse-row .profil-achse-label`);
+  document.querySelectorAll(`.profil-achse-row`).forEach(row => {
+    const label = row.querySelector('.profil-achse-label');
+    if (label && label.textContent === achse) {
+      row.querySelectorAll('.profil-pos').forEach((btn, i) => {
+        btn.classList.toggle('selected', i + 1 === pos);
+      });
+    }
+  });
+}
+
+// Profil speichern und Ansicht neu rendern
+function speichereProfilUndRender() {
+  // konfigAuswahl ist bereits aktualisiert
+  generatorProfil = { ...konfigAuswahl };
+  renderHaus('profil');
+}
+
+// URL mit Profil generieren
+function generiereProfilUrl() {
+  const profil = generatorProfil || konfigAuswahl || {};
+  if (Object.keys(profil).length === 0) {
+    alert('Erstelle zuerst ein Profil!');
+    return;
+  }
+  
+  // Profil zu URL-Parameter konvertieren
+  const profilString = Object.entries(profil)
+    .map(([achse, wert]) => `${achse}:${wert}`)
+    .join(',');
+  
+  const baseUrl = window.location.origin + window.location.pathname;
+  const url = `${baseUrl}?profil=${profilString}`;
+  
+  // Kopieren und Feedback
+  navigator.clipboard.writeText(url).then(() => {
+    alert('✓ URL kopiert!\n\nDiese URL enthält dein komplettes Profil. Speichere sie als Lesezeichen oder teile sie.');
+  }).catch(() => {
+    prompt('Kopiere diese URL:', url);
+  });
+}
+
+// Interne Version von renderMeinSozialismus (ohne Container)
+function renderMeinSozialismusIntern(profil) {
+  const hatProfil = Object.keys(profil).length > 0;
+  
+  // Lade gespeicherte Definition aus localStorage
+  const gespeichert = localStorage.getItem('meinSozialismus');
+  if (gespeichert) {
+    try {
+      meineSozialismusDefinition = JSON.parse(gespeichert);
+    } catch(e) {}
+  }
+  
+  // Wenn noch keine Definition aber Profil vorhanden: initialisiere aus Profil
+  if (meineSozialismusDefinition.kern.length === 0 && hatProfil) {
+    initDefinitionAusProfil(profil);
+  }
+  
+  let html = `
+    <div class="ms-section">
+      <div class="ms-section-header">
+        <h3>🔴 Mein Sozialismus</h3>
+        <p>Definiere, was Sozialismus für dich bedeutet</p>
+      </div>
+      
+      <div class="ms-editor">
+        <div class="ms-kategorien">
+          
+          <!-- KERN -->
+          <div class="ms-kategorie" data-kategorie="kern">
+            <div class="ms-kategorie-header">
+              <span class="ms-kategorie-icon">🔥</span>
+              <div>
+                <h4>Unverzichtbar</h4>
+                <span class="ms-kategorie-info">Das ist der Kern meines Sozialismus</span>
+              </div>
+            </div>
+            <div class="ms-dropzone" data-kategorie="kern">
+              ${renderDefinitionItems('kern')}
+              <div class="ms-dropzone-hint">Ziehe Positionen hierher</div>
+            </div>
+          </div>
+          
+          <!-- WICHTIG -->
+          <div class="ms-kategorie" data-kategorie="wichtig">
+            <div class="ms-kategorie-header">
+              <span class="ms-kategorie-icon">💡</span>
+              <div>
+                <h4>Wichtig</h4>
+                <span class="ms-kategorie-info">Gehört für mich dazu</span>
+              </div>
+            </div>
+            <div class="ms-dropzone" data-kategorie="wichtig">
+              ${renderDefinitionItems('wichtig')}
+              <div class="ms-dropzone-hint">Ziehe Positionen hierher</div>
+            </div>
+          </div>
+          
+          <!-- RELEVANT -->
+          <div class="ms-kategorie" data-kategorie="relevant">
+            <div class="ms-kategorie-header">
+              <span class="ms-kategorie-icon">📎</span>
+              <div>
+                <h4>Auch relevant</h4>
+                <span class="ms-kategorie-info">Spielt eine Rolle</span>
+              </div>
+            </div>
+            <div class="ms-dropzone" data-kategorie="relevant">
+              ${renderDefinitionItems('relevant')}
+              <div class="ms-dropzone-hint">Ziehe Positionen hierher</div>
+            </div>
+          </div>
+          
+        </div>
+        
+        <!-- Hinzufügen -->
+        <div class="ms-hinzufuegen">
+          <button class="ms-add-btn" onclick="zeigePositionAuswahl()">
+            ➕ Position hinzufügen
+          </button>
+        </div>
+      </div>
+    </div>
+  `;
+  
+  return html;
+}
 
 function renderMeinSozialismus(profil) {
   const hatProfil = Object.keys(profil).length > 0;
@@ -14451,7 +15008,7 @@ function setAnsicht(ansicht) {
   
   // WICHTIG: Bei Haus-Ansicht immer renderHaus aufrufen (mit aktuellem Profil!)
   if (ansicht === 'wg') {
-    renderHaus('funktional');
+    renderHaus('erkunden');
   }
   
   // Filter anwenden
@@ -15541,7 +16098,7 @@ function zeigeProfilImHaus() {
   
   // Kurz warten, dann rendern mit Profil
   setTimeout(() => {
-    renderHaus('funktional');
+    renderHaus('erkunden');
   }, 100);
 }
 
@@ -16029,7 +16586,7 @@ function zimmerFinderAbschliessen() {
   
   // Ins Haus wechseln
   setAnsicht('wg');
-  renderHaus('funktional');
+  renderHaus('erkunden');
 }
 
 // Berechnet das Hauptzimmer und weitere passende Zimmer basierend auf Profil
