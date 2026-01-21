@@ -1347,7 +1347,7 @@ const KonfliktModal = ({ parameter, nutzerWert, onClose }) => {
 };
 
 // Analyse-Anzeige
-const AnalyseBox = ({ analyse, typ, antworten, params, onGenerateAntrag, showAntragButton }) => {
+const AnalyseBox = ({ analyse, typ, antworten, params }) => {
   const [selectedKonflikt, setSelectedKonflikt] = React.useState(null);
   const [selectedGemeinsam, setSelectedGemeinsam] = React.useState(null);
   const [selectedGegenrede, setSelectedGegenrede] = React.useState(null);
@@ -1749,35 +1749,11 @@ const AnalyseBox = ({ analyse, typ, antworten, params, onGenerateAntrag, showAnt
           </div>
         )}
         
-        {/* Einladung mit Antrags-Button - NUR bei radikaler */}
+        {/* Einladung - NUR bei radikaler */}
         {analyse.verhältnis === 'radikaler' && analyse.einladung && (
           <div className="card" style={{ background: COLORS.rot, color: COLORS.weiss }}>
             <div className="card-body" style={{ textAlign: 'center' }}>
-              <p style={{ margin: showAntragButton ? '0 0 1rem' : 0, fontSize: '1.1rem', lineHeight: 1.5 }}>{analyse.einladung}</p>
-              {showAntragButton && onGenerateAntrag && (
-                <button
-                  onClick={onGenerateAntrag}
-                  style={{ 
-                    padding: '0.75rem 1.5rem', 
-                    background: 'rgba(255,255,255,0.25)', 
-                    border: '2px solid rgba(255,255,255,0.5)',
-                    borderRadius: '8px', 
-                    fontWeight: 600,
-                    fontSize: '0.95rem',
-                    color: 'white',
-                    cursor: 'pointer',
-                    transition: 'all 0.2s'
-                  }}
-                  onMouseEnter={(e) => {
-                    e.target.style.background = 'rgba(255,255,255,0.4)';
-                  }}
-                  onMouseLeave={(e) => {
-                    e.target.style.background = 'rgba(255,255,255,0.25)';
-                  }}
-                >
-                  ✍️ Antrag generieren
-                </button>
-              )}
+              <p style={{ margin: 0, fontSize: '1.1rem', lineHeight: 1.5 }}>{analyse.einladung}</p>
             </div>
           </div>
         )}
