@@ -1347,7 +1347,7 @@ const KonfliktModal = ({ parameter, nutzerWert, onClose }) => {
 };
 
 // Analyse-Anzeige
-const AnalyseBox = ({ analyse, typ, antworten, params, onGenerateAntrag, showAntragButton }) => {
+const AnalyseBox = ({ analyse, typ, antworten, params }) => {
   const [selectedKonflikt, setSelectedKonflikt] = React.useState(null);
   const [selectedGemeinsam, setSelectedGemeinsam] = React.useState(null);
   const [selectedGegenrede, setSelectedGegenrede] = React.useState(null);
@@ -1749,35 +1749,11 @@ const AnalyseBox = ({ analyse, typ, antworten, params, onGenerateAntrag, showAnt
           </div>
         )}
         
-        {/* Einladung mit Antrags-Button - NUR bei radikaler */}
+        {/* Einladung - NUR bei radikaler */}
         {analyse.verhältnis === 'radikaler' && analyse.einladung && (
           <div className="card" style={{ background: COLORS.rot, color: COLORS.weiss }}>
             <div className="card-body" style={{ textAlign: 'center' }}>
-              <p style={{ margin: showAntragButton ? '0 0 1rem' : 0, fontSize: '1.1rem', lineHeight: 1.5 }}>{analyse.einladung}</p>
-              {showAntragButton && onGenerateAntrag && (
-                <button
-                  onClick={onGenerateAntrag}
-                  style={{ 
-                    padding: '0.75rem 1.5rem', 
-                    background: 'rgba(255,255,255,0.25)', 
-                    border: '2px solid rgba(255,255,255,0.5)',
-                    borderRadius: '8px', 
-                    fontWeight: 600,
-                    fontSize: '0.95rem',
-                    color: 'white',
-                    cursor: 'pointer',
-                    transition: 'all 0.2s'
-                  }}
-                  onMouseEnter={(e) => {
-                    e.target.style.background = 'rgba(255,255,255,0.4)';
-                  }}
-                  onMouseLeave={(e) => {
-                    e.target.style.background = 'rgba(255,255,255,0.25)';
-                  }}
-                >
-                  ✍️ Antrag generieren
-                </button>
-              )}
+              <p style={{ margin: 0, fontSize: '1.1rem', lineHeight: 1.5 }}>{analyse.einladung}</p>
             </div>
           </div>
         )}
@@ -2260,50 +2236,75 @@ const Layer2 = ({ params, onComplete, onLiteratur, onBack, apiKey, analysen, ini
 const analyzeAgainstProgram = (profilL1, profilL2, paramsL1, paramsL2) => {
   const diskrepanzen = [];
   
-  // L1 Parameter durchgehen
-  paramsL1.forEach(param => {
-    const nutzerWert = profilL1[param.id];
-    const programmWert = param.programmScore;
-    const differenz = nutzerWert - programmWert;
-    
-    if (differenz >= 1) { // Nutzer ist radikaler
-      diskrepanzen.push({
-        id: param.id,
-        titel: param.titel,
-        icon: param.icon,
-        kurz: param.kurz,
-        nutzerWert,
-        programmWert,
-        differenz,
-        programmText: param.programmText,
-        nutzerPosition: nutzerWert >= 4 ? param.rechts : (nutzerWert <= 2 ? param.links : 'Mitte'),
-        layer: 1
-      });
-    }
-  });
+  console.log('analyzeAgainstProgram called');
+  console.log('profilL1:', profilL1);
+  console.log('profilL2:', profilL2);
+  console.log('paramsL2 length:', paramsL2?.length);
   
-  // L2 Parameter durchgehen
-  paramsL2.forEach(param => {
-    const nutzerWert = profilL2[param.id];
-    const programmWert = param.programmScore;
-    const differenz = nutzerWert - programmWert;
-    
-    if (differenz >= 1) { // Nutzer ist radikaler
-      diskrepanzen.push({
-        id: param.id,
-        titel: param.titel,
-        icon: param.icon,
-        kurz: param.kurz,
-        feld: param.feld,
-        nutzerWert,
-        programmWert,
-        differenz,
-        programmText: param.programmText,
-        nutzerPosition: nutzerWert >= 4 ? param.rechts : (nutzerWert <= 2 ? param.links : 'Mitte'),
-        layer: 2
-      });
-    }
-  });
+  // L1 Parameter durchgehen (nur wenn profilL1 existiert)
+  if (profilL1 && typeof profilL1 === 'object') {
+    paramsL1.forEach(param => {
+      const nutzerWert = profilL1[param.id];
+      const programmWert = param.programmScore;
+      
+      // Skip wenn nutzerWert undefined oder programmScore fehlt
+      if (nutzerWert === undefined || nutzerWert === null || !programmWert) return;
+      
+      const differenz = nutzerWert - programmWert;
+      
+      if (differenz >= 1) { // Nutzer ist radikaler
+        diskrepanzen.push({
+          id: param.id,
+          titel: param.titel,
+          icon: param.icon,
+          kurz: param.kurz,
+          nutzerWert,
+          programmWert,
+          differenz,
+          programmText: param.programmText,
+          nutzerPosition: nutzerWert >= 4 ? param.rechts : (nutzerWert <= 2 ? param.links : 'Mitte'),
+          layer: 1
+        });
+      }
+    });
+  }
+  
+  // L2 Parameter durchgehen (nur wenn profilL2 existiert)
+  if (profilL2 && typeof profilL2 === 'object') {
+    console.log('Processing L2 params...');
+    paramsL2.forEach(param => {
+      const nutzerWert = profilL2[param.id];
+      const programmWert = param.programmScore;
+      
+      console.log(`Param ${param.id}: nutzerWert=${nutzerWert}, programmWert=${programmWert}`);
+      
+      // Skip wenn nutzerWert undefined oder programmScore fehlt
+      if (nutzerWert === undefined || nutzerWert === null || !programmWert) return;
+      
+      const differenz = nutzerWert - programmWert;
+      
+      if (differenz >= 1) { // Nutzer ist radikaler
+        console.log(`  -> Diskrepanz gefunden: +${differenz}`);
+        diskrepanzen.push({
+          id: param.id,
+          titel: param.titel,
+          icon: param.icon,
+          kurz: param.kurz,
+          feld: param.feld,
+          nutzerWert,
+          programmWert,
+          differenz,
+          programmText: param.programmText,
+          nutzerPosition: nutzerWert >= 4 ? param.rechts : (nutzerWert <= 2 ? param.links : 'Mitte'),
+          layer: 2
+        });
+      }
+    });
+  } else {
+    console.log('profilL2 is null or not an object!');
+  }
+  
+  console.log('Total diskrepanzen:', diskrepanzen.length);
   
   // Nach Differenz sortieren (größte zuerst)
   diskrepanzen.sort((a, b) => b.differenz - a.differenz);
@@ -2311,88 +2312,12 @@ const analyzeAgainstProgram = (profilL1, profilL2, paramsL1, paramsL2) => {
   return diskrepanzen;
 };
 
-// Generiere Antrag für eine spezifische Diskrepanz
-const generateAntragForDiskrepanz = async (diskrepanz, apiKey) => {
-  const prompt = `Du bist ein erfahrener Parteitagsdelegierter der Linken. Erstelle eine Argumentationsskizze für einen Antrag zur Änderung des Erfurter Programms (2011).
-
-THEMA: ${diskrepanz.titel}
-FRAGE: ${diskrepanz.kurz}
-
-AKTUELLE PROGRAMMPOSITION:
-${diskrepanz.programmText}
-
-GEWÜNSCHTE ÄNDERUNG:
-Der/die Antragsteller*in möchte eine radikalere Position: "${diskrepanz.nutzerPosition}"
-
-Erstelle eine Argumentationsskizze mit:
-
-1. ANTRAGSTITEL
-Ein prägnanter Titel
-
-2. PROBLEMANALYSE (3-4 Sätze)
-Was fehlt im aktuellen Programm? Warum ist das ein Problem?
-
-3. FORDERUNG (konkret formuliert)
-Was soll ins Programm aufgenommen/geändert werden?
-
-4. BEGRÜNDUNG (5-6 Punkte)
-- Theoretische Argumente aus linker Tradition
-- Praktische Beispiele / aktuelle Entwicklungen
-- Bezug zu anderen Programmteilen
-- Warum ist jetzt der richtige Zeitpunkt?
-
-5. MÖGLICHE GEGENARGUMENTE & ENTKRÄFTUNG
-2-3 erwartbare Einwände und wie man ihnen begegnet
-
-6. UNTERSTÜTZER*INNEN GEWINNEN
-Welche AGs, Strömungen, Landesverbände könnten diesen Antrag unterstützen?
-
-Schreibe als durchformulierte Skizze. Sachlich, aber überzeugend.`;
-
-  try {
-    const response = await fetch(GROQ_API_URL, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        'Authorization': `Bearer ${apiKey}`
-      },
-      body: JSON.stringify({
-        model: GROQ_MODEL,
-        messages: [{ role: 'user', content: prompt }],
-        max_tokens: 2000,
-        temperature: 0.7
-      })
-    });
-
-    const data = await response.json();
-    return data.choices?.[0]?.message?.content || 'Fehler bei der Generierung.';
-  } catch (error) {
-    console.error('Antrag-Generator Fehler:', error);
-    return 'Fehler bei der Generierung. Bitte versuche es erneut.';
-  }
-};
-
-// Download als TXT
-const downloadAsTxt = (text, filename) => {
-  const blob = new Blob([text], { type: 'text/plain;charset=utf-8' });
-  const url = URL.createObjectURL(blob);
-  const a = document.createElement('a');
-  a.href = url;
-  a.download = filename;
-  document.body.appendChild(a);
-  a.click();
-  document.body.removeChild(a);
-  URL.revokeObjectURL(url);
-};
-
-// Diskrepanz-Karte Komponente
-const DiskrepanzKarte = ({ diskrepanz, onGenerateAntrag, antragLoading, selectedId }) => {
-  const isSelected = selectedId === diskrepanz.id;
-  
+// Diskrepanz-Karte Komponente (vereinfacht, ohne Antragsgenerator)
+const DiskrepanzKarte = ({ diskrepanz }) => {
   return (
     <div style={{
       background: '#2A2A2A',
-      border: `1px solid ${isSelected ? COLORS.rot : '#444'}`,
+      border: '1px solid #444',
       borderRadius: '8px',
       padding: '1rem',
       marginBottom: '1rem'
@@ -2433,23 +2358,6 @@ const DiskrepanzKarte = ({ diskrepanz, onGenerateAntrag, antragLoading, selected
               <span style={{ color: COLORS.rot, fontWeight: 500 }}>{diskrepanz.nutzerPosition}</span>
             </div>
           </div>
-          
-          {/* Antrag-Button */}
-          <button
-            onClick={() => onGenerateAntrag(diskrepanz)}
-            disabled={antragLoading}
-            className="btn btn-secondary"
-            style={{ 
-              marginTop: '0.75rem', 
-              fontSize: '0.8rem',
-              padding: '0.4rem 0.8rem',
-              color: COLORS.weiss,
-              borderColor: COLORS.rot,
-              background: 'transparent'
-            }}
-          >
-            {antragLoading && isSelected ? '⏳ Generiere...' : '📝 Antragshilfe generieren'}
-          </button>
         </div>
       </div>
     </div>
@@ -2459,9 +2367,6 @@ const DiskrepanzKarte = ({ diskrepanz, onGenerateAntrag, antragLoading, selected
 const Layer3 = ({ profilL1, profilL2, onBack, onLiteratur, apiKey, paramsL1, paramsL2, analysen, archetypName }) => {
   const [diskrepanzen, setDiskrepanzen] = useState([]);
   const [loading, setLoading] = useState(true);
-  const [antrag, setAntrag] = useState(null);
-  const [antragLoading, setAntragLoading] = useState(false);
-  const [selectedDiskrepanz, setSelectedDiskrepanz] = useState(null);
 
   useEffect(() => {
     // Analysiere Diskrepanzen zwischen Nutzer und Programm
@@ -2470,24 +2375,12 @@ const Layer3 = ({ profilL1, profilL2, onBack, onLiteratur, apiKey, paramsL1, par
     setLoading(false);
   }, [profilL1, profilL2, paramsL1, paramsL2]);
 
-  const handleGenerateAntrag = async (diskrepanz) => {
-    setSelectedDiskrepanz(diskrepanz.id);
-    setAntragLoading(true);
-    const result = await generateAntragForDiskrepanz(diskrepanz, apiKey);
-    setAntrag({ diskrepanz, text: result });
-    setAntragLoading(false);
-  };
-
-  const handleDownload = () => {
-    if (antrag) {
-      const datum = new Date().toISOString().split('T')[0];
-      const thema = antrag.diskrepanz.titel.toLowerCase().replace(/\s+/g, '_');
-      downloadAsTxt(antrag.text, `Antrag_${thema}_${datum}.txt`);
-    }
-  };
-
   const anzahlDiskrepanzen = diskrepanzen.length;
   const hatDiskrepanzen = anzahlDiskrepanzen > 0;
+
+  // Hinweis wenn keine Profile vorhanden sind
+  const keinProfil = (!profilL1 || Object.keys(profilL1).length === 0) && 
+                      (!profilL2 || Object.keys(profilL2).length === 0);
 
   return (
     <div className="dark" style={{ minHeight: '100vh', padding: '2rem 1rem' }}>
@@ -2495,7 +2388,8 @@ const Layer3 = ({ profilL1, profilL2, onBack, onLiteratur, apiKey, paramsL1, par
         <div style={{ textAlign: 'center', marginBottom: '2rem' }}>
           <div className="label">LAYER 3: PROGRAMM-CHECK</div>
           <h1 style={{ color: COLORS.weiss, marginTop: '0.5rem' }}>
-            {hatDiskrepanzen ? 'Wo das Programm nachziehen sollte' : 'Keine großen Diskrepanzen'}
+            {keinProfil ? 'Kein Profil vorhanden' : 
+             hatDiskrepanzen ? 'Wo das Programm nachziehen sollte' : 'Keine großen Diskrepanzen'}
           </h1>
           <p style={{ color: '#AAA', marginTop: '0.5rem' }}>
             Vergleich mit dem Erfurter Programm (2011)
@@ -2507,21 +2401,27 @@ const Layer3 = ({ profilL1, profilL2, onBack, onLiteratur, apiKey, paramsL1, par
             <div className="loading-spinner" style={{ margin: '0 auto 1rem' }}></div>
             <p style={{ color: '#AAA' }}>Vergleiche deine Positionen mit dem Programm...</p>
           </div>
+        ) : keinProfil ? (
+          <div className="card" style={{ marginBottom: '1.5rem' }}>
+            <div className="card-body" style={{ textAlign: 'center' }}>
+              <p style={{ margin: '0 0 1rem', lineHeight: 1.6 }}>
+                Um den Programm-Check durchzuführen, musst du zuerst Layer 1 oder Layer 2 ausfüllen.
+              </p>
+              <button onClick={onBack} className="btn btn-primary">
+                ← Zurück zum Start
+              </button>
+            </div>
+          </div>
         ) : (
           <>
             {/* Zusammenfassung */}
             <div className="card" style={{ marginBottom: '1.5rem' }}>
               <div className="card-body">
                 {hatDiskrepanzen ? (
-                  <>
-                    <p style={{ margin: 0, lineHeight: 1.6 }}>
-                      In <strong style={{ color: COLORS.rot }}>{anzahlDiskrepanzen} Punkten</strong> bist du radikaler als das aktuelle Erfurter Programm. 
-                      Das Programm wird in den nächsten zwei Jahren erneuert – hier kannst du Einfluss nehmen.
-                    </p>
-                    <p style={{ margin: '1rem 0 0', fontSize: '0.9rem', color: '#AAA' }}>
-                      Klicke auf "Antragshilfe generieren", um eine Argumentationsskizze für den Parteitag zu bekommen.
-                    </p>
-                  </>
+                  <p style={{ margin: 0, lineHeight: 1.6 }}>
+                    In <strong style={{ color: COLORS.rot }}>{anzahlDiskrepanzen} Punkten</strong> bist du radikaler als das aktuelle Erfurter Programm. 
+                    Das Programm wird in den nächsten Jahren erneuert – hier kannst du Einfluss nehmen.
+                  </p>
                 ) : (
                   <p style={{ margin: 0, lineHeight: 1.6 }}>
                     Wir haben keine großen Diskrepanzen zwischen deinen Positionen und dem Erfurter Programm gefunden. 
@@ -2541,48 +2441,8 @@ const Layer3 = ({ profilL1, profilL2, onBack, onLiteratur, apiKey, paramsL1, par
                   <DiskrepanzKarte
                     key={d.id}
                     diskrepanz={d}
-                    onGenerateAntrag={handleGenerateAntrag}
-                    antragLoading={antragLoading}
-                    selectedId={selectedDiskrepanz}
                   />
                 ))}
-              </div>
-            )}
-            
-            {/* Generierter Antrag */}
-            {antrag && (
-              <div className="card" style={{ marginBottom: '1.5rem' }}>
-                <div className="card-body">
-                  <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '1rem' }}>
-                    <div className="label">ANTRAGSSKIZZE: {antrag.diskrepanz.titel}</div>
-                    <button 
-                      onClick={handleDownload}
-                      className="btn btn-secondary"
-                      style={{ fontSize: '0.8rem', padding: '0.4rem 0.8rem' }}
-                    >
-                      📥 Als TXT speichern
-                    </button>
-                  </div>
-                  
-                  <div style={{ 
-                    background: '#1A1A1A', 
-                    padding: '1.5rem', 
-                    borderRadius: '8px',
-                    maxHeight: '500px',
-                    overflow: 'auto',
-                    whiteSpace: 'pre-wrap',
-                    fontFamily: 'monospace',
-                    fontSize: '0.85rem',
-                    lineHeight: 1.6,
-                    color: '#DDD'
-                  }}>
-                    {antrag.text}
-                  </div>
-                  
-                  <p style={{ fontSize: '0.75rem', color: '#888', marginTop: '1rem', marginBottom: 0 }}>
-                    💡 Dies ist eine Skizze. Formuliere sie in deinen eigenen Worten aus und reiche sie bei deinem Kreisverband oder auf dem Parteitag ein.
-                  </p>
-                </div>
               </div>
             )}
             
@@ -2624,7 +2484,7 @@ const Layer3 = ({ profilL1, profilL2, onBack, onLiteratur, apiKey, paramsL1, par
                 📋 Über die Programmerneuerung
               </div>
               <p style={{ fontSize: '0.85rem', color: '#AAA', margin: 0, lineHeight: 1.6 }}>
-                Das Erfurter Programm stammt von 2011. Die Linke hat beschlossen, es bis 2027 zu erneuern. 
+                Das Erfurter Programm stammt von 2011. Die Linke hat beschlossen, es zu erneuern. 
                 Anträge können über Kreisverbände, Landesverbände oder als Initiativanträge eingebracht werden.
                 <br/><br/>
                 <a href="https://www.die-linke.de/partei/parteistruktur/parteitag/" target="_blank" rel="noopener noreferrer" style={{ color: COLORS.rot }}>
