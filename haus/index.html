@@ -20885,10 +20885,11 @@ function parseUrlParams() {
     // Konfigurator rendern
     renderKonfiguratorMitProfil();
     
-    // Direkt ins Haus wechseln wenn Profil vorhanden
-    setTimeout(() => {
-      openWerkzeug('haus');
-    }, 500);
+    // NICHT direkt ins Haus springen - User bleibt auf Wesen-Startseite
+    // User kann selbst ins Haus gehen wenn gewünscht
+    // setTimeout(() => {
+    //   openWerkzeug('haus');
+    // }, 500);
   }
 }
 
