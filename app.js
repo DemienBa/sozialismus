@@ -345,105 +345,61 @@ const DEFAULT_API_KEY = 'gsk_6gQXYFmaMdYke8v6Mlp9WGdyb3FYENy7HKSjtifd8v2FQF1K0WO
 // ═══════════════════════════════════════════════════════════════════════════
 
 const PARAMETER_L1_BASE = [
-  { id: 1, titel: 'EIGENTUM', kurz: 'Wem gehört die Wirtschaft?', links: 'Privat', rechts: 'Gemeinsam', icon: '🏭',
-    gegenargument: 'Konzerne schreiben heute die Gesetze, die sie regulieren sollen.',
-    programmScore: 4, programmText: 'Vergesellschaftung in Schlüsselbereichen, aber kleine/mittlere Unternehmen bleiben privat' },
-  { id: 2, titel: 'PLANUNG', kurz: 'Wer entscheidet, was produziert wird?', links: 'Der Markt', rechts: 'Wir alle', icon: '📊',
-    gegenargument: 'Der Markt produziert Luxusautos, während Menschen obdachlos sind.',
-    programmScore: 3, programmText: 'Marktsteuerung bleibt, nur unter demokratischer Rahmensetzung' },
-  { id: 3, titel: 'WACHSTUM', kurz: 'Brauchen wir immer mehr?', links: 'Ja, mit Technik', rechts: 'Nein, genug ist genug', icon: '📈',
-    gegenargument: 'Unendliches Wachstum auf einem endlichen Planeten ist unmöglich.',
-    programmScore: 4, programmText: 'Nachhaltiges Wirtschaften, aber kein explizites Degrowth/Postwachstum' },
-  { id: 4, titel: 'ARBEIT', kurz: 'Was bedeutet Arbeit für dich?', links: 'Pflicht & Sinn', rechts: 'Nur ein Teil des Lebens', icon: '⚙️',
-    gegenargument: 'Warum ist nur "Arbeit", was bezahlt wird?',
-    programmScore: 3, programmText: 'Arbeitszeitverkürzung ja, aber Erwerbsarbeit bleibt zentral (neue Vollbeschäftigung)' },
-  { id: 5, titel: 'EINKOMMEN', kurz: 'Wovon sollen Menschen leben?', links: 'Von Leistung', rechts: 'Bedingungslos', icon: '💰',
-    gegenargument: 'Wer erbt, leistet nichts. Das Leistungsprinzip ist eine Lüge.',
-    programmScore: 3, programmText: 'Sanktionsfreie Mindestsicherung – aber KEIN bedingungsloses Grundeinkommen' },
-  { id: 6, titel: 'STAAT', kurz: 'Wie viel Staat brauchen wir?', links: 'So wenig wie möglich', rechts: 'Aktiv gestaltend', icon: '🏛️',
-    gegenargument: 'Der "schlanke Staat" heißt: Die Armen bleiben allein.',
-    programmScore: 4, programmText: 'Aktiver Sozialstaat, demokratisch kontrolliert' },
-  { id: 7, titel: 'DEMOKRATIE', kurz: 'Wo darfst du mitbestimmen?', links: 'Bei Wahlen reicht', rechts: 'Überall, auch im Job', icon: '🗳️',
-    gegenargument: 'Demokratie endet nicht am Werkstor.',
-    programmScore: 5, programmText: 'Wirtschaftsdemokratie, Mitbestimmung, Volksabstimmungen, politische Streiks' },
-  { id: 8, titel: 'KLASSE', kurz: 'Gibt es oben und unten?', links: 'Nein, jeder kann aufsteigen', rechts: 'Ja, das System teilt', icon: '📶',
-    gegenargument: 'Wer arm geboren wird, stirbt arm.',
-    programmScore: 5, programmText: 'Explizit: "Deutschland – eine Klassengesellschaft"' },
-  { id: 9, titel: 'GESCHLECHT', kurz: 'Woher kommen Geschlechterrollen?', links: 'Biologie', rechts: 'Gesellschaft', icon: '⚧️',
-    gegenargument: 'Frauen verdienen weniger, machen mehr unbezahlte Arbeit. Das ist System.',
-    programmScore: 5, programmText: '"Geschlechterverhältnisse sind Produktionsverhältnisse", patriarchale Unterdrückung' },
-  { id: 10, titel: 'MIGRATION', kurz: 'Wie offen sollen Grenzen sein?', links: 'Geschlossen', rechts: 'Offen', icon: '🌍',
-    gegenargument: 'Die Festung Europa tötet.',
-    programmScore: 4, programmText: '"Offene Grenzen für Menschen in Not" – aber nicht generell offene Grenzen' },
-  { id: 11, titel: 'FRIEDEN', kurz: 'Wie entsteht Sicherheit?', links: 'Durch Stärke', rechts: 'Durch Abrüstung', icon: '☮️',
-    gegenargument: 'Jeder Krieg wurde als "Verteidigung" verkauft.',
-    programmScore: 5, programmText: 'Nie Kriegsbeteiligung, Bundeswehr raus aus Auslandseinsätzen, Abrüstung, Rüstungskonversion' },
-  { id: 12, titel: 'EUROPA', kurz: 'Wie stehst du zur EU?', links: 'Weniger EU', rechts: 'Demokratischere EU', icon: '🇪🇺',
-    gegenargument: 'Die Alternative zum EU-Elitenprojekt ist Demokratie jenseits der Grenzen.',
-    programmScore: 4, programmText: 'Neustart als demokratische, soziale, ökologische Friedensunion – Reform, nicht Exit' },
-  { id: 13, titel: 'KLIMA', kurz: 'Wie lösen wir die Klimakrise?', links: 'Der Markt regelt', rechts: 'Systemwandel nötig', icon: '🔥',
-    gegenargument: 'Klimakrise ist kein Marktversagen – es ist das System.',
-    programmScore: 4, programmText: 'Sozial-ökologischer Umbau, Energiewende – aber keine explizite Kapitalismuskritik in der Klimafrage' },
-  { id: 14, titel: 'WANDEL', kurz: 'Wie schnell muss sich etwas ändern?', links: 'Langsam, behutsam', rechts: 'Grundlegend, jetzt', icon: '⚡',
-    gegenargument: 'Alles Erkämpfte wird seit 40 Jahren abgebaut.',
-    programmScore: 4, programmText: '"Längerer emanzipatorischer Prozess" – grundlegend, aber schrittweise' },
-  { id: 15, titel: 'PARTEI', kurz: 'Braucht es eine linke Partei?', links: 'Eher nicht', rechts: 'Unbedingt', icon: '✊',
-    gegenargument: 'Die Linke ist die einzige Partei, die die Eigentumsfrage stellt.',
-    programmScore: 4, programmText: 'Partei wichtig, aber "breite linke Bündnisse" betont' },
-  { id: 16, titel: 'FREIHEIT', kurz: 'Was bedeutet Freiheit?', links: 'In Ruhe gelassen werden', rechts: 'Gemeinsam frei sein', icon: '🕊️',
-    gegenargument: 'Echte Freiheit braucht materielle Grundlagen.',
-    programmScore: 5, programmText: '"Individuelle Freiheit durch sozial gleiche Teilhabe" – Freiheit durch Solidarität' },
-  { id: 17, titel: 'SOLIDARITÄT', kurz: 'Wem gegenüber solidarisch?', links: 'Den Nächsten', rechts: 'Allen Menschen', icon: '🤝',
-    gegenargument: 'Solidarität ist unteilbar, oder sie ist keine.',
-    programmScore: 5, programmText: 'Internationale Solidarität durchgehend' },
-  // NEUE PARAMETER
-  { id: 18, titel: 'WOHNEN', kurz: 'Wie lösen wir die Wohnungskrise?', links: 'Markt regulieren', rechts: 'Vergesellschaften', icon: '🏠',
-    gegenargument: 'Wohnen ist Menschenrecht, keine Ware.',
-    programmScore: 3, programmText: 'Bezahlbares Wohnen, sozialer Wohnungsbau – aber keine Enteignung großer Wohnkonzerne' },
-  { id: 19, titel: 'NATO', kurz: 'Wie stehst du zur NATO?', links: 'Reformieren', rechts: 'Auflösen/Austreten', icon: '🛡️',
-    gegenargument: 'Die NATO ist ein Angriffsbündnis unter US-Führung.',
-    programmScore: 3, programmText: 'Kollektive Sicherheit statt NATO – aber kein expliziter Austritt gefordert' },
-  { id: 20, titel: 'POLIZEI', kurz: 'Was tun mit der Polizei?', links: 'Stärken', rechts: 'Grundlegend reformieren', icon: '👮',
-    gegenargument: 'Polizeigewalt ist strukturell, nicht individuell.',
-    programmScore: 3, programmText: 'Bürgerrechte stärken, Kennzeichnungspflicht – aber keine grundlegende Infragestellung' },
+  { id: 1, titel: 'EIGENTUM', kurz: 'Wem gehört die Wirtschaft?', links: 'Privat', rechts: 'Gemeinsam', icon: '🏭', programmScore: 4, programmText: 'Vergesellschaftung in Schlüsselbereichen' },
+  { id: 2, titel: 'PLANUNG', kurz: 'Wer entscheidet, was produziert wird?', links: 'Der Markt', rechts: 'Wir alle', icon: '📊', programmScore: 3, programmText: 'Demokratische Rahmensetzung' },
+  { id: 3, titel: 'WACHSTUM', kurz: 'Kann Wirtschaft wachsen und Klima retten?', links: 'Ja', rechts: 'Nein', icon: '📈', programmScore: 4, programmText: 'Kritisch gegenüber Wachstumszwang' },
+  { id: 4, titel: 'ARBEIT', kurz: 'Ist Arbeit Sinn oder Mittel?', links: 'Sinn', rechts: 'Mittel', icon: '⚙️', programmScore: 3, programmText: 'Arbeitszeitverkürzung' },
+  { id: 5, titel: 'EINKOMMEN', kurz: 'Wovon sollen Menschen leben?', links: 'Von Leistung', rechts: 'Bedingungslos', icon: '💰', programmScore: 4, programmText: 'Sanktionsfreie Mindestsicherung' },
+  { id: 6, titel: 'STAAT', kurz: 'Wie viel Staat brauchen wir?', links: 'Weniger', rechts: 'Mehr', icon: '🏛️', programmScore: 3, programmText: 'Starker Sozialstaat' },
+  { id: 7, titel: 'DEMOKRATIE', kurz: 'Reicht wählen alle 4 Jahre?', links: 'Bei Wahlen', rechts: 'Überall', icon: '🗳️', programmScore: 5, programmText: 'Wirtschaftsdemokratie, Mitbestimmung' },
+  { id: 8, titel: 'KLASSE', kurz: 'Gibt es noch Klassen?', links: 'Nein', rechts: 'Ja', icon: '⚔️', programmScore: 4, programmText: 'Klassenanalyse' },
+  { id: 9, titel: 'GESCHLECHT', kurz: 'Woher kommen Geschlechterrollen?', links: 'Biologie', rechts: 'Gesellschaft', icon: '⚧️', programmScore: 5, programmText: 'Patriarchat und Kapitalismus verknüpft' },
+  { id: 10, titel: 'MIGRATION', kurz: 'Wer darf hier leben?', links: 'Reguliert', rechts: 'Offen', icon: '🌍', programmScore: 4, programmText: 'Offene Grenzen für Menschen in Not' },
+  { id: 11, titel: 'FRIEDEN', kurz: 'Wie sichern wir Frieden?', links: 'Durch Stärke', rechts: 'Durch Abrüstung', icon: '☮️', programmScore: 5, programmText: 'Abrüstung, keine Kriegsbeteiligung' },
+  { id: 12, titel: 'EUROPA', kurz: 'Was tun mit der EU?', links: 'Weniger EU', rechts: 'Mehr EU', icon: '🇪🇺', programmScore: 3, programmText: 'EU demokratisieren, nicht verlassen' },
+  { id: 13, titel: 'KLIMA', kurz: 'Wie radikal muss Klimapolitik sein?', links: 'Technik reicht', rechts: 'Systemwandel', icon: '🔥', programmScore: 4, programmText: 'Sozial-ökologischer Umbau' },
+  { id: 14, titel: 'VERÄNDERUNG', kurz: 'Wie kommt der Wandel?', links: 'Langsam', rechts: 'Grundlegend', icon: '⚡', programmScore: 4, programmText: 'Transformativer Reformismus' },
+  { id: 15, titel: 'PARTEI', kurz: 'Braucht es eine linke Partei?', links: 'Eher nicht', rechts: 'Unbedingt', icon: '🌹', programmScore: 4, programmText: 'Partei wichtig für Veränderung' },
+  { id: 16, titel: 'FREIHEIT', kurz: 'Was ist Freiheit?', links: 'Eigenverantwortung', rechts: 'Solidarität', icon: '🕊️', programmScore: 4, programmText: 'Freiheit durch Solidarität' },
+  { id: 17, titel: 'SOLIDARITÄT', kurz: 'Wem schulden wir Solidarität?', links: 'Dem Nächsten', rechts: 'Allen', icon: '🤝', programmScore: 5, programmText: 'Internationale Solidarität' },
+  { id: 18, titel: 'WOHNEN', kurz: 'Wie lösen wir die Wohnungskrise?', links: 'Markt regulieren', rechts: 'Vergesellschaften', icon: '🏘️', programmScore: 4, programmText: 'Enteignung von Wohnungskonzernen' },
+  { id: 19, titel: 'NATO', kurz: 'Wie stehst du zur NATO?', links: 'Beibehalten', rechts: 'Auflösen', icon: '🛡️', programmScore: 5, programmText: 'NATO auflösen' },
+  { id: 20, titel: 'POLIZEI', kurz: 'Was tun mit der Polizei?', links: 'Stärken', rechts: 'Reformieren', icon: '👮', programmScore: 3, programmText: 'Bürgerrechte stärken' },
 ];
 
+
 const PARAMETER_L2_BASE = [
-  { id: 'A1', feld: 'STRATEGIE', titel: 'WEG', kurz: 'Reform oder Revolution?', links: 'Schrittweise Reform', rechts: 'Radikaler Bruch', icon: '🛤️',
-    programmScore: 3, programmText: '"Längerer emanzipatorischer Prozess" – transformativer Reformismus, kein Bruch' },
-  { id: 'A2', feld: 'STRATEGIE', titel: 'SUBJEKT', kurz: 'Wer macht die Veränderung?', links: 'Die Arbeiterklasse', rechts: 'Alle Unterdrückten', icon: '👥',
-    programmScore: 4, programmText: 'Arbeiterbewegung + Frauenbewegung + emanzipatorische Bewegungen' },
-  { id: 'A3', feld: 'STRATEGIE', titel: 'STAAT', kurz: 'Was tun mit dem Staat?', links: 'Übernehmen & nutzen', rechts: 'Langfristig überwinden', icon: '🏛️',
-    programmScore: 2, programmText: 'Sozialstaat ausbauen – kein Wort von Staatsüberwindung' },
-  { id: 'A4', feld: 'STRATEGIE', titel: 'ORGANISATION', kurz: 'Wie organisieren wir uns?', links: 'Zentralistisch', rechts: 'Basisdemokratisch', icon: '🔺',
-    programmScore: 3, programmText: 'Parlamentsorientiert, klassische Parteistruktur' },
-  { id: 'B1', feld: 'ÖKONOMIE', titel: 'KOORDINATION', kurz: 'Wie organisieren wir Wirtschaft?', links: 'Sozialer Markt', rechts: 'Demokratischer Plan', icon: '🔄',
-    programmScore: 2, programmText: 'Markt mit demokratischer Rahmensetzung – keine Planwirtschaft' },
-  { id: 'B2', feld: 'ÖKONOMIE', titel: 'BESITZ', kurz: 'Wem gehören die Betriebe?', links: 'Dem Staat', rechts: 'Den Arbeitenden selbst', icon: '🏭',
-    programmScore: 3, programmText: 'Staatsbesitz, kommunal, genossenschaftlich ODER Belegschaft – Staat steht vorn' },
-  { id: 'B3', feld: 'ÖKONOMIE', titel: 'ARBEIT', kurz: 'Was ist das Ziel bei Arbeit?', links: 'Befreite, sinnvolle Arbeit', rechts: 'Weniger Arbeit für alle', icon: '⏰',
-    programmScore: 3, programmText: 'Arbeitszeitverkürzung, aber "neue Vollbeschäftigung" bleibt Ziel' },
-  { id: 'C1', feld: 'GESELLSCHAFT', titel: 'FEMINISMUS', kurz: 'Klasse oder Geschlecht zuerst?', links: 'Klasse zuerst', rechts: 'Untrennbar verbunden', icon: '⚧️',
-    programmScore: 4, programmText: 'Patriarchat und Kapitalismus verknüpft, aber nicht vollständig intersektional' },
-  { id: 'C2', feld: 'GESELLSCHAFT', titel: 'NATUR', kurz: 'Wie stehen wir zur Natur?', links: 'Ressource für Menschen', rechts: 'Hat Eigenrecht', icon: '🌱',
-    programmScore: 3, programmText: '"Bewahrung der Natur" als Lebensgrundlage – anthropozentrisch, kein Eigenrecht' },
-  { id: 'C3', feld: 'GESELLSCHAFT', titel: 'GLOBAL', kurz: 'National oder international?', links: 'Erst hier, dann dort', rechts: 'Global von Anfang an', icon: '🌐',
-    programmScore: 5, programmText: 'Internationale Solidarität und Kooperation durchgehend' },
-  { id: 'D1', feld: 'KULTUR', titel: 'UTOPIE', kurz: 'Brauchen wir ein Zukunftsbild?', links: 'Entsteht im Kampf', rechts: 'Konkret ausmalen', icon: '🔮',
-    programmScore: 2, programmText: '"Demokratischer Sozialismus" als Ziel, aber wenig konkrete Utopie' },
-  { id: 'D2', feld: 'KULTUR', titel: 'KONFLIKT', kurz: 'Wie gehen wir mit Konflikten um?', links: 'Institutionen schaffen', rechts: 'Ständige Transformation', icon: '⚔️',
-    programmScore: 2, programmText: 'Institutionen stärken, Rechtsstaat ausbauen' },
-  { id: 'D3', feld: 'KULTUR', titel: 'SINN', kurz: 'Braucht Sozialismus Spiritualität?', links: 'Rein säkular', rechts: 'Offen für Transzendenz', icon: '✨',
-    programmScore: 3, programmText: 'Grundsätzlich säkular, aber religiöse Einflüsse bei Mitgliedern anerkannt' },
-  { id: 'E1', feld: 'PRAXIS', titel: 'BÜNDNIS', kurz: 'Mit wem zusammenarbeiten?', links: 'Arbeiterklasse vereinen', rechts: 'Bewegungen vernetzen', icon: '🤝',
-    programmScore: 4, programmText: 'Breite linke Bündnisse, Bewegungsorientierung' },
-  { id: 'E2', feld: 'PRAXIS', titel: 'EBENE', kurz: 'Wo ansetzen?', links: 'Bundespolitik', rechts: 'Lokal + Global', icon: '📍',
-    programmScore: 3, programmText: 'Parlamentarisch orientiert, aber kommunale und europäische Ebene auch wichtig' },
-  { id: 'E3', feld: 'PRAXIS', titel: 'BILDUNG', kurz: 'Wie lernen wir Sozialismus?', links: 'Aufklärung & Theorie', rechts: 'Gemeinsame Erfahrung', icon: '📚',
-    programmScore: 3, programmText: 'Politische Bildung wichtig, aber keine konkrete Pädagogik' },
-  // NEUE PARAMETER
-  { id: 'E4', feld: 'PRAXIS', titel: 'GEWALT', kurz: 'Wie weit gehen wir?', links: 'Strikt gewaltfrei', rechts: 'Notfalls militant', icon: '🔥',
-    programmScore: 2, programmText: 'Keine Positionierung zu militanten Aktionen, implizit gewaltfrei-institutionell' },
+  // STRATEGIE
+  { id: '00', feld: 'STRATEGIE', titel: 'REFORM/REVOLUTION', kurz: 'Wie überwinden wir den Kapitalismus?', links: 'Strikte Reform', rechts: 'Revolution', icon: '🛤️', programmScore: 2, programmText: 'Transformativer Reformismus' },
+  { id: '12', feld: 'STRATEGIE', titel: 'DEMOKRATIE', kurz: 'Wie sollte Demokratie organisiert sein?', links: 'Parlamentarismus', rechts: 'Rätedemokratie', icon: '🏛️', programmScore: 3, programmText: 'Parlamentsorientiert' },
+  { id: '13', feld: 'STRATEGIE', titel: 'AKTIONSFORMEN', kurz: 'Welche Mittel sind legitim?', links: 'Nur legale', rechts: 'Militanz', icon: '✊', programmScore: 3, programmText: 'Keine klare Position' },
+  { id: '23', feld: 'STRATEGIE', titel: 'GESCHICHTE', kurz: 'Wie mit linker Geschichte umgehen?', links: 'Stolz/Verteidigung', rechts: 'Kritische Aufarbeitung', icon: '📜', programmScore: 3, programmText: 'Differenziert' },
+  { id: '18', feld: 'STRATEGIE', titel: 'NAHOST', kurz: 'Wie zum Nahost-Konflikt stehen?', links: 'Israel-solidarisch', rechts: 'Palästina-solidarisch', icon: '☮️', programmScore: 3, programmText: 'Hallescher Beschluss' },
+  // ÖKONOMIE
+  { id: '01', feld: 'ÖKONOMIE', titel: 'EIGENTUM', kurz: 'Wem gehören Produktionsmittel?', links: 'Commons', rechts: 'Staatsbesitz', icon: '🏭', programmScore: 4, programmText: 'Vergesellschaftung' },
+  { id: '02', feld: 'ÖKONOMIE', titel: 'PLANUNG', kurz: 'Wie Wirtschaft koordinieren?', links: 'Regulierter Markt', rechts: 'Vollständige Planung', icon: '📊', programmScore: 3, programmText: 'Demokratische Rahmensetzung' },
+  { id: '16', feld: 'ÖKONOMIE', titel: 'ARBEIT', kurz: 'Was ist das Ziel bei Arbeit?', links: 'Post-Work', rechts: 'Vollbeschäftigung', icon: '⏰', programmScore: 3, programmText: 'Arbeitszeitverkürzung' },
+  { id: '17', feld: 'ÖKONOMIE', titel: 'WACHSTUM', kurz: 'Brauchen wir Wachstum?', links: 'Grünes Wachstum', rechts: 'Degrowth', icon: '📈', programmScore: 3, programmText: 'Kritisch' },
+  { id: '20', feld: 'ÖKONOMIE', titel: 'DIGITALITÄT', kurz: 'Wie mit Big Tech umgehen?', links: 'Liberale Regulierung', rechts: 'Digitale Commons', icon: '💻', programmScore: 3, programmText: 'Datensouveränität' },
+  { id: '11', feld: 'ÖKONOMIE', titel: 'TECHNOLOGIE', kurz: 'Welche Rolle spielt Tech?', links: 'Akzelerationismus', rechts: 'Tech-Skepsis', icon: '🤖', programmScore: 3, programmText: 'Ambivalent' },
+  // SOZIALES
+  { id: '03', feld: 'SOZIALES', titel: 'SOZIALSTAAT', kurz: 'Wie soziale Sicherheit?', links: 'Aktivierend', rechts: 'Bedingungslos/BGE', icon: '🏠', programmScore: 4, programmText: 'Sanktionsfrei' },
+  { id: '04', feld: 'SOZIALES', titel: 'STEUERN', kurz: 'Wie stark umverteilen?', links: 'Standort sichern', rechts: 'Radikal umverteilen', icon: '💰', programmScore: 4, programmText: 'Vermögensteuer' },
+  { id: '05', feld: 'SOZIALES', titel: 'WOHNEN', kurz: 'Wie Wohnungskrise lösen?', links: 'Markt regulieren', rechts: 'Dekommodifizierung', icon: '🏘️', programmScore: 4, programmText: 'Enteignung' },
+  { id: '06', feld: 'SOZIALES', titel: 'GESUNDHEIT', kurz: 'Wem gehört Gesundheit?', links: 'Freie Wahl/Privat', rechts: 'Vollständig öffentlich', icon: '🏥', programmScore: 4, programmText: 'Bürgerversicherung' },
+  { id: '07', feld: 'SOZIALES', titel: 'BILDUNG', kurz: 'Wie soll Bildung sein?', links: 'Vielfalt/Wahlfreiheit', rechts: 'Radikal demokratisch', icon: '📚', programmScore: 3, programmText: 'Gemeinschaftsschule' },
+  // GESELLSCHAFT
+  { id: '09', feld: 'GESELLSCHAFT', titel: 'FEMINISMUS', kurz: 'Was ist Ziel Feminismus?', links: 'Radikal', rechts: 'Klassenfeminismus', icon: '⚧️', programmScore: 4, programmText: 'Patriarchat+Kapitalismus' },
+  { id: '10', feld: 'GESELLSCHAFT', titel: 'ANTIRASSISMUS', kurz: 'Wurzel von Rassismus?', links: 'Eigenständig', rechts: 'Klassenkampf', icon: '✊🏿', programmScore: 3, programmText: 'Strukturell' },
+  { id: '21', feld: 'GESELLSCHAFT', titel: 'CARE', kurz: 'Wie Sorgearbeit organisieren?', links: 'Familie stärken', rechts: 'Vergesellschaftung', icon: '💜', programmScore: 3, programmText: 'Aufwerten' },
+  { id: '14', feld: 'GESELLSCHAFT', titel: 'KULTURKAMPF', kurz: 'Klasse oder Identität?', links: 'Identität', rechts: 'Klasse zuerst', icon: '🎭', programmScore: 3, programmText: 'Verbindend' },
+  { id: '25', feld: 'GESELLSCHAFT', titel: 'SPIRITUALITÄT', kurz: 'Rolle von Hoffnung?', links: 'Utopischer Horizont', rechts: 'Pessimismus', icon: '✨', programmScore: 3, programmText: 'Säkular' },
+  // INTERNATIONAL
+  { id: '08', feld: 'INTERNATIONAL', titel: 'ÖKOLOGIE', kurz: 'Wie Klimakrise lösen?', links: 'Tiefenökologie', rechts: 'Ökomodernismus', icon: '🌍', programmScore: 4, programmText: 'Systemwandel' },
+  { id: '15', feld: 'INTERNATIONAL', titel: 'EU', kurz: 'Wie zur EU stehen?', links: 'Föderales Europa', rechts: 'Lexit', icon: '🇪🇺', programmScore: 3, programmText: 'Demokratisieren' },
+  { id: '19', feld: 'INTERNATIONAL', titel: 'MIGRATION', kurz: 'Wie offen Grenzen?', links: 'No Border', rechts: 'Linker Nationalismus', icon: '🌐', programmScore: 3, programmText: 'Fluchtursachen' },
+  { id: '24', feld: 'INTERNATIONAL', titel: 'GEOPOLITIK', kurz: 'Geopolitische Position?', links: 'Pro-westlich', rechts: 'Multipolar/NATO-kritisch', icon: '🗺️', programmScore: 4, programmText: 'NATO-kritisch' },
+  { id: '22', feld: 'INTERNATIONAL', titel: 'LAND/STADT', kurz: 'Wo ansetzen?', links: 'Urbaner Fokus', rechts: 'Dezentralisierung', icon: '🏞️', programmScore: 3, programmText: 'Gleichwertig' },
 ];
 
 // ═══════════════════════════════════════════════════════════════════════════
@@ -539,8 +495,7 @@ Antworte als JSON:
       "programm_position": "Konkret was das Erfurter Programm dazu sagt",
       "luecke": "Wo das Programm hinterherhinkt"
     }
-  ],
-  "einladung": "Motivierender Aufruf (2 Sätze): Programm verändern, Antrag schreiben!"
+  ]
 }
 
 Beziehe dich auf die KONKRETEN hohen Werte (4-5) im Profil! NUR valides JSON.`;
@@ -1579,28 +1534,40 @@ const AnalyseBox = ({ analyse, typ, antworten, params }) => {
           </div>
         </div>
         
-        {/* Positionen */}
-        {analyse.positionen && (
+        {/* Positionen - basierend auf wichtigsten Achsen des Archetyps */}
+        {analyse.positionen && Array.isArray(analyse.positionen) && analyse.positionen.length > 0 && (
           <div className="card" style={{ marginBottom: '1rem' }}>
             <div className="card-body">
-              <div className="label" style={{ marginBottom: '0.75rem', color: COLORS.rot }}>DEINE POSITIONEN</div>
-              <div style={{ display: 'grid', gap: '0.5rem' }}>
-                <div style={{ display: 'flex', gap: '0.5rem', alignItems: 'baseline' }}>
-                  <span style={{ fontSize: '0.7rem', fontWeight: 700, color: '#888', minWidth: '80px' }}>WIRTSCHAFT</span>
-                  <span style={{ fontSize: '0.9rem' }}>{analyse.positionen.wirtschaft}</span>
-                </div>
-                <div style={{ display: 'flex', gap: '0.5rem', alignItems: 'baseline' }}>
-                  <span style={{ fontSize: '0.7rem', fontWeight: 700, color: '#888', minWidth: '80px' }}>STAAT</span>
-                  <span style={{ fontSize: '0.9rem' }}>{analyse.positionen.staat}</span>
-                </div>
-                <div style={{ display: 'flex', gap: '0.5rem', alignItems: 'baseline' }}>
-                  <span style={{ fontSize: '0.7rem', fontWeight: 700, color: '#888', minWidth: '80px' }}>WANDEL</span>
-                  <span style={{ fontSize: '0.9rem' }}>{analyse.positionen.wandel}</span>
-                </div>
-                <div style={{ display: 'flex', gap: '0.5rem', alignItems: 'baseline' }}>
-                  <span style={{ fontSize: '0.7rem', fontWeight: 700, color: '#888', minWidth: '80px' }}>SUBJEKT</span>
-                  <span style={{ fontSize: '0.9rem' }}>{analyse.positionen.subjekt}</span>
-                </div>
+              <div className="label" style={{ marginBottom: '0.75rem', color: COLORS.rot }}>DEINE KERNPOSITIONEN</div>
+              <div style={{ display: 'grid', gap: '0.75rem' }}>
+                {analyse.positionen.map((pos, i) => (
+                  <div key={i} style={{ 
+                    padding: '0.5rem 0',
+                    borderBottom: i < analyse.positionen.length - 1 ? '1px solid #333' : 'none'
+                  }}>
+                    <div style={{ 
+                      display: 'flex', 
+                      justifyContent: 'space-between', 
+                      alignItems: 'center',
+                      marginBottom: '0.25rem'
+                    }}>
+                      <span style={{ fontSize: '0.75rem', fontWeight: 700, color: COLORS.rot }}>
+                        {pos.titel}
+                      </span>
+                      <span style={{ fontSize: '0.7rem', color: '#666' }}>
+                        Stufe {pos.wert}/5
+                      </span>
+                    </div>
+                    <div style={{ fontWeight: 500, marginBottom: '0.25rem' }}>
+                      {pos.label}
+                    </div>
+                    {pos.beschreibung && (
+                      <div style={{ fontSize: '0.85rem', color: '#AAA', lineHeight: 1.4 }}>
+                        {pos.beschreibung}
+                      </div>
+                    )}
+                  </div>
+                ))}
               </div>
             </div>
           </div>
@@ -1746,15 +1713,6 @@ const AnalyseBox = ({ analyse, typ, antworten, params }) => {
                 </div>
               </div>
             ))}
-          </div>
-        )}
-        
-        {/* Einladung - NUR bei radikaler */}
-        {analyse.verhältnis === 'radikaler' && analyse.einladung && (
-          <div className="card" style={{ background: COLORS.rot, color: COLORS.weiss }}>
-            <div className="card-body" style={{ textAlign: 'center' }}>
-              <p style={{ margin: 0, fontSize: '1.1rem', lineHeight: 1.5 }}>{analyse.einladung}</p>
-            </div>
           </div>
         )}
       </div>
@@ -1912,34 +1870,64 @@ const Layer1 = ({ params, onComplete, apiKey, analysen, initialAntworten }) => {
 // LAYER 2
 // ═══════════════════════════════════════════════════════════════════════════
 
-// Offline-Analyse für Layer 2 - findet passendsten Archetyp via gewichtete Distanz
+// Offline-Analyse für Layer 2 - findet passendsten Archetyp
+// ALGORITHMUS: Gewichtete Distanz über ALLE 26 Achsen
+// User-Abweichungen von 3 bekommen 3x höheres Gewicht (Bonus)
 const getOfflineAnalyseL2 = (antworten, analysen) => {
   if (!analysen?.archetypen) return null;
   
-  let bestMatch = null;
-  let bestScore = Infinity; // Niedrigere Distanz = besser
+  const ABWEICHUNGS_BONUS = 3.0; // Multiplikator für Achsen wo User Position bezieht
   
+  // Prüfe ob User alles auf 3 hat (keine Meinung)
+  const hatAbweichungen = Object.values(antworten).some(v => v !== 3);
+  
+  if (!hatAbweichungen) {
+    // Suche nach Default-Archetyp für unentschiedene User
+    const defaultArch = analysen.archetypen.find(a => 
+      a.id === 'demokratischer_sozialismus' ||
+      a.id === 'namenlos' || 
+      a.id === 'ambivalent'
+    );
+    
+    if (defaultArch) {
+      console.log('Alle Werte auf Mitte - wähle:', defaultArch.archetyp);
+      return {
+        id: defaultArch.id,
+        archetyp: defaultArch.archetyp,
+        beschreibung: defaultArch.beschreibung || "Du positionierst dich bewusst in der Mitte – oder hast dich noch nicht entschieden. Das ist keine Schwäche: Ambivalenz kann Offenheit bedeuten.",
+        theoretiker: defaultArch.theoretiker,
+        staerken: defaultArch.staerken,
+        spannungen: defaultArch.spannungen,
+        slogan: defaultArch.slogan || "Die Wahrheit liegt nicht immer in der Mitte – aber manchmal im Fragen.",
+        emoji: defaultArch.emoji || "🌫️",
+        gewichte: defaultArch.gewichte || {},
+        ideal: defaultArch.ideal || {}
+      };
+    }
+  }
+  
+  let bestMatch = null;
+  let bestScore = Infinity;
+  
+  // Berechne Distanz zu jedem Archetyp
   for (const arch of analysen.archetypen) {
     if (!arch.ideal) continue;
     
     let totalDistance = 0;
     let totalWeight = 0;
     
-    // Berechne gewichtete Distanz zu Idealvektor
-    for (const [paramId, idealValue] of Object.entries(arch.ideal)) {
-      const userValue = antworten[paramId];
-      if (userValue === undefined) continue;
+    for (const [paramId, userValue] of Object.entries(antworten)) {
+      const idealValue = arch.ideal[paramId] || 3;
+      const baseWeight = arch.gewichte?.[paramId] || 5;
       
-      // Gewicht: aus gewichte-Objekt oder 1 als Default
-      const weight = arch.gewichte?.[paramId] || 1;
+      // BONUS: Achsen wo User eine Meinung hat (≠3) werden stärker gewichtet
+      const weight = (userValue !== 3) ? baseWeight * ABWEICHUNGS_BONUS : baseWeight;
       
-      // Quadratische Distanz (bestraft große Abweichungen stärker)
       const diff = Math.abs(userValue - idealValue);
       totalDistance += weight * (diff * diff);
       totalWeight += weight;
     }
     
-    // Normalisierte Distanz
     const normalizedDistance = totalWeight > 0 ? totalDistance / totalWeight : Infinity;
     
     if (normalizedDistance < bestScore) {
@@ -1948,7 +1936,13 @@ const getOfflineAnalyseL2 = (antworten, analysen) => {
     }
   }
   
+  // Debug-Ausgabe
+  const abweichungen = {};
+  for (const [k, v] of Object.entries(antworten)) {
+    if (v !== 3) abweichungen[k] = v;
+  }
   console.log('Offline L2: Best match:', bestMatch?.archetyp, 'Distance:', bestScore.toFixed(2));
+  console.log('User-Abweichungen:', abweichungen);
   
   if (bestMatch) {
     return {
@@ -1958,7 +1952,10 @@ const getOfflineAnalyseL2 = (antworten, analysen) => {
       theoretiker: bestMatch.theoretiker,
       staerken: bestMatch.staerken,
       spannungen: bestMatch.spannungen,
-      slogan: bestMatch.slogan
+      slogan: bestMatch.slogan,
+      emoji: bestMatch.emoji,
+      gewichte: bestMatch.gewichte || {},
+      ideal: bestMatch.ideal || {}
     };
   }
   
@@ -1981,32 +1978,112 @@ const Layer2 = ({ params, onComplete, onLiteratur, onBack, apiKey, analysen, ini
     setPhase('analyse');
     setLoading(true);
     
-    // Nutze die deterministische Sozialismus-Engine (kein LLM nötig)
-    const engineResult = SOZIALISMUS_ENGINE.analysiere(antworten);
+    // Scroll nach oben
+    window.scrollTo(0, 0);
     
-    // Transformiere in das erwartete Format
-    const analyseResult = {
-      id: engineResult.id,
-      archetyp: engineResult.name,
-      beschreibung: engineResult.beschreibung,
-      slogan: engineResult.slogan,
-      icon: engineResult.icon,
-      theoretiker: engineResult.theoretiker.map(t => `${t.name} (${t.schlagwort})`),
-      staerken: engineResult.staerken,
-      spannungen: engineResult.spannungen.map(s => s.titel),
-      spannungenDetails: engineResult.spannungen,
-      positionen: engineResult.positionen,
-      nebenstroemungen: engineResult.nebenstroemungen,
-      wesenKnoten: engineResult.wesenKnoten,
-      wesenZimmer: engineResult.wesenZimmer
+    // Generiere Positionen aus den wichtigsten Achsen des Archetyps
+    const generierePositionen = (antw, gewichte, params) => {
+      if (!gewichte || Object.keys(gewichte).length === 0) {
+        return null; // Keine gewichteten Achsen
+      }
+      
+      // Sortiere Achsen nach Gewicht (höchstes zuerst)
+      const sortedAchsen = Object.entries(gewichte)
+        .sort((a, b) => b[1] - a[1])
+        .slice(0, 4); // Top 4 Achsen
+      
+      const positionen = [];
+      
+      for (const [achseId, gewicht] of sortedAchsen) {
+        const param = params.find(p => p.id === achseId);
+        if (!param) continue;
+        
+        const wert = antw[achseId] || 3;
+        const stufe = param.stufen?.find(s => s.wert === wert);
+        
+        positionen.push({
+          achseId,
+          titel: param.titel,
+          label: stufe?.label || (wert >= 4 ? param.rechts : (wert <= 2 ? param.links : 'Mitte')),
+          beschreibung: stufe?.beschreibung || '',
+          wert,
+          gewicht
+        });
+      }
+      
+      return positionen;
     };
     
-    setAnalyse(analyseResult);
+    try {
+      // Versuche zuerst die richtige Archetypen-Analyse
+      const offlineResult = getOfflineAnalyseL2(antworten, analysen);
+      
+      if (offlineResult) {
+        console.log('Archetyp gefunden:', offlineResult.archetyp);
+        const positionen = generierePositionen(antworten, offlineResult.gewichte, params);
+        setAnalyse({
+          ...offlineResult,
+          icon: offlineResult.emoji || '🔴',
+          positionen: positionen,
+          wesenKnoten: ["01-3", "02-3", "09-3"],
+          wesenZimmer: "Dein Zimmer im Linken Wesen"
+        });
+      } else {
+        // Fallback wenn keine Archetypen geladen
+        console.warn('Keine Archetypen geladen, verwende Fallback');
+        const werte = Object.values(antworten);
+        const durchschnitt = werte.reduce((a, b) => a + b, 0) / werte.length;
+        
+        let archetyp, beschreibung, icon, slogan;
+        if (durchschnitt <= 2) {
+          archetyp = "Radikaler Sozialismus";
+          beschreibung = "Du stehst für grundlegende Veränderungen. Reform reicht dir nicht – du willst den Systemwechsel.";
+          icon = "🔥";
+          slogan = "Eine andere Welt ist möglich!";
+        } else if (durchschnitt <= 3.5) {
+          archetyp = "Transformativer Sozialismus";
+          beschreibung = "Du verbindest pragmatische Reformen mit langfristiger Vision. Der Weg ist wichtig, aber auch das Ziel.";
+          icon = "🌹";
+          slogan = "Demokratie in Wirtschaft und Staat!";
+        } else {
+          archetyp = "Demokratischer Sozialismus";
+          beschreibung = "Du setzt auf den parlamentarischen Weg. Schritt für Schritt, Mehrheit für Mehrheit.";
+          icon = "📜";
+          slogan = "Der Weg ist das Ziel!";
+        }
+        
+        setAnalyse({
+          id: 'fallback_' + Date.now(),
+          archetyp, beschreibung, slogan, icon,
+          theoretiker: ["Rosa Luxemburg", "Antonio Gramsci"],
+          staerken: ["Eigenständige Position"],
+          spannungen: [],
+          positionen: null,
+          wesenKnoten: ["01-3", "02-3", "09-3"],
+          wesenZimmer: "Die Lobby - ein Übergangsraum"
+        });
+      }
+    } catch (err) {
+      console.error('Analyse-Fehler:', err);
+      setAnalyse({
+        id: 'error',
+        archetyp: "Linker Denker",
+        beschreibung: "Dein Profil zeigt eine differenzierte linke Position.",
+        slogan: "Solidarität!",
+        icon: "✊",
+        theoretiker: [],
+        staerken: ["Eigenständiges Denken"],
+        spannungen: [],
+        positionen: null,
+        wesenKnoten: [],
+        wesenZimmer: "Die Lobby"
+      });
+    }
     setLoading(false);
   };
 
   const expandedParam = params.find(p => p.id === expanded);
-  const felder = ['STRATEGIE', 'ÖKONOMIE', 'GESELLSCHAFT', 'KULTUR', 'PRAXIS'];
+  const felder = ['STRATEGIE', 'ÖKONOMIE', 'SOZIALES', 'GESELLSCHAFT', 'INTERNATIONAL'];
 
   if (phase === 'intro') {
     return (
@@ -2014,7 +2091,7 @@ const Layer2 = ({ params, onComplete, onLiteratur, onBack, apiKey, analysen, ini
         <div className="label" style={{ marginBottom: '1rem' }}>LAYER 2</div>
         <h1 style={{ color: COLORS.weiss }}>Welcher Sozialismus?</h1>
         <p style={{ marginBottom: '2rem', color: '#AAA' }}>
-          17 theoretische Fragen in 5 Feldern.<br/>
+          26 theoretische Fragen in 5 Feldern.<br/>
           Definiere deinen Sozialismus.
         </p>
         <button onClick={() => setPhase('fragen')} className="btn btn-primary btn-large">
@@ -2156,27 +2233,37 @@ const Layer2 = ({ params, onComplete, onLiteratur, onBack, apiKey, analysen, ini
                 <div 
                   onClick={() => {
                     // Baue URL mit vollständigem Profil
-                    const wesenUrl = new URL('haus/index.html', window.location.href);
+                    let wesenPath = '/linkes-wesen-26/index.html';
+                    const params = new URLSearchParams();
                     
-                    // Vollständiges Profil übergeben (A1:3,A2:5,B1:2,...)
+                    // Achsen die NICHT invertiert werden (Generator und Haus haben gleiche Orientierung)
+                    const NICHT_INVERTIEREN = ['02', '04', '06', '15', '17', '18', '20'];
+                    
+                    // Vollständiges Profil übergeben - achsenspezifische Invertierung
                     if (antworten && Object.keys(antworten).length > 0) {
                       const profilString = Object.entries(antworten)
-                        .map(([key, value]) => `${key}:${value}`)
+                        .map(([key, value]) => {
+                          const hausWert = NICHT_INVERTIEREN.includes(key) ? value : (6 - value);
+                          return `${key}:${hausWert}`;
+                        })
                         .join(',');
-                      wesenUrl.searchParams.set('profil', profilString);
+                      params.set('profil', profilString);
                     }
                     
                     // Archetyp als Zusatzinfo (für Name/Icon)
                     if (analyse?.id) {
-                      wesenUrl.searchParams.set('archetyp', analyse.id);
+                      params.set('archetyp', analyse.id);
                     }
                     if (analyse?.wesenKnoten?.length) {
-                      wesenUrl.searchParams.set('knoten', analyse.wesenKnoten.join(','));
+                      params.set('knoten', analyse.wesenKnoten.join(','));
                     }
                     if (analyse?.wesenZimmer) {
-                      wesenUrl.searchParams.set('zimmer', analyse.wesenZimmer);
+                      params.set('zimmer', analyse.wesenZimmer);
                     }
-                    window.open(wesenUrl.toString(), '_blank');
+                    
+                    const fullUrl = wesenPath + '?' + params.toString();
+                    console.log('Öffne Wesen:', fullUrl);
+                    window.open(fullUrl, '_blank');
                   }}
                   style={{ 
                     background: 'linear-gradient(135deg, #1a1a2e 0%, #16213e 100%)', 
@@ -2236,18 +2323,35 @@ const Layer2 = ({ params, onComplete, onLiteratur, onBack, apiKey, analysen, ini
 const analyzeAgainstProgram = (profilL1, profilL2, paramsL1, paramsL2) => {
   const diskrepanzen = [];
   
-  // L1 Parameter durchgehen (nur wenn profilL1 existiert)
-  if (profilL1 && typeof profilL1 === 'object') {
+  // Hilfsfunktion: Hole Label und Beschreibung für Wert
+  const getStufeInfo = (param, wert) => {
+    if (param.stufen && param.stufen.length > 0) {
+      const stufe = param.stufen.find(s => s.wert === wert);
+      if (stufe) {
+        return {
+          label: stufe.label,
+          beschreibung: stufe.beschreibung || ''
+        };
+      }
+    }
+    // Fallback
+    return {
+      label: wert >= 4 ? (param.rechts || 'Radikal') : (wert <= 2 ? (param.links || 'Moderat') : 'Mitte'),
+      beschreibung: ''
+    };
+  };
+  
+  // L1 Parameter durchgehen (nur wenn profilL1 vorhanden)
+  if (profilL1 && paramsL1) {
     paramsL1.forEach(param => {
       const nutzerWert = profilL1[param.id];
+      if (nutzerWert === undefined) return;
       const programmWert = param.programmScore;
-      
-      // Skip wenn nutzerWert undefined oder programmScore fehlt
-      if (nutzerWert === undefined || nutzerWert === null || !programmWert) return;
-      
       const differenz = nutzerWert - programmWert;
       
       if (differenz >= 1) { // Nutzer ist radikaler
+        const nutzerInfo = getStufeInfo(param, nutzerWert);
+        const programmInfo = getStufeInfo(param, programmWert);
         diskrepanzen.push({
           id: param.id,
           titel: param.titel,
@@ -2257,25 +2361,27 @@ const analyzeAgainstProgram = (profilL1, profilL2, paramsL1, paramsL2) => {
           programmWert,
           differenz,
           programmText: param.programmText,
-          nutzerPosition: nutzerWert >= 4 ? param.rechts : (nutzerWert <= 2 ? param.links : 'Mitte'),
+          nutzerPosition: nutzerInfo.label,
+          nutzerBeschreibung: nutzerInfo.beschreibung,
+          programmPosition: programmInfo.label,
+          programmBeschreibung: programmInfo.beschreibung,
           layer: 1
         });
       }
     });
   }
   
-  // L2 Parameter durchgehen (nur wenn profilL2 existiert)
-  if (profilL2 && typeof profilL2 === 'object') {
+  // L2 Parameter durchgehen (nur wenn profilL2 vorhanden)
+  if (profilL2 && paramsL2) {
     paramsL2.forEach(param => {
       const nutzerWert = profilL2[param.id];
+      if (nutzerWert === undefined) return;
       const programmWert = param.programmScore;
-      
-      // Skip wenn nutzerWert undefined oder programmScore fehlt
-      if (nutzerWert === undefined || nutzerWert === null || !programmWert) return;
-      
       const differenz = nutzerWert - programmWert;
       
       if (differenz >= 1) { // Nutzer ist radikaler
+        const nutzerInfo = getStufeInfo(param, nutzerWert);
+        const programmInfo = getStufeInfo(param, programmWert);
         diskrepanzen.push({
           id: param.id,
           titel: param.titel,
@@ -2286,7 +2392,10 @@ const analyzeAgainstProgram = (profilL1, profilL2, paramsL1, paramsL2) => {
           programmWert,
           differenz,
           programmText: param.programmText,
-          nutzerPosition: nutzerWert >= 4 ? param.rechts : (nutzerWert <= 2 ? param.links : 'Mitte'),
+          nutzerPosition: nutzerInfo.label,
+          nutzerBeschreibung: nutzerInfo.beschreibung,
+          programmPosition: programmInfo.label,
+          programmBeschreibung: programmInfo.beschreibung,
           layer: 2
         });
       }
@@ -2299,7 +2408,7 @@ const analyzeAgainstProgram = (profilL1, profilL2, paramsL1, paramsL2) => {
   return diskrepanzen;
 };
 
-// Diskrepanz-Karte Komponente (vereinfacht, ohne Antragsgenerator)
+// Diskrepanz-Karte Komponente
 const DiskrepanzKarte = ({ diskrepanz }) => {
   return (
     <div style={{
@@ -2336,13 +2445,17 @@ const DiskrepanzKarte = ({ diskrepanz }) => {
             borderRadius: '4px',
             fontSize: '0.85rem'
           }}>
-            <div style={{ marginBottom: '0.5rem' }}>
-              <span style={{ color: '#888' }}>Programm sagt: </span>
-              <span style={{ color: '#CCC' }}>{diskrepanz.programmText}</span>
+            <div style={{ marginBottom: '0.75rem' }}>
+              <div style={{ color: '#888', fontSize: '0.75rem', marginBottom: '0.25rem' }}>📋 PROGRAMM ({diskrepanz.programmPosition})</div>
+              <div style={{ color: '#CCC', lineHeight: 1.4 }}>
+                {diskrepanz.programmBeschreibung || diskrepanz.programmText}
+              </div>
             </div>
             <div>
-              <span style={{ color: '#888' }}>Du willst: </span>
-              <span style={{ color: COLORS.rot, fontWeight: 500 }}>{diskrepanz.nutzerPosition}</span>
+              <div style={{ color: COLORS.rot, fontSize: '0.75rem', marginBottom: '0.25rem' }}>✊ DU ({diskrepanz.nutzerPosition})</div>
+              <div style={{ color: '#FFF', lineHeight: 1.4 }}>
+                {diskrepanz.nutzerBeschreibung || diskrepanz.nutzerPosition}
+              </div>
             </div>
           </div>
         </div>
@@ -2351,7 +2464,7 @@ const DiskrepanzKarte = ({ diskrepanz }) => {
   );
 };
 
-const Layer3 = ({ profilL1, profilL2, onBack, onLiteratur, apiKey, paramsL1, paramsL2, analysen, archetypName }) => {
+const Layer3 = ({ profilL1, profilL2, onBack, onLiteratur, onWesen, apiKey, paramsL1, paramsL2, analysen, archetypName, analyse }) => {
   const [diskrepanzen, setDiskrepanzen] = useState([]);
   const [loading, setLoading] = useState(true);
 
@@ -2365,18 +2478,13 @@ const Layer3 = ({ profilL1, profilL2, onBack, onLiteratur, apiKey, paramsL1, par
   const anzahlDiskrepanzen = diskrepanzen.length;
   const hatDiskrepanzen = anzahlDiskrepanzen > 0;
 
-  // Hinweis wenn keine Profile vorhanden sind
-  const keinProfil = (!profilL1 || Object.keys(profilL1).length === 0) && 
-                      (!profilL2 || Object.keys(profilL2).length === 0);
-
   return (
     <div className="dark" style={{ minHeight: '100vh', padding: '2rem 1rem' }}>
       <div className="container">
         <div style={{ textAlign: 'center', marginBottom: '2rem' }}>
           <div className="label">LAYER 3: PROGRAMM-CHECK</div>
           <h1 style={{ color: COLORS.weiss, marginTop: '0.5rem' }}>
-            {keinProfil ? 'Kein Profil vorhanden' : 
-             hatDiskrepanzen ? 'Wo das Programm nachziehen sollte' : 'Keine großen Diskrepanzen'}
+            {hatDiskrepanzen ? 'Wo das Programm nachziehen sollte' : 'Keine großen Diskrepanzen'}
           </h1>
           <p style={{ color: '#AAA', marginTop: '0.5rem' }}>
             Vergleich mit dem Erfurter Programm (2011)
@@ -2388,17 +2496,6 @@ const Layer3 = ({ profilL1, profilL2, onBack, onLiteratur, apiKey, paramsL1, par
             <div className="loading-spinner" style={{ margin: '0 auto 1rem' }}></div>
             <p style={{ color: '#AAA' }}>Vergleiche deine Positionen mit dem Programm...</p>
           </div>
-        ) : keinProfil ? (
-          <div className="card" style={{ marginBottom: '1.5rem' }}>
-            <div className="card-body" style={{ textAlign: 'center' }}>
-              <p style={{ margin: '0 0 1rem', lineHeight: 1.6 }}>
-                Um den Programm-Check durchzuführen, musst du zuerst Layer 1 oder Layer 2 ausfüllen.
-              </p>
-              <button onClick={onBack} className="btn btn-primary">
-                ← Zurück zum Start
-              </button>
-            </div>
-          </div>
         ) : (
           <>
             {/* Zusammenfassung */}
@@ -2407,7 +2504,7 @@ const Layer3 = ({ profilL1, profilL2, onBack, onLiteratur, apiKey, paramsL1, par
                 {hatDiskrepanzen ? (
                   <p style={{ margin: 0, lineHeight: 1.6 }}>
                     In <strong style={{ color: COLORS.rot }}>{anzahlDiskrepanzen} Punkten</strong> bist du radikaler als das aktuelle Erfurter Programm. 
-                    Das Programm wird in den nächsten Jahren erneuert – hier kannst du Einfluss nehmen.
+                    Das Programm wird in den nächsten zwei Jahren erneuert – vielleicht findest du hier Anknüpfungspunkte für dein Engagement.
                   </p>
                 ) : (
                   <p style={{ margin: 0, lineHeight: 1.6 }}>
@@ -2471,7 +2568,7 @@ const Layer3 = ({ profilL1, profilL2, onBack, onLiteratur, apiKey, paramsL1, par
                 📋 Über die Programmerneuerung
               </div>
               <p style={{ fontSize: '0.85rem', color: '#AAA', margin: 0, lineHeight: 1.6 }}>
-                Das Erfurter Programm stammt von 2011. Die Linke hat beschlossen, es zu erneuern. 
+                Das Erfurter Programm stammt von 2011. Die Linke hat beschlossen, es bis 2027 zu erneuern. 
                 Anträge können über Kreisverbände, Landesverbände oder als Initiativanträge eingebracht werden.
                 <br/><br/>
                 <a href="https://www.die-linke.de/partei/parteistruktur/parteitag/" target="_blank" rel="noopener noreferrer" style={{ color: COLORS.rot }}>
@@ -2479,6 +2576,43 @@ const Layer3 = ({ profilL1, profilL2, onBack, onLiteratur, apiKey, paramsL1, par
                 </a>
               </p>
             </div>
+            
+            {/* Link zum Linken Wesen */}
+            {onWesen && (
+              <div 
+                onClick={onWesen}
+                style={{ 
+                  marginTop: '1.5rem',
+                  background: 'linear-gradient(135deg, #1a1a2e 0%, #16213e 100%)', 
+                  border: '2px solid #C62828',
+                  borderRadius: '12px',
+                  padding: '1.25rem',
+                  cursor: 'pointer',
+                  transition: 'all 0.2s'
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.transform = 'scale(1.02)';
+                  e.currentTarget.style.boxShadow = '0 8px 32px rgba(198,40,40,0.3)';
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.transform = 'scale(1)';
+                  e.currentTarget.style.boxShadow = 'none';
+                }}
+              >
+                <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
+                  <span style={{ fontSize: '2rem' }}>🏠</span>
+                  <div style={{ flex: 1 }}>
+                    <div style={{ color: COLORS.weiss, fontWeight: 700, fontSize: '1.1rem' }}>
+                      Zum Linken Wesen
+                    </div>
+                    <div style={{ color: '#AAA', fontSize: '0.85rem', marginTop: '0.25rem' }}>
+                      Erkunde das Haus der linken Ideen
+                    </div>
+                  </div>
+                  <span style={{ color: COLORS.rot, fontSize: '1.5rem' }}>↗</span>
+                </div>
+              </div>
+            )}
             
             <button onClick={onBack} className="btn btn-secondary btn-block" style={{ marginTop: '1.5rem', color: '#AAA', borderColor: '#666' }}>
               ← Nochmal von vorne
@@ -2903,6 +3037,19 @@ const Layer4 = ({ archetypId, archetypName, literatur, onBack }) => {
           </div>
         )}
 
+        {/* Spezial */}
+        {data.spezial?.length > 0 && (
+          <div style={{ marginBottom: '2rem' }}>
+            <h2 style={{ fontSize: '1.1rem', color: COLORS.orange, marginBottom: '1rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+              <span>🔮</span> Spezial – Raus aus der Bubble!
+            </h2>
+            <p style={{ fontSize: '0.85rem', color: COLORS.grau, marginBottom: '1rem', fontStyle: 'italic' }}>
+              Unerwartete Perspektiven, Querverbindungen und Nischen, die dein Denken erweitern.
+            </p>
+            {data.spezial.map((item, i) => <LiteraturKarte key={i} item={item} />)}
+          </div>
+        )}
+
         {/* Videos */}
         {data.videos?.length > 0 && (
           <div style={{ marginBottom: '2rem' }}>
@@ -3091,6 +3238,17 @@ const App = () => {
       setAnalysenL3(a3);
       setLiteratur(lit);
       setLoading(false);
+      
+      // URL-Parameter prüfen für direkten Layer-Start
+      const urlParams = new URLSearchParams(window.location.search);
+      const startLayer = urlParams.get('layer');
+      if (startLayer === '2') {
+        setLayer(2);
+        markVisited(2);
+      } else if (startLayer === '1') {
+        setLayer(1);
+        markVisited(1);
+      }
     });
   }, []);
 
@@ -3111,7 +3269,7 @@ const App = () => {
     return <Layer0 
       onStart={() => { setLayer(1); markVisited(1); }}
       onStartL2={() => { setLayer(2); markVisited(2); }}
-      onWesen={() => { window.location.href = 'haus/index.html'; }}
+      onWesen={() => { window.location.href = '/linkes-wesen-26/index.html'; }}
     />;
   }
 
@@ -3155,7 +3313,8 @@ const App = () => {
               setAnalyseL2({ id, archetyp: name });
               setReturnToL2Analyse(false);
               markVisited(3);
-              setLayer(3); 
+              setLayer(3);
+              window.scrollTo(0, 0);
             }} 
             onLiteratur={(p, id, name, fullAnalyse) => {
               setProfilL2(p);
@@ -3166,6 +3325,7 @@ const App = () => {
               setPreviousLayer(2);
               setReturnToL2Analyse(true);
               setLayer(4);
+              window.scrollTo(0, 0);
             }}
             onBack={() => {
               setReturnToL2Analyse(false);
@@ -3184,18 +3344,41 @@ const App = () => {
             profilL1={profilL1} 
             profilL2={profilL2} 
             onBack={() => { 
-              setLayer(0); 
-              setProfilL1(null); 
-              setProfilL2(null); 
-              setArchetypId(null); 
-              setArchetypName(null);
-              setVisitedLayers([]);
-              setSavedL1Antworten(null);
-              setSavedL2Antworten(null);
+              setLayer(2);
+              window.scrollTo(0, 0);
             }} 
             onLiteratur={() => {
               setPreviousLayer(3);
               setLayer(4);
+              window.scrollTo(0, 0);
+            }}
+            onWesen={() => {
+              // Baue URL mit Profil
+              let wesenPath = '/linkes-wesen-26/index.html';
+              const params = new URLSearchParams();
+              
+              // Achsen die NICHT invertiert werden (Generator und Haus haben gleiche Orientierung)
+              const NICHT_INVERTIEREN = ['02', '04', '06', '15', '17', '18', '20'];
+              
+              // Verwende savedL2Antworten oder profilL2 als Fallback
+              const userProfil = savedL2Antworten || profilL2;
+              if (userProfil && Object.keys(userProfil).length > 0) {
+                const profilString = Object.entries(userProfil)
+                  .map(([key, value]) => {
+                    const hausWert = NICHT_INVERTIEREN.includes(key) ? value : (6 - value);
+                    return `${key}:${hausWert}`;
+                  })
+                  .join(',');
+                params.set('profil', profilString);
+                console.log('Sende User-Profil zum Wesen:', profilString);
+              }
+              
+              if (archetypId) {
+                params.set('archetyp', archetypId);
+              }
+              
+              const fullUrl = wesenPath + '?' + params.toString();
+              window.open(fullUrl, '_blank');
             }}
             apiKey={apiKey} 
             paramsL1={paramsL1} 

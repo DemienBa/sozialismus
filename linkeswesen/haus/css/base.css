@@ -1,0 +1,499 @@
+/* ══════════════════════════════════════════════════════════════════════
+       THEME-SYSTEM: CSS-Variablen
+       ══════════════════════════════════════════════════════════════════════ */
+    
+    :root {
+      --bg-primary: #1a1a1a;
+      --bg-secondary: #222;
+      --bg-tertiary: #2a2a2a;
+      --text-primary: #f5f5f5;
+      --text-secondary: #aaa;
+      --text-muted: #666;
+      --accent: #E53935;
+      --accent-secondary: #4CAF50;
+      --accent-tertiary: #2196F3;
+      --border: #333;
+      --border-light: #444;
+      --glow: rgba(229, 57, 53, 0.3);
+      --font-main: 'Helvetica Neue', Arial, sans-serif;
+      --font-display: 'Helvetica Neue', Arial, sans-serif;
+      --font-mono: 'Courier New', monospace;
+      --radius: 0px;
+      --transition: 0.3s;
+    }
+    
+    /* 🌿 MYZEL - Organisch, wachsend, pilzartig */
+    body.theme-myzel {
+      --bg-primary: #0a1208;
+      --bg-secondary: #0f1a0d;
+      --bg-tertiary: #152211;
+      --text-primary: #c8d4c0;
+      --text-secondary: #8a9a7a;
+      --text-muted: #566046;
+      --accent: #7cb342;
+      --accent-secondary: #ab47bc;
+      --accent-tertiary: #5d99c6;
+      --border: #2a3a22;
+      --border-light: #3a4a32;
+      --glow: rgba(124, 179, 66, 0.4);
+      --font-main: 'Georgia', 'Times New Roman', serif;
+      --font-display: 'Georgia', serif;
+      --radius: 20px;
+    }
+    
+    body.theme-myzel::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background: 
+        radial-gradient(ellipse at 20% 80%, rgba(124, 179, 66, 0.05) 0%, transparent 50%),
+        radial-gradient(ellipse at 80% 20%, rgba(171, 71, 188, 0.05) 0%, transparent 50%),
+        radial-gradient(ellipse at 50% 50%, rgba(93, 153, 198, 0.03) 0%, transparent 70%);
+      pointer-events: none;
+      z-index: 0;
+    }
+    
+    /* 🔥 BARRIKADE - Agitprop, revolutionär, plakatartig */
+    body.theme-barrikade {
+      --bg-primary: #1a0a0a;
+      --bg-secondary: #220808;
+      --bg-tertiary: #2a0c0c;
+      --text-primary: #fff;
+      --text-secondary: #ffcccc;
+      --text-muted: #aa6666;
+      --accent: #ff1744;
+      --accent-secondary: #ffd600;
+      --accent-tertiary: #000;
+      --border: #440000;
+      --border-light: #660000;
+      --glow: rgba(255, 23, 68, 0.5);
+      --font-main: 'Impact', 'Arial Black', sans-serif;
+      --font-display: 'Impact', 'Arial Black', sans-serif;
+      --radius: 0px;
+    }
+    
+    body.theme-barrikade h1,
+    body.theme-barrikade h2,
+    body.theme-barrikade h3 {
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+    }
+    
+    /* 💻 TERMINAL - Hacker, CLI, Retro-Computer */
+    body.theme-terminal {
+      --bg-primary: #0a0a0a;
+      --bg-secondary: #0f0f0f;
+      --bg-tertiary: #141414;
+      --text-primary: #00ff00;
+      --text-secondary: #00cc00;
+      --text-muted: #006600;
+      --accent: #00ff00;
+      --accent-secondary: #ffff00;
+      --accent-tertiary: #00ffff;
+      --border: #003300;
+      --border-light: #004400;
+      --glow: rgba(0, 255, 0, 0.3);
+      --font-main: 'Courier New', 'Monaco', monospace;
+      --font-display: 'Courier New', monospace;
+      --radius: 0px;
+    }
+    
+    body.theme-terminal * {
+      text-shadow: 0 0 5px var(--glow);
+    }
+    
+    body.theme-terminal::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background: repeating-linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.1) 0px,
+        rgba(0, 0, 0, 0.1) 1px,
+        transparent 1px,
+        transparent 2px
+      );
+      pointer-events: none;
+      z-index: 9999;
+    }
+    
+    /* 🌌 KOSMOS - Kosmisch, Sterne, unendlich */
+    body.theme-kosmos {
+      --bg-primary: #050510;
+      --bg-secondary: #0a0a1a;
+      --bg-tertiary: #101025;
+      --text-primary: #e0e0ff;
+      --text-secondary: #a0a0cc;
+      --text-muted: #606088;
+      --accent: #7c4dff;
+      --accent-secondary: #00e5ff;
+      --accent-tertiary: #ff4081;
+      --border: #1a1a3a;
+      --border-light: #2a2a4a;
+      --glow: rgba(124, 77, 255, 0.4);
+      --font-main: 'Segoe UI', 'Roboto', sans-serif;
+      --font-display: 'Segoe UI', sans-serif;
+      --radius: 8px;
+    }
+    
+    body.theme-kosmos::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background: 
+        radial-gradient(2px 2px at 20% 30%, white, transparent),
+        radial-gradient(2px 2px at 40% 70%, rgba(255,255,255,0.8), transparent),
+        radial-gradient(1px 1px at 90% 40%, white, transparent),
+        radial-gradient(2px 2px at 60% 80%, rgba(255,255,255,0.6), transparent),
+        radial-gradient(1px 1px at 30% 50%, white, transparent),
+        radial-gradient(1px 1px at 70% 20%, rgba(255,255,255,0.7), transparent),
+        radial-gradient(2px 2px at 80% 90%, white, transparent),
+        radial-gradient(1px 1px at 10% 60%, rgba(255,255,255,0.5), transparent);
+      pointer-events: none;
+      z-index: 0;
+    }
+    
+    /* 🏚️ RUINE - Verfallen, archäologisch, fragmentiert */
+    body.theme-ruine {
+      --bg-primary: #1a1815;
+      --bg-secondary: #22201a;
+      --bg-tertiary: #2a2820;
+      --text-primary: #d4cfc0;
+      --text-secondary: #a09080;
+      --text-muted: #706050;
+      --accent: #c49a6c;
+      --accent-secondary: #8b7355;
+      --accent-tertiary: #6b8e23;
+      --border: #3a3530;
+      --border-light: #4a4540;
+      --glow: rgba(196, 154, 108, 0.3);
+      --font-main: 'Palatino', 'Book Antiqua', serif;
+      --font-display: 'Palatino', serif;
+      --radius: 2px;
+    }
+    
+    /* ══════════════════════════════════════════════════════════════════════ */
+    
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    
+    body {
+      font-family: var(--font-main);
+      background: var(--bg-primary);
+      color: var(--text-primary);
+      min-height: 100vh;
+      transition: background var(--transition), color var(--transition);
+      position: relative;
+    }
+    
+    /* Warmer Hintergrund-Gradient für Haus-Ansicht */
+    body::after {
+      content: '';
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: radial-gradient(ellipse at 50% 20%, rgba(60,50,40,0.15) 0%, transparent 60%),
+                  radial-gradient(ellipse at 80% 80%, rgba(40,35,30,0.1) 0%, transparent 50%),
+                  radial-gradient(ellipse at 20% 60%, rgba(50,40,35,0.08) 0%, transparent 40%);
+      pointer-events: none;
+      z-index: 0;
+      opacity: 0;
+      transition: opacity 0.5s ease;
+    }
+    
+    /* Nur bei Haus-Ansicht aktiv */
+    #wg-container:not([style*="display: none"]) ~ body::after,
+    body:has(#wg-container:not([style*="display: none"]))::after {
+      opacity: 1;
+    }
+    
+    header {
+      padding: 0.75rem 1.5rem;
+      border-bottom: 1px solid var(--border);
+      background: var(--bg-secondary);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+      position: relative;
+      z-index: 200;
+      margin-left: 56px;
+      height: 50px;
+      transition: margin-left 0.3s;
+    }
+    
+    body.palette-expanded header {
+      margin-left: 180px;
+    }
+    
+    /* Mobile: Header ohne margin */
+    @media (max-width: 600px) {
+      header {
+        margin-left: 0 !important;
+        height: auto;
+        min-height: 50px;
+      }
+    }
+    
+    h1 {
+      font-family: var(--font-display);
+      font-size: 1.1rem;
+      font-weight: 400;
+      letter-spacing: 0.05em;
+      color: var(--text-primary);
+    }
+    
+    .stats {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+    }
+    
+    .linsen {
+      display: flex;
+      gap: 0.4rem;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+    
+    /* ══════════════════════════════════════════════════════════════════════
+       LINSEN-PALETTE: Spielerisches Interface
+       ══════════════════════════════════════════════════════════════════════ */
+    
+    /* Palette am linken Rand */
+    .linsen-palette {
+      position: fixed;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      width: 56px;
+      background: var(--bg-secondary);
+      border-right: 1px solid var(--border);
+      padding: 0.5rem;
+      z-index: 100;
+      display: flex;
+      flex-direction: column;
+      gap: 0.3rem;
+      overflow-y: auto;
+      transition: width 0.3s ease;
+    }
+    
+    .linsen-palette.expanded {
+      width: 180px;
+      padding: 0.75rem;
+    }
+    
+    .palette-toggle {
+      background: var(--bg-tertiary);
+      border: 1px solid var(--border);
+      color: var(--text-secondary);
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1rem;
+      transition: all 0.2s;
+    }
+    
+    .palette-toggle:hover {
+      background: var(--accent);
+      color: #fff;
+      border-color: var(--accent);
+    }
+    
+    .palette-section {
+      display: flex;
+      flex-direction: column;
+      gap: 0.3rem;
+      padding: 0.5rem 0;
+      border-bottom: 1px solid var(--border);
+    }
+    
+    .palette-section:last-child {
+      border-bottom: none;
+    }
+    
+    .palette-section-label {
+      font-size: 0.6rem;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      padding: 0 0.25rem;
+      display: none;
+    }
+    
+    .linsen-palette.expanded .palette-section-label {
+      display: block;
+    }
+    
+    /* Trennlinie in Palette */
+    .palette-divider {
+      height: 1px;
+      background: var(--border);
+      margin: 0.5rem 0.25rem;
+      opacity: 0.5;
+    }
+    
+    /* Einzelne Linse */
+    .linse {
+      width: 40px;
+      height: 40px;
+      border-radius: 20px;
+      background: var(--bg-tertiary);
+      border: 2px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      position: relative;
+      flex-shrink: 0;
+      overflow: hidden;
+    }
+    
+    .linse:hover {
+      transform: scale(1.05);
+      border-color: var(--accent);
+      box-shadow: 0 0 15px var(--glow);
+    }
+    
+    .linse.active {
+      background: var(--accent);
+      border-color: var(--accent);
+      box-shadow: 0 0 20px var(--glow);
+    }
+    
+    .linse.ansicht { border-color: #E53935; }
+    .linse.ansicht:hover, .linse.ansicht.active { background: rgba(229, 57, 53, 0.3); }
+    
+    .linse.filter { border-color: #FF9800; border-style: dashed; }
+    .linse.filter:hover, .linse.filter.active { background: rgba(255, 152, 0, 0.3); }
+    
+    .linse.werkzeug { border-color: #9C27B0; }
+    .linse.werkzeug:hover, .linse.werkzeug.active { background: rgba(156, 39, 176, 0.3); }
+    
+    /* Label versteckt im collapsed state */
+    .linse-label {
+      display: none;
+    }
+    
+    /* Wrapper */
+    .linse-wrapper {
+      display: flex;
+      align-items: center;
+    }
+    
+    /* EXPANDED STATE */
+    .linsen-palette.expanded .linse {
+      width: auto;
+      min-width: 40px;
+      padding-right: 12px;
+      gap: 8px;
+    }
+    
+    .linsen-palette.expanded .linse-label {
+      display: inline;
+      font-size: 0.75rem;
+      color: var(--text-primary);
+      white-space: nowrap;
+    }
+    
+    /* Linse-Gruppen (aufklappbar) */
+    .linse-gruppe {
+      margin: 0.15rem 0;
+    }
+    .linse.gruppe-header {
+      position: relative;
+      border-color: #444;
+      background: rgba(255,255,255,0.02);
+    }
+    .linse.gruppe-header:hover {
+      border-color: #666;
+      background: rgba(255,255,255,0.05);
+    }
+    .gruppe-pfeil {
+      position: absolute;
+      right: 4px;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 0.6rem;
+      color: #666;
+      transition: transform 0.2s;
+    }
+    .linsen-palette.expanded .gruppe-pfeil {
+      right: 8px;
+    }
+    .linse-gruppe.open .gruppe-pfeil {
+      transform: translateY(-50%) rotate(90deg);
+    }
+    
+    .gruppe-inhalt {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease;
+    }
+    .linse-gruppe.open .gruppe-inhalt {
+      max-height: 500px; /* Erhöht von 200px auf 500px für mehr Einträge */
+    }
+    
+    .linse-wrapper.sub {
+      padding-left: 0.5rem;
+    }
+    .linse.sub {
+      font-size: 0.9rem;
+      opacity: 0.85;
+      border-left: 2px solid transparent;
+    }
+    .linse.sub:hover {
+      opacity: 1;
+    }
+    .linse.sub.active {
+      border-left-color: var(--accent);
+    }
+    
+    /* Disabled Extra-Button */
+    .extra-btn.disabled {
+      opacity: 0.4;
+      cursor: not-allowed;
+    }
+    .extra-btn.disabled:hover {
+      background: transparent;
+      transform: none;
+    }
+    
+    /* Schwebende Linse (folgt Cursor) */
+    .floating-linse {
+      display: none !important;
+      position: fixed;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      background: var(--bg-secondary);
+      border: 3px solid var(--accent);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      pointer-events: none;
+      z-index: 1000;
+      box-shadow: 0 0 30px var(--glow), 0 5px 20px rgba(0,0,0,0.5);
+      animation: float-pulse 1.5s ease-in-out infinite;
+    }
+    
+    .floating-linse.visible {
+      display: flex;
+    }
+    
+    .floating-linse.filter {
+      border-color: #FF9800;
+      box-shadow: 0 0 30px rgba(255, 152, 0, 0.5), 0 5px 20px rgba(0,0,0,0.5);
+    }
+    
+    .floating-linse.werkzeug {
+      border-color: #9C27B0;
+      box-shadow: 0 0 30px rgba(156, 39, 176, 0.5), 0 5px 20px rgba(0,0,0,0.5);

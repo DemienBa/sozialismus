@@ -1,0 +1,378 @@
+{
+  "archetypen": {
+    "marxismus_leninismus": {
+      "name": "Orthodoxer Marxismus-Leninismus",
+      "icon": "☭",
+      "hinweis": "Diese Tradition hat eine reiche theoretische Geschichte. Beginne mit den Grundlagen und arbeite dich zu den komplexeren Texten vor.",
+      "einstieg": [
+        { "titel": "Manifest der Kommunistischen Partei", "autor": "Karl Marx & Friedrich Engels", "jahr": 1848, "warum": "Das Fundament. Kurz, klar, immer noch relevant.", "schwierigkeit": 2, "frei": true, "url": "https://www.marxists.org/deutsch/archiv/marx-engels/1848/manifest/" },
+        { "titel": "Panzerkreuzer Potemkin", "autor": "Sergei Eisenstein", "jahr": 1925, "warum": "Der revolutionäre Film schlechthin. Visuelles Manifest der Revolution.", "schwierigkeit": 1 },
+        { "titel": "Der junge Karl Marx", "autor": "Raoul Peck", "jahr": 2017, "warum": "Spannender Spielfilm über Marx' Frühwerk und die Entstehung des Manifests.", "schwierigkeit": 1 },
+        { "titel": "Second Thought", "autor": "YouTube-Kanal", "warum": "Zugängliche Erklärungen marxistischer Konzepte für Einsteiger.", "schwierigkeit": 1, "url": "https://www.youtube.com/@SecondThought" },
+        { "titel": "Novecento – 1900", "autor": "Bernardo Bertolucci", "jahr": 1976, "warum": "Episches Drama über Klassenkampf in Italien. Geschichte als Erfahrung.", "schwierigkeit": 2 }
+      ],
+      "vertiefung": [
+        { "titel": "Der Imperialismus als höchstes Stadium des Kapitalismus", "autor": "Wladimir I. Lenin", "jahr": 1917, "warum": "Erklärt die globale Dimension des Kapitalismus. Grundlage für antiimperialistische Analyse.", "schwierigkeit": 3, "frei": true, "url": "https://www.marxists.org/deutsch/archiv/lenin/1917/imp/" },
+        { "titel": "Staat und Revolution", "autor": "Wladimir I. Lenin", "jahr": 1917, "warum": "Lenins Theorie des Staates und der Revolution. Kontrovers, aber einflussreich.", "schwierigkeit": 3, "frei": true, "url": "https://www.marxists.org/deutsch/archiv/lenin/1917/staatrev/" },
+        { "titel": "Die Lage der arbeitenden Klasse in England", "autor": "Friedrich Engels", "jahr": 1845, "warum": "Erschütternde Reportage, die Marx' Kapitalismuskritik empirisch fundierte.", "schwierigkeit": 3, "frei": true },
+        { "titel": "Die schwarzen Jakobiner", "autor": "C.L.R. James", "jahr": 1938, "warum": "Die haitianische Revolution als erste erfolgreiche Sklavenrevolution. Marxismus trifft Black History.", "schwierigkeit": 3 },
+        { "titel": "Geschichte und Klassenbewusstsein", "autor": "Georg Lukács", "jahr": 1923, "warum": "Der philosophische Marxismus. Verdinglichung als Schlüsselbegriff.", "schwierigkeit": 4 }
+      ],
+      "klassiker": [
+        { "titel": "Das Kapital, Band 1", "autor": "Karl Marx", "jahr": 1867, "warum": "Das Hauptwerk. Ware, Geld, Mehrwert, Akkumulation – die Anatomie des Kapitalismus.", "schwierigkeit": 5, "frei": true, "url": "https://www.marxists.org/deutsch/archiv/marx-engels/1867/kapital/" },
+        { "titel": "Die deutsche Ideologie", "autor": "Karl Marx & Friedrich Engels", "jahr": 1846, "warum": "Hier entwickeln Marx und Engels den historischen Materialismus.", "schwierigkeit": 4, "frei": true },
+        { "titel": "Gefängnishefte", "autor": "Antonio Gramsci", "jahr": 1929, "warum": "Hegemonie, Zivilgesellschaft, organische Intellektuelle – Gramscis Vermächtnis.", "schwierigkeit": 4 },
+        { "titel": "Sozialreform oder Revolution?", "autor": "Rosa Luxemburg", "jahr": 1899, "warum": "Die klassische Debatte: Reform oder Revolution? Luxemburgs Antwort.", "schwierigkeit": 3, "frei": true, "url": "https://www.marxists.org/deutsch/archiv/luxemburg/1899/sozdings/" }
+      ],
+      "spezial": [
+        { "titel": "Hommage an Katalonien", "autor": "George Orwell", "jahr": 1938, "warum": "Kritischer Blick auf stalinistische Praxis im Spanischen Bürgerkrieg. Aus der Innenperspektive.", "schwierigkeit": 2 },
+        { "titel": "Die Massenpsychologie des Faschismus", "autor": "Wilhelm Reich", "jahr": 1933, "warum": "Psychoanalyse trifft Marxismus. Warum wählen Menschen gegen ihre Interessen?", "schwierigkeit": 3 },
+        { "titel": "Lipstick Traces", "autor": "Greil Marcus", "jahr": 1989, "warum": "Punk und Situationismus als Geheimgeschichte des 20. Jahrhunderts.", "schwierigkeit": 3 },
+        { "titel": "Alles zerfällt", "autor": "Chinua Achebe", "jahr": 1958, "warum": "Kolonialismus aus afrikanischer Sicht. Der Blick der Kolonisierten.", "schwierigkeit": 2 }
+      ]
+    },
+
+    "libertaerer_sozialismus": {
+      "name": "Libertärer Sozialismus",
+      "icon": "🏴",
+      "hinweis": "Die anarchistische Tradition betont Freiheit UND Solidarität. Theorie und Praxis gehören hier besonders eng zusammen.",
+      "einstieg": [
+        { "titel": "Die Enteigneten", "autor": "Ursula K. Le Guin", "jahr": 1974, "warum": "Die beste literarische Darstellung einer anarchistischen Gesellschaft. Science-Fiction als politische Philosophie.", "schwierigkeit": 2 },
+        { "titel": "Land and Freedom", "autor": "Ken Loach", "jahr": 1995, "warum": "Emotionales Drama über den Spanischen Bürgerkrieg und die anarchistische Revolution.", "schwierigkeit": 1 },
+        { "titel": "Gegenseitige Hilfe in der Tier- und Menschenwelt", "autor": "Peter Kropotkin", "jahr": 1902, "warum": "Kooperation statt Konkurrenz – die wissenschaftliche Grundlage des Anarchismus.", "schwierigkeit": 2, "frei": true },
+        { "titel": "Bullshit Jobs", "autor": "David Graeber", "jahr": 2018, "warum": "Warum so viele Menschen sinnlose Arbeit verrichten. Anarchistische Analyse des Alltags.", "schwierigkeit": 2 },
+        { "titel": "Botschaften aus dem lakandonischen Urwald", "autor": "Subcomandante Marcos", "warum": "Die poetischen Kommuniqués der Zapatistas. Poesie und Revolution.", "schwierigkeit": 2 }
+      ],
+      "vertiefung": [
+        { "titel": "Anfänge", "autor": "David Graeber & David Wengrow", "jahr": 2021, "warum": "Eine neue Geschichte der Menschheit. Hierarchie war nie alternativlos.", "schwierigkeit": 3 },
+        { "titel": "Anarcho-Syndicalism", "autor": "Rudolf Rocker", "jahr": 1938, "warum": "Die klassische Einführung in den Anarchosyndikalismus.", "schwierigkeit": 3 },
+        { "titel": "Der kommende Aufstand", "autor": "Unsichtbares Komitee", "jahr": 2007, "warum": "Aufruf zur Insurrektion. Kontrovers und einflussreich.", "schwierigkeit": 3 },
+        { "titel": "Seeing Like a State", "autor": "James C. Scott", "jahr": 1998, "warum": "Wie Staaten Gesellschaften 'lesbar' machen – und dabei zerstören.", "schwierigkeit": 3 },
+        { "titel": "Manufacturing Consent", "autor": "Noam Chomsky", "jahr": 1988, "warum": "Wie Medien Meinung machen. Chomskys Propagandamodell.", "schwierigkeit": 3 }
+      ],
+      "klassiker": [
+        { "titel": "Was ist Eigentum?", "autor": "Pierre-Joseph Proudhon", "jahr": 1840, "warum": "Eigentum ist Diebstahl! Die Grundlage des Anarchismus.", "schwierigkeit": 3, "frei": true },
+        { "titel": "Gott und der Staat", "autor": "Michail Bakunin", "jahr": 1882, "warum": "Bakunins Angriff auf Religion und Staat. Anarchismus als konsequenter Atheismus.", "schwierigkeit": 3, "frei": true },
+        { "titel": "Die Eroberung des Brotes", "autor": "Peter Kropotkin", "jahr": 1892, "warum": "Wie eine anarchistische Gesellschaft funktionieren könnte.", "schwierigkeit": 3, "frei": true },
+        { "titel": "Gegenseitige Hilfe", "autor": "Peter Kropotkin", "jahr": 1902, "warum": "Evolution durch Kooperation. Gegen den Sozialdarwinismus.", "schwierigkeit": 3, "frei": true }
+      ],
+      "spezial": [
+        { "titel": "Tausend Plateaus", "autor": "Gilles Deleuze & Félix Guattari", "jahr": 1980, "warum": "Rhizom statt Hierarchie. Philosophie für anarchistisches Denken.", "schwierigkeit": 5 },
+        { "titel": "Die Verfassung der Allmende", "autor": "Elinor Ostrom", "jahr": 1990, "warum": "Nobelpreis für den Beweis: Commons funktionieren! Empirische Grundlage.", "schwierigkeit": 3 },
+        { "titel": "Immer nach Hause", "autor": "Ursula K. Le Guin", "jahr": 1985, "warum": "Ethnographie einer fiktiven anarchistischen Kultur. Keine Handlung, nur Welt.", "schwierigkeit": 3 },
+        { "titel": "The Dispossessed (Hörbuch)", "autor": "Ursula K. Le Guin", "warum": "Dieselbe Geschichte, andere Erfahrung. Zum Hören auf langen Wegen.", "schwierigkeit": 2 }
+      ]
+    },
+
+    "raetekommunismus": {
+      "name": "Rätekommunismus",
+      "icon": "🔧",
+      "hinweis": "Der Rätekommunismus betont die Selbstorganisation der Arbeiterklasse. Weder Partei noch Gewerkschaft – die Basis entscheidet.",
+      "einstieg": [
+        { "titel": "Massenstreik, Partei und Gewerkschaften", "autor": "Rosa Luxemburg", "jahr": 1906, "warum": "Der Massenstreik als spontane Kraft. Luxemburgs Antwort auf die Organisationsfrage.", "schwierigkeit": 3, "frei": true, "url": "https://www.marxists.org/deutsch/archiv/luxemburg/1906/madings/" },
+        { "titel": "Matewan", "autor": "John Sayles", "jahr": 1987, "warum": "Packender Film über einen Bergarbeiterstreik in West Virginia.", "schwierigkeit": 1 },
+        { "titel": "Strike!", "autor": "Jeremy Brecher", "jahr": 1972, "warum": "Geschichte der amerikanischen Streikbewegung von unten.", "schwierigkeit": 2 },
+        { "titel": "Die Entstehung der englischen Arbeiterklasse", "autor": "E.P. Thompson", "jahr": 1963, "warum": "Wie sich die Arbeiterklasse selbst formte. Geschichte von unten.", "schwierigkeit": 3 }
+      ],
+      "vertiefung": [
+        { "titel": "Geschichte und Klassenbewusstsein", "autor": "Georg Lukács", "jahr": 1923, "warum": "Klassenbewusstsein als Schlüssel zur Revolution.", "schwierigkeit": 4 },
+        { "titel": "Rätekorrespondenz", "autor": "Pannekoek/Gorter", "warum": "Die Zeitschrift der Rätekommunisten. Originaltexte.", "schwierigkeit": 3, "frei": true },
+        { "titel": "Forces of Labor", "autor": "Beverly Silver", "jahr": 2003, "warum": "Globale Arbeitskämpfe im Wandel. Wenn Kapital flieht, folgen die Kämpfe.", "schwierigkeit": 3 },
+        { "titel": "Poor People's Movements", "autor": "Frances Fox Piven & Richard Cloward", "jahr": 1977, "warum": "Arme haben nur Macht, wenn sie stören. Gegen die Institutionalisierung.", "schwierigkeit": 3 },
+        { "titel": "On New Terrain", "autor": "Kim Moody", "jahr": 2017, "warum": "Die amerikanische Arbeiterklasse heute. Neue Möglichkeiten trotz Niederlagen.", "schwierigkeit": 3 }
+      ],
+      "klassiker": [
+        { "titel": "Sozialreform oder Revolution?", "autor": "Rosa Luxemburg", "jahr": 1899, "warum": "Luxemburgs Streitschrift gegen den Reformismus.", "schwierigkeit": 3, "frei": true },
+        { "titel": "Die Akkumulation des Kapitals", "autor": "Rosa Luxemburg", "jahr": 1913, "warum": "Luxemburgs ökonomisches Hauptwerk über die Grenzen des Kapitalismus.", "schwierigkeit": 4, "frei": true },
+        { "titel": "Arbeiterräte", "autor": "Anton Pannekoek", "jahr": 1946, "warum": "Das Hauptwerk des Rätekommunismus.", "schwierigkeit": 4, "frei": true }
+      ],
+      "spezial": [
+        { "titel": "The Ragged-Trousered Philanthropists", "autor": "Robert Tressell", "jahr": 1914, "warum": "Arbeiter verteidigen ihre eigene Ausbeutung. Satirischer Klassiker.", "schwierigkeit": 3 },
+        { "titel": "Germinal", "autor": "Émile Zola", "jahr": 1885, "warum": "Naturalistischer Roman über einen Bergarbeiterstreik. Erschütternd.", "schwierigkeit": 3 },
+        { "titel": "Die Ästhetik des Widerstands", "autor": "Peter Weiss", "jahr": 1975, "warum": "Monumentaler Roman über Kunst und Arbeiterbewegung.", "schwierigkeit": 5 },
+        { "titel": "Öffentlichkeit und Erfahrung", "autor": "Oskar Negt & Alexander Kluge", "jahr": 1972, "warum": "Proletarische Gegenöffentlichkeit als Alternative zur bürgerlichen.", "schwierigkeit": 4 }
+      ]
+    },
+
+    "oekosozialismus": {
+      "name": "Ökosozialismus",
+      "icon": "🌱",
+      "hinweis": "Die ökologische Krise ist eine soziale Krise. Ökosozialismus verbindet Marx mit Ökologie.",
+      "einstieg": [
+        { "titel": "Die Entscheidung: Kapitalismus vs. Klima", "autor": "Naomi Klein", "jahr": 2014, "warum": "Nur ein Systemwandel kann den Klimakollaps stoppen. Populär und fundiert.", "schwierigkeit": 2 },
+        { "titel": "Das Ministerium für die Zukunft", "autor": "Kim Stanley Robinson", "jahr": 2020, "warum": "Science-Fiction über den Kampf gegen die Klimakrise. Hoffnungsvoll.", "schwierigkeit": 2 },
+        { "titel": "Unsere Welt neu denken", "autor": "Maja Göpel", "jahr": 2020, "warum": "Zugängliche Einführung in transformatives Denken.", "schwierigkeit": 1 },
+        { "titel": "Years and Years", "autor": "Russell T Davies", "jahr": 2019, "warum": "Serie über eine britische Familie in der nahen Zukunft. Dystopie zum Gruseln.", "schwierigkeit": 1 },
+        { "titel": "hbomberguy", "autor": "YouTube-Kanal", "warum": "Unterhaltsame Video-Essays über Klima, Gaming und Politik.", "schwierigkeit": 1, "url": "https://www.youtube.com/@haborombpuoy" }
+      ],
+      "vertiefung": [
+        { "titel": "Systemsturz", "autor": "Kohei Saito", "jahr": 2023, "warum": "Marx als Ökologe. Der späte Marx war Degrowth-Kommunist.", "schwierigkeit": 3 },
+        { "titel": "Wie man eine Pipeline in die Luft jagt", "autor": "Andreas Malm", "jahr": 2021, "warum": "Die Debatte über radikale Klimaaktionen. Provokant und notwendig.", "schwierigkeit": 2 },
+        { "titel": "Weniger ist mehr", "autor": "Jason Hickel", "jahr": 2020, "warum": "Die ökonomische Bibel des Degrowth. Mit Zahlen.", "schwierigkeit": 2 },
+        { "titel": "Capitalism in the Web of Life", "autor": "Jason W. Moore", "jahr": 2015, "warum": "Kapitalismus existiert nur durch die Aneignung von 'Cheap Nature'.", "schwierigkeit": 4 },
+        { "titel": "Marx's Ecology", "autor": "John Bellamy Foster", "jahr": 2000, "warum": "Die Entdeckung des ökologischen Marx. Der 'metabolische Riss'.", "schwierigkeit": 4 }
+      ],
+      "klassiker": [
+        { "titel": "Die Neugestaltung der Gesellschaft", "autor": "Murray Bookchin", "jahr": 1989, "warum": "Libertärer Kommunalismus und Ökologie. Bookchins Vision.", "schwierigkeit": 3 },
+        { "titel": "The Ecology of Freedom", "autor": "Murray Bookchin", "jahr": 1982, "warum": "Die Beherrschung der Natur wurzelt in der Beherrschung des Menschen.", "schwierigkeit": 4 },
+        { "titel": "Ökotopia", "autor": "Ernest Callenbach", "jahr": 1975, "warum": "Utopischer Roman über ein ökologisches Kalifornien.", "schwierigkeit": 2 }
+      ],
+      "spezial": [
+        { "titel": "Der Pilz am Ende der Welt", "autor": "Anna Tsing", "jahr": 2015, "warum": "Ethnographie des Matsutake-Pilzes. Überleben in den Ruinen des Kapitalismus.", "schwierigkeit": 3 },
+        { "titel": "Staying with the Trouble", "autor": "Donna Haraway", "jahr": 2016, "warum": "Leben im Chthuluzän. Verwandtschaft mit anderen Spezies.", "schwierigkeit": 4 },
+        { "titel": "Das terrestrische Manifest", "autor": "Bruno Latour", "jahr": 2018, "warum": "Neue politische Landkarte nach dem Klimawandel.", "schwierigkeit": 3 },
+        { "titel": "Food of the Gods", "autor": "Terence McKenna", "jahr": 1992, "warum": "Psychedelische Pflanzen und menschliche Evolution. Wild und spekulativ.", "schwierigkeit": 3 }
+      ]
+    },
+
+    "feministischer_sozialismus": {
+      "name": "Feministischer Sozialismus",
+      "icon": "♀️",
+      "hinweis": "Patriarchat und Kapitalismus sind verwobene Systeme. Care-Arbeit und Geschlecht stehen im Zentrum.",
+      "einstieg": [
+        { "titel": "Caliban und die Hexe", "autor": "Silvia Federici", "jahr": 2004, "warum": "Die Hexenverfolgung als Voraussetzung des Kapitalismus. Ein Augenöffner.", "schwierigkeit": 3 },
+        { "titel": "Die Bedeutung von Klasse", "autor": "bell hooks", "jahr": 2000, "warum": "Klasse, Rasse und Geschlecht zusammendenken. Zugänglich und radikal.", "schwierigkeit": 2 },
+        { "titel": "Roma", "autor": "Alfonso Cuarón", "jahr": 2018, "warum": "Film über eine indigene Hausangestellte. Klasse, Geschlecht und Rasse.", "schwierigkeit": 1 },
+        { "titel": "I Am Not a Witch", "autor": "Rungano Nyoni", "jahr": 2017, "warum": "Surrealer Film über eine als Hexe angeklagte Waise in Sambia.", "schwierigkeit": 2 },
+        { "titel": "Kindred", "autor": "Octavia Butler", "jahr": 1979, "warum": "Eine schwarze Frau wird in die Sklaverei zurückgeworfen. Schmerzhaft und wichtig.", "schwierigkeit": 2 }
+      ],
+      "vertiefung": [
+        { "titel": "Die Vier-in-einem-Perspektive", "autor": "Frigga Haug", "jahr": 2008, "warum": "Utopisches Zeitmodell: 4 Stunden Erwerbsarbeit, Rest für Care, Politik, Selbstentfaltung.", "schwierigkeit": 3 },
+        { "titel": "Women, Race & Class", "autor": "Angela Davis", "jahr": 1981, "warum": "Intersektionale Analyse amerikanischer Geschichte.", "schwierigkeit": 3 },
+        { "titel": "Sister Outsider", "autor": "Audre Lorde", "jahr": 1984, "warum": "Essays über Differenz und Überleben. 'Die Werkzeuge des Meisters...'", "schwierigkeit": 3 },
+        { "titel": "The Problem with Work", "autor": "Kathi Weeks", "jahr": 2011, "warum": "Gegen die linke Verherrlichung der Arbeit. Recht auf Faulheit!", "schwierigkeit": 3 },
+        { "titel": "Living a Feminist Life", "autor": "Sara Ahmed", "jahr": 2017, "warum": "Feministisches Überleben im Alltag. Killjoy sein als Praxis.", "schwierigkeit": 3 }
+      ],
+      "klassiker": [
+        { "titel": "Der Ursprung der Familie, des Privateigentums und des Staats", "autor": "Friedrich Engels", "jahr": 1884, "warum": "Die 'welthistorische Niederlage des weiblichen Geschlechts'.", "schwierigkeit": 3, "frei": true },
+        { "titel": "Das andere Geschlecht", "autor": "Simone de Beauvoir", "jahr": 1949, "warum": "Man wird nicht als Frau geboren. Der Gründungstext des Feminismus.", "schwierigkeit": 4 },
+        { "titel": "Borderlands/La Frontera", "autor": "Gloria Anzaldúa", "jahr": 1987, "warum": "Die 'mestiza consciousness'. Leben zwischen Kulturen.", "schwierigkeit": 3 },
+        { "titel": "Black Feminist Thought", "autor": "Patricia Hill Collins", "jahr": 1990, "warum": "Systematische Darstellung schwarzen feministischen Denkens.", "schwierigkeit": 4 }
+      ],
+      "spezial": [
+        { "titel": "Ein Manifest für Cyborgs", "autor": "Donna Haraway", "jahr": 1985, "warum": "Technik und Feminismus verschmelzen. Gegen starre Identitäten.", "schwierigkeit": 4 },
+        { "titel": "Full Surrogacy Now", "autor": "Sophie Lewis", "jahr": 2019, "warum": "Familie abschaffen, Schwangerschaft kollektivieren. Radikal.", "schwierigkeit": 3 },
+        { "titel": "The Female Man", "autor": "Joanna Russ", "jahr": 1975, "warum": "Radikaler feministischer SF. Vier Frauen in vier Welten.", "schwierigkeit": 3 },
+        { "titel": "Blood and Guts in High School", "autor": "Kathy Acker", "jahr": 1984, "warum": "Punk-Feminismus als Literatur. Verstörend und befreiend.", "schwierigkeit": 4 }
+      ]
+    },
+
+    "demokratischer_sozialismus": {
+      "name": "Demokratischer Sozialismus",
+      "icon": "🗳️",
+      "hinweis": "Demokratie und Sozialismus gehören zusammen. Schritt für Schritt, Mehrheit für Mehrheit.",
+      "einstieg": [
+        { "titel": "1984", "autor": "George Orwell", "jahr": 1949, "warum": "Warnung vor Totalitarismus. Dystopie als Mahnung.", "schwierigkeit": 2 },
+        { "titel": "Schöne neue Welt", "autor": "Aldous Huxley", "jahr": 1932, "warum": "Kontrolle durch Konsum statt Gewalt. Die andere Dystopie.", "schwierigkeit": 2 },
+        { "titel": "Die Enteigneten", "autor": "Ursula K. Le Guin", "jahr": 1974, "warum": "Utopie mit Widersprüchen. Keine Gesellschaft ist perfekt.", "schwierigkeit": 2 },
+        { "titel": "Utopia for Realists", "autor": "Rutger Bregman", "jahr": 2017, "warum": "Grundeinkommen, offene Grenzen, 15-Stunden-Woche. Populär und optimistisch.", "schwierigkeit": 1 },
+        { "titel": "Walkaway", "autor": "Cory Doctorow", "jahr": 2017, "warum": "Post-Scarcity-Utopie. Die 'Walkaway'-Bewegung verlässt das System.", "schwierigkeit": 2 }
+      ],
+      "vertiefung": [
+        { "titel": "Elemente und Ursprünge totaler Herrschaft", "autor": "Hannah Arendt", "jahr": 1951, "warum": "Die Analyse des Totalitarismus. Wie Bewegungen zu Regimen werden.", "schwierigkeit": 4 },
+        { "titel": "Die Furcht vor der Freiheit", "autor": "Erich Fromm", "jahr": 1941, "warum": "Warum Menschen autoritäre Führer wählen. Psychoanalyse der Politik.", "schwierigkeit": 3 },
+        { "titel": "Reale Utopien", "autor": "Erik Olin Wright", "jahr": 2010, "warum": "Konkrete Alternativen im Hier und Jetzt. Genossenschaften, Grundeinkommen.", "schwierigkeit": 3 },
+        { "titel": "Die Zukunft erfinden", "autor": "Nick Srnicek & Alex Williams", "jahr": 2015, "warum": "Für einen technologisch fortschrittlichen Sozialismus.", "schwierigkeit": 3 },
+        { "titel": "Beziehungsweise Revolution", "autor": "Bini Adamczak", "jahr": 2017, "warum": "Geschichte kommunistischer Beziehungsweisen. Von der Kommune zur queeren Utopie.", "schwierigkeit": 3 }
+      ],
+      "klassiker": [
+        { "titel": "Utopia", "autor": "Thomas Morus", "jahr": 1516, "warum": "Das namensgebende Werk. Eine Insel ohne Privateigentum.", "schwierigkeit": 3 },
+        { "titel": "Eine Theorie der Gerechtigkeit", "autor": "John Rawls", "jahr": 1971, "warum": "Der 'Schleier des Nichtwissens'. Liberale Gerechtigkeitstheorie.", "schwierigkeit": 4 },
+        { "titel": "Über die Freiheit", "autor": "John Stuart Mill", "jahr": 1859, "warum": "Die klassische Verteidigung individueller Freiheit.", "schwierigkeit": 3 }
+      ],
+      "spezial": [
+        { "titel": "Die offene Gesellschaft und ihre Feinde", "autor": "Karl Popper", "jahr": 1945, "warum": "Liberale Kritik an Platon, Hegel und Marx. Kontroverser Klassiker.", "schwierigkeit": 4 },
+        { "titel": "Wir", "autor": "Jewgeni Samjatin", "jahr": 1924, "warum": "Die erste Dystopie, vor Orwell. Der 'Einheitsstaat'.", "schwierigkeit": 3 },
+        { "titel": "Der Liberalismus der Furcht", "autor": "Judith Shklar", "jahr": 1989, "warum": "Minimalistischer Liberalismus: Grausamkeit vermeiden als erstes Gebot.", "schwierigkeit": 3 },
+        { "titel": "Free", "autor": "Lea Ypi", "jahr": 2021, "warum": "Kindheit zwischen albanischem Kommunismus und Kapitalismus. Memoir.", "schwierigkeit": 2 }
+      ]
+    },
+
+    "autonomismus": {
+      "name": "Autonomer Sozialismus",
+      "icon": "🔥",
+      "hinweis": "Veränderung durch Bewegung, nicht durch Parteien. Die neue Gesellschaft wird im Widerstand geboren.",
+      "einstieg": [
+        { "titel": "Kapitalistischer Realismus", "autor": "Mark Fisher", "jahr": 2009, "warum": "Es ist leichter, das Ende der Welt vorzustellen als das Ende des Kapitalismus.", "schwierigkeit": 2 },
+        { "titel": "Der kommende Aufstand", "autor": "Unsichtbares Komitee", "jahr": 2007, "warum": "Aufruf zur Insurrektion. Kontrovers, poetisch, einflussreich.", "schwierigkeit": 3 },
+        { "titel": "Emergent Strategy", "autor": "adrienne maree brown", "jahr": 2017, "warum": "Organisieren wie die Natur. Biomimikry für Aktivist*innen.", "schwierigkeit": 2 },
+        { "titel": "Mr. Robot", "autor": "Sam Esmail", "jahr": 2015, "warum": "Hacker-Serie über den Kampf gegen den globalen Kapitalismus.", "schwierigkeit": 1 },
+        { "titel": "Contrapoints", "autor": "YouTube-Kanal", "warum": "Aufwändige Video-Essays, die rechte Ideologie mit Glamour dekonstruieren.", "schwierigkeit": 1, "url": "https://www.youtube.com/@ContraPoints" }
+      ],
+      "vertiefung": [
+        { "titel": "Empire", "autor": "Michael Hardt & Antonio Negri", "jahr": 2000, "warum": "Die neue Weltordnung des Kapitals – und die 'Multitude' als Gegenmacht.", "schwierigkeit": 4 },
+        { "titel": "The Soul at Work", "autor": "Franco Berardi", "jahr": 2009, "warum": "Im digitalen Zeitalter wird die Psyche ausgebeutet.", "schwierigkeit": 3 },
+        { "titel": "Die Gesellschaft des Spektakels", "autor": "Guy Debord", "jahr": 1967, "warum": "Situationistische Medienkritik. Das Leben wird durch Bilder ersetzt.", "schwierigkeit": 4 },
+        { "titel": "Molecular Revolution", "autor": "Félix Guattari", "jahr": 1977, "warum": "Mikropolitik des Alltags. Revolution in jedem Begehren.", "schwierigkeit": 4 },
+        { "titel": "Joyful Militancy", "autor": "Bergman & Montgomery", "jahr": 2017, "warum": "Gegen die Tristesse in linken Bewegungen. Freude am Widerstand.", "schwierigkeit": 2 }
+      ],
+      "klassiker": [
+        { "titel": "Anti-Ödipus", "autor": "Gilles Deleuze & Félix Guattari", "jahr": 1972, "warum": "Kapitalismus und Schizophrenie. Wunschmaschinen gegen Psychoanalyse.", "schwierigkeit": 5 },
+        { "titel": "Überwachen und Strafen", "autor": "Michel Foucault", "jahr": 1975, "warum": "Das Gefängnis als Modell der modernen Gesellschaft.", "schwierigkeit": 4 },
+        { "titel": "Tausend Plateaus", "autor": "Gilles Deleuze & Félix Guattari", "jahr": 1980, "warum": "Philosophisches Rhizom. Nomadisches Denken.", "schwierigkeit": 5 }
+      ],
+      "spezial": [
+        { "titel": "Naked Lunch", "autor": "William S. Burroughs", "jahr": 1959, "warum": "Cut-up als Befreiung. Drogenrausch als Systemkritik.", "schwierigkeit": 4 },
+        { "titel": "Lipstick Traces", "autor": "Greil Marcus", "jahr": 1989, "warum": "Die Geheimgeschichte des 20. Jahrhunderts: Dada, Situationismus, Punk.", "schwierigkeit": 3 },
+        { "titel": "Crash", "autor": "J.G. Ballard", "jahr": 1973, "warum": "Technologie und Perversion. Verstörend und prophetisch.", "schwierigkeit": 4 },
+        { "titel": "High Weirdness", "autor": "Erik Davis", "jahr": 2019, "warum": "Psychedelische Gegenkultur der 1970er. Leary, McKenna, PKD.", "schwierigkeit": 3 }
+      ]
+    },
+
+    "municipalismus": {
+      "name": "Libertärer Kommunalismus",
+      "icon": "🏘️",
+      "hinweis": "Die Kommune als Ort der Revolution. Direkte Demokratie und Föderalismus von unten.",
+      "einstieg": [
+        { "titel": "Das Recht auf Stadt", "autor": "Henri Lefebvre", "jahr": 1968, "warum": "Die Stadt als Raum der Begegnung, nicht des Profits.", "schwierigkeit": 3 },
+        { "titel": "Rebellion der Städte", "autor": "David Harvey", "jahr": 2012, "warum": "Urbane Kämpfe und Kapitalakkumulation. Die Stadt als Kampffeld.", "schwierigkeit": 3 },
+        { "titel": "Wir bleiben alle!", "autor": "Andrej Holm", "jahr": 2010, "warum": "Gentrifizierung in deutschen Städten und Strategien des Widerstands.", "schwierigkeit": 2 },
+        { "titel": "Fearless Cities", "autor": "Barcelona en Comú", "jahr": 2019, "warum": "Der neue Munizipalismus. Städte als Orte progressiver Politik.", "schwierigkeit": 2 },
+        { "titel": "Radically Legal", "autor": "Joanna Kusiak", "jahr": 2023, "warum": "Das Recht als Waffe gegen das Kapital. Enteignung ist möglich.", "schwierigkeit": 2 }
+      ],
+      "vertiefung": [
+        { "titel": "Die Neugestaltung der Gesellschaft", "autor": "Murray Bookchin", "jahr": 1989, "warum": "Libertärer Kommunalismus. Die Gemeinde als Ort direkter Demokratie.", "schwierigkeit": 3 },
+        { "titel": "Democratic Confederalism", "autor": "Abdullah Öcalan", "jahr": 2011, "warum": "Die theoretische Grundlage von Rojava. Demokratie jenseits des Nationalstaats.", "schwierigkeit": 3 },
+        { "titel": "Die Verfassung der Allmende", "autor": "Elinor Ostrom", "jahr": 1990, "warum": "Nobelpreis für den Beweis: Gemeinschaften können Commons verwalten.", "schwierigkeit": 3 },
+        { "titel": "Planet der Slums", "autor": "Mike Davis", "jahr": 2006, "warum": "Düstere Prognose: Eine Milliarde Menschen in informellen Siedlungen.", "schwierigkeit": 3 },
+        { "titel": "The New Urban Frontier", "autor": "Neil Smith", "jahr": 1996, "warum": "Gentrifizierung als 'neue städtische Grenze'. Die Rückkehr des Kapitals.", "schwierigkeit": 4 }
+      ],
+      "klassiker": [
+        { "titel": "The Ecology of Freedom", "autor": "Murray Bookchin", "jahr": 1982, "warum": "Bookchins Hauptwerk. Herrschaft über die Natur beginnt mit Herrschaft über Menschen.", "schwierigkeit": 4 },
+        { "titel": "Tod und Leben großer amerikanischer Städte", "autor": "Jane Jacobs", "jahr": 1961, "warum": "Die Kritik an der modernistischen Stadtplanung. Für lebendige Viertel.", "schwierigkeit": 3 },
+        { "titel": "Kritik des Alltagslebens", "autor": "Henri Lefebvre", "jahr": 1947, "warum": "Revolution muss den Alltag transformieren, nicht nur die Ökonomie.", "schwierigkeit": 4 }
+      ],
+      "spezial": [
+        { "titel": "Frei, fair und lebendig", "autor": "Silke Helfrich & David Bollier", "jahr": 2019, "warum": "Commons-Praxis heute. Konkrete Beispiele und Theorie.", "schwierigkeit": 3 },
+        { "titel": "Designs for the Pluriverse", "autor": "Arturo Escobar", "jahr": 2018, "warum": "Eine Welt, in der viele Welten Platz haben. Dekoloniales Design.", "schwierigkeit": 4 },
+        { "titel": "Spekulation stoppen", "autor": "Deutsche Wohnen enteignen", "jahr": 2021, "warum": "Praxishandbuch zur Berliner Enteignungsinitiative.", "schwierigkeit": 2 },
+        { "titel": "Los Angeles Plays Itself", "autor": "Thom Andersen", "jahr": 2003, "warum": "Essayistischer Dokumentarfilm über LA im Kino. Stadt als Ideologie.", "schwierigkeit": 2 }
+      ]
+    },
+
+    "buen_vivir": {
+      "name": "Postkolonialer Sozialismus",
+      "icon": "🌍",
+      "hinweis": "Sozialismus ohne Dekolonisierung ist unvollständig. Die Kämpfe im globalen Süden sind zentral.",
+      "einstieg": [
+        { "titel": "Die offenen Adern Lateinamerikas", "autor": "Eduardo Galeano", "jahr": 1971, "warum": "Poetische Anklage gegen 500 Jahre Ausbeutung. Geschichte als Raub.", "schwierigkeit": 2 },
+        { "titel": "El abrazo de la serpiente", "autor": "Ciro Guerra", "jahr": 2015, "warum": "Hypnotischer Film über zwei Reisen in den Amazonas.", "schwierigkeit": 2 },
+        { "titel": "I Am Not Your Negro", "autor": "Raoul Peck", "jahr": 2016, "warum": "James Baldwin über Rassismus in Amerika. Dokumentarfilm.", "schwierigkeit": 1 },
+        { "titel": "Between the World and Me", "autor": "Ta-Nehisi Coates", "jahr": 2015, "warum": "Brief an seinen Sohn über das Schwarz-Sein in Amerika.", "schwierigkeit": 2 },
+        { "titel": "Black Girl", "autor": "Ousmane Sembène", "jahr": 1966, "warum": "Pionierin des afrikanischen Kinos. Neokolonialismus als Alltagsgewalt.", "schwierigkeit": 2 }
+      ],
+      "vertiefung": [
+        { "titel": "Orientalismus", "autor": "Edward Said", "jahr": 1978, "warum": "Der Grundstein der postkolonialen Theorie. Der 'Orient' als westliche Konstruktion.", "schwierigkeit": 4 },
+        { "titel": "Schwarze Haut, weiße Masken", "autor": "Frantz Fanon", "jahr": 1952, "warum": "Psychische Folgen des Kolonialismus. Rassismus dringt in die Psyche.", "schwierigkeit": 4 },
+        { "titel": "Black Marxism", "autor": "Cedric Robinson", "jahr": 1983, "warum": "Die 'Black Radical Tradition'. Schwarzer Widerstand jenseits des Marxismus.", "schwierigkeit": 4 },
+        { "titel": "Decolonising the Mind", "autor": "Ngũgĩ wa Thiong'o", "jahr": 1986, "warum": "Abrechnung mit der kolonialen Sprachpolitik. In eigenen Sprachen schreiben.", "schwierigkeit": 3 },
+        { "titel": "Kritik der schwarzen Vernunft", "autor": "Achille Mbembe", "jahr": 2013, "warum": "Rassismus als konstitutiv für die Moderne. 'Schwarz' als Chiffre.", "schwierigkeit": 4 }
+      ],
+      "klassiker": [
+        { "titel": "Die Verdammten dieser Erde", "autor": "Frantz Fanon", "jahr": 1961, "warum": "Das Manifest der Dekolonisierung. Gewalt als Befreiung.", "schwierigkeit": 4 },
+        { "titel": "Über den Kolonialismus", "autor": "Aimé Césaire", "jahr": 1950, "warum": "Poetische Anklage gegen den Kolonialismus und seine Verteidiger.", "schwierigkeit": 3 },
+        { "titel": "Die schwarzen Jakobiner", "autor": "C.L.R. James", "jahr": 1938, "warum": "Die haitianische Revolution. Sklaven machen Geschichte.", "schwierigkeit": 3 },
+        { "titel": "How Europe Underdeveloped Africa", "autor": "Walter Rodney", "jahr": 1972, "warum": "Klassische Analyse der kolonialen Ausbeutung Afrikas.", "schwierigkeit": 3 }
+      ],
+      "spezial": [
+        { "titel": "Ch'ixinakax utxiwa", "autor": "Silvia Rivera Cusicanqui", "jahr": 2010, "warum": "Indigene Epistemologie aus Bolivien. Alternative zu westlicher Dialektik.", "schwierigkeit": 4 },
+        { "titel": "Shamanism, Colonialism and the Wild Man", "autor": "Michael Taussig", "jahr": 1987, "warum": "Terror und Heilung im kolumbianischen Regenwald. Ethnographie des Grauens.", "schwierigkeit": 4 },
+        { "titel": "Afrotopia", "autor": "Felwine Sarr", "jahr": 2016, "warum": "Vision eines afrikanischen Weges jenseits von Nachahmung.", "schwierigkeit": 3 },
+        { "titel": "Neither Settler nor Native", "autor": "Mahmood Mamdani", "jahr": 2020, "warum": "Der Nationalstaat als Problem. Siedler/Eingeborene als tödliche Unterscheidung.", "schwierigkeit": 4 }
+      ]
+    },
+
+    "eurokommunismus": {
+      "name": "Reformorientierter Sozialismus",
+      "icon": "🤝",
+      "hinweis": "Der parlamentarische Weg. Reformen verbessern das Leben und bereiten größere Veränderungen vor.",
+      "einstieg": [
+        { "titel": "Hommage an Katalonien", "autor": "George Orwell", "jahr": 1938, "warum": "Orwells Erfahrungen im Spanischen Bürgerkrieg. Ehrlich und desillusionierend.", "schwierigkeit": 2 },
+        { "titel": "Die Selbstgerechten", "autor": "Sahra Wagenknecht", "jahr": 2021, "warum": "Kontroverse Kritik am 'Lifestyle-Linksliberalismus'.", "schwierigkeit": 2 },
+        { "titel": "Rechts gewinnt, weil Links versagt", "autor": "Roberto De Lapuente", "jahr": 2023, "warum": "Analyse des linken Versagens. Streitschrift.", "schwierigkeit": 2 },
+        { "titel": "Aufwachen!", "autor": "Podcast", "warum": "Tilo Jung und Stefan Schulz über deutsche Politik.", "schwierigkeit": 1, "url": "https://aufwachen-podcast.de/" },
+        { "titel": "Wohlstand für Alle", "autor": "Podcast", "warum": "Ole Nymoen und Wolfgang M. Schmitt über Ökonomie und Ideologie.", "schwierigkeit": 2, "url": "https://www.youtube.com/@WosChannel" }
+      ],
+      "vertiefung": [
+        { "titel": "Eine grüne demokratische Revolution", "autor": "Chantal Mouffe", "jahr": 2018, "warum": "Linkspopulismus als Strategie. Hegemonie gewinnen.", "schwierigkeit": 3 },
+        { "titel": "Hegemony How-To", "autor": "Jonathan Smucker", "jahr": 2017, "warum": "Strategie-Handbuch für die Linke. Mehrheiten gewinnen.", "schwierigkeit": 2 },
+        { "titel": "Im Zeitalter der Identität", "autor": "Yascha Mounk", "jahr": 2024, "warum": "Kritik an der 'neuen Identitätspolitik' aus liberaler Sicht.", "schwierigkeit": 3 },
+        { "titel": "Not So Black and White", "autor": "Kenan Malik", "jahr": 2023, "warum": "Kritische Geschichte der Identitätspolitik.", "schwierigkeit": 3 },
+        { "titel": "Rückkehr nach Reims", "autor": "Didier Eribon", "jahr": 2009, "warum": "Wie die Linke den Kontakt zur Arbeiterklasse verlor. Autobiographisch.", "schwierigkeit": 3 }
+      ],
+      "klassiker": [
+        { "titel": "Gefängnishefte", "autor": "Antonio Gramsci", "jahr": 1929, "warum": "Hegemonie, Zivilgesellschaft, organische Intellektuelle.", "schwierigkeit": 4 },
+        { "titel": "Der Mensch in der Revolte", "autor": "Albert Camus", "jahr": 1951, "warum": "Die existenzialistische Grenze der Revolution. Gegen totalitäre Logik.", "schwierigkeit": 4 },
+        { "titel": "Staatstheorie", "autor": "Nicos Poulantzas", "jahr": 1978, "warum": "Der Staat als Verdichtung von Kräfteverhältnissen.", "schwierigkeit": 4 }
+      ],
+      "spezial": [
+        { "titel": "The Once and Future Liberal", "autor": "Mark Lilla", "jahr": 2017, "warum": "Liberale Selbstkritik. Identitätspolitik als Sackgasse?", "schwierigkeit": 2 },
+        { "titel": "The Trouble with Diversity", "autor": "Walter Benn Michaels", "jahr": 2006, "warum": "Diversity ohne Gleichheit. Kulturelle Vielfalt als Ablenkung.", "schwierigkeit": 3 },
+        { "titel": "Geschichte eines Deutschen", "autor": "Sebastian Haffner", "jahr": 1939, "warum": "Wie wurde Faschismus möglich? Autobiographische Analyse.", "schwierigkeit": 2 },
+        { "titel": "Der Weg nach Wigan Pier", "autor": "George Orwell", "jahr": 1937, "warum": "Orwells Weg zum Sozialismus. Klassenbewusstsein eines Bürgerlichen.", "schwierigkeit": 2 }
+      ]
+    },
+
+    "postwachstum": {
+      "name": "Postwachstums-Sozialismus",
+      "icon": "📉",
+      "hinweis": "Ewiges Wachstum ist auf einem begrenzten Planeten unmöglich. Weniger produzieren, besser leben.",
+      "einstieg": [
+        { "titel": "Das Ende des Kapitalismus", "autor": "Ulrike Herrmann", "jahr": 2022, "warum": "Warum Wachstum vorbei sein muss. Populär und gut recherchiert.", "schwierigkeit": 2 },
+        { "titel": "Weniger ist mehr", "autor": "Jason Hickel", "jahr": 2020, "warum": "Die ökonomische Bibel des Degrowth. Mit Zahlen.", "schwierigkeit": 2 },
+        { "titel": "Unsere Welt neu denken", "autor": "Maja Göpel", "jahr": 2020, "warum": "Zugängliche Einführung in transformatives Denken.", "schwierigkeit": 1 },
+        { "titel": "Die Parabel vom Sämann", "autor": "Octavia Butler", "jahr": 1993, "warum": "Prophetische Dystopie. Earthseed als Religion des Wandels.", "schwierigkeit": 2 },
+        { "titel": "Die Schock-Strategie", "autor": "Naomi Klein", "jahr": 2007, "warum": "Wie Katastrophen für neoliberale Reformen genutzt werden.", "schwierigkeit": 2 }
+      ],
+      "vertiefung": [
+        { "titel": "Systemsturz", "autor": "Kohei Saito", "jahr": 2023, "warum": "Marx war Degrowth-Kommunist. Eine Neuentdeckung.", "schwierigkeit": 3 },
+        { "titel": "Die Zukunft erfinden", "autor": "Nick Srnicek & Alex Williams", "jahr": 2015, "warum": "Für eine technologisch fortschrittliche Linke. Automatisierung für alle.", "schwierigkeit": 3 },
+        { "titel": "Automatisierung und die Zukunft der Arbeit", "autor": "Aaron Benanav", "jahr": 2020, "warum": "Arbeitslosigkeit kommt nicht durch Roboter, sondern durch Stagnation.", "schwierigkeit": 3 },
+        { "titel": "Das Recht auf Faulheit", "autor": "Paul Lafargue", "jahr": 1880, "warum": "Der Klassiker gegen die Arbeitsmoral. Mehr Freizeit!", "schwierigkeit": 2, "frei": true },
+        { "titel": "In Praise of Idleness", "autor": "Bertrand Russell", "jahr": 1935, "warum": "Russells Essay über den Wert des Müßiggangs.", "schwierigkeit": 2 }
+      ],
+      "klassiker": [
+        { "titel": "Ökotopia", "autor": "Ernest Callenbach", "jahr": 1975, "warum": "Utopischer Roman über ein ökologisches Kalifornien.", "schwierigkeit": 2 },
+        { "titel": "Das Prinzip Hoffnung", "autor": "Ernst Bloch", "jahr": 1959, "warum": "Die Philosophie der Utopie. Das Noch-Nicht als Motor.", "schwierigkeit": 5 },
+        { "titel": "Kunde von Nirgendwo", "autor": "William Morris", "jahr": 1890, "warum": "Ökosozialistische Utopie aus dem 19. Jahrhundert.", "schwierigkeit": 3 }
+      ],
+      "spezial": [
+        { "titel": "Beschleunigung", "autor": "Hartmut Rosa", "jahr": 2005, "warum": "Zeit als Kernproblem der Moderne. Soziologie der Beschleunigung.", "schwierigkeit": 4 },
+        { "titel": "How to Do Nothing", "autor": "Jenny Odell", "jahr": 2019, "warum": "Verweigerung der Aufmerksamkeitsökonomie. Nichtstun als Widerstand.", "schwierigkeit": 2 },
+        { "titel": "Mein Sorgenkind", "autor": "Albert Hofmann", "jahr": 1979, "warum": "Der LSD-Erfinder reflektiert über Bewusstsein und Natur.", "schwierigkeit": 2 },
+        { "titel": "Müdigkeitsgesellschaft", "autor": "Byung-Chul Han", "jahr": 2010, "warum": "Selbstausbeutung verstehen. Der Zwang zum 'Können'.", "schwierigkeit": 3 }
+      ]
+    },
+
+    "care_revolution": {
+      "name": "Care-Revolutionär*in",
+      "icon": "💜",
+      "hinweis": "Fürsorge ins Zentrum der Politik. Die unsichtbare Arbeit sichtbar machen.",
+      "einstieg": [
+        { "titel": "Die Vier-in-einem-Perspektive", "autor": "Frigga Haug", "jahr": 2008, "warum": "4 Stunden Erwerbsarbeit, 4 Stunden Care, 4 Stunden Politik, 4 Stunden Selbstentfaltung.", "schwierigkeit": 2 },
+        { "titel": "Das Care-Manifest", "autor": "The Care Collective", "jahr": 2020, "warum": "Politik der Fürsorge als Alternative zum Neoliberalismus.", "schwierigkeit": 2 },
+        { "titel": "Radikale Zärtlichkeit", "autor": "Şeyda Kurt", "jahr": 2021, "warum": "Liebe und Solidarität als widerständige Praxis.", "schwierigkeit": 2 },
+        { "titel": "Maid", "autor": "Stephanie Land", "jahr": 2019, "warum": "Memoir über Armut als alleinerziehende Mutter. Auch als Serie.", "schwierigkeit": 1 },
+        { "titel": "Nickel and Dimed", "autor": "Barbara Ehrenreich", "jahr": 2001, "warum": "Selbstexperiment als Niedriglohnarbeiterin. Würdelosigkeit dokumentiert.", "schwierigkeit": 2 }
+      ],
+      "vertiefung": [
+        { "titel": "Caliban und die Hexe", "autor": "Silvia Federici", "jahr": 2004, "warum": "Hexenverfolgung und die Entstehung der unbezahlten Hausarbeit.", "schwierigkeit": 3 },
+        { "titel": "The Problem with Work", "autor": "Kathi Weeks", "jahr": 2011, "warum": "Gegen die Verherrlichung der Arbeit. Recht auf Faulheit.", "schwierigkeit": 3 },
+        { "titel": "Das gekaufte Herz", "autor": "Arlie Hochschild", "jahr": 1983, "warum": "Emotionale Arbeit. Wir verkaufen nicht nur Zeit, sondern Gefühle.", "schwierigkeit": 3 },
+        { "titel": "Wirtschaft ist Care", "autor": "Ina Praetorius", "jahr": 2015, "warum": "Ökonomie neu denken mit Fürsorge im Zentrum.", "schwierigkeit": 2 },
+        { "titel": "Revolution für das Leben", "autor": "Eva von Redecker", "jahr": 2020, "warum": "Philosophie für eine Welt, die das gute Leben ermöglicht.", "schwierigkeit": 3 }
+      ],
+      "klassiker": [
+        { "titel": "Das andere Geschlecht", "autor": "Simone de Beauvoir", "jahr": 1949, "warum": "Man wird nicht als Frau geboren. Grundlagentext.", "schwierigkeit": 4 },
+        { "titel": "Die Bedeutung von Klasse", "autor": "bell hooks", "jahr": 2000, "warum": "Klasse, Rasse, Geschlecht zusammendenken.", "schwierigkeit": 2 },
+        { "titel": "Teaching to Transgress", "autor": "bell hooks", "jahr": 1994, "warum": "Bildung als Praxis der Freiheit.", "schwierigkeit": 3 }
+      ],
+      "spezial": [
+        { "titel": "Full Surrogacy Now", "autor": "Sophie Lewis", "jahr": 2019, "warum": "Radikale Familienkritik. Schwangerschaft kollektivieren.", "schwierigkeit": 3 },
+        { "titel": "Pleasure Activism", "autor": "adrienne maree brown", "jahr": 2019, "warum": "Freude als Widerstand. Genuss ist politisch.", "schwierigkeit": 2 },
+        { "titel": "Das geteilte Selbst", "autor": "R.D. Laing", "jahr": 1960, "warum": "Wahnsinn und Gesellschaft. Antipsychiatrie-Klassiker.", "schwierigkeit": 4 },
+        { "titel": "Frau am Abgrund der Zeit", "autor": "Marge Piercy", "jahr": 1976, "warum": "Psychiatrie und Utopie. SF-Klassiker.", "schwierigkeit": 3 }
+      ]
+    }
+  }
+}

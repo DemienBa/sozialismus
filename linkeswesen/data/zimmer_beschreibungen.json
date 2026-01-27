@@ -1,0 +1,2265 @@
+{
+  "meta": {
+    "version": "2.0",
+    "zimmer_anzahl": 26,
+    "erstellt": "2026-01",
+    "beschreibung": "Zimmer-Beschreibungen für das Linke Wesen - 26 Zimmer für 26 Achsen"
+  },
+  "stockwerke": {
+    "dachgeschoss": {
+      "name": "Dachgeschoss",
+      "untertitel": "Visionen & Strategie",
+      "icon": "🏔️",
+      "beschreibung": "Ganz oben, wo das Licht hereinströmt und der Blick weit reicht. Hier werden die großen Fragen gestellt: Wohin wollen wir? Wie kommen wir dahin? Wer nur hier lebt, verliert den Boden unter den Füßen – aber wer nie hier war, weiß nicht, wofür gekämpft wird.",
+      "atmosphaere": "Weite Fenster, Fernsicht, manchmal Wolken. Der Geruch von alten Büchern und frischer Luft. Man hört das Rauschen des Windes und ferne Stimmen aus den unteren Stockwerken.",
+      "achsen": [
+        "00",
+        "17",
+        "24",
+        "25",
+        "23",
+        "14"
+      ]
+    },
+    "erster_stock": {
+      "name": "Erster Stock",
+      "untertitel": "Staat & Demokratie",
+      "icon": "🏛️",
+      "beschreibung": "Das Gehirn des Hauses. Hier werden Pläne geschmiedet, Institutionen entworfen, Macht analysiert. An den Wänden hängen Organigramme und Verfassungsentwürfe. Hier fragt man: Wer entscheidet? Wie verteilen wir? Welche Strukturen brauchen wir?",
+      "atmosphaere": "Sachlich, konzentriert. Schreibtische mit Akten, Whiteboards mit Diagrammen. Jemand tippt auf einer Tastatur, jemand telefoniert leise. Kaffeeduft.",
+      "achsen": [
+        "12",
+        "03",
+        "04",
+        "07",
+        "06"
+      ]
+    },
+    "erdgeschoss": {
+      "name": "Erdgeschoss",
+      "untertitel": "Ökonomie & Eigentum",
+      "icon": "🏠",
+      "beschreibung": "Das Herz des Hauses, wo das tägliche Leben pulsiert. Hier wird gearbeitet, produziert, verteilt. Hier riecht es nach Schweiß und Brot. Die grundlegenden Fragen: Wer produziert? Wer bekommt? Wem gehört was?",
+      "atmosphaere": "Geschäftig, warm, manchmal laut. Werkzeuge klappern, Menschen diskutieren über Tische gebeugt. Der Geruch von Essen aus der Küche, von Öl und Metall aus der Werkstatt.",
+      "achsen": [
+        "01",
+        "02",
+        "05",
+        "16",
+        "20"
+      ]
+    },
+    "souterrain": {
+      "name": "Souterrain",
+      "untertitel": "Gesellschaft & Natur",
+      "icon": "🌍",
+      "beschreibung": "Halb unter der Erde, aber mit Fenstern zur Welt. Hier sind die Wurzeln – die Verbindungen zu dem, was größer ist als wir: Körper, Natur, Geschlecht, Herkunft. Ein Ort der Tiefe, an dem sichtbar wird, was oben übersehen wird.",
+      "atmosphaere": "Gedämpftes Licht, Pflanzen an den Fenstern. Es riecht nach Erde und Leben. Gespräche hier sind oft leiser, persönlicher. Manchmal hört man Musik.",
+      "achsen": [
+        "09",
+        "10",
+        "21",
+        "08",
+        "11"
+      ]
+    },
+    "keller": {
+      "name": "Keller",
+      "untertitel": "Praxis & Internationale",
+      "icon": "🔧",
+      "beschreibung": "Ganz unten, wo die Werkzeuge lagern und die Verbindungen zur Welt geknüpft werden. Hier wird repariert, gebastelt, vorbereitet. Manche finden es hier zu dunkel, aber ohne diesen Ort gibt es keine Praxis. Hier wird aus Ideen Wirklichkeit.",
+      "atmosphaere": "Praktisch, vollgestopft, ein bisschen chaotisch. Regale mit Materialien, Karten an den Wänden, Kabel und Werkzeuge. Es riecht nach Farbe und Papier. Jemand packt Rucksäcke.",
+      "achsen": [
+        "13",
+        "15",
+        "18",
+        "19",
+        "22"
+      ]
+    }
+  },
+  "zimmer": {
+    "00": {
+      "id": "00",
+      "name": "Strategiezimmer",
+      "achse": "00",
+      "achse_name": "Reform/Revolution",
+      "stockwerk": "dachgeschoss",
+      "pole": [
+        "Revolution",
+        "Reform"
+      ],
+      "funktion": "Die große Richtung bestimmen",
+      "kurz": "Hier wird über den Weg gestritten: Bruch oder Wandel?",
+      "beschreibung": "Ein Raum mit Karten an den Wänden – aber keine Landkarten, sondern Zeitkarten. Linien, die in die Zukunft führen. Manche gerade und steil (Revolution!), manche gewunden und lang (Schritt für Schritt). An einem großen Tisch sitzen Menschen über Büchern gebeugt und streiten seit über hundert Jahren: Wie kommen wir dahin? Durch die Institutionen oder gegen sie? Rosa Luxemburg sitzt in der Ecke und lächelt – sie kennt die Antwort, aber sie verrät sie nicht.",
+      "atmosphaere": {
+        "stimmung": "Angespannt, grundsätzlich, manchmal hitzig",
+        "geraeusche": "Hitzige Debatten, Kreide auf Tafeln, das Rascheln alter Zeitungen",
+        "geruch": "Kreidestaub, kalter Kaffee, der Schweiß von Nachtschichten",
+        "licht": "Eine einzelne Lampe über dem Tisch, draußen dämmert es immer"
+      },
+      "typische_bewohner": [
+        "Rosa Luxemburg (1871-1919)",
+        "Eduard Bernstein (1850-1932)",
+        "Antonio Gramsci (1891-1937)",
+        "Erik Olin Wright (1947-2019)"
+      ],
+      "zitat": "Die Revolution ist großartig, alles andere ist Quark. – Rosa Luxemburg",
+      "taetigkeit": "Hier werden Strategien entworfen, Zeitpläne diskutiert, historische Erfahrungen ausgewertet. Wer das Haus verlässt, um zu handeln, nimmt einen Plan von hier mit – auch wenn alle wissen, dass kein Plan den ersten Kontakt mit der Wirklichkeit überlebt.",
+      "handlungen": {
+        "position_0": {
+          "name": "Revolutionäre Perspektive",
+          "privat": [
+            "Klassiker lesen: Lenin, Luxemburg, Fanon",
+            "Kampfsport lernen",
+            "Erste-Hilfe-Kurs"
+          ],
+          "lokal": [
+            "Basisgruppe aufbauen",
+            "Betriebsarbeit beginnen",
+            "Streikposten organisieren"
+          ],
+          "vernetzt": [
+            "Internationale Kontakte knüpfen",
+            "Revolutionäre Organisationen vernetzen"
+          ],
+          "global": [
+            "Solidarität mit Befreiungsbewegungen",
+            "Internationalistische Treffen"
+          ]
+        },
+        "position_05": {
+          "name": "Transformatorische Perspektive",
+          "privat": [
+            "Wright 'Reale Utopien' lesen",
+            "Genossenschaft beitreten"
+          ],
+          "lokal": [
+            "Transformative Projekte starten",
+            "Enteignungsinitiativen unterstützen"
+          ],
+          "vernetzt": [
+            "Bewegungsübergreifende Bündnisse",
+            "Parteiarbeit + Bewegung verbinden"
+          ],
+          "global": [
+            "Progressive Internationale",
+            "Transnationale Kampagnen"
+          ]
+        },
+        "position_1": {
+          "name": "Reformorientierte Perspektive",
+          "privat": [
+            "Piketty lesen",
+            "Mitglied werden in Partei/Gewerkschaft"
+          ],
+          "lokal": [
+            "In Kommunalpolitik engagieren",
+            "Bürgeranträge schreiben"
+          ],
+          "vernetzt": [
+            "Wahlkämpfe unterstützen",
+            "NGO-Arbeit"
+          ],
+          "global": [
+            "EU-Politik beeinflussen",
+            "Internationale Institutionen reformieren"
+          ]
+        }
+      }
+    },
+    "01": {
+      "id": "01",
+      "name": "Eigentums-Kammer",
+      "achse": "01",
+      "achse_name": "Eigentum",
+      "stockwerk": "erdgeschoss",
+      "pole": [
+        "Vergesellschaftung",
+        "Regulierter Markt"
+      ],
+      "funktion": "Die Machtfrage stellen",
+      "kurz": "Hier werden die Schlüssel aufbewahrt.",
+      "beschreibung": "Ein Raum mit vielen kleinen Schubladen, Schlüsselbrettern, Verträgen. Wem gehört was? Wer darf was benutzen? Die Frage des Eigentums – hier wird sie ganz praktisch. In jeder Schublade steckt ein Konflikt: Wohnungsschlüssel, Fabriktor, Serverraum.",
+      "atmosphaere": {
+        "stimmung": "Grundsätzlich, manchmal angespannt, immer wichtig",
+        "geraeusche": "Schlüsselklirren, Diskussionen über Verträge",
+        "geruch": "Papier, Metall, der Geruch von Macht",
+        "licht": "Nüchtern, sachlich"
+      },
+      "typische_bewohner": [
+        "Karl Marx (1818-1883)",
+        "Pierre-Joseph Proudhon (1809-1865)",
+        "Elinor Ostrom (1933-2012)",
+        "Deutsche Wohnen & Co. Enteignen"
+      ],
+      "zitat": "Eigentum ist Diebstahl. – Proudhon",
+      "taetigkeit": "Hier werden Eigentumsverhältnisse analysiert, Enteignungskampagnen geplant, Genossenschaftsmodelle entwickelt.",
+      "handlungen": {
+        "position_0": {
+          "name": "Vollvergesellschaftung",
+          "privat": [
+            "Konsumverzicht üben",
+            "Genossenschaft beitreten",
+            "Eigenen Besitz kritisch reflektieren"
+          ],
+          "lokal": [
+            "Enteignungsinitiativen unterstützen",
+            "Betriebsbesetzungen solidarisch begleiten",
+            "Rekommunalisierung fordern"
+          ],
+          "vernetzt": [
+            "DWE / Vergesellschaftungs-Kampagnen",
+            "Gewerkschaften für Vergesellschaftung gewinnen"
+          ],
+          "global": [
+            "Internationale Enteignungsbewegung",
+            "Commons-Forschung vernetzen"
+          ]
+        },
+        "position_05": {
+          "name": "Schlüsselbereiche vergesellschaften",
+          "privat": [
+            "Bei Genossenschaften kaufen",
+            "Solidarische Landwirtschaft unterstützen"
+          ],
+          "lokal": [
+            "Rekommunalisierung von Energie/Wasser fordern",
+            "Bürgerbegehren initiieren"
+          ],
+          "vernetzt": [
+            "Gemeinwohl-Ökonomie",
+            "Commons-Netzwerke aufbauen"
+          ],
+          "global": [
+            "Öffentliche Güter global verteidigen"
+          ]
+        },
+        "position_1": {
+          "name": "Regulierung stärken",
+          "privat": [
+            "Ethisch investieren",
+            "Faire Anbieter wählen"
+          ],
+          "lokal": [
+            "Sozialklauseln in Vergaben fordern",
+            "Lokale Wirtschaft stärken"
+          ],
+          "vernetzt": [
+            "Kartellrecht stärken",
+            "Monopole bekämpfen"
+          ],
+          "global": [
+            "Internationale Regulierung von Konzernen"
+          ]
+        }
+      }
+    },
+    "02": {
+      "id": "02",
+      "name": "Planungs-Zentrale",
+      "achse": "02",
+      "achse_name": "Planung",
+      "stockwerk": "erdgeschoss",
+      "pole": [
+        "Demokratische Planwirtschaft",
+        "Markt mit Regulierung"
+      ],
+      "funktion": "Wirtschaft bewusst gestalten",
+      "kurz": "Hier wird die Zukunft geplant.",
+      "beschreibung": "Ein Raum voller Diagramme, Flussdiagramme, Input-Output-Tabellen. An einem Bildschirm läuft eine Simulation. Die Planungsdebatte ist zurück: Nicht als Sowjet-Gosplan, sondern als demokratische Koordination.",
+      "atmosphaere": {
+        "stimmung": "Analytisch, zukunftsorientiert",
+        "geraeusche": "Computer summen, Debatten über Zahlen",
+        "geruch": "Kaffee, ein Hauch Utopie",
+        "licht": "Bildschirmlicht, Tageslicht"
+      },
+      "typische_bewohner": [
+        "Oskar Lange (1904-1965)",
+        "Stafford Beer (1926-2002)",
+        "Leigh Phillips (1981-)",
+        "Michal Rozworski"
+      ],
+      "zitat": "Die Sowjetunion hatte keine Demokratie. Wir wollen demokratische Planung. – Leigh Phillips",
+      "taetigkeit": "Wirtschaftsmodelle durchrechnen, Planungsalgorithmen entwickeln, demokratische Verfahren entwerfen.",
+      "handlungen": {
+        "position_0": {
+          "name": "Demokratische Planwirtschaft",
+          "privat": [
+            "Planungsdebatten studieren",
+            "Cybersyn-Geschichte kennenlernen"
+          ],
+          "lokal": [
+            "Partizipative Budgets fordern",
+            "Kommunale Wirtschaftsplanung"
+          ],
+          "vernetzt": [
+            "Sozialistische Ökonom*innen vernetzen",
+            "Planwirtschafts-Forschung"
+          ],
+          "global": [
+            "Internationale Klimaplanung",
+            "Globale Koordination"
+          ]
+        },
+        "position_05": {
+          "name": "Rahmenplanung",
+          "privat": [
+            "Wirtschaftswissen aneignen",
+            "Kooperativen unterstützen"
+          ],
+          "lokal": [
+            "Regionale Wirtschaftskreisläufe aufbauen",
+            "Cluster-Politik"
+          ],
+          "vernetzt": [
+            "Industriepolitik mitgestalten",
+            "Just Transition fordern"
+          ],
+          "global": [
+            "Green New Deal international",
+            "EU-Industriepolitik"
+          ]
+        },
+        "position_1": {
+          "name": "Markt mit Regulierung",
+          "privat": [
+            "Marktmechanismen verstehen"
+          ],
+          "lokal": [
+            "Wirtschaftsförderung kritisch begleiten"
+          ],
+          "vernetzt": [
+            "Wettbewerbspolitik stärken"
+          ],
+          "global": [
+            "Faire Handelsabkommen"
+          ]
+        }
+      }
+    },
+    "03": {
+      "id": "03",
+      "name": "Sozialstaats-Büro",
+      "achse": "03",
+      "achse_name": "Sozialstaat",
+      "stockwerk": "erster_stock",
+      "pole": [
+        "Universelle Grundsicherung",
+        "Aktivierender Sozialstaat"
+      ],
+      "funktion": "Soziale Sicherheit organisieren",
+      "kurz": "Hier wird gefragt: Wie sichern wir alle ab?",
+      "beschreibung": "Ein Büro mit vielen Formularen – aber auch mit Entwürfen für eine Welt ohne Formulare. An einer Wand: 'Von jedem nach seinen Fähigkeiten, jedem nach seinen Bedürfnissen.' An der anderen: Aktenordner mit Hartz-IV-Bescheiden. Hier wird gestritten: Soll der Staat kontrollieren und aktivieren – oder bedingungslos geben?",
+      "atmosphaere": {
+        "stimmung": "Bürokratisch, aber mit utopischem Horizont",
+        "geraeusche": "Tippen auf Tastaturen, Kopierer, Seufzen über Formulare",
+        "geruch": "Amtsstube, aber auch Kaffee und Kuchen von der Soli-Küche",
+        "licht": "Neonröhren (noch), Tageslicht (geplant)"
+      },
+      "typische_bewohner": [
+        "William Beveridge (1879-1963)",
+        "Philippe Van Parijs (1951-)",
+        "Hartz-IV-Aktivist*innen",
+        "Sanktionsfrei e.V."
+      ],
+      "zitat": "Ein bedingungsloses Grundeinkommen ist die Anerkennung, dass jeder Mensch einen Wert hat. – Philippe Van Parijs",
+      "taetigkeit": "Hier werden Sozialgesetze analysiert, Alternativen entworfen, Betroffene beraten. Wer hier arbeitet, kennt die Abgründe des Sozialstaats – und die Hoffnung auf etwas Besseres.",
+      "handlungen": {
+        "position_0": {
+          "name": "Bedingungsloses Grundeinkommen",
+          "privat": [
+            "BGE-Literatur lesen",
+            "Selbstversuch Minimalismus"
+          ],
+          "lokal": [
+            "BGE-Initiativen unterstützen",
+            "Sanktionen thematisieren"
+          ],
+          "vernetzt": [
+            "Netzwerk Grundeinkommen",
+            "Erwerbslosengruppen"
+          ],
+          "global": [
+            "Internationale BGE-Experimente",
+            "Pilotprojekte"
+          ]
+        },
+        "position_05": {
+          "name": "Sanktionsfreie Grundsicherung",
+          "privat": [
+            "Sozialrecht kennen",
+            "Betroffene unterstützen"
+          ],
+          "lokal": [
+            "Sozialberatung anbieten",
+            "Gegen Sanktionen mobilisieren"
+          ],
+          "vernetzt": [
+            "Sanktionsfrei e.V.",
+            "Erwerbslosenverbände"
+          ],
+          "global": [
+            "Soziale Rechte als Menschenrechte"
+          ]
+        },
+        "position_1": {
+          "name": "Sozialstaat reformieren",
+          "privat": [
+            "Sozialversicherungen verstehen"
+          ],
+          "lokal": [
+            "Soziale Dienste stärken",
+            "Jobcenter kritisch begleiten"
+          ],
+          "vernetzt": [
+            "Gewerkschaften",
+            "Wohlfahrtsverbände"
+          ],
+          "global": [
+            "Europäische Sozialpolitik"
+          ]
+        }
+      }
+    },
+    "04": {
+      "id": "04",
+      "name": "Umverteilungs-Zentrale",
+      "achse": "04",
+      "achse_name": "Steuern",
+      "stockwerk": "erster_stock",
+      "pole": [
+        "Radikale Umverteilung",
+        "Moderate Steuerpolitik"
+      ],
+      "funktion": "Von oben nach unten umverteilen",
+      "kurz": "Hier wird gefragt: Wer zahlt?",
+      "beschreibung": "Ein Raum mit einer riesigen Waage in der Mitte: Auf der einen Seite stapeln sich Goldbarren (die oberen 1%), auf der anderen Seite leere Taschen (die unteren 50%). Hier werden Steuerpläne geschmiedet: Vermögenssteuer, Erbschaftssteuer, Finanztransaktionssteuer. An der Wand: 'Tax the Rich!'",
+      "atmosphaere": {
+        "stimmung": "Kämpferisch, manchmal neidvoll, immer gerecht",
+        "geraeusche": "Taschenrechner, Debatten über Zahlen, Empörung",
+        "geruch": "Geld (metaphorisch), Schweiß, Klassenkampf",
+        "licht": "Scharf, damit man die Zahlen sieht"
+      },
+      "typische_bewohner": [
+        "Thomas Piketty (1971-)",
+        "Gabriel Zucman (1986-)",
+        "Oxfam-Aktivist*innen",
+        "Attac"
+      ],
+      "zitat": "Die Geschichte des Kapitals ist die Geschichte der Ungleichheit. – Thomas Piketty",
+      "taetigkeit": "Hier werden Steuerpläne entwickelt, Reichtum analysiert, Schlupflöcher aufgedeckt. Wer hier arbeitet, kann erklären, warum der Milliardär weniger Steuern zahlt als seine Putzfrau.",
+      "handlungen": {
+        "position_0": {
+          "name": "Radikale Umverteilung",
+          "privat": [
+            "Eigenes Vermögen überdenken",
+            "Steuerhinterziehung melden"
+          ],
+          "lokal": [
+            "Reichtums-Mapping",
+            "Luxus-Konsum thematisieren"
+          ],
+          "vernetzt": [
+            "Tax Justice Network",
+            "Attac Steuerkampagnen"
+          ],
+          "global": [
+            "Globale Mindeststeuer",
+            "Steueroasen bekämpfen"
+          ]
+        },
+        "position_05": {
+          "name": "Progressive Besteuerung",
+          "privat": [
+            "Steuererklärung korrekt machen"
+          ],
+          "lokal": [
+            "Kommunale Steuerpolitik",
+            "Grundsteuer-Debatte"
+          ],
+          "vernetzt": [
+            "Gewerkschaftliche Steuerforderungen"
+          ],
+          "global": [
+            "EU-Steuerpolitik",
+            "Finanztransaktionssteuer"
+          ]
+        },
+        "position_1": {
+          "name": "Moderate Reform",
+          "privat": [
+            "Steuersystem verstehen"
+          ],
+          "lokal": [
+            "Effizienz öffentlicher Ausgaben"
+          ],
+          "vernetzt": [
+            "Wirtschaftsforschungsinstitute"
+          ],
+          "global": [
+            "Internationale Steuerkooperation"
+          ]
+        }
+      }
+    },
+    "05": {
+      "id": "05",
+      "name": "Wohnraum-Versammlung",
+      "achse": "05",
+      "achse_name": "Wohnen",
+      "stockwerk": "erdgeschoss",
+      "pole": [
+        "Dekommodifizierung",
+        "Regulierter Markt"
+      ],
+      "funktion": "Wohnen als Recht durchsetzen",
+      "kurz": "Hier wird für Zuhause gekämpft.",
+      "beschreibung": "Ein Raum wie eine Mieterversammlung und besetztes Haus zugleich. Mietpreis-Karten, Verdrängungsatlanten, Fotos von Demos. 'Deutsche Wohnen enteignen' steht auf einem Banner.",
+      "atmosphaere": {
+        "stimmung": "Kämpferisch, solidarisch, manchmal verzweifelt",
+        "geraeusche": "Mieterversammlungen, Protest-Parolen",
+        "geruch": "Kaffee, Angst vor der Räumung",
+        "licht": "Wechselnd – von Neonröhren bis Kerzen"
+      },
+      "typische_bewohner": [
+        "Mietervereine",
+        "Deutsche Wohnen & Co. Enteignen",
+        "Besetzer*innen",
+        "Recht auf Stadt"
+      ],
+      "zitat": "Wohnen ist ein Menschenrecht – keine Ware!",
+      "taetigkeit": "Mieter*innen beraten, Enteignungskampagnen planen, Mietpreisdeckel fordern.",
+      "handlungen": {
+        "position_0": {
+          "name": "Dekommodifizierung",
+          "privat": [
+            "Eigene Wohnsituation politisieren",
+            "Hausprojekt gründen/beitreten"
+          ],
+          "lokal": [
+            "Enteignungsinitiative unterstützen",
+            "Besetzungen solidarisch begleiten"
+          ],
+          "vernetzt": [
+            "DWE",
+            "Recht auf Stadt-Netzwerk"
+          ],
+          "global": [
+            "Internationale Mieterbewegung vernetzen"
+          ]
+        },
+        "position_05": {
+          "name": "Öffentlicher Wohnungsbau",
+          "privat": [
+            "Genossenschaft beitreten",
+            "Mietrecht kennen"
+          ],
+          "lokal": [
+            "Sozialen Wohnungsbau fordern",
+            "Milieuschutz durchsetzen"
+          ],
+          "vernetzt": [
+            "Mietervereine stärken",
+            "Wohnungsbau-Bündnisse"
+          ],
+          "global": [
+            "Wiener Modell studieren und verbreiten"
+          ]
+        },
+        "position_1": {
+          "name": "Mietpreisbremse",
+          "privat": [
+            "Mietrecht kennen",
+            "Rechte einfordern"
+          ],
+          "lokal": [
+            "Mietpreisbremse durchsetzen",
+            "Mieterberatung anbieten"
+          ],
+          "vernetzt": [
+            "Mieterbund unterstützen"
+          ],
+          "global": [
+            "Europäische Wohnungspolitik"
+          ]
+        }
+      }
+    },
+    "06": {
+      "id": "06",
+      "name": "Gesundheits-Kollektiv",
+      "achse": "06",
+      "achse_name": "Gesundheit",
+      "stockwerk": "erster_stock",
+      "pole": [
+        "Vergesellschaftung",
+        "Regulierter Markt"
+      ],
+      "funktion": "Gesundheit für alle organisieren",
+      "kurz": "Hier wird gefragt: Wem gehört die Gesundheit?",
+      "beschreibung": "Ein Raum, der Krankenhaus und Gemeinschaftszentrum verbindet. Auf der einen Seite: Pläne für Krankenhäuser in öffentlicher Hand. Auf der anderen: Erste-Hilfe-Kurse und Peer-Beratung. Hier wird klar: Gesundheit ist keine Ware. An der Wand: 'Health is a human right.'",
+      "atmosphaere": {
+        "stimmung": "Fürsorglich, kämpferisch, solidarisch",
+        "geraeusche": "Ruhige Gespräche, manchmal Protest-Parolen",
+        "geruch": "Desinfektionsmittel, aber auch Kräutertee",
+        "licht": "Freundlich, beruhigend"
+      },
+      "typische_bewohner": [
+        "Rudolf Virchow (1821-1902)",
+        "Gesundheitskollektive",
+        "ver.di Fachbereich Gesundheit",
+        "Medico International"
+      ],
+      "zitat": "Medizin ist eine soziale Wissenschaft, und Politik ist nichts anderes als Medizin im Großen. – Rudolf Virchow",
+      "taetigkeit": "Hier werden Privatisierungen bekämpft, Arbeitsbedingungen in Kliniken thematisiert, Gesundheitszentren geplant. Wer hier arbeitet, weiß: Pflege ist politisch.",
+      "handlungen": {
+        "position_0": {
+          "name": "Vergesellschaftung",
+          "privat": [
+            "Private Krankenversicherung kündigen"
+          ],
+          "lokal": [
+            "Gegen Klinikprivatisierung",
+            "Gesundheitszentren fordern"
+          ],
+          "vernetzt": [
+            "Bündnis Krankenhaus statt Fabrik",
+            "ver.di"
+          ],
+          "global": [
+            "WHO stärken",
+            "Gegen Pharma-Patente"
+          ]
+        },
+        "position_05": {
+          "name": "Bürgerversicherung",
+          "privat": [
+            "Gesetzlich versichert bleiben"
+          ],
+          "lokal": [
+            "Pflege aufwerten",
+            "Kommunale Gesundheitszentren"
+          ],
+          "vernetzt": [
+            "Bürgerversicherungs-Kampagnen"
+          ],
+          "global": [
+            "Europäische Gesundheitspolitik"
+          ]
+        },
+        "position_1": {
+          "name": "Regulierter Mix",
+          "privat": [
+            "Vorsorge nutzen"
+          ],
+          "lokal": [
+            "Ärzt*innen-Versorgung auf dem Land"
+          ],
+          "vernetzt": [
+            "Gesundheitspolitische Reformen"
+          ],
+          "global": [
+            "Internationale Standards"
+          ]
+        }
+      }
+    },
+    "07": {
+      "id": "07",
+      "name": "Bildungs-Freiraum",
+      "achse": "07",
+      "achse_name": "Bildung",
+      "stockwerk": "erster_stock",
+      "pole": [
+        "Radikal demokratisch",
+        "Reformiertes System"
+      ],
+      "funktion": "Anders lernen ermöglichen",
+      "kurz": "Hier wird gefragt: Wie wollen wir lernen?",
+      "beschreibung": "Ein Raum ohne Tische in Reihen – stattdessen Sitzkreise, Projektecken, eine kleine Bibliothek. Keine Noten an den Wänden, sondern Fragen. Hier wird experimentiert: Lernen ohne Zwang, Bildung ohne Selektion. An der Wand ein Bild von Paulo Freire und der Satz: 'Niemand erzieht niemanden, niemand erzieht sich selbst, wir erziehen uns gegenseitig.'",
+      "atmosphaere": {
+        "stimmung": "Neugierig, verspielt, respektvoll",
+        "geraeusche": "Gespräche, Lachen, das Rascheln von Büchern",
+        "geruch": "Kreide, Papier, selbstgebackene Kekse",
+        "licht": "Warm, einladend"
+      },
+      "typische_bewohner": [
+        "Paulo Freire (1921-1997)",
+        "Ivan Illich (1926-2002)",
+        "bell hooks (1952-2021)",
+        "Jesper Juul (1948-2019)"
+      ],
+      "zitat": "Bildung ist nicht das Befüllen von Fässern, sondern das Entzünden von Flammen. – Heraklit (zugeschrieben)",
+      "taetigkeit": "Hier werden alternative Schulkonzepte entwickelt, Lehrpläne kritisiert, Lerngruppen organisiert. Wer hier arbeitet, glaubt an die Kraft des gemeinsamen Lernens.",
+      "handlungen": {
+        "position_0": {
+          "name": "Radikal demokratische Bildung",
+          "privat": [
+            "Freire lesen",
+            "Unschooling erkunden"
+          ],
+          "lokal": [
+            "Freie Schule gründen",
+            "Bildungsinitiativen"
+          ],
+          "vernetzt": [
+            "Netzwerk freier Schulen",
+            "Bildungsstreiks"
+          ],
+          "global": [
+            "Internationale Alternativpädagogik"
+          ]
+        },
+        "position_05": {
+          "name": "Progressive Bildungsreform",
+          "privat": [
+            "Kritische Pädagogik studieren"
+          ],
+          "lokal": [
+            "Gemeinschaftsschule fordern",
+            "Elternarbeit"
+          ],
+          "vernetzt": [
+            "GEW",
+            "Bildungsbündnisse"
+          ],
+          "global": [
+            "PISA-Kritik",
+            "Internationale Vergleiche"
+          ]
+        },
+        "position_1": {
+          "name": "System verbessern",
+          "privat": [
+            "Gute Lehrer*innen unterstützen"
+          ],
+          "lokal": [
+            "Schulkonferenzen",
+            "Ausstattung fordern"
+          ],
+          "vernetzt": [
+            "Bildungspolitik in Parteien"
+          ],
+          "global": [
+            "Best Practices lernen"
+          ]
+        }
+      }
+    },
+    "08": {
+      "id": "08",
+      "name": "Natur-Gewächshaus",
+      "achse": "08",
+      "achse_name": "Ökologie",
+      "stockwerk": "souterrain",
+      "pole": [
+        "Ökosozialismus",
+        "Grüner Kapitalismus"
+      ],
+      "funktion": "Die nicht-menschliche Welt hören",
+      "kurz": "Hier wächst etwas – und hier wird über Wachstum nachgedacht.",
+      "beschreibung": "Pflanzen, Erde, Wasser. Hier wächst tatsächlich etwas – aber es ist auch ein Ort des Nachdenkens über die Grenzen des Wachstums, über eine Welt, die nicht nur für Menschen da ist.",
+      "atmosphaere": {
+        "stimmung": "Lebendig, besorgt, hoffend",
+        "geraeusche": "Wasser tropft, Vögel, Pflanzen rauschen",
+        "geruch": "Erde, Grün, Leben",
+        "licht": "Grünlich gefiltert durch Blätter"
+      },
+      "typische_bewohner": [
+        "Murray Bookchin (1921-2006)",
+        "Jason W. Moore (1964-)",
+        "Naomi Klein (1970-)",
+        "Extinction Rebellion"
+      ],
+      "zitat": "Wir haben keinen Planeten B.",
+      "taetigkeit": "Gärtnern und forschen, das Haus daran erinnern, dass es Teil von etwas Größerem ist.",
+      "handlungen": {
+        "position_0": {
+          "name": "Ökosozialismus",
+          "privat": [
+            "Konsum radikal reduzieren",
+            "Vegan leben",
+            "Fliegen vermeiden"
+          ],
+          "lokal": [
+            "Klimacamps organisieren",
+            "Ende Gelände unterstützen"
+          ],
+          "vernetzt": [
+            "System Change not Climate Change",
+            "Klimagerechtigkeit"
+          ],
+          "global": [
+            "Schuldenstreik für Klima",
+            "Loss and Damage fordern"
+          ]
+        },
+        "position_05": {
+          "name": "Sozial-ökologische Transformation",
+          "privat": [
+            "Nachhaltig leben",
+            "ÖPNV nutzen",
+            "Regional kaufen"
+          ],
+          "lokal": [
+            "Verkehrswende fordern",
+            "Energiewende vor Ort"
+          ],
+          "vernetzt": [
+            "FFF + Gewerkschaften verbinden",
+            "Just Transition"
+          ],
+          "global": [
+            "Paris-Abkommen verteidigen",
+            "Klimafinanzierung fordern"
+          ]
+        },
+        "position_1": {
+          "name": "Grüne Modernisierung",
+          "privat": [
+            "Grüne Technologie nutzen",
+            "Ökostrom beziehen"
+          ],
+          "lokal": [
+            "Cleantech fördern",
+            "E-Mobilität ausbauen"
+          ],
+          "vernetzt": [
+            "Öko-Innovation unterstützen"
+          ],
+          "global": [
+            "Technologietransfer",
+            "Green Finance"
+          ]
+        }
+      }
+    },
+    "09": {
+      "id": "09",
+      "name": "Feminismus-Salon",
+      "achse": "09",
+      "achse_name": "Feminismus",
+      "stockwerk": "souterrain",
+      "pole": [
+        "Materialistisch-intersektional",
+        "Liberaler Feminismus"
+      ],
+      "funktion": "Sichtbar machen, was unsichtbar war",
+      "kurz": "Hier wird die Welt neu gesehen.",
+      "beschreibung": "Ein Raum mit vielen Spiegeln – zur Erkenntnis, nicht zur Eitelkeit. Wer macht die Arbeit, die keiner sieht? Violette Vorhänge, weiche Sessel, scharfe Gespräche. 'Das Private ist politisch.'",
+      "atmosphaere": {
+        "stimmung": "Solidarisch, analytisch, manchmal konfrontativ",
+        "geraeusche": "Gespräche, manchmal Tränen und Lachen",
+        "geruch": "Tee, der Geruch von Ehrlichkeit",
+        "licht": "Warm, indirekt"
+      },
+      "typische_bewohner": [
+        "Silvia Federici (1942-)",
+        "bell hooks (1952-2021)",
+        "Angela Davis (1944-)",
+        "Cinzia Arruzza (1976-)"
+      ],
+      "zitat": "Feminismus ist für alle. – bell hooks",
+      "taetigkeit": "Analysieren, Care-Arbeit sichtbar machen, den Blick des ganzen Hauses verändern.",
+      "handlungen": {
+        "position_0": {
+          "name": "Materialistischer Feminismus",
+          "privat": [
+            "Care-Arbeit sichtbar machen",
+            "Eigene Privilegien reflektieren"
+          ],
+          "lokal": [
+            "Frauen*streik organisieren",
+            "Care-Arbeit politisieren"
+          ],
+          "vernetzt": [
+            "Feministische Streiks international",
+            "Care-Revolution"
+          ],
+          "global": [
+            "Internationale Frauen*bewegung",
+            "8. März global"
+          ]
+        },
+        "position_05": {
+          "name": "Intersektionaler Feminismus",
+          "privat": [
+            "Privilegien reflektieren",
+            "Zuhören lernen",
+            "Verbündete*r werden"
+          ],
+          "lokal": [
+            "Bündnisse bauen",
+            "Empowerment-Räume schaffen"
+          ],
+          "vernetzt": [
+            "Intersektionale Netzwerke",
+            "Queerfeminismus"
+          ],
+          "global": [
+            "Transnationale Solidarität"
+          ]
+        },
+        "position_1": {
+          "name": "Gleichstellungspolitik",
+          "privat": [
+            "Verhandeln lernen",
+            "Netzwerken"
+          ],
+          "lokal": [
+            "Quote fordern",
+            "Lohngleichheit durchsetzen"
+          ],
+          "vernetzt": [
+            "Frauenorganisationen unterstützen"
+          ],
+          "global": [
+            "UN Women",
+            "Gleichstellungsrechte international"
+          ]
+        }
+      }
+    },
+    "10": {
+      "id": "10",
+      "name": "Antirassismus-Werkstatt",
+      "achse": "10",
+      "achse_name": "Antirassismus",
+      "stockwerk": "souterrain",
+      "pole": [
+        "Strukturell-dekolonial",
+        "Integrationistisch"
+      ],
+      "funktion": "Rassismus benennen und bekämpfen",
+      "kurz": "Hier wird weißes Rauschen unterbrochen.",
+      "beschreibung": "Weiße Wände, die übermalt wurden. Landkarten ohne Europa in der Mitte. Bücher von Autor*innen, die in anderen Räumen fehlen. Was ist struktureller Rassismus? Was bedeutet Kolonialität?",
+      "atmosphaere": {
+        "stimmung": "Ehrlich, manchmal unbequem, transformativ",
+        "geraeusche": "Gespräche, manchmal Wut, manchmal Stille",
+        "geruch": "Gewürze aus aller Welt, der Geruch von Veränderung",
+        "licht": "Unterschiedlich – keine einheitliche Beleuchtung"
+      },
+      "typische_bewohner": [
+        "Frantz Fanon (1925-1961)",
+        "Angela Davis (1944-)",
+        "Grada Kilomba (1968-)",
+        "ISD"
+      ],
+      "zitat": "Ich bin schwarz, nicht weil ich Sonne abbekommen habe, sondern weil meine Haut Geschichte erzählt. – Fanon",
+      "taetigkeit": "Koloniale Kontinuitäten aufdecken, antirassistische Praxis entwickeln.",
+      "handlungen": {
+        "position_0": {
+          "name": "Dekolonial",
+          "privat": [
+            "Dekoloniale Theorie lesen",
+            "Eigene Position reflektieren",
+            "Weißsein verstehen"
+          ],
+          "lokal": [
+            "Dekolonisierungs-Initiativen unterstützen",
+            "Straßenumbenennungen fordern"
+          ],
+          "vernetzt": [
+            "Dekoloniale Netzwerke",
+            "Reparationsforderungen unterstützen"
+          ],
+          "global": [
+            "Globaler Süden solidarisch",
+            "Land Back unterstützen"
+          ]
+        },
+        "position_05": {
+          "name": "Struktureller Antirassismus",
+          "privat": [
+            "Rassismuskritische Bildung",
+            "Bündnispartner*in werden"
+          ],
+          "lokal": [
+            "Antidiskriminierungsbüros stärken",
+            "Polizeibeobachtung"
+          ],
+          "vernetzt": [
+            "NSU-Aufklärung fordern",
+            "Antirassistische Bündnisse"
+          ],
+          "global": [
+            "Black Lives Matter international"
+          ]
+        },
+        "position_1": {
+          "name": "Integration + Chancengleichheit",
+          "privat": [
+            "Vorurteile reflektieren",
+            "Diversität unterstützen"
+          ],
+          "lokal": [
+            "Integrationsprojekte unterstützen"
+          ],
+          "vernetzt": [
+            "Migrationsorganisationen"
+          ],
+          "global": [
+            "Internationale Antidiskriminierung"
+          ]
+        }
+      }
+    },
+    "11": {
+      "id": "11",
+      "name": "Technik-Labor",
+      "achse": "11",
+      "achse_name": "Technologie",
+      "stockwerk": "souterrain",
+      "pole": [
+        "Tech-Skepsis",
+        "Akzelerationismus"
+      ],
+      "funktion": "Technik verstehen und gestalten",
+      "kurz": "Hier summen die Maschinen – und es wird gefragt: Für wen?",
+      "beschreibung": "Computer, 3D-Drucker, aber auch kaputte Maschinen und Bücher über Luddismus. Hier wird gebaut und hinterfragt: Befreit uns Technologie – oder versklavt sie uns?",
+      "atmosphaere": {
+        "stimmung": "Ambivalent, neugierig, kritisch",
+        "geraeusche": "Maschinen, Code-Besprechungen",
+        "geruch": "Plastik, Lötzinn, Ozon",
+        "licht": "Künstlich, Bildschirme"
+      },
+      "typische_bewohner": [
+        "Donna Haraway (1944-)",
+        "Evgeny Morozov (1984-)",
+        "Nick Srnicek (1982-)",
+        "Ned Ludd (mythisch)"
+      ],
+      "zitat": "Technologie ist weder gut noch böse; noch ist sie neutral. – Kranzberg",
+      "taetigkeit": "Algorithmen analysieren, Reparaturen durchführen, Technik demokratisch gestalten.",
+      "handlungen": {
+        "position_0": {
+          "name": "Tech-Skepsis",
+          "privat": [
+            "Digital Detox",
+            "Low-Tech leben",
+            "Reparieren statt kaufen"
+          ],
+          "lokal": [
+            "Gegen Überwachung kämpfen",
+            "Techfolgenabschätzung fordern"
+          ],
+          "vernetzt": [
+            "Algorithmenkritik",
+            "KI-Ethik-Initiativen"
+          ],
+          "global": [
+            "Moratorien für gefährliche Technologien"
+          ]
+        },
+        "position_05": {
+          "name": "Demokratische Technikgestaltung",
+          "privat": [
+            "Open Source nutzen",
+            "Datenschutz ernst nehmen"
+          ],
+          "lokal": [
+            "Bürger*innen-Technologie fördern",
+            "Maker Spaces unterstützen"
+          ],
+          "vernetzt": [
+            "Tech Workers Coalition",
+            "CCC"
+          ],
+          "global": [
+            "Internationale Tech-Governance"
+          ]
+        },
+        "position_1": {
+          "name": "Akzelerationismus",
+          "privat": [
+            "Neue Technologien ausprobieren",
+            "Automatisierung verstehen"
+          ],
+          "lokal": [
+            "Innovation fördern"
+          ],
+          "vernetzt": [
+            "Zukunftstechnologien für Sozialismus nutzen"
+          ],
+          "global": [
+            "Automatisierung für globale Befreiung"
+          ]
+        }
+      }
+    },
+    "12": {
+      "id": "12",
+      "name": "Demokratie-Labor",
+      "achse": "12",
+      "achse_name": "Demokratie",
+      "stockwerk": "erster_stock",
+      "pole": [
+        "Rätedemokratie",
+        "Parlamentarismus"
+      ],
+      "funktion": "Neue Formen des Entscheidens entwickeln",
+      "kurz": "Hier wird gefragt: Wer entscheidet?",
+      "beschreibung": "Ein Raum voller Modelle: Ein Parlament in Miniatur, ein Räte-System aus Holzklötzen, ein Losverfahren mit Kugeln. Hier wird experimentiert: Wie können viele Menschen gemeinsam entscheiden? Wahlen, Abstimmungen, Konsens, Delegation – alles wird ausprobiert, analysiert, verbessert. An der Wand das Zitat: 'Demokratie ist die Staatsform der Selbstregierung des Volkes.'",
+      "atmosphaere": {
+        "stimmung": "Konstruktiv, experimentell, manchmal chaotisch",
+        "geraeusche": "Abstimmungen, Diskussionen, das Klicken von Stimmzetteln",
+        "geruch": "Papier, Stifte, frische Ideen",
+        "licht": "Hell, gleichmäßig – alle sollen gleich sehen können"
+      },
+      "typische_bewohner": [
+        "Rosa Luxemburg (1871-1919)",
+        "Murray Bookchin (1921-2006)",
+        "Carole Pateman (1940-)",
+        "David Van Reybrouck (1971-)"
+      ],
+      "zitat": "Freiheit ist immer die Freiheit der Andersdenkenden. – Rosa Luxemburg",
+      "taetigkeit": "Hier werden Verfahren entwickelt, Abstimmungen simuliert, neue Formen der Beteiligung erfunden. Wer hier arbeitet, weiß: Demokratie ist nie fertig.",
+      "handlungen": {
+        "position_0": {
+          "name": "Rätedemokratie",
+          "privat": [
+            "Räteerfahrungen studieren",
+            "Basisdemokratie lernen"
+          ],
+          "lokal": [
+            "Nachbarschaftsräte gründen",
+            "Betriebsräte stärken"
+          ],
+          "vernetzt": [
+            "Räte-Netzwerke aufbauen"
+          ],
+          "global": [
+            "Internationale Räte-Erfahrungen",
+            "Rojava, Zapatistas"
+          ]
+        },
+        "position_05": {
+          "name": "Mehr direkte Demokratie",
+          "privat": [
+            "Beteiligungsformate kennenlernen"
+          ],
+          "lokal": [
+            "Bürgerentscheide initiieren",
+            "Bürgerräte fordern"
+          ],
+          "vernetzt": [
+            "Mehr Demokratie e.V.",
+            "Volksentscheids-Kampagnen"
+          ],
+          "global": [
+            "EU demokratisieren",
+            "Transnationale Demokratie"
+          ]
+        },
+        "position_1": {
+          "name": "Parlamentarismus stärken",
+          "privat": [
+            "Parlamentsarbeit verstehen"
+          ],
+          "lokal": [
+            "In Parteien mitarbeiten",
+            "Abgeordnete ansprechen"
+          ],
+          "vernetzt": [
+            "Parlamentarische Initiativen"
+          ],
+          "global": [
+            "Internationale Parlamente stärken"
+          ]
+        }
+      }
+    },
+    "13": {
+      "id": "13",
+      "name": "Aktions-Kammer",
+      "achse": "13",
+      "achse_name": "Aktionsformen",
+      "stockwerk": "keller",
+      "pole": [
+        "Ziviler Ungehorsam",
+        "Nur legale Mittel"
+      ],
+      "funktion": "Die Werkzeuge des Widerstands",
+      "kurz": "Hier wird gepackt – für die Demo, die Blockade, die Aktion.",
+      "beschreibung": "Transparente, Megaphone, Seile, Kochtöpfe, Schlafsäcke, Verbandskästen. Alles für die Praxis. Die Frage: Welche Mittel sind erlaubt?",
+      "atmosphaere": {
+        "stimmung": "Aufgeregt, praktisch, manchmal gefährlich",
+        "geraeusche": "Packen, Absprechen, letzte Instruktionen",
+        "geruch": "Farbe, Adrenalin",
+        "licht": "Arbeitsbeleuchtung, Taschenlampen"
+      },
+      "typische_bewohner": [
+        "Gene Sharp (1928-2018)",
+        "Andreas Malm (1977-)",
+        "Extinction Rebellion",
+        "Ende Gelände"
+      ],
+      "zitat": "Wenn Unrecht zu Recht wird, wird Widerstand zur Pflicht. – Brecht (zugeschrieben)",
+      "taetigkeit": "Die Praxis vorbereiten, dafür sorgen, dass Ideen in der Welt ankommen.",
+      "handlungen": {
+        "position_0": {
+          "name": "Alle notwendigen Mittel",
+          "privat": [
+            "Rechtshilfe kennen",
+            "Risiko abwägen",
+            "Fitness"
+          ],
+          "lokal": [
+            "Direkte Aktionen organisieren",
+            "Blockaden",
+            "Besetzungen"
+          ],
+          "vernetzt": [
+            "Solidarität mit Angeklagten",
+            "Rote Hilfe"
+          ],
+          "global": [
+            "Internationale direkte Aktionen"
+          ]
+        },
+        "position_05": {
+          "name": "Ziviler Ungehorsam",
+          "privat": [
+            "Gewaltfreie Kommunikation lernen",
+            "Aktionstraining"
+          ],
+          "lokal": [
+            "Sitzblockaden",
+            "Kletteraktionen",
+            "Symbolische Aktionen"
+          ],
+          "vernetzt": [
+            "XR",
+            "Ende Gelände",
+            "Letzte Generation"
+          ],
+          "global": [
+            "Transnationale gewaltfreie Proteste"
+          ]
+        },
+        "position_1": {
+          "name": "Legaler Protest",
+          "privat": [
+            "Demonstrationsrecht kennen"
+          ],
+          "lokal": [
+            "Angemeldete Demos organisieren",
+            "Petitionen starten"
+          ],
+          "vernetzt": [
+            "NGO-Kampagnen",
+            "Öffentlichkeitsarbeit"
+          ],
+          "global": [
+            "Internationale Petitionen",
+            "UN-Mechanismen nutzen"
+          ]
+        }
+      }
+    },
+    "14": {
+      "id": "14",
+      "name": "Konfliktlinien-Werkstatt",
+      "achse": "14",
+      "achse_name": "Kulturkampf",
+      "stockwerk": "dachgeschoss",
+      "pole": [
+        "Klasse zentral",
+        "Kultur zentral"
+      ],
+      "funktion": "Die Bruchlinien verstehen",
+      "kurz": "Hier wird gestritten: Klasse oder Identität?",
+      "beschreibung": "Ein Raum voller Whiteboards mit Diagrammen: 'Klasse vs. Identität', 'Ökonomie vs. Kultur', 'Materialismus vs. Postmaterialismus'. Hier tobt der Streit, der die Linke seit Jahren spaltet. Die einen sagen: Alles ist Klassenkampf! Die anderen: Ihr ignoriert Rassismus, Sexismus, alles außer Geld! In der Mitte versuchen manche, Brücken zu bauen.",
+      "atmosphaere": {
+        "stimmung": "Hitzig, frustriert, aber wichtig",
+        "geraeusche": "Laute Debatten, Seufzen, manchmal Türenschlagen",
+        "geruch": "Schweiß, Frustration, Hoffnung",
+        "licht": "Grell, keine Schatten zum Verstecken"
+      },
+      "typische_bewohner": [
+        "Nancy Fraser (1947-)",
+        "Didier Eribon (1953-)",
+        "Sahra Wagenknecht (1969-)",
+        "Keeanga-Yamahtta Taylor (1972-)"
+      ],
+      "zitat": "Anerkennung ohne Umverteilung ist leer. Umverteilung ohne Anerkennung ist blind. – Nancy Fraser",
+      "taetigkeit": "Hier wird versucht, falsche Gegensätze zu überwinden – oder zumindest zu verstehen, warum der Streit so erbittert ist. Wer hier arbeitet, muss viel aushalten.",
+      "handlungen": {
+        "position_0": {
+          "name": "Klasse im Zentrum",
+          "privat": [
+            "Klassiker zur sozialen Frage lesen",
+            "Eigene Klassenlage reflektieren"
+          ],
+          "lokal": [
+            "Sozialkämpfe unterstützen",
+            "Mieten-, Lohn-Kampagnen"
+          ],
+          "vernetzt": [
+            "Gewerkschaftsarbeit",
+            "Klassenpolitische Bündnisse"
+          ],
+          "global": [
+            "Internationale Arbeitersolidarität"
+          ]
+        },
+        "position_05": {
+          "name": "Beides verbinden",
+          "privat": [
+            "Intersektionalität verstehen",
+            "Eigene Privilegien reflektieren"
+          ],
+          "lokal": [
+            "Brückenbau zwischen Gruppen",
+            "Gemeinsame Kampagnen"
+          ],
+          "vernetzt": [
+            "Bewegungsübergreifende Arbeit"
+          ],
+          "global": [
+            "Globale Gerechtigkeitskämpfe"
+          ]
+        },
+        "position_1": {
+          "name": "Kulturelle Kämpfe zentral",
+          "privat": [
+            "Identitätspolitik studieren",
+            "Diskriminierung erkennen"
+          ],
+          "lokal": [
+            "Antidiskriminierung",
+            "Safe Spaces schaffen"
+          ],
+          "vernetzt": [
+            "Bündnisse marginalisierter Gruppen"
+          ],
+          "global": [
+            "Internationale LGBTQ+-, BIPoC-Solidarität"
+          ]
+        }
+      }
+    },
+    "15": {
+      "id": "15",
+      "name": "Europa-Zimmer",
+      "achse": "15",
+      "achse_name": "EU",
+      "stockwerk": "keller",
+      "pole": [
+        "Lexit",
+        "Föderales Europa"
+      ],
+      "funktion": "Europa streiten",
+      "kurz": "Hier wird über die EU gestritten – reformieren oder verlassen?",
+      "beschreibung": "EU-Karte und Protestposter gegen die Troika. Die einen wollen raus aus der 'neoliberalen Festung', die anderen ein anderes, demokratisches Europa.",
+      "atmosphaere": {
+        "stimmung": "Zerrissen, europäisch, frustriert-hoffend",
+        "geraeusche": "Viele Sprachen, Brüssel-Jargon",
+        "geruch": "Konferenzräume, europäische Bürokratie",
+        "licht": "Neonröhren"
+      },
+      "typische_bewohner": [
+        "Yanis Varoufakis (1961-)",
+        "Costas Lapavitsas (1961-)",
+        "DiEM25",
+        "Europäische Linke"
+      ],
+      "zitat": "Another Europe is possible – but not this one. – DiEM25",
+      "taetigkeit": "EU-Verträge analysieren, transnationale Bündnisse schmieden.",
+      "handlungen": {
+        "position_0": {
+          "name": "Lexit",
+          "privat": [
+            "EU-Kritik studieren",
+            "Nationale Souveränität verstehen"
+          ],
+          "lokal": [
+            "EU-kritische Aufklärung"
+          ],
+          "vernetzt": [
+            "Lexit-Debatten führen",
+            "Nationale linke Parteien"
+          ],
+          "global": [
+            "Alternative internationale Bündnisse"
+          ]
+        },
+        "position_05": {
+          "name": "Kritische Reform",
+          "privat": [
+            "EU verstehen",
+            "Europäisch vernetzen"
+          ],
+          "lokal": [
+            "EU-Fördermittel kritisch nutzen"
+          ],
+          "vernetzt": [
+            "DiEM25",
+            "Transform Europe",
+            "Europäische Linke"
+          ],
+          "global": [
+            "Europäische Bewegungen koordinieren"
+          ]
+        },
+        "position_1": {
+          "name": "Föderales Europa",
+          "privat": [
+            "Europäisch denken",
+            "Sprachen lernen"
+          ],
+          "lokal": [
+            "Städtepartnerschaften nutzen"
+          ],
+          "vernetzt": [
+            "Pro-europäische Linke"
+          ],
+          "global": [
+            "Vereinigte Staaten von Europa"
+          ]
+        }
+      }
+    },
+    "16": {
+      "id": "16",
+      "name": "Arbeits-Werkstatt",
+      "achse": "16",
+      "achse_name": "Arbeit",
+      "stockwerk": "erdgeschoss",
+      "pole": [
+        "Befreiung von Arbeit",
+        "Gute Arbeit für alle"
+      ],
+      "funktion": "Arbeit neu denken",
+      "kurz": "Hier wird gearbeitet – und Arbeit hinterfragt.",
+      "beschreibung": "Ein Raum mit Werkbänken und Hängematten. Hier wird hergestellt – aber auch gefragt: Muss das sein? Die einen fordern Arbeit für alle, die anderen Freiheit von Arbeit.",
+      "atmosphaere": {
+        "stimmung": "Produktiv, nachdenklich, manchmal erschöpft",
+        "geraeusche": "Maschinengeräusche, Diskussionen",
+        "geruch": "Schweiß, Materialien, Kaffee",
+        "licht": "Arbeitsbeleuchtung, Tageslicht"
+      },
+      "typische_bewohner": [
+        "André Gorz (1923-2007)",
+        "Kathi Weeks (1958-)",
+        "David Graeber (1961-2020)",
+        "Frigga Haug (1937-)"
+      ],
+      "zitat": "Es ist an der Zeit, nach dem Leben jenseits der Arbeit zu fragen. – Kathi Weeks",
+      "taetigkeit": "Arbeitszeitverkürzung planen, Bullshit-Jobs analysieren, Automatisierung erkunden.",
+      "handlungen": {
+        "position_0": {
+          "name": "Post-Work",
+          "privat": [
+            "Arbeitszeit reduzieren",
+            "Graeber lesen",
+            "Bullshit-Job erkennen"
+          ],
+          "lokal": [
+            "Arbeitszeitverkürzungs-Kampagnen",
+            "Anti-Bullshit-Job-Aktionen"
+          ],
+          "vernetzt": [
+            "4-Tage-Woche-Bewegung",
+            "Post-Work-Netzwerke"
+          ],
+          "global": [
+            "Internationale Arbeitszeitverkürzung"
+          ]
+        },
+        "position_05": {
+          "name": "30-Stunden-Woche",
+          "privat": [
+            "Teilzeit wählen wenn möglich",
+            "Work-Life-Balance"
+          ],
+          "lokal": [
+            "Tarifkämpfe um Arbeitszeit unterstützen"
+          ],
+          "vernetzt": [
+            "Gewerkschaftliche Arbeitszeitpolitik"
+          ],
+          "global": [
+            "ILO-Standards stärken"
+          ]
+        },
+        "position_1": {
+          "name": "Gute Arbeit",
+          "privat": [
+            "Arbeitsbedingungen verbessern",
+            "Rechte kennen"
+          ],
+          "lokal": [
+            "Betriebsratsarbeit",
+            "Mindestlohn-Kontrolle"
+          ],
+          "vernetzt": [
+            "DGB",
+            "Tarifbindung stärken"
+          ],
+          "global": [
+            "Arbeitsrechte weltweit durchsetzen"
+          ]
+        }
+      }
+    },
+    "17": {
+      "id": "17",
+      "name": "Wachstumskritik-Observatorium",
+      "achse": "17",
+      "achse_name": "Wachstum",
+      "stockwerk": "dachgeschoss",
+      "pole": [
+        "Degrowth",
+        "Grünes Wachstum"
+      ],
+      "funktion": "Die Grenzen des Planeten verstehen",
+      "kurz": "Hier wird gefragt: Wie viel ist genug?",
+      "beschreibung": "Ein Raum mit großen Fenstern, die auf eine Welt blicken, die zu viel produziert und konsumiert. An den Wänden hängen Grafiken: Exponentialkurven, die gegen planetare Grenzen stoßen. In der Mitte ein Modell der Erde, an dem rote Lämpchen aufleuchten. Manche hier wollen die Kurve abflachen (Effizienz!), andere wollen sie umkehren (Weniger ist mehr!). Alle wissen: So kann es nicht weitergehen.",
+      "atmosphaere": {
+        "stimmung": "Nachdenklich, manchmal bedrückt, aber auch hoffnungsvoll",
+        "geraeusche": "Das Ticken einer Uhr, das Summen von Computern, leise Musik",
+        "geruch": "Frische Luft von draußen, selbstgemachtes Essen",
+        "licht": "Natürliches Tageslicht, nachts Kerzen"
+      },
+      "typische_bewohner": [
+        "Jason Hickel (1982-)",
+        "Niko Paech (1960-)",
+        "Kohei Saito (1987-)",
+        "Kate Raworth (1970-)"
+      ],
+      "zitat": "Unendliches Wachstum auf einem endlichen Planeten ist unmöglich. – Kenneth Boulding",
+      "taetigkeit": "Hier werden Statistiken analysiert, Szenarien durchgerechnet, Alternativen entworfen. Wer hier arbeitet, lernt, in anderen Maßstäben zu denken: Nicht 'Wie viel mehr?', sondern 'Wie viel ist genug?'",
+      "handlungen": {
+        "position_0": {
+          "name": "Degrowth",
+          "privat": [
+            "Konsumverzicht üben",
+            "Reparieren statt kaufen",
+            "Arbeitszeit reduzieren"
+          ],
+          "lokal": [
+            "Transition-Town-Initiative starten",
+            "Repair-Café gründen",
+            "Tauschring"
+          ],
+          "vernetzt": [
+            "Degrowth-Netzwerk",
+            "Konzernmacht-Kampagnen"
+          ],
+          "global": [
+            "Degrowth-Konferenzen",
+            "Klimagerechtigkeit"
+          ]
+        },
+        "position_05": {
+          "name": "Selektives Wachstum",
+          "privat": [
+            "Suffizienz praktizieren",
+            "In Erneuerbare investieren"
+          ],
+          "lokal": [
+            "Green-New-Deal-Initiativen",
+            "Verkehrswende fordern"
+          ],
+          "vernetzt": [
+            "Just-Transition-Bündnisse",
+            "Gewerkschaften + Klima"
+          ],
+          "global": [
+            "Internationale Klimapolitik",
+            "Technologietransfer"
+          ]
+        },
+        "position_1": {
+          "name": "Grünes Wachstum",
+          "privat": [
+            "E-Auto kaufen",
+            "Grünen Strom beziehen"
+          ],
+          "lokal": [
+            "Cleantech fördern",
+            "Start-ups unterstützen"
+          ],
+          "vernetzt": [
+            "Wirtschaftsverbände beeinflussen"
+          ],
+          "global": [
+            "Emissionshandel",
+            "Grüne Technologie exportieren"
+          ]
+        }
+      }
+    },
+    "18": {
+      "id": "18",
+      "name": "Nahost-Archiv",
+      "achse": "18",
+      "achse_name": "Nahost",
+      "stockwerk": "keller",
+      "pole": [
+        "Pro-Palästina",
+        "Ausgewogen / Pro-Israel"
+      ],
+      "funktion": "Den schwierigsten Konflikt verstehen",
+      "kurz": "Hier wird geweint – und gestritten.",
+      "beschreibung": "Fotos, Karten, Tränen. Gaza, Tel Aviv, Westjordanland. Der Schmerz von Generationen – und der Streit der Linken darüber. 'Free Palestine' an einer Wand, 'Nie wieder' an der anderen.",
+      "atmosphaere": {
+        "stimmung": "Schmerzhaft, zerrissen, wichtig",
+        "geraeusche": "Leise Gespräche, manchmal Tränen",
+        "geruch": "Altes Papier, der Geruch von Geschichte",
+        "licht": "Gedämpft, respektvoll"
+      },
+      "typische_bewohner": [
+        "Edward Said (1935-2003)",
+        "Ilan Pappé (1954-)",
+        "Omri Boehm (1979-)",
+        "Jüdische Stimme"
+      ],
+      "zitat": "Wir weigern uns, Feinde zu sein. – Tent of Nations",
+      "taetigkeit": "Recherchieren, streiten, versuchen zu verstehen.",
+      "handlungen": {
+        "position_0": {
+          "name": "Pro-Palästina",
+          "privat": [
+            "Geschichte Palästinas lernen",
+            "Nakba verstehen"
+          ],
+          "lokal": [
+            "Palästina-Solidarität organisieren",
+            "Gegen Besatzung demonstrieren"
+          ],
+          "vernetzt": [
+            "Palästina-Organisationen",
+            "BDS-Debatte führen"
+          ],
+          "global": [
+            "Internationale Solidarität",
+            "UN-Resolutionen einfordern"
+          ]
+        },
+        "position_05": {
+          "name": "Beide Seiten / Völkerrecht",
+          "privat": [
+            "Beide Perspektiven lesen",
+            "Komplexität aushalten"
+          ],
+          "lokal": [
+            "Dialog fördern",
+            "Gegen Antisemitismus UND Besatzung"
+          ],
+          "vernetzt": [
+            "Jüdisch-palästinensische Initiativen"
+          ],
+          "global": [
+            "Zwei-Staaten-Lösung",
+            "Völkerrecht durchsetzen"
+          ]
+        },
+        "position_1": {
+          "name": "Israels Existenzrecht",
+          "privat": [
+            "Jüdische Geschichte verstehen",
+            "Antisemitismus erkennen"
+          ],
+          "lokal": [
+            "Gegen Antisemitismus aktiv werden"
+          ],
+          "vernetzt": [
+            "Jüdische Organisationen unterstützen"
+          ],
+          "global": [
+            "Israels Sicherheit",
+            "Frieden durch Verhandlungen"
+          ]
+        }
+      }
+    },
+    "19": {
+      "id": "19",
+      "name": "Migrations-Passage",
+      "achse": "19",
+      "achse_name": "Migration",
+      "stockwerk": "keller",
+      "pole": [
+        "Offene Grenzen",
+        "Regulierung"
+      ],
+      "funktion": "Bewegungsfreiheit erkämpfen",
+      "kurz": "Hier kommen Menschen an – und werden unterstützt.",
+      "beschreibung": "Viele Türen – manche offen, manche verschlossen. Geflüchtete werden beraten, Abschiebungen verhindert, Seenotrettung organisiert. 'Kein Mensch ist illegal.'",
+      "atmosphaere": {
+        "stimmung": "Dringend, solidarisch, manchmal verzweifelt",
+        "geraeusche": "Viele Sprachen, Telefonate",
+        "geruch": "Essen aus aller Welt, Hoffnung",
+        "licht": "Wechselnd"
+      },
+      "typische_bewohner": [
+        "Seebrücke",
+        "Pro Asyl",
+        "Sea-Watch",
+        "Solidarity City"
+      ],
+      "zitat": "Kein Mensch ist illegal.",
+      "taetigkeit": "Beraten, Abschiebungen stören, Grenzen in Frage stellen.",
+      "handlungen": {
+        "position_0": {
+          "name": "Offene Grenzen",
+          "privat": [
+            "Geflüchtete unterstützen",
+            "No-Border-Theorie lesen"
+          ],
+          "lokal": [
+            "Abschiebungen verhindern",
+            "Kirchenasyl organisieren"
+          ],
+          "vernetzt": [
+            "Seenotrettung unterstützen",
+            "No-Border-Netzwerke"
+          ],
+          "global": [
+            "Bewegungsfreiheit als Menschenrecht"
+          ]
+        },
+        "position_05": {
+          "name": "Humanitäre Migrationspolitik",
+          "privat": [
+            "Sprachcafés",
+            "Patenschaften"
+          ],
+          "lokal": [
+            "Willkommensinitiativen",
+            "Integration vor Ort"
+          ],
+          "vernetzt": [
+            "Pro Asyl",
+            "Flüchtlingsräte"
+          ],
+          "global": [
+            "Sichere Fluchtwege",
+            "Resettlement"
+          ]
+        },
+        "position_1": {
+          "name": "Regulierte Migration",
+          "privat": [
+            "Integration unterstützen"
+          ],
+          "lokal": [
+            "Sprachkurse organisieren",
+            "Arbeitsmarktintegration"
+          ],
+          "vernetzt": [
+            "Integrationsverbände"
+          ],
+          "global": [
+            "Fluchtursachen bekämpfen"
+          ]
+        }
+      }
+    },
+    "20": {
+      "id": "20",
+      "name": "Digital-Commons-Lab",
+      "achse": "20",
+      "achse_name": "Digitalität",
+      "stockwerk": "erdgeschoss",
+      "pole": [
+        "Digitale Commons",
+        "Regulierung Big Tech"
+      ],
+      "funktion": "Das Internet zurückerobern",
+      "kurz": "Hier wird Code geschrieben – und Macht analysiert.",
+      "beschreibung": "Bildschirme, Server summen. Poster von Aaron Swartz: 'Information wants to be free'. Analysen der Macht von Google, Amazon, Meta. Hier wird an Alternativen gearbeitet.",
+      "atmosphaere": {
+        "stimmung": "Nerd-Aktivismus, konzentriert, hoffnungsvoll",
+        "geraeusche": "Tastaturklicken, Server-Summen",
+        "geruch": "Elektrik, Pizza, Mate",
+        "licht": "Bildschirmlicht"
+      },
+      "typische_bewohner": [
+        "Aaron Swartz (1986-2013)",
+        "Evgeny Morozov (1984-)",
+        "Trebor Scholz (1964-)",
+        "Chaos Computer Club"
+      ],
+      "zitat": "Information wants to be free. – Stewart Brand",
+      "taetigkeit": "Alternativen zu Big Tech entwickeln, digitale Selbstverteidigung lehren.",
+      "handlungen": {
+        "position_0": {
+          "name": "Vergesellschaftung",
+          "privat": [
+            "Big Tech verlassen",
+            "Fediverse nutzen",
+            "Daten schützen"
+          ],
+          "lokal": [
+            "Öffentliche digitale Infrastruktur fordern"
+          ],
+          "vernetzt": [
+            "Platform Coops",
+            "CCC",
+            "Bits & Bäume"
+          ],
+          "global": [
+            "Internationale Plattform-Vergesellschaftung"
+          ]
+        },
+        "position_05": {
+          "name": "Zerschlagung + Öffentliche Alternativen",
+          "privat": [
+            "Open Source nutzen",
+            "Datensparsamkeit",
+            "Linux"
+          ],
+          "lokal": [
+            "Kommunale IT",
+            "Digitale Bildung"
+          ],
+          "vernetzt": [
+            "Digital Markets Act nutzen",
+            "Noyb unterstützen"
+          ],
+          "global": [
+            "EU-Digitalregulierung stärken"
+          ]
+        },
+        "position_1": {
+          "name": "Regulierung",
+          "privat": [
+            "DSGVO-Rechte nutzen"
+          ],
+          "lokal": [
+            "Datenschutzbeauftragte stärken"
+          ],
+          "vernetzt": [
+            "Wettbewerbsrecht anwenden"
+          ],
+          "global": [
+            "Internationale Tech-Regulierung"
+          ]
+        }
+      }
+    },
+    "21": {
+      "id": "21",
+      "name": "Care-Zentrum",
+      "achse": "21",
+      "achse_name": "Care",
+      "stockwerk": "souterrain",
+      "pole": [
+        "Vergesellschaftung",
+        "Aufwertung im System"
+      ],
+      "funktion": "Sorgen als politische Aufgabe",
+      "kurz": "Hier wird für andere gesorgt – und über Sorge nachgedacht.",
+      "beschreibung": "Kinderspielecke, Pflegebett, Küche – und Bücher über Care-Ökonomie. Hier wird gleichzeitig gesorgt und politisiert. 'Care-Arbeit ist Arbeit!'",
+      "atmosphaere": {
+        "stimmung": "Warm, erschöpft, kämpferisch",
+        "geraeusche": "Kinderlachen, Kochtöpfe, leise Gespräche",
+        "geruch": "Essen, Waschmittel, Leben",
+        "licht": "Warm, wohnlich"
+      },
+      "typische_bewohner": [
+        "Gabriele Winker (1959-)",
+        "Silvia Federici (1942-)",
+        "Joan Tronto (1952-)",
+        "Care-Revolution"
+      ],
+      "zitat": "Sorge ist die Grundlage des Lebens. – Joan Tronto",
+      "taetigkeit": "Sorgearbeit politisieren, Care-Streiks planen, nebenbei das Abendessen kochen.",
+      "handlungen": {
+        "position_0": {
+          "name": "Vergesellschaftung von Care",
+          "privat": [
+            "Care-Arbeit sichtbar machen",
+            "Teilen statt Kaufen"
+          ],
+          "lokal": [
+            "Kollektive Kinderbetreuung",
+            "Nachbarschafts-Care"
+          ],
+          "vernetzt": [
+            "Care-Revolution",
+            "Sorgestreik organisieren"
+          ],
+          "global": [
+            "Globale Care-Ketten thematisieren"
+          ]
+        },
+        "position_05": {
+          "name": "Ausbau + Aufwertung",
+          "privat": [
+            "Care gerecht verteilen",
+            "Pflege wertschätzen"
+          ],
+          "lokal": [
+            "Kita-Ausbau fordern",
+            "Pflege-Personalschlüssel"
+          ],
+          "vernetzt": [
+            "ver.di Pflege",
+            "Elternverbände"
+          ],
+          "global": [
+            "ILO Care-Standards"
+          ]
+        },
+        "position_1": {
+          "name": "Bessere Bedingungen",
+          "privat": [
+            "Pflegende unterstützen"
+          ],
+          "lokal": [
+            "Pflegelöhne erhöhen",
+            "Anerkennung schaffen"
+          ],
+          "vernetzt": [
+            "Pflegeverbände stärken"
+          ],
+          "global": [
+            "Internationale Pflegestandards"
+          ]
+        }
+      }
+    },
+    "22": {
+      "id": "22",
+      "name": "Land-Stadt-Karte",
+      "achse": "22",
+      "achse_name": "Land/Stadt",
+      "stockwerk": "keller",
+      "pole": [
+        "Dezentralisierung",
+        "Urbaner Fokus"
+      ],
+      "funktion": "Die vergessenen Räume sehen",
+      "kurz": "Hier wird über die Leerstellen auf der Karte geredet.",
+      "beschreibung": "Große Karte: Städte als leuchtende Punkte, dazwischen Dunkelheit. Was ist mit dem Land? Den abgehängten Regionen? Wie erreicht linke Politik Menschen ohne Bioladen?",
+      "atmosphaere": {
+        "stimmung": "Nachdenklich, selbstkritisch",
+        "geraeusche": "Stille vom Land, Großstadt-Rauschen",
+        "geruch": "Heu und Abgase",
+        "licht": "Ungleich verteilt"
+      },
+      "typische_bewohner": [
+        "Murray Bookchin (1921-2006)",
+        "E.F. Schumacher (1911-1977)",
+        "Transition Towns",
+        "Dorfbewegung"
+      ],
+      "zitat": "Small is beautiful. – Schumacher",
+      "taetigkeit": "Regionale Strategien entwickeln, ländliche Räume neu denken.",
+      "handlungen": {
+        "position_0": {
+          "name": "Dezentralisierung",
+          "privat": [
+            "Aufs Land ziehen erwägen",
+            "Regionale Produkte kaufen"
+          ],
+          "lokal": [
+            "Dorf-Genossenschaften gründen",
+            "Regionale Kreisläufe aufbauen"
+          ],
+          "vernetzt": [
+            "Transition Towns",
+            "Solidarische Landwirtschaft"
+          ],
+          "global": [
+            "Bioregionalismus",
+            "Subsistenz-Netzwerke"
+          ]
+        },
+        "position_05": {
+          "name": "Gleichwertige Lebensverhältnisse",
+          "privat": [
+            "Land und Stadt verbinden",
+            "Mobilität überdenken"
+          ],
+          "lokal": [
+            "Nahverkehr fordern",
+            "Breitband-Ausbau"
+          ],
+          "vernetzt": [
+            "Ländliche Räume in Parteien thematisieren"
+          ],
+          "global": [
+            "EU-Regionalpolitik nutzen"
+          ]
+        },
+        "position_1": {
+          "name": "Urbaner Fokus",
+          "privat": [
+            "Städtische Möglichkeiten nutzen"
+          ],
+          "lokal": [
+            "Städte als Labore",
+            "Progressive Kommunalpolitik"
+          ],
+          "vernetzt": [
+            "Städte-Netzwerke",
+            "Fearless Cities"
+          ],
+          "global": [
+            "C40 Cities",
+            "Globale Städte vernetzen"
+          ]
+        }
+      }
+    },
+    "23": {
+      "id": "23",
+      "name": "Geschichts-Archiv",
+      "achse": "23",
+      "achse_name": "Geschichte",
+      "stockwerk": "dachgeschoss",
+      "pole": [
+        "Kritische Aufarbeitung",
+        "Verteidigung der Tradition"
+      ],
+      "funktion": "Die eigene Geschichte verstehen",
+      "kurz": "Hier wird gefragt: Wo kommen wir her?",
+      "beschreibung": "Regale voller Akten, Fotos, vergilbter Dokumente. Hier lagert das Gedächtnis der Linken – Triumph und Tragödie. Bilder von der Pariser Kommune neben Fotos von den Gulag. Das Lied der Arbeiterbewegung neben dem Schweigen über Stalins Terror. Wer hier arbeitet, muss aushalten, dass die eigene Geschichte nicht nur Helden kennt.",
+      "atmosphaere": {
+        "stimmung": "Nachdenklich, manchmal schmerzhaft, notwendig",
+        "geraeusche": "Das Rascheln von Papier, leise Gespräche, manchmal Tränen",
+        "geruch": "Altes Papier, Staub, der Geruch von Geschichte",
+        "licht": "Archivlampen, gedämpft"
+      },
+      "typische_bewohner": [
+        "Wolfgang Templin (1948-)",
+        "Bärbel Bohley (1945-2010)",
+        "Dietmar Keller (Historiker)",
+        "Ines Geipel (1960-)"
+      ],
+      "zitat": "Wer vor der Vergangenheit die Augen verschließt, wird blind für die Gegenwart. – Richard von Weizsäcker",
+      "taetigkeit": "Hier wird gelesen, sortiert, eingeordnet. Interviews mit Zeitzeug*innen, Quellenkritik, das schwierige Gespräch zwischen Generationen. Wer hier arbeitet, lernt: Geschichte ist nie fertig.",
+      "handlungen": {
+        "position_0": {
+          "name": "Kritische Aufarbeitung",
+          "privat": [
+            "Zeitzeugen-Gespräche führen",
+            "Kritische Biografien lesen"
+          ],
+          "lokal": [
+            "Gedenkstätten besuchen",
+            "Opfer-Initiativen unterstützen"
+          ],
+          "vernetzt": [
+            "Aufarbeitungskommissionen",
+            "Geschichtswerkstätten"
+          ],
+          "global": [
+            "Vergleichende Diktaturforschung",
+            "Transitional Justice"
+          ]
+        },
+        "position_05": {
+          "name": "Differenzierte Betrachtung",
+          "privat": [
+            "Verschiedene Perspektiven lesen",
+            "Familiengespräche führen"
+          ],
+          "lokal": [
+            "Stadtteilgeschichte erforschen",
+            "Oral History"
+          ],
+          "vernetzt": [
+            "Historische Bildungsarbeit"
+          ],
+          "global": [
+            "Vergleichende Sozialgeschichte"
+          ]
+        },
+        "position_1": {
+          "name": "Traditionen verteidigen",
+          "privat": [
+            "Arbeiterbewegungsgeschichte lesen",
+            "Lieder lernen"
+          ],
+          "lokal": [
+            "Gedenktage organisieren",
+            "Traditionspflege"
+          ],
+          "vernetzt": [
+            "Gewerkschaftsgeschichte vermitteln"
+          ],
+          "global": [
+            "Internationale Arbeiterbewegung dokumentieren"
+          ]
+        }
+      }
+    },
+    "24": {
+      "id": "24",
+      "name": "Weltpolitik-Kartenzimmer",
+      "achse": "24",
+      "achse_name": "Geopolitik",
+      "stockwerk": "dachgeschoss",
+      "pole": [
+        "Multipolar / NATO-Kritik",
+        "Westliche Demokratien"
+      ],
+      "funktion": "Die Welt verstehen, Stellung beziehen",
+      "kurz": "Hier wird gefragt: Wer ist der Hauptfeind?",
+      "beschreibung": "Eine riesige Weltkarte bedeckt die Wand, übersät mit Pins, Fäden, Notizen. NATO-Basen in Blau, russische in Rot, chinesische in Gelb. Alte Plakate: 'Der Hauptfeind steht im eigenen Land' (Liebknecht). Neuere: 'Solidarität mit der Ukraine'. Die Diskussionen hier sind oft schmerzhaft – alte Gewissheiten zerbrechen, neue sind noch nicht gefunden.",
+      "atmosphaere": {
+        "stimmung": "Angespannt, zerrissen, suchend",
+        "geraeusche": "Nachrichtensendungen, hitzige Debatten, manchmal betretenes Schweigen",
+        "geruch": "Zeitungspapier, Stress",
+        "licht": "Flackernde Bildschirme, Neonröhren"
+      },
+      "typische_bewohner": [
+        "Karl Liebknecht (1871-1919)",
+        "Vijay Prashad (1967-)",
+        "Timothy Snyder (1969-)",
+        "Johan Galtung (1930-2024)"
+      ],
+      "zitat": "Der Hauptfeind steht im eigenen Land. – Karl Liebknecht, 1915",
+      "taetigkeit": "Hier werden Konflikte analysiert, Positionen entwickelt, Solidarität organisiert. Es ist der schwierigste Raum des Hauses – voller Widersprüche und historischer Lasten.",
+      "handlungen": {
+        "position_0": {
+          "name": "Multipolar / NATO-kritisch",
+          "privat": [
+            "Alternative Medien lesen",
+            "Kriegsdienstverweigerung"
+          ],
+          "lokal": [
+            "Friedensgruppen",
+            "NATO-Austritt fordern"
+          ],
+          "vernetzt": [
+            "Friedensbewegung",
+            "Anti-Imperialistische Bündnisse"
+          ],
+          "global": [
+            "Solidarität mit globalem Süden",
+            "Blockfreie Bewegung"
+          ]
+        },
+        "position_05": {
+          "name": "Antimilitaristisch",
+          "privat": [
+            "Rüstungsaktien vermeiden",
+            "Friedensforschung lesen"
+          ],
+          "lokal": [
+            "Gegen Aufrüstung protestieren",
+            "Waffenexporte thematisieren"
+          ],
+          "vernetzt": [
+            "Abrüstungskampagnen",
+            "Diplomatie-Initiativen"
+          ],
+          "global": [
+            "UN stärken",
+            "Verhandlungslösungen"
+          ]
+        },
+        "position_1": {
+          "name": "Demokratien verteidigen",
+          "privat": [
+            "Über Autokratien informieren",
+            "Exilgruppen unterstützen"
+          ],
+          "lokal": [
+            "Solidarität mit Ukraine organisieren"
+          ],
+          "vernetzt": [
+            "Pro-europäische Bündnisse"
+          ],
+          "global": [
+            "Demokratieförderung",
+            "Sanktionen gegen Autokraten"
+          ]
+        }
+      }
+    },
+    "25": {
+      "id": "25",
+      "name": "Sinn-Raum",
+      "achse": "25",
+      "achse_name": "Spiritualität",
+      "stockwerk": "dachgeschoss",
+      "pole": [
+        "Materialistisch",
+        "Spirituell offen"
+      ],
+      "funktion": "Innehalten, Sinn finden",
+      "kurz": "Hier fragt man: Warum das alles?",
+      "beschreibung": "Ein stiller Raum, fast leer. Ein paar Kissen, eine Kerze, ein Fenster zum Himmel. Hier kommen Menschen hin, wenn sie müde sind, wenn sie zweifeln, wenn sie fragen: Wofür? Manche beten hier, andere meditieren, wieder andere sitzen einfach und schweigen. Es gibt keine Antworten an den Wänden – nur die Fragen, die jede*r selbst mitbringt. In der Ecke ein Bild von Simone Weil und eines von Martin Luther King.",
+      "atmosphaere": {
+        "stimmung": "Still, offen, respektvoll",
+        "geraeusche": "Stille. Manchmal ein Atemzug, ein Seufzer. Das Licht wechselt mit den Tageszeiten.",
+        "geruch": "Weihrauch oder nichts, je nachdem wer da war",
+        "licht": "Natürliches Licht, Kerzen am Abend"
+      },
+      "typische_bewohner": [
+        "Simone Weil (1909-1943)",
+        "Dorothee Sölle (1929-2003)",
+        "Gustavo Gutiérrez (1928-2024)",
+        "Thich Nhat Hanh (1926-2022)"
+      ],
+      "zitat": "Aufmerksamkeit ist die seltenste und reinste Form der Großzügigkeit. – Simone Weil",
+      "taetigkeit": "Hier wird nicht produziert, sondern innegehalten. Wer von hier zurückkommt, ist klarer – oder ehrlicher in der Verwirrung. Manche finden Kraft, andere finden Fragen.",
+      "handlungen": {
+        "position_0": {
+          "name": "Materialistisch-atheistisch",
+          "privat": [
+            "Religionskritik lesen",
+            "Humanistische Rituale entwickeln"
+          ],
+          "lokal": [
+            "Säkulare Feiern organisieren",
+            "Kirchenaustritt"
+          ],
+          "vernetzt": [
+            "Humanistischer Verband",
+            "Giordano-Bruno-Stiftung"
+          ],
+          "global": [
+            "Laizismus verteidigen",
+            "Säkulare Bildung"
+          ]
+        },
+        "position_05": {
+          "name": "Respektvoll säkular",
+          "privat": [
+            "Meditation ausprobieren",
+            "Philosophie lesen"
+          ],
+          "lokal": [
+            "Interreligiöser Dialog",
+            "Ethik ohne Gott diskutieren"
+          ],
+          "vernetzt": [
+            "Religiöse Linke kennenlernen"
+          ],
+          "global": [
+            "Religionsfreiheit + Säkularismus"
+          ]
+        },
+        "position_1": {
+          "name": "Spirituell offen",
+          "privat": [
+            "Spirituelle Praxis entwickeln",
+            "Befreiungstheologie lesen"
+          ],
+          "lokal": [
+            "Linke Kirchengruppen",
+            "Ökospiritualität"
+          ],
+          "vernetzt": [
+            "Religious Socialism",
+            "Pax Christi"
+          ],
+          "global": [
+            "Interfaith Climate Action",
+            "Buen Vivir"
+          ]
+        }
+      }
+    }
+  }
+}

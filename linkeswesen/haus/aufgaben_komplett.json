@@ -1,0 +1,2988 @@
+{
+  "A1": {
+    "name": "Reform vs. Revolution",
+    "lokal": {
+      "titel": "Veränderung vor Ort gestalten",
+      "beschreibung": "Die Frage, ob Wandel durch Institutionen oder gegen sie kommt, entscheidet sich auch in deiner Stadt. Hier kannst du beide Wege erproben, kombinieren oder bewusst einen wählen.",
+      "ideen": [
+        {
+          "name": "Kommunalpolitik infiltrieren",
+          "beschreibung": "Geh in die Ausschusssitzungen deiner Stadt – sie sind öffentlich. Lerne, wie Entscheidungen fallen. Finde heraus, wo progressive Mehrheiten möglich wären. Schreibe einen Bürgerantrag zu einem konkreten Thema (Mietpreisbremse, kostenloser ÖPNV, Schwimmbad retten).",
+          "zeitrahmen": "2-4 Wochen für ersten Antrag"
+        },
+        {
+          "name": "Parallele Strukturen aufbauen",
+          "beschreibung": "Gründe etwas, das den Staat nicht braucht: Eine Nachbarschaftshilfe, einen Umsonstladen, eine Volksküche, ein Reparaturcafé. Zeige, dass Solidarität ohne Bürokratie funktioniert.",
+          "zeitrahmen": "1-3 Monate bis zum ersten Treffen"
+        },
+        {
+          "name": "Institutionen von innen verändern",
+          "beschreibung": "Werde Elternvertreter*in, Betriebsrat, Mitglied im Mieterverein-Vorstand. Nutze bestehende Strukturen für progressive Ziele. Dokumentiere, wo die Grenzen liegen.",
+          "zeitrahmen": "Nächste Wahl abwarten oder initiieren"
+        },
+        {
+          "name": "Doppelstrategie testen",
+          "beschreibung": "Organisiere zu einem Thema (z.B. Krankenhausschließung) gleichzeitig: Eine Petition, eine Demo, einen Bürgerantrag, eine Pressekonferenz UND eine Besetzung/Blockade. Beobachte, was wirkt.",
+          "zeitrahmen": "4-8 Wochen Kampagne"
+        },
+        {
+          "name": "Lokale Machtanalyse erstellen",
+          "beschreibung": "Wer regiert wirklich in deiner Stadt? Erstelle eine Karte: Wer sitzt in welchen Aufsichtsräten? Welche Unternehmen spenden an wen? Welche Netzwerke gibt es? Veröffentliche die Ergebnisse.",
+          "zeitrahmen": "2-3 Monate Recherche"
+        },
+        {
+          "name": "Transformatives Organizing starten",
+          "beschreibung": "Wähle ein Haus, einen Betrieb oder einen Stadtteil. Klopf an Türen, höre zu, finde gemeinsame Probleme. Baue eine Gruppe auf, die selbst handlungsfähig wird – nicht auf Parteien oder NGOs wartet.",
+          "zeitrahmen": "6+ Monate kontinuierliche Arbeit"
+        }
+      ]
+    },
+    "vernetzung": {
+      "titel": "Strategische Allianzen bilden",
+      "beschreibung": "Reformer*innen und Revolutionär*innen können sich bekämpfen oder ihre unterschiedlichen Stärken nutzen. Die Geschichte zeigt: Beides passiert.",
+      "ideen": [
+        {
+          "name": "Gewerkschaftskontakte aufbauen",
+          "beschreibung": "Gewerkschaften sind der institutionalisierte Klassenkampf. Besuche Versammlungen von ver.di, IG Metall, GEW. Finde die Aktiven, die mehr wollen als Tarifpolitik. In jeder Gewerkschaft gibt es radikale Strömungen.",
+          "kontakte": [
+            "ver.di Bezirk",
+            "IG Metall Verwaltungsstelle",
+            "GEW Kreisverband",
+            "FAU Syndikat"
+          ]
+        },
+        {
+          "name": "Bewegungs-Bündnisse schmieden",
+          "beschreibung": "Fridays for Future, Letzte Generation, Deutsche Wohnen Enteignen, Seebrücke – alle haben unterschiedliche Taktiken. Organisiere ein Vernetzungstreffen: Was können wir voneinander lernen?",
+          "kontakte": [
+            "Lokale Klimagruppen",
+            "Antirassistische Initiativen",
+            "Mieterinitiativen"
+          ]
+        },
+        {
+          "name": "Internationale Kontakte knüpfen",
+          "beschreibung": "Was machen Linke in anderen Ländern anders? Kontaktiere Schwesterorganisationen: Podemos-Ortsgruppen, Labour-Mitglieder, DSA-Chapters in den USA. Organisiere Online-Austausch.",
+          "kontakte": [
+            "Transform Europe",
+            "Progressive International",
+            "DiEM25"
+          ]
+        },
+        {
+          "name": "Generationenbrücke bauen",
+          "beschreibung": "Alte Genoss*innen haben 1968, 1989, die Anti-AKW-Bewegung erlebt. Junge haben TikTok, neue Aktionsformen, anderen Zugang. Organisiere Zeitzeug*innen-Gespräche, dokumentiere Bewegungsgeschichte.",
+          "format": "Erzählcafé, Podcast, Videointerviews"
+        },
+        {
+          "name": "Kritische Wissenschaftler*innen einbinden",
+          "beschreibung": "An jeder Uni gibt es linke Professor*innen, kritische Studierende. Lade sie zu öffentlichen Vorträgen ein, bitte um Expertise für Kampagnen, gründe einen lokalen Wissenschaftsladen.",
+          "kontakte": [
+            "Kritische Uni-Gruppen",
+            "Rosa-Luxemburg-Stiftung",
+            "Attac Wissenschaftlicher Beirat"
+          ]
+        }
+      ]
+    },
+    "theorie": {
+      "titel": "Die große Debatte verstehen",
+      "beschreibung": "Reform oder Revolution? Diese Frage spaltet die Linke seit 150 Jahren. Die Klassiker helfen, aber die Antwort findest du nur in der Praxis.",
+      "ideen": [
+        {
+          "name": "Die Ursprungsdebatte lesen",
+          "beschreibung": "1899 schrieb Eduard Bernstein 'Die Voraussetzungen des Sozialismus' – der Startschuss des Revisionismus. Rosa Luxemburg antwortete mit 'Sozialreform oder Revolution'. Lies beide, mach dir Notizen: Wer überzeugt dich?",
+          "texte": [
+            {
+              "titel": "Die Voraussetzungen des Sozialismus",
+              "autor": "Eduard Bernstein",
+              "jahr": 1899,
+              "url": "https://www.marxists.org/deutsch/referenz/bernstein/1899/voraus/index.htm"
+            },
+            {
+              "titel": "Sozialreform oder Revolution?",
+              "autor": "Rosa Luxemburg",
+              "jahr": 1899,
+              "url": "https://www.marxists.org/deutsch/archiv/luxemburg/1899/sozref/index.htm"
+            }
+          ]
+        },
+        {
+          "name": "Gramscis Hegemonie-Konzept studieren",
+          "beschreibung": "Antonio Gramsci entwickelte im Gefängnis eine Theorie jenseits von Reform/Revolution: Der 'Stellungskrieg' um kulturelle Hegemonie. Lies die Gefängnishefte oder eine gute Einführung.",
+          "texte": [
+            {
+              "titel": "Gefängnishefte",
+              "autor": "Antonio Gramsci",
+              "schwierigkeit": 4
+            },
+            {
+              "titel": "Gramsci lesen",
+              "autor": "Ingo Stützle",
+              "schwierigkeit": 2
+            }
+          ]
+        },
+        {
+          "name": "Zeitgenössische Strategiedebatten verfolgen",
+          "beschreibung": "Die Debatte geht weiter: Erik Olin Wright ('Reale Utopien'), Chantal Mouffe ('Linker Populismus'), Bhaskar Sunkara ('Sozialistische Strategie heute'). Was funktioniert im 21. Jahrhundert?",
+          "texte": [
+            {
+              "titel": "Reale Utopien",
+              "autor": "Erik Olin Wright",
+              "jahr": 2017
+            },
+            {
+              "titel": "Für einen linken Populismus",
+              "autor": "Chantal Mouffe",
+              "jahr": 2018
+            }
+          ]
+        },
+        {
+          "name": "Lesekreis zur Strategiefrage gründen",
+          "beschreibung": "Theorie allein ist tot. Gründe einen Lesekreis, der gemeinsam liest und diskutiert. Trefft euch alle zwei Wochen, lest 30 Seiten, streitet produktiv.",
+          "format": "6-12 Personen, fester Rhythmus, wechselnde Moderation"
+        },
+        {
+          "name": "Historische Fallstudien analysieren",
+          "beschreibung": "Was lief schief bei der SPD 1914? Warum scheiterte die KPD? Was war das schwedische Modell? Warum ging Allende unter? Lerne aus der Geschichte – aber kopiere sie nicht.",
+          "fälle": [
+            "SPD und Burgfrieden 1914",
+            "Weimarer KPD",
+            "Schwedischer Wohlfahrtsstaat",
+            "Chile 1970-73",
+            "Syriza 2015"
+          ]
+        }
+      ]
+    }
+  },
+  "A2": {
+    "name": "Revolutionäres Subjekt",
+    "lokal": {
+      "titel": "Wer kämpft in deiner Stadt?",
+      "beschreibung": "Die Frage, wer Veränderung trägt, ist keine abstrakte – sie entscheidet sich konkret: Wer organisiert sich? Wer hat Macht? Wer wird übersehen?",
+      "ideen": [
+        {
+          "name": "Betriebsarbeit beginnen",
+          "beschreibung": "Die Arbeiterklasse verschwindet nicht – sie verändert sich. Identifiziere die größten Arbeitgeber deiner Stadt (Krankenhaus, Amazon-Lager, Schlachthof, Callcenter). Gibt es dort Konflikte? Kontaktiere Beschäftigte, biete Unterstützung an.",
+          "zeitrahmen": "Recherche 2 Wochen, Kontaktaufbau 1-2 Monate"
+        },
+        {
+          "name": "Soziale Kämpfe kartieren",
+          "beschreibung": "Erstelle eine Karte aller aktuellen Konflikte in deiner Stadt: Mietstreiks, Arbeitskämpfe, Schulproteste, Abschiebungswiderstand. Wer kämpft wo? Wo gibt es Verbindungen?",
+          "output": "Öffentliche Karte, regelmäßig aktualisiert"
+        },
+        {
+          "name": "Prekarisierte organisieren",
+          "beschreibung": "Lieferfahrer*innen, Reinigungskräfte, Crowdworker – die neue Arbeiterklasse ist oft unsichtbar. Sprich sie an der Ampel an, am Pausenplatz, über Flyer. Gründe eine Anlaufstelle.",
+          "beispiele": [
+            "Riders Collective",
+            "Gorillas Workers Collective",
+            "Amazon Workers"
+          ]
+        },
+        {
+          "name": "Community Organizing in marginalisierten Vierteln",
+          "beschreibung": "Geh in die Stadtteile, wo keine Partei Wahlkampf macht. Klopf an Türen, hör zu, finde Themen. Organisiere gemeinsame Aktionen zu dem, was die Menschen bewegt.",
+          "methoden": [
+            "Deep Canvassing",
+            "Organizing Conversations",
+            "Power Mapping"
+          ]
+        },
+        {
+          "name": "Studierende als Verbündete",
+          "beschreibung": "Unis sind keine Elfenbeintürme – dort arbeiten Beschäftigte unter Tarif, dort kämpfen Studierende gegen Bafög-Kürzungen. Verbinde studentische Kämpfe mit anderen sozialen Bewegungen.",
+          "kontakte": [
+            "AStA",
+            "SDS",
+            "Kritische Fachschaften",
+            "TVStud-Kampagnen"
+          ]
+        },
+        {
+          "name": "Erwerbslosenarbeit",
+          "beschreibung": "Arbeitslose sind keine Randgruppe – sie sind die Reservearmee des Kapitals. Begleite Menschen zum Jobcenter, organisiere kollektiven Widerstand gegen Sanktionen, gründe Erwerbsloseninitiative.",
+          "kontakte": [
+            "Erwerbslosenverband",
+            "Sanktionsfrei e.V.",
+            "Hartz4-Plattformen"
+          ]
+        }
+      ]
+    },
+    "vernetzung": {
+      "titel": "Kämpfe verbinden",
+      "beschreibung": "Die Frage 'Wer ist das Subjekt?' kann spalten – oder unterschiedliche Kämpfe verbinden. Intersektionalität ist kein Modewort, sondern Organisierungspraxis.",
+      "ideen": [
+        {
+          "name": "Klassenpolitik und Identitätspolitik versöhnen",
+          "beschreibung": "Organisiere ein Streitgespräch: 'Klasse oder Identität?' Lade Menschen ein, die beide Perspektiven vertreten. Ziel: Nicht Recht haben, sondern verstehen, wie beides zusammenhängt.",
+          "format": "Podiumsdiskussion, Fishbowl, World Café"
+        },
+        {
+          "name": "Sorgearbeiter*innen-Netzwerk",
+          "beschreibung": "Pfleger*innen, Erzieher*innen, Sozialarbeiter*innen – die Care-Krise betrifft vor allem Frauen. Vernetze diese Kämpfe, organisiere gemeinsame Aktionen am Equal Care Day.",
+          "anlass": "Equal Care Day (1. März), Internationaler Tag der Pflege (12. Mai)"
+        },
+        {
+          "name": "Migrantische Selbstorganisation unterstützen",
+          "beschreibung": "Migrant*innen sind nicht Objekte von Hilfe, sondern Subjekte eigener Kämpfe. Finde migrantische Organisationen, frage, was sie brauchen – und was nicht.",
+          "kontakte": [
+            "Migrant*innen-Selbstorganisationen",
+            "Flüchtlingsräte",
+            "Roma-Organisationen"
+          ]
+        },
+        {
+          "name": "Generationenbündnis schmieden",
+          "beschreibung": "Klimastreikende Schüler*innen und streikende Stahlarbeiter*innen haben mehr gemeinsam als sie denken. Organisiere gemeinsame Aktionen – z.B. Workers for Future.",
+          "beispiele": [
+            "Workers for Future",
+            "Parents for Future",
+            "Scientists for Future"
+          ]
+        }
+      ]
+    },
+    "theorie": {
+      "titel": "Wer macht Geschichte?",
+      "beschreibung": "Von Marx' Proletariat über Marcuses 'Randgruppen' bis zu Hardt/Negris 'Multitude' – die Frage nach dem revolutionären Subjekt ist umkämpft.",
+      "ideen": [
+        {
+          "name": "Die Klassiker zur Klassenfrage",
+          "beschreibung": "Marx/Engels im Manifest, Lenin über die Avantgarde, Lukács' Klassenbewusstsein. Die Grundlagen verstehen, bevor du sie kritisierst.",
+          "texte": [
+            {
+              "titel": "Manifest der Kommunistischen Partei",
+              "autor": "Marx/Engels",
+              "jahr": 1848
+            },
+            {
+              "titel": "Was tun?",
+              "autor": "Lenin",
+              "jahr": 1902
+            },
+            {
+              "titel": "Geschichte und Klassenbewußtsein",
+              "autor": "Georg Lukács",
+              "jahr": 1923
+            }
+          ]
+        },
+        {
+          "name": "Feministische Kritik studieren",
+          "beschreibung": "Silvia Federici, Nancy Fraser, Frigga Haug – sie zeigen, was der klassische Marxismus übersehen hat: Reproduktionsarbeit, Geschlechterverhältnisse, soziale Reproduktion.",
+          "texte": [
+            {
+              "titel": "Caliban und die Hexe",
+              "autor": "Silvia Federici",
+              "jahr": 2004
+            },
+            {
+              "titel": "Feminismus für die 99%",
+              "autor": "Arruzza/Bhattacharya/Fraser",
+              "jahr": 2019
+            }
+          ]
+        },
+        {
+          "name": "Postoperaistische Perspektiven",
+          "beschreibung": "Hardt/Negri haben mit 'Empire' und 'Multitude' eine neue Theorie des Widerstands vorgelegt. Kontrovers, aber einflussreich.",
+          "texte": [
+            {
+              "titel": "Empire",
+              "autor": "Hardt/Negri",
+              "jahr": 2000
+            },
+            {
+              "titel": "Multitude",
+              "autor": "Hardt/Negri",
+              "jahr": 2004
+            }
+          ]
+        },
+        {
+          "name": "Intersektionalität theoretisch verstehen",
+          "beschreibung": "Kimberlé Crenshaw prägte den Begriff, aber die Debatte ist älter und komplexer. Was bedeutet intersektionaler Sozialismus konkret?",
+          "texte": [
+            {
+              "titel": "Mapping the Margins",
+              "autor": "Kimberlé Crenshaw",
+              "jahr": 1991
+            },
+            {
+              "titel": "Schwarzer Feminismus",
+              "autor": "Natasha A. Kelly (Hg.)",
+              "jahr": 2019
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "A3": {
+    "name": "Staat: Werkzeug oder Feind?",
+    "lokal": {
+      "titel": "Staat erfahren, Staat unterlaufen",
+      "beschreibung": "Der Staat ist keine abstrakte Macht – er begegnet dir im Jobcenter, auf der Demo, im Bauamt. Hier kannst du beide Seiten erleben: seine Nutzbarkeit und seine Repression.",
+      "ideen": [
+        {
+          "name": "Behördenbegleitung organisieren",
+          "beschreibung": "Viele Menschen haben Angst vor Ämtern – zu Recht. Biete Begleitung an zum Jobcenter, zur Ausländerbehörde, zum Sozialamt. Du lernst dabei mehr über den Staat als in jedem Buch.",
+          "format": "Offene Sprechstunde, Begleitgruppe, Telefon-Hotline"
+        },
+        {
+          "name": "Kommunale Unternehmen demokratisieren",
+          "beschreibung": "Stadtwerke, Wohnungsbaugesellschaften, Krankenhäuser – vieles gehört formal 'uns'. Aber wer entscheidet? Fordere Bürgerbeteiligung, Transparenz, demokratische Kontrolle.",
+          "ansätze": [
+            "Aufsichtsratssitze für Bürger*innen",
+            "Bürgerhaushalt",
+            "Transparenz-Satzung"
+          ]
+        },
+        {
+          "name": "Polizei beobachten",
+          "beschreibung": "Organisiere Cop-Watching: Dokumentiere Polizeieinsätze, bilde Legal Teams für Demos, sammle Fälle von Polizeigewalt. Der Staat hat ein Gewaltmonopol – kontrolliere es.",
+          "tools": [
+            "KopKontrol-App",
+            "Legal Team Training",
+            "Dokumentations-Protokoll"
+          ]
+        },
+        {
+          "name": "Autonome Räume verteidigen/schaffen",
+          "beschreibung": "Besetzte Häuser, selbstverwaltete Jugendzentren, Wagenplätze – sie zeigen: Es geht auch ohne Staat. Unterstütze bestehende Projekte oder schaffe neue.",
+          "beispiele": [
+            "Hausbesetzung",
+            "Bauwagen-Projekt",
+            "Selbstverwaltetes Zentrum"
+          ]
+        },
+        {
+          "name": "Staatliche Fördermittel abgreifen",
+          "beschreibung": "Der Staat hat Geld für Projekte. Lerne, Anträge zu schreiben: Demokratie leben!, Kultur macht stark, ESF-Förderung. Nutze das Geld für emanzipatorische Zwecke.",
+          "programme": [
+            "Bundesprogramme",
+            "Landesförderung",
+            "EU-Mittel",
+            "Stiftungen"
+          ]
+        },
+        {
+          "name": "Versammlungsrecht ausreizen",
+          "beschreibung": "Das Grundgesetz garantiert Versammlungsfreiheit. Lerne die Gesetze, melde Demos an, kämpfe für bessere Auflagen. Dokumentiere, wenn die Polizei Rechte verletzt.",
+          "wissen": [
+            "Anmeldepflicht",
+            "Auflagen",
+            "Rechtsmittel",
+            "Eilanträge"
+          ]
+        }
+      ]
+    },
+    "vernetzung": {
+      "titel": "Mit und gegen den Staat",
+      "beschreibung": "Manche Gruppen arbeiten im Staat, andere gegen ihn, andere daneben. Alle können voneinander lernen.",
+      "ideen": [
+        {
+          "name": "Bündnis aus Institutionen und Bewegung",
+          "beschreibung": "Der DGB hat Zugang zu Ministerien, Klimaaktivist*innen machen Druck auf der Straße. Organisiere strategische Treffen: Wie können wir uns ergänzen?",
+          "partner": [
+            "Gewerkschaften",
+            "Sozialverbände",
+            "Bewegungs-Organisationen"
+          ]
+        },
+        {
+          "name": "Linke in Verwaltungen vernetzen",
+          "beschreibung": "In jeder Behörde gibt es kritische Mitarbeiter*innen. Sie können Informationen teilen, intern intervenieren. Finde sie, schaffe sichere Räume zum Austausch.",
+          "vorsicht": "Anonymität schützen, Vertrauen aufbauen"
+        },
+        {
+          "name": "Kommunalpolitik koordinieren",
+          "beschreibung": "Linke Stadtratsfraktionen in verschiedenen Städten machen oft ähnliche Arbeit. Organisiere Austausch: Was funktioniert? Welche Anträge kann man kopieren?",
+          "format": "Regelmäßige Online-Treffen, geteilte Datenbank"
+        },
+        {
+          "name": "Anti-Repressions-Netzwerk",
+          "beschreibung": "Wenn der Staat zuschlägt, braucht es Solidarität: Rechtshilfe, Prozessbeobachtung, Soligruppen. Baue Strukturen auf, bevor du sie brauchst.",
+          "strukturen": [
+            "Rote Hilfe",
+            "Legal Teams",
+            "EA (Ermittlungsausschuss)",
+            "Solikassen"
+          ]
+        }
+      ]
+    },
+    "theorie": {
+      "titel": "Was ist der Staat?",
+      "beschreibung": "Instrument der herrschenden Klasse? Verdichtung von Kräfteverhältnissen? Arena der Kämpfe? Unterdrückungsapparat? Die Antwort bestimmt deine Strategie.",
+      "ideen": [
+        {
+          "name": "Marxistische Staatstheorie",
+          "beschreibung": "Von Marx' 'Staat als Ausschuss der Bourgeoisie' über Lenins 'Staat und Revolution' bis zu neueren Ansätzen. Die Grundlagen der Kritik.",
+          "texte": [
+            {
+              "titel": "Der achtzehnte Brumaire des Louis Bonaparte",
+              "autor": "Karl Marx",
+              "jahr": 1852
+            },
+            {
+              "titel": "Staat und Revolution",
+              "autor": "Lenin",
+              "jahr": 1917
+            },
+            {
+              "titel": "Staatstheorie",
+              "autor": "Nicos Poulantzas",
+              "jahr": 1978
+            }
+          ]
+        },
+        {
+          "name": "Anarchistische Staatskritik",
+          "beschreibung": "Bakunin, Kropotkin und ihre Erben lehnen den Staat grundsätzlich ab. Ihre Argumente sind radikaler als viele marxistische – und verdienen Beachtung.",
+          "texte": [
+            {
+              "titel": "Gott und der Staat",
+              "autor": "Michail Bakunin",
+              "jahr": 1871
+            },
+            {
+              "titel": "Gegenseitige Hilfe",
+              "autor": "Peter Kropotkin",
+              "jahr": 1902
+            }
+          ]
+        },
+        {
+          "name": "Poulantzas' relationale Staatstheorie",
+          "beschreibung": "Der Staat als 'materielle Verdichtung von Kräfteverhältnissen' – eine Theorie, die erklärt, warum der Staat weder neutrales Werkzeug noch bloßes Unterdrückungsinstrument ist.",
+          "texte": [
+            {
+              "titel": "Staatstheorie",
+              "autor": "Nicos Poulantzas",
+              "jahr": 1978
+            },
+            {
+              "titel": "Das Staatsverständnis von Nicos Poulantzas",
+              "autor": "Alex Demirović",
+              "jahr": 2007
+            }
+          ]
+        },
+        {
+          "name": "Zeitgenössische Debatten",
+          "beschreibung": "Wie verändert sich der Staat im Neoliberalismus? Was bedeuten Digitalisierung, Überwachung, Ausnahmezustand für linke Strategien?",
+          "texte": [
+            {
+              "titel": "Die neoliberale Stadt",
+              "autor": "Margit Mayer (Hg.)",
+              "jahr": 2016
+            },
+            {
+              "titel": "Ausnahmezustand",
+              "autor": "Giorgio Agamben",
+              "jahr": 2003
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "A4": {
+    "name": "Organisation: Partei, Bewegung, Netzwerk?",
+    "lokal": {
+      "titel": "Wie organisieren wir uns?",
+      "beschreibung": "Die Frage der Organisationsform ist keine technische – sie bestimmt, wer spricht, wer entscheidet, wer bleibt. Experimentiere mit verschiedenen Formen.",
+      "ideen": [
+        {
+          "name": "Basisgruppe gründen",
+          "beschreibung": "Klein anfangen: 5-10 Menschen, die sich regelmäßig treffen, gemeinsam lesen, diskutieren, handeln. Keine Hierarchien, geteilte Verantwortung. Die Zelle als Grundform.",
+          "format": "Wöchentlich oder zweiwöchentlich, fester Ort, rotierende Moderation"
+        },
+        {
+          "name": "Arbeitskreis in bestehender Organisation",
+          "beschreibung": "Statt neu gründen: In einer Partei, Gewerkschaft oder NGO einen Arbeitskreis zu deinem Thema starten. Nutze die Infrastruktur, bringe deine Perspektive ein.",
+          "vorteil": "Ressourcen, Legitimität, Reichweite"
+        },
+        {
+          "name": "Affinity Group für Aktionen",
+          "beschreibung": "Für direkte Aktionen brauchst du eine kleine Gruppe mit absolutem Vertrauen. Trainiert zusammen, plant gemeinsam, schützt euch gegenseitig. Bezugsgruppen-Struktur.",
+          "training": "Aktionstraining, Rechtshilfe-Workshop, Kommunikationsprotokolle"
+        },
+        {
+          "name": "Offenes Bündnis koordinieren",
+          "beschreibung": "Für große Mobilisierungen: Breite Bündnisse mit unterschiedlichen Gruppen. Lerne, wie man mit Differenz umgeht, wie man Konsens findet, wie man trotzdem handlungsfähig bleibt.",
+          "methoden": [
+            "Konsens-Moderation",
+            "Spokes-Council",
+            "Arbeitsgruppen-Struktur"
+          ]
+        },
+        {
+          "name": "Digitale Organisation aufbauen",
+          "beschreibung": "Nicht alle können zu Treffen kommen. Nutze digitale Tools: Signal-Gruppen, Pads, Videokonferenzen. Aber Vorsicht: Digital ersetzt nicht das gemeinsame Tun.",
+          "tools": [
+            "Signal",
+            "Cryptpad",
+            "Jitsi",
+            "Nextcloud",
+            "Mattermost"
+          ]
+        },
+        {
+          "name": "Rätestruktur experimentell erproben",
+          "beschreibung": "Organisiere ein Event, eine Kampagne oder einen Streik nach dem Räteprinzip: Delegierte mit imperativem Mandat, ständige Rechenschaft, Abwählbarkeit. Dokumentiere, was funktioniert.",
+          "beispiel": "Vollversammlung wählt Delegierte für Koordinierungsgruppe"
+        }
+      ]
+    },
+    "vernetzung": {
+      "titel": "Über den eigenen Tellerrand",
+      "beschreibung": "Jede Organisationsform hat Stärken und Schwächen. Lerne von anderen, baue Brücken, schaffe Übergänge.",
+      "ideen": [
+        {
+          "name": "Partei-Bewegungs-Dialog",
+          "beschreibung": "Parteien haben Ressourcen und Zugang, Bewegungen haben Energie und Legitimität. Organisiere Dialoge: Was können wir voneinander lernen? Wo sind die Grenzen?",
+          "spannungen": [
+            "Spontaneität vs. Planung",
+            "Autonomie vs. Zentralismus",
+            "Aktion vs. Institution"
+          ]
+        },
+        {
+          "name": "Internationale Organisationsmodelle studieren",
+          "beschreibung": "Was macht Momentum in UK, DSA in den USA, Podemos in Spanien anders? Organisiere Webinare mit Aktivist*innen aus anderen Ländern.",
+          "modelle": [
+            "Momentum (UK)",
+            "DSA (USA)",
+            "Podemos (Spanien)",
+            "PTB (Belgien)"
+          ]
+        },
+        {
+          "name": "Historische Organisationsformen analysieren",
+          "beschreibung": "Die Kommune, der Sowjet, der Consejo, das Syndikat – Geschichte bietet ein Arsenal an Formen. Besuche Archive, sprich mit Zeitzeug*innen, lerne aus Erfolgen und Fehlern.",
+          "archiv": [
+            "Rosa-Luxemburg-Stiftung",
+            "Archiv der sozialen Bewegungen",
+            "IISG Amsterdam"
+          ]
+        }
+      ]
+    },
+    "theorie": {
+      "titel": "Die Organisationsfrage",
+      "beschreibung": "Lenin vs. Luxemburg, Partei vs. Bewegung, Zentralismus vs. Autonomie – diese Debatten sind nicht erledigt.",
+      "ideen": [
+        {
+          "name": "Die klassische Partei-Debatte",
+          "beschreibung": "Lenin forderte eine Avantgarde-Partei, Luxemburg widersprach. Beide hatten gute Argumente. Lies die Originaltexte, nicht nur Zusammenfassungen.",
+          "texte": [
+            {
+              "titel": "Was tun?",
+              "autor": "Lenin",
+              "jahr": 1902
+            },
+            {
+              "titel": "Organisationsfragen der russischen Sozialdemokratie",
+              "autor": "Rosa Luxemburg",
+              "jahr": 1904
+            }
+          ]
+        },
+        {
+          "name": "Anarchistische Organisationskonzepte",
+          "beschreibung": "Föderalismus, Selbstverwaltung, Konsens – anarchistische Prinzipien beeinflussen viele Bewegungen. Plattformismus, Especifismo, Communalism bieten Alternativen.",
+          "texte": [
+            {
+              "titel": "Organisationsplattform der Libertären Kommunisten",
+              "autor": "Dielo Truda",
+              "jahr": 1926
+            },
+            {
+              "titel": "Die nächste Revolution",
+              "autor": "Murray Bookchin",
+              "jahr": 2015
+            }
+          ]
+        },
+        {
+          "name": "Neue Organisationstheorien",
+          "beschreibung": "Jodi Dean zu 'Kommunist Horizon', Rodrigo Nunes zu 'Neither Vertical nor Horizontal', Srnicek/Williams zu 'Inventing the Future' – aktuelle Beiträge zur Organisationsdebatte.",
+          "texte": [
+            {
+              "titel": "The Communist Horizon",
+              "autor": "Jodi Dean",
+              "jahr": 2012
+            },
+            {
+              "titel": "Neither Vertical nor Horizontal",
+              "autor": "Rodrigo Nunes",
+              "jahr": 2021
+            },
+            {
+              "titel": "Die Zukunft erfinden",
+              "autor": "Srnicek/Williams",
+              "jahr": 2015
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "B1": {
+    "name": "Markt vs. Plan",
+    "lokal": {
+      "titel": "Wirtschaft demokratisieren – vor Ort anfangen",
+      "beschreibung": "Die große Frage 'Markt oder Plan?' beginnt im Kleinen: Wer entscheidet, was produziert wird? Wer profitiert? Hier kannst du alternative Wirtschaftsformen erproben.",
+      "ideen": [
+        {
+          "name": "Genossenschaft gründen oder beitreten",
+          "beschreibung": "Wohnungsgenossenschaften, Energie-Genossenschaften, Produktivgenossenschaften – überall entstehen neue. Tritt einer bei oder gründe selbst. Eine Genossenschaft für lokale Lieferdienste? Für solidarische Landwirtschaft? Für kollektive Kinderbetreuung?",
+          "beispiele": [
+            "Wohnungsgenossenschaft",
+            "Bürgerenergie-Genossenschaft",
+            "Foodcoop",
+            "IT-Kollektiv"
+          ]
+        },
+        {
+          "name": "Solidarische Landwirtschaft (Solawi) starten",
+          "beschreibung": "Die radikalste lokale Alternative zum Markt: Eine Gemeinschaft finanziert einen Hof, teilt die Ernte. Kein Preismechanismus, sondern Bedürfnisorientierung. In Deutschland gibt es über 400 Solawis – gründe eine weitere.",
+          "ressourcen": [
+            "Netzwerk Solidarische Landwirtschaft",
+            "Solawi-Gründungshilfe"
+          ]
+        },
+        {
+          "name": "Tauschring oder Zeitbank organisieren",
+          "beschreibung": "Tausche Fähigkeiten ohne Geld: Eine Stunde Nachhilfe gegen eine Stunde Fahrradreparatur. Zeitbanken machen Arbeit sichtbar, die der Markt ignoriert.",
+          "format": "Lokale Plattform, regelmäßige Tauschmärkte, digitales System"
+        },
+        {
+          "name": "Rekommunalisierung fordern",
+          "beschreibung": "Wasser, Strom, Wohnungen, Krankenhäuser – vieles wurde privatisiert. Recherchiere, was in deiner Stadt privatisiert wurde. Starte eine Kampagne zur Rekommunalisierung. Hamburg hat's mit den Energienetzen geschafft.",
+          "erfolge": [
+            "Hamburg Energienetze",
+            "Berlin Wasserbetriebe (Teilrekommunalisierung)",
+            "Diverse Krankenhäuser"
+          ]
+        },
+        {
+          "name": "Wirtschaftliche Alternativen kartieren",
+          "beschreibung": "Erstelle eine Karte aller nicht-kapitalistischen Wirtschaftsformen in deiner Stadt: Genossenschaften, Kollektive, Solawis, Tauschläden, Umsonstläden, Repair Cafés. Mach sie sichtbar!",
+          "output": "Interaktive Karte, Flyer, Stadtrundgang"
+        },
+        {
+          "name": "Betrieb in Belegschaftshand – Übernahme vorbereiten",
+          "beschreibung": "Wenn ein Betrieb schließt: Warum nicht übernehmen? In Frankreich und Italien gibt es hunderte recuperadas. Recherchiere, wie das rechtlich geht. Baue Kontakte zu bedrohten Belegschaften auf.",
+          "ressourcen": [
+            "Stiftung Verantwortungseigentum",
+            "Genossenschaften und Worker Buyouts",
+            "Fab City-Netzwerk"
+          ]
+        },
+        {
+          "name": "Kommunaler Wirtschaftsrat",
+          "beschreibung": "Fordere einen demokratischen Wirtschaftsrat für deine Stadt: Bürger*innen, Beschäftigte, Gewerkschaften beraten über lokale Wirtschaftspolitik. Nicht nur Standortmarketing, sondern echte Planung.",
+          "vorbild": "Preston Model (UK), Cleveland Model (USA)"
+        }
+      ]
+    },
+    "vernetzung": {
+      "titel": "Alternative Ökonomien verbinden",
+      "beschreibung": "Einzelne Projekte sind Inseln. Wie verbinden wir sie zu einem Archipel, das stark genug ist, um dem Markt etwas entgegenzusetzen?",
+      "ideen": [
+        {
+          "name": "Solidarische Ökonomie-Netzwerk",
+          "beschreibung": "Vernetze alle Genossenschaften, Kollektive, Solawis deiner Region. Gemeinsame Veranstaltungen, gegenseitige Unterstützung, gemeinsame Infrastruktur (Buchhaltung, IT, Rechtsberatung).",
+          "kontakte": [
+            "Netzwerk Solidarische Ökonomie",
+            "Anstiftung",
+            "Gemeinwohlökonomie"
+          ]
+        },
+        {
+          "name": "Plattform-Kooperativismus vorantreiben",
+          "beschreibung": "Uber, Airbnb, Lieferando – Plattformen beherrschen die Wirtschaft. Aber es gibt Alternativen in Genossenschaftshand. Vernetze dich mit Projekten wie Fairmondo, Resonate, Stocksy.",
+          "internationale_beispiele": [
+            "Fairmondo",
+            "Resonate",
+            "Up & Go",
+            "CoopCycle"
+          ]
+        },
+        {
+          "name": "Gewerkschaften für Wirtschaftsdemokratie gewinnen",
+          "beschreibung": "Gewerkschaften fordern oft nur bessere Löhne. Aber manche wollen mehr: Mitbestimmung über Investitionen, Produktion, Arbeitsorganisation. Finde die Radikalen in den Gewerkschaften.",
+          "forderungen": [
+            "Erweiterung Mitbestimmung",
+            "Wirtschaftsdemokratie",
+            "Investitionsplanung"
+          ]
+        },
+        {
+          "name": "Akademische Expertise einbinden",
+          "beschreibung": "Es gibt kritische Wirtschaftswissenschaftler*innen, die an Alternativen arbeiten. Plurale Ökonomik, Postwachstum, Planungstheorie. Lade sie ein, hole Expertise, verbreite ihre Ideen.",
+          "netzwerke": [
+            "Netzwerk Plurale Ökonomik",
+            "Konzeptwerk Neue Ökonomie",
+            "Ökonomiefeministische Perspektiven"
+          ]
+        }
+      ]
+    },
+    "theorie": {
+      "titel": "Die Planungsdebatte verstehen",
+      "beschreibung": "Kann man eine moderne Wirtschaft planen? Die Debatte läuft seit 100 Jahren – und wird durch Big Data und KI neu aufgerollt.",
+      "ideen": [
+        {
+          "name": "Die historische Kalkulationsdebatte",
+          "beschreibung": "1920 behauptete Ludwig von Mises, Sozialismus sei unmöglich, weil ohne Marktpreise keine rationale Kalkulation möglich sei. Oskar Lange antwortete mit dem 'Marktsozialismus'. Wer hatte Recht?",
+          "texte": [
+            {
+              "titel": "Die Wirtschaftsrechnung im sozialistischen Gemeinwesen",
+              "autor": "Ludwig von Mises",
+              "jahr": 1920
+            },
+            {
+              "titel": "Über die ökonomische Theorie des Sozialismus",
+              "autor": "Oskar Lange",
+              "jahr": 1936
+            }
+          ]
+        },
+        {
+          "name": "Sowjetische Planungserfahrungen analysieren",
+          "beschreibung": "Die Sowjetunion versuchte zentrale Planung 70 Jahre lang. Was funktionierte, was nicht? Alec Nove, Michael Ellman und andere haben die Erfahrungen aufgearbeitet.",
+          "texte": [
+            {
+              "titel": "Die Sowjetunion: Aufstieg und Fall",
+              "autor": "Alec Nove",
+              "jahr": 1992
+            },
+            {
+              "titel": "Socialist Planning",
+              "autor": "Michael Ellman",
+              "jahr": 2014
+            }
+          ]
+        },
+        {
+          "name": "Neue Planungstheorien: Cybersozialismus",
+          "beschreibung": "Paul Cockshott und Allin Cottrell haben mit 'Alternativen aus dem Rechner' eine computergestützte Planwirtschaft entworfen. Evgeny Morozov und andere denken über 'Digital Socialism' nach.",
+          "texte": [
+            {
+              "titel": "Alternativen aus dem Rechner",
+              "autor": "Cockshott/Cottrell",
+              "jahr": 2006
+            },
+            {
+              "titel": "The People's Republic of Walmart",
+              "autor": "Phillips/Rozworski",
+              "jahr": 2019
+            }
+          ]
+        },
+        {
+          "name": "Marktsozialismus heute",
+          "beschreibung": "Modelle, die Marktmechanismen mit sozialistischem Eigentum kombinieren: John Roemers 'Coupon-Sozialismus', David Schweickarts 'Economic Democracy'. Können sie die Vorteile beider Systeme verbinden?",
+          "texte": [
+            {
+              "titel": "A Future for Socialism",
+              "autor": "John Roemer",
+              "jahr": 1994
+            },
+            {
+              "titel": "After Capitalism",
+              "autor": "David Schweickart",
+              "jahr": 2011
+            }
+          ]
+        },
+        {
+          "name": "Dezentrale Planung und Commons",
+          "beschreibung": "Elinor Ostrom zeigte, dass Gemeinschaftseigentum funktionieren kann – ohne Staat und ohne Markt. Wie lässt sich das auf komplexe Wirtschaften übertragen?",
+          "texte": [
+            {
+              "titel": "Die Verfassung der Allmende",
+              "autor": "Elinor Ostrom",
+              "jahr": 1990
+            },
+            {
+              "titel": "Frei, fair und lebendig",
+              "autor": "Helfrich/Bollier",
+              "jahr": 2019
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "B2": {
+    "name": "Eigentum: Privat, Staatlich, Kollektiv?",
+    "lokal": {
+      "titel": "Eigentum anders denken – und machen",
+      "beschreibung": "Eigentum ist kein Naturgesetz, sondern eine soziale Konstruktion. Hier kannst du mit alternativen Eigentumsformen experimentieren.",
+      "ideen": [
+        {
+          "name": "Mietshäuser Syndikat unterstützen",
+          "beschreibung": "Das Mietshäuser Syndikat holt Häuser dauerhaft vom Markt: Kollektives Eigentum, das nie wieder verkauft werden kann. Unterstütze bestehende Projekte oder initiiere ein neues.",
+          "ressourcen": [
+            "Mietshäuser Syndikat",
+            "Beratung für Hausprojekte",
+            "Finanzierungsmodelle"
+          ]
+        },
+        {
+          "name": "Boden-Enteignung vorbereiten",
+          "beschreibung": "Deutsche Wohnen & Co Enteignen hat gezeigt: Enteignung ist möglich und populär. Recherchiere, wem der Boden in deiner Stadt gehört. Identifiziere Kampagnenziele.",
+          "vorbild": "Deutsche Wohnen Enteignen Berlin",
+          "nächste_schritte": [
+            "Eigentümerrecherche",
+            "Bündnisaufbau",
+            "Rechtliche Prüfung"
+          ]
+        },
+        {
+          "name": "Commons-Projekte starten",
+          "beschreibung": "Ein Gemeinschaftsgarten, eine offene Werkstatt, ein Freifunk-Netzwerk, eine Bibliothek der Dinge – Commons sind Eigentum für alle. Starte eins oder mach bei einem mit.",
+          "beispiele": [
+            "Urban Gardening",
+            "FabLab/Makerspace",
+            "Freifunk",
+            "Leihläden"
+          ]
+        },
+        {
+          "name": "Verantwortungseigentum fördern",
+          "beschreibung": "Eine neue Eigentumsform: Unternehmen gehören sich selbst, Gewinne werden reinvestiert, Kontrolle liegt bei den Beschäftigten. In Deutschland gibt's schon einige: Ecosia, Einhorn, Arche Naturküche.",
+          "ressourcen": [
+            "Stiftung Verantwortungseigentum",
+            "Purpose Economy"
+          ]
+        },
+        {
+          "name": "Erbschaftsdebatte führen",
+          "beschreibung": "Vermögen wird vererbt, Ungleichheit zementiert. Organisiere Veranstaltungen zur Erbschaftssteuer, zu Stiftungsrecht, zu alternativen Erbmodellen (Taxmenow-Kampagne).",
+          "positionen": [
+            "Höhere Erbschaftssteuer",
+            "Bürger*innenvermögen",
+            "Vermögenssteuer"
+          ]
+        },
+        {
+          "name": "Betriebliche Mitarbeiterbeteiligung ausweiten",
+          "beschreibung": "Viele Unternehmen haben Belegschaftsaktien – aber meist nur symbolisch. Fordere echte Beteiligung: An Gewinnen, an Entscheidungen, an Vermögenswerten.",
+          "forderungen": [
+            "Gewinnbeteiligung",
+            "Stimmrechte",
+            "Übernahme-Option"
+          ]
+        }
+      ]
+    },
+    "vernetzung": {
+      "titel": "Eigentumsfrage kollektiv stellen",
+      "beschreibung": "Die Eigentumsfrage ist zu groß für einzelne Projekte. Sie braucht eine breite Bewegung.",
+      "ideen": [
+        {
+          "name": "Enteignungs-Kampagnen vernetzen",
+          "beschreibung": "Nach Berlin entstehen überall ähnliche Kampagnen. Vernetze sie, teile Expertise, baue bundesweite Strukturen auf.",
+          "kampagnen": [
+            "Hamburg Enteignet",
+            "Enteignen in NRW",
+            "Immobilienkonzerne enteignen"
+          ]
+        },
+        {
+          "name": "Internationale Commons-Bewegung",
+          "beschreibung": "Commons sind weltweit ein Thema. Vernetze dich mit der internationalen Bewegung: Commons Network, P2P Foundation, Remix the Commons.",
+          "netzwerke": [
+            "Commons Network",
+            "P2P Foundation",
+            "Global Commons Alliance"
+          ]
+        },
+        {
+          "name": "Wissenschaft und Praxis verbinden",
+          "beschreibung": "Es gibt viel Forschung zu alternativen Eigentumsformen. Hole sie in die Praxis: Vorträge, Workshops, gemeinsame Projekte.",
+          "institute": [
+            "Forschungskolleg Humanwissenschaften",
+            "Max-Planck-Institut für Gemeinschaftsgüter",
+            "Institute for Advanced Sustainability Studies"
+          ]
+        }
+      ]
+    },
+    "theorie": {
+      "titel": "Was ist Eigentum?",
+      "beschreibung": "Privateigentum ist keine natürliche, sondern eine historische Kategorie. Die Kritik daran hat eine lange Geschichte – und aktuelle Relevanz.",
+      "ideen": [
+        {
+          "name": "Die Klassiker",
+          "beschreibung": "Proudhons 'Eigentum ist Diebstahl', Marx' Kritik des Privateigentums an Produktionsmitteln, Engels über den Ursprung – die Grundlagen der sozialistischen Eigentumskritik.",
+          "texte": [
+            {
+              "titel": "Was ist Eigentum?",
+              "autor": "Pierre-Joseph Proudhon",
+              "jahr": 1840
+            },
+            {
+              "titel": "Das Kapital, Kapitel 24",
+              "autor": "Karl Marx",
+              "jahr": 1867
+            },
+            {
+              "titel": "Der Ursprung der Familie, des Privateigentums und des Staats",
+              "autor": "Friedrich Engels",
+              "jahr": 1884
+            }
+          ]
+        },
+        {
+          "name": "Commons-Theorie",
+          "beschreibung": "Elinor Ostrom hat empirisch gezeigt, dass Gemeinschaftseigentum funktionieren kann. Ihre Designprinzipien sind praktisch anwendbar.",
+          "texte": [
+            {
+              "titel": "Die Verfassung der Allmende",
+              "autor": "Elinor Ostrom",
+              "jahr": 1990
+            },
+            {
+              "titel": "Patterns of Commoning",
+              "autor": "Bollier/Helfrich",
+              "jahr": 2015
+            }
+          ]
+        },
+        {
+          "name": "Rechtskritik des Eigentums",
+          "beschreibung": "Eigentum ist eine rechtliche Konstruktion. Wie ist sie entstanden? Wie kann sie verändert werden? Critical Legal Studies und Property Theory bieten Analysen.",
+          "texte": [
+            {
+              "titel": "The Progressive Property",
+              "autor": "Joseph Singer",
+              "jahr": 2000
+            },
+            {
+              "titel": "Eigentum als soziale Funktion",
+              "autor": "Karl Renner",
+              "jahr": 1904
+            }
+          ]
+        },
+        {
+          "name": "Aktuelle Enteignungstheorie",
+          "beschreibung": "Was bedeutet Art. 15 GG heute? Wie begründet man Enteignung politisch und rechtlich? Die Debatte um 'Deutsche Wohnen enteignen' hat neue Literatur hervorgebracht.",
+          "texte": [
+            {
+              "titel": "Vergesellschaftung",
+              "autor": "Sabine Nuss",
+              "jahr": 2019
+            },
+            {
+              "titel": "Wem gehört die Stadt?",
+              "autor": "Diverse",
+              "jahr": 2020
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "B3": {
+    "name": "Arbeit: Lohnarbeit, Grundeinkommen, Reproduktion?",
+    "lokal": {
+      "titel": "Arbeit anders organisieren",
+      "beschreibung": "Die meisten Menschen verbringen ihr Leben mit Arbeit – aber wer entscheidet, was Arbeit ist, wie sie organisiert wird, wer sie macht? Hier gibt es viel zu tun.",
+      "ideen": [
+        {
+          "name": "Arbeitszeitverkürzung fordern",
+          "beschreibung": "Die 4-Tage-Woche ist keine Utopie – sie wird gerade ausprobiert. Unterstütze Kampagnen, organisiere Informationsveranstaltungen, bringe das Thema in deine Gewerkschaft.",
+          "kampagnen": [
+            "4-Tage-Woche Kampagne",
+            "IG Metall Arbeitszeitkampagne",
+            "Ver.di Tarifkampf"
+          ]
+        },
+        {
+          "name": "Grundeinkommen lokal erproben",
+          "beschreibung": "Mein Grundeinkommen verlost bedingungslose Grundeinkommen und forscht dazu. Unterstütze das Projekt oder organisiere lokale Veranstaltungen zur Debatte.",
+          "ressourcen": [
+            "Mein Grundeinkommen e.V.",
+            "Netzwerk Grundeinkommen",
+            "Pilotprojekt Grundeinkommen"
+          ]
+        },
+        {
+          "name": "Sichtbarkeit für Care-Arbeit",
+          "beschreibung": "Pflege, Erziehung, Hausarbeit – Care-Arbeit ist unsichtbar und unterbezahlt. Organisiere Aktionen zum Equal Care Day, mache unbezahlte Arbeit sichtbar.",
+          "aktionen": [
+            "Equal Care Day (1. März)",
+            "Care-Streik",
+            "Zeitbudget-Studie lokal"
+          ]
+        },
+        {
+          "name": "Betrieb ohne Chef",
+          "beschreibung": "Selbstverwaltete Betriebe zeigen, dass es ohne Hierarchie geht. Besuche Kollektive, lerne von ihren Erfahrungen, starte selbst eins.",
+          "beispiele": [
+            "Regenbogenfabrik Berlin",
+            "Kollektive in der Gastronomie",
+            "IT-Kollektive"
+          ]
+        },
+        {
+          "name": "Arbeitskampf unterstützen",
+          "beschreibung": "Wenn Beschäftigte streiken, brauchen sie Solidarität: Streikposten besuchen, Essen bringen, Öffentlichkeit herstellen. Baue Strukturen auf, bevor der nächste Streik kommt.",
+          "aktionen": [
+            "Streikposten-Besuche",
+            "Soli-Konzerte",
+            "Öffentlichkeitsarbeit"
+          ]
+        },
+        {
+          "name": "Gig-Worker organisieren",
+          "beschreibung": "Lieferfahrer*innen, Crowdworker, Plattformarbeiter*innen – die neue Arbeiterklasse ist oft unsichtbar und unorganisiert. Unterstütze Organizing-Versuche.",
+          "beispiele": [
+            "Lieferando-Workers",
+            "Gorillas Workers Collective",
+            "Foodora-Streiks"
+          ]
+        },
+        {
+          "name": "Arbeit und Klima verbinden",
+          "beschreibung": "Jobs in der Kohleindustrie verschwinden. Aber wer redet mit den Beschäftigten? Organisiere Veranstaltungen zu 'Just Transition' – gerechtem Strukturwandel.",
+          "kontakte": [
+            "Gewerkschaften in betroffenen Branchen",
+            "Klimabewegung",
+            "Strukturwandel-Initiativen"
+          ]
+        }
+      ]
+    },
+    "vernetzung": {
+      "titel": "Arbeitskämpfe verbinden",
+      "beschreibung": "Arbeit findet überall statt – im Betrieb, zu Hause, auf der Straße. Die Kämpfe gehören zusammen.",
+      "ideen": [
+        {
+          "name": "Feministischer Streik",
+          "beschreibung": "Der 8. März als feministischer Streiktag – nicht nur Demo, sondern tatsächliche Arbeitsniederlegung. In Spanien haben Millionen mitgemacht.",
+          "ressourcen": [
+            "Frauen*streik Deutschland",
+            "Ni Una Menos",
+            "International Women's Strike"
+          ]
+        },
+        {
+          "name": "Transnationale Gewerkschaftsarbeit",
+          "beschreibung": "Amazon ist global, also muss auch der Widerstand global sein. Vernetze dich mit Gewerkschafter*innen in anderen Ländern: Make Amazon Pay.",
+          "kampagnen": [
+            "Make Amazon Pay",
+            "UNI Global Union",
+            "IndustriALL"
+          ]
+        },
+        {
+          "name": "Erwerbslose und Beschäftigte verbinden",
+          "beschreibung": "Arbeitslose werden gegen Beschäftigte ausgespielt (Lohndrückerei). Durchbreche diese Spaltung: Gemeinsame Aktionen, gemeinsame Forderungen.",
+          "ansätze": [
+            "Sanktionsfreies Hartz IV",
+            "Arbeitszeit-Umverteilung",
+            "Garantierte Beschäftigung"
+          ]
+        }
+      ]
+    },
+    "theorie": {
+      "titel": "Was ist Arbeit?",
+      "beschreibung": "Arbeit ist nicht gleich Arbeit. Lohnarbeit, Hausarbeit, Kreative Arbeit – wie hängen sie zusammen? Wer beutet wen aus?",
+      "ideen": [
+        {
+          "name": "Marx' Arbeitswerttheorie",
+          "beschreibung": "Die Grundlage: Mehrwert entsteht in der Produktion durch unbezahlte Arbeit. Verstehe das Kapital, verstehe die Ausbeutung.",
+          "texte": [
+            {
+              "titel": "Das Kapital, Bd. 1",
+              "autor": "Karl Marx",
+              "jahr": 1867
+            },
+            {
+              "titel": "Lohn, Preis und Profit",
+              "autor": "Karl Marx",
+              "jahr": 1865
+            }
+          ]
+        },
+        {
+          "name": "Feministische Arbeitskritik",
+          "beschreibung": "Die Hausarbeitsdebatte der 1970er Jahre: Warum ist Reproduktionsarbeit unsichtbar? Silvia Federici, Mariarosa Dalla Costa und andere haben Marx ergänzt.",
+          "texte": [
+            {
+              "titel": "Die Macht der Frauen und der Umsturz der Gesellschaft",
+              "autor": "Dalla Costa/James",
+              "jahr": 1972
+            },
+            {
+              "titel": "Revolution at Point Zero",
+              "autor": "Silvia Federici",
+              "jahr": 2012
+            }
+          ]
+        },
+        {
+          "name": "Postwork-Theorien",
+          "beschreibung": "Müssen wir überhaupt so viel arbeiten? Kathi Weeks, David Graeber (Bullshit Jobs), André Gorz haben radikale Arbeitskritik formuliert.",
+          "texte": [
+            {
+              "titel": "The Problem with Work",
+              "autor": "Kathi Weeks",
+              "jahr": 2011
+            },
+            {
+              "titel": "Bullshit Jobs",
+              "autor": "David Graeber",
+              "jahr": 2018
+            },
+            {
+              "titel": "Arbeit zwischen Misere und Utopie",
+              "autor": "André Gorz",
+              "jahr": 2000
+            }
+          ]
+        },
+        {
+          "name": "Grundeinkommensdebatten",
+          "beschreibung": "Befreiung von der Lohnarbeit oder Stilllegungsprämie fürs Proletariat? Die Grundeinkommensdebatte spaltet die Linke. Lies beide Seiten.",
+          "texte": [
+            {
+              "titel": "Freiheit statt Kapitalismus",
+              "autor": "Sahra Wagenknecht",
+              "jahr": 2012
+            },
+            {
+              "titel": "Grundeinkommen von links",
+              "autor": "Blaschke/Praetorius/Schepers",
+              "jahr": 2012
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "C1": {
+    "name": "Feminismus: Nebenwiderspruch oder zentral?",
+    "lokal": {
+      "titel": "Feministische Kämpfe vor Ort",
+      "beschreibung": "Patriarchat ist nicht abstrakt – es zeigt sich in Gewalt, in Pflege, in unbezahlter Arbeit, in der Zusammensetzung von Gremien. Hier kannst du ansetzen.",
+      "ideen": [
+        {
+          "name": "Frauenhaus unterstützen",
+          "beschreibung": "Frauenhäuser sind chronisch unterfinanziert. Spende, organisiere Spendenaktionen, mache politisch Druck für bessere Finanzierung. Informiere dich über die Situation vor Ort.",
+          "kontakte": [
+            "Lokales Frauenhaus",
+            "Frauenberatungsstelle",
+            "Autonomes Frauenzentrum"
+          ]
+        },
+        {
+          "name": "Feministischen Streik organisieren",
+          "beschreibung": "Der 8. März ist nicht nur ein Feiertag – er kann ein Kampftag sein. Organisiere einen lokalen feministischen Streik: Demonstrationen, Arbeitsniederlegung, Kunst-Aktionen.",
+          "aktionen": [
+            "Demo",
+            "Flashmobs",
+            "Die-Ins",
+            "Kundgebungen vor Kitas/Krankenhäusern",
+            "Banner-Drops"
+          ]
+        },
+        {
+          "name": "Quoten einfordern",
+          "beschreibung": "In welchen Gremien, Vorständen, Redaktionen sind Frauen unterrepräsentiert? Recherchiere, veröffentliche, fordere Quoten – oder praktiziere sie in deinen eigenen Strukturen.",
+          "bereiche": [
+            "Parteigremien",
+            "Gewerkschaftsvorstände",
+            "Betriebsräte",
+            "Kulturinstitutionen"
+          ]
+        },
+        {
+          "name": "Care-Arbeit sichtbar machen",
+          "beschreibung": "Wer putzt in deiner Organisation? Wer kocht? Wer macht Protokoll? Führe eine Care-Rotation ein, mache unsichtbare Arbeit sichtbar, werte sie auf.",
+          "methoden": [
+            "Putzpläne",
+            "Awareness-Teams",
+            "Kinderbetreuung bei Treffen"
+          ]
+        },
+        {
+          "name": "Gegen Schwangerschaftsparagraphen",
+          "beschreibung": "§218 kriminalisiert immer noch Abtreibung. §219a wurde abgeschafft – der nächste Kampf ist §218. Unterstütze Kampagnen, organisiere lokale Aktionen.",
+          "kampagnen": [
+            "Bündnis für sexuelle Selbstbestimmung",
+            "Pro Choice Deutschland"
+          ]
+        },
+        {
+          "name": "Männergruppen initiieren",
+          "beschreibung": "Feminismus ist nicht nur Frauensache. Gründe eine kritische Männergruppe, die sich mit Männlichkeit auseinandersetzt: Gewalt, Emotionen, Privilegien.",
+          "ressourcen": [
+            "Bundesforum Männer",
+            "Kritische Männlichkeitsforschung",
+            "Dissens-Institut"
+          ]
+        },
+        {
+          "name": "Trans*-Rechte verteidigen",
+          "beschreibung": "Das Selbstbestimmungsgesetz kommt – aber die Angriffe auch. Unterstütze trans* Personen, informiere dich, widersprich TERF-Positionen, schaffe Safe Spaces.",
+          "kontakte": [
+            "Trans*-Beratungsstellen",
+            "TGEU",
+            "Bundesverband Trans*"
+          ]
+        },
+        {
+          "name": "Femizide dokumentieren",
+          "beschreibung": "Jeden dritten Tag wird in Deutschland eine Frau von ihrem (Ex-)Partner getötet. Die Statistiken sind lückenhaft. Dokumentiere lokale Fälle, organisiere Gedenken, fordere Maßnahmen.",
+          "ressourcen": [
+            "Femizid-Karte",
+            "One Billion Rising",
+            "Ni Una Menos"
+          ]
+        }
+      ]
+    },
+    "vernetzung": {
+      "titel": "Feministische Bewegung stärken",
+      "beschreibung": "Die feministische Bewegung ist vielfältig und manchmal zerstritten. Wie finden wir gemeinsame Kämpfe?",
+      "ideen": [
+        {
+          "name": "Generationen verbinden",
+          "beschreibung": "Die zweite Welle, die dritte Welle, die vierte Welle – jede Generation hat andere Erfahrungen. Organisiere Generationen-Dialoge: Was können wir voneinander lernen?",
+          "format": "Erzählcafés, gemeinsame Demos, Mentoring-Programme"
+        },
+        {
+          "name": "Internationalen Frauentag internationalisieren",
+          "beschreibung": "Was machen Feministinnen in Argentinien, Polen, Iran? Vernetze dich mit internationalen Bewegungen, organisiere Solidaritätsaktionen.",
+          "bewegungen": [
+            "Ni Una Menos",
+            "Strajk Kobiet",
+            "Woman Life Freedom"
+          ]
+        },
+        {
+          "name": "Klassenfeminismus praktizieren",
+          "beschreibung": "Feminismus ist keine bürgerliche Angelegenheit. Vernetze feministische Kämpfe mit Arbeitskämpfen: Pflege, Reinigung, Erziehung – feminisierte, unterbezahlte Arbeit.",
+          "verbindungen": [
+            "Pflegestreiks",
+            "Kita-Kämpfe",
+            "Reinigungskräfte-Organizing"
+          ]
+        }
+      ]
+    },
+    "theorie": {
+      "titel": "Feministische Theorie verstehen",
+      "beschreibung": "Von Bebel bis Butler, von Kollontai bis Crenshaw – feministische Theorie hat eine reiche Geschichte. Und sie ist nicht fertig.",
+      "ideen": [
+        {
+          "name": "Sozialistische Feminismus-Klassiker",
+          "beschreibung": "Der Zusammenhang von Kapitalismus und Patriarchat: Clara Zetkin, Alexandra Kollontai, August Bebel haben früh versucht, beides zusammenzudenken.",
+          "texte": [
+            {
+              "titel": "Die Frau und der Sozialismus",
+              "autor": "August Bebel",
+              "jahr": 1879
+            },
+            {
+              "titel": "Die Neue Moral und die Arbeiterklasse",
+              "autor": "Alexandra Kollontai",
+              "jahr": 1918
+            }
+          ]
+        },
+        {
+          "name": "Feministische Ökonomie",
+          "beschreibung": "Silvia Federici, Nancy Fraser, Frigga Haug – sie zeigen, dass Ökonomie ohne Reproduktionsarbeit nicht verstanden werden kann.",
+          "texte": [
+            {
+              "titel": "Caliban und die Hexe",
+              "autor": "Silvia Federici",
+              "jahr": 2004
+            },
+            {
+              "titel": "Feminismus für die 99%",
+              "autor": "Arruzza/Bhattacharya/Fraser",
+              "jahr": 2019
+            }
+          ]
+        },
+        {
+          "name": "Intersektionalität",
+          "beschreibung": "Schwarze Feministinnen haben gezeigt, dass Geschlecht, Klasse und Rasse zusammen analysiert werden müssen. Das ist kein Zusatz, sondern die Grundlage.",
+          "texte": [
+            {
+              "titel": "Ain't I a Woman?",
+              "autor": "bell hooks",
+              "jahr": 1981
+            },
+            {
+              "titel": "Schwarzer Feminismus",
+              "autor": "Natasha A. Kelly (Hg.)",
+              "jahr": 2019
+            }
+          ]
+        },
+        {
+          "name": "Queer Theory",
+          "beschreibung": "Butler, Preciado und andere haben die Kategorien Geschlecht und Sexualität selbst dekonstruiert. Radikal, manchmal schwierig – aber wichtig.",
+          "texte": [
+            {
+              "titel": "Das Unbehagen der Geschlechter",
+              "autor": "Judith Butler",
+              "jahr": 1990
+            },
+            {
+              "titel": "Kontrasexuelles Manifest",
+              "autor": "Paul B. Preciado",
+              "jahr": 2000
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "C2": {
+    "name": "Ökologie: Wachstumskritik oder grüner Kapitalismus?",
+    "lokal": {
+      "titel": "Klimagerechtigkeit vor Ort",
+      "beschreibung": "Die Klimakatastrophe ist global, aber die Kämpfe sind lokal. Hier kannst du konkret eingreifen.",
+      "ideen": [
+        {
+          "name": "Lokale Klimagruppe gründen oder stärken",
+          "beschreibung": "Fridays for Future, Ende Gelände, Letzte Generation – oder eine eigene Gruppe. Wichtig ist: Kontinuität, nicht nur Einzelaktionen.",
+          "kontakte": [
+            "FFF Ortsgruppe",
+            "Ende Gelände Regionalgruppe",
+            "Extinction Rebellion"
+          ]
+        },
+        {
+          "name": "Fossile Infrastruktur blockieren",
+          "beschreibung": "Kohlebagger, LNG-Terminals, Autobahnbaustellen – gewaltfreier Widerstand gegen fossile Projekte ist legitim und wirksam. Trainiere, organisiere, handle.",
+          "training": [
+            "Aktionstraining",
+            "Klettertraining",
+            "Legal Support"
+          ]
+        },
+        {
+          "name": "Verkehrswende lokal einfordern",
+          "beschreibung": "Autofreie Innenstädte, Radwege, ÖPNV-Ausbau, Gratisbusse – die Verkehrswende beginnt in der Kommune. Gründe eine Initiative, stelle Bürgeranträge.",
+          "forderungen": [
+            "Tempo 30",
+            "Pop-up-Radwege",
+            "Gratisnahverkehr",
+            "Parkplatzrückbau"
+          ]
+        },
+        {
+          "name": "Energiegenossenschaft gründen",
+          "beschreibung": "Bürger*innen-Energie statt RWE: Gründe eine Genossenschaft für Solaranlagen auf öffentlichen Dächern, für Windräder, für Nahwärme.",
+          "ressourcen": [
+            "Bürgerwerke",
+            "Energiegenossenschaft gründen",
+            "EWS Schönau"
+          ]
+        },
+        {
+          "name": "Stadtbegrünung vorantreiben",
+          "beschreibung": "Urban Gardening, Baumpatenschaften, Entsiegelung – mache deine Stadt grüner. Guerilla Gardening ist auch eine Option.",
+          "aktionen": [
+            "Seedbombs",
+            "Baumbesetzung",
+            "Parklets",
+            "Essbare Stadt"
+          ]
+        },
+        {
+          "name": "Divestment-Kampagne",
+          "beschreibung": "Deine Stadt, deine Uni, deine Kirche haben Geld in fossilen Energien? Starte eine Divestment-Kampagne: Raus aus Kohle, Öl und Gas.",
+          "erfolge": [
+            "Münster",
+            "Berlin",
+            "Diverse Unis"
+          ]
+        },
+        {
+          "name": "Klima-Klage unterstützen",
+          "beschreibung": "Gerichte werden zur Arena der Klimabewegung. Unterstütze Klagen wie die von Greenpeace, DUH, oder Einzelpersonen. Crowdfunding, Öffentlichkeitsarbeit.",
+          "beispiele": [
+            "Klimaklage gegen Bundesregierung",
+            "RWE-Klage Peru",
+            "Shell-Urteil Niederlande"
+          ]
+        },
+        {
+          "name": "Klimaversammlung einfordern",
+          "beschreibung": "Bürger*innen-Räte für Klimapolitik: Per Los ausgewählte Menschen beraten über Maßnahmen. In Frankreich, UK, Deutschland gibt es Vorbilder.",
+          "vorbilder": [
+            "Convention Citoyenne (Frankreich)",
+            "Bürgerrat Klima (Deutschland)"
+          ]
+        }
+      ]
+    },
+    "vernetzung": {
+      "titel": "Klimabewegung und Klassenpolitik verbinden",
+      "beschreibung": "Die Klimafrage ist eine Klassenfrage. Wie verbinden wir Umweltbewegung und Arbeiterbewegung?",
+      "ideen": [
+        {
+          "name": "Workers for Future",
+          "beschreibung": "Gewerkschafter*innen für Klimaschutz – nicht gegen Jobs, sondern für gute Jobs in einer lebenswerten Welt. Baue Brücken.",
+          "kontakte": [
+            "ver.di for Future",
+            "IG Metall Transformation",
+            "Gewerkschaftliche Klimainitiativen"
+          ]
+        },
+        {
+          "name": "Just Transition organisieren",
+          "beschreibung": "Strukturwandel muss gerecht sein. Sprich mit Beschäftigten in der Autoindustrie, in der Kohle, in der Chemieindustrie. Was brauchen sie?",
+          "ansätze": [
+            "Transformationsräte",
+            "Beschäftigungsgarantien",
+            "Qualifizierungsprogramme"
+          ]
+        },
+        {
+          "name": "Klimagerechtigkeit international",
+          "beschreibung": "Der Globale Süden leidet am meisten unter der Klimakrise, hat sie aber nicht verursacht. Vernetze dich mit internationalen Bewegungen.",
+          "bewegungen": [
+            "Climate Justice Alliance",
+            "La Via Campesina",
+            "350.org"
+          ]
+        },
+        {
+          "name": "System Change not Climate Change",
+          "beschreibung": "Grüner Kapitalismus ist ein Widerspruch. Die Klimabewegung muss antikapitalistisch werden – oder sie wird scheitern. Bringe diese Analyse in die Bewegung.",
+          "ressourcen": [
+            "System Change not Climate Change",
+            "Degrowth-Bewegung",
+            "Ökosozialismus"
+          ]
+        }
+      ]
+    },
+    "theorie": {
+      "titel": "Ökosozialismus verstehen",
+      "beschreibung": "Kann der Kapitalismus grün werden? Oder brauchen wir Systemwandel? Die Debatte ist existenziell.",
+      "ideen": [
+        {
+          "name": "Marx und Ökologie",
+          "beschreibung": "Marx hat mehr über Ökologie geschrieben, als viele denken. John Bellamy Foster hat das wiederentdeckt: Der 'metabolische Bruch' zwischen Mensch und Natur.",
+          "texte": [
+            {
+              "titel": "Marx's Ecology",
+              "autor": "John Bellamy Foster",
+              "jahr": 2000
+            },
+            {
+              "titel": "Der ökologische Bruch",
+              "autor": "Foster/Clark/York",
+              "jahr": 2011
+            }
+          ]
+        },
+        {
+          "name": "Degrowth / Postwachstum",
+          "beschreibung": "Kann eine Wirtschaft ohne Wachstum funktionieren? Muss sie sogar schrumpfen? Degrowth ist kontrovers – aber unausweichlich.",
+          "texte": [
+            {
+              "titel": "Degrowth/Postwachstum",
+              "autor": "Matthias Schmelzer u.a.",
+              "jahr": 2022
+            },
+            {
+              "titel": "Weniger ist mehr",
+              "autor": "Jason Hickel",
+              "jahr": 2022
+            }
+          ]
+        },
+        {
+          "name": "Ökosozialismus",
+          "beschreibung": "Michael Löwy, Joel Kovel und andere haben versucht, Sozialismus und Ökologie systematisch zu verbinden. Was bedeutet das konkret?",
+          "texte": [
+            {
+              "titel": "Ökosozialismus: Die radikale Alternative",
+              "autor": "Michael Löwy",
+              "jahr": 2016
+            },
+            {
+              "titel": "The Enemy of Nature",
+              "autor": "Joel Kovel",
+              "jahr": 2007
+            }
+          ]
+        },
+        {
+          "name": "Grüner New Deal – pro und contra",
+          "beschreibung": "AOCs Green New Deal, DiEM25, Labour – verschiedene Versionen eines grünen Keynesianismus. Ist das genug?",
+          "texte": [
+            {
+              "titel": "A Planet to Win",
+              "autor": "Aronoff u.a.",
+              "jahr": 2019
+            },
+            {
+              "titel": "The Case for the Green New Deal",
+              "autor": "Ann Pettifor",
+              "jahr": 2019
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "C3": {
+    "name": "Internationalismus: Weltrevolution oder nationale Wege?",
+    "lokal": {
+      "titel": "International handeln – lokal anfangen",
+      "beschreibung": "Internationalismus ist keine abstrakte Parole. Er beginnt mit konkreter Solidarität, mit Geflüchteten in deiner Stadt, mit Kämpfen in anderen Ländern.",
+      "ideen": [
+        {
+          "name": "Geflüchtetenunterstützung",
+          "beschreibung": "Nicht Charity, sondern Solidarität: Begleitung zu Behörden, Deutschkurse, politische Unterstützung. Aber auch: Räume schaffen für Selbstorganisation von Geflüchteten.",
+          "kontakte": [
+            "Lokale Flüchtlingsräte",
+            "Seebrücke",
+            "Refugee-Selbstorganisationen"
+          ]
+        },
+        {
+          "name": "Antirassistische Arbeit",
+          "beschreibung": "Rassismus bekämpfen heißt nicht nur, gegen Nazis zu demonstrieren. Es heißt: Institutionellen Rassismus aufdecken, Racial Profiling dokumentieren, Strukturen ändern.",
+          "aktionen": [
+            "Cop-Watching",
+            "NSU-Komplex aufarbeiten",
+            "Institutionellen Rassismus dokumentieren"
+          ]
+        },
+        {
+          "name": "Partnerstadt politisch nutzen",
+          "beschreibung": "Deine Stadt hat Partnerstädte? Nutze die Kontakte für politischen Austausch: Was können wir voneinander lernen? Organisiere Delegationsreisen.",
+          "format": "Austauschprogramme, gemeinsame Projekte, Solidaritätsadressen"
+        },
+        {
+          "name": "Faire Beschaffung einfordern",
+          "beschreibung": "Deine Kommune kauft ein: Uniformen, Computer, Lebensmittel. Fordere faire Beschaffung: Keine Kinderarbeit, keine Ausbeutung, faire Löhne in der Lieferkette.",
+          "ressourcen": [
+            "Fair Trade Towns",
+            "Faire Beschaffung Kommunen"
+          ]
+        },
+        {
+          "name": "Gegen Rüstungsexporte",
+          "beschreibung": "Werden in deiner Region Waffen produziert? Recherchiere, veröffentliche, organisiere Proteste. Rheinmetall, Heckler & Koch, EADS haben lokale Standorte.",
+          "aktionen": [
+            "Waffenfabrik blockieren",
+            "Aktionär*innenversammlungen stören",
+            "Öffentlichkeitsarbeit"
+          ]
+        },
+        {
+          "name": "Koloniales Erbe aufarbeiten",
+          "beschreibung": "Straßennamen, Denkmäler, Museumsbestände – die koloniale Vergangenheit ist präsent. Fordere Umbenennung, Rückgabe, Aufarbeitung.",
+          "beispiele": [
+            "Straßenumbenennungen",
+            "Restitution von Raubgut",
+            "Erinnerungsorte"
+          ]
+        },
+        {
+          "name": "Palästina-Solidarität",
+          "beschreibung": "BDS, Nakba-Gedenken, humanitäre Hilfe – Solidarität mit Palästinenser*innen ist möglich und nötig. Informiere dich, organisiere, halte Kontakte zu israelischen Linken.",
+          "kontakte": [
+            "BDS Deutschland",
+            "Jüdische Stimme für gerechten Frieden",
+            "Breaking the Silence"
+          ]
+        },
+        {
+          "name": "Kurdische Bewegung unterstützen",
+          "beschreibung": "Rojava ist ein revolutionäres Projekt – und es wird angegriffen. Organisiere Solidarität: Infoveranstaltungen, Spenden, politischer Druck auf die Bundesregierung.",
+          "kontakte": [
+            "Medico International",
+            "Rote Hilfe Kurdistan",
+            "Civaka Azad"
+          ]
+        }
+      ]
+    },
+    "vernetzung": {
+      "titel": "Internationalismus praktisch",
+      "beschreibung": "Internationale Solidarität braucht Strukturen. Wie verbinden wir Kämpfe über Grenzen hinweg?",
+      "ideen": [
+        {
+          "name": "Transnationale Vernetzung",
+          "beschreibung": "DiEM25, Progressive International, Transform Europe – es gibt Versuche, die Linke europäisch/global zu organisieren. Mache mit.",
+          "netzwerke": [
+            "DiEM25",
+            "Progressive International",
+            "Transform Europe",
+            "European Left"
+          ]
+        },
+        {
+          "name": "Delegationsreisen",
+          "beschreibung": "Fahre hin, wo gekämpft wird: Chiapas, Rojava, Kerala, Baskenland. Lerne, berichte, bringe Erfahrungen mit. Organisiere Delegationen.",
+          "ziele": [
+            "Rojava",
+            "Chiapas",
+            "Kuba",
+            "Kerala"
+          ]
+        },
+        {
+          "name": "Internationale Kampagnentage",
+          "beschreibung": "1. Mai, 8. März, Nakba-Tag, Internationale Wochen gegen Rassismus – nutze internationale Tage für koordinierte Aktionen.",
+          "termine": [
+            "1. Mai",
+            "8. März",
+            "21. März (gegen Rassismus)",
+            "15. Mai (Nakba)"
+          ]
+        }
+      ]
+    },
+    "theorie": {
+      "titel": "Internationalismusdebatten",
+      "beschreibung": "Weltrevolution oder Sozialismus in einem Land? Die Frage ist alt, aber nicht erledigt.",
+      "ideen": [
+        {
+          "name": "Klassischer Internationalismus",
+          "beschreibung": "Die Internationale, die Weltrevolution bei Lenin und Trotzki, Stalins 'Sozialismus in einem Land' – die historischen Debatten verstehen.",
+          "texte": [
+            {
+              "titel": "Die permanente Revolution",
+              "autor": "Leo Trotzki",
+              "jahr": 1930
+            },
+            {
+              "titel": "Imperialismus als höchstes Stadium des Kapitalismus",
+              "autor": "Lenin",
+              "jahr": 1917
+            }
+          ]
+        },
+        {
+          "name": "Postkoloniale Kritik",
+          "beschreibung": "Fanon, Said, Spivak – postkoloniale Theoretiker*innen haben die eurozentrischen Linken kritisiert. Was bedeutet das für Internationalismus heute?",
+          "texte": [
+            {
+              "titel": "Die Verdammten dieser Erde",
+              "autor": "Frantz Fanon",
+              "jahr": 1961
+            },
+            {
+              "titel": "Orientalismus",
+              "autor": "Edward Said",
+              "jahr": 1978
+            }
+          ]
+        },
+        {
+          "name": "Globale Arbeiterbewegung",
+          "beschreibung": "Kann es eine globale Arbeiterklasse geben? Beverly Silver, Peter Waterman und andere haben dazu gearbeitet.",
+          "texte": [
+            {
+              "titel": "Forces of Labor",
+              "autor": "Beverly Silver",
+              "jahr": 2003
+            },
+            {
+              "titel": "Labor Worldwide in the Era of Globalization",
+              "autor": "Ronaldo Munck",
+              "jahr": 1999
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "D1": {
+    "name": "Theorie: Orthodoxie oder Offenheit?",
+    "lokal": {
+      "titel": "Theorie lebendig machen",
+      "beschreibung": "Theorie ist kein Selbstzweck – sie muss die Praxis informieren. Aber welche Theorie? Und wie vermitteln?",
+      "ideen": [
+        {
+          "name": "Kapital-Lesekreis gründen",
+          "beschreibung": "Das Kapital zu lesen ist ein Marathon, kein Sprint. 12-24 Monate, regelmäßig, mit guter Moderation. Es gibt bewährte Formate und Sekundärliteratur.",
+          "ressourcen": [
+            "David Harveys Online-Kurs",
+            "Kapital-Lesen (Michael Heinrich)",
+            "Marx200-Materialien"
+          ]
+        },
+        {
+          "name": "Theorie-Praxis-Workshop",
+          "beschreibung": "Nimm ein aktuelles lokales Problem (Mietkampf, Arbeitskampf, Klimaprotest) und analysiere es mit verschiedenen theoretischen Werkzeugen. Was erklärt Marx? Was Foucault? Was Federici?",
+          "format": "3-4 Stunden, Input + Gruppenarbeit + Diskussion"
+        },
+        {
+          "name": "Nicht-westliche Theorien entdecken",
+          "beschreibung": "Marxismus ist nicht nur europäisch. Mao, Mariátegui, Fanon, Cabral, CLR James – lies Theoretiker*innen aus dem Globalen Süden. Organisiere eine Lesereihe.",
+          "autor_innen": [
+            "José Carlos Mariátegui",
+            "CLR James",
+            "Amilcar Cabral",
+            "Walter Rodney",
+            "Samir Amin"
+          ]
+        },
+        {
+          "name": "Theorien streiten lassen",
+          "beschreibung": "Organisiere strukturierte Debatten: Wertkritik vs. traditioneller Marxismus, Autonomismus vs. Leninismus, Poststrukturalismus vs. Klassenanalyse. Lernen durch Widerspruch.",
+          "format": "Streitgespräch, Fishbowl, Pro-Contra-Debatte"
+        },
+        {
+          "name": "Rosa-Luxemburg-Stiftung nutzen",
+          "beschreibung": "Die RLS bietet kostenlose Bildungsveranstaltungen, Publikationen, Stipendien. Nutze das Angebot, schlage eigene Veranstaltungen vor, vernetze dich.",
+          "angebote": [
+            "Seminare",
+            "Publikationen",
+            "Stipendien",
+            "Archiv",
+            "Regionalbüros"
+          ]
+        },
+        {
+          "name": "Theorie in einfacher Sprache",
+          "beschreibung": "Akademische Sprache schließt aus. Übersetze wichtige Texte in verständliche Sprache. Erstelle Erklärvideos, Comics, Podcasts. Theorie für alle.",
+          "formate": [
+            "Explainer-Videos",
+            "Theorie-Comics",
+            "Podcasts",
+            "Zines",
+            "Infografiken"
+          ]
+        },
+        {
+          "name": "Lokale Theoriegeschichte aufarbeiten",
+          "beschreibung": "Welche Denker*innen kommen aus deiner Region? Welche theoretischen Debatten wurden hier geführt? Lokalisiere die Theoriegeschichte, besuche Archive.",
+          "methoden": [
+            "Archivrecherche",
+            "Zeitzeug*innen-Interviews",
+            "Stadtrundgänge"
+          ]
+        },
+        {
+          "name": "Theorie-Podcast starten",
+          "beschreibung": "Erkläre Theorien in 30-Minuten-Episoden. Interview-Format oder Monolog. Wozu Hegemonie gut ist, was Entfremdung bedeutet, warum Luxemburg heute noch relevant ist.",
+          "beispiele": [
+            "Jacobin Radio",
+            "Dissens Podcast",
+            "Wohlstand für Alle"
+          ]
+        }
+      ]
+    },
+    "vernetzung": {
+      "titel": "Theorie-Netzwerke",
+      "beschreibung": "Theorie wird gemeinsam produziert. Wie verbinden wir Lernende, Lehrende, Forschende?",
+      "ideen": [
+        {
+          "name": "Linke Akademiker*innen vernetzen",
+          "beschreibung": "An jeder Uni gibt es kritische Wissenschaftler*innen – oft isoliert. Schaffe Räume zum Austausch: Kolloquien, Mailinglisten, Kongresse.",
+          "netzwerke": [
+            "Assoziation für kritische Gesellschaftsforschung",
+            "BUKO",
+            "Geographien der Gewalt"
+          ]
+        },
+        {
+          "name": "Bewegungsakademie",
+          "beschreibung": "Theoriebildung in der Bewegung, nicht in der Uni. Organisiere mehrtägige Workshops, bei denen Aktivist*innen gemeinsam analysieren und theoretisieren.",
+          "formate": [
+            "Sommerakademie",
+            "Winterschule",
+            "Wochenend-Intensiv"
+          ]
+        },
+        {
+          "name": "Internationale Theoriedebatten übersetzen",
+          "beschreibung": "Was diskutieren Linke in anderen Ländern? Übersetze wichtige Texte, organisiere internationale Panels, baue Austausch auf.",
+          "zeitschriften": [
+            "New Left Review",
+            "Historical Materialism",
+            "Jacobin",
+            "Viewpoint Magazine"
+          ]
+        }
+      ]
+    },
+    "theorie": {
+      "titel": "Theorie der Theorie",
+      "beschreibung": "Was ist das Verhältnis von Theorie und Praxis? Wie entsteht revolutionäres Bewusstsein?",
+      "ideen": [
+        {
+          "name": "Marx' Praxis-Begriff",
+          "beschreibung": "Die Feuerbachthesen, die Deutsche Ideologie – Marx' frühe Schriften über das Verhältnis von Denken und Tun.",
+          "texte": [
+            {
+              "titel": "Thesen über Feuerbach",
+              "autor": "Karl Marx",
+              "jahr": 1845
+            },
+            {
+              "titel": "Die Deutsche Ideologie",
+              "autor": "Marx/Engels",
+              "jahr": 1846
+            }
+          ]
+        },
+        {
+          "name": "Gramscis Philosophie der Praxis",
+          "beschreibung": "Organische Intellektuelle, Hegemonie, Alltagsverstand – Gramsci hat das Verhältnis von Intellektuellen und Massen neu gedacht.",
+          "texte": [
+            {
+              "titel": "Gefängnishefte",
+              "autor": "Antonio Gramsci"
+            },
+            {
+              "titel": "Gramsci lesen",
+              "autor": "Ingo Stützle"
+            }
+          ]
+        },
+        {
+          "name": "Kritische Theorie",
+          "beschreibung": "Adorno, Horkheimer, Marcuse – die Frankfurter Schule hat Marxismus mit Psychoanalyse und Kulturkritik verbunden. Bis heute einflussreich.",
+          "texte": [
+            {
+              "titel": "Dialektik der Aufklärung",
+              "autor": "Horkheimer/Adorno",
+              "jahr": 1944
+            },
+            {
+              "titel": "Der eindimensionale Mensch",
+              "autor": "Herbert Marcuse",
+              "jahr": 1964
+            }
+          ]
+        },
+        {
+          "name": "Wertkritik",
+          "beschreibung": "Robert Kurz, Moishe Postone – eine heterodoxe Marx-Lesart, die den Wert selbst als Problem identifiziert, nicht nur die Verteilung.",
+          "texte": [
+            {
+              "titel": "Zeit, Arbeit und gesellschaftliche Herrschaft",
+              "autor": "Moishe Postone",
+              "jahr": 1993
+            },
+            {
+              "titel": "Schwarzbuch Kapitalismus",
+              "autor": "Robert Kurz",
+              "jahr": 1999
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "D2": {
+    "name": "Utopie: Konkretes Ziel oder offener Horizont?",
+    "lokal": {
+      "titel": "Utopie sichtbar machen",
+      "beschreibung": "Eine andere Welt ist möglich – aber wie sieht sie aus? Mache Utopie konkret, erfahrbar, diskutierbar.",
+      "ideen": [
+        {
+          "name": "Zukunftswerkstatt organisieren",
+          "beschreibung": "Die Zukunftswerkstatt-Methode: Kritik → Utopie → Verwirklichung. In Gruppen gemeinsam Visionen entwickeln und erste Schritte planen.",
+          "format": "1-2 Tage, 15-30 Personen, professionelle Moderation"
+        },
+        {
+          "name": "Utopische Stadtrundgänge",
+          "beschreibung": "Führe durch deine Stadt – aber zeige nicht was ist, sondern was sein könnte. Hier könnte ein Gemeinschaftsgarten sein, dort eine autofreie Zone, hier ein besetztes Haus.",
+          "format": "2 Stunden, mit Karten und Visualisierungen"
+        },
+        {
+          "name": "Science Fiction politisch lesen",
+          "beschreibung": "Ursula K. Le Guin, Octavia Butler, Kim Stanley Robinson – SF-Autor*innen denken Alternativen. Organisiere einen Lesekreis, der SF als politische Theorie liest.",
+          "bücher": [
+            "The Dispossessed",
+            "Parable of the Sower",
+            "Ministry for the Future"
+          ]
+        },
+        {
+          "name": "Reale Utopien besuchen",
+          "beschreibung": "Marinaleda in Spanien, Christiania in Kopenhagen, Cecosesola in Venezuela – es gibt Orte, die anders funktionieren. Organisiere eine Delegationsreise.",
+          "ziele": [
+            "Marinaleda",
+            "Rojava",
+            "Chiapas",
+            "Mondragón",
+            "Kerala"
+          ]
+        },
+        {
+          "name": "Utopie visualisieren",
+          "beschreibung": "Beauftrage Künstler*innen, utopische Versionen deiner Stadt zu zeichnen. Ausstellung, Postkarten, Social Media. Bilder sind mächtiger als Worte.",
+          "formate": [
+            "Ausstellung",
+            "Plakate",
+            "Instagram-Kampagne",
+            "Wandbild"
+          ]
+        },
+        {
+          "name": "Utopische Rollenspiele",
+          "beschreibung": "LARP (Live Action Role Play) für die Revolution: Spiele einen Tag in einer Welt ohne Kapitalismus durch. Welche Konflikte entstehen? Welche Lösungen?",
+          "format": "Ganztägig, mit Regeln und Rollen"
+        },
+        {
+          "name": "Kinder nach der Zukunft fragen",
+          "beschreibung": "Kinder haben keine Scheu vor großen Ideen. Workshops in Schulen: Wie wollt ihr leben? Sammle ihre Visionen, präsentiere sie öffentlich.",
+          "format": "Workshop, Ausstellung, Kinderbuch"
+        },
+        {
+          "name": "Utopisches Manifest schreiben",
+          "beschreibung": "Schreibe ein konkretes Manifest für deine Stadt: Wie sieht sie in 50 Jahren aus? Wer entscheidet? Wie wird gearbeitet? Wie gewohnt? Wie geliebt?",
+          "länge": "10-20 Seiten, konkret und detailliert"
+        }
+      ]
+    },
+    "vernetzung": {
+      "titel": "Utopien teilen",
+      "beschreibung": "Utopien sind nicht privat – sie entstehen im Dialog und müssen geteilt werden.",
+      "ideen": [
+        {
+          "name": "Utopie-Festival",
+          "beschreibung": "Ein mehrtägiges Festival der Alternativen: Workshops, Vorträge, Kunst, Musik, Essen. Zeige, dass eine andere Welt nicht nur möglich, sondern attraktiv ist.",
+          "beispiele": [
+            "Utopia Now Festival",
+            "Degrowth-Konferenz",
+            "Ecosocialist Convergence"
+          ]
+        },
+        {
+          "name": "Reale Utopien dokumentieren",
+          "beschreibung": "Erik Olin Wright hat 'Reale Utopien' gesammelt – Projekte, die zeigen, dass Alternativen funktionieren. Dokumentiere lokale Beispiele, teile sie.",
+          "beispiele": [
+            "Genossenschaften",
+            "Kommunen",
+            "Solidarische Ökonomie",
+            "Selbstverwaltung"
+          ]
+        },
+        {
+          "name": "Internationale Utopie-Austausch",
+          "beschreibung": "Was sind die Utopien in Brasilien, in Indien, in Südafrika? Wie unterscheiden sie sich von europäischen Vorstellungen? Organisiere Austausch.",
+          "format": "Online-Panels, Übersetzungsprojekte, Delegationsreisen"
+        }
+      ]
+    },
+    "theorie": {
+      "titel": "Utopie denken",
+      "beschreibung": "Ist Utopie ein konkreter Bauplan oder ein offener Horizont? Eine gefährliche Illusion oder notwendige Motivation?",
+      "ideen": [
+        {
+          "name": "Die Utopie-Tradition",
+          "beschreibung": "Von Thomas Morus über Charles Fourier bis William Morris – die Geschichte utopischen Denkens ist reich und voller Überraschungen.",
+          "texte": [
+            {
+              "titel": "Utopia",
+              "autor": "Thomas Morus",
+              "jahr": 1516
+            },
+            {
+              "titel": "News from Nowhere",
+              "autor": "William Morris",
+              "jahr": 1890
+            }
+          ]
+        },
+        {
+          "name": "Ernst Blochs Prinzip Hoffnung",
+          "beschreibung": "Das monumentale Werk über das utopische Bewusstsein: Tagträume, Wunschbilder, das Noch-Nicht. Schwierig, aber lohnend.",
+          "texte": [
+            {
+              "titel": "Das Prinzip Hoffnung",
+              "autor": "Ernst Bloch",
+              "jahr": 1959
+            }
+          ]
+        },
+        {
+          "name": "Kritik der Utopie",
+          "beschreibung": "Marx kritisierte die 'utopischen Sozialisten' als unwissenschaftlich. Hat er recht? Oder braucht der wissenschaftliche Sozialismus utopische Bilder?",
+          "texte": [
+            {
+              "titel": "Die Entwicklung des Sozialismus von der Utopie zur Wissenschaft",
+              "autor": "Friedrich Engels",
+              "jahr": 1880
+            }
+          ]
+        },
+        {
+          "name": "Reale Utopien",
+          "beschreibung": "Erik Olin Wright hat eine Theorie realer Utopien entwickelt: Nicht perfekte Blaupausen, sondern funktionierende Alternativen im Hier und Jetzt.",
+          "texte": [
+            {
+              "titel": "Reale Utopien",
+              "autor": "Erik Olin Wright",
+              "jahr": 2017
+            }
+          ]
+        },
+        {
+          "name": "Afrofuturismus und dekoloniale Utopien",
+          "beschreibung": "Utopien sind nicht neutral – sie sind kulturell geprägt. Afrofuturismus und dekoloniale Denker*innen entwickeln andere Zukunftsvisionen.",
+          "texte": [
+            {
+              "titel": "Parable of the Sower",
+              "autor": "Octavia Butler",
+              "jahr": 1993
+            },
+            {
+              "titel": "Afrofuturism 2.0",
+              "autor": "Reynaldo Anderson (Hg.)",
+              "jahr": 2015
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "D3": {
+    "name": "Gewalt: Pazifismus oder bewaffneter Widerstand?",
+    "lokal": {
+      "titel": "Widerstand organisieren",
+      "beschreibung": "Die Gewaltfrage ist keine abstrakte – sie stellt sich bei jeder Demo, bei jedem Konflikt. Wie gehst du damit um?",
+      "ideen": [
+        {
+          "name": "Aktionstraining absolvieren",
+          "beschreibung": "Lerne, wie gewaltfreier Widerstand funktioniert: Blockaden, ziviler Ungehorsam, Deeskalation. Es gibt viele Anbieter*innen.",
+          "anbieter": [
+            "Skills for Action",
+            "Ende Gelände Trainings",
+            "Kurve Wustrow"
+          ]
+        },
+        {
+          "name": "Legal Team aufbauen",
+          "beschreibung": "Bei Demos braucht es rechtliche Unterstützung: Ermittlungsausschuss (EA), Gefangenenbetreuung, Anwaltskoordination. Baue Strukturen auf, bevor du sie brauchst.",
+          "strukturen": [
+            "EA-Telefon",
+            "Rechtshilfe-Fonds",
+            "Prozessbeobachtung"
+          ]
+        },
+        {
+          "name": "Deeskalations-Training",
+          "beschreibung": "Nicht nur für Demos: Wie deeskalierst du Konflikte im Alltag, in der Gruppe, auf der Straße? Lerne Techniken, übe sie ein.",
+          "methoden": [
+            "Gewaltfreie Kommunikation",
+            "Mediation",
+            "Conflict Transformation"
+          ]
+        },
+        {
+          "name": "Selbstverteidigung lernen",
+          "beschreibung": "Feministische Selbstverteidigung, Kampfsport, Awareness – Sich schützen können ist kein Widerspruch zu Gewaltfreiheit.",
+          "angebote": [
+            "WenDo",
+            "Kampfsport-Gruppen",
+            "Awareness-Kollektive"
+          ]
+        },
+        {
+          "name": "Geschichte des Widerstands dokumentieren",
+          "beschreibung": "In deiner Stadt gab es Widerstand: gegen Nazis, gegen Atomanlagen, gegen Räumungen. Dokumentiere diese Geschichte, mache sie sichtbar.",
+          "formate": [
+            "Gedenkorte",
+            "Audioguides",
+            "Broschüren",
+            "Webseiten"
+          ]
+        },
+        {
+          "name": "Rote Hilfe stärken",
+          "beschreibung": "Die Rote Hilfe unterstützt Menschen, die wegen politischer Aktivität verfolgt werden. Werde Mitglied, organisiere Solipartys, baue lokale Strukturen.",
+          "aktionen": [
+            "Mitgliedschaft",
+            "Solikonzerte",
+            "Prozessbeobachtung",
+            "Gefangenenunterstützung"
+          ]
+        },
+        {
+          "name": "Antifa-Arbeit",
+          "beschreibung": "Faschismus ist keine Meinung, sondern ein Verbrechen. Informiere über rechte Strukturen, organisiere Gegenproteste, schütze Bedrohte.",
+          "aktionen": [
+            "Recherchearbeit",
+            "Outings",
+            "Gegenkundgebungen",
+            "Schutzbegleitung"
+          ]
+        },
+        {
+          "name": "Cop-Watching organisieren",
+          "beschreibung": "Dokumentiere Polizeigewalt, beobachte Einsätze, sammle Zeug*innenaussagen. Die Polizei hat ein Gewaltmonopol – kontrolliere es.",
+          "tools": [
+            "Kamera/Handy",
+            "Protokollvorlagen",
+            "Rechtswissen",
+            "Vertrauensanwält*innen"
+          ]
+        }
+      ]
+    },
+    "vernetzung": {
+      "titel": "Solidarische Strukturen",
+      "beschreibung": "Repression trifft Einzelne – aber die Antwort muss kollektiv sein.",
+      "ideen": [
+        {
+          "name": "Anti-Repressionsnetzwerk",
+          "beschreibung": "Vernetze alle, die mit Repression zu tun haben: Rote Hilfe, Legal Teams, Anwält*innen, Beratungsstellen. Gemeinsame Strukturen, geteiltes Wissen.",
+          "partner": [
+            "Rote Hilfe",
+            "Republikanischer Anwältinnen-Verein",
+            "Komitee für Grundrechte"
+          ]
+        },
+        {
+          "name": "Internationale Solidarität bei Repression",
+          "beschreibung": "Wenn Genoss*innen in anderen Ländern verfolgt werden: Solidaritätskampagnen, Briefe an Gefangene, politischer Druck.",
+          "beispiele": [
+            "Freiheit für Öcalan",
+            "Solidarity with Palestine Prisoners",
+            "Free Mumia"
+          ]
+        },
+        {
+          "name": "Dokumentation und Gedächtnis",
+          "beschreibung": "Polizeigewalt, Justizwillkür, Gefängniszustände – dokumentiere systematisch, baue Archive auf, mache Missstände öffentlich.",
+          "projekte": [
+            "Archiv der sozialen Bewegungen",
+            "Dokumentationsstellen"
+          ]
+        }
+      ]
+    },
+    "theorie": {
+      "titel": "Die Gewaltfrage",
+      "beschreibung": "Ist Gewalt ein legitimes Mittel? Wann? Wer definiert Gewalt? Wessen Gewalt wird unsichtbar gemacht?",
+      "ideen": [
+        {
+          "name": "Klassiker der Gewaltdebatte",
+          "beschreibung": "Sorel über den Generalstreik, Benjamin über Gewalt, Fanon über antikoloniale Gewalt – die grundlegenden Texte.",
+          "texte": [
+            {
+              "titel": "Über den Begriff der Geschichte / Zur Kritik der Gewalt",
+              "autor": "Walter Benjamin"
+            },
+            {
+              "titel": "Die Verdammten dieser Erde",
+              "autor": "Frantz Fanon",
+              "jahr": 1961
+            },
+            {
+              "titel": "Über die Gewalt",
+              "autor": "Georges Sorel",
+              "jahr": 1908
+            }
+          ]
+        },
+        {
+          "name": "Gewaltfreier Widerstand",
+          "beschreibung": "Gandhi, King, Gene Sharp – die Tradition gewaltfreien Widerstands hat eigene Strategien und Theorien entwickelt.",
+          "texte": [
+            {
+              "titel": "Von der Diktatur zur Demokratie",
+              "autor": "Gene Sharp",
+              "jahr": 1993
+            },
+            {
+              "titel": "Why Civil Resistance Works",
+              "autor": "Chenoweth/Stephan",
+              "jahr": 2011
+            }
+          ]
+        },
+        {
+          "name": "Strukturelle Gewalt",
+          "beschreibung": "Johan Galtung hat den Begriff geprägt: Gewalt ist nicht nur physisch, sondern in Strukturen eingebaut. Armut tötet, Grenzen töten.",
+          "texte": [
+            {
+              "titel": "Strukturelle Gewalt",
+              "autor": "Johan Galtung",
+              "jahr": 1975
+            }
+          ]
+        },
+        {
+          "name": "Kritik der Gewaltfreiheits-Ideologie",
+          "beschreibung": "Peter Gelderloos und andere kritisieren, dass Gewaltfreiheit oft eine Ideologie der Privilegierten ist. Wer kann es sich leisten, gewaltfrei zu bleiben?",
+          "texte": [
+            {
+              "titel": "How Nonviolence Protects the State",
+              "autor": "Peter Gelderloos",
+              "jahr": 2007
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "E1": {
+    "name": "Kultur: Gegenkultur oder Massenkultur?",
+    "lokal": {
+      "titel": "Kultur politisch machen",
+      "beschreibung": "Kultur ist ein Kampffeld – um Bilder, Geschichten, Symbole. Hier kannst du intervenieren, produzieren, umdeuten.",
+      "ideen": [
+        {
+          "name": "Politisches Kulturzentrum",
+          "beschreibung": "Ein Ort für linke Kultur: Konzerte, Lesungen, Ausstellungen, Kino. Vielleicht gibt es schon eins in deiner Stadt – wenn nicht, gründe eins.",
+          "beispiele": [
+            "UT Connewitz Leipzig",
+            "Conne Island",
+            "SO36 Berlin",
+            "Rote Flora Hamburg"
+          ]
+        },
+        {
+          "name": "Arbeiter*innen-Literatur wiederentdecken",
+          "beschreibung": "Es gab eine reiche Tradition proletarischer Literatur: Willi Bredel, Hans Marchwitza, Anna Seghers. Organisiere Lesungen, bringe sie zurück ins Gespräch.",
+          "autor_innen": [
+            "Anna Seghers",
+            "Willi Bredel",
+            "Hans Fallada",
+            "B. Traven"
+          ]
+        },
+        {
+          "name": "Politisches Theater machen",
+          "beschreibung": "Brecht, Boal, Piscator – die Tradition des politischen Theaters. Führe ein Lehrstück auf, organisiere Theater der Unterdrückten, gründe ein Agitprop-Ensemble.",
+          "methoden": [
+            "Forumtheater",
+            "Unsichtbares Theater",
+            "Lehrstücke",
+            "Straßentheater"
+          ]
+        },
+        {
+          "name": "Linke Musik fördern",
+          "beschreibung": "Organisiere Konzerte, stelle Mixtapes zusammen, unterstütze lokale Bands. Punk, Hip-Hop, Folk, Elektronik – politische Musik gibt es überall.",
+          "genres": [
+            "Punk/Hardcore",
+            "Politischer Hip-Hop",
+            "Protestfolk",
+            "Techno aus besetzten Häusern"
+          ]
+        },
+        {
+          "name": "Wandbilder und Street Art",
+          "beschreibung": "Gestalte den öffentlichen Raum: Wandbilder, Graffiti, Sticker, Plakate. Hole dir Genehmigungen oder handle guerilla.",
+          "ressourcen": [
+            "Wandbild-Kollektive",
+            "Street-Art-Netzwerke",
+            "Schablonentechnik"
+          ]
+        },
+        {
+          "name": "Linkes Filmfestival",
+          "beschreibung": "Kuratiere ein Festival mit politischen Filmen: Dokumentationen, Spielfilme, Experimentelles. Diskussionen nach den Vorführungen.",
+          "klassiker": [
+            "Battleship Potemkin",
+            "The Battle of Algiers",
+            "Land and Freedom",
+            "Sorry to Bother You"
+          ]
+        },
+        {
+          "name": "Gegenöffentlichkeit im Netz",
+          "beschreibung": "YouTube, TikTok, Instagram – die Rechte dominiert viele Plattformen. Produziere linken Content: Erklärvideos, Memes, Podcasts.",
+          "formate": [
+            "BreadTube-Style Videos",
+            "Politische Memes",
+            "TikTok-Agitation"
+          ]
+        },
+        {
+          "name": "Buchhandlung / Infoladen",
+          "beschreibung": "Ein physischer Ort für linke Literatur, Zeitschriften, Flyer. Infoläden sind Infrastruktur und Treffpunkt zugleich.",
+          "funktionen": [
+            "Buchverkauf",
+            "Veranstaltungen",
+            "Beratung",
+            "Archiv",
+            "Cafe"
+          ]
+        },
+        {
+          "name": "Politische Satire",
+          "beschreibung": "Humor ist eine Waffe. Schreibe satirische Texte, mache Comedy-Shows, produziere Fake-News-Interventionen wie die Yes Men.",
+          "beispiele": [
+            "Yes Men",
+            "Zentrum für politische Schönheit",
+            "Die PARTEI"
+          ]
+        }
+      ]
+    },
+    "vernetzung": {
+      "titel": "Kulturelle Netzwerke",
+      "beschreibung": "Kultur lebt vom Austausch. Wie verbinden wir linke Kulturschaffende?",
+      "ideen": [
+        {
+          "name": "Künstler*innen-Kollektive",
+          "beschreibung": "Schluss mit dem Künstler*innen-Genie-Mythos: Kollektive Produktion, geteilte Ressourcen, gemeinsame Projekte.",
+          "formen": [
+            "Künstler*innen-Kommunen",
+            "Produktionskollektive",
+            "Geteilte Ateliers"
+          ]
+        },
+        {
+          "name": "Internationale Kultur-Solidarität",
+          "beschreibung": "Kulturboykott gegen Apartheid, Solidarität mit verfolgten Künstler*innen, kultureller Austausch mit Bewegungen weltweit.",
+          "beispiele": [
+            "BDS Kulturboykott",
+            "Writers in Prison Committee",
+            "Kulturelle Delegationen"
+          ]
+        },
+        {
+          "name": "Archive der Bewegung",
+          "beschreibung": "Kultur geht verloren, wenn sie nicht archiviert wird. Sammle Flyer, Plakate, Zines, Musik. Digitalisiere und teile.",
+          "archive": [
+            "Papiertiger Berlin",
+            "IISG Amsterdam",
+            "Antifaschistisches Archiv"
+          ]
+        }
+      ]
+    },
+    "theorie": {
+      "titel": "Kulturtheorie",
+      "beschreibung": "Was ist die Rolle von Kultur im Klassenkampf? Ablenkung oder Waffe?",
+      "ideen": [
+        {
+          "name": "Gramsci und Kulturhegemonie",
+          "beschreibung": "Gramsci hat gezeigt: Herrschaft funktioniert nicht nur durch Zwang, sondern durch kulturelle Zustimmung. Der Kampf um Hegemonie ist auch ein Kulturkampf.",
+          "texte": [
+            {
+              "titel": "Gefängnishefte",
+              "autor": "Antonio Gramsci"
+            }
+          ]
+        },
+        {
+          "name": "Adorno und Kulturindustrie",
+          "beschreibung": "Die Kulturindustrie produziert Konformismus – aber ist alle Massenkultur affirmativ? Adornos Kritik und ihre Grenzen.",
+          "texte": [
+            {
+              "titel": "Dialektik der Aufklärung",
+              "autor": "Horkheimer/Adorno",
+              "jahr": 1944
+            }
+          ]
+        },
+        {
+          "name": "Cultural Studies",
+          "beschreibung": "Stuart Hall, Raymond Williams und die Birmingham School haben Kultur als Kampffeld verstanden, in dem Bedeutungen umkämpft sind.",
+          "texte": [
+            {
+              "titel": "Culture and Society",
+              "autor": "Raymond Williams",
+              "jahr": 1958
+            },
+            {
+              "titel": "Encoding/Decoding",
+              "autor": "Stuart Hall",
+              "jahr": 1973
+            }
+          ]
+        },
+        {
+          "name": "Brecht und das epische Theater",
+          "beschreibung": "Verfremdung, Lehrstück, Dialektik auf der Bühne – Brechts Theorie des politischen Theaters ist bis heute einflussreich.",
+          "texte": [
+            {
+              "titel": "Schriften zum Theater",
+              "autor": "Bertolt Brecht"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "E2": {
+    "name": "Technologie: Befreiung oder Kontrolle?",
+    "lokal": {
+      "titel": "Technologie aneignen",
+      "beschreibung": "Technologie ist nicht neutral – sie kann befreien oder unterdrücken. Wir müssen sie uns aneignen, umbauen, neu erfinden.",
+      "ideen": [
+        {
+          "name": "Cryptoparty organisieren",
+          "beschreibung": "Digitale Selbstverteidigung: Verschlüsselung, sichere Kommunikation, Datenschutz. Organisiere Workshops für Aktivist*innen und alle anderen.",
+          "themen": [
+            "Signal/Matrix",
+            "Tor",
+            "PGP-Verschlüsselung",
+            "Tails",
+            "VPN"
+          ]
+        },
+        {
+          "name": "Freifunk aufbauen",
+          "beschreibung": "Freies WLAN für alle: Das Freifunk-Netzwerk ist eine dezentrale, selbstorganisierte Alternative zu kommerziellen Anbietern.",
+          "ressourcen": [
+            "Freifunk-Community",
+            "Router-Firmware",
+            "Lokale Gruppen"
+          ]
+        },
+        {
+          "name": "FabLab / Makerspace gründen",
+          "beschreibung": "Ein Ort mit 3D-Druckern, CNC-Fräsen, Elektronik-Werkstatt – offene Produktionsmittel für alle. Nicht kaufen, selbst machen.",
+          "funktionen": [
+            "3D-Druck",
+            "Elektronik",
+            "Holzwerkstatt",
+            "Textil",
+            "Repair Cafe"
+          ]
+        },
+        {
+          "name": "Algorithmen verstehen und hacken",
+          "beschreibung": "Algorithmen entscheiden über Kredite, Jobs, Sozialleistungen. Lerne, wie sie funktionieren, decke Diskriminierung auf, fordere Transparenz.",
+          "ressourcen": [
+            "Algorithm Watch",
+            "AI Now Institute",
+            "Tactical Tech"
+          ]
+        },
+        {
+          "name": "Alternative Plattformen nutzen und fördern",
+          "beschreibung": "Raus aus GAFAM: Mastodon statt Twitter, PeerTube statt YouTube, Signal statt WhatsApp. Nutze und fördere dezentrale Alternativen.",
+          "plattformen": [
+            "Mastodon",
+            "PeerTube",
+            "Pixelfed",
+            "Matrix",
+            "Nextcloud"
+          ]
+        },
+        {
+          "name": "Tech-Worker organisieren",
+          "beschreibung": "In der Tech-Branche arbeiten Millionen – oft unter prekären Bedingungen. Unterstütze Organizing-Versuche bei Google, Amazon, Facebook.",
+          "beispiele": [
+            "Tech Workers Coalition",
+            "Alphabet Workers Union",
+            "Amazon Workers"
+          ]
+        },
+        {
+          "name": "Gegen Überwachung kämpfen",
+          "beschreibung": "Gesichtserkennung, Vorratsdatenspeicherung, Staatstrojaner – der Überwachungsstaat wächst. Dokumentiere, kläre auf, organisiere Widerstand.",
+          "organisationen": [
+            "Digitalcourage",
+            "CCC",
+            "EDRi",
+            "netzpolitik.org"
+          ]
+        },
+        {
+          "name": "Open Source für die Bewegung",
+          "beschreibung": "Entwickle Software für linke Projekte: Organisationstools, Mobilisierungsapps, Dokumentationssysteme. Teile den Code.",
+          "projekte": [
+            "Decidim",
+            "Action Network",
+            "CiviCRM",
+            "Nextcloud"
+          ]
+        },
+        {
+          "name": "KI kritisch nutzen",
+          "beschreibung": "KI kann für Propaganda, Überwachung, Manipulation eingesetzt werden – aber auch für progressive Zwecke. Lerne, kritisch damit umzugehen.",
+          "themen": [
+            "AI Ethics",
+            "Bias in AI",
+            "Emancipatory uses of AI"
+          ]
+        }
+      ]
+    },
+    "vernetzung": {
+      "titel": "Tech-Aktivismus verbinden",
+      "beschreibung": "Hacker*innen, Datenschützer*innen, Entwickler*innen – wie verbinden wir technische und politische Kompetenz?",
+      "ideen": [
+        {
+          "name": "CCC und Bewegung",
+          "beschreibung": "Der Chaos Computer Club ist die größte Hacker*innen-Vereinigung Europas. Baue Brücken zwischen CCC und politischen Bewegungen.",
+          "kontakte": [
+            "Lokale CCC-Gruppen (Erfas)",
+            "Congress",
+            "Camp"
+          ]
+        },
+        {
+          "name": "Internationale Tech-Solidarität",
+          "beschreibung": "Von Electronic Frontier Foundation bis Access Now – es gibt globale Netzwerke für digitale Rechte. Vernetze dich.",
+          "netzwerke": [
+            "EFF",
+            "Access Now",
+            "EDRi",
+            "Tactical Tech"
+          ]
+        },
+        {
+          "name": "Tech für Klimagerechtigkeit",
+          "beschreibung": "Wie kann Technologie der Klimabewegung helfen? Monitoring, Vernetzung, Dokumentation. Aber auch: Kritik an Green Tech als Scheinlösung.",
+          "projekte": [
+            "Open Climate Data",
+            "Protest-Dokumentation",
+            "Kampagnen-Tools"
+          ]
+        }
+      ]
+    },
+    "theorie": {
+      "titel": "Technologiekritik",
+      "beschreibung": "Ist Technologie neutral? Befreit sie oder unterdrückt sie? Kann es sozialistische Technologie geben?",
+      "ideen": [
+        {
+          "name": "Marx und Maschinerie",
+          "beschreibung": "Im Kapital analysiert Marx, wie Maschinen zur Intensivierung der Ausbeutung eingesetzt werden. Aber er sieht auch befreiendes Potenzial.",
+          "texte": [
+            {
+              "titel": "Das Kapital, Bd. 1, Kap. 13",
+              "autor": "Karl Marx",
+              "jahr": 1867
+            }
+          ]
+        },
+        {
+          "name": "Cybersozialismus",
+          "beschreibung": "Kann das Internet die Planwirtschaft möglich machen? Paul Cockshott, Evgeny Morozov und andere denken darüber nach.",
+          "texte": [
+            {
+              "titel": "Alternativen aus dem Rechner",
+              "autor": "Cockshott/Cottrell",
+              "jahr": 2006
+            },
+            {
+              "titel": "Digital Socialism?",
+              "autor": "Evgeny Morozov",
+              "jahr": 2019
+            }
+          ]
+        },
+        {
+          "name": "Überwachungskapitalismus",
+          "beschreibung": "Shoshana Zuboff hat analysiert, wie Tech-Konzerne unsere Daten zur Ware machen. Eine neue Form des Kapitalismus.",
+          "texte": [
+            {
+              "titel": "Das Zeitalter des Überwachungskapitalismus",
+              "autor": "Shoshana Zuboff",
+              "jahr": 2018
+            }
+          ]
+        },
+        {
+          "name": "Accelerationismus",
+          "beschreibung": "Sollen wir die technologische Entwicklung beschleunigen, um den Kapitalismus zu überwinden? Kontrovers, aber einflussreich.",
+          "texte": [
+            {
+              "titel": "#Accelerate Manifesto",
+              "autor": "Srnicek/Williams",
+              "jahr": 2013
+            },
+            {
+              "titel": "Die Zukunft erfinden",
+              "autor": "Srnicek/Williams",
+              "jahr": 2015
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "E3": {
+    "name": "Bildung: Gegenmacht oder Integration?",
+    "lokal": {
+      "titel": "Bildung befreien",
+      "beschreibung": "Bildung kann anpassen oder befreien. Wie schaffen wir Räume für kritisches Denken – in und außerhalb der Institutionen?",
+      "ideen": [
+        {
+          "name": "Freie Schule / Demokratische Schule",
+          "beschreibung": "Schulen ohne Zwang, ohne Noten, ohne Lehrplan – sie existieren. Unterstütze bestehende Projekte oder gründe eine neue.",
+          "beispiele": [
+            "Freie Schule Frankfurt",
+            "Kapriole Freiburg",
+            "Demokratische Schulen"
+          ]
+        },
+        {
+          "name": "Volkshochschule politisieren",
+          "beschreibung": "VHS-Kurse sind günstig und offen. Biete politische Kurse an: Kapital-Lesen, Geschichte der Arbeiterbewegung, Feministische Theorie.",
+          "themen": [
+            "Politische Theorie",
+            "Geschichte",
+            "Kritische Ökonomie"
+          ]
+        },
+        {
+          "name": "Kritische Uni-Gruppen",
+          "beschreibung": "An jeder Uni gibt es kritische Gruppen: Fachschaftsinitiativen, autonome Seminare, Vollversammlungen. Stärke sie oder gründe neue.",
+          "formen": [
+            "Autonome Seminare",
+            "Kritische Einführungswochen",
+            "Alternative Ringvorlesungen"
+          ]
+        },
+        {
+          "name": "Freire-Methode anwenden",
+          "beschreibung": "Paulo Freires 'Pädagogik der Unterdrückten' ist eine Anleitung für befreiende Bildung. Lerne die Methode, wende sie an.",
+          "methoden": [
+            "Generative Themen",
+            "Kodifizierung",
+            "Problem-posing education"
+          ]
+        },
+        {
+          "name": "Kinder- und Jugendarbeit",
+          "beschreibung": "Politische Bildung beginnt früh. Engagiere dich in Jugendzentren, Pfadfinder*innen, Ferienfreizeiten. Kritisches Denken fördern.",
+          "kontexte": [
+            "Jugendzentren",
+            "Ferienfreizeiten",
+            "Falken/Pfadfinder",
+            "Schüler*innenvertretung"
+          ]
+        },
+        {
+          "name": "Arbeiter*innen-Bildung",
+          "beschreibung": "Die alte Tradition der Arbeiterbildungsvereine: Bildung für und mit Arbeiter*innen. In Gewerkschaften, in Betrieben, in Stadtteilen.",
+          "formate": [
+            "Betriebsräte-Schulungen",
+            "Gewerkschaftsseminare",
+            "Stadtteil-Workshops"
+          ]
+        },
+        {
+          "name": "Online-Kurse produzieren",
+          "beschreibung": "Kostenlose Bildung für alle: Produziere Online-Kurse zu politischen Themen. YouTube, Podcasts, interaktive Formate.",
+          "beispiele": [
+            "David Harveys Marx-Kurs",
+            "Jacobin-Videos",
+            "Philosophy Tube"
+          ]
+        },
+        {
+          "name": "Bibliothek der Dinge / Wissensallmende",
+          "beschreibung": "Nicht nur Bücher, auch Werkzeuge, Geräte, Fähigkeiten teilen. Offene Wissensspeicher, lokale Skill-Shares.",
+          "formen": [
+            "Leihläden",
+            "Skill-Share-Events",
+            "Wiki-Projekte"
+          ]
+        }
+      ]
+    },
+    "vernetzung": {
+      "titel": "Bildungsnetzwerke",
+      "beschreibung": "Bildung braucht Strukturen – aber nicht die des Staates.",
+      "ideen": [
+        {
+          "name": "Autonome Hochschulen",
+          "beschreibung": "Die Idee einer freien Universität: Ohne Staat, ohne Kapital, für alle offen. Es gibt historische und aktuelle Versuche.",
+          "beispiele": [
+            "Free University NYC",
+            "Really Open University",
+            "Universidad de la Tierra"
+          ]
+        },
+        {
+          "name": "Internationale Bildungsnetzwerke",
+          "beschreibung": "Was können wir von Bildungskämpfen in Chile, Südafrika, Mexiko lernen? Vernetze dich mit internationalen Bewegungen.",
+          "bewegungen": [
+            "Chilenische Studierendenbewegung",
+            "Fees Must Fall",
+            "UNAM-Streiks"
+          ]
+        },
+        {
+          "name": "Kritische Lehrer*innen vernetzen",
+          "beschreibung": "In jeder Schule gibt es kritische Lehrer*innen – aber oft isoliert. Schaffe Räume für Austausch und gegenseitige Unterstützung.",
+          "kontakte": [
+            "GEW",
+            "Kritische Pädagog*innen",
+            "Schulpolitische Initiativen"
+          ]
+        }
+      ]
+    },
+    "theorie": {
+      "titel": "Kritische Pädagogik",
+      "beschreibung": "Wie hängen Bildung und Befreiung zusammen? Wie funktioniert ideologische Reproduktion?",
+      "ideen": [
+        {
+          "name": "Paulo Freire",
+          "beschreibung": "Die Pädagogik der Unterdrückten ist der Grundtext kritischer Bildung. Bankiers-Konzept vs. Problem-posing education.",
+          "texte": [
+            {
+              "titel": "Pädagogik der Unterdrückten",
+              "autor": "Paulo Freire",
+              "jahr": 1968
+            }
+          ]
+        },
+        {
+          "name": "Ideologische Staatsapparate",
+          "beschreibung": "Althusser hat gezeigt, wie Schule und andere Institutionen Ideologie reproduzieren. Kritik der Bildungsinstitutionen.",
+          "texte": [
+            {
+              "titel": "Ideologie und ideologische Staatsapparate",
+              "autor": "Louis Althusser",
+              "jahr": 1970
+            }
+          ]
+        },
+        {
+          "name": "Entschulung der Gesellschaft",
+          "beschreibung": "Ivan Illich forderte radikale Entschulung. Ist die Institution Schule selbst das Problem?",
+          "texte": [
+            {
+              "titel": "Entschulung der Gesellschaft",
+              "autor": "Ivan Illich",
+              "jahr": 1971
+            }
+          ]
+        },
+        {
+          "name": "Bourdieu und kulturelles Kapital",
+          "beschreibung": "Bildung reproduziert Klassenunterschiede durch 'kulturelles Kapital'. Bourdieus Analyse ist empirisch fundiert und scharf.",
+          "texte": [
+            {
+              "titel": "Die feinen Unterschiede",
+              "autor": "Pierre Bourdieu",
+              "jahr": 1979
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "E4": {
+    "name": "Alltag: Lebensstil oder Systemfrage?",
+    "lokal": {
+      "titel": "Anders leben – hier und jetzt",
+      "beschreibung": "Revolutionäre Politik beginnt nicht erst auf der Demo. Wie leben wir anders – ohne auf die Revolution zu warten?",
+      "ideen": [
+        {
+          "name": "Wohnprojekt gründen",
+          "beschreibung": "Zusammenleben anders: WG, Hausgemeinschaft, Kommune. Geteilte Ressourcen, gemeinsame Verantwortung, kollektive Entscheidungen.",
+          "formen": [
+            "Große WG",
+            "Hausgemeinschaft",
+            "Kommune",
+            "Mietshäuser Syndikat"
+          ]
+        },
+        {
+          "name": "Konsumkritik praktisch",
+          "beschreibung": "Nicht kaufen, was du nicht brauchst. Teilen statt Besitzen. Second Hand, Tausch, Selbermachen. Aber: Individueller Konsumverzicht ist nicht die Lösung.",
+          "praktiken": [
+            "Minimalismus",
+            "DIY",
+            "Reparieren",
+            "Tauschen",
+            "Containern"
+          ]
+        },
+        {
+          "name": "Solidarische Netzwerke aufbauen",
+          "beschreibung": "Nachbarschaftshilfe, Solistrukturen, gegenseitige Unterstützung. Nicht Charity, sondern Solidarität. Bevor die Krise kommt, Netzwerke aufbauen.",
+          "formen": [
+            "Nachbarschaftshilfe",
+            "Soliküchen",
+            "Solibrillen",
+            "Medizinische Versorgung"
+          ]
+        },
+        {
+          "name": "Gesundheit kollektiv",
+          "beschreibung": "Gesundheitskollektive, alternative Medizin, psychische Unterstützung in der Gruppe. Care füreinander, nicht für den Arbeitsmarkt.",
+          "projekte": [
+            "Gesundheitskollektive",
+            "Peer-Support",
+            "Community Health Worker"
+          ]
+        },
+        {
+          "name": "Antipsychiatrische Praxis",
+          "beschreibung": "Die Psychiatrie ist auch ein Kontrollinstrument. Unterstütze Alternativen: Soteria, Peer-Beratung, Mad Pride.",
+          "ansätze": [
+            "Soteria-Modell",
+            "Peer-Beratung",
+            "Trialog",
+            "Recovery-Ansatz"
+          ]
+        },
+        {
+          "name": "Sexualität und Beziehungen",
+          "beschreibung": "Die bürgerliche Kleinfamilie ist nicht das einzige Modell. Polyamorie, queere Beziehungen, Wahlfamilien – experimentiere.",
+          "ressourcen": [
+            "Polyamorie-Communities",
+            "Queere Netzwerke",
+            "Wahlfamilien-Konzepte"
+          ]
+        },
+        {
+          "name": "Veganismus / Ernährung",
+          "beschreibung": "Was wir essen, hat Konsequenzen: Für Tiere, Klima, Arbeiter*innen. Aber: Veganismus als individueller Lifestyle ist nicht genug.",
+          "ansätze": [
+            "Vegane Volxküchen",
+            "Foodsharing",
+            "Containern",
+            "Kollektive Küchen"
+          ]
+        },
+        {
+          "name": "Trauer und Tod",
+          "beschreibung": "Auch Sterben ist politisch: Sterbehilfe, Hospizbewegung, kollektive Trauerrituale. Wie gehen wir mit dem Ende um?",
+          "themen": [
+            "Hospizbewegung",
+            "Death Positivity",
+            "Grüne Bestattung"
+          ]
+        },
+        {
+          "name": "Elternschaft radikal",
+          "beschreibung": "Kinder großziehen außerhalb der Kleinfamilie: Kollektive Elternschaft, Anti-Authoritarian Parenting, Kinderläden.",
+          "modelle": [
+            "Kinderläden",
+            "Eltern-WGs",
+            "Kollektive Erziehung"
+          ]
+        },
+        {
+          "name": "Sport und Körper",
+          "beschreibung": "Sport ist nicht nur Leistung und Konkurrenz. Alternative Sportprojekte: Anti-Sexistisches Fußball, Body Positivity, Behindertensport.",
+          "projekte": [
+            "Discover Football",
+            "Antira-Fußball",
+            "Queerer Sport"
+          ]
+        }
+      ]
+    },
+    "vernetzung": {
+      "titel": "Lebensformen verbinden",
+      "beschreibung": "Alternative Lebensprojekte sind oft isoliert. Wie schaffen wir Netzwerke?",
+      "ideen": [
+        {
+          "name": "Kommune-Netzwerk",
+          "beschreibung": "Es gibt hunderte Kommunen und intentionale Gemeinschaften. Vernetze sie, organisiere Austausch, teile Erfahrungen.",
+          "netzwerke": [
+            "Kommuja",
+            "Eurotopia",
+            "GEN (Global Ecovillage Network)"
+          ]
+        },
+        {
+          "name": "Prefigurative Politics",
+          "beschreibung": "Die Welt, die wir wollen, schon jetzt leben – das ist die Idee von Prefiguration. Verbinde alle Projekte, die das versuchen.",
+          "beispiele": [
+            "Besetzte Häuser",
+            "Kommunen",
+            "Solawi",
+            "Kollektive"
+          ]
+        },
+        {
+          "name": "Feministisches Netzwerk Sorgearbeit",
+          "beschreibung": "Wer kümmert sich – und wer nicht? Vernetze alle, die Care-Arbeit sichtbar machen und neu verteilen wollen.",
+          "themen": [
+            "Care Revolution",
+            "Sorgestreik",
+            "Lohn für Hausarbeit"
+          ]
+        }
+      ]
+    },
+    "theorie": {
+      "titel": "Politik des Alltags",
+      "beschreibung": "Ist persönliche Veränderung politisch? Oder Ablenkung vom eigentlichen Kampf?",
+      "ideen": [
+        {
+          "name": "Das Private ist politisch",
+          "beschreibung": "Der feministische Slogan der 1970er: Beziehungen, Hausarbeit, Körper sind keine Privatsache. Sie sind Schauplätze von Macht.",
+          "texte": [
+            {
+              "titel": "Das Private ist politisch",
+              "autor": "Carol Hanisch",
+              "jahr": 1969
+            }
+          ]
+        },
+        {
+          "name": "Kommune-Bewegung",
+          "beschreibung": "Von den 1968er-Kommunen bis heute: Die Geschichte kollektiven Lebens als politisches Projekt.",
+          "texte": [
+            {
+              "titel": "Kommune 2",
+              "autor": "Kunzelmann u.a.",
+              "jahr": 1969
+            },
+            {
+              "titel": "Das kommunistische Leben",
+              "autor": "Bini Adamczak",
+              "jahr": 2017
+            }
+          ]
+        },
+        {
+          "name": "Kritik der Lifestyle-Politik",
+          "beschreibung": "Ist bewusster Konsum politisch? Oder Selbstbetrug? Die Kritik an individualisierter Politik.",
+          "texte": [
+            {
+              "titel": "No Logo",
+              "autor": "Naomi Klein",
+              "jahr": 1999
+            }
+          ]
+        },
+        {
+          "name": "Alltag und Revolution",
+          "beschreibung": "Henri Lefebvre und die Situationisten haben den Alltag als revolutionäres Terrain verstanden. Nicht irgendwann Revolution, sondern hier und jetzt.",
+          "texte": [
+            {
+              "titel": "Kritik des Alltagslebens",
+              "autor": "Henri Lefebvre",
+              "jahr": 1947
+            },
+            {
+              "titel": "Die Gesellschaft des Spektakels",
+              "autor": "Guy Debord",
+              "jahr": 1967
+            }
+          ]
+        }
+      ]
+    }
+  }
+}
