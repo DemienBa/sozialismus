@@ -1,0 +1,27 @@
+{
+  "sehr_links": {
+    "titel": "Überzeugter Sozialist",
+    "links_score": "sehr links",
+    "abgrenzung_spd_gruene": null
+  },
+  "links": {
+    "titel": "Klar links positioniert",
+    "links_score": "links",
+    "abgrenzung_spd_gruene": null
+  },
+  "mitte_links": {
+    "titel": "Progressiv mit Potenzial",
+    "links_score": "mitte-links",
+    "abgrenzung_spd_gruene": "Du hast progressive Werte – aber SPD und Grüne haben diese Werte immer wieder verraten. Die SPD hat Hartz IV durchgesetzt und macht Sozialabbau mit. Die Grünen sind zur Kriegspartei geworden und setzen auf CO2-Preis statt Systemwandel. Die Linke ist die einzige Partei, die konsequent für soziale Gerechtigkeit, Frieden und echten Klimaschutz kämpft."
+  },
+  "mitte": {
+    "titel": "Politische Mitte",
+    "links_score": "mitte",
+    "abgrenzung_spd_gruene": "Du stehst in der politischen Mitte – aber vielleicht denkst du, SPD oder Grüne würden deine Interessen vertreten? Die Realität: SPD hat mit Hartz IV Millionen in Armut gestürzt. Die Grünen haben Waffenlieferungen in Kriegsgebiete zugestimmt und setzen auf marktbasierte Lösungen statt echte Umverteilung. Die Linke fordert konkret: Mietpreisdeckel, Mindestlohn von 15€, keine Waffenexporte."
+  },
+  "eher_rechts": {
+    "titel": "Noch nicht überzeugt",
+    "links_score": "eher rechts",
+    "abgrenzung_spd_gruene": "Deine Positionen sind aktuell eher moderat – aber wusstest du, dass auch SPD und Grüne nicht deine Interessen vertreten? Beide Parteien haben die Reichen reicher gemacht: Steuersenkungen für Konzerne, Rentenkürzungen, explodierende Mieten. Die Linke setzt sich als einzige Partei konsequent für die Interessen der arbeitenden Menschen ein – gegen Milliardäre und Großkonzerne."
+  }
+}

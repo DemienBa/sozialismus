@@ -1,0 +1,7459 @@
+{
+  "meta": {
+    "version": "2.0",
+    "anzahl": 209,
+    "stand": "2026-01",
+    "gruppen": [
+      "Gründergeneration",
+      "Revolutionäre Generation",
+      "Frankfurter Schule",
+      "Postkolonial",
+      "Feministisch",
+      "Ökologisch",
+      "Autonom/Anarchistisch",
+      "Post-Operaismus",
+      "Analytischer Marxismus",
+      "Zeitgenössisch",
+      "Deutschsprachig",
+      "Ergänzungen"
+    ],
+    "hinweis": "IDs konvertiert auf 26-Achsen-System (00-25)",
+    "aktualisiert": "2026-01-24T00:05:23.156Z"
+  },
+  "personen": [
+    {
+      "id": "marx",
+      "name": "Karl Marx",
+      "geboren": 1818,
+      "gestorben": 1883,
+      "herkunft": "Trier, Preußen",
+      "hauptzimmer": [
+        "01-2",
+        "14-1"
+      ],
+      "besucht": [
+        "00-4",
+        "03-2",
+        "10-2"
+      ],
+      "meidet": [
+        "00-1",
+        "02-5",
+        "16-1"
+      ],
+      "kurzbio": "Philosoph, Ökonom, Revolutionär. Begründer des wissenschaftlichen Sozialismus.",
+      "hauptwerke": [
+        {
+          "titel": "Das Kapital",
+          "jahr": 1867
+        },
+        {
+          "titel": "Manifest der Kommunistischen Partei",
+          "jahr": 1848
+        },
+        {
+          "titel": "Die deutsche Ideologie",
+          "jahr": 1846
+        }
+      ],
+      "beeinflusst_von": [
+        "hegel",
+        "feuerbach",
+        "ricardo"
+      ],
+      "beeinflusst": [
+        "engels",
+        "lenin",
+        "luxemburg",
+        "gramsci",
+        "adorno"
+      ],
+      "debattiert_mit": [
+        "bakunin",
+        "proudhon"
+      ],
+      "zitate": [
+        {
+          "text": "Die Philosophen haben die Welt nur verschieden interpretiert; es kommt aber darauf an, sie zu verändern.",
+          "quelle": "Thesen über Feuerbach",
+          "jahr": 1845
+        },
+        {
+          "text": "Das Sein bestimmt das Bewusstsein.",
+          "quelle": "Zur Kritik der politischen Ökonomie",
+          "jahr": 1859
+        }
+      ],
+      "tags": [
+        "klassenkampf",
+        "kapitalismuskritik",
+        "materialismus",
+        "mehrwert",
+        "entfremdung"
+      ],
+      "kategorie": "klassiker"
+    },
+    {
+      "id": "engels",
+      "name": "Friedrich Engels",
+      "geboren": 1820,
+      "gestorben": 1895,
+      "herkunft": "Barmen, Preußen",
+      "hauptzimmer": [
+        "01-2",
+        "09-2"
+      ],
+      "besucht": [
+        "14-1",
+        "00-4"
+      ],
+      "meidet": [
+        "00-1"
+      ],
+      "kurzbio": "Unternehmer, Philosoph, Mitbegründer des Marxismus. Finanzierte Marx und vollendete Das Kapital.",
+      "hauptwerke": [
+        {
+          "titel": "Die Lage der arbeitenden Klasse in England",
+          "jahr": 1845
+        },
+        {
+          "titel": "Der Ursprung der Familie, des Privateigentums und des Staats",
+          "jahr": 1884
+        },
+        {
+          "titel": "Anti-Dühring",
+          "jahr": 1878
+        }
+      ],
+      "beeinflusst_von": [
+        "marx",
+        "hegel"
+      ],
+      "beeinflusst": [
+        "lenin",
+        "bebel",
+        "zetkin"
+      ],
+      "debattiert_mit": [
+        "dühring"
+      ],
+      "zitate": [
+        {
+          "text": "Der Staat ist das Produkt der Gesellschaft auf einer bestimmten Entwicklungsstufe.",
+          "quelle": "Der Ursprung der Familie",
+          "jahr": 1884
+        }
+      ],
+      "tags": [
+        "familie",
+        "staat",
+        "dialektik",
+        "arbeiterbewegung"
+      ],
+      "kategorie": "klassiker"
+    },
+    {
+      "id": "bakunin",
+      "name": "Michail Bakunin",
+      "geboren": 1814,
+      "gestorben": 1876,
+      "herkunft": "Prjamuchino, Russland",
+      "hauptzimmer": [
+        "02-5",
+        "24-5"
+      ],
+      "besucht": [
+        "03-5",
+        "00-5"
+      ],
+      "meidet": [
+        "02-1",
+        "02-2",
+        "19-1"
+      ],
+      "kurzbio": "Anarchist, Revolutionär. Gegenspieler von Marx in der Ersten Internationale.",
+      "hauptwerke": [
+        {
+          "titel": "Staatlichkeit und Anarchie",
+          "jahr": 1873
+        },
+        {
+          "titel": "Gott und der Staat",
+          "jahr": 1882
+        }
+      ],
+      "beeinflusst_von": [
+        "proudhon",
+        "hegel"
+      ],
+      "beeinflusst": [
+        "kropotkin",
+        "goldman",
+        "bookchin"
+      ],
+      "debattiert_mit": [
+        "marx"
+      ],
+      "zitate": [
+        {
+          "text": "Die Freiheit ohne Sozialismus ist Privileg und Ungerechtigkeit, und Sozialismus ohne Freiheit ist Sklaverei und Brutalität.",
+          "quelle": "Staatlichkeit und Anarchie",
+          "jahr": 1873
+        }
+      ],
+      "tags": [
+        "anarchismus",
+        "antiautoritär",
+        "föderation",
+        "direkte aktion"
+      ],
+      "kategorie": "klassiker"
+    },
+    {
+      "id": "proudhon",
+      "name": "Pierre-Joseph Proudhon",
+      "geboren": 1809,
+      "gestorben": 1865,
+      "herkunft": "Besançon, Frankreich",
+      "hauptzimmer": [
+        "03-4",
+        "02-5"
+      ],
+      "besucht": [
+        "16-1"
+      ],
+      "meidet": [
+        "02-1",
+        "03-1"
+      ],
+      "kurzbio": "Erster, der sich selbst als Anarchist bezeichnete. Mutualist, Föderalist.",
+      "hauptwerke": [
+        {
+          "titel": "Was ist Eigentum?",
+          "jahr": 1840
+        },
+        {
+          "titel": "System der ökonomischen Widersprüche",
+          "jahr": 1846
+        }
+      ],
+      "beeinflusst_von": [
+        "fourier"
+      ],
+      "beeinflusst": [
+        "bakunin",
+        "kropotkin"
+      ],
+      "debattiert_mit": [
+        "marx"
+      ],
+      "zitate": [
+        {
+          "text": "Eigentum ist Diebstahl!",
+          "quelle": "Was ist Eigentum?",
+          "jahr": 1840
+        }
+      ],
+      "tags": [
+        "mutualismus",
+        "föderalismus",
+        "eigentumskritik",
+        "anarchismus"
+      ],
+      "kategorie": "klassiker"
+    },
+    {
+      "id": "luxemburg",
+      "name": "Rosa Luxemburg",
+      "geboren": 1871,
+      "gestorben": 1919,
+      "herkunft": "Zamość, Polen",
+      "hauptzimmer": [
+        "00-3",
+        "01-2"
+      ],
+      "besucht": [
+        "12-4",
+        "11-3",
+        "13-3"
+      ],
+      "meidet": [
+        "00-1",
+        "19-1"
+      ],
+      "kurzbio": "Revolutionärin, Theoretikerin, Mitbegründerin der KPD. Ermordet von Freikorps.",
+      "hauptwerke": [
+        {
+          "titel": "Sozialreform oder Revolution?",
+          "jahr": 1899
+        },
+        {
+          "titel": "Die Akkumulation des Kapitals",
+          "jahr": 1913
+        },
+        {
+          "titel": "Die russische Revolution",
+          "jahr": 1918
+        }
+      ],
+      "beeinflusst_von": [
+        "marx",
+        "engels"
+      ],
+      "beeinflusst": [
+        "gramsci",
+        "arendt",
+        "cliff"
+      ],
+      "debattiert_mit": [
+        "bernstein",
+        "lenin"
+      ],
+      "zitate": [
+        {
+          "text": "Freiheit ist immer die Freiheit der Andersdenkenden.",
+          "quelle": "Die russische Revolution",
+          "jahr": 1918
+        },
+        {
+          "text": "Wer sich nicht bewegt, spürt seine Fesseln nicht.",
+          "quelle": "(zugeschrieben)",
+          "jahr": null
+        }
+      ],
+      "tags": [
+        "spontaneität",
+        "massenstreik",
+        "imperialismus",
+        "demokratie",
+        "revolution"
+      ],
+      "kategorie": "klassiker"
+    },
+    {
+      "id": "zetkin",
+      "name": "Clara Zetkin",
+      "geboren": 1857,
+      "gestorben": 1933,
+      "herkunft": "Wiederau, Sachsen",
+      "hauptzimmer": [
+        "09-2",
+        "19-3"
+      ],
+      "besucht": [
+        "01-2",
+        "00-3"
+      ],
+      "meidet": [],
+      "kurzbio": "Sozialistin, Frauenrechtlerin. Initiierte den Internationalen Frauentag.",
+      "hauptwerke": [
+        {
+          "titel": "Die Arbeiterinnen- und Frauenfrage der Gegenwart",
+          "jahr": 1889
+        }
+      ],
+      "beeinflusst_von": [
+        "marx",
+        "bebel"
+      ],
+      "beeinflusst": [
+        "kollontai"
+      ],
+      "debattiert_mit": [],
+      "zitate": [
+        {
+          "text": "Die Befreiung der Frau wie die des ganzen Menschengeschlechtes wird ausschließlich das Werk der Befreiung der Arbeit vom Kapital sein.",
+          "quelle": "Rede auf dem Parteitag",
+          "jahr": 1896
+        }
+      ],
+      "tags": [
+        "frauenbewegung",
+        "internationaler frauentag",
+        "arbeiterbewegung"
+      ],
+      "kategorie": "klassiker"
+    },
+    {
+      "id": "bebel",
+      "name": "August Bebel",
+      "geboren": 1840,
+      "gestorben": 1913,
+      "herkunft": "Deutz, Preußen",
+      "hauptzimmer": [
+        "09-2",
+        "00-2"
+      ],
+      "besucht": [
+        "19-3",
+        "11-2"
+      ],
+      "meidet": [],
+      "kurzbio": "Mitbegründer der SPD. Einer der ersten, der Frauenrechte ins sozialistische Programm aufnahm.",
+      "hauptwerke": [
+        {
+          "titel": "Die Frau und der Sozialismus",
+          "jahr": 1879
+        }
+      ],
+      "beeinflusst_von": [
+        "marx",
+        "engels"
+      ],
+      "beeinflusst": [
+        "zetkin",
+        "luxemburg"
+      ],
+      "debattiert_mit": [
+        "bernstein"
+      ],
+      "zitate": [],
+      "tags": [
+        "sozialdemokratie",
+        "frauenrechte",
+        "parlamentarismus"
+      ],
+      "kategorie": "klassiker"
+    },
+    {
+      "id": "kropotkin",
+      "name": "Peter Kropotkin",
+      "geboren": 1842,
+      "gestorben": 1921,
+      "herkunft": "Moskau, Russland",
+      "hauptzimmer": [
+        "02-5",
+        "03-5"
+      ],
+      "besucht": [
+        "08-4",
+        "24-5"
+      ],
+      "meidet": [
+        "02-1",
+        "03-1"
+      ],
+      "kurzbio": "Geograph, Anarchist. Theoretiker des Anarcho-Kommunismus und der gegenseitigen Hilfe.",
+      "hauptwerke": [
+        {
+          "titel": "Gegenseitige Hilfe in der Tier- und Menschenwelt",
+          "jahr": 1902
+        },
+        {
+          "titel": "Die Eroberung des Brotes",
+          "jahr": 1892
+        },
+        {
+          "titel": "Landwirtschaft, Industrie und Handwerk",
+          "jahr": 1899
+        }
+      ],
+      "beeinflusst_von": [
+        "bakunin",
+        "proudhon"
+      ],
+      "beeinflusst": [
+        "goldman",
+        "bookchin",
+        "graeber"
+      ],
+      "debattiert_mit": [],
+      "zitate": [
+        {
+          "text": "Alles gehört allen.",
+          "quelle": "Die Eroberung des Brotes",
+          "jahr": 1892
+        }
+      ],
+      "tags": [
+        "anarcho-kommunismus",
+        "gegenseitige hilfe",
+        "dezentralisierung",
+        "ökologie"
+      ],
+      "kategorie": "klassiker"
+    },
+    {
+      "id": "bernstein",
+      "name": "Eduard Bernstein",
+      "geboren": 1850,
+      "gestorben": 1932,
+      "herkunft": "Berlin, Preußen",
+      "hauptzimmer": [
+        "00-1",
+        "11-1"
+      ],
+      "besucht": [
+        "16-2"
+      ],
+      "meidet": [
+        "00-5",
+        "02-5"
+      ],
+      "kurzbio": "Theoretiker des Revisionismus. Brach mit der revolutionären Orthodoxie.",
+      "hauptwerke": [
+        {
+          "titel": "Die Voraussetzungen des Sozialismus und die Aufgaben der Sozialdemokratie",
+          "jahr": 1899
+        }
+      ],
+      "beeinflusst_von": [
+        "marx",
+        "engels"
+      ],
+      "beeinflusst": [],
+      "debattiert_mit": [
+        "luxemburg",
+        "kautsky"
+      ],
+      "zitate": [
+        {
+          "text": "Das Ziel, was immer es sei, ist mir nichts, die Bewegung alles.",
+          "quelle": "Voraussetzungen des Sozialismus",
+          "jahr": 1899
+        }
+      ],
+      "tags": [
+        "revisionismus",
+        "reformismus",
+        "sozialdemokratie"
+      ],
+      "kategorie": "klassiker"
+    },
+    {
+      "id": "lenin",
+      "name": "Wladimir Iljitsch Lenin",
+      "geboren": 1870,
+      "gestorben": 1924,
+      "herkunft": "Simbirsk, Russland",
+      "hauptzimmer": [
+        "02-2",
+        "19-1"
+      ],
+      "besucht": [
+        "00-4",
+        "01-2"
+      ],
+      "meidet": [
+        "02-5",
+        "00-1"
+      ],
+      "kurzbio": "Revolutionär, Theoretiker, erster Führer der Sowjetunion. Entwickelte den Marxismus-Leninismus.",
+      "hauptwerke": [
+        {
+          "titel": "Was tun?",
+          "jahr": 1902
+        },
+        {
+          "titel": "Staat und Revolution",
+          "jahr": 1917
+        },
+        {
+          "titel": "Der Imperialismus als höchstes Stadium des Kapitalismus",
+          "jahr": 1916
+        }
+      ],
+      "beeinflusst_von": [
+        "marx",
+        "engels",
+        "kautsky"
+      ],
+      "beeinflusst": [
+        "gramsci",
+        "trotzki",
+        "mao"
+      ],
+      "debattiert_mit": [
+        "luxemburg",
+        "kautsky",
+        "bakunin"
+      ],
+      "zitate": [
+        {
+          "text": "Es gibt keine revolutionäre Bewegung ohne revolutionäre Theorie.",
+          "quelle": "Was tun?",
+          "jahr": 1902
+        }
+      ],
+      "tags": [
+        "avantgarde",
+        "partei",
+        "imperialismus",
+        "staat",
+        "revolution"
+      ],
+      "kategorie": "revolutionaer"
+    },
+    {
+      "id": "trotzki",
+      "name": "Leo Trotzki",
+      "geboren": 1879,
+      "gestorben": 1940,
+      "herkunft": "Janowka, Ukraine",
+      "hauptzimmer": [
+        "11-4",
+        "10-3"
+      ],
+      "besucht": [
+        "00-4",
+        "19-2"
+      ],
+      "meidet": [
+        "19-1",
+        "00-1"
+      ],
+      "kurzbio": "Revolutionär, Theoretiker, Gründer der Roten Armee. Von Stalin ins Exil getrieben und ermordet.",
+      "hauptwerke": [
+        {
+          "titel": "Die permanente Revolution",
+          "jahr": 1930
+        },
+        {
+          "titel": "Die verratene Revolution",
+          "jahr": 1936
+        },
+        {
+          "titel": "Geschichte der russischen Revolution",
+          "jahr": 1930
+        }
+      ],
+      "beeinflusst_von": [
+        "marx",
+        "lenin"
+      ],
+      "beeinflusst": [
+        "mandel",
+        "cliff"
+      ],
+      "debattiert_mit": [
+        "stalin"
+      ],
+      "zitate": [
+        {
+          "text": "Die Revolution ist keine Einladung zum Abendessen.",
+          "quelle": "(zugeschrieben)",
+          "jahr": null
+        }
+      ],
+      "tags": [
+        "permanente revolution",
+        "internationalismus",
+        "bürokratiekritik",
+        "trotzkismus"
+      ],
+      "kategorie": "revolutionaer"
+    },
+    {
+      "id": "gramsci",
+      "name": "Antonio Gramsci",
+      "geboren": 1891,
+      "gestorben": 1937,
+      "herkunft": "Ales, Sardinien",
+      "hauptzimmer": [
+        "02-3",
+        "19-3"
+      ],
+      "besucht": [
+        "14-1",
+        "00-4",
+        "17-3"
+      ],
+      "meidet": [],
+      "kurzbio": "Kommunist, Theoretiker. Entwickelte Hegemonietheorie im faschistischen Gefängnis.",
+      "hauptwerke": [
+        {
+          "titel": "Gefängnishefte",
+          "jahr": 1935
+        }
+      ],
+      "beeinflusst_von": [
+        "marx",
+        "lenin",
+        "croce"
+      ],
+      "beeinflusst": [
+        "mouffe",
+        "hall",
+        "laclau"
+      ],
+      "debattiert_mit": [],
+      "zitate": [
+        {
+          "text": "Die Krise besteht gerade darin, dass das Alte stirbt und das Neue nicht zur Welt kommen kann.",
+          "quelle": "Gefängnishefte",
+          "jahr": 1930
+        },
+        {
+          "text": "Pessimismus des Verstandes, Optimismus des Willens.",
+          "quelle": "Gefängnishefte",
+          "jahr": 1930
+        }
+      ],
+      "tags": [
+        "hegemonie",
+        "zivilgesellschaft",
+        "organischer intellektueller",
+        "stellungskrieg"
+      ],
+      "kategorie": "revolutionaer"
+    },
+    {
+      "id": "lukacs",
+      "name": "Georg Lukács",
+      "geboren": 1885,
+      "gestorben": 1971,
+      "herkunft": "Budapest, Ungarn",
+      "hauptzimmer": [
+        "14-1",
+        "01-2"
+      ],
+      "besucht": [
+        "17-2"
+      ],
+      "meidet": [],
+      "kurzbio": "Philosoph, Literaturwissenschaftler. Begründer des westlichen Marxismus.",
+      "hauptwerke": [
+        {
+          "titel": "Geschichte und Klassenbewusstsein",
+          "jahr": 1923
+        },
+        {
+          "titel": "Die Theorie des Romans",
+          "jahr": 1916
+        }
+      ],
+      "beeinflusst_von": [
+        "marx",
+        "hegel",
+        "weber"
+      ],
+      "beeinflusst": [
+        "adorno",
+        "horkheimer",
+        "benjamin"
+      ],
+      "debattiert_mit": [],
+      "zitate": [
+        {
+          "text": "Die Verdinglichung ist die notwendige, unmittelbare Wirklichkeit für jeden im Kapitalismus lebenden Menschen.",
+          "quelle": "Geschichte und Klassenbewusstsein",
+          "jahr": 1923
+        }
+      ],
+      "tags": [
+        "verdinglichung",
+        "klassenbewusstsein",
+        "totalität",
+        "westlicher marxismus"
+      ],
+      "kategorie": "revolutionaer"
+    },
+    {
+      "id": "kollontai",
+      "name": "Alexandra Kollontai",
+      "geboren": 1872,
+      "gestorben": 1952,
+      "herkunft": "Sankt Petersburg, Russland",
+      "hauptzimmer": [
+        "09-4",
+        "17-5"
+      ],
+      "besucht": [
+        "01-2",
+        "04-3"
+      ],
+      "meidet": [],
+      "kurzbio": "Revolutionärin, erste Ministerin in einer Regierung, feministische Theoretikerin.",
+      "hauptwerke": [
+        {
+          "titel": "Die neue Moral und die Arbeiterklasse",
+          "jahr": 1918
+        },
+        {
+          "titel": "Wege der Liebe",
+          "jahr": 1923
+        }
+      ],
+      "beeinflusst_von": [
+        "marx",
+        "bebel",
+        "zetkin"
+      ],
+      "beeinflusst": [
+        "federici",
+        "fraser"
+      ],
+      "debattiert_mit": [],
+      "zitate": [
+        {
+          "text": "Die Revolution ist undenkbar ohne die Veränderung der Beziehungen zwischen den Geschlechtern.",
+          "quelle": "Die neue Moral",
+          "jahr": 1918
+        }
+      ],
+      "tags": [
+        "feminismus",
+        "sexualität",
+        "freie liebe",
+        "reproduktionsarbeit"
+      ],
+      "kategorie": "revolutionaer"
+    },
+    {
+      "id": "goldman",
+      "name": "Emma Goldman",
+      "geboren": 1869,
+      "gestorben": 1940,
+      "herkunft": "Kaunas, Litauen",
+      "hauptzimmer": [
+        "02-5",
+        "09-5"
+      ],
+      "besucht": [
+        "24-5",
+        "17-3"
+      ],
+      "meidet": [
+        "02-1",
+        "19-1"
+      ],
+      "kurzbio": "Anarchistin, Feministin, Rednerin. 'Die gefährlichste Frau Amerikas'.",
+      "hauptwerke": [
+        {
+          "titel": "Anarchism and Other Essays",
+          "jahr": 1910
+        },
+        {
+          "titel": "Living My Life",
+          "jahr": 1931
+        }
+      ],
+      "beeinflusst_von": [
+        "kropotkin",
+        "bakunin"
+      ],
+      "beeinflusst": [
+        "davis",
+        "graeber"
+      ],
+      "debattiert_mit": [
+        "lenin"
+      ],
+      "zitate": [
+        {
+          "text": "Wenn ich nicht tanzen kann, ist es nicht meine Revolution.",
+          "quelle": "(zugeschrieben)",
+          "jahr": null
+        }
+      ],
+      "tags": [
+        "anarchismus",
+        "feminismus",
+        "freie rede",
+        "geburtenkontrolle"
+      ],
+      "kategorie": "revolutionaer"
+    },
+    {
+      "id": "benjamin",
+      "name": "Walter Benjamin",
+      "geboren": 1892,
+      "gestorben": 1940,
+      "herkunft": "Berlin, Deutschland",
+      "hauptzimmer": [
+        "17-2",
+        "14-1"
+      ],
+      "besucht": [
+        "00-4"
+      ],
+      "meidet": [],
+      "kurzbio": "Philosoph, Kulturkritiker. Nahm sich auf der Flucht vor den Nazis das Leben.",
+      "hauptwerke": [
+        {
+          "titel": "Das Kunstwerk im Zeitalter seiner technischen Reproduzierbarkeit",
+          "jahr": 1935
+        },
+        {
+          "titel": "Über den Begriff der Geschichte",
+          "jahr": 1940
+        },
+        {
+          "titel": "Das Passagen-Werk",
+          "jahr": 1940
+        }
+      ],
+      "beeinflusst_von": [
+        "marx",
+        "scholem",
+        "brecht"
+      ],
+      "beeinflusst": [
+        "adorno",
+        "sontag",
+        "agamben"
+      ],
+      "debattiert_mit": [
+        "adorno"
+      ],
+      "zitate": [
+        {
+          "text": "Es ist niemals ein Dokument der Kultur, ohne zugleich ein solches der Barbarei zu sein.",
+          "quelle": "Über den Begriff der Geschichte",
+          "jahr": 1940
+        },
+        {
+          "text": "Die Tradition der Unterdrückten belehrt uns darüber, dass der Ausnahmezustand, in dem wir leben, die Regel ist.",
+          "quelle": "Über den Begriff der Geschichte",
+          "jahr": 1940
+        }
+      ],
+      "tags": [
+        "kulturkritik",
+        "messianismus",
+        "aura",
+        "geschichte",
+        "flaneur"
+      ],
+      "kategorie": "revolutionaer"
+    },
+    {
+      "id": "morris",
+      "name": "William Morris",
+      "geboren": 1834,
+      "gestorben": 1896,
+      "herkunft": "Walthamstow, England",
+      "hauptzimmer": [
+        "17-5",
+        "04-2"
+      ],
+      "besucht": [
+        "02-4",
+        "08-3"
+      ],
+      "meidet": [],
+      "kurzbio": "Künstler, Designer, Sozialist. Verband Ästhetik mit Gesellschaftskritik.",
+      "hauptwerke": [
+        {
+          "titel": "News from Nowhere",
+          "jahr": 1890
+        },
+        {
+          "titel": "A Dream of John Ball",
+          "jahr": 1888
+        }
+      ],
+      "beeinflusst_von": [
+        "marx",
+        "ruskin"
+      ],
+      "beeinflusst": [
+        "thompson"
+      ],
+      "debattiert_mit": [],
+      "zitate": [
+        {
+          "text": "Habt nichts in euren Häusern, von dem ihr nicht wisst, dass es nützlich ist oder glaubt, dass es schön ist.",
+          "quelle": "(zugeschrieben)",
+          "jahr": null
+        }
+      ],
+      "tags": [
+        "arts and crafts",
+        "utopie",
+        "ästhetik",
+        "handwerk"
+      ],
+      "kategorie": "klassiker"
+    },
+    {
+      "id": "adorno",
+      "name": "Theodor W. Adorno",
+      "geboren": 1903,
+      "gestorben": 1969,
+      "herkunft": "Frankfurt am Main, Deutschland",
+      "hauptzimmer": [
+        "17-2",
+        "14-1"
+      ],
+      "besucht": [
+        "08-3"
+      ],
+      "meidet": [
+        "17-5",
+        "00-5"
+      ],
+      "kurzbio": "Philosoph, Soziologe, Musiktheoretiker. Zentrale Figur der Kritischen Theorie.",
+      "hauptwerke": [
+        {
+          "titel": "Dialektik der Aufklärung",
+          "jahr": 1947
+        },
+        {
+          "titel": "Minima Moralia",
+          "jahr": 1951
+        },
+        {
+          "titel": "Negative Dialektik",
+          "jahr": 1966
+        }
+      ],
+      "beeinflusst_von": [
+        "marx",
+        "benjamin",
+        "lukacs",
+        "freud"
+      ],
+      "beeinflusst": [
+        "habermas",
+        "jameson",
+        "butler"
+      ],
+      "debattiert_mit": [
+        "benjamin",
+        "lukacs"
+      ],
+      "zitate": [
+        {
+          "text": "Es gibt kein richtiges Leben im falschen.",
+          "quelle": "Minima Moralia",
+          "jahr": 1951
+        },
+        {
+          "text": "Nach Auschwitz ein Gedicht zu schreiben, ist barbarisch.",
+          "quelle": "Kulturkritik und Gesellschaft",
+          "jahr": 1949
+        }
+      ],
+      "tags": [
+        "kritische theorie",
+        "kulturindustrie",
+        "negativität",
+        "ästhetik"
+      ],
+      "kategorie": "frankfurt"
+    },
+    {
+      "id": "horkheimer",
+      "name": "Max Horkheimer",
+      "geboren": 1895,
+      "gestorben": 1973,
+      "herkunft": "Stuttgart, Deutschland",
+      "hauptzimmer": [
+        "17-2",
+        "14-1"
+      ],
+      "besucht": [],
+      "meidet": [
+        "00-5"
+      ],
+      "kurzbio": "Philosoph, Soziologe. Direktor des Instituts für Sozialforschung, Begründer der Kritischen Theorie.",
+      "hauptwerke": [
+        {
+          "titel": "Dialektik der Aufklärung",
+          "jahr": 1947
+        },
+        {
+          "titel": "Zur Kritik der instrumentellen Vernunft",
+          "jahr": 1947
+        }
+      ],
+      "beeinflusst_von": [
+        "marx",
+        "schopenhauer"
+      ],
+      "beeinflusst": [
+        "adorno",
+        "habermas"
+      ],
+      "debattiert_mit": [],
+      "zitate": [
+        {
+          "text": "Wer aber vom Kapitalismus nicht reden will, sollte auch vom Faschismus schweigen.",
+          "quelle": "Die Juden und Europa",
+          "jahr": 1939
+        }
+      ],
+      "tags": [
+        "kritische theorie",
+        "instrumentelle vernunft",
+        "frankfurter schule"
+      ],
+      "kategorie": "frankfurt"
+    },
+    {
+      "id": "marcuse",
+      "name": "Herbert Marcuse",
+      "geboren": 1898,
+      "gestorben": 1979,
+      "herkunft": "Berlin, Deutschland",
+      "hauptzimmer": [
+        "17-3",
+        "01-3"
+      ],
+      "besucht": [
+        "09-4",
+        "02-4"
+      ],
+      "meidet": [],
+      "kurzbio": "Philosoph, Soziologe. Inspirierte die 68er-Bewegung. Verband Marx und Freud.",
+      "hauptwerke": [
+        {
+          "titel": "Der eindimensionale Mensch",
+          "jahr": 1964
+        },
+        {
+          "titel": "Eros und Zivilisation",
+          "jahr": 1955
+        },
+        {
+          "titel": "Triebstruktur und Gesellschaft",
+          "jahr": 1955
+        }
+      ],
+      "beeinflusst_von": [
+        "marx",
+        "freud",
+        "heidegger"
+      ],
+      "beeinflusst": [
+        "davis",
+        "dutschke"
+      ],
+      "debattiert_mit": [],
+      "zitate": [
+        {
+          "text": "Die Befreiung der Gesellschaft setzt die Befreiung der Triebe voraus.",
+          "quelle": "Eros und Zivilisation",
+          "jahr": 1955
+        }
+      ],
+      "tags": [
+        "große weigerung",
+        "eindimensionalität",
+        "befreiung",
+        "neue linke"
+      ],
+      "kategorie": "frankfurt"
+    },
+    {
+      "id": "fromm",
+      "name": "Erich Fromm",
+      "geboren": 1900,
+      "gestorben": 1980,
+      "herkunft": "Frankfurt am Main, Deutschland",
+      "hauptzimmer": [
+        "14-2",
+        "09-2"
+      ],
+      "besucht": [
+        "04-4"
+      ],
+      "meidet": [],
+      "kurzbio": "Psychoanalytiker, Sozialphilosoph. Humanistischer Sozialismus.",
+      "hauptwerke": [
+        {
+          "titel": "Die Furcht vor der Freiheit",
+          "jahr": 1941
+        },
+        {
+          "titel": "Haben oder Sein",
+          "jahr": 1976
+        },
+        {
+          "titel": "Die Kunst des Liebens",
+          "jahr": 1956
+        }
+      ],
+      "beeinflusst_von": [
+        "marx",
+        "freud",
+        "buddha"
+      ],
+      "beeinflusst": [],
+      "debattiert_mit": [],
+      "zitate": [
+        {
+          "text": "Die Gefahr der Vergangenheit war, dass Menschen Sklaven wurden. Die Gefahr der Zukunft ist, dass Menschen Roboter werden.",
+          "quelle": "The Sane Society",
+          "jahr": 1955
+        }
+      ],
+      "tags": [
+        "sozialpsychologie",
+        "haben oder sein",
+        "humanismus",
+        "entfremdung"
+      ],
+      "kategorie": "frankfurt"
+    },
+    {
+      "id": "bloch",
+      "name": "Ernst Bloch",
+      "geboren": 1885,
+      "gestorben": 1977,
+      "herkunft": "Ludwigshafen, Deutschland",
+      "hauptzimmer": [
+        "17-3",
+        "14-3"
+      ],
+      "besucht": [
+        "00-4"
+      ],
+      "meidet": [],
+      "kurzbio": "Philosoph der Hoffnung und der konkreten Utopie.",
+      "hauptwerke": [
+        {
+          "titel": "Das Prinzip Hoffnung",
+          "jahr": 1959
+        },
+        {
+          "titel": "Geist der Utopie",
+          "jahr": 1918
+        }
+      ],
+      "beeinflusst_von": [
+        "marx",
+        "hegel"
+      ],
+      "beeinflusst": [
+        "moltmann",
+        "habermas"
+      ],
+      "debattiert_mit": [],
+      "zitate": [
+        {
+          "text": "Denken heißt Überschreiten.",
+          "quelle": "Das Prinzip Hoffnung",
+          "jahr": 1959
+        },
+        {
+          "text": "Die Wurzel der Geschichte ist der arbeitende, schaffende, die Gegebenheiten umbildende und überholende Mensch.",
+          "quelle": "Das Prinzip Hoffnung",
+          "jahr": 1959
+        }
+      ],
+      "tags": [
+        "hoffnung",
+        "utopie",
+        "noch-nicht",
+        "tagtraum"
+      ],
+      "kategorie": "frankfurt"
+    },
+    {
+      "id": "fanon",
+      "name": "Frantz Fanon",
+      "geboren": 1925,
+      "gestorben": 1961,
+      "herkunft": "Fort-de-France, Martinique",
+      "hauptzimmer": [
+        "10-3",
+        "00-5"
+      ],
+      "besucht": [
+        "14-2",
+        "E4-4"
+      ],
+      "meidet": [],
+      "kurzbio": "Psychiater, Revolutionär. Theoretiker der Dekolonisierung und antikolonialen Gewalt.",
+      "hauptwerke": [
+        {
+          "titel": "Die Verdammten dieser Erde",
+          "jahr": 1961
+        },
+        {
+          "titel": "Schwarze Haut, weiße Masken",
+          "jahr": 1952
+        }
+      ],
+      "beeinflusst_von": [
+        "marx",
+        "sartre",
+        "cesaire"
+      ],
+      "beeinflusst": [
+        "said",
+        "bhabha",
+        "davis",
+        "mbembe"
+      ],
+      "debattiert_mit": [],
+      "zitate": [
+        {
+          "text": "Jede Generation muss in relativer Undurchsichtigkeit ihre Mission entdecken, sie erfüllen oder verraten.",
+          "quelle": "Die Verdammten dieser Erde",
+          "jahr": 1961
+        }
+      ],
+      "tags": [
+        "dekolonisierung",
+        "gewalt",
+        "entfremdung",
+        "antikolonialismus",
+        "psychiatrie"
+      ],
+      "kategorie": "postkolonial"
+    },
+    {
+      "id": "cesaire",
+      "name": "Aimé Césaire",
+      "geboren": 1913,
+      "gestorben": 2008,
+      "herkunft": "Basse-Pointe, Martinique",
+      "hauptzimmer": [
+        "10-3",
+        "17-3"
+      ],
+      "besucht": [],
+      "meidet": [],
+      "kurzbio": "Dichter, Politiker, Theoretiker. Begründer der Négritude-Bewegung.",
+      "hauptwerke": [
+        {
+          "titel": "Über den Kolonialismus",
+          "jahr": 1950
+        },
+        {
+          "titel": "Cahier d'un retour au pays natal",
+          "jahr": 1939
+        }
+      ],
+      "beeinflusst_von": [
+        "marx"
+      ],
+      "beeinflusst": [
+        "fanon",
+        "glissant"
+      ],
+      "debattiert_mit": [],
+      "zitate": [
+        {
+          "text": "Eine Zivilisation, die sich als unfähig erweist, die Probleme zu lösen, die ihr Funktionieren aufwirft, ist eine dekadente Zivilisation.",
+          "quelle": "Über den Kolonialismus",
+          "jahr": 1950
+        }
+      ],
+      "tags": [
+        "négritude",
+        "kolonialismus",
+        "poesie",
+        "karibik"
+      ],
+      "kategorie": "postkolonial"
+    },
+    {
+      "id": "spivak",
+      "name": "Gayatri Chakravorty Spivak",
+      "geboren": 1942,
+      "gestorben": null,
+      "herkunft": "Kalkutta, Indien",
+      "hauptzimmer": [
+        "10-3",
+        "09-3"
+      ],
+      "besucht": [
+        "14-1"
+      ],
+      "meidet": [],
+      "kurzbio": "Literaturwissenschaftlerin, postkoloniale Theoretikerin. Übersetzte Derrida.",
+      "hauptwerke": [
+        {
+          "titel": "Can the Subaltern Speak?",
+          "jahr": 1988
+        },
+        {
+          "titel": "A Critique of Postcolonial Reason",
+          "jahr": 1999
+        }
+      ],
+      "beeinflusst_von": [
+        "derrida",
+        "marx",
+        "gramsci"
+      ],
+      "beeinflusst": [],
+      "debattiert_mit": [],
+      "zitate": [
+        {
+          "text": "Der/die Subalterne kann nicht sprechen.",
+          "quelle": "Can the Subaltern Speak?",
+          "jahr": 1988
+        }
+      ],
+      "tags": [
+        "subalternität",
+        "postkolonialismus",
+        "dekonstruktion",
+        "feminismus"
+      ],
+      "kategorie": "postkolonial"
+    },
+    {
+      "id": "said",
+      "name": "Edward Said",
+      "geboren": 1935,
+      "gestorben": 2003,
+      "herkunft": "Jerusalem, Palästina",
+      "hauptzimmer": [
+        "10-3",
+        "14-1"
+      ],
+      "besucht": [],
+      "meidet": [],
+      "kurzbio": "Literaturwissenschaftler, Kritiker. Begründer der postkolonialen Studien.",
+      "hauptwerke": [
+        {
+          "titel": "Orientalismus",
+          "jahr": 1978
+        },
+        {
+          "titel": "Kultur und Imperialismus",
+          "jahr": 1993
+        }
+      ],
+      "beeinflusst_von": [
+        "foucault",
+        "gramsci"
+      ],
+      "beeinflusst": [
+        "bhabha",
+        "spivak"
+      ],
+      "debattiert_mit": [],
+      "zitate": [
+        {
+          "text": "Der Orient wurde orientalisiert.",
+          "quelle": "Orientalismus",
+          "jahr": 1978
+        }
+      ],
+      "tags": [
+        "orientalismus",
+        "postkolonialismus",
+        "palästina",
+        "repräsentation"
+      ],
+      "kategorie": "postkolonial"
+    },
+    {
+      "id": "beauvoir",
+      "name": "Simone de Beauvoir",
+      "geboren": 1908,
+      "gestorben": 1986,
+      "herkunft": "Paris, Frankreich",
+      "hauptzimmer": [
+        "09-5",
+        "14-1"
+      ],
+      "besucht": [
+        "02-4"
+      ],
+      "meidet": [],
+      "kurzbio": "Philosophin, Schriftstellerin. Begründerin des modernen Feminismus.",
+      "hauptwerke": [
+        {
+          "titel": "Das andere Geschlecht",
+          "jahr": 1949
+        },
+        {
+          "titel": "Die Mandarins von Paris",
+          "jahr": 1954
+        }
+      ],
+      "beeinflusst_von": [
+        "sartre",
+        "hegel",
+        "marx"
+      ],
+      "beeinflusst": [
+        "butler",
+        "friedan",
+        "firestone"
+      ],
+      "debattiert_mit": [],
+      "zitate": [
+        {
+          "text": "Man wird nicht als Frau geboren, man wird es.",
+          "quelle": "Das andere Geschlecht",
+          "jahr": 1949
+        }
+      ],
+      "tags": [
+        "feminismus",
+        "existenzialismus",
+        "geschlecht",
+        "freiheit"
+      ],
+      "kategorie": "feminismus"
+    },
+    {
+      "id": "firestone",
+      "name": "Shulamith Firestone",
+      "geboren": 1945,
+      "gestorben": 2012,
+      "herkunft": "Ottawa, Kanada",
+      "hauptzimmer": [
+        "09-5",
+        "17-5"
+      ],
+      "besucht": [
+        "04-5"
+      ],
+      "meidet": [],
+      "kurzbio": "Radikalfeministin. Forderte technologische Befreiung von der Reproduktion.",
+      "hauptwerke": [
+        {
+          "titel": "Frauenbefreiung und sexuelle Revolution",
+          "jahr": 1970
+        }
+      ],
+      "beeinflusst_von": [
+        "beauvoir",
+        "marx",
+        "freud"
+      ],
+      "beeinflusst": [
+        "haraway"
+      ],
+      "debattiert_mit": [],
+      "zitate": [
+        {
+          "text": "Die Schwangerschaft ist barbarisch.",
+          "quelle": "Dialectic of Sex",
+          "jahr": 1970
+        }
+      ],
+      "tags": [
+        "radikalfeminismus",
+        "reproduktion",
+        "technologie",
+        "biologie"
+      ],
+      "kategorie": "feminismus"
+    },
+    {
+      "id": "hooks",
+      "name": "bell hooks",
+      "geboren": 1952,
+      "gestorben": 2021,
+      "herkunft": "Hopkinsville, Kentucky, USA",
+      "hauptzimmer": [
+        "09-3",
+        "19-3"
+      ],
+      "besucht": [
+        "17-3"
+      ],
+      "meidet": [],
+      "kurzbio": "Kulturkritikerin, Feministin. Verband Rasse, Klasse und Geschlecht.",
+      "hauptwerke": [
+        {
+          "titel": "Ain't I a Woman",
+          "jahr": 1981
+        },
+        {
+          "titel": "Feminist Theory: From Margin to Center",
+          "jahr": 1984
+        },
+        {
+          "titel": "All About Love",
+          "jahr": 2000
+        }
+      ],
+      "beeinflusst_von": [
+        "freire",
+        "fanon",
+        "beauvoir"
+      ],
+      "beeinflusst": [],
+      "debattiert_mit": [],
+      "zitate": [
+        {
+          "text": "Feminismus ist für alle.",
+          "quelle": "Feminism is for Everybody",
+          "jahr": 2000
+        }
+      ],
+      "tags": [
+        "schwarzer feminismus",
+        "intersektionalität",
+        "bildung",
+        "liebe"
+      ],
+      "kategorie": "feminismus"
+    },
+    {
+      "id": "federici",
+      "name": "Silvia Federici",
+      "geboren": 1942,
+      "gestorben": null,
+      "herkunft": "Parma, Italien",
+      "hauptzimmer": [
+        "09-4",
+        "04-3"
+      ],
+      "besucht": [
+        "03-4",
+        "01-4"
+      ],
+      "meidet": [],
+      "kurzbio": "Feministin, Historikerin. Analysierte Hexenverfolgung als ursprüngliche Akkumulation.",
+      "hauptwerke": [
+        {
+          "titel": "Caliban und die Hexe",
+          "jahr": 2004
+        },
+        {
+          "titel": "Aufstand aus der Küche",
+          "jahr": 2012
+        }
+      ],
+      "beeinflusst_von": [
+        "marx",
+        "dalla_costa"
+      ],
+      "beeinflusst": [
+        "arruzza",
+        "bhattacharya"
+      ],
+      "debattiert_mit": [],
+      "zitate": [
+        {
+          "text": "Die Hexenjagd war eine Voraussetzung für den Kapitalismus.",
+          "quelle": "Caliban und die Hexe",
+          "jahr": 2004
+        }
+      ],
+      "tags": [
+        "reproduktionsarbeit",
+        "hexenverfolgung",
+        "commons",
+        "feminismus"
+      ],
+      "kategorie": "feminismus"
+    },
+    {
+      "id": "fraser",
+      "name": "Nancy Fraser",
+      "geboren": 1947,
+      "gestorben": null,
+      "herkunft": "Baltimore, USA",
+      "hauptzimmer": [
+        "09-3",
+        "16-3"
+      ],
+      "besucht": [
+        "14-1"
+      ],
+      "meidet": [],
+      "kurzbio": "Philosophin, Feministin. Kritik an progressivem Neoliberalismus.",
+      "hauptwerke": [
+        {
+          "titel": "Feminismus für die 99%",
+          "jahr": 2019
+        },
+        {
+          "titel": "Der Allesfresser",
+          "jahr": 2023
+        }
+      ],
+      "beeinflusst_von": [
+        "habermas",
+        "marx"
+      ],
+      "beeinflusst": [],
+      "debattiert_mit": [
+        "butler"
+      ],
+      "zitate": [
+        {
+          "text": "Kapitalismus ist ein Allesfresser, der alles verschlingt.",
+          "quelle": "Der Allesfresser",
+          "jahr": 2023
+        }
+      ],
+      "tags": [
+        "anerkennung",
+        "umverteilung",
+        "feminismus",
+        "kapitalismuskritik"
+      ],
+      "kategorie": "feminismus"
+    },
+    {
+      "id": "butler",
+      "name": "Judith Butler",
+      "geboren": 1956,
+      "gestorben": null,
+      "herkunft": "Cleveland, Ohio, USA",
+      "hauptzimmer": [
+        "09-3",
+        "09-5"
+      ],
+      "besucht": [
+        "02-4"
+      ],
+      "meidet": [],
+      "kurzbio": "Philosophin. Begründerin der Queer-Theorie, Theoretikerin der Performativität.",
+      "hauptwerke": [
+        {
+          "titel": "Das Unbehagen der Geschlechter",
+          "jahr": 1990
+        },
+        {
+          "titel": "Körper von Gewicht",
+          "jahr": 1993
+        },
+        {
+          "titel": "Die Macht der Gewaltlosigkeit",
+          "jahr": 2020
+        }
+      ],
+      "beeinflusst_von": [
+        "beauvoir",
+        "foucault",
+        "derrida"
+      ],
+      "beeinflusst": [
+        "preciado"
+      ],
+      "debattiert_mit": [
+        "fraser"
+      ],
+      "zitate": [
+        {
+          "text": "Geschlecht ist performativ.",
+          "quelle": "Das Unbehagen der Geschlechter",
+          "jahr": 1990
+        }
+      ],
+      "tags": [
+        "performativität",
+        "queer",
+        "geschlecht",
+        "gewaltlosigkeit"
+      ],
+      "kategorie": "feminismus"
+    },
+    {
+      "id": "davis",
+      "name": "Angela Davis",
+      "geboren": 1944,
+      "gestorben": null,
+      "herkunft": "Birmingham, Alabama, USA",
+      "hauptzimmer": [
+        "09-3",
+        "02-4"
+      ],
+      "besucht": [
+        "10-3",
+        "E4-4"
+      ],
+      "meidet": [],
+      "kurzbio": "Aktivistin, Philosophin. Kämpft gegen Gefängnisindustriellen Komplex.",
+      "hauptwerke": [
+        {
+          "titel": "Eine Autobiographie",
+          "jahr": 1974
+        },
+        {
+          "titel": "Rassismus und Sexismus",
+          "jahr": 1981
+        },
+        {
+          "titel": "Are Prisons Obsolete?",
+          "jahr": 2003
+        }
+      ],
+      "beeinflusst_von": [
+        "marcuse",
+        "marx",
+        "fanon"
+      ],
+      "beeinflusst": [],
+      "debattiert_mit": [],
+      "zitate": [
+        {
+          "text": "Ich akzeptiere nicht mehr die Dinge, die ich nicht ändern kann. Ich ändere die Dinge, die ich nicht akzeptieren kann.",
+          "quelle": "(zugeschrieben)",
+          "jahr": null
+        }
+      ],
+      "tags": [
+        "abolitionismus",
+        "gefängnis",
+        "schwarzer feminismus",
+        "aktivismus"
+      ],
+      "kategorie": "feminismus"
+    },
+    {
+      "id": "haraway",
+      "name": "Donna Haraway",
+      "geboren": 1944,
+      "gestorben": null,
+      "herkunft": "Denver, Colorado, USA",
+      "hauptzimmer": [
+        "08-4",
+        "09-3"
+      ],
+      "besucht": [
+        "17-5",
+        "14-3"
+      ],
+      "meidet": [],
+      "kurzbio": "Wissenschaftstheoretikerin. Cyborg-Manifest, Verwandtschaft jenseits des Menschen.",
+      "hauptwerke": [
+        {
+          "titel": "Ein Manifest für Cyborgs",
+          "jahr": 1985
+        },
+        {
+          "titel": "Unruhig bleiben",
+          "jahr": 2016
+        }
+      ],
+      "beeinflusst_von": [
+        "foucault",
+        "latour"
+      ],
+      "beeinflusst": [
+        "barad"
+      ],
+      "debattiert_mit": [],
+      "zitate": [
+        {
+          "text": "Ich wäre lieber ein Cyborg als eine Göttin.",
+          "quelle": "Cyborg Manifest",
+          "jahr": 1985
+        },
+        {
+          "text": "Es kommt darauf an, mit dem Trouble zu leben.",
+          "quelle": "Unruhig bleiben",
+          "jahr": 2016
+        }
+      ],
+      "tags": [
+        "cyborg",
+        "posthumanismus",
+        "verwandtschaft",
+        "natureculture"
+      ],
+      "kategorie": "feminismus"
+    },
+    {
+      "id": "mies",
+      "name": "Maria Mies",
+      "geboren": 1931,
+      "gestorben": 2023,
+      "herkunft": "Eifel, Deutschland",
+      "hauptzimmer": [
+        "09-4",
+        "08-4"
+      ],
+      "besucht": [
+        "10-3",
+        "04-3"
+      ],
+      "meidet": [],
+      "kurzbio": "Soziologin, Ökofeminismus-Pionierin. Verband Patriarchat, Kapitalismus und Kolonialismus.",
+      "hauptwerke": [
+        {
+          "titel": "Patriarchat und Kapital",
+          "jahr": 1986
+        },
+        {
+          "titel": "Ökofeminismus",
+          "jahr": 1993
+        }
+      ],
+      "beeinflusst_von": [
+        "marx",
+        "beauvoir"
+      ],
+      "beeinflusst": [
+        "shiva"
+      ],
+      "debattiert_mit": [],
+      "zitate": [
+        {
+          "text": "Die Ausbeutung der Natur und die Ausbeutung der Frauen haben die gleiche Wurzel.",
+          "quelle": "Ökofeminismus",
+          "jahr": 1993
+        }
+      ],
+      "tags": [
+        "ökofeminismus",
+        "subsistenz",
+        "kolonialismus",
+        "patriarchat"
+      ],
+      "kategorie": "feminismus"
+    },
+    {
+      "id": "bookchin",
+      "name": "Murray Bookchin",
+      "geboren": 1921,
+      "gestorben": 2006,
+      "herkunft": "New York City, USA",
+      "hauptzimmer": [
+        "08-5",
+        "24-4"
+      ],
+      "besucht": [
+        "02-5",
+        "03-5"
+      ],
+      "meidet": [
+        "02-1",
+        "24-1"
+      ],
+      "kurzbio": "Öko-Anarchist, Theoretiker des libertären Kommunalismus. Inspirierte Rojava.",
+      "hauptwerke": [
+        {
+          "titel": "Die Ökologie der Freiheit",
+          "jahr": 1982
+        },
+        {
+          "titel": "Libertärer Kommunalismus",
+          "jahr": 1991
+        },
+        {
+          "titel": "Die nächste Revolution",
+          "jahr": 2015
+        }
+      ],
+      "beeinflusst_von": [
+        "kropotkin",
+        "marx"
+      ],
+      "beeinflusst": [
+        "ocalan",
+        "graeber"
+      ],
+      "debattiert_mit": [],
+      "zitate": [
+        {
+          "text": "Die Herrschaft des Menschen über die Natur entspringt der Herrschaft des Menschen über den Menschen.",
+          "quelle": "Die Ökologie der Freiheit",
+          "jahr": 1982
+        }
+      ],
+      "tags": [
+        "sozialökologie",
+        "kommunalismus",
+        "hierarchiekritik",
+        "ökologie"
+      ],
+      "kategorie": "oekologie"
+    },
+    {
+      "id": "gorz",
+      "name": "André Gorz",
+      "geboren": 1923,
+      "gestorben": 2007,
+      "herkunft": "Wien, Österreich",
+      "hauptzimmer": [
+        "08-4",
+        "04-4"
+      ],
+      "besucht": [
+        "01-3",
+        "17-4"
+      ],
+      "meidet": [],
+      "kurzbio": "Philosoph, Journalist. Pionier der politischen Ökologie und Arbeitszeitkritik.",
+      "hauptwerke": [
+        {
+          "titel": "Abschied vom Proletariat",
+          "jahr": 1980
+        },
+        {
+          "titel": "Kritik der ökonomischen Vernunft",
+          "jahr": 1989
+        },
+        {
+          "titel": "Auswege aus dem Kapitalismus",
+          "jahr": 2009
+        }
+      ],
+      "beeinflusst_von": [
+        "sartre",
+        "illich",
+        "marx"
+      ],
+      "beeinflusst": [
+        "srnicek",
+        "williams"
+      ],
+      "debattiert_mit": [],
+      "zitate": [
+        {
+          "text": "Weniger arbeiten, besser leben.",
+          "quelle": "(Kernidee)",
+          "jahr": null
+        }
+      ],
+      "tags": [
+        "politische ökologie",
+        "arbeitskritik",
+        "grundeinkommen",
+        "autonomie"
+      ],
+      "kategorie": "oekologie"
+    },
+    {
+      "id": "shiva",
+      "name": "Vandana Shiva",
+      "geboren": 1952,
+      "gestorben": null,
+      "herkunft": "Dehradun, Indien",
+      "hauptzimmer": [
+        "08-5",
+        "10-3"
+      ],
+      "besucht": [
+        "03-5",
+        "14-4"
+      ],
+      "meidet": [
+        "16-1"
+      ],
+      "kurzbio": "Physikerin, Umweltaktivistin. Kämpft gegen Saatgut-Monopole und für Ernährungssouveränität.",
+      "hauptwerke": [
+        {
+          "titel": "Staying Alive",
+          "jahr": 1988
+        },
+        {
+          "titel": "Biopiraterie",
+          "jahr": 1997
+        },
+        {
+          "titel": "Erd-Demokratie",
+          "jahr": 2005
+        }
+      ],
+      "beeinflusst_von": [
+        "gandhi",
+        "mies"
+      ],
+      "beeinflusst": [],
+      "debattiert_mit": [],
+      "zitate": [
+        {
+          "text": "Saatgut ist kein Eigentum, es ist ein Erbe.",
+          "quelle": "(zugeschrieben)",
+          "jahr": null
+        }
+      ],
+      "tags": [
+        "ökofeminismus",
+        "saatgut",
+        "biodiversität",
+        "globaler süden"
+      ],
+      "kategorie": "oekologie"
+    },
+    {
+      "id": "moore",
+      "name": "Jason W. Moore",
+      "geboren": 1971,
+      "gestorben": null,
+      "herkunft": "USA",
+      "hauptzimmer": [
+        "08-4",
+        "01-3"
+      ],
+      "besucht": [
+        "14-1"
+      ],
+      "meidet": [],
+      "kurzbio": "Umwelthistoriker. Entwickelte den Begriff des Kapitalozäns.",
+      "hauptwerke": [
+        {
+          "titel": "Capitalism in the Web of Life",
+          "jahr": 2015
+        },
+        {
+          "titel": "Anthropocene or Capitalocene?",
+          "jahr": 2016
+        }
+      ],
+      "beeinflusst_von": [
+        "marx",
+        "wallerstein",
+        "haraway"
+      ],
+      "beeinflusst": [],
+      "debattiert_mit": [],
+      "zitate": [
+        {
+          "text": "Der Kapitalismus ist keine Wirtschaft, er ist eine Art, Natur zu organisieren.",
+          "quelle": "Capitalism in the Web of Life",
+          "jahr": 2015
+        }
+      ],
+      "tags": [
+        "kapitalozän",
+        "weltökologie",
+        "stoffwechsel",
+        "billige natur"
+      ],
+      "kategorie": "oekologie"
+    },
+    {
+      "id": "malm",
+      "name": "Andreas Malm",
+      "geboren": 1977,
+      "gestorben": null,
+      "herkunft": "Schweden",
+      "hauptzimmer": [
+        "08-4",
+        "00-4"
+      ],
+      "besucht": [
+        "E4-4"
+      ],
+      "meidet": [
+        "00-1"
+      ],
+      "kurzbio": "Humanökologe. Verteidigt Sabotage als Klimastrategie.",
+      "hauptwerke": [
+        {
+          "titel": "Fossil Capital",
+          "jahr": 2016
+        },
+        {
+          "titel": "Wie man eine Pipeline in die Luft jagt",
+          "jahr": 2021
+        }
+      ],
+      "beeinflusst_von": [
+        "marx",
+        "lenin"
+      ],
+      "beeinflusst": [],
+      "debattiert_mit": [],
+      "zitate": [
+        {
+          "text": "Der Kampf gegen den Klimawandel ist ein Klassenkampf.",
+          "quelle": "(Kernidee)",
+          "jahr": null
+        }
+      ],
+      "tags": [
+        "klimakampf",
+        "fossiles kapital",
+        "sabotage",
+        "ökoleninismus"
+      ],
+      "kategorie": "oekologie"
+    },
+    {
+      "id": "debord",
+      "name": "Guy Debord",
+      "geboren": 1931,
+      "gestorben": 1994,
+      "herkunft": "Paris, Frankreich",
+      "hauptzimmer": [
+        "14-1",
+        "02-4"
+      ],
+      "besucht": [
+        "17-2"
+      ],
+      "meidet": [],
+      "kurzbio": "Künstler, Theoretiker. Gründer der Situationistischen Internationale.",
+      "hauptwerke": [
+        {
+          "titel": "Die Gesellschaft des Spektakels",
+          "jahr": 1967
+        }
+      ],
+      "beeinflusst_von": [
+        "marx",
+        "lukacs",
+        "lefebvre"
+      ],
+      "beeinflusst": [
+        "baudrillard",
+        "fisher"
+      ],
+      "debattiert_mit": [],
+      "zitate": [
+        {
+          "text": "Das Spektakel ist das Kapital in einem solchen Grad der Akkumulation, dass es zum Bild wird.",
+          "quelle": "Gesellschaft des Spektakels",
+          "jahr": 1967
+        }
+      ],
+      "tags": [
+        "spektakel",
+        "situationismus",
+        "détournement",
+        "entfremdung"
+      ],
+      "kategorie": "autonomie"
+    },
+    {
+      "id": "vaneigem",
+      "name": "Raoul Vaneigem",
+      "geboren": 1934,
+      "gestorben": null,
+      "herkunft": "Lessines, Belgien",
+      "hauptzimmer": [
+        "17-3",
+        "02-5"
+      ],
+      "besucht": [
+        "04-5"
+      ],
+      "meidet": [],
+      "kurzbio": "Situationist, Philosoph. Handbuch für ein befreites Leben.",
+      "hauptwerke": [
+        {
+          "titel": "Handbuch der Lebenskunst für die jungen Generationen",
+          "jahr": 1967
+        }
+      ],
+      "beeinflusst_von": [
+        "debord",
+        "fourier"
+      ],
+      "beeinflusst": [],
+      "debattiert_mit": [],
+      "zitate": [
+        {
+          "text": "Die Leute, die arbeiten, langweilen sich, wenn sie nicht arbeiten. Die Leute, die nicht arbeiten, langweilen sich niemals.",
+          "quelle": "Handbuch der Lebenskunst",
+          "jahr": 1967
+        }
+      ],
+      "tags": [
+        "situationismus",
+        "lebenskunst",
+        "poesie",
+        "alltag"
+      ],
+      "kategorie": "autonomie"
+    },
+    {
+      "id": "holloway",
+      "name": "John Holloway",
+      "geboren": 1947,
+      "gestorben": null,
+      "herkunft": "Dublin, Irland",
+      "hauptzimmer": [
+        "02-4",
+        "11-2"
+      ],
+      "besucht": [
+        "00-4"
+      ],
+      "meidet": [
+        "02-1",
+        "19-1"
+      ],
+      "kurzbio": "Politologe. Theoretiker der Zapatistas, Anti-Macht-Denker.",
+      "hauptwerke": [
+        {
+          "titel": "Die Welt verändern, ohne die Macht zu übernehmen",
+          "jahr": 2002
+        },
+        {
+          "titel": "Crack Capitalism",
+          "jahr": 2010
+        }
+      ],
+      "beeinflusst_von": [
+        "adorno",
+        "bloch",
+        "zapatistas"
+      ],
+      "beeinflusst": [],
+      "debattiert_mit": [],
+      "zitate": [
+        {
+          "text": "Die Welt verändern, ohne die Macht zu übernehmen.",
+          "quelle": "Buchtitel",
+          "jahr": 2002
+        },
+        {
+          "text": "In den Rissen entstehen die Alternativen.",
+          "quelle": "Crack Capitalism",
+          "jahr": 2010
+        }
+      ],
+      "tags": [
+        "anti-macht",
+        "risse",
+        "zapatismus",
+        "negativität"
+      ],
+      "kategorie": "autonomie"
+    },
+    {
+      "id": "graeber",
+      "name": "David Graeber",
+      "geboren": 1961,
+      "gestorben": 2020,
+      "herkunft": "New York City, USA",
+      "hauptzimmer": [
+        "02-5",
+        "04-5"
+      ],
+      "besucht": [
+        "03-5",
+        "17-4"
+      ],
+      "meidet": [],
+      "kurzbio": "Anthropologe, Anarchist. Occupy-Aktivist, Theoretiker der Bullshit-Jobs.",
+      "hauptwerke": [
+        {
+          "titel": "Schulden: Die ersten 5000 Jahre",
+          "jahr": 2011
+        },
+        {
+          "titel": "Bullshit Jobs",
+          "jahr": 2018
+        },
+        {
+          "titel": "Anfänge",
+          "jahr": 2021
+        }
+      ],
+      "beeinflusst_von": [
+        "kropotkin",
+        "mauss",
+        "bookchin"
+      ],
+      "beeinflusst": [],
+      "debattiert_mit": [],
+      "zitate": [
+        {
+          "text": "Bürokratie ist nicht das Mittel, Regeln umzusetzen, sondern der Ersatz für Vertrauen.",
+          "quelle": "Bürokratie",
+          "jahr": 2015
+        },
+        {
+          "text": "Wir sind die 99%.",
+          "quelle": "Occupy-Slogan",
+          "jahr": 2011
+        }
+      ],
+      "tags": [
+        "schulden",
+        "bullshit jobs",
+        "direkte demokratie",
+        "anarchismus"
+      ],
+      "kategorie": "autonomie"
+    },
+    {
+      "id": "scott",
+      "name": "James C. Scott",
+      "geboren": 1936,
+      "gestorben": null,
+      "herkunft": "New Jersey, USA",
+      "hauptzimmer": [
+        "02-5",
+        "24-5"
+      ],
+      "besucht": [
+        "14-2"
+      ],
+      "meidet": [
+        "02-1"
+      ],
+      "kurzbio": "Politologe, Anthropologe. Theoretiker des Widerstands von unten.",
+      "hauptwerke": [
+        {
+          "titel": "Weapons of the Weak",
+          "jahr": 1985
+        },
+        {
+          "titel": "Seeing Like a State",
+          "jahr": 1998
+        },
+        {
+          "titel": "The Art of Not Being Governed",
+          "jahr": 2009
+        }
+      ],
+      "beeinflusst_von": [],
+      "beeinflusst": [
+        "graeber"
+      ],
+      "debattiert_mit": [],
+      "zitate": [
+        {
+          "text": "Der Staat sieht wie ein Staat – und das ist sein Problem.",
+          "quelle": "Seeing Like a State",
+          "jahr": 1998
+        }
+      ],
+      "tags": [
+        "widerstand",
+        "lesbarkeit",
+        "hochmodernismus",
+        "anarchismus"
+      ],
+      "kategorie": "autonomie"
+    },
+    {
+      "id": "negri",
+      "name": "Antonio Negri",
+      "geboren": 1933,
+      "gestorben": 2023,
+      "herkunft": "Padua, Italien",
+      "hauptzimmer": [
+        "01-4",
+        "02-4"
+      ],
+      "besucht": [
+        "04-4",
+        "17-4"
+      ],
+      "meidet": [],
+      "kurzbio": "Philosoph, Aktivist. Theoretiker der Multitude und des Empire.",
+      "hauptwerke": [
+        {
+          "titel": "Empire",
+          "jahr": 2000
+        },
+        {
+          "titel": "Multitude",
+          "jahr": 2004
+        },
+        {
+          "titel": "Marx beyond Marx",
+          "jahr": 1979
+        }
+      ],
+      "beeinflusst_von": [
+        "marx",
+        "spinoza",
+        "deleuze"
+      ],
+      "beeinflusst": [
+        "hardt",
+        "virno",
+        "lazzarato"
+      ],
+      "debattiert_mit": [],
+      "zitate": [
+        {
+          "text": "Die Multitude ist eine Klasse, aber keine Einheit.",
+          "quelle": "Multitude",
+          "jahr": 2004
+        }
+      ],
+      "tags": [
+        "multitude",
+        "empire",
+        "immaterielle arbeit",
+        "operaismus"
+      ],
+      "kategorie": "operaismus"
+    },
+    {
+      "id": "hardt",
+      "name": "Michael Hardt",
+      "geboren": 1960,
+      "gestorben": null,
+      "herkunft": "Washington D.C., USA",
+      "hauptzimmer": [
+        "01-4",
+        "17-4"
+      ],
+      "besucht": [
+        "03-4"
+      ],
+      "meidet": [],
+      "kurzbio": "Literaturwissenschaftler, Philosoph. Co-Autor von Empire.",
+      "hauptwerke": [
+        {
+          "titel": "Empire",
+          "jahr": 2000
+        },
+        {
+          "titel": "Multitude",
+          "jahr": 2004
+        },
+        {
+          "titel": "Assembly",
+          "jahr": 2017
+        }
+      ],
+      "beeinflusst_von": [
+        "negri",
+        "deleuze",
+        "foucault"
+      ],
+      "beeinflusst": [],
+      "debattiert_mit": [],
+      "zitate": [
+        {
+          "text": "Das Empire hat kein Zentrum und keine Grenzen.",
+          "quelle": "Empire",
+          "jahr": 2000
+        }
+      ],
+      "tags": [
+        "empire",
+        "multitude",
+        "commons",
+        "liebe"
+      ],
+      "kategorie": "operaismus"
+    },
+    {
+      "id": "virno",
+      "name": "Paolo Virno",
+      "geboren": 1952,
+      "gestorben": null,
+      "herkunft": "Neapel, Italien",
+      "hauptzimmer": [
+        "01-4",
+        "04-4"
+      ],
+      "besucht": [
+        "14-1"
+      ],
+      "meidet": [],
+      "kurzbio": "Philosoph, ehemaliger Operaist. Theoretiker der Grammatik der Multitude.",
+      "hauptwerke": [
+        {
+          "titel": "Grammatik der Multitude",
+          "jahr": 2004
+        }
+      ],
+      "beeinflusst_von": [
+        "marx",
+        "wittgenstein",
+        "negri"
+      ],
+      "beeinflusst": [],
+      "debattiert_mit": [],
+      "zitate": [
+        {
+          "text": "Der Post-Fordismus hat die Revolution vorweggenommen – aber in pervertierter Form.",
+          "quelle": "Grammatik der Multitude",
+          "jahr": 2004
+        }
+      ],
+      "tags": [
+        "general intellect",
+        "virtuosität",
+        "post-fordismus",
+        "exodus"
+      ],
+      "kategorie": "operaismus"
+    },
+    {
+      "id": "berardi",
+      "name": "Franco Berardi (Bifo)",
+      "geboren": 1948,
+      "gestorben": null,
+      "herkunft": "Bologna, Italien",
+      "hauptzimmer": [
+        "01-4",
+        "04-5"
+      ],
+      "besucht": [
+        "17-2",
+        "14-2"
+      ],
+      "meidet": [],
+      "kurzbio": "Philosoph, Medientheoretiker. Denker der Semiokratie und psychischen Erschöpfung.",
+      "hauptwerke": [
+        {
+          "titel": "The Soul at Work",
+          "jahr": 2009
+        },
+        {
+          "titel": "Heroes",
+          "jahr": 2015
+        },
+        {
+          "titel": "Futurability",
+          "jahr": 2017
+        }
+      ],
+      "beeinflusst_von": [
+        "guattari",
+        "negri",
+        "baudrillard"
+      ],
+      "beeinflusst": [],
+      "debattiert_mit": [],
+      "zitate": [
+        {
+          "text": "Die Seele wurde an die Arbeit gesetzt.",
+          "quelle": "Soul at Work",
+          "jahr": 2009
+        }
+      ],
+      "tags": [
+        "semiokapitalismus",
+        "depression",
+        "kognitariat",
+        "erschöpfung"
+      ],
+      "kategorie": "operaismus"
+    },
+    {
+      "id": "lazzarato",
+      "name": "Maurizio Lazzarato",
+      "geboren": 1955,
+      "gestorben": null,
+      "herkunft": "Italien",
+      "hauptzimmer": [
+        "01-4",
+        "04-4"
+      ],
+      "besucht": [
+        "14-1"
+      ],
+      "meidet": [],
+      "kurzbio": "Soziologe, Philosoph. Theoretiker der immateriellen Arbeit und der Schulden.",
+      "hauptwerke": [
+        {
+          "titel": "Die Fabrik des verschuldeten Menschen",
+          "jahr": 2012
+        },
+        {
+          "titel": "Immaterielle Arbeit",
+          "jahr": 1996
+        }
+      ],
+      "beeinflusst_von": [
+        "negri",
+        "deleuze",
+        "guattari"
+      ],
+      "beeinflusst": [],
+      "debattiert_mit": [],
+      "zitate": [
+        {
+          "text": "Der verschuldete Mensch ist die neue Figur der Subjektivierung.",
+          "quelle": "Fabrik des verschuldeten Menschen",
+          "jahr": 2012
+        }
+      ],
+      "tags": [
+        "verschuldung",
+        "immaterielle arbeit",
+        "subjektivierung",
+        "neokapitalismus"
+      ],
+      "kategorie": "operaismus"
+    },
+    {
+      "id": "wright",
+      "name": "Erik Olin Wright",
+      "geboren": 1947,
+      "gestorben": 2019,
+      "herkunft": "Berkeley, USA",
+      "hauptzimmer": [
+        "17-4",
+        "03-3"
+      ],
+      "besucht": [
+        "00-2",
+        "16-3"
+      ],
+      "meidet": [],
+      "kurzbio": "Soziologe, Klassentheoretiker. Entwickelte das Konzept der Realen Utopien.",
+      "hauptwerke": [
+        {
+          "titel": "Reale Utopien",
+          "jahr": 2010
+        },
+        {
+          "titel": "Classes",
+          "jahr": 1985
+        },
+        {
+          "titel": "How to Be an Anticapitalist in the 21st Century",
+          "jahr": 2019
+        }
+      ],
+      "beeinflusst_von": [
+        "marx",
+        "roemer"
+      ],
+      "beeinflusst": [],
+      "debattiert_mit": [],
+      "zitate": [
+        {
+          "text": "Eine andere Welt ist nicht nur möglich, sie existiert bereits in den Rissen der bestehenden.",
+          "quelle": "Reale Utopien",
+          "jahr": 2010
+        }
+      ],
+      "tags": [
+        "reale utopien",
+        "klassenanalyse",
+        "analytischer marxismus",
+        "transformation"
+      ],
+      "kategorie": "analytisch"
+    },
+    {
+      "id": "cohen",
+      "name": "G.A. Cohen",
+      "geboren": 1941,
+      "gestorben": 2009,
+      "herkunft": "Montreal, Kanada",
+      "hauptzimmer": [
+        "14-1",
+        "03-2"
+      ],
+      "besucht": [],
+      "meidet": [],
+      "kurzbio": "Philosoph. Verteidigte Marx mit analytischen Methoden.",
+      "hauptwerke": [
+        {
+          "titel": "Karl Marx's Theory of History: A Defence",
+          "jahr": 1978
+        },
+        {
+          "titel": "Why Not Socialism?",
+          "jahr": 2009
+        }
+      ],
+      "beeinflusst_von": [
+        "marx",
+        "rawls"
+      ],
+      "beeinflusst": [
+        "wright"
+      ],
+      "debattiert_mit": [
+        "nozick"
+      ],
+      "zitate": [
+        {
+          "text": "Warum nicht Sozialismus? Die Frage ist ernst gemeint.",
+          "quelle": "Why Not Socialism?",
+          "jahr": 2009
+        }
+      ],
+      "tags": [
+        "analytischer marxismus",
+        "gerechtigkeit",
+        "selbsteigentum",
+        "geschichtsmaterialismus"
+      ],
+      "kategorie": "analytisch"
+    },
+    {
+      "id": "van_parijs",
+      "name": "Philippe Van Parijs",
+      "geboren": 1951,
+      "gestorben": null,
+      "herkunft": "Brüssel, Belgien",
+      "hauptzimmer": [
+        "04-4",
+        "17-4"
+      ],
+      "besucht": [
+        "00-2"
+      ],
+      "meidet": [],
+      "kurzbio": "Philosoph, Ökonom. Führender Theoretiker des bedingungslosen Grundeinkommens.",
+      "hauptwerke": [
+        {
+          "titel": "Real Freedom for All",
+          "jahr": 1995
+        },
+        {
+          "titel": "Basic Income",
+          "jahr": 2017
+        }
+      ],
+      "beeinflusst_von": [
+        "rawls",
+        "marx"
+      ],
+      "beeinflusst": [],
+      "debattiert_mit": [],
+      "zitate": [
+        {
+          "text": "Echte Freiheit bedeutet, nicht arbeiten zu müssen.",
+          "quelle": "Real Freedom for All",
+          "jahr": 1995
+        }
+      ],
+      "tags": [
+        "grundeinkommen",
+        "reale freiheit",
+        "gerechtigkeit",
+        "post-work"
+      ],
+      "kategorie": "analytisch"
+    },
+    {
+      "id": "honneth",
+      "name": "Axel Honneth",
+      "geboren": 1949,
+      "gestorben": null,
+      "herkunft": "Essen, Deutschland",
+      "hauptzimmer": [
+        "14-2",
+        "09-3"
+      ],
+      "besucht": [
+        "14-1"
+      ],
+      "meidet": [],
+      "kurzbio": "Philosoph. Dritte Generation der Frankfurter Schule, Anerkennungstheorie.",
+      "hauptwerke": [
+        {
+          "titel": "Kampf um Anerkennung",
+          "jahr": 1992
+        },
+        {
+          "titel": "Die Idee des Sozialismus",
+          "jahr": 2015
+        }
+      ],
+      "beeinflusst_von": [
+        "habermas",
+        "hegel",
+        "adorno"
+      ],
+      "beeinflusst": [
+        "jaeggi"
+      ],
+      "debattiert_mit": [],
+      "zitate": [
+        {
+          "text": "Sozialismus ist die Vollendung der Idee der sozialen Freiheit.",
+          "quelle": "Die Idee des Sozialismus",
+          "jahr": 2015
+        }
+      ],
+      "tags": [
+        "anerkennung",
+        "soziale freiheit",
+        "kritische theorie",
+        "demokratie"
+      ],
+      "kategorie": "analytisch"
+    },
+    {
+      "id": "zizek",
+      "name": "Slavoj Žižek",
+      "geboren": 1949,
+      "gestorben": null,
+      "herkunft": "Ljubljana, Slowenien",
+      "hauptzimmer": [
+        "14-1",
+        "02-2"
+      ],
+      "besucht": [
+        "17-2",
+        "00-4"
+      ],
+      "meidet": [],
+      "kurzbio": "Philosoph, Kulturkritiker. Verbindet Hegel, Marx und Lacan.",
+      "hauptwerke": [
+        {
+          "titel": "Die Tücke des Subjekts",
+          "jahr": 1999
+        },
+        {
+          "titel": "Willkommen in der Wüste des Realen",
+          "jahr": 2002
+        },
+        {
+          "titel": "Weniger als Nichts",
+          "jahr": 2012
+        }
+      ],
+      "beeinflusst_von": [
+        "lacan",
+        "hegel",
+        "marx"
+      ],
+      "beeinflusst": [],
+      "debattiert_mit": [
+        "butler",
+        "chomsky"
+      ],
+      "zitate": [
+        {
+          "text": "Es ist leichter, sich das Ende der Welt vorzustellen als das Ende des Kapitalismus.",
+          "quelle": "(zugeschrieben, nach Jameson)",
+          "jahr": null
+        }
+      ],
+      "tags": [
+        "ideologiekritik",
+        "lacan",
+        "hegel",
+        "kommunismus"
+      ],
+      "kategorie": "zeitgenoessisch"
+    },
+    {
+      "id": "mouffe",
+      "name": "Chantal Mouffe",
+      "geboren": 1943,
+      "gestorben": null,
+      "herkunft": "Charleroi, Belgien",
+      "hauptzimmer": [
+        "02-3",
+        "13-3"
+      ],
+      "besucht": [
+        "14-1"
+      ],
+      "meidet": [],
+      "kurzbio": "Politische Theoretikerin. Agonistische Demokratie, linker Populismus.",
+      "hauptwerke": [
+        {
+          "titel": "Hegemonie und radikale Demokratie",
+          "jahr": 1985
+        },
+        {
+          "titel": "Für einen linken Populismus",
+          "jahr": 2018
+        }
+      ],
+      "beeinflusst_von": [
+        "gramsci",
+        "laclau",
+        "schmitt"
+      ],
+      "beeinflusst": [],
+      "debattiert_mit": [
+        "habermas"
+      ],
+      "zitate": [
+        {
+          "text": "Die Demokratie braucht Leidenschaften.",
+          "quelle": "Über das Politische",
+          "jahr": 2007
+        }
+      ],
+      "tags": [
+        "agonismus",
+        "hegemonie",
+        "populismus",
+        "radikale demokratie"
+      ],
+      "kategorie": "zeitgenoessisch"
+    },
+    {
+      "id": "brown",
+      "name": "Wendy Brown",
+      "geboren": 1955,
+      "gestorben": null,
+      "herkunft": "USA",
+      "hauptzimmer": [
+        "02-3",
+        "14-1"
+      ],
+      "besucht": [
+        "09-3"
+      ],
+      "meidet": [],
+      "kurzbio": "Politische Theoretikerin. Kritik des Neoliberalismus und der Toleranz.",
+      "hauptwerke": [
+        {
+          "titel": "Die schleichende Revolution",
+          "jahr": 2015
+        },
+        {
+          "titel": "Mauern",
+          "jahr": 2010
+        }
+      ],
+      "beeinflusst_von": [
+        "foucault",
+        "marx",
+        "nietzsche"
+      ],
+      "beeinflusst": [],
+      "debattiert_mit": [],
+      "zitate": [
+        {
+          "text": "Der Neoliberalismus ökonomisiert alles – auch die Demokratie.",
+          "quelle": "Die schleichende Revolution",
+          "jahr": 2015
+        }
+      ],
+      "tags": [
+        "neoliberalismus",
+        "demokratie",
+        "souveränität",
+        "toleranz"
+      ],
+      "kategorie": "zeitgenoessisch"
+    },
+    {
+      "id": "fisher",
+      "name": "Mark Fisher",
+      "geboren": 1968,
+      "gestorben": 2017,
+      "herkunft": "Leicester, England",
+      "hauptzimmer": [
+        "17-2",
+        "04-5"
+      ],
+      "besucht": [
+        "14-1",
+        "01-4"
+      ],
+      "meidet": [],
+      "kurzbio": "Kulturtheoretiker, Blogger. Kapitalistischer Realismus und Hauntology.",
+      "hauptwerke": [
+        {
+          "titel": "Kapitalistischer Realismus",
+          "jahr": 2009
+        },
+        {
+          "titel": "Ghosts of My Life",
+          "jahr": 2014
+        },
+        {
+          "titel": "Acid Communism",
+          "jahr": 2018
+        }
+      ],
+      "beeinflusst_von": [
+        "deleuze",
+        "jameson",
+        "debord"
+      ],
+      "beeinflusst": [],
+      "debattiert_mit": [],
+      "zitate": [
+        {
+          "text": "Es ist leichter, sich das Ende der Welt vorzustellen als das Ende des Kapitalismus.",
+          "quelle": "Kapitalistischer Realismus",
+          "jahr": 2009
+        },
+        {
+          "text": "Depression ist die Schattenseite der unternehmerischen Kultur.",
+          "quelle": "Kapitalistischer Realismus",
+          "jahr": 2009
+        }
+      ],
+      "tags": [
+        "kapitalistischer realismus",
+        "hauntology",
+        "depression",
+        "acid communism"
+      ],
+      "kategorie": "zeitgenoessisch"
+    },
+    {
+      "id": "srnicek",
+      "name": "Nick Srnicek",
+      "geboren": 1982,
+      "gestorben": null,
+      "herkunft": "Kanada",
+      "hauptzimmer": [
+        "04-5",
+        "17-5"
+      ],
+      "besucht": [
+        "01-4"
+      ],
+      "meidet": [],
+      "kurzbio": "Politischer Ökonom. Plattform-Kapitalismus und linker Akzelerationismus.",
+      "hauptwerke": [
+        {
+          "titel": "Die Zukunft erfinden",
+          "jahr": 2015
+        },
+        {
+          "titel": "Plattform-Kapitalismus",
+          "jahr": 2016
+        }
+      ],
+      "beeinflusst_von": [
+        "deleuze",
+        "land",
+        "gorz"
+      ],
+      "beeinflusst": [],
+      "debattiert_mit": [],
+      "zitate": [
+        {
+          "text": "Die Zukunft muss gebaut werden.",
+          "quelle": "Die Zukunft erfinden",
+          "jahr": 2015
+        }
+      ],
+      "tags": [
+        "akzelerationismus",
+        "plattformen",
+        "post-work",
+        "automatisierung"
+      ],
+      "kategorie": "zeitgenoessisch"
+    },
+    {
+      "id": "williams",
+      "name": "Alex Williams",
+      "geboren": 1981,
+      "gestorben": null,
+      "herkunft": "England",
+      "hauptzimmer": [
+        "04-5",
+        "11-4"
+      ],
+      "besucht": [
+        "01-4"
+      ],
+      "meidet": [],
+      "kurzbio": "Politischer Theoretiker. Co-Autor des Akzelerationistischen Manifests.",
+      "hauptwerke": [
+        {
+          "titel": "Die Zukunft erfinden",
+          "jahr": 2015
+        },
+        {
+          "titel": "Akzelerationistisches Manifest",
+          "jahr": 2013
+        }
+      ],
+      "beeinflusst_von": [
+        "deleuze",
+        "negri"
+      ],
+      "beeinflusst": [],
+      "debattiert_mit": [],
+      "zitate": [],
+      "tags": [
+        "akzelerationismus",
+        "hegemonie",
+        "post-kapitalismus",
+        "zukunft"
+      ],
+      "kategorie": "zeitgenoessisch"
+    },
+    {
+      "id": "taylor",
+      "name": "Keeanga-Yamahtta Taylor",
+      "geboren": 1972,
+      "gestorben": null,
+      "herkunft": "USA",
+      "hauptzimmer": [
+        "09-3",
+        "01-3"
+      ],
+      "besucht": [
+        "10-3"
+      ],
+      "meidet": [],
+      "kurzbio": "Historikerin, Aktivistin. Black Lives Matter und sozialistische Perspektiven.",
+      "hauptwerke": [
+        {
+          "titel": "From #BlackLivesMatter to Black Liberation",
+          "jahr": 2016
+        },
+        {
+          "titel": "Race for Profit",
+          "jahr": 2019
+        }
+      ],
+      "beeinflusst_von": [
+        "davis",
+        "marx"
+      ],
+      "beeinflusst": [],
+      "debattiert_mit": [],
+      "zitate": [
+        {
+          "text": "Schwarze Befreiung erfordert die Überwindung des Kapitalismus.",
+          "quelle": "#BlackLivesMatter to Black Liberation",
+          "jahr": 2016
+        }
+      ],
+      "tags": [
+        "black lives matter",
+        "rassismus",
+        "wohnungspolitik",
+        "sozialismus"
+      ],
+      "kategorie": "zeitgenoessisch"
+    },
+    {
+      "id": "bhattacharya",
+      "name": "Tithi Bhattacharya",
+      "geboren": null,
+      "gestorben": null,
+      "herkunft": "Indien/USA",
+      "hauptzimmer": [
+        "09-4",
+        "01-3"
+      ],
+      "besucht": [
+        "04-3"
+      ],
+      "meidet": [],
+      "kurzbio": "Historikerin. Theoretikerin der sozialen Reproduktion.",
+      "hauptwerke": [
+        {
+          "titel": "Social Reproduction Theory",
+          "jahr": 2017
+        },
+        {
+          "titel": "Feminismus für die 99%",
+          "jahr": 2019
+        }
+      ],
+      "beeinflusst_von": [
+        "marx",
+        "federici"
+      ],
+      "beeinflusst": [],
+      "debattiert_mit": [],
+      "zitate": [
+        {
+          "text": "Die Reproduktion der Arbeitskraft ist die versteckte Grundlage des Kapitalismus.",
+          "quelle": "Social Reproduction Theory",
+          "jahr": 2017
+        }
+      ],
+      "tags": [
+        "soziale reproduktion",
+        "feminismus",
+        "streik",
+        "care-arbeit"
+      ],
+      "kategorie": "zeitgenoessisch"
+    },
+    {
+      "id": "arruzza",
+      "name": "Cinzia Arruzza",
+      "geboren": 1976,
+      "gestorben": null,
+      "herkunft": "Rom, Italien",
+      "hauptzimmer": [
+        "09-3",
+        "09-4"
+      ],
+      "besucht": [
+        "01-3"
+      ],
+      "meidet": [],
+      "kurzbio": "Philosophin. Feministische Theorie und Klassenkampf.",
+      "hauptwerke": [
+        {
+          "titel": "Feminismus für die 99%",
+          "jahr": 2019
+        }
+      ],
+      "beeinflusst_von": [
+        "marx",
+        "luxemburg"
+      ],
+      "beeinflusst": [],
+      "debattiert_mit": [],
+      "zitate": [],
+      "tags": [
+        "feminismus",
+        "klassenkampf",
+        "antikapitalismus",
+        "streik"
+      ],
+      "kategorie": "zeitgenoessisch"
+    },
+    {
+      "id": "saito",
+      "name": "Kohei Saito",
+      "geboren": 1987,
+      "gestorben": null,
+      "herkunft": "Japan",
+      "hauptzimmer": [
+        "08-4",
+        "14-1"
+      ],
+      "besucht": [
+        "04-4"
+      ],
+      "meidet": [],
+      "kurzbio": "Philosoph. Marx' Ökologie und Degrowth-Kommunismus.",
+      "hauptwerke": [
+        {
+          "titel": "Systemsturz",
+          "jahr": 2020
+        },
+        {
+          "titel": "Karl Marx's Ecosocialism",
+          "jahr": 2017
+        }
+      ],
+      "beeinflusst_von": [
+        "marx",
+        "foster"
+      ],
+      "beeinflusst": [],
+      "debattiert_mit": [],
+      "zitate": [
+        {
+          "text": "Marx war ein Degrowth-Kommunist.",
+          "quelle": "Systemsturz",
+          "jahr": 2020
+        }
+      ],
+      "tags": [
+        "degrowth",
+        "ökologie",
+        "marx",
+        "stoffwechsel"
+      ],
+      "kategorie": "zeitgenoessisch"
+    },
+    {
+      "id": "benanav",
+      "name": "Aaron Benanav",
+      "geboren": 1986,
+      "gestorben": null,
+      "herkunft": "USA",
+      "hauptzimmer": [
+        "04-5",
+        "16-4"
+      ],
+      "besucht": [
+        "01-3"
+      ],
+      "meidet": [],
+      "kurzbio": "Wirtschaftshistoriker. Kritik der Automatisierungsthese.",
+      "hauptwerke": [
+        {
+          "titel": "Automatisierung und die Zukunft der Arbeit",
+          "jahr": 2020
+        }
+      ],
+      "beeinflusst_von": [
+        "brenner",
+        "marx"
+      ],
+      "beeinflusst": [],
+      "debattiert_mit": [],
+      "zitate": [
+        {
+          "text": "Das Problem ist nicht zu viel Automatisierung, sondern zu wenig Wachstum.",
+          "quelle": "Automatisierung",
+          "jahr": 2020
+        }
+      ],
+      "tags": [
+        "automatisierung",
+        "arbeit",
+        "stagnation",
+        "post-kapitalismus"
+      ],
+      "kategorie": "zeitgenoessisch"
+    },
+    {
+      "id": "negt",
+      "name": "Oskar Negt",
+      "geboren": 1934,
+      "gestorben": 2024,
+      "herkunft": "Kapkeim, Ostpreußen",
+      "hauptzimmer": [
+        "19-3",
+        "01-3"
+      ],
+      "besucht": [
+        "14-2"
+      ],
+      "meidet": [],
+      "kurzbio": "Sozialphilosoph. Arbeiterbewegung und politische Bildung.",
+      "hauptwerke": [
+        {
+          "titel": "Öffentlichkeit und Erfahrung",
+          "jahr": 1972
+        },
+        {
+          "titel": "Lebendige Arbeit, enteignete Zeit",
+          "jahr": 1984
+        }
+      ],
+      "beeinflusst_von": [
+        "adorno",
+        "habermas"
+      ],
+      "beeinflusst": [],
+      "debattiert_mit": [],
+      "zitate": [
+        {
+          "text": "Arbeit ist der Schlüssel zur Menschwerdung.",
+          "quelle": "(Kernidee)",
+          "jahr": null
+        }
+      ],
+      "tags": [
+        "arbeit",
+        "öffentlichkeit",
+        "gewerkschaften",
+        "bildung"
+      ],
+      "kategorie": "deutsch"
+    },
+    {
+      "id": "haug_wf",
+      "name": "Wolfgang Fritz Haug",
+      "geboren": 1936,
+      "gestorben": null,
+      "herkunft": "Esslingen, Deutschland",
+      "hauptzimmer": [
+        "14-1",
+        "19-3"
+      ],
+      "besucht": [],
+      "meidet": [],
+      "kurzbio": "Philosoph, Herausgeber. Warenästhetik und Historisch-Kritisches Wörterbuch des Marxismus.",
+      "hauptwerke": [
+        {
+          "titel": "Kritik der Warenästhetik",
+          "jahr": 1971
+        },
+        {
+          "titel": "Historisch-Kritisches Wörterbuch des Marxismus",
+          "jahr": 1994
+        }
+      ],
+      "beeinflusst_von": [
+        "marx",
+        "gramsci"
+      ],
+      "beeinflusst": [],
+      "debattiert_mit": [],
+      "zitate": [],
+      "tags": [
+        "warenästhetik",
+        "ideologie",
+        "marxismus-lexikon",
+        "das argument"
+      ],
+      "kategorie": "deutsch"
+    },
+    {
+      "id": "haug_frigga",
+      "name": "Frigga Haug",
+      "geboren": 1937,
+      "gestorben": null,
+      "herkunft": "Deutschland",
+      "hauptzimmer": [
+        "09-4",
+        "19-3"
+      ],
+      "besucht": [
+        "14-2"
+      ],
+      "meidet": [],
+      "kurzbio": "Soziologin, Feministin. Vier-in-einem-Perspektive.",
+      "hauptwerke": [
+        {
+          "titel": "Die Vier-in-einem-Perspektive",
+          "jahr": 2008
+        },
+        {
+          "titel": "Erinnerungsarbeit",
+          "jahr": 1990
+        }
+      ],
+      "beeinflusst_von": [
+        "marx",
+        "luxemburg",
+        "gramsci"
+      ],
+      "beeinflusst": [],
+      "debattiert_mit": [],
+      "zitate": [
+        {
+          "text": "Vier Stunden Erwerbsarbeit, vier Stunden Reproduktionsarbeit, vier Stunden Gemeinwesenarbeit, vier Stunden Entwicklungschancen.",
+          "quelle": "Vier-in-einem-Perspektive",
+          "jahr": 2008
+        }
+      ],
+      "tags": [
+        "vier-in-einem",
+        "feminismus",
+        "arbeit",
+        "erinnerungsarbeit"
+      ],
+      "kategorie": "deutsch"
+    },
+    {
+      "id": "demirovic",
+      "name": "Alex Demirović",
+      "geboren": 1952,
+      "gestorben": null,
+      "herkunft": "Deutschland",
+      "hauptzimmer": [
+        "02-3",
+        "19-3"
+      ],
+      "besucht": [
+        "14-1"
+      ],
+      "meidet": [],
+      "kurzbio": "Politikwissenschaftler. Demokratietheorie und Transformation.",
+      "hauptwerke": [
+        {
+          "titel": "Demokratie in der Wirtschaft",
+          "jahr": 2007
+        },
+        {
+          "titel": "Transformation der Demokratie",
+          "jahr": 2013
+        }
+      ],
+      "beeinflusst_von": [
+        "poulantzas",
+        "gramsci"
+      ],
+      "beeinflusst": [],
+      "debattiert_mit": [],
+      "zitate": [],
+      "tags": [
+        "demokratie",
+        "transformation",
+        "staat",
+        "rosa-luxemburg-stiftung"
+      ],
+      "kategorie": "deutsch"
+    },
+    {
+      "id": "doerre",
+      "name": "Klaus Dörre",
+      "geboren": 1957,
+      "gestorben": null,
+      "herkunft": "Deutschland",
+      "hauptzimmer": [
+        "01-3",
+        "04-2"
+      ],
+      "besucht": [
+        "08-4"
+      ],
+      "meidet": [],
+      "kurzbio": "Soziologe. Prekarität und sozial-ökologische Transformation.",
+      "hauptwerke": [
+        {
+          "titel": "Prekäre Arbeit",
+          "jahr": 2006
+        },
+        {
+          "titel": "Die neue Landnahme",
+          "jahr": 2009
+        }
+      ],
+      "beeinflusst_von": [
+        "marx",
+        "luxemburg",
+        "polanyi"
+      ],
+      "beeinflusst": [],
+      "debattiert_mit": [],
+      "zitate": [
+        {
+          "text": "Der Kapitalismus braucht immer neues Außen – eine permanente Landnahme.",
+          "quelle": "Die neue Landnahme",
+          "jahr": 2009
+        }
+      ],
+      "tags": [
+        "prekarität",
+        "landnahme",
+        "gewerkschaften",
+        "transformation"
+      ],
+      "kategorie": "deutsch"
+    },
+    {
+      "id": "adamczak",
+      "name": "Bini Adamczak",
+      "geboren": 1979,
+      "gestorben": null,
+      "herkunft": "Deutschland",
+      "hauptzimmer": [
+        "17-3",
+        "09-3"
+      ],
+      "besucht": [
+        "00-4",
+        "14-3"
+      ],
+      "meidet": [],
+      "kurzbio": "Philosophin, Künstlerin. Beziehungsweise Revolution, queerer Kommunismus.",
+      "hauptwerke": [
+        {
+          "titel": "Kommunismus",
+          "jahr": 2004
+        },
+        {
+          "titel": "Beziehungsweise Revolution",
+          "jahr": 2017
+        }
+      ],
+      "beeinflusst_von": [
+        "benjamin",
+        "butler"
+      ],
+      "beeinflusst": [],
+      "debattiert_mit": [],
+      "zitate": [
+        {
+          "text": "Revolution ist eine Frage der Beziehungen.",
+          "quelle": "Beziehungsweise Revolution",
+          "jahr": 2017
+        }
+      ],
+      "tags": [
+        "kommunismus",
+        "queer",
+        "revolution",
+        "beziehungen"
+      ],
+      "kategorie": "deutsch"
+    },
+    {
+      "id": "jaeggi",
+      "name": "Rahel Jaeggi",
+      "geboren": 1967,
+      "gestorben": null,
+      "herkunft": "Deutschland",
+      "hauptzimmer": [
+        "14-1",
+        "14-2"
+      ],
+      "besucht": [],
+      "meidet": [],
+      "kurzbio": "Philosophin. Kritik der Lebensformen und des Kapitalismus.",
+      "hauptwerke": [
+        {
+          "titel": "Kritik von Lebensformen",
+          "jahr": 2014
+        },
+        {
+          "titel": "Kapitalismus als Lebensform?",
+          "jahr": 2017
+        }
+      ],
+      "beeinflusst_von": [
+        "honneth",
+        "hegel",
+        "marx"
+      ],
+      "beeinflusst": [],
+      "debattiert_mit": [],
+      "zitate": [
+        {
+          "text": "Der Kapitalismus ist eine defizitäre Lebensform.",
+          "quelle": "Kapitalismus als Lebensform?",
+          "jahr": 2017
+        }
+      ],
+      "tags": [
+        "lebensformen",
+        "kritische theorie",
+        "kapitalismus",
+        "entfremdung"
+      ],
+      "kategorie": "deutsch"
+    },
+    {
+      "id": "foucault",
+      "name": "Michel Foucault",
+      "geboren": 1926,
+      "gestorben": 1984,
+      "herkunft": "Poitiers, Frankreich",
+      "kategorie": "zeitgenoessisch",
+      "hauptzimmer": [
+        "14-1",
+        "02-4"
+      ],
+      "besucht": [
+        "09-3"
+      ],
+      "meidet": [],
+      "kurzbio": "Philosoph, Historiker. Analysierte Macht, Wissen und Subjektivierung.",
+      "hauptwerke": [
+        {
+          "titel": "Überwachen und Strafen",
+          "jahr": 1975
+        },
+        {
+          "titel": "Sexualität und Wahrheit",
+          "jahr": 1976
+        }
+      ],
+      "beeinflusst_von": [
+        "nietzsche",
+        "heidegger"
+      ],
+      "beeinflusst": [
+        "butler",
+        "deleuze",
+        "agamben",
+        "said"
+      ],
+      "debattiert_mit": [
+        "chomsky",
+        "habermas"
+      ],
+      "zitate": [
+        {
+          "text": "Wo es Macht gibt, gibt es Widerstand.",
+          "quelle": "Sexualität und Wahrheit",
+          "jahr": 1976
+        }
+      ],
+      "tags": [
+        "macht",
+        "diskurs",
+        "biopolitik",
+        "gouvernementalität"
+      ]
+    },
+    {
+      "id": "deleuze",
+      "name": "Gilles Deleuze",
+      "geboren": 1925,
+      "gestorben": 1995,
+      "herkunft": "Paris, Frankreich",
+      "kategorie": "zeitgenoessisch",
+      "hauptzimmer": [
+        "14-1",
+        "02-4"
+      ],
+      "besucht": [
+        "17-3"
+      ],
+      "meidet": [],
+      "kurzbio": "Philosoph. Differenz, Rhizom, Kapitalismus und Schizophrenie.",
+      "hauptwerke": [
+        {
+          "titel": "Anti-Ödipus",
+          "jahr": 1972
+        },
+        {
+          "titel": "Tausend Plateaus",
+          "jahr": 1980
+        }
+      ],
+      "beeinflusst_von": [
+        "nietzsche",
+        "spinoza",
+        "bergson"
+      ],
+      "beeinflusst": [
+        "negri",
+        "fisher",
+        "srnicek"
+      ],
+      "debattiert_mit": [],
+      "zitate": [
+        {
+          "text": "Die Fluchtlinie ist primär.",
+          "quelle": "Tausend Plateaus",
+          "jahr": 1980
+        }
+      ],
+      "tags": [
+        "rhizom",
+        "deterritorialisierung",
+        "differenz",
+        "wunschmaschinen"
+      ]
+    },
+    {
+      "id": "habermas",
+      "name": "Jürgen Habermas",
+      "geboren": 1929,
+      "gestorben": null,
+      "herkunft": "Düsseldorf, Deutschland",
+      "kategorie": "frankfurt",
+      "hauptzimmer": [
+        "14-2",
+        "13-3"
+      ],
+      "besucht": [
+        "02-3"
+      ],
+      "meidet": [],
+      "kurzbio": "Philosoph, Soziologe. Kommunikative Vernunft, Öffentlichkeit.",
+      "hauptwerke": [
+        {
+          "titel": "Strukturwandel der Öffentlichkeit",
+          "jahr": 1962
+        },
+        {
+          "titel": "Theorie des kommunikativen Handelns",
+          "jahr": 1981
+        }
+      ],
+      "beeinflusst_von": [
+        "adorno",
+        "horkheimer",
+        "marx"
+      ],
+      "beeinflusst": [
+        "honneth",
+        "fraser",
+        "jaeggi"
+      ],
+      "debattiert_mit": [
+        "foucault",
+        "gadamer"
+      ],
+      "zitate": [
+        {
+          "text": "Der zwanglose Zwang des besseren Arguments.",
+          "quelle": "Theorie des kommunikativen Handelns",
+          "jahr": 1981
+        }
+      ],
+      "tags": [
+        "kommunikative vernunft",
+        "öffentlichkeit",
+        "diskursethik",
+        "deliberation"
+      ]
+    },
+    {
+      "id": "poulantzas",
+      "name": "Nicos Poulantzas",
+      "geboren": 1936,
+      "gestorben": 1979,
+      "herkunft": "Athen, Griechenland",
+      "kategorie": "revolutionaer",
+      "hauptzimmer": [
+        "02-3",
+        "14-1"
+      ],
+      "besucht": [
+        "19-3"
+      ],
+      "meidet": [],
+      "kurzbio": "Marxistischer Staatstheoretiker. Staat als Verdichtung von Kräfteverhältnissen.",
+      "hauptwerke": [
+        {
+          "titel": "Staatstheorie",
+          "jahr": 1978
+        },
+        {
+          "titel": "Politische Macht und gesellschaftliche Klassen",
+          "jahr": 1968
+        }
+      ],
+      "beeinflusst_von": [
+        "gramsci",
+        "althusser"
+      ],
+      "beeinflusst": [
+        "mouffe",
+        "demirovic",
+        "jessop"
+      ],
+      "debattiert_mit": [
+        "miliband"
+      ],
+      "zitate": [
+        {
+          "text": "Der Staat ist die materielle Verdichtung eines Kräfteverhältnisses.",
+          "quelle": "Staatstheorie",
+          "jahr": 1978
+        }
+      ],
+      "tags": [
+        "staatstheorie",
+        "relationale macht",
+        "hegemonie",
+        "eurokommunismus"
+      ]
+    },
+    {
+      "id": "laclau",
+      "name": "Ernesto Laclau",
+      "geboren": 1935,
+      "gestorben": 2014,
+      "herkunft": "Buenos Aires, Argentinien",
+      "kategorie": "zeitgenoessisch",
+      "hauptzimmer": [
+        "02-3",
+        "13-3"
+      ],
+      "besucht": [
+        "14-1"
+      ],
+      "meidet": [],
+      "kurzbio": "Politischer Theoretiker. Hegemonie, Populismus, radikale Demokratie.",
+      "hauptwerke": [
+        {
+          "titel": "Hegemonie und radikale Demokratie",
+          "jahr": 1985
+        },
+        {
+          "titel": "On Populist Reason",
+          "jahr": 2005
+        }
+      ],
+      "beeinflusst_von": [
+        "gramsci",
+        "lacan",
+        "derrida"
+      ],
+      "beeinflusst": [
+        "mouffe"
+      ],
+      "debattiert_mit": [
+        "zizek"
+      ],
+      "zitate": [
+        {
+          "text": "Hegemonie ist die Logik des Politischen.",
+          "quelle": "Hegemonie und radikale Demokratie",
+          "jahr": 1985
+        }
+      ],
+      "tags": [
+        "hegemonie",
+        "populismus",
+        "leere signifikanten",
+        "antagonismus"
+      ]
+    },
+    {
+      "id": "mandel",
+      "name": "Ernest Mandel",
+      "geboren": 1923,
+      "gestorben": 1995,
+      "herkunft": "Frankfurt am Main, Deutschland",
+      "kategorie": "revolutionaer",
+      "hauptzimmer": [
+        "11-4",
+        "10-3"
+      ],
+      "besucht": [
+        "00-4"
+      ],
+      "meidet": [],
+      "kurzbio": "Marxistischer Ökonom, Trotzkist. Theorie der langen Wellen.",
+      "hauptwerke": [
+        {
+          "titel": "Der Spätkapitalismus",
+          "jahr": 1972
+        },
+        {
+          "titel": "Marxistische Wirtschaftstheorie",
+          "jahr": 1962
+        }
+      ],
+      "beeinflusst_von": [
+        "marx",
+        "trotzki"
+      ],
+      "beeinflusst": [
+        "callinicos"
+      ],
+      "debattiert_mit": [],
+      "zitate": [
+        {
+          "text": "Der Kapitalismus entwickelt sich in langen Wellen.",
+          "quelle": "Der Spätkapitalismus",
+          "jahr": 1972
+        }
+      ],
+      "tags": [
+        "spätkapitalismus",
+        "lange wellen",
+        "trotzkismus",
+        "vierte internationale"
+      ]
+    },
+    {
+      "id": "hall",
+      "name": "Stuart Hall",
+      "geboren": 1932,
+      "gestorben": 2014,
+      "herkunft": "Kingston, Jamaika",
+      "kategorie": "postkolonial",
+      "hauptzimmer": [
+        "10-3",
+        "14-1"
+      ],
+      "besucht": [
+        "09-3"
+      ],
+      "meidet": [],
+      "kurzbio": "Kulturtheoretiker. Cultural Studies, Identität, Repräsentation.",
+      "hauptwerke": [
+        {
+          "titel": "Encoding/Decoding",
+          "jahr": 1973
+        },
+        {
+          "titel": "Representation",
+          "jahr": 1997
+        }
+      ],
+      "beeinflusst_von": [
+        "gramsci",
+        "althusser"
+      ],
+      "beeinflusst": [
+        "gilroy"
+      ],
+      "debattiert_mit": [],
+      "zitate": [
+        {
+          "text": "Identität ist ein Prozess, kein Zustand.",
+          "quelle": "Cultural Identity and Diaspora",
+          "jahr": 1990
+        }
+      ],
+      "tags": [
+        "cultural studies",
+        "identität",
+        "artikulation",
+        "repräsentation"
+      ]
+    },
+    {
+      "id": "agamben",
+      "name": "Giorgio Agamben",
+      "geboren": 1942,
+      "gestorben": null,
+      "herkunft": "Rom, Italien",
+      "kategorie": "zeitgenoessisch",
+      "hauptzimmer": [
+        "14-1",
+        "02-4"
+      ],
+      "besucht": [],
+      "meidet": [],
+      "kurzbio": "Philosoph. Ausnahmezustand, Biopolitik, Homo Sacer.",
+      "hauptwerke": [
+        {
+          "titel": "Homo Sacer",
+          "jahr": 1995
+        },
+        {
+          "titel": "Ausnahmezustand",
+          "jahr": 2003
+        }
+      ],
+      "beeinflusst_von": [
+        "foucault",
+        "benjamin",
+        "heidegger"
+      ],
+      "beeinflusst": [],
+      "debattiert_mit": [],
+      "zitate": [
+        {
+          "text": "Das Lager ist das Paradigma der Moderne.",
+          "quelle": "Homo Sacer",
+          "jahr": 1995
+        }
+      ],
+      "tags": [
+        "biopolitik",
+        "ausnahmezustand",
+        "homo sacer",
+        "nacktes leben"
+      ]
+    },
+    {
+      "id": "preciado",
+      "name": "Paul B. Preciado",
+      "geboren": 1970,
+      "gestorben": null,
+      "herkunft": "Burgos, Spanien",
+      "kategorie": "feminismus",
+      "hauptzimmer": [
+        "09-5",
+        "14-1"
+      ],
+      "besucht": [
+        "09-3"
+      ],
+      "meidet": [],
+      "kurzbio": "Philosoph*in. Somatopolitik, Pharmakopornographie, Trans-Theorie.",
+      "hauptwerke": [
+        {
+          "titel": "Kontrasexuelles Manifest",
+          "jahr": 2000
+        },
+        {
+          "titel": "Testo Junkie",
+          "jahr": 2008
+        }
+      ],
+      "beeinflusst_von": [
+        "butler",
+        "foucault",
+        "haraway"
+      ],
+      "beeinflusst": [],
+      "debattiert_mit": [],
+      "zitate": [
+        {
+          "text": "Der Körper ist ein technopolitisches Archiv.",
+          "quelle": "Testo Junkie",
+          "jahr": 2008
+        }
+      ],
+      "tags": [
+        "somatopolitik",
+        "pharmakopornographie",
+        "trans",
+        "kontrasexualität"
+      ]
+    },
+    {
+      "id": "althusser",
+      "name": "Louis Althusser",
+      "geboren": 1918,
+      "gestorben": 1990,
+      "herkunft": "Birmandreis, Algerien",
+      "kategorie": "revolutionaer",
+      "hauptzimmer": [
+        "14-1",
+        "01-2"
+      ],
+      "besucht": [
+        "19-3"
+      ],
+      "meidet": [],
+      "kurzbio": "Marxistischer Philosoph. Strukturaler Marxismus, Ideologische Staatsapparate.",
+      "hauptwerke": [
+        {
+          "titel": "Für Marx",
+          "jahr": 1965
+        },
+        {
+          "titel": "Ideologie und ideologische Staatsapparate",
+          "jahr": 1970
+        }
+      ],
+      "beeinflusst_von": [
+        "marx",
+        "lacan",
+        "spinoza"
+      ],
+      "beeinflusst": [
+        "poulantzas",
+        "balibar",
+        "hall"
+      ],
+      "debattiert_mit": [],
+      "zitate": [
+        {
+          "text": "Die Ideologie ruft die Individuen als Subjekte an.",
+          "quelle": "Ideologie und ideologische Staatsapparate",
+          "jahr": 1970
+        }
+      ],
+      "tags": [
+        "strukturaler marxismus",
+        "ideologie",
+        "überdetermination",
+        "epistemologischer bruch"
+      ]
+    },
+    {
+      "id": "mao",
+      "name": "Mao Zedong",
+      "geboren": 1893,
+      "gestorben": 1976,
+      "herkunft": "Shaoshan, China",
+      "kategorie": "revolutionaer",
+      "hauptzimmer": [
+        "00-5",
+        "19-1"
+      ],
+      "besucht": [
+        "10-3"
+      ],
+      "meidet": [
+        "00-1"
+      ],
+      "kurzbio": "Revolutionär, Theoretiker. Begründer der Volksrepublik China, Maoismus.",
+      "hauptwerke": [
+        {
+          "titel": "Über den Widerspruch",
+          "jahr": 1937
+        },
+        {
+          "titel": "Über die Praxis",
+          "jahr": 1937
+        }
+      ],
+      "beeinflusst_von": [
+        "marx",
+        "lenin"
+      ],
+      "beeinflusst": [],
+      "debattiert_mit": [],
+      "zitate": [
+        {
+          "text": "Die politische Macht kommt aus den Gewehrläufen.",
+          "quelle": "Probleme des Krieges",
+          "jahr": 1938
+        }
+      ],
+      "tags": [
+        "maoismus",
+        "volkskrieg",
+        "kulturrevolution",
+        "massenlinie"
+      ]
+    },
+    {
+      "id": "james_clr",
+      "name": "C.L.R. James",
+      "geboren": 1901,
+      "gestorben": 1989,
+      "herkunft": "Tunapuna, Trinidad",
+      "kategorie": "postkolonial",
+      "hauptzimmer": [
+        "10-3",
+        "01-2"
+      ],
+      "besucht": [
+        "11-4"
+      ],
+      "meidet": [],
+      "kurzbio": "Historiker, Marxist. Die schwarzen Jakobiner, Panafrikanismus.",
+      "hauptwerke": [
+        {
+          "titel": "Die schwarzen Jakobiner",
+          "jahr": 1938
+        },
+        {
+          "titel": "Beyond a Boundary",
+          "jahr": 1963
+        }
+      ],
+      "beeinflusst_von": [
+        "marx",
+        "trotzki"
+      ],
+      "beeinflusst": [
+        "hall",
+        "fanon"
+      ],
+      "debattiert_mit": [],
+      "zitate": [
+        {
+          "text": "Die Sklaven von Saint-Domingue befreiten sich selbst.",
+          "quelle": "Die schwarzen Jakobiner",
+          "jahr": 1938
+        }
+      ],
+      "tags": [
+        "haitianische revolution",
+        "panafrikanismus",
+        "schwarzer marxismus",
+        "cricket"
+      ]
+    },
+    {
+      "id": "guattari",
+      "name": "Félix Guattari",
+      "geboren": 1930,
+      "gestorben": 1992,
+      "herkunft": "Villeneuve-les-Sablons, Frankreich",
+      "kategorie": "autonomie",
+      "hauptzimmer": [
+        "02-4",
+        "14-1"
+      ],
+      "besucht": [
+        "08-4"
+      ],
+      "meidet": [],
+      "kurzbio": "Psychoanalytiker, Philosoph. Schizoanalyse, Ökosophie.",
+      "hauptwerke": [
+        {
+          "titel": "Anti-Ödipus",
+          "jahr": 1972
+        },
+        {
+          "titel": "Die drei Ökologien",
+          "jahr": 1989
+        }
+      ],
+      "beeinflusst_von": [
+        "lacan"
+      ],
+      "beeinflusst": [
+        "berardi",
+        "lazzarato"
+      ],
+      "debattiert_mit": [],
+      "zitate": [
+        {
+          "text": "Molekulare Revolutionen finden überall statt.",
+          "quelle": "Molecular Revolution",
+          "jahr": 1977
+        }
+      ],
+      "tags": [
+        "schizoanalyse",
+        "ökosophie",
+        "molekulare revolution",
+        "transversalität"
+      ]
+    },
+    {
+      "id": "chomsky",
+      "name": "Noam Chomsky",
+      "geboren": 1928,
+      "gestorben": null,
+      "herkunft": "Philadelphia, USA",
+      "kategorie": "zeitgenoessisch",
+      "hauptzimmer": [
+        "02-5",
+        "10-3"
+      ],
+      "besucht": [
+        "13-4"
+      ],
+      "meidet": [],
+      "kurzbio": "Linguist, Anarchist, Aktivist. Einer der einflussreichsten Intellektuellen weltweit.",
+      "hauptwerke": [
+        {
+          "titel": "Manufacturing Consent",
+          "jahr": 1988
+        },
+        {
+          "titel": "Syntactic Structures",
+          "jahr": 1957
+        }
+      ],
+      "beeinflusst_von": [
+        "bakunin",
+        "kropotkin",
+        "russell"
+      ],
+      "beeinflusst": [],
+      "debattiert_mit": [
+        "foucault",
+        "zizek"
+      ],
+      "zitate": [
+        {
+          "text": "Wenn wir nicht an die Meinungsfreiheit für die glauben, die wir verachten, glauben wir gar nicht daran.",
+          "quelle": "(zugeschrieben)",
+          "jahr": null
+        }
+      ],
+      "tags": [
+        "anarchosyndikalismus",
+        "medienkritik",
+        "imperialismuskritik",
+        "linguistik"
+      ]
+    },
+    {
+      "id": "sartre",
+      "name": "Jean-Paul Sartre",
+      "geboren": 1905,
+      "gestorben": 1980,
+      "herkunft": "Paris, Frankreich",
+      "kategorie": "revolutionaer",
+      "hauptzimmer": [
+        "14-1",
+        "02-4"
+      ],
+      "besucht": [
+        "10-3"
+      ],
+      "meidet": [],
+      "kurzbio": "Philosoph, Schriftsteller. Existenzialismus und Marxismus, engagierter Intellektueller.",
+      "hauptwerke": [
+        {
+          "titel": "Das Sein und das Nichts",
+          "jahr": 1943
+        },
+        {
+          "titel": "Kritik der dialektischen Vernunft",
+          "jahr": 1960
+        }
+      ],
+      "beeinflusst_von": [
+        "hegel",
+        "husserl",
+        "heidegger"
+      ],
+      "beeinflusst": [
+        "beauvoir",
+        "fanon",
+        "gorz"
+      ],
+      "debattiert_mit": [
+        "camus"
+      ],
+      "zitate": [
+        {
+          "text": "Der Mensch ist zur Freiheit verurteilt.",
+          "quelle": "Das Sein und das Nichts",
+          "jahr": 1943
+        },
+        {
+          "text": "Die Hölle, das sind die anderen.",
+          "quelle": "Geschlossene Gesellschaft",
+          "jahr": 1944
+        }
+      ],
+      "tags": [
+        "existenzialismus",
+        "engagement",
+        "freiheit",
+        "marxismus"
+      ]
+    },
+    {
+      "id": "lefebvre",
+      "name": "Henri Lefebvre",
+      "geboren": 1901,
+      "gestorben": 1991,
+      "herkunft": "Hagetmau, Frankreich",
+      "kategorie": "revolutionaer",
+      "hauptzimmer": [
+        "14-1",
+        "24-4"
+      ],
+      "besucht": [
+        "02-4"
+      ],
+      "meidet": [],
+      "kurzbio": "Marxistischer Philosoph, Soziologe. Recht auf Stadt, Kritik des Alltagslebens.",
+      "hauptwerke": [
+        {
+          "titel": "Das Recht auf Stadt",
+          "jahr": 1968
+        },
+        {
+          "titel": "Die Revolution der Städte",
+          "jahr": 1970
+        },
+        {
+          "titel": "Kritik des Alltagslebens",
+          "jahr": 1947
+        }
+      ],
+      "beeinflusst_von": [
+        "marx",
+        "hegel"
+      ],
+      "beeinflusst": [
+        "debord",
+        "harvey"
+      ],
+      "debattiert_mit": [],
+      "zitate": [
+        {
+          "text": "Das Recht auf Stadt ist das Recht auf das städtische Leben.",
+          "quelle": "Das Recht auf Stadt",
+          "jahr": 1968
+        }
+      ],
+      "tags": [
+        "recht auf stadt",
+        "raum",
+        "alltag",
+        "urbanismus"
+      ]
+    },
+    {
+      "id": "ocalan",
+      "name": "Abdullah Öcalan",
+      "geboren": 1949,
+      "gestorben": null,
+      "herkunft": "Ömerli, Türkei",
+      "kategorie": "autonomie",
+      "hauptzimmer": [
+        "24-4",
+        "02-4"
+      ],
+      "besucht": [
+        "09-4",
+        "08-4"
+      ],
+      "meidet": [
+        "24-1"
+      ],
+      "kurzbio": "Kurdischer Politiker, Theoretiker. Demokratischer Konföderalismus, seit 1999 inhaftiert.",
+      "hauptwerke": [
+        {
+          "titel": "Demokratischer Konföderalismus",
+          "jahr": 2011
+        },
+        {
+          "titel": "Jenseits von Staat, Macht und Gewalt",
+          "jahr": 2004
+        }
+      ],
+      "beeinflusst_von": [
+        "bookchin",
+        "wallerstein"
+      ],
+      "beeinflusst": [],
+      "debattiert_mit": [],
+      "zitate": [
+        {
+          "text": "Demokratie ohne Frauen ist keine Demokratie.",
+          "quelle": "Jenseits von Staat, Macht und Gewalt",
+          "jahr": 2004
+        }
+      ],
+      "tags": [
+        "demokratischer konföderalismus",
+        "rojava",
+        "jineolojî",
+        "ökologie"
+      ]
+    },
+    {
+      "id": "polanyi",
+      "name": "Karl Polanyi",
+      "geboren": 1886,
+      "gestorben": 1964,
+      "herkunft": "Wien, Österreich",
+      "kategorie": "klassiker",
+      "hauptzimmer": [
+        "16-2",
+        "14-1"
+      ],
+      "besucht": [
+        "03-3"
+      ],
+      "meidet": [],
+      "kurzbio": "Wirtschaftshistoriker. Kritik des Marktliberalismus, eingebettete Wirtschaft.",
+      "hauptwerke": [
+        {
+          "titel": "The Great Transformation",
+          "jahr": 1944
+        }
+      ],
+      "beeinflusst_von": [
+        "marx",
+        "weber"
+      ],
+      "beeinflusst": [
+        "doerre",
+        "fraser",
+        "streeck"
+      ],
+      "debattiert_mit": [],
+      "zitate": [
+        {
+          "text": "Die Idee eines selbstregulierenden Marktes war eine pure Utopie.",
+          "quelle": "The Great Transformation",
+          "jahr": 1944
+        }
+      ],
+      "tags": [
+        "große transformation",
+        "doppelbewegung",
+        "einbettung",
+        "marktgesellschaft"
+      ]
+    },
+    {
+      "id": "arendt",
+      "name": "Hannah Arendt",
+      "geboren": 1906,
+      "gestorben": 1975,
+      "herkunft": "Linden-Limmer, Deutschland",
+      "kategorie": "zeitgenoessisch",
+      "hauptzimmer": [
+        "14-1",
+        "02-3"
+      ],
+      "besucht": [
+        "13-3"
+      ],
+      "meidet": [],
+      "kurzbio": "Politische Theoretikerin. Totalitarismus, Vita activa, Banalität des Bösen.",
+      "hauptwerke": [
+        {
+          "titel": "Elemente und Ursprünge totaler Herrschaft",
+          "jahr": 1951
+        },
+        {
+          "titel": "Vita activa oder Vom tätigen Leben",
+          "jahr": 1958
+        },
+        {
+          "titel": "Eichmann in Jerusalem",
+          "jahr": 1963
+        }
+      ],
+      "beeinflusst_von": [
+        "heidegger",
+        "jaspers"
+      ],
+      "beeinflusst": [
+        "habermas",
+        "benhabib"
+      ],
+      "debattiert_mit": [],
+      "zitate": [
+        {
+          "text": "Kein Mensch hat das Recht zu gehorchen.",
+          "quelle": "(zugeschrieben)",
+          "jahr": null
+        }
+      ],
+      "tags": [
+        "totalitarismus",
+        "handeln",
+        "öffentlichkeit",
+        "revolution"
+      ]
+    },
+    {
+      "id": "balibar",
+      "name": "Étienne Balibar",
+      "geboren": 1942,
+      "gestorben": null,
+      "herkunft": "Avallon, Frankreich",
+      "kategorie": "zeitgenoessisch",
+      "hauptzimmer": [
+        "14-1",
+        "10-3"
+      ],
+      "besucht": [
+        "01-2"
+      ],
+      "meidet": [],
+      "kurzbio": "Marxistischer Philosoph. Staatsbürgerschaft, Grenzen, Gewalt.",
+      "hauptwerke": [
+        {
+          "titel": "Das Kapital lesen",
+          "jahr": 1965
+        },
+        {
+          "titel": "Die Grenzen der Demokratie",
+          "jahr": 1992
+        }
+      ],
+      "beeinflusst_von": [
+        "althusser",
+        "marx"
+      ],
+      "beeinflusst": [],
+      "debattiert_mit": [],
+      "zitate": [
+        {
+          "text": "Es gibt keine Staatsbürgerschaft ohne Ausschluss.",
+          "quelle": "Die Grenzen der Demokratie",
+          "jahr": 1992
+        }
+      ],
+      "tags": [
+        "staatsbürgerschaft",
+        "grenzen",
+        "gewalt",
+        "althusserianismus"
+      ]
+    },
+    {
+      "id": "benhabib",
+      "name": "Seyla Benhabib",
+      "geboren": 1950,
+      "gestorben": null,
+      "herkunft": "Istanbul, Türkei",
+      "kategorie": "zeitgenoessisch",
+      "hauptzimmer": [
+        "14-2",
+        "10-3"
+      ],
+      "besucht": [
+        "09-3"
+      ],
+      "meidet": [],
+      "kurzbio": "Politische Theoretikerin. Diskursethik, Kosmopolitismus, Menschenrechte.",
+      "hauptwerke": [
+        {
+          "titel": "Kritik, Norm und Utopie",
+          "jahr": 1986
+        },
+        {
+          "titel": "Die Rechte der Anderen",
+          "jahr": 2004
+        }
+      ],
+      "beeinflusst_von": [
+        "habermas",
+        "arendt"
+      ],
+      "beeinflusst": [],
+      "debattiert_mit": [],
+      "zitate": [
+        {
+          "text": "Gastfreundschaft ist eine moralische Pflicht.",
+          "quelle": "Die Rechte der Anderen",
+          "jahr": 2004
+        }
+      ],
+      "tags": [
+        "diskursethik",
+        "kosmopolitismus",
+        "migration",
+        "menschenrechte"
+      ]
+    },
+    {
+      "id": "callinicos",
+      "name": "Alex Callinicos",
+      "geboren": 1950,
+      "gestorben": null,
+      "herkunft": "Salisbury, Rhodesien",
+      "kategorie": "revolutionaer",
+      "hauptzimmer": [
+        "11-4",
+        "00-4"
+      ],
+      "besucht": [
+        "14-1"
+      ],
+      "meidet": [],
+      "kurzbio": "Marxistischer Theoretiker, Trotzkist. Anti-Kapitalismus, Imperialismus.",
+      "hauptwerke": [
+        {
+          "titel": "The Revolutionary Ideas of Karl Marx",
+          "jahr": 1983
+        },
+        {
+          "titel": "An Anti-Capitalist Manifesto",
+          "jahr": 2003
+        }
+      ],
+      "beeinflusst_von": [
+        "trotzki",
+        "mandel",
+        "marx"
+      ],
+      "beeinflusst": [],
+      "debattiert_mit": [],
+      "zitate": [],
+      "tags": [
+        "trotzkismus",
+        "imperialismus",
+        "swp",
+        "antikapitalismus"
+      ]
+    },
+    {
+      "id": "gilroy",
+      "name": "Paul Gilroy",
+      "geboren": 1956,
+      "gestorben": null,
+      "herkunft": "London, England",
+      "kategorie": "postkolonial",
+      "hauptzimmer": [
+        "10-3",
+        "14-1"
+      ],
+      "besucht": [
+        "09-3"
+      ],
+      "meidet": [],
+      "kurzbio": "Kulturtheoretiker. Black Atlantic, Rassismus, Diaspora.",
+      "hauptwerke": [
+        {
+          "titel": "The Black Atlantic",
+          "jahr": 1993
+        },
+        {
+          "titel": "Against Race",
+          "jahr": 2000
+        }
+      ],
+      "beeinflusst_von": [
+        "hall",
+        "james_clr"
+      ],
+      "beeinflusst": [],
+      "debattiert_mit": [],
+      "zitate": [
+        {
+          "text": "Der Schwarze Atlantik ist ein Gegennarrativ zur Moderne.",
+          "quelle": "The Black Atlantic",
+          "jahr": 1993
+        }
+      ],
+      "tags": [
+        "black atlantic",
+        "diaspora",
+        "rassismus",
+        "cultural studies"
+      ]
+    },
+    {
+      "id": "harvey",
+      "name": "David Harvey",
+      "geboren": 1935,
+      "gestorben": null,
+      "herkunft": "Gillingham, England",
+      "kategorie": "zeitgenoessisch",
+      "hauptzimmer": [
+        "14-1",
+        "03-3"
+      ],
+      "besucht": [
+        "08-4"
+      ],
+      "meidet": [],
+      "kurzbio": "Marxistischer Geograph. Akkumulation durch Enteignung, Recht auf Stadt.",
+      "hauptwerke": [
+        {
+          "titel": "The Limits to Capital",
+          "jahr": 1982
+        },
+        {
+          "titel": "A Brief History of Neoliberalism",
+          "jahr": 2005
+        },
+        {
+          "titel": "Marx' Kapital lesen",
+          "jahr": 2010
+        }
+      ],
+      "beeinflusst_von": [
+        "marx",
+        "lefebvre"
+      ],
+      "beeinflusst": [],
+      "debattiert_mit": [],
+      "zitate": [
+        {
+          "text": "Neoliberalismus ist Klassenkampf von oben.",
+          "quelle": "Brief History of Neoliberalism",
+          "jahr": 2005
+        }
+      ],
+      "tags": [
+        "geographie",
+        "akkumulation",
+        "neoliberalismus",
+        "recht auf stadt"
+      ]
+    },
+    {
+      "id": "jameson",
+      "name": "Fredric Jameson",
+      "geboren": 1934,
+      "gestorben": 2024,
+      "herkunft": "Cleveland, USA",
+      "kategorie": "zeitgenoessisch",
+      "hauptzimmer": [
+        "14-1",
+        "17-2"
+      ],
+      "besucht": [],
+      "meidet": [],
+      "kurzbio": "Marxistischer Literaturtheoretiker. Postmoderne, Utopie, Kulturanalyse.",
+      "hauptwerke": [
+        {
+          "titel": "Postmodernism, or, The Cultural Logic of Late Capitalism",
+          "jahr": 1991
+        },
+        {
+          "titel": "The Political Unconscious",
+          "jahr": 1981
+        }
+      ],
+      "beeinflusst_von": [
+        "lukacs",
+        "adorno",
+        "sartre"
+      ],
+      "beeinflusst": [
+        "fisher"
+      ],
+      "debattiert_mit": [],
+      "zitate": [
+        {
+          "text": "Es ist leichter, sich das Ende der Welt vorzustellen als das Ende des Kapitalismus.",
+          "quelle": "(zugeschrieben)",
+          "jahr": null
+        }
+      ],
+      "tags": [
+        "postmoderne",
+        "utopie",
+        "kulturkritik",
+        "spätkapitalismus"
+      ]
+    },
+    {
+      "id": "jessop",
+      "name": "Bob Jessop",
+      "geboren": 1946,
+      "gestorben": null,
+      "herkunft": "England",
+      "kategorie": "zeitgenoessisch",
+      "hauptzimmer": [
+        "02-3",
+        "14-1"
+      ],
+      "besucht": [],
+      "meidet": [],
+      "kurzbio": "Politikwissenschaftler. Staatstheorie, strategisch-relationale Perspektive.",
+      "hauptwerke": [
+        {
+          "titel": "State Theory",
+          "jahr": 1990
+        },
+        {
+          "titel": "The Future of the Capitalist State",
+          "jahr": 2002
+        }
+      ],
+      "beeinflusst_von": [
+        "poulantzas",
+        "gramsci"
+      ],
+      "beeinflusst": [],
+      "debattiert_mit": [],
+      "zitate": [],
+      "tags": [
+        "staatstheorie",
+        "regulationstheorie",
+        "strategisch-relational",
+        "governance"
+      ]
+    },
+    {
+      "id": "miliband",
+      "name": "Ralph Miliband",
+      "geboren": 1924,
+      "gestorben": 1994,
+      "herkunft": "Brüssel, Belgien",
+      "kategorie": "revolutionaer",
+      "hauptzimmer": [
+        "02-2",
+        "14-1"
+      ],
+      "besucht": [
+        "19-3"
+      ],
+      "meidet": [],
+      "kurzbio": "Marxistischer Politikwissenschaftler. Staatstheorie, parlamentarischer Sozialismus.",
+      "hauptwerke": [
+        {
+          "titel": "The State in Capitalist Society",
+          "jahr": 1969
+        },
+        {
+          "titel": "Parliamentary Socialism",
+          "jahr": 1961
+        }
+      ],
+      "beeinflusst_von": [
+        "marx",
+        "laski"
+      ],
+      "beeinflusst": [],
+      "debattiert_mit": [
+        "poulantzas"
+      ],
+      "zitate": [],
+      "tags": [
+        "staatstheorie",
+        "parlamentarismus",
+        "instrumentalismus",
+        "labourismus"
+      ]
+    },
+    {
+      "id": "streeck",
+      "name": "Wolfgang Streeck",
+      "geboren": 1946,
+      "gestorben": null,
+      "herkunft": "Lengerich, Deutschland",
+      "kategorie": "deutsch",
+      "hauptzimmer": [
+        "16-2",
+        "14-1"
+      ],
+      "besucht": [
+        "02-3"
+      ],
+      "meidet": [],
+      "kurzbio": "Soziologe. Kapitalismuskritik, Demokratie und Kapitalismus, EU-Kritik.",
+      "hauptwerke": [
+        {
+          "titel": "Gekaufte Zeit",
+          "jahr": 2013
+        },
+        {
+          "titel": "Wie wird der Kapitalismus enden?",
+          "jahr": 2016
+        }
+      ],
+      "beeinflusst_von": [
+        "polanyi",
+        "marx"
+      ],
+      "beeinflusst": [],
+      "debattiert_mit": [
+        "habermas"
+      ],
+      "zitate": [
+        {
+          "text": "Der Kapitalismus stirbt an einer Überdosis seiner selbst.",
+          "quelle": "Wie wird der Kapitalismus enden?",
+          "jahr": 2016
+        }
+      ],
+      "tags": [
+        "kapitalismus",
+        "demokratie",
+        "eu-kritik",
+        "wirtschaftssoziologie"
+      ]
+    },
+    {
+      "id": "reckwitz",
+      "name": "Andreas Reckwitz",
+      "geboren": 1970,
+      "gestorben": null,
+      "herkunft": "Deutschland",
+      "hauptzimmer": [
+        "14-4",
+        "17-2"
+      ],
+      "besucht": [
+        "02-3"
+      ],
+      "meidet": [],
+      "kurzbio": "Soziologe. Analyse der Spätmoderne, Singularitäten und der neuen Klassengesellschaft.",
+      "tags": [
+        "soziologie",
+        "kultur",
+        "klassenanalyse"
+      ],
+      "kategorie": "deutsch"
+    },
+    {
+      "id": "nassehi",
+      "name": "Armin Nassehi",
+      "geboren": 1960,
+      "gestorben": null,
+      "herkunft": "Deutschland",
+      "hauptzimmer": [
+        "14-2",
+        "19-1"
+      ],
+      "besucht": [
+        "20-3",
+        "12-3",
+        "14-4"
+      ],
+      "meidet": [],
+      "kurzbio": "Soziologe. Systemtheoretische Analyse der modernen Gesellschaft und ihrer Komplexität.",
+      "tags": [
+        "systemtheorie",
+        "soziologie",
+        "digitalität"
+      ],
+      "kategorie": "deutsch"
+    },
+    {
+      "id": "lessenich",
+      "name": "Stephan Lessenich",
+      "geboren": 1965,
+      "gestorben": null,
+      "herkunft": "Deutschland",
+      "hauptzimmer": [
+        "01-1",
+        "08-1"
+      ],
+      "besucht": [
+        "16-2"
+      ],
+      "meidet": [],
+      "kurzbio": "Soziologe. Theorie der Externalisierungsgesellschaft und Kritik des globalen Kapitalismus.",
+      "tags": [
+        "externalisierung",
+        "soziologie",
+        "kapitalismuskritik"
+      ],
+      "kategorie": "deutsch"
+    },
+    {
+      "id": "van_dyk",
+      "name": "Silke van Dyk",
+      "geboren": 1972,
+      "gestorben": null,
+      "herkunft": "Deutschland",
+      "hauptzimmer": [
+        "03-1",
+        "21-1"
+      ],
+      "besucht": [
+        "01-2"
+      ],
+      "meidet": [],
+      "kurzbio": "Soziologin. Expertin für den Post-Wohlfahrtsstaat, Sorgearbeit und Vergesellschaftung.",
+      "tags": [
+        "care",
+        "sozialstaat",
+        "vergesellschaftung"
+      ],
+      "kategorie": "deutsch"
+    },
+    {
+      "id": "nachtwey",
+      "name": "Oliver Nachtwey",
+      "geboren": 1975,
+      "gestorben": null,
+      "herkunft": "Deutschland",
+      "hauptzimmer": [
+        "01-2",
+        "16-2"
+      ],
+      "besucht": [
+        "17-2"
+      ],
+      "meidet": [],
+      "kurzbio": "Soziologe. Analyse der Abstiegsgesellschaft und des digitalen Kapitalismus.",
+      "tags": [
+        "abstiegsgesellschaft",
+        "arbeit",
+        "kapitalismus"
+      ],
+      "kategorie": "deutsch"
+    },
+    {
+      "id": "goepel",
+      "name": "Maja Göpel",
+      "geboren": 1976,
+      "gestorben": null,
+      "herkunft": "Deutschland",
+      "hauptzimmer": [
+        "08-4",
+        "17-4"
+      ],
+      "besucht": [
+        "16-2"
+      ],
+      "meidet": [],
+      "kurzbio": "Politökonomin. Nachhaltigkeitswissenschaftlerin und Mitbegründerin von Scientists for Future.",
+      "tags": [
+        "transformation",
+        "ökologie",
+        "ökonomie"
+      ],
+      "kategorie": "deutsch"
+    },
+    {
+      "id": "herrmann_u",
+      "name": "Ulrike Herrmann",
+      "geboren": 1964,
+      "gestorben": null,
+      "herkunft": "Deutschland",
+      "hauptzimmer": [
+        "16-2",
+        "08-4"
+      ],
+      "besucht": [
+        "17-1"
+      ],
+      "meidet": [],
+      "kurzbio": "Wirtschaftsjournalistin. Vordenkerin des kontrollierten 'Grünen Schrumpfens'.",
+      "tags": [
+        "degrowth",
+        "kapitalismuskritik",
+        "wirtschaft"
+      ],
+      "kategorie": "deutsch"
+    },
+    {
+      "id": "weber_i",
+      "name": "Isabella Weber",
+      "geboren": 1987,
+      "gestorben": null,
+      "herkunft": "Deutschland",
+      "hauptzimmer": [
+        "01-3",
+        "16-2"
+      ],
+      "besucht": [
+        "10-3"
+      ],
+      "meidet": [],
+      "kurzbio": "Ökonomin. Forschung zu Preiskontrollen und dem wirtschaftlichen Aufstieg Chinas.",
+      "tags": [
+        "ökonomie",
+        "china",
+        "preiskontrollen"
+      ],
+      "kategorie": "zeitgenoessisch"
+    },
+    {
+      "id": "fratzscher",
+      "name": "Marcel Fratzscher",
+      "geboren": 1971,
+      "gestorben": null,
+      "herkunft": "Deutschland",
+      "hauptzimmer": [
+        "03-4",
+        "04-4"
+      ],
+      "besucht": [
+        "01-3"
+      ],
+      "meidet": [],
+      "kurzbio": "Ökonom (DIW). Fokus auf Verteilungsgerechtigkeit und soziale Teilhabe innerhalb des Marktes.",
+      "tags": [
+        "ökonomie",
+        "gerechtigkeit",
+        "verteilung"
+      ],
+      "kategorie": "deutsch"
+    },
+    {
+      "id": "wagenknecht",
+      "name": "Sahra Wagenknecht",
+      "geboren": 1969,
+      "gestorben": null,
+      "herkunft": "Deutschland",
+      "hauptzimmer": [
+        "01-2",
+        "19-4"
+      ],
+      "besucht": [
+        "14-4",
+        "24-2"
+      ],
+      "meidet": [
+        "10-1",
+        "09-3"
+      ],
+      "kurzbio": "Politikerin (BSW). Bekannt für linkskonservative Positionen und Staatszentrierung.",
+      "tags": [
+        "sozialpolitik",
+        "linkskonservatismus",
+        "staat"
+      ],
+      "kategorie": "deutsch"
+    },
+    {
+      "id": "gysi",
+      "name": "Gregor Gysi",
+      "geboren": 1948,
+      "gestorben": null,
+      "herkunft": "Deutschland",
+      "hauptzimmer": [
+        "01-3",
+        "12-3"
+      ],
+      "besucht": [
+        "00-4"
+      ],
+      "meidet": [],
+      "kurzbio": "Rechtsanwalt und Politiker. Langjähriges Gesicht der parlamentarischen Linken in Deutschland.",
+      "tags": [
+        "politik",
+        "demokratie",
+        "gerechtigkeit"
+      ],
+      "kategorie": "deutsch"
+    },
+    {
+      "id": "schwerdtner",
+      "name": "Ines Schwerdtner",
+      "geboren": 1989,
+      "gestorben": null,
+      "herkunft": "Deutschland",
+      "hauptzimmer": [
+        "01-2",
+        "00-3"
+      ],
+      "besucht": [
+        "16-3"
+      ],
+      "meidet": [],
+      "kurzbio": "Politikerin. Fokus auf neue Klassenpolitik und die Verbindung von Theorie und Gewerkschaft.",
+      "tags": [
+        "klassenpolitik",
+        "sozialismus",
+        "gewerkschaften"
+      ],
+      "kategorie": "deutsch"
+    },
+    {
+      "id": "czollek",
+      "name": "Max Czollek",
+      "geboren": 1987,
+      "gestorben": null,
+      "herkunft": "Deutschland",
+      "hauptzimmer": [
+        "10-1",
+        "17-3"
+      ],
+      "besucht": [
+        "23-1"
+      ],
+      "meidet": [],
+      "kurzbio": "Publizist. Kritiker des Gedächtnistheaters und Vordenker der 'Desintegration'.",
+      "tags": [
+        "antirassismus",
+        "jüdisch",
+        "kultur"
+      ],
+      "kategorie": "deutsch"
+    },
+    {
+      "id": "emcke",
+      "name": "Carolin Emcke",
+      "geboren": 1967,
+      "gestorben": null,
+      "herkunft": "Deutschland",
+      "hauptzimmer": [
+        "14-2",
+        "09-3"
+      ],
+      "besucht": [
+        "10-2"
+      ],
+      "meidet": [],
+      "kurzbio": "Philosophin und Publizistin. Arbeiten zu Menschenrechten, Identität und Gewalt.",
+      "tags": [
+        "philosophie",
+        "menschenrechte",
+        "identität"
+      ],
+      "kategorie": "deutsch"
+    },
+    {
+      "id": "jung_t",
+      "name": "Tilo Jung",
+      "geboren": 1985,
+      "gestorben": null,
+      "herkunft": "Deutschland",
+      "hauptzimmer": [
+        "13-4",
+        "12-3"
+      ],
+      "besucht": [
+        "00-4"
+      ],
+      "meidet": [],
+      "kurzbio": "Journalist (Jung & Naiv). Bekannt für naive, aber tiefschürfende politische Interviews.",
+      "tags": [
+        "journalismus",
+        "politik",
+        "demokratie"
+      ],
+      "kategorie": "deutsch"
+    },
+    {
+      "id": "schmitt_wm",
+      "name": "Wolfgang M. Schmitt",
+      "geboren": 1988,
+      "gestorben": null,
+      "herkunft": "Deutschland",
+      "hauptzimmer": [
+        "14-1",
+        "17-2"
+      ],
+      "besucht": [
+        "01-1"
+      ],
+      "meidet": [],
+      "kurzbio": "Filmkritiker und Podcaster. Marxistische Analyse von Popkultur und Ideologie.",
+      "tags": [
+        "ideologiekritik",
+        "film",
+        "marxismus"
+      ],
+      "kategorie": "deutsch"
+    },
+    {
+      "id": "nymoen",
+      "name": "Ole Nymoen",
+      "geboren": 1996,
+      "gestorben": null,
+      "herkunft": "Deutschland",
+      "hauptzimmer": [
+        "01-3",
+        "16-2"
+      ],
+      "besucht": [
+        "20-3"
+      ],
+      "meidet": [],
+      "kurzbio": "Wirtschaftswissenschaftler. Podcaster zu marxistischer Ökonomie und Influencer-Kritik.",
+      "tags": [
+        "ökonomie",
+        "marxismus",
+        "digitalität"
+      ],
+      "kategorie": "deutsch"
+    },
+    {
+      "id": "redecker",
+      "name": "Eva von Redecker",
+      "geboren": 1982,
+      "gestorben": null,
+      "herkunft": "Deutschland",
+      "hauptzimmer": [
+        "08-1",
+        "01-1"
+      ],
+      "besucht": [
+        "14-2"
+      ],
+      "meidet": [],
+      "kurzbio": "Philosophin. Fokus auf Eigentumskritik, Bleibefreiheit und ökofeministische Revolution.",
+      "tags": [
+        "eigentum",
+        "ökologie",
+        "philosophie"
+      ],
+      "kategorie": "deutsch"
+    },
+    {
+      "id": "kocak",
+      "name": "Ferat Koçak",
+      "geboren": 1979,
+      "gestorben": null,
+      "herkunft": "Deutschland",
+      "hauptzimmer": [
+        "10-1",
+        "05-1"
+      ],
+      "besucht": [
+        "00-2"
+      ],
+      "meidet": [],
+      "kurzbio": "Aktivist und Politiker. Verbindung von Antirassismus und dem Kampf um bezahlbaren Wohnraum.",
+      "tags": [
+        "antirassismus",
+        "wohnen",
+        "aktivismus"
+      ],
+      "kategorie": "deutsch"
+    },
+    {
+      "id": "lay",
+      "name": "Caren Lay",
+      "geboren": 1972,
+      "gestorben": null,
+      "herkunft": "Deutschland",
+      "hauptzimmer": [
+        "05-1",
+        "01-1"
+      ],
+      "besucht": [
+        "09-3"
+      ],
+      "meidet": [],
+      "kurzbio": "Politikerin. Expertin für Mietenpolitik und die Enteignung großer Immobilienkonzerne.",
+      "tags": [
+        "wohnen",
+        "enteignung",
+        "politik"
+      ],
+      "kategorie": "deutsch"
+    },
+    {
+      "id": "gennburg",
+      "name": "Katalin Gennburg",
+      "geboren": 1984,
+      "gestorben": null,
+      "herkunft": "Deutschland",
+      "hauptzimmer": [
+        "05-1",
+        "22-1"
+      ],
+      "besucht": [
+        "17-3"
+      ],
+      "meidet": [],
+      "kurzbio": "Politikerin. Fokus auf radikale Stadtentwicklung, Anti-Gentrifizierung und Tourismuskritik.",
+      "tags": [
+        "stadtpolitik",
+        "wohnen",
+        "tourismus"
+      ],
+      "kategorie": "deutsch"
+    },
+    {
+      "id": "holm",
+      "name": "Andrej Holm",
+      "geboren": 1970,
+      "gestorben": null,
+      "herkunft": "Deutschland",
+      "hauptzimmer": [
+        "05-1",
+        "22-1"
+      ],
+      "besucht": [
+        "01-2"
+      ],
+      "meidet": [],
+      "kurzbio": "Sozialwissenschaftler. Bekannter Experte für Gentrifizierung und Wohnungspolitik.",
+      "tags": [
+        "wohnen",
+        "stadtforschung",
+        "aktivismus"
+      ],
+      "kategorie": "deutsch"
+    },
+    {
+      "id": "sarbo",
+      "name": "Bafta Sarbo",
+      "geboren": null,
+      "gestorben": null,
+      "herkunft": "Deutschland",
+      "hauptzimmer": [
+        "10-1",
+        "01-1"
+      ],
+      "besucht": [
+        "14-2"
+      ],
+      "meidet": [],
+      "kurzbio": "Sozialwissenschaftlerin. Marxistische Analyse von Rassismus und Klassenverhältnissen.",
+      "tags": [
+        "antirassismus",
+        "marxismus",
+        "klassenkampf"
+      ],
+      "kategorie": "deutsch"
+    },
+    {
+      "id": "friedrich_s",
+      "name": "Sebastian Friedrich",
+      "geboren": 1985,
+      "gestorben": null,
+      "herkunft": "Deutschland",
+      "hauptzimmer": [
+        "01-2",
+        "23-2"
+      ],
+      "besucht": [
+        "14-3"
+      ],
+      "meidet": [],
+      "kurzbio": "Journalist. Arbeiten zu Klassenfragen, der Neuen Rechten und sozialen Bewegungen.",
+      "tags": [
+        "journalismus",
+        "klasse",
+        "neue rechte"
+      ],
+      "kategorie": "deutsch"
+    },
+    {
+      "id": "kipping",
+      "name": "Katja Kipping",
+      "geboren": 1978,
+      "gestorben": null,
+      "herkunft": "Deutschland",
+      "hauptzimmer": [
+        "03-1",
+        "09-3"
+      ],
+      "besucht": [
+        "11-4"
+      ],
+      "meidet": [],
+      "kurzbio": "Politikerin. Vorkämpferin für das bedingungslose Grundeinkommen und emanzipatorische Linke.",
+      "tags": [
+        "grundeinkommen",
+        "feminismus",
+        "sozialpolitik"
+      ],
+      "kategorie": "deutsch"
+    },
+    {
+      "id": "mueller_jw",
+      "name": "Jan-Werner Müller",
+      "geboren": 1970,
+      "gestorben": null,
+      "herkunft": "Deutschland",
+      "hauptzimmer": [
+        "14-2",
+        "12-3"
+      ],
+      "besucht": [
+        "13-4"
+      ],
+      "meidet": [],
+      "kurzbio": "Politikwissenschaftler. Bekannt für seine Analysen zu Populismus und der Zukunft der Demokratie.",
+      "tags": [
+        "populismus",
+        "demokratie",
+        "politiktheorie"
+      ],
+      "kategorie": "deutsch"
+    },
+    {
+      "id": "brand_u",
+      "name": "Ulrich Brand",
+      "geboren": 1967,
+      "gestorben": null,
+      "herkunft": "Deutschland",
+      "hauptzimmer": [
+        "08-1",
+        "17-1"
+      ],
+      "besucht": [
+        "01-2"
+      ],
+      "meidet": [],
+      "kurzbio": "Politikwissenschaftler. Theorie der 'imperialen Lebensweise' und sozial-ökologische Transformation.",
+      "tags": [
+        "ökologie",
+        "imperiale lebensweise",
+        "globalisierung"
+      ],
+      "kategorie": "deutsch"
+    },
+    {
+      "id": "wissen",
+      "name": "Markus Wissen",
+      "geboren": 1965,
+      "gestorben": null,
+      "herkunft": "Deutschland",
+      "hauptzimmer": [
+        "08-1",
+        "17-1"
+      ],
+      "besucht": [
+        "22-2"
+      ],
+      "meidet": [],
+      "kurzbio": "Politologe. Co-Autor der imperialen Lebensweise, Fokus auf Umweltpolitik.",
+      "tags": [
+        "ökologie",
+        "politik",
+        "transformation"
+      ],
+      "kategorie": "deutsch"
+    },
+    {
+      "id": "muraca",
+      "name": "Barbara Muraca",
+      "geboren": 1976,
+      "gestorben": null,
+      "herkunft": "Deutschland",
+      "hauptzimmer": [
+        "17-1",
+        "08-2"
+      ],
+      "besucht": [
+        "14-3"
+      ],
+      "meidet": [],
+      "kurzbio": "Philosophin. Expertin für Post-Wachstums-Theorien und ökologische Gerechtigkeit.",
+      "tags": [
+        "degrowth",
+        "philosophie",
+        "nachhaltigkeit"
+      ],
+      "kategorie": "deutsch"
+    },
+    {
+      "id": "mueller_t",
+      "name": "Tadzio Müller",
+      "geboren": 1976,
+      "gestorben": null,
+      "herkunft": "Deutschland",
+      "hauptzimmer": [
+        "08-1",
+        "13-1"
+      ],
+      "besucht": [
+        "00-2"
+      ],
+      "meidet": [],
+      "kurzbio": "Klimaaktivist. Strategischer Denker der radikalen Klimabewegung (Ende Gelände).",
+      "tags": [
+        "klimagerechtigkeit",
+        "aktivismus",
+        "sabotage"
+      ],
+      "kategorie": "deutsch"
+    },
+    {
+      "id": "neubauer",
+      "name": "Luisa Neubauer",
+      "geboren": 1996,
+      "gestorben": null,
+      "herkunft": "Deutschland",
+      "hauptzimmer": [
+        "08-3",
+        "13-3",
+        "12-3"
+      ],
+      "besucht": [],
+      "meidet": [],
+      "kurzbio": "Aktivistin. Bekanntestes Gesicht von Fridays for Future in Deutschland.",
+      "tags": [
+        "klimaaktivismus",
+        "politik",
+        "generationenkonflikt"
+      ],
+      "kategorie": "deutsch"
+    },
+    {
+      "id": "rackete",
+      "name": "Carola Rackete",
+      "geboren": 1988,
+      "gestorben": null,
+      "herkunft": "Deutschland",
+      "hauptzimmer": [
+        "19-1",
+        "08-1"
+      ],
+      "besucht": [
+        "13-1"
+      ],
+      "meidet": [],
+      "kurzbio": "Ökologin und Aktivistin. Bekannt durch Seenotrettung, heute Fokus auf Klimagerechtigkeit.",
+      "tags": [
+        "seenotrettung",
+        "ökologie",
+        "migration"
+      ],
+      "kategorie": "deutsch"
+    },
+    {
+      "id": "henneberger",
+      "name": "Kathrin Henneberger",
+      "geboren": 1987,
+      "gestorben": null,
+      "herkunft": "Deutschland",
+      "hauptzimmer": [
+        "08-2",
+        "12-3"
+      ],
+      "besucht": [
+        "13-2"
+      ],
+      "meidet": [],
+      "kurzbio": "Politikerin. Verbindung von Klimabewegung und parlamentarischer Arbeit.",
+      "tags": [
+        "klima",
+        "politik",
+        "braunkohlewiderstand"
+      ],
+      "kategorie": "deutsch"
+    },
+    {
+      "id": "beutin",
+      "name": "Lorenz Gösta Beutin",
+      "geboren": 1978,
+      "gestorben": null,
+      "herkunft": "Deutschland",
+      "hauptzimmer": [
+        "08-2",
+        "01-2"
+      ],
+      "besucht": [
+        "16-3"
+      ],
+      "meidet": [],
+      "kurzbio": "Politiker. Experte für Energiepolitik und einen linken Green New Deal.",
+      "tags": [
+        "energie",
+        "klima",
+        "politik"
+      ],
+      "kategorie": "deutsch"
+    },
+    {
+      "id": "wissler",
+      "name": "Janine Wissler",
+      "geboren": 1981,
+      "gestorben": null,
+      "herkunft": "Deutschland",
+      "hauptzimmer": [
+        "01-2",
+        "00-3"
+      ],
+      "besucht": [
+        "16-3"
+      ],
+      "meidet": [],
+      "kurzbio": "Politikerin. Vertreterin des klassisch-marxistischen Flügels in der Parteipolitik.",
+      "tags": [
+        "politik",
+        "sozialismus",
+        "klassenkampf"
+      ],
+      "kategorie": "deutsch"
+    },
+    {
+      "id": "reichinnek",
+      "name": "Heidi Reichinnek",
+      "geboren": 1988,
+      "gestorben": null,
+      "herkunft": "Deutschland",
+      "hauptzimmer": [
+        "03-2",
+        "09-3"
+      ],
+      "besucht": [
+        "21-2"
+      ],
+      "meidet": [],
+      "kurzbio": "Politikerin. Fokus auf Kinderarmut, Jugendhilfe und digitalen Feminismus.",
+      "tags": [
+        "sozialpolitik",
+        "feminismus",
+        "jugend"
+      ],
+      "kategorie": "deutsch"
+    },
+    {
+      "id": "pellmann",
+      "name": "Sören Pellmann",
+      "geboren": 1977,
+      "gestorben": null,
+      "herkunft": "Deutschland",
+      "hauptzimmer": [
+        "03-2",
+        "22-3"
+      ],
+      "besucht": [
+        "12-3"
+      ],
+      "meidet": [],
+      "kurzbio": "Politiker. Starker Fokus auf Kommunalpolitik im Osten und sozialen Zusammenhalt.",
+      "tags": [
+        "ostdeutschland",
+        "sozialpolitik",
+        "kommunalpolitik"
+      ],
+      "kategorie": "deutsch"
+    },
+    {
+      "id": "loick",
+      "name": "Daniel Loick",
+      "geboren": 1977,
+      "gestorben": null,
+      "herkunft": "Deutschland",
+      "hauptzimmer": [
+        "14-1",
+        "13-1"
+      ],
+      "besucht": [
+        "02-5"
+      ],
+      "meidet": [],
+      "kurzbio": "Philosoph. Vordenker des Abolitionismus und Kritiker staatlicher Gewaltformen.",
+      "hauptwerke": [
+        {
+          "titel": "Juridismus",
+          "jahr": 2017
+        },
+        {
+          "titel": "Die Überlegenheit der Unterlegenen",
+          "jahr": 2024
+        }
+      ],
+      "tags": [
+        "abolitionismus",
+        "staatskritik",
+        "anarchismus"
+      ],
+      "kategorie": "deutsch"
+    },
+    {
+      "id": "celikates",
+      "name": "Robin Celikates",
+      "geboren": 1977,
+      "gestorben": null,
+      "herkunft": "Deutschland",
+      "hauptzimmer": [
+        "14-2",
+        "13-2"
+      ],
+      "besucht": [
+        "19-2"
+      ],
+      "meidet": [],
+      "kurzbio": "Philosoph. Arbeiten zu zivilem Ungehorsam, Ideologiekritik und Migrationsethik.",
+      "tags": [
+        "ziviler ungehorsam",
+        "ideologiekritik",
+        "migration"
+      ],
+      "kategorie": "deutsch"
+    },
+    {
+      "id": "vogelmann",
+      "name": "Frieder Vogelmann",
+      "geboren": 1982,
+      "gestorben": null,
+      "herkunft": "Deutschland",
+      "hauptzimmer": [
+        "14-1",
+        "14-2"
+      ],
+      "besucht": [
+        "20-4"
+      ],
+      "meidet": [],
+      "kurzbio": "Philosoph. Arbeiten zur Wahrheitspolitik und kritischen Theorie des Wissens.",
+      "tags": [
+        "philosophie",
+        "wahrheit",
+        "foucault"
+      ],
+      "kategorie": "deutsch"
+    },
+    {
+      "id": "lorey",
+      "name": "Isabell Lorey",
+      "geboren": 1964,
+      "gestorben": null,
+      "herkunft": "Deutschland",
+      "hauptzimmer": [
+        "13-1",
+        "09-3"
+      ],
+      "besucht": [
+        "01-4"
+      ],
+      "meidet": [],
+      "kurzbio": "Politologin. Theorie der Prekarisierung und der demokratischen Selbstbestimmung.",
+      "tags": [
+        "prekarität",
+        "demokratie",
+        "feminismus"
+      ],
+      "kategorie": "deutsch"
+    },
+    {
+      "id": "maihofer",
+      "name": "Andrea Maihofer",
+      "geboren": 1953,
+      "gestorben": null,
+      "herkunft": "Deutschland",
+      "hauptzimmer": [
+        "09-4",
+        "14-2"
+      ],
+      "besucht": [
+        "23-2"
+      ],
+      "meidet": [],
+      "kurzbio": "Geschlechterforscherin. Zentrale Figur der feministischen Rechts- und Sozialtheorie.",
+      "tags": [
+        "gender",
+        "sozialtheorie",
+        "feminismus"
+      ],
+      "kategorie": "deutsch"
+    },
+    {
+      "id": "hark",
+      "name": "Sabine Hark",
+      "geboren": 1962,
+      "gestorben": null,
+      "herkunft": "Deutschland",
+      "hauptzimmer": [
+        "09-3",
+        "14-2"
+      ],
+      "besucht": [
+        "10-3"
+      ],
+      "meidet": [],
+      "kurzbio": "Soziologin. Arbeiten zur Queer-Theorie, Feminismus und Wissenschaftskritik.",
+      "tags": [
+        "queer",
+        "soziologie",
+        "feminismus"
+      ],
+      "kategorie": "deutsch"
+    },
+    {
+      "id": "villa",
+      "name": "Paula-Irene Villa",
+      "geboren": 1968,
+      "gestorben": null,
+      "herkunft": "Deutschland",
+      "hauptzimmer": [
+        "09-4",
+        "14-2"
+      ],
+      "besucht": [
+        "21-3"
+      ],
+      "meidet": [],
+      "kurzbio": "Soziologin. Expertin für Gender Studies, Körperpolitik und Pop-Feminismus.",
+      "tags": [
+        "gender",
+        "körperpolitik",
+        "soziologie"
+      ],
+      "kategorie": "deutsch"
+    },
+    {
+      "id": "guemuesay",
+      "name": "Kübra Gümüșay",
+      "geboren": 1988,
+      "gestorben": null,
+      "herkunft": "Deutschland",
+      "hauptzimmer": [
+        "10-2",
+        "14-3"
+      ],
+      "besucht": [
+        "20-3"
+      ],
+      "meidet": [],
+      "kurzbio": "Publizistin. Fokus auf Sprache, Macht, muslimisches Leben und Inklusion.",
+      "tags": [
+        "sprache",
+        "antirassismus",
+        "digitalität"
+      ],
+      "kategorie": "deutsch"
+    },
+    {
+      "id": "hasters",
+      "name": "Alice Hasters",
+      "geboren": 1989,
+      "gestorben": null,
+      "herkunft": "Deutschland",
+      "hauptzimmer": [
+        "10-2",
+        "17-3"
+      ],
+      "besucht": [
+        "23-2"
+      ],
+      "meidet": [],
+      "kurzbio": "Journalistin. Arbeiten zu Alltagsrassismus, Identität und Identitätspolitik.",
+      "tags": [
+        "antirassismus",
+        "journalismus",
+        "identität"
+      ],
+      "kategorie": "deutsch"
+    },
+    {
+      "id": "foroutan",
+      "name": "Naika Foroutan",
+      "geboren": 1971,
+      "gestorben": null,
+      "herkunft": "Deutschland",
+      "hauptzimmer": [
+        "10-2",
+        "19-3"
+      ],
+      "besucht": [
+        "12-3"
+      ],
+      "meidet": [],
+      "kurzbio": "Sozialwissenschaftlerin. Forschung zur postmigrantischen Gesellschaft und Integration.",
+      "tags": [
+        "migration",
+        "integration",
+        "postmigrantisch"
+      ],
+      "kategorie": "deutsch"
+    },
+    {
+      "id": "roig",
+      "name": "Emilia Roig",
+      "geboren": 1983,
+      "gestorben": null,
+      "herkunft": "Deutschland",
+      "hauptzimmer": [
+        "10-1",
+        "09-3"
+      ],
+      "besucht": [
+        "14-3"
+      ],
+      "meidet": [],
+      "kurzbio": "Politologin. Fokus auf Intersektionalität, strukturelle Diskriminierung und Befreiung.",
+      "tags": [
+        "intersektionalität",
+        "antirassismus",
+        "feminismus"
+      ],
+      "kategorie": "deutsch"
+    },
+    {
+      "id": "kelly_na",
+      "name": "Natasha A. Kelly",
+      "geboren": 1973,
+      "gestorben": null,
+      "herkunft": "Deutschland",
+      "hauptzimmer": [
+        "10-1",
+        "09-4"
+      ],
+      "besucht": [
+        "17-3"
+      ],
+      "meidet": [],
+      "kurzbio": "Kommunikationswissenschaftlerin. Arbeiten zu schwarzem Feminismus und Afrokultur.",
+      "tags": [
+        "schwarzer feminismus",
+        "antirassismus",
+        "kulturwissenschaft"
+      ],
+      "kategorie": "deutsch"
+    },
+    {
+      "id": "thompson_ve",
+      "name": "Vanessa E. Thompson",
+      "geboren": null,
+      "gestorben": null,
+      "herkunft": "Deutschland",
+      "hauptzimmer": [
+        "10-1",
+        "02-5"
+      ],
+      "besucht": [
+        "13-1"
+      ],
+      "meidet": [],
+      "kurzbio": "Soziologin. Arbeiten zu abolitionistischem Feminismus und Polizeikritik.",
+      "tags": [
+        "abolitionismus",
+        "polizeikritik",
+        "antirassismus"
+      ],
+      "kategorie": "deutsch"
+    },
+    {
+      "id": "bria",
+      "name": "Francesca Bria",
+      "geboren": 1977,
+      "gestorben": null,
+      "herkunft": "Deutschland",
+      "hauptzimmer": [
+        "20-1",
+        "01-1"
+      ],
+      "besucht": [
+        "11-4"
+      ],
+      "meidet": [],
+      "kurzbio": "Innovationstheoretikerin. Vordenkerin für digitale Souveränität und Daten-Commons.",
+      "tags": [
+        "digitalität",
+        "commons",
+        "technologie"
+      ],
+      "kategorie": "zeitgenoessisch"
+    },
+    {
+      "id": "morozov",
+      "name": "Evgeny Morozov",
+      "geboren": 1984,
+      "gestorben": null,
+      "herkunft": "Deutschland",
+      "hauptzimmer": [
+        "20-1",
+        "01-2"
+      ],
+      "besucht": [
+        "11-2"
+      ],
+      "meidet": [],
+      "kurzbio": "Publizist. Scharfzüngiger Kritiker des Silicon-Valley-Kapitalismus und des Lösungsdenkens.",
+      "tags": [
+        "technologiekritik",
+        "kapitalismus",
+        "digitalität"
+      ],
+      "kategorie": "zeitgenoessisch"
+    },
+    {
+      "id": "domscheit_berg_a",
+      "name": "Anke Domscheit-Berg",
+      "geboren": 1968,
+      "gestorben": null,
+      "herkunft": "Deutschland",
+      "hauptzimmer": [
+        "20-2",
+        "12-3"
+      ],
+      "besucht": [
+        "11-4"
+      ],
+      "meidet": [],
+      "kurzbio": "Politikerin. Expertin für Open Government, Digitalisierung und Geschlechtergerechtigkeit.",
+      "tags": [
+        "digitalisierung",
+        "open source",
+        "politik"
+      ],
+      "kategorie": "deutsch"
+    },
+    {
+      "id": "roth_a",
+      "name": "Anne Roth",
+      "geboren": null,
+      "gestorben": null,
+      "herkunft": "Deutschland",
+      "hauptzimmer": [
+        "20-1",
+        "13-1"
+      ],
+      "besucht": [
+        "09-3"
+      ],
+      "meidet": [],
+      "kurzbio": "Aktivistin. Arbeiten zu Überwachung, Netzpolitik und digitalem Feminismus.",
+      "tags": [
+        "überwachung",
+        "netzpolitik",
+        "aktivismus"
+      ],
+      "kategorie": "deutsch"
+    },
+    {
+      "id": "kurz_c",
+      "name": "Constanze Kurz",
+      "geboren": 1974,
+      "gestorben": null,
+      "herkunft": "Deutschland",
+      "hauptzimmer": [
+        "20-1",
+        "20-2",
+        "13-3"
+      ],
+      "besucht": [
+        "13-4",
+        "12-3"
+      ],
+      "meidet": [],
+      "kurzbio": "Informatikerin (CCC). Sprecherin des Chaos Computer Clubs, Fokus auf Datenschutz.",
+      "tags": [
+        "datenschutz",
+        "ccc",
+        "netzpolitik"
+      ],
+      "kategorie": "deutsch"
+    },
+    {
+      "id": "zueger",
+      "name": "Theresa Züger",
+      "geboren": null,
+      "gestorben": null,
+      "herkunft": "Deutschland",
+      "hauptzimmer": [
+        "20-2",
+        "14-2"
+      ],
+      "besucht": [
+        "11-3"
+      ],
+      "meidet": [],
+      "kurzbio": "Medienwissenschaftlerin. Forschung zu KI-Ethik, digitalem Widerstand und Gemeinwohl.",
+      "tags": [
+        "ki",
+        "ethik",
+        "digitalität"
+      ],
+      "kategorie": "deutsch"
+    },
+    {
+      "id": "stalder",
+      "name": "Felix Stalder",
+      "geboren": 1968,
+      "gestorben": null,
+      "herkunft": "Deutschland",
+      "hauptzimmer": [
+        "20-1",
+        "17-2"
+      ],
+      "besucht": [
+        "11-4"
+      ],
+      "meidet": [],
+      "kurzbio": "Kulturwissenschaftler. Arbeiten zur Kultur der Digitalität und zu post-demokratischen Räumen.",
+      "tags": [
+        "digitalität",
+        "kulturwissenschaft",
+        "gesellschaft"
+      ],
+      "kategorie": "zeitgenoessisch"
+    },
+    {
+      "id": "wimalasena",
+      "name": "Jörg Wimalasena",
+      "geboren": null,
+      "gestorben": null,
+      "herkunft": "Deutschland",
+      "hauptzimmer": [
+        "01-3",
+        "14-4"
+      ],
+      "besucht": [
+        "10-3"
+      ],
+      "meidet": [],
+      "kurzbio": "Journalist. Kritische Analysen zu Identitätspolitik, Wirtschaft und Medien.",
+      "tags": [
+        "journalismus",
+        "wirtschaft",
+        "identität"
+      ],
+      "kategorie": "deutsch"
+    },
+    {
+      "id": "nocun",
+      "name": "Katharina Nocun",
+      "geboren": 1986,
+      "gestorben": null,
+      "herkunft": "Deutschland",
+      "hauptzimmer": [
+        "20-1",
+        "14-3"
+      ],
+      "besucht": [
+        "13-4"
+      ],
+      "meidet": [],
+      "kurzbio": "Publizistin. Arbeiten zu Datenschutz, Verschwörungserzählungen und digitalem Aktivismus.",
+      "tags": [
+        "datenschutz",
+        "verschwörung",
+        "netzpolitik"
+      ],
+      "kategorie": "deutsch"
+    },
+    {
+      "id": "beckedahl",
+      "name": "Markus Beckedahl",
+      "geboren": 1976,
+      "gestorben": null,
+      "herkunft": "Deutschland",
+      "hauptzimmer": [
+        "20-1",
+        "20-2",
+        "20-3"
+      ],
+      "besucht": [
+        "13-4",
+        "12-3"
+      ],
+      "meidet": [],
+      "kurzbio": "Gründer von netzpolitik.org. Zentrale Figur des digitalen Bürgerrechtsaktivismus.",
+      "tags": [
+        "netzpolitik",
+        "journalismus",
+        "bürgerrechte"
+      ],
+      "kategorie": "deutsch"
+    },
+    {
+      "id": "kusiak",
+      "name": "Joanna Kusiak",
+      "geboren": null,
+      "gestorben": null,
+      "herkunft": "Deutschland",
+      "hauptzimmer": [
+        "05-1",
+        "01-1"
+      ],
+      "besucht": [
+        "13-1"
+      ],
+      "meidet": [],
+      "kurzbio": "Stadtsoziologin. Juristische und politische Strategien für die Vergesellschaftung von Wohnraum.",
+      "tags": [
+        "wohnen",
+        "enteignung",
+        "recht"
+      ],
+      "kategorie": "deutsch"
+    },
+    {
+      "id": "steinbeis",
+      "name": "Maximilian Steinbeis",
+      "geboren": 1970,
+      "gestorben": null,
+      "herkunft": "Deutschland",
+      "hauptzimmer": [
+        "23-2",
+        "12-3"
+      ],
+      "besucht": [
+        "14-4"
+      ],
+      "meidet": [],
+      "kurzbio": "Jurist (Verfassungsblog). Experte für Verfassungsrecht und die Abwehr autoritärer Tendenzen.",
+      "tags": [
+        "recht",
+        "verfassung",
+        "demokratie"
+      ],
+      "kategorie": "deutsch"
+    },
+    {
+      "id": "steinke_r",
+      "name": "Ronen Steinke",
+      "geboren": 1983,
+      "gestorben": null,
+      "herkunft": "Deutschland",
+      "hauptzimmer": [
+        "01-2",
+        "10-2",
+        "14-1"
+      ],
+      "besucht": [
+        "10-2",
+        "12-3"
+      ],
+      "meidet": [],
+      "kurzbio": "Jurist und Journalist. Arbeiten zur Klassenjustiz und zum Rechtsstaat.",
+      "tags": [
+        "recht",
+        "justiz",
+        "klasse"
+      ],
+      "kategorie": "deutsch"
+    },
+    {
+      "id": "fischer_lescano",
+      "name": "Andreas Fischer-Lescano",
+      "geboren": 1972,
+      "gestorben": null,
+      "herkunft": "Deutschland",
+      "hauptzimmer": [
+        "01-2",
+        "01-3",
+        "24-4"
+      ],
+      "besucht": [
+        "14-1",
+        "12-3"
+      ],
+      "meidet": [],
+      "kurzbio": "Rechtswissenschaftler. Kritisches Recht und globale soziale Rechte.",
+      "tags": [
+        "recht",
+        "kritische theorie",
+        "sozialismus"
+      ],
+      "kategorie": "deutsch"
+    },
+    {
+      "id": "arzt",
+      "name": "Clemens Arzt",
+      "geboren": 1958,
+      "gestorben": null,
+      "herkunft": "Deutschland",
+      "hauptzimmer": [
+        "13-2",
+        "01-2",
+        "14-1"
+      ],
+      "besucht": [
+        "23-2",
+        "12-3"
+      ],
+      "meidet": [],
+      "kurzbio": "Rechtswissenschaftler. Experte für Polizeirecht und Bürgerrechte.",
+      "tags": [
+        "polizei",
+        "recht",
+        "bürgerrechte"
+      ],
+      "kategorie": "deutsch"
+    },
+    {
+      "id": "stokowski",
+      "name": "Margarete Stokowski",
+      "geboren": 1986,
+      "gestorben": null,
+      "herkunft": "Deutschland",
+      "hauptzimmer": [
+        "09-3",
+        "17-3"
+      ],
+      "besucht": [
+        "14-3"
+      ],
+      "meidet": [],
+      "kurzbio": "Publizistin. Einflussreiche feministische Kolumnistin (Spiegel).",
+      "tags": [
+        "feminismus",
+        "kultur",
+        "kolumne"
+      ],
+      "kategorie": "deutsch"
+    },
+    {
+      "id": "marinic",
+      "name": "Jagoda Marinić",
+      "geboren": 1977,
+      "gestorben": null,
+      "herkunft": "Deutschland",
+      "hauptzimmer": [
+        "10-2",
+        "17-3"
+      ],
+      "besucht": [
+        "19-3"
+      ],
+      "meidet": [],
+      "kurzbio": "Schriftstellerin und Journalistin. Arbeiten zu Identität, Migration und Moderne.",
+      "tags": [
+        "identität",
+        "kultur",
+        "migration"
+      ],
+      "kategorie": "deutsch"
+    },
+    {
+      "id": "diez",
+      "name": "Georg Diez",
+      "geboren": 1969,
+      "gestorben": null,
+      "herkunft": "Deutschland",
+      "hauptzimmer": [
+        "20-3",
+        "12-3"
+      ],
+      "besucht": [
+        "17-3"
+      ],
+      "meidet": [],
+      "kurzbio": "Publizist. Arbeiten zur Zukunft der Demokratie, Technologie und Journalismus.",
+      "tags": [
+        "demokratie",
+        "digitalität",
+        "zukunft"
+      ],
+      "kategorie": "deutsch"
+    },
+    {
+      "id": "baron",
+      "name": "Christian Baron",
+      "geboren": 1985,
+      "gestorben": null,
+      "herkunft": "Deutschland",
+      "hauptzimmer": [
+        "01-3",
+        "17-3"
+      ],
+      "besucht": [
+        "16-3"
+      ],
+      "meidet": [],
+      "kurzbio": "Schriftsteller und Journalist. Arbeiten zur Klassengesellschaft und Armut in Deutschland.",
+      "tags": [
+        "klasse",
+        "literatur",
+        "sozialkritik"
+      ],
+      "kategorie": "deutsch"
+    },
+    {
+      "id": "yuecel",
+      "name": "Deniz Yücel",
+      "geboren": 1973,
+      "gestorben": null,
+      "herkunft": "Deutschland",
+      "hauptzimmer": [
+        "10-2",
+        "14-1",
+        "01-2"
+      ],
+      "besucht": [
+        "24-3",
+        "12-3"
+      ],
+      "meidet": [],
+      "kurzbio": "Journalist. Bekannt für Pressefreiheits-Kampf und scharfe politische Analysen.",
+      "tags": [
+        "journalismus",
+        "pressefreiheit",
+        "türkei"
+      ],
+      "kategorie": "deutsch"
+    },
+    {
+      "id": "sanyal",
+      "name": "Mithu Sanyal",
+      "geboren": 1971,
+      "gestorben": null,
+      "herkunft": "Deutschland",
+      "hauptzimmer": [
+        "10-2",
+        "09-3"
+      ],
+      "besucht": [
+        "17-3"
+      ],
+      "meidet": [],
+      "kurzbio": "Kulturwissenschaftlerin und Autorin. Arbeiten zu Race, Gender und Identität.",
+      "tags": [
+        "identität",
+        "kulturwissenschaft",
+        "literatur"
+      ],
+      "kategorie": "deutsch"
+    },
+    {
+      "id": "misik",
+      "name": "Robert Misik",
+      "geboren": 1966,
+      "gestorben": null,
+      "herkunft": "Österreich",
+      "hauptzimmer": [
+        "01-2",
+        "14-2"
+      ],
+      "besucht": [
+        "00-4"
+      ],
+      "meidet": [],
+      "kurzbio": "Publizist. Vordenker für eine Erneuerung der Linken und Analyse der Arbeiterklasse.",
+      "tags": [
+        "sozialismus",
+        "demokratie",
+        "publizistik"
+      ],
+      "kategorie": "zeitgenoessisch"
+    },
+    {
+      "id": "bontrup",
+      "name": "Heinz-J. Bontrup",
+      "geboren": 1953,
+      "gestorben": null,
+      "herkunft": "Deutschland",
+      "hauptzimmer": [
+        "01-2",
+        "16-2"
+      ],
+      "besucht": [
+        "02-2"
+      ],
+      "meidet": [],
+      "kurzbio": "Wirtschaftswissenschaftler. Fokus auf Arbeitszeitverkürzung und Verteilungskonflikte.",
+      "tags": [
+        "ökonomie",
+        "arbeit",
+        "verteilung"
+      ],
+      "kategorie": "deutsch"
+    },
+    {
+      "id": "hickel",
+      "name": "Rudolf Hickel",
+      "geboren": 1942,
+      "gestorben": null,
+      "herkunft": "Deutschland",
+      "hauptzimmer": [
+        "01-3",
+        "16-2"
+      ],
+      "besucht": [
+        "04-3"
+      ],
+      "meidet": [],
+      "kurzbio": "Wirtschaftswissenschaftler. Bekannter Kritiker neoliberaler Wirtschaftspolitik.",
+      "tags": [
+        "ökonomie",
+        "keynesianismus",
+        "kapitalismuskritik"
+      ],
+      "kategorie": "deutsch"
+    },
+    {
+      "id": "scholle",
+      "name": "Lukas Scholle",
+      "geboren": null,
+      "gestorben": null,
+      "herkunft": "Deutschland",
+      "hauptzimmer": [
+        "01-3",
+        "04-2"
+      ],
+      "besucht": [
+        "16-2"
+      ],
+      "meidet": [],
+      "kurzbio": "Ökonom. Arbeiten zur Schuldenbremse, Fiskalpolitik und linker Ökonomie.",
+      "tags": [
+        "ökonomie",
+        "fiskalpolitik",
+        "schuldenbremse"
+      ],
+      "kategorie": "deutsch"
+    },
+    {
+      "id": "reiner",
+      "name": "Sabine Reiner",
+      "geboren": null,
+      "gestorben": null,
+      "herkunft": "Deutschland",
+      "hauptzimmer": [
+        "16-2",
+        "21-2"
+      ],
+      "besucht": [
+        "03-2"
+      ],
+      "meidet": [],
+      "kurzbio": "Gewerkschafterin. Fokus auf Arbeitsbedingungen und Pflegearbeit (ver.di).",
+      "tags": [
+        "arbeit",
+        "pflege",
+        "gewerkschaft"
+      ],
+      "kategorie": "deutsch"
+    },
+    {
+      "id": "urban",
+      "name": "Hans-Jürgen Urban",
+      "geboren": 1961,
+      "gestorben": null,
+      "herkunft": "Deutschland",
+      "hauptzimmer": [
+        "16-2",
+        "01-2",
+        "12-2"
+      ],
+      "besucht": [],
+      "meidet": [],
+      "kurzbio": "Gewerkschafter (IG Metall). Fokus auf Wirtschaftsdemokratie und ökologische Transformation.",
+      "tags": [
+        "gewerkschaft",
+        "demokratie",
+        "arbeit"
+      ],
+      "kategorie": "deutsch"
+    },
+    {
+      "id": "hirschel",
+      "name": "Dierk Hirschel",
+      "geboren": 1970,
+      "gestorben": null,
+      "herkunft": "Deutschland",
+      "hauptzimmer": [
+        "01-3",
+        "04-2"
+      ],
+      "besucht": [
+        "16-3"
+      ],
+      "meidet": [],
+      "kurzbio": "Ökonom (ver.di). Kritiker der Angebotspolitik und Verfechter staatlicher Investitionen.",
+      "tags": [
+        "ökonomie",
+        "gewerkschaft",
+        "politik"
+      ],
+      "kategorie": "deutsch"
+    },
+    {
+      "id": "rosa",
+      "name": "Hartmut Rosa",
+      "geboren": 1965,
+      "gestorben": null,
+      "herkunft": "Deutschland",
+      "hauptzimmer": [
+        "14-1",
+        "17-2"
+      ],
+      "besucht": [
+        "25-2"
+      ],
+      "meidet": [],
+      "kurzbio": "Soziologe. Bekannt für seine Theorien zur Beschleunigung und Resonanz.",
+      "tags": [
+        "resonanz",
+        "beschleunigung",
+        "soziologie"
+      ],
+      "kategorie": "deutsch"
+    },
+    {
+      "id": "mayer_ahuja",
+      "name": "Nicole Mayer-Ahuja",
+      "geboren": 1973,
+      "gestorben": null,
+      "herkunft": "Deutschland",
+      "hauptzimmer": [
+        "16-2",
+        "01-2"
+      ],
+      "besucht": [
+        "03-2"
+      ],
+      "meidet": [],
+      "kurzbio": "Soziologin. Forschung zu prekärer Arbeit und zur Geschichte der Arbeitswelt.",
+      "tags": [
+        "arbeit",
+        "prekarität",
+        "soziologie"
+      ],
+      "kategorie": "deutsch"
+    },
+    {
+      "id": "neckel",
+      "name": "Sighard Neckel",
+      "geboren": 1956,
+      "gestorben": null,
+      "herkunft": "Deutschland",
+      "hauptzimmer": [
+        "01-2",
+        "08-1"
+      ],
+      "besucht": [
+        "17-2"
+      ],
+      "meidet": [],
+      "kurzbio": "Soziologe. Forschung zum Strukturwandel des Kapitalismus und Nachhaltigkeit.",
+      "tags": [
+        "kapitalismus",
+        "nachhaltigkeit",
+        "soziologie"
+      ],
+      "kategorie": "deutsch"
+    },
+    {
+      "id": "el_mafaalani",
+      "name": "Aladin El-Mafaalani",
+      "geboren": 1978,
+      "gestorben": null,
+      "herkunft": "Deutschland",
+      "hauptzimmer": [
+        "07-2",
+        "10-2"
+      ],
+      "besucht": [
+        "14-3"
+      ],
+      "meidet": [],
+      "kurzbio": "Soziologe. Forschung zu Bildung, Integration und gesellschaftlichem Wandel.",
+      "tags": [
+        "bildung",
+        "integration",
+        "soziologie"
+      ],
+      "kategorie": "deutsch"
+    },
+    {
+      "id": "funke",
+      "name": "Hajo Funke",
+      "geboren": 1944,
+      "gestorben": null,
+      "herkunft": "Deutschland",
+      "hauptzimmer": [
+        "23-1",
+        "12-3"
+      ],
+      "besucht": [
+        "10-1"
+      ],
+      "meidet": [],
+      "kurzbio": "Politikwissenschaftler. Experte für Rechtsextremismus und Antisemitismus.",
+      "tags": [
+        "antifaschismus",
+        "politik",
+        "geschichte"
+      ],
+      "kategorie": "deutsch"
+    },
+    {
+      "id": "heitmeyer",
+      "name": "Wilhelm Heitmeyer",
+      "geboren": 1945,
+      "gestorben": null,
+      "herkunft": "Deutschland",
+      "hauptzimmer": [
+        "14-3",
+        "14-1",
+        "11-2"
+      ],
+      "besucht": [
+        "01-3",
+        "12-3"
+      ],
+      "meidet": [],
+      "kurzbio": "Soziologe. Begründer der Forschung zur gruppenbezogenen Menschenfeindlichkeit.",
+      "tags": [
+        "menschenfeindlichkeit",
+        "soziologie",
+        "rechtsextremismus"
+      ],
+      "kategorie": "deutsch"
+    },
+    {
+      "id": "lucke",
+      "name": "Albrecht von Lucke",
+      "geboren": 1967,
+      "gestorben": null,
+      "herkunft": "Deutschland",
+      "hauptzimmer": [
+        "14-2",
+        "12-3"
+      ],
+      "besucht": [
+        "00-4"
+      ],
+      "meidet": [],
+      "kurzbio": "Publizist (Blätter). Politischer Analyst der bundesdeutschen Demokratie.",
+      "tags": [
+        "politik",
+        "demokratie",
+        "publizistik"
+      ],
+      "kategorie": "deutsch"
+    },
+    {
+      "id": "weber_d",
+      "name": "Daphne Weber",
+      "geboren": 1994,
+      "gestorben": null,
+      "herkunft": "Deutschland",
+      "hauptzimmer": [
+        "01-1",
+        "13-1"
+      ],
+      "besucht": [
+        "05-1"
+      ],
+      "meidet": [],
+      "kurzbio": "Aktivistin. Fokus auf Vergesellschaftung und neue Formen des Klassenkampfs.",
+      "tags": [
+        "vergesellschaftung",
+        "aktivismus",
+        "klasse"
+      ],
+      "kategorie": "deutsch"
+    },
+    {
+      "id": "perinelli",
+      "name": "Massimo Perinelli",
+      "geboren": 1970,
+      "gestorben": null,
+      "herkunft": "Deutschland",
+      "hauptzimmer": [
+        "10-1",
+        "19-2"
+      ],
+      "besucht": [
+        "23-1"
+      ],
+      "meidet": [],
+      "kurzbio": "Historiker und Aktivist. Arbeiten zur Geschichte der Migration und Antirassismus.",
+      "tags": [
+        "migration",
+        "antirassismus",
+        "geschichte"
+      ],
+      "kategorie": "deutsch"
+    },
+    {
+      "id": "meretz",
+      "name": "Stefan Meretz",
+      "geboren": 1953,
+      "gestorben": null,
+      "herkunft": "Deutschland",
+      "hauptzimmer": [
+        "20-1",
+        "01-1"
+      ],
+      "besucht": [
+        "11-2"
+      ],
+      "meidet": [],
+      "kurzbio": "Informatiker. Theorie der Peer-Ökonomie und der freien Software als Commons.",
+      "tags": [
+        "commons",
+        "digitalität",
+        "ökonomie"
+      ],
+      "kategorie": "deutsch"
+    },
+    {
+      "id": "habermann",
+      "name": "Friederike Habermann",
+      "geboren": 1967,
+      "gestorben": null,
+      "herkunft": "Deutschland",
+      "hauptzimmer": [
+        "01-1",
+        "03-1"
+      ],
+      "besucht": [
+        "08-2"
+      ],
+      "meidet": [],
+      "kurzbio": "Ökonomin und Aktivistin. Arbeiten zu Commons-basiertem Wirtschaften und Herrschaftskritik.",
+      "tags": [
+        "commons",
+        "ökonomie",
+        "herrschaftskritik"
+      ],
+      "kategorie": "deutsch"
+    },
+    {
+      "id": "riexinger",
+      "name": "Bernd Riexinger",
+      "geboren": 1955,
+      "gestorben": null,
+      "herkunft": "Deutschland",
+      "hauptzimmer": [
+        "16-2",
+        "01-2"
+      ],
+      "besucht": [
+        "03-2"
+      ],
+      "meidet": [],
+      "kurzbio": "Politiker und Gewerkschafter. Fokus auf Klassenpolitik und soziale Sicherheit.",
+      "tags": [
+        "gewerkschaft",
+        "politik",
+        "klasse"
+      ],
+      "kategorie": "deutsch"
+    },
+    {
+      "id": "beucker",
+      "name": "Pascal Beucker",
+      "geboren": 1966,
+      "gestorben": null,
+      "herkunft": "Deutschland",
+      "hauptzimmer": [
+        "01-3",
+        "12-3"
+      ],
+      "besucht": [
+        "03-2"
+      ],
+      "meidet": [],
+      "kurzbio": "Journalist (taz). Politischer Korrespondent mit Fokus auf Linke und Gewerkschaften.",
+      "tags": [
+        "journalismus",
+        "politik",
+        "linke"
+      ],
+      "kategorie": "deutsch"
+    },
+    {
+      "id": "kulla",
+      "name": "Daniel Kulla",
+      "geboren": 1977,
+      "gestorben": null,
+      "herkunft": "Deutschland",
+      "hauptzimmer": [
+        "14-3",
+        "17-2"
+      ],
+      "besucht": [
+        "01-2"
+      ],
+      "meidet": [],
+      "kurzbio": "Publizist. Arbeiten zu Geldtheorie, Popkultur und marxistischer Subjektivität.",
+      "tags": [
+        "geldtheorie",
+        "popkultur",
+        "marxismus"
+      ],
+      "kategorie": "deutsch"
+    },
+    {
+      "id": "augstein",
+      "name": "Jakob Augstein",
+      "geboren": 1967,
+      "gestorben": null,
+      "herkunft": "Deutschland",
+      "hauptzimmer": [
+        "01-3",
+        "12-3"
+      ],
+      "besucht": [
+        "14-3"
+      ],
+      "meidet": [],
+      "kurzbio": "Verleger (der Freitag). Kritischer Journalist und linksliberaler Publizist.",
+      "tags": [
+        "journalismus",
+        "politik",
+        "kapitalismuskritik"
+      ],
+      "kategorie": "deutsch"
+    },
+    {
+      "id": "park",
+      "name": "Enno Park",
+      "geboren": 1970,
+      "gestorben": null,
+      "herkunft": "Deutschland",
+      "hauptzimmer": [
+        "20-1",
+        "11-4"
+      ],
+      "besucht": [
+        "16-4"
+      ],
+      "meidet": [],
+      "kurzbio": "Cyborg-Aktivist. Arbeiten zur Verschmelzung von Mensch und Technik und zu digitalen Rechten.",
+      "tags": [
+        "cyborg",
+        "digitalität",
+        "technik"
+      ],
+      "kategorie": "deutsch"
+    },
+    {
+      "id": "lobo",
+      "name": "Sascha Lobo",
+      "geboren": 1975,
+      "gestorben": null,
+      "herkunft": "Deutschland",
+      "hauptzimmer": [
+        "20-3",
+        "20-1",
+        "13-3"
+      ],
+      "besucht": [
+        "17-3",
+        "12-3"
+      ],
+      "meidet": [],
+      "kurzbio": "Publizist. Bekannter Erklärer der digitalen Gesellschaft und ihrer Transformation.",
+      "tags": [
+        "digitalisierung",
+        "internet",
+        "gesellschaft"
+      ],
+      "kategorie": "deutsch"
+    },
+    {
+      "id": "schramm",
+      "name": "Julia Schramm",
+      "geboren": 1985,
+      "gestorben": null,
+      "herkunft": "Deutschland",
+      "hauptzimmer": [
+        "20-3",
+        "09-3",
+        "12-3"
+      ],
+      "besucht": [],
+      "meidet": [],
+      "kurzbio": "Politologin. Arbeiten zu digitalem Feminismus, Urheberrecht und Machtstrukturen.",
+      "tags": [
+        "digitalität",
+        "feminismus",
+        "politik"
+      ],
+      "kategorie": "deutsch"
+    },
+    {
+      "id": "buelow",
+      "name": "Marco Bülow",
+      "geboren": 1971,
+      "gestorben": null,
+      "herkunft": "Deutschland",
+      "hauptzimmer": [
+        "01-2",
+        "12-3"
+      ],
+      "besucht": [
+        "08-2"
+      ],
+      "meidet": [],
+      "kurzbio": "Politiker. Fokus auf Lobbykritik, Basisdemokratie und ökologische Erneuerung.",
+      "tags": [
+        "lobbyismus",
+        "politik",
+        "ökologie"
+      ],
+      "kategorie": "deutsch"
+    },
+    {
+      "id": "bae",
+      "name": "Tarek Baé",
+      "geboren": 1991,
+      "gestorben": null,
+      "herkunft": "Deutschland",
+      "hauptzimmer": [
+        "10-2",
+        "14-4"
+      ],
+      "besucht": [
+        "20-3"
+      ],
+      "meidet": [],
+      "kurzbio": "Journalist. Fokus auf muslimisches Leben, Antirassismus und Medienanalyse.",
+      "tags": [
+        "antirassismus",
+        "journalismus",
+        "identität"
+      ],
+      "kategorie": "deutsch"
+    },
+    {
+      "id": "aziz",
+      "name": "Amina Aziz",
+      "geboren": null,
+      "gestorben": null,
+      "herkunft": "Deutschland",
+      "hauptzimmer": [
+        "10-1",
+        "09-3"
+      ],
+      "besucht": [
+        "14-3"
+      ],
+      "meidet": [],
+      "kurzbio": "Journalistin. Arbeiten zu Intersektionalität, Rassismus und queer-feministischen Kämpfen.",
+      "tags": [
+        "intersektionalität",
+        "antirassismus",
+        "feminismus"
+      ],
+      "kategorie": "deutsch"
+    },
+    {
+      "id": "gietinger",
+      "name": "Klaus Gietinger",
+      "geboren": 1955,
+      "gestorben": null,
+      "herkunft": "Deutschland",
+      "hauptzimmer": [
+        "23-1",
+        "01-2"
+      ],
+      "besucht": [
+        "13-1"
+      ],
+      "meidet": [],
+      "kurzbio": "Historiker und Filmemacher. Experte für die Morde an Luxemburg/Liebknecht und Arbeitergeschichte.",
+      "tags": [
+        "geschichte",
+        "revolution",
+        "linke"
+      ],
+      "kategorie": "deutsch"
+    },
+    {
+      "id": "resch",
+      "name": "Jürgen Resch",
+      "geboren": 1960,
+      "gestorben": null,
+      "herkunft": "Deutschland",
+      "hauptzimmer": [
+        "08-3",
+        "08-1",
+        "08-4"
+      ],
+      "besucht": [
+        "13-4",
+        "12-3"
+      ],
+      "meidet": [],
+      "kurzbio": "Umweltschützer (DUH). Bekannt für Klagen gegen die Autoindustrie und für Klimaschutz.",
+      "tags": [
+        "umweltschutz",
+        "recht",
+        "aktivismus"
+      ],
+      "kategorie": "deutsch"
+    },
+    {
+      "id": "guero_u",
+      "name": "Ulrike Guérot",
+      "geboren": 1964,
+      "gestorben": null,
+      "herkunft": "Deutschland",
+      "hauptzimmer": [
+        "15-5",
+        "12-3"
+      ],
+      "besucht": [
+        "14-4"
+      ],
+      "meidet": [],
+      "kurzbio": "Politologin. Vordenkerin einer europäischen Republik und Kritikerin des Nationalstaats.",
+      "tags": [
+        "europa",
+        "demokratie",
+        "republik"
+      ],
+      "kategorie": "deutsch"
+    },
+    {
+      "id": "sell",
+      "name": "Stefan Sell",
+      "geboren": 1964,
+      "gestorben": null,
+      "herkunft": "Deutschland",
+      "hauptzimmer": [
+        "03-2",
+        "16-2"
+      ],
+      "besucht": [
+        "21-2"
+      ],
+      "meidet": [],
+      "kurzbio": "Sozialwissenschaftler. Bekannter Experte für Arbeitsmarkt- und Sozialpolitik.",
+      "tags": [
+        "sozialpolitik",
+        "arbeit",
+        "rentensystem"
+      ],
+      "kategorie": "deutsch"
+    },
+    {
+      "id": "buntenbach",
+      "name": "Annelie Buntenbach",
+      "geboren": 1955,
+      "gestorben": null,
+      "herkunft": "Deutschland",
+      "hauptzimmer": [
+        "03-2",
+        "16-2"
+      ],
+      "besucht": [
+        "12-2"
+      ],
+      "meidet": [],
+      "kurzbio": "Gewerkschafterin (DGB). Expertin für Sozialversicherung und Arbeitsrecht.",
+      "tags": [
+        "sozialpolitik",
+        "gewerkschaft",
+        "arbeit"
+      ],
+      "kategorie": "deutsch"
+    },
+    {
+      "id": "trabert",
+      "name": "Gerhard Trabert",
+      "geboren": 1956,
+      "gestorben": null,
+      "herkunft": "Deutschland",
+      "hauptzimmer": [
+        "06-1",
+        "03-1"
+      ],
+      "besucht": [
+        "13-4"
+      ],
+      "meidet": [],
+      "kurzbio": "Arzt. Aktivist für die medizinische Versorgung von Obdachlosen und Geflüchteten.",
+      "tags": [
+        "gesundheit",
+        "armut",
+        "solidarität"
+      ],
+      "kategorie": "deutsch"
+    },
+    {
+      "id": "haffert",
+      "name": "Lukas Haffert",
+      "geboren": 1982,
+      "gestorben": null,
+      "herkunft": "Deutschland",
+      "hauptzimmer": [
+        "01-3",
+        "22-3"
+      ],
+      "besucht": [
+        "04-3"
+      ],
+      "meidet": [],
+      "kurzbio": "Politökonom. Forschung zur schwarzen Null, Stadt-Land-Konflikten und Staatsfinanzen.",
+      "tags": [
+        "ökonomie",
+        "fiskalpolitik",
+        "stadt-land"
+      ],
+      "kategorie": "deutsch"
+    },
+    {
+      "id": "schaupp",
+      "name": "Simon Schaupp",
+      "geboren": null,
+      "gestorben": null,
+      "herkunft": "Deutschland",
+      "hauptzimmer": [
+        "16-1",
+        "20-1"
+      ],
+      "besucht": [
+        "01-2"
+      ],
+      "meidet": [],
+      "kurzbio": "Soziologe. Arbeiten zur kybernetischen Proletarisierung und zum digitalen Widerstand.",
+      "tags": [
+        "arbeit",
+        "digitalisierung",
+        "ökologie"
+      ],
+      "kategorie": "deutsch"
+    },
+    {
+      "id": "brangsch",
+      "name": "Lutz Brangsch",
+      "geboren": null,
+      "gestorben": null,
+      "herkunft": "Deutschland",
+      "hauptzimmer": [
+        "01-2",
+        "01-5",
+        "11-1"
+      ],
+      "besucht": [
+        "14-1",
+        "12-2"
+      ],
+      "meidet": [],
+      "kurzbio": "Sozialwissenschaftler (RLS). Experte für politische Ökonomie und sozialistische Alternativen.",
+      "tags": [
+        "ökonomie",
+        "sozialismus",
+        "theorie"
+      ],
+      "kategorie": "deutsch"
+    },
+    {
+      "id": "candeias",
+      "name": "Mario Candeias",
+      "geboren": 1969,
+      "gestorben": null,
+      "herkunft": "Deutschland",
+      "hauptzimmer": [
+        "01-1",
+        "14-1"
+      ],
+      "besucht": [
+        "08-2"
+      ],
+      "meidet": [],
+      "kurzbio": "Politologe (RLS). Arbeiten zur Hegemonietheorie, Krise und Transformation.",
+      "tags": [
+        "hegemonie",
+        "transformation",
+        "kapitalismus"
+      ],
+      "kategorie": "deutsch"
+    }
+  ]
+}
