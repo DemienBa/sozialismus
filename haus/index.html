@@ -203,9 +203,10 @@
       font-family: var(--font-main);
       background: var(--bg-primary);
       color: var(--text-primary);
-      min-height: 100vh;
+      min-height: calc(100vh / 0.75);
       transition: background var(--transition), color var(--transition);
       position: relative;
+      zoom: 0.75;
     }
     
     /* Warmer Hintergrund-Gradient für Haus-Ansicht */
@@ -324,7 +325,7 @@
     
     .palette-toggle:hover {
       background: var(--accent);
-      color: #fff;
+      color: var(--text-primary);
       border-color: var(--accent);
     }
     
@@ -763,7 +764,7 @@
     .social-btn {
       padding: 0.5rem 1rem;
       border: none;
-      color: #fff;
+      color: var(--text-primary);
       cursor: pointer;
       border-radius: 4px;
       font-size: 0.8rem;
@@ -797,7 +798,7 @@
     
     .filter-bar-label {
       font-size: 0.7rem;
-      color: #888;
+      color: var(--text-muted);
     }
     
     .filter-chips {
@@ -927,7 +928,7 @@
 
     main {
       display: flex;
-      height: calc(100vh - 50px);
+      height: calc(100vh / 0.75 - 50px);
       margin-left: 56px; /* Platz für Palette */
       transition: margin-left 0.3s;
     }
@@ -941,7 +942,7 @@
       position: relative;
       overflow: hidden;
       min-height: 500px;
-      height: calc(100vh - 50px);
+      height: calc(100vh / 0.75 - 50px);
       display: none;
       background: var(--bg-primary);
     }
@@ -969,7 +970,7 @@
     .netzwerk-filter-btn {
       background: transparent;
       border: 1px solid #555;
-      color: #aaa;
+      color: var(--text-secondary);
       padding: 0.4rem 0.8rem;
       border-radius: 15px;
       cursor: pointer;
@@ -978,14 +979,14 @@
     }
     
     .netzwerk-filter-btn:hover {
-      border-color: #888;
-      color: #fff;
+      border-color: var(--text-muted);
+      color: var(--text-primary);
     }
     
     .netzwerk-filter-btn.active {
       background: var(--accent);
       border-color: var(--accent);
-      color: #fff;
+      color: var(--text-primary);
     }
     
     .epoche-slider-inline {
@@ -1012,7 +1013,7 @@
     }
     
     .epoche-value-inline {
-      color: #fff;
+      color: var(--text-primary);
       font-size: 0.8rem;
       font-weight: 600;
       min-width: 40px;
@@ -1035,7 +1036,7 @@
       left: 50%;
       transform: translateX(-50%);
       background: rgba(0,0,0,0.85);
-      color: #fff;
+      color: var(--text-primary);
       padding: 0.6rem 1.2rem;
       border-radius: 25px;
       font-size: 0.8rem;
@@ -1083,7 +1084,7 @@
     .beschreibung {
       font-size: 0.95rem;
       line-height: 1.6;
-      color: #ccc;
+      color: var(--text-secondary);
       margin-bottom: 1.5rem;
     }
     
@@ -1091,7 +1092,7 @@
       font-size: 0.75rem;
       font-weight: 600;
       letter-spacing: 0.05em;
-      color: #888;
+      color: var(--text-muted);
       margin: 1.5rem 0 0.75rem;
       text-transform: uppercase;
     }
@@ -1108,7 +1109,7 @@
     
     .zitat-autor {
       font-size: 0.8rem;
-      color: #888;
+      color: var(--text-muted);
       margin-top: 0.5rem;
       font-style: normal;
     }
@@ -1157,18 +1158,18 @@
     
     .literatur-item .titel {
       font-weight: 600;
-      color: #fff;
+      color: var(--text-primary);
     }
     
     .literatur-item .autor {
       font-size: 0.85rem;
-      color: #888;
+      color: var(--text-muted);
     }
     
     .frei-tag {
       display: inline-block;
       background: #4CAF50;
-      color: #fff;
+      color: var(--text-primary);
       font-size: 0.65rem;
       padding: 0.1rem 0.4rem;
       border-radius: 2px;
@@ -1218,13 +1219,13 @@
       right: 1rem;
       background: none;
       border: none;
-      color: #888;
+      color: var(--text-muted);
       font-size: 1.5rem;
       cursor: pointer;
     }
     
     .close-btn:hover {
-      color: #fff;
+      color: var(--text-primary);
     }
     
     .atmosphaere {
@@ -1232,7 +1233,7 @@
       padding: 1rem;
       border-radius: 4px;
       font-size: 0.85rem;
-      color: #888;
+      color: var(--text-muted);
       line-height: 1.6;
     }
     
@@ -1266,7 +1267,7 @@
     
     .debatte-card .frage {
       font-style: italic;
-      color: #aaa;
+      color: var(--text-secondary);
       margin-bottom: 1.5rem;
     }
     
@@ -1306,7 +1307,7 @@
         background: #E53935;
         border: none;
         border-radius: 50%;
-        color: #fff;
+        color: var(--text-primary);
         font-size: 1.5rem;
         cursor: pointer;
         z-index: 250; /* Höher als linsen-palette (200) */
@@ -1909,7 +1910,7 @@
          MOBILE: Netzwerk - Touch-optimiert
          ═══════════════════════════════════════════════════════════════ */
       #netzwerk-container {
-        height: calc(100vh - 48px - 50px);
+        height: calc(100vh / 0.75 - 48px - 50px);
         touch-action: none;
       }
       .legende {
@@ -1959,7 +1960,7 @@
     .debatte-seite h4 {
       font-size: 0.9rem;
       margin-bottom: 0.75rem;
-      color: #fff;
+      color: var(--text-primary);
     }
     
     .debatte-seite ul {
@@ -1986,7 +1987,7 @@
       padding-top: 1rem;
       border-top: 1px solid var(--border);
       font-size: 0.85rem;
-      color: #888;
+      color: var(--text-muted);
     }
     
     .debatte-texte {
@@ -2015,7 +2016,7 @@
       padding: 0.75rem 1rem;
       border-radius: 8px;
       font-size: 0.75rem;
-      color: #888;
+      color: var(--text-muted);
       z-index: 50;
       backdrop-filter: blur(5px);
       border: 1px solid rgba(255,255,255,0.1);
@@ -2057,7 +2058,7 @@
     
     .legende-filter-titel {
       font-weight: bold;
-      color: #ccc;
+      color: var(--text-secondary);
       margin-bottom: 0.5rem;
       font-size: 0.7rem;
       text-transform: uppercase;
@@ -2117,7 +2118,7 @@
     }
     .legende-section-titel {
       font-size: 0.7rem;
-      color: #888;
+      color: var(--text-muted);
       margin-bottom: 0.4rem;
       font-weight: 500;
     }
@@ -2132,7 +2133,7 @@
       border-radius: 8px;
       padding: 0.75rem 1rem;
       font-size: 0.75rem;
-      color: #aaa;
+      color: var(--text-secondary);
       z-index: 90;
       display: none;
       max-width: 200px;
@@ -2206,7 +2207,7 @@
     .view-btn.active {
       background: var(--accent);
       border-color: var(--accent);
-      color: #fff;
+      color: var(--text-primary);
     }
     
     .liste-filter-bar {
@@ -2236,7 +2237,7 @@
     .liste-filter-btn.active {
       background: var(--filter-color, var(--accent));
       border-color: var(--filter-color, var(--accent));
-      color: #fff;
+      color: var(--text-primary);
     }
     
     .liste-grid {
@@ -2288,7 +2289,7 @@
       font-size: 0.55rem;
       padding: 0.1rem 0.3rem;
       border-radius: 3px;
-      color: #fff;
+      color: var(--text-primary);
       font-weight: 600;
       white-space: nowrap;
     }
@@ -2415,7 +2416,7 @@
       font-size: 0.65rem;
       padding: 0.15rem 0.5rem;
       border-radius: 4px;
-      color: #fff;
+      color: var(--text-primary);
       font-weight: 600;
       min-width: 45px;
       text-align: center;
@@ -2500,7 +2501,7 @@
       font-size: 0.7rem;
       font-weight: 600;
       background: rgba(229, 57, 53, calc(var(--intensity) * 0.5));
-      color: #fff;
+      color: var(--text-primary);
     }
     
     .karte-wrapper {
@@ -2572,7 +2573,7 @@
       padding: 0.15rem 0.35rem;
       border-radius: 3px;
       background: var(--achse-farbe);
-      color: #fff;
+      color: var(--text-primary);
     }
     
     .achse-name {
@@ -2690,7 +2691,7 @@
     .karte-nav button:hover {
       background: var(--accent);
       border-color: var(--accent);
-      color: #fff;
+      color: var(--text-primary);
     }
     
     /* Mobile Anpassungen */
@@ -2760,7 +2761,7 @@
     .zeitleiste-filter-btn:hover, .zeitleiste-filter-btn.active {
       background: #E53935;
       border-color: #E53935;
-      color: #fff;
+      color: var(--text-primary);
     }
     
     .zeitleiste-wrapper {
@@ -2866,7 +2867,7 @@
     }
     
     .zeitleiste-item:hover .zeitleiste-titel {
-      color: #fff;
+      color: var(--text-primary);
     }
     
     /* Aufklappbare Details */
@@ -2893,7 +2894,7 @@
     .zeitleiste-details .ort {
       margin-top: 0.3rem;
       font-size: 0.7rem;
-      color: #888;
+      color: var(--text-muted);
     }
     
     .zeitleiste-details .mehr-btn {
@@ -3102,12 +3103,12 @@
     
     .buch-info .titel {
       font-weight: 600;
-      color: #fff;
+      color: var(--text-primary);
     }
     
     .buch-info .autor {
       font-size: 0.85rem;
-      color: #888;
+      color: var(--text-muted);
     }
     
     .buch-info .kontext {
@@ -3161,13 +3162,13 @@
     
     .praxis-card .meta {
       font-size: 0.8rem;
-      color: #888;
+      color: var(--text-muted);
       margin-bottom: 0.5rem;
     }
     
     .praxis-card .beschreibung {
       font-size: 0.85rem;
-      color: #aaa;
+      color: var(--text-secondary);
       margin-bottom: 0.5rem;
     }
     
@@ -3203,7 +3204,7 @@
     }
     
     .fragen-header p {
-      color: #888;
+      color: var(--text-muted);
       font-size: 1rem;
     }
     
@@ -3217,7 +3218,7 @@
     }
     
     .fragen-intro p {
-      color: #aaa;
+      color: var(--text-secondary);
       font-size: 0.9rem;
       line-height: 1.5;
       margin: 0;
@@ -3234,7 +3235,7 @@
     .fragen-filter-btn {
       background: transparent;
       border: 1px solid #444;
-      color: #888;
+      color: var(--text-muted);
       padding: 0.4rem 0.8rem;
       border-radius: 20px;
       cursor: pointer;
@@ -3267,14 +3268,14 @@
     }
     
     .fragen-kategorie-header h3 {
-      color: #fff;
+      color: var(--text-primary);
       font-size: 1rem;
       margin: 0;
     }
     
     .fragen-kategorie-count {
       background: var(--border);
-      color: #888;
+      color: var(--text-muted);
       padding: 0.15rem 0.4rem;
       border-radius: 10px;
       font-size: 0.7rem;
@@ -3305,7 +3306,7 @@
     }
     
     .frage-item .frage {
-      color: #fff;
+      color: var(--text-primary);
       font-size: 0.9rem;
       margin-bottom: 0.5rem;
       line-height: 1.4;
@@ -3369,7 +3370,7 @@
     }
     
     .fragen-zukunft p {
-      color: #888;
+      color: var(--text-muted);
       font-size: 0.85rem;
       margin: 0;
       line-height: 1.5;
@@ -3413,7 +3414,7 @@
       background: rgba(255,255,255,0.1);
       border: 1px solid #444;
       border-radius: 50%;
-      color: #888;
+      color: var(--text-muted);
       font-size: 1.2rem;
       cursor: pointer;
       display: flex;
@@ -3423,7 +3424,7 @@
     }
     .zufall-close:hover {
       background: #E53935;
-      color: #fff;
+      color: var(--text-primary);
       border-color: #E53935;
     }
     
@@ -3435,13 +3436,13 @@
     
     .zufall-card .achse {
       font-size: 0.8rem;
-      color: #888;
+      color: var(--text-muted);
       margin-bottom: 1rem;
     }
     
     .zufall-card .beschreibung {
       font-size: 1rem;
-      color: #ccc;
+      color: var(--text-secondary);
       line-height: 1.6;
       margin-bottom: 1.5rem;
     }
@@ -3458,7 +3459,7 @@
     .zufall-btn {
       background: #E53935;
       border: none;
-      color: #fff;
+      color: var(--text-primary);
       padding: 0.75rem 1.5rem;
       font-size: 1rem;
       cursor: pointer;
@@ -3503,7 +3504,7 @@
     }
     
     .kosmos-intro p {
-      color: #888;
+      color: var(--text-muted);
       font-size: 0.9rem;
     }
     
@@ -3518,12 +3519,12 @@
       display: flex;
       justify-content: space-between;
       font-size: 0.85rem;
-      color: #fff;
+      color: var(--text-primary);
       margin-bottom: 0.5rem;
     }
     
     .kosmos-slider-group .achse-name {
-      color: #888;
+      color: var(--text-muted);
       font-size: 0.75rem;
     }
     
@@ -3572,7 +3573,7 @@
     
     .kosmos-nachbar .distanz {
       font-size: 0.7rem;
-      color: #888;
+      color: var(--text-muted);
       margin-left: 0.3rem;
     }
 
@@ -3610,7 +3611,7 @@
     
     .reaktor-titel h2 {
       font-size: 1.1rem;
-      color: #fff;
+      color: var(--text-primary);
       font-weight: 400;
     }
     
@@ -3622,7 +3623,7 @@
     .reaktor-close {
       background: none;
       border: none;
-      color: #888;
+      color: var(--text-muted);
       font-size: 1.5rem;
       cursor: pointer;
     }
@@ -3641,7 +3642,7 @@
     
     .reaktor-section h3 {
       font-size: 0.75rem;
-      color: #888;
+      color: var(--text-muted);
       text-transform: uppercase;
       letter-spacing: 0.05em;
       margin-bottom: 0.75rem;
@@ -3673,7 +3674,7 @@
     
     .reaktor-distanz-label {
       font-size: 0.8rem;
-      color: #888;
+      color: var(--text-muted);
     }
     
     .reaktor-nachbarn {
@@ -3700,7 +3701,7 @@
       border-radius: 4px;
       font-size: 0.9rem;
       line-height: 1.5;
-      color: #ccc;
+      color: var(--text-secondary);
     }
     
     .reaktor-frage {
@@ -3708,7 +3709,7 @@
       padding: 0.75rem;
       border-left: 3px solid #FF9800;
       font-style: italic;
-      color: #aaa;
+      color: var(--text-secondary);
       margin-top: 0.75rem;
     }
     
@@ -3790,13 +3791,13 @@
     .info-toggle {
       background: transparent;
       border: 1px solid #555;
-      color: #aaa;
+      color: var(--text-secondary);
       padding: 0.4rem 0.8rem;
       font-size: 0.75rem;
       cursor: pointer;
       border-radius: 3px;
     }
-    .info-toggle:hover { background: var(--border); color: #fff; }
+    .info-toggle:hover { background: var(--border); color: var(--text-primary); }
     
     .konzept-box {
       position: fixed;
@@ -3821,11 +3822,11 @@
       transform: translate(-50%, -50%) scale(1);
     }
     .konzept-box h2 { color: #E53935; margin-bottom: 1rem; }
-    .konzept-box h3 { color: #aaa; margin: 1.5rem 0 0.5rem; font-size: 1rem; }
-    .konzept-box p { line-height: 1.6; margin-bottom: 0.75rem; color: #ccc; }
+    .konzept-box h3 { color: var(--text-secondary); margin: 1.5rem 0 0.5rem; font-size: 1rem; }
+    .konzept-box p { line-height: 1.6; margin-bottom: 0.75rem; color: var(--text-secondary); }
     .konzept-box ul { margin-left: 1.5rem; margin-bottom: 1rem; }
-    .konzept-box li { margin-bottom: 0.5rem; color: #aaa; }
-    .konzept-box li strong { color: #fff; }
+    .konzept-box li { margin-bottom: 0.5rem; color: var(--text-secondary); }
+    .konzept-box li strong { color: var(--text-primary); }
     .konzept-box em { color: #FF9800; font-style: normal; }
     
     /* WG-Container */
@@ -3866,13 +3867,13 @@
       background: var(--bg-tertiary);
       border: 1px solid var(--border);
       border-radius: 16px;
-      color: #888;
+      color: var(--text-muted);
       font-size: 0.7rem;
       cursor: pointer;
       transition: all 0.2s;
     }
-    .haus-tab:hover { border-color: #555; color: #fff; }
-    .haus-tab.active { background: #C62828; border-color: #C62828; color: #fff; }
+    .haus-tab:hover { border-color: #555; color: var(--text-primary); }
+    .haus-tab.active { background: #C62828; border-color: #C62828; color: var(--text-primary); }
     
     /* Banner */
     .haus-banner {
@@ -3890,15 +3891,15 @@
     .haus-banner.epochen { background: linear-gradient(135deg, rgba(255,152,0,0.1), rgba(255,152,0,0.03)); border: 1px solid rgba(255,152,0,0.2); }
     .haus-banner.chaos { background: linear-gradient(135deg, rgba(156,39,176,0.1), rgba(156,39,176,0.03)); border: 1px solid rgba(156,39,176,0.2); }
     .banner-icon { font-size: 1.2rem; }
-    .banner-text strong { display: block; color: #fff; font-size: 0.85rem; margin-bottom: 0.1rem; }
-    .banner-text span { color: #888; font-size: 0.7rem; }
+    .banner-text strong { display: block; color: var(--text-primary); font-size: 0.85rem; margin-bottom: 0.1rem; }
+    .banner-text span { color: var(--text-muted); font-size: 0.7rem; }
     .chaos-neu-btn {
       margin-left: auto;
       padding: 0.35rem 0.75rem;
       background: linear-gradient(135deg, #9C27B0, #673AB7);
       border: none;
       border-radius: 12px;
-      color: #fff;
+      color: var(--text-primary);
       font-size: 0.75rem;
       cursor: pointer;
     }
@@ -4102,7 +4103,7 @@
     .spektrum-pos.epochen-match { border-color: #FF9800; }
     .spektrum-pos.chaos-match { border-color: #9C27B0; background: rgba(156,39,176,0.2); }
     .pos-zahl { font-size: 0.7rem; color: #666; }
-    .spektrum-pos.meine .pos-zahl { color: #888; font-weight: 400; } /* Nicht mehr weiß/bold */
+    .spektrum-pos.meine .pos-zahl { color: var(--text-muted); font-weight: 400; } /* Nicht mehr weiß/bold */
     .pos-du { position: absolute; bottom: -10px; left: 50%; transform: translateX(-50%); font-size: 0.5rem; color: #C62828; }
     
     .zimmer-pole {
@@ -4117,7 +4118,7 @@
       padding-top: 0.3rem;
       border-top: 1px solid var(--border);
       font-size: 0.65rem;
-      color: #888;
+      color: var(--text-muted);
     }
     
     /* Zimmer Detail Popup */
@@ -4154,14 +4155,14 @@
       font-size: 1.5rem;
       cursor: pointer;
     }
-    .zimmer-detail-close:hover { color: #fff; }
+    .zimmer-detail-close:hover { color: var(--text-primary); }
     .zimmer-detail-popup h3 {
       color: #E53935;
       font-size: 1.1rem;
       margin-bottom: 0.5rem;
     }
     .zimmer-frage {
-      color: #888;
+      color: var(--text-muted);
       font-size: 0.9rem;
       margin-bottom: 1rem;
     }
@@ -4211,7 +4212,7 @@
       display: block;
       font-size: 0.75rem;
       font-weight: 600;
-      color: #888;
+      color: var(--text-muted);
     }
     .spektrum-pos-detail.meine .pos-num {
       color: #E53935;
@@ -4246,7 +4247,7 @@
     .handlungen-alle-btn {
       background: transparent;
       border: 1px solid #444;
-      color: #888;
+      color: var(--text-muted);
       padding: 0.3rem 0.6rem;
       border-radius: 4px;
       font-size: 0.75rem;
@@ -4255,7 +4256,7 @@
     }
     .handlungen-alle-btn:hover {
       border-color: var(--border-light);
-      color: #aaa;
+      color: var(--text-secondary);
     }
     .handlungen-leer {
       color: #666;
@@ -4280,11 +4281,11 @@
     }
     .zimmer-meine-pos .pos-label {
       font-size: 0.75rem;
-      color: #888;
+      color: var(--text-muted);
     }
     .zimmer-meine-pos .pos-nummer {
       background: #C62828;
-      color: #fff;
+      color: var(--text-primary);
       width: 24px;
       height: 24px;
       border-radius: 50%;
@@ -4326,7 +4327,7 @@
     }
     .position-zitat blockquote {
       font-style: italic;
-      color: #aaa;
+      color: var(--text-secondary);
       font-size: 0.85rem;
       margin: 0 0 0.3rem 0;
       padding: 0;
@@ -4339,14 +4340,14 @@
     }
     .position-bewohner {
       font-size: 0.8rem;
-      color: #888;
+      color: var(--text-muted);
       margin-bottom: 0.75rem;
     }
     .position-bewohner .bewohner-label {
       color: #666;
     }
     .position-bewohner .bewohner-namen {
-      color: #aaa;
+      color: var(--text-secondary);
     }
     .position-mehr-btn {
       background: rgba(229,57,53,0.2);
@@ -4376,7 +4377,7 @@
       margin-bottom: 0.4rem;
     }
     .zimmer-einbringen p {
-      color: #aaa;
+      color: var(--text-secondary);
       font-size: 0.85rem;
     }
     .zimmer-future {
@@ -4397,7 +4398,7 @@
     .zimmer-achse-badge {
       display: inline-block;
       background: #E53935;
-      color: #fff;
+      color: var(--text-primary);
       padding: 0.2rem 0.5rem;
       border-radius: 4px;
       font-size: 0.7rem;
@@ -4405,7 +4406,7 @@
       margin-bottom: 0.3rem;
     }
     .zimmer-detail-header h3 {
-      color: #fff;
+      color: var(--text-primary);
       font-size: 1.3rem;
       margin: 0.3rem 0;
     }
@@ -4422,13 +4423,13 @@
       margin-bottom: 1rem;
     }
     .zimmer-beschreibung-lang {
-      color: #ccc;
+      color: var(--text-secondary);
       font-size: 0.9rem;
       line-height: 1.6;
       margin-bottom: 0.5rem;
     }
     .zimmer-stimmung {
-      color: #888;
+      color: var(--text-muted);
       font-size: 0.8rem;
       font-style: italic;
       border-left: 2px solid #444;
@@ -4441,12 +4442,12 @@
       padding: 0.5rem 0;
     }
     .zimmer-bewohner .bewohner-label {
-      color: #888;
+      color: var(--text-muted);
       font-size: 0.8rem;
       margin-right: 0.5rem;
     }
     .zimmer-bewohner .bewohner-liste {
-      color: #aaa;
+      color: var(--text-secondary);
       font-size: 0.85rem;
     }
     
@@ -4591,7 +4592,7 @@
     }
     .zimmer-zitat blockquote {
       margin: 0;
-      color: #ccc;
+      color: var(--text-secondary);
       font-style: italic;
       font-size: 0.9rem;
     }
@@ -4630,7 +4631,7 @@
       font-size: 1.5rem;
       cursor: pointer;
     }
-    .aufgabe-detail-close:hover { color: #fff; }
+    .aufgabe-detail-close:hover { color: var(--text-primary); }
     
     .aufgabe-detail-header {
       margin-bottom: 1rem;
@@ -4638,14 +4639,14 @@
     .aufgabe-kategorie-badge {
       display: inline-block;
       background: var(--border);
-      color: #aaa;
+      color: var(--text-secondary);
       padding: 0.25rem 0.6rem;
       border-radius: 12px;
       font-size: 0.75rem;
       margin-bottom: 0.5rem;
     }
     .aufgabe-detail-header h3 {
-      color: #fff;
+      color: var(--text-primary);
       font-size: 1.2rem;
       margin: 0;
     }
@@ -4662,7 +4663,7 @@
       align-items: center;
       gap: 0.5rem;
       padding: 0.4rem 0;
-      color: #888;
+      color: var(--text-muted);
       font-size: 0.85rem;
     }
     .aufgabe-meta .meta-icon {
@@ -4677,14 +4678,14 @@
     }
     .aufgabe-texte .texte-label {
       display: block;
-      color: #888;
+      color: var(--text-muted);
       font-size: 0.8rem;
       margin-bottom: 0.5rem;
     }
     .aufgabe-texte ul {
       margin: 0;
       padding-left: 1.25rem;
-      color: #aaa;
+      color: var(--text-secondary);
       font-size: 0.85rem;
     }
     .aufgabe-texte li {
@@ -4717,7 +4718,7 @@
     .aufgabe-zurueck-btn {
       background: var(--border);
       border: none;
-      color: #aaa;
+      color: var(--text-secondary);
       padding: 0.6rem 1rem;
       border-radius: 6px;
       font-size: 0.85rem;
@@ -4727,7 +4728,7 @@
     }
     .aufgabe-zurueck-btn:hover {
       background: #444;
-      color: #fff;
+      color: var(--text-primary);
     }
     
     @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
@@ -4751,7 +4752,7 @@
       margin-bottom: 1rem;
     }
     .wg-intro p {
-      color: #888;
+      color: var(--text-muted);
       font-size: 0.85rem;
       margin: 0;
     }
@@ -4760,7 +4761,7 @@
       background: linear-gradient(135deg, #9C27B0, #673AB7);
       border: none;
       border-radius: 20px;
-      color: #fff;
+      color: var(--text-primary);
       font-size: 0.8rem;
       cursor: pointer;
       white-space: nowrap;
@@ -4808,7 +4809,7 @@
       font-size: 1.5rem;
     }
     .wg-karte-header h3 {
-      color: #fff;
+      color: var(--text-primary);
       font-size: 1rem;
       margin: 0;
       flex: 1;
@@ -4818,7 +4819,7 @@
       padding: 0.25rem 0.6rem;
       border-radius: 12px;
       font-size: 0.7rem;
-      color: #fff;
+      color: var(--text-primary);
       font-weight: 600;
     }
     
@@ -4840,7 +4841,7 @@
       transition: all 0.15s;
     }
     .wg-person:hover {
-      background: #282828;
+      background: var(--bg-secondary);
       border-color: #444;
     }
     .wg-person.ich {
@@ -4878,7 +4879,7 @@
       padding: 0.15rem 0.5rem;
       border-radius: 10px;
       font-size: 0.65rem;
-      color: #fff;
+      color: var(--text-primary);
       font-weight: 600;
     }
     
@@ -4912,7 +4913,7 @@
       margin-bottom: 0.25rem;
     }
     .wg-zukunft p {
-      color: #888;
+      color: var(--text-muted);
       font-size: 0.8rem;
       margin: 0;
     }
@@ -4937,12 +4938,12 @@
       flex: 1;
     }
     .talkshow-titel h2 {
-      color: #fff;
+      color: var(--text-primary);
       font-size: 1.3rem;
       margin: 0 0 0.2rem 0;
     }
     .talkshow-titel p {
-      color: #888;
+      color: var(--text-muted);
       font-size: 0.85rem;
       margin: 0;
     }
@@ -4951,7 +4952,7 @@
       background: linear-gradient(135deg, #9C27B0, #673AB7);
       border: none;
       border-radius: 20px;
-      color: #fff;
+      color: var(--text-primary);
       font-size: 0.85rem;
       cursor: pointer;
       transition: all 0.2s;
@@ -4969,7 +4970,7 @@
       margin-bottom: 1rem;
     }
     .gaeste-label {
-      color: #888;
+      color: var(--text-muted);
       font-size: 0.85rem;
       margin-bottom: 0.75rem;
     }
@@ -4988,7 +4989,7 @@
       transition: all 0.2s;
     }
     .gast-karte:hover {
-      background: #282828;
+      background: var(--bg-secondary);
       border-color: #444;
     }
     .gast-icon {
@@ -5028,7 +5029,7 @@
       font-size: 1.5rem;
     }
     .talkshow-user.kein-archetyp p {
-      color: #888;
+      color: var(--text-muted);
       font-size: 0.85rem;
       margin: 0;
     }
@@ -5049,7 +5050,7 @@
       flex-direction: column;
     }
     .user-label {
-      color: #888;
+      color: var(--text-muted);
       font-size: 0.65rem;
     }
     .user-name {
@@ -5063,14 +5064,14 @@
       gap: 0.75rem;
     }
     .einschalten-teaser {
-      color: #888;
+      color: var(--text-muted);
       font-size: 0.8rem;
     }
     .einschalten-btn {
       padding: 0.4rem 0.75rem;
       background: #4CAF50;
       border-radius: 15px;
-      color: #fff;
+      color: var(--text-primary);
       font-size: 0.75rem;
       text-decoration: none;
       transition: all 0.2s;
@@ -5089,7 +5090,7 @@
       background: linear-gradient(135deg, #E53935, #C62828);
       border: none;
       border-radius: 25px;
-      color: #fff;
+      color: var(--text-primary);
       font-size: 1rem;
       font-weight: 600;
       cursor: pointer;
@@ -5119,7 +5120,7 @@
       margin-bottom: 0.25rem;
     }
     .talkshow-zukunft p {
-      color: #888;
+      color: var(--text-muted);
       font-size: 0.8rem;
       margin: 0;
     }
@@ -5134,7 +5135,7 @@
     .modus-btn {
       background: var(--bg-tertiary);
       border: 1px solid #444;
-      color: #aaa;
+      color: var(--text-secondary);
       padding: 0.6rem 1.2rem;
       border-radius: 20px;
       cursor: pointer;
@@ -5143,12 +5144,12 @@
     }
     .modus-btn:hover {
       background: var(--border);
-      color: #fff;
+      color: var(--text-primary);
     }
     .modus-btn.active {
       background: linear-gradient(135deg, #9C27B0, #E91E63);
       border-color: transparent;
-      color: #fff;
+      color: var(--text-primary);
     }
     
     /* PERSONEN-TALKSHOW */
@@ -5162,7 +5163,7 @@
     }
     .gast-zeit {
       font-size: 0.7rem;
-      color: #888;
+      color: var(--text-muted);
       margin-bottom: 0.5rem;
     }
     .gast-positionen {
@@ -5176,7 +5177,7 @@
       padding: 0.15rem 0.4rem;
       border-radius: 8px;
       font-size: 0.65rem;
-      color: #aaa;
+      color: var(--text-secondary);
     }
     .position-more {
       color: #666;
@@ -5188,7 +5189,7 @@
       margin: 1.5rem 0;
     }
     .talkshow-spannungen h3 {
-      color: #fff;
+      color: var(--text-primary);
       font-size: 1rem;
       margin-bottom: 1rem;
       display: flex;
@@ -5214,14 +5215,14 @@
     }
     .spannung-achse {
       background: #E53935;
-      color: #fff;
+      color: var(--text-primary);
       padding: 0.2rem 0.5rem;
       border-radius: 4px;
       font-size: 0.75rem;
       font-weight: bold;
     }
     .spannung-name {
-      color: #fff;
+      color: var(--text-primary);
       font-weight: 500;
       flex: 1;
     }
@@ -5253,7 +5254,7 @@
     }
     .pol-position {
       display: block;
-      color: #888;
+      color: var(--text-muted);
       font-size: 0.75rem;
     }
     .pol-vs {
@@ -5262,7 +5263,7 @@
       font-style: italic;
     }
     .spannung-frage {
-      color: #aaa;
+      color: var(--text-secondary);
       font-size: 0.85rem;
       font-style: italic;
       padding: 0.5rem;
@@ -5304,7 +5305,7 @@
     }
     .debatte-runde-nummer {
       background: #9C27B0;
-      color: #fff;
+      color: var(--text-primary);
       width: 24px;
       height: 24px;
       border-radius: 50%;
@@ -5315,7 +5316,7 @@
       font-weight: bold;
     }
     .debatte-runde-thema {
-      color: #fff;
+      color: var(--text-primary);
       font-weight: 500;
     }
     .debatte-aussage {
@@ -5339,7 +5340,7 @@
       font-size: 0.85rem;
     }
     .debatte-aussage-text {
-      color: #ccc;
+      color: var(--text-secondary);
       font-size: 0.9rem;
       margin-top: 0.25rem;
       font-style: italic;
@@ -5364,7 +5365,7 @@
       margin-bottom: 0.5rem;
     }
     .ki-platzhalter p {
-      color: #888;
+      color: var(--text-muted);
       font-size: 0.85rem;
       margin: 0;
     }
@@ -5403,7 +5404,7 @@
       cursor: pointer;
       z-index: 1;
     }
-    .talkshow-close:hover { color: #fff; }
+    .talkshow-close:hover { color: var(--text-primary); }
     
     .talkshow-popup-header {
       display: flex;
@@ -5417,12 +5418,12 @@
       font-size: 2rem;
     }
     .talkshow-popup-header h3 {
-      color: #fff;
+      color: var(--text-primary);
       font-size: 1.1rem;
       margin: 0 0 0.2rem 0;
     }
     .talkshow-popup-header p {
-      color: #888;
+      color: var(--text-muted);
       font-size: 0.8rem;
       margin: 0;
     }
@@ -5444,7 +5445,7 @@
       border: 1px solid var(--accent, #666);
       border-radius: 20px;
       font-size: 0.75rem;
-      color: #ccc;
+      color: var(--text-secondary);
     }
     .popup-gast span:first-child {
       font-size: 1rem;
@@ -5466,7 +5467,7 @@
       border-radius: 10px;
       font-size: 0.7rem;
       font-weight: 600;
-      color: #fff;
+      color: var(--text-primary);
     }
     .thema-name {
       color: #E53935;
@@ -5505,12 +5506,12 @@
       flex: 1;
     }
     .statement-name {
-      color: #aaa;
+      color: var(--text-secondary);
       font-size: 0.75rem;
       font-weight: 600;
     }
     .statement-text {
-      color: #ccc;
+      color: var(--text-secondary);
       font-size: 0.8rem;
       line-height: 1.4;
     }
@@ -5518,7 +5519,7 @@
     .talkshow-harmonie {
       padding: 2rem;
       text-align: center;
-      color: #888;
+      color: var(--text-muted);
     }
     
     .talkshow-abschluss {
@@ -5554,20 +5555,20 @@
       background: rgba(76,175,80,0.15);
       border-radius: 12px;
       font-size: 0.75rem;
-      color: #aaa;
+      color: var(--text-secondary);
       margin: 0.15rem;
     }
     .abschluss-frage {
       background: rgba(76,175,80,0.1);
       border-radius: 8px;
       padding: 0.6rem 0.75rem;
-      color: #ccc;
+      color: var(--text-secondary);
       font-size: 0.85rem;
       font-style: italic;
       margin-bottom: 0.6rem;
     }
     .abschluss-note {
-      color: #888;
+      color: var(--text-muted);
       font-size: 0.8rem;
     }
     
@@ -5587,11 +5588,11 @@
     }
     .einschalten-header strong {
       display: block;
-      color: #fff;
+      color: var(--text-primary);
       font-size: 0.9rem;
     }
     .einschalten-header p {
-      color: #888;
+      color: var(--text-muted);
       font-size: 0.75rem;
       margin: 0;
     }
@@ -5600,7 +5601,7 @@
       padding: 0.5rem 1rem;
       background: #4CAF50;
       border-radius: 20px;
-      color: #fff;
+      color: var(--text-primary);
       font-size: 0.85rem;
       text-decoration: none;
       transition: all 0.2s;
@@ -5644,12 +5645,12 @@
       font-size: 2rem;
     }
     .dein-platz-header h2 {
-      color: #fff;
+      color: var(--text-primary);
       font-size: 1.2rem;
       margin: 0 0 0.25rem 0;
     }
     .dein-platz-header p {
-      color: #888;
+      color: var(--text-muted);
       font-size: 0.85rem;
       margin: 0;
     }
@@ -5691,17 +5692,17 @@
       padding: 0.15rem 0.4rem;
       border-radius: 4px;
       font-size: 0.7rem;
-      color: #888;
+      color: var(--text-muted);
     }
     
     .empf-zimmer-name {
-      color: #fff;
+      color: var(--text-primary);
       font-size: 1rem;
       margin: 0 0 0.4rem 0;
     }
     
     .empf-zimmer-frage {
-      color: #888;
+      color: var(--text-muted);
       font-size: 0.8rem;
       margin: 0 0 0.75rem 0;
       line-height: 1.4;
@@ -5724,7 +5725,7 @@
       justify-content: center;
       background: #E53935;
       border-radius: 50%;
-      color: #fff;
+      color: var(--text-primary);
       font-weight: 700;
       font-size: 0.85rem;
     }
@@ -5747,7 +5748,7 @@
       font-size: 0.9rem;
     }
     .teaser-text {
-      color: #aaa;
+      color: var(--text-secondary);
       font-size: 0.75rem;
       line-height: 1.4;
     }
@@ -5780,16 +5781,16 @@
       border-radius: 6px;
       font-size: 0.8rem;
       font-weight: 600;
-      color: #fff;
+      color: var(--text-primary);
     }
     .empf-popup-header h3 {
-      color: #fff;
+      color: var(--text-primary);
       font-size: 1.15rem;
       margin: 0;
     }
     
     .empf-popup-frage {
-      color: #888;
+      color: var(--text-muted);
       font-size: 0.9rem;
       margin-bottom: 1rem;
     }
@@ -5814,7 +5815,7 @@
       justify-content: center;
       background: #E53935;
       border-radius: 50%;
-      color: #fff;
+      color: var(--text-primary);
       font-weight: 700;
       font-size: 1.2rem;
     }
@@ -5823,7 +5824,7 @@
     }
     .empf-popup-position .position-name {
       display: block;
-      color: #fff;
+      color: var(--text-primary);
       font-size: 1rem;
       font-weight: 600;
       margin-bottom: 0.4rem;
@@ -5852,7 +5853,7 @@
       padding: 0;
       border: none;
       font-style: italic;
-      color: #aaa;
+      color: var(--text-secondary);
       font-size: 0.9rem;
       line-height: 1.5;
     }
@@ -5909,7 +5910,7 @@
       margin-bottom: 0.2rem;
     }
     .aufgabe-content p {
-      color: #888;
+      color: var(--text-muted);
       font-size: 0.8rem;
       line-height: 1.4;
       margin: 0;
@@ -6029,7 +6030,7 @@
     }
     
     .profil-info h3 {
-      color: #fff;
+      color: var(--text-primary);
       font-size: 1.1rem;
       margin: 0;
     }
@@ -6042,7 +6043,7 @@
     .profil-edit-btn {
       background: rgba(255,255,255,0.1);
       border: 1px solid #444;
-      color: #aaa;
+      color: var(--text-secondary);
       padding: 0.4rem 0.8rem;
       border-radius: 6px;
       cursor: pointer;
@@ -6052,7 +6053,7 @@
     .profil-edit-btn:hover {
       background: rgba(229,57,53,0.2);
       border-color: #E53935;
-      color: #fff;
+      color: var(--text-primary);
     }
     
     .profil-chips {
@@ -6089,7 +6090,7 @@
       border-radius: 8px;
       border: 1px solid #444;
       background: rgba(255,255,255,0.05);
-      color: #ccc;
+      color: var(--text-secondary);
       cursor: pointer;
       font-size: 0.85rem;
     }
@@ -6109,7 +6110,7 @@
     
     /* Hintergrund: Standard dunkel */
     body {
-      background: linear-gradient(180deg, #1a2332 0%, #2a3545 50%, #2a3a2a 100%);
+      background: var(--bg-secondary);
     }
     
     /* Landschaftsbild nur bei Haus-Ansicht (wg) */
@@ -6213,7 +6214,7 @@
     
     /* Souterrain - Grün */
     .haus-etage:nth-child(4) {
-      background: linear-gradient(180deg, #3a5a3a 0%, #2a4a2a 100%);
+      background: var(--bg-secondary);
       border-left: 8px solid #2a4020;
       border-right: 8px solid #2a4020;
       padding: 1rem 1.5rem;
@@ -6492,7 +6493,7 @@
       cursor: pointer;
       transition: all 0.2s;
       font-size: 0.6rem;
-      color: #aaa;
+      color: var(--text-secondary);
       gap: 0.2rem;
       min-height: 50px;
     }
@@ -6568,7 +6569,7 @@
       font-size: 0.65rem;
       line-height: 1.2;
       text-align: center;
-      color: #888;
+      color: var(--text-muted);
     }
     
     .zimmer-btn:hover .btn-label {
@@ -6642,7 +6643,7 @@
     .modal-title {
       font-size: 1.3rem;
       font-weight: 500;
-      color: #fff;
+      color: var(--text-primary);
       margin: 0;
     }
     
@@ -6679,7 +6680,7 @@
       font-size: 1rem;
       font-weight: 500;
       margin: 0 0 1rem 0;
-      color: #aaa;
+      color: var(--text-secondary);
     }
     
     .bewohner-grid {
@@ -6772,7 +6773,7 @@
       padding: 0.5rem 1rem;
       border: none;
       background: transparent;
-      color: #888;
+      color: var(--text-muted);
       font-size: 0.85rem;
       cursor: pointer;
       border-radius: 6px;
@@ -6782,12 +6783,12 @@
     
     .haus-ansicht-toggle .toggle-btn:hover {
       background: rgba(255,255,255,0.05);
-      color: #ccc;
+      color: var(--text-secondary);
     }
     
     .haus-ansicht-toggle .toggle-btn.active {
       background: #E53935;
-      color: #fff;
+      color: var(--text-primary);
       font-weight: 500;
     }
     
@@ -6801,7 +6802,7 @@
     }
     .profil-editor-intro p {
       margin: 0;
-      color: #aaa;
+      color: var(--text-secondary);
       font-size: 0.85rem;
       line-height: 1.4;
     }
@@ -6829,7 +6830,7 @@
     
     .sp-editor-count {
       font-size: 0.75rem;
-      color: #888;
+      color: var(--text-muted);
       background: var(--bg-secondary);
       padding: 0.2rem 0.6rem;
       border-radius: 10px;
@@ -6896,7 +6897,7 @@
     
     .sp-row-name {
       font-size: 0.7rem;
-      color: #ccc;
+      color: var(--text-secondary);
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
@@ -6926,7 +6927,7 @@
       padding: 0.3rem 0;
       background: var(--bg-tertiary);
       border: 1px solid #3a3a3a;
-      color: #777;
+      color: var(--text-muted);
       font-size: 0.7rem;
       cursor: pointer;
       border-radius: 2px;
@@ -6936,13 +6937,13 @@
     .sp-num:hover {
       background: #3a3a3a;
       border-color: #555;
-      color: #aaa;
+      color: var(--text-secondary);
     }
     
     .sp-num.sel {
       background: #E53935;
       border-color: #E53935;
-      color: #fff;
+      color: var(--text-primary);
       font-weight: 600;
     }
     
@@ -6959,7 +6960,7 @@
       padding: 0.45rem 0.9rem;
       background: var(--bg-tertiary);
       border: 1px solid #444;
-      color: #ccc;
+      color: var(--text-secondary);
       font-size: 0.75rem;
       border-radius: 5px;
       cursor: pointer;
@@ -6974,7 +6975,7 @@
     .sp-btn.primary {
       background: #E53935;
       border-color: #E53935;
-      color: #fff;
+      color: var(--text-primary);
     }
     
     .sp-btn.primary:hover {
@@ -7031,7 +7032,7 @@
     
     .profil-achse-frage {
       font-size: 0.75rem;
-      color: #888;
+      color: var(--text-muted);
       margin: 0 0 0.5rem 0;
       line-height: 1.3;
     }
@@ -7062,7 +7063,7 @@
       padding: 0.4rem 0.2rem;
       background: var(--bg-tertiary);
       border: 1px solid #444;
-      color: #888;
+      color: var(--text-muted);
       font-size: 0.75rem;
       cursor: pointer;
       border-radius: 3px;
@@ -7079,7 +7080,7 @@
     .profil-pos.selected {
       background: #E53935;
       border-color: #E53935;
-      color: #fff;
+      color: var(--text-primary);
       font-weight: 600;
     }
     
@@ -7109,7 +7110,7 @@
     
     .profil-save-btn {
       background: #E53935;
-      color: #fff;
+      color: var(--text-primary);
     }
     .profil-save-btn:hover {
       background: #C62828;
@@ -7117,7 +7118,7 @@
     
     .profil-cancel-btn {
       background: var(--border);
-      color: #aaa;
+      color: var(--text-secondary);
     }
     .profil-cancel-btn:hover {
       background: #444;
@@ -7126,7 +7127,7 @@
     .profil-reset-btn {
       background: transparent;
       border: 1px solid #444;
-      color: #888;
+      color: var(--text-muted);
       flex: 0.5;
     }
     .profil-reset-btn:hover {
@@ -7146,7 +7147,7 @@
     
     .profil-achse-label {
       font-size: 0.7rem;
-      color: #888;
+      color: var(--text-muted);
       width: 24px;
     }
     }
@@ -7162,13 +7163,13 @@
     }
     
     .profil-leer-content h3 {
-      color: #fff;
+      color: var(--text-primary);
       margin: 0 0 0.3rem 0;
       font-size: 1rem;
     }
     
     .profil-leer-content p {
-      color: #888;
+      color: var(--text-muted);
       font-size: 0.8rem;
       margin-bottom: 0.75rem;
       line-height: 1.3;
@@ -7196,7 +7197,7 @@
     
     .profil-start-btn.primary {
       background: #E53935;
-      color: #fff;
+      color: var(--text-primary);
     }
     .profil-start-btn.primary:hover {
       background: #C62828;
@@ -7204,7 +7205,7 @@
     
     .profil-start-btn.secondary {
       background: var(--border);
-      color: #ccc;
+      color: var(--text-secondary);
       border: 1px solid #444;
     }
     .profil-start-btn.secondary:hover {
@@ -7242,7 +7243,7 @@
     }
     
     .ms-section-header p {
-      color: #888;
+      color: var(--text-muted);
       font-size: 0.75rem;
       margin: 0;
     }
@@ -7256,13 +7257,13 @@
       margin-bottom: 0.75rem;
     }
     .ms-quickstart p {
-      color: #aaa;
+      color: var(--text-secondary);
       font-size: 0.8rem;
       margin: 0 0 0.5rem 0;
     }
     .ms-quickstart-btn {
       background: #E53935;
-      color: #fff;
+      color: var(--text-primary);
       border: none;
       padding: 0.4rem 0.8rem;
       border-radius: 4px;
@@ -7314,7 +7315,7 @@
     }
     .ms-kat-titel {
       font-size: 0.7rem;
-      color: #aaa;
+      color: var(--text-secondary);
       flex: 1;
     }
     .ms-kat-count {
@@ -7356,7 +7357,7 @@
     .ms-item-label-kompakt {
       flex: 1;
       font-size: 0.7rem;
-      color: #ccc;
+      color: var(--text-secondary);
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
@@ -7396,7 +7397,7 @@
     .ms-btn-sm {
       background: var(--border);
       border: none;
-      color: #aaa;
+      color: var(--text-secondary);
       padding: 0.3rem 0.5rem;
       border-radius: 4px;
       font-size: 0.75rem;
@@ -7404,11 +7405,11 @@
     }
     .ms-btn-sm:hover {
       background: #444;
-      color: #fff;
+      color: var(--text-primary);
     }
     .ms-btn-sm.primary {
       background: #E53935;
-      color: #fff;
+      color: var(--text-primary);
     }
     
     /* Kompakte Vorschau */
@@ -7426,12 +7427,12 @@
       justify-content: space-between;
       margin-bottom: 0.4rem;
       font-size: 0.75rem;
-      color: #888;
+      color: var(--text-muted);
     }
     
     .ms-vorschau-text-kompakt {
       font-size: 0.8rem;
-      color: #ccc;
+      color: var(--text-secondary);
       line-height: 1.4;
     }
     .ms-vorschau-text-kompakt p {
@@ -7447,7 +7448,7 @@
       background: var(--bg-primary);
       border: 1px solid #444;
       border-radius: 4px;
-      color: #ccc;
+      color: var(--text-secondary);
       padding: 0.5rem;
       font-size: 0.8rem;
       resize: vertical;
@@ -7464,7 +7465,7 @@
     .ms-export-btn {
       background: var(--bg-tertiary);
       border: 1px solid #444;
-      color: #aaa;
+      color: var(--text-secondary);
       padding: 0.35rem 0.6rem;
       border-radius: 4px;
       font-size: 0.7rem;
@@ -7509,12 +7510,12 @@
       margin-bottom: 1.5rem;
     }
     .ms-quickstart-gross p {
-      color: #ccc;
+      color: var(--text-secondary);
       margin: 0 0 1rem 0;
     }
     .ms-quickstart-btn-gross {
       background: #E53935;
-      color: #fff;
+      color: var(--text-primary);
       border: none;
       padding: 0.75rem 1.5rem;
       border-radius: 8px;
@@ -7579,7 +7580,7 @@
       flex: 1;
     }
     .ms-kat-header-gross h4 {
-      color: #fff;
+      color: var(--text-primary);
       font-size: 0.95rem;
       margin: 0;
     }
@@ -7589,7 +7590,7 @@
     }
     .ms-kat-count-gross {
       background: var(--border);
-      color: #888;
+      color: var(--text-muted);
       padding: 0.2rem 0.5rem;
       border-radius: 4px;
       font-size: 0.75rem;
@@ -7649,7 +7650,7 @@
     .ms-item-btns-gross button {
       background: var(--border);
       border: none;
-      color: #888;
+      color: var(--text-muted);
       padding: 0.25rem 0.4rem;
       border-radius: 4px;
       cursor: pointer;
@@ -7657,7 +7658,7 @@
     }
     .ms-item-btns-gross button:hover {
       background: #444;
-      color: #fff;
+      color: var(--text-primary);
     }
     
     .ms-add-buttons {
@@ -7669,7 +7670,7 @@
       padding: 0.6rem;
       background: #E53935;
       border: none;
-      color: #fff;
+      color: var(--text-primary);
       border-radius: 6px;
       cursor: pointer;
       font-size: 0.85rem;
@@ -7679,7 +7680,7 @@
     }
     .ms-add-btn-gross.secondary {
       background: var(--border);
-      color: #aaa;
+      color: var(--text-secondary);
     }
     .ms-add-btn-gross.secondary:hover {
       background: #444;
@@ -7708,14 +7709,14 @@
       border-bottom: 1px solid var(--border);
     }
     .ms-vorschau-header-gross h4 {
-      color: #fff;
+      color: var(--text-primary);
       font-size: 0.95rem;
       margin: 0;
     }
     .ms-edit-btn {
       background: var(--border);
       border: none;
-      color: #aaa;
+      color: var(--text-secondary);
       padding: 0.3rem 0.6rem;
       border-radius: 4px;
       cursor: pointer;
@@ -7723,11 +7724,11 @@
     }
     .ms-edit-btn:hover {
       background: #444;
-      color: #fff;
+      color: var(--text-primary);
     }
     
     .ms-vorschau-content {
-      color: #ccc;
+      color: var(--text-secondary);
       font-size: 0.9rem;
       line-height: 1.5;
     }
@@ -7744,11 +7745,11 @@
       cursor: pointer;
       font-size: 0.85rem;
       background: var(--border);
-      color: #aaa;
+      color: var(--text-secondary);
     }
     .ms-btn-gross.primary {
       background: #E53935;
-      color: #fff;
+      color: var(--text-primary);
     }
     
     .ms-export-gross {
@@ -7758,7 +7759,7 @@
       padding: 1rem;
     }
     .ms-export-gross h4 {
-      color: #888;
+      color: var(--text-muted);
       font-size: 0.85rem;
       margin: 0 0 0.75rem 0;
     }
@@ -7771,14 +7772,14 @@
       padding: 0.5rem;
       background: var(--bg-tertiary);
       border: 1px solid #444;
-      color: #aaa;
+      color: var(--text-secondary);
       border-radius: 6px;
       cursor: pointer;
       font-size: 0.8rem;
     }
     .ms-export-btn-gross:hover {
       background: var(--border);
-      color: #fff;
+      color: var(--text-primary);
     }
     
     .ms-actions-gross {
@@ -7800,7 +7801,7 @@
     .ms-export-btn:hover {
       background: var(--border);
       border-color: #555;
-      color: #fff;
+      color: var(--text-primary);
     }
     
     /* Share Dialog */
@@ -7839,7 +7840,7 @@
     }
     
     .ms-share-popup h4 {
-      color: #fff;
+      color: var(--text-primary);
       font-size: 1rem;
       margin: 0 0 1rem 0;
     }
@@ -7860,7 +7861,7 @@
       background: var(--bg-secondary);
       border: 1px solid var(--border);
       border-radius: 6px;
-      color: #aaa;
+      color: var(--text-secondary);
       text-decoration: none;
       font-size: 0.7rem;
       transition: all 0.2s;
@@ -7868,7 +7869,7 @@
     .ms-share-btn:hover {
       background: var(--bg-tertiary);
       border-color: #444;
-      color: #fff;
+      color: var(--text-primary);
     }
     .ms-share-btn span {
       font-size: 1.25rem;
@@ -7888,7 +7889,7 @@
       background: var(--bg-secondary);
       border: 1px solid var(--border);
       border-radius: 4px;
-      color: #aaa;
+      color: var(--text-secondary);
       padding: 0.5rem;
       font-size: 0.75rem;
       height: 60px;
@@ -7897,7 +7898,7 @@
     .ms-share-copy button {
       background: var(--border);
       border: none;
-      color: #aaa;
+      color: var(--text-secondary);
       padding: 0.5rem;
       border-radius: 4px;
       font-size: 0.7rem;
@@ -7906,7 +7907,7 @@
     }
     .ms-share-copy button:hover {
       background: #444;
-      color: #fff;
+      color: var(--text-primary);
     }
     
     .hidden {
@@ -7971,7 +7972,7 @@
       font-size: 1.25rem;
     }
     .ms-kategorie-header h4 {
-      color: #fff;
+      color: var(--text-primary);
       font-size: 0.95rem;
       margin: 0;
     }
@@ -8043,7 +8044,7 @@
       padding: 0.15rem 0.4rem;
       border-radius: 4px;
       font-size: 0.65rem;
-      color: #888;
+      color: var(--text-muted);
     }
     .ms-item-label {
       color: #ddd;
@@ -8059,7 +8060,7 @@
       margin-top: 0.2rem;
     }
     .ms-item-eigentext {
-      color: #aaa;
+      color: var(--text-secondary);
       font-size: 0.75rem;
       font-style: italic;
       margin-top: 0.2rem;
@@ -8079,7 +8080,7 @@
       transition: color 0.2s;
     }
     .ms-item-actions button:hover {
-      color: #fff;
+      color: var(--text-primary);
     }
     .ms-item-remove:hover {
       color: #E53935 !important;
@@ -8096,7 +8097,7 @@
       background: var(--bg-secondary);
       border: 1px dashed #444;
       border-radius: 8px;
-      color: #888;
+      color: var(--text-muted);
       font-size: 0.85rem;
       cursor: pointer;
       transition: all 0.2s;
@@ -8121,26 +8122,26 @@
       margin-bottom: 0.75rem;
     }
     .ms-vorschau-header h4 {
-      color: #fff;
+      color: var(--text-primary);
       font-size: 1rem;
       margin: 0;
     }
     .ms-edit-text-btn {
       background: none;
       border: 1px solid #444;
-      color: #888;
+      color: var(--text-muted);
       padding: 0.3rem 0.6rem;
       border-radius: 4px;
       font-size: 0.75rem;
       cursor: pointer;
     }
     .ms-edit-text-btn:hover {
-      border-color: #888;
-      color: #fff;
+      border-color: var(--text-muted);
+      color: var(--text-primary);
     }
     
     .ms-vorschau-text {
-      color: #ccc;
+      color: var(--text-secondary);
       font-size: 0.95rem;
       line-height: 1.6;
     }
@@ -8155,10 +8156,10 @@
     .ms-freitext-editor textarea {
       width: 100%;
       min-height: 100px;
-      background: #111;
+      background: var(--bg-tertiary);
       border: 1px solid var(--border);
       border-radius: 8px;
-      color: #ccc;
+      color: var(--text-secondary);
       padding: 0.75rem;
       font-size: 0.9rem;
       line-height: 1.5;
@@ -8168,7 +8169,7 @@
     .ms-save-freitext {
       background: #E53935;
       border: none;
-      color: #fff;
+      color: var(--text-primary);
       padding: 0.5rem 1rem;
       border-radius: 6px;
       cursor: pointer;
@@ -8187,7 +8188,7 @@
       background: linear-gradient(135deg, #E53935, #C62828);
       border: none;
       border-radius: 25px;
-      color: #fff;
+      color: var(--text-primary);
       font-size: 0.9rem;
       font-weight: 600;
       cursor: pointer;
@@ -8202,21 +8203,21 @@
       background: var(--bg-secondary);
       border: 1px solid #444;
       border-radius: 25px;
-      color: #ccc;
+      color: var(--text-secondary);
       font-size: 0.85rem;
       cursor: pointer;
       transition: all 0.2s;
     }
     .ms-btn-secondary:hover {
-      border-color: #888;
-      color: #fff;
+      border-color: var(--text-muted);
+      color: var(--text-primary);
     }
     .ms-btn-danger {
       padding: 0.75rem 1rem;
       background: transparent;
       border: 1px solid #444;
       border-radius: 25px;
-      color: #888;
+      color: var(--text-muted);
       font-size: 0.85rem;
       cursor: pointer;
     }
@@ -8245,22 +8246,22 @@
       width: 100%;
     }
     .ms-edit-popup h4 {
-      color: #fff;
+      color: var(--text-primary);
       font-size: 1.1rem;
       margin: 0 0 0.5rem 0;
     }
     .ms-edit-popup p {
-      color: #888;
+      color: var(--text-muted);
       font-size: 0.85rem;
       margin-bottom: 1rem;
     }
     .ms-edit-popup input,
     .ms-edit-popup textarea {
       width: 100%;
-      background: #111;
+      background: var(--bg-tertiary);
       border: 1px solid var(--border);
       border-radius: 8px;
-      color: #ccc;
+      color: var(--text-secondary);
       padding: 0.75rem;
       font-size: 0.9rem;
       margin-bottom: 0.75rem;
@@ -8283,12 +8284,12 @@
     .ms-edit-buttons button:first-child {
       background: #E53935;
       border: none;
-      color: #fff;
+      color: var(--text-primary);
     }
     .ms-edit-buttons button.secondary {
       background: var(--border);
       border: 1px solid #444;
-      color: #ccc;
+      color: var(--text-secondary);
     }
     
     /* Auswahl Overlay - Neu */
@@ -8322,7 +8323,7 @@
       border-bottom: 1px solid var(--border);
     }
     .ms-auswahl-header h4 {
-      color: #fff;
+      color: var(--text-primary);
       margin: 0;
       font-size: 1.1rem;
     }
@@ -8342,7 +8343,7 @@
     .ms-auswahl-hint {
       padding: 0.75rem 1.25rem;
       margin: 0;
-      color: #888;
+      color: var(--text-muted);
       font-size: 0.8rem;
       background: rgba(229,57,53,0.05);
       border-bottom: 1px solid var(--border);
@@ -8400,7 +8401,7 @@
     }
     .ms-auswahl-zimmer-name {
       font-size: 0.75rem;
-      color: #ccc;
+      color: var(--text-secondary);
       font-weight: 500;
     }
     
@@ -8441,17 +8442,17 @@
       background: var(--border);
       border-radius: 3px;
       font-size: 0.65rem;
-      color: #888;
+      color: var(--text-muted);
     }
     .ms-auswahl-pos-item:has(input:checked) .ms-auswahl-pos-num {
       background: #E53935;
-      color: #fff;
+      color: var(--text-primary);
     }
     
     .ms-auswahl-pos-label {
       flex: 1;
       font-size: 0.7rem;
-      color: #aaa;
+      color: var(--text-secondary);
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
@@ -8468,7 +8469,7 @@
     
     .ms-auswahl-count {
       font-size: 0.8rem;
-      color: #888;
+      color: var(--text-muted);
     }
     
     .ms-auswahl-btns {
@@ -8486,14 +8487,14 @@
     }
     .ms-auswahl-btn.primary {
       background: #E53935;
-      color: #fff;
+      color: var(--text-primary);
     }
     .ms-auswahl-btn.primary:hover {
       background: #C62828;
     }
     .ms-auswahl-btn.secondary {
       background: var(--border);
-      color: #aaa;
+      color: var(--text-secondary);
     }
     .ms-auswahl-btn.secondary:hover {
       background: #444;
@@ -8520,14 +8521,14 @@
     
     .ms-uebersicht-label {
       font-size: 0.75rem;
-      color: #888;
+      color: var(--text-muted);
       flex-shrink: 0;
       min-width: 80px;
     }
     
     .ms-uebersicht-items {
       font-size: 0.8rem;
-      color: #ccc;
+      color: var(--text-secondary);
       line-height: 1.4;
     }
     
@@ -8552,10 +8553,10 @@
       overflow-y: auto;
       position: relative;
     }
-      color: #fff;
+      color: var(--text-primary);
     }
     .ms-auswahl-pos.vorhanden {
-      background: #1a3a1a;
+      background: var(--bg-secondary);
       border-color: #2a5a2a;
       color: #4a8a4a;
       cursor: not-allowed;
@@ -8568,10 +8569,10 @@
     .dein-platz-btn.secondary {
       background: transparent;
       border: 1px solid #555;
-      color: #aaa;
+      color: var(--text-secondary);
     }
     .dein-platz-btn.secondary:hover {
-      border-color: #888;
+      border-color: var(--text-muted);
       color: #ddd;
       box-shadow: none;
     }
@@ -8638,13 +8639,13 @@
       font-size: 1.75rem;
     }
     .archetyp-name {
-      color: #fff;
+      color: var(--text-primary);
       font-weight: 600;
       font-size: 1rem;
     }
     
     .zimmer-finder-progress {
-      color: #888;
+      color: var(--text-muted);
       font-size: 0.85rem;
     }
     .zimmer-finder-titel {
@@ -8654,12 +8655,12 @@
     }
     
     .zimmer-finder-frage h2 {
-      color: #fff;
+      color: var(--text-primary);
       font-size: 1.3rem;
       margin: 0 0 0.5rem 0;
     }
     .frage-text {
-      color: #aaa;
+      color: var(--text-secondary);
       font-size: 0.9rem;
       margin: 0 0 1.25rem 0;
     }
@@ -8714,12 +8715,12 @@
     
     .zf-option-text {
       flex: 1;
-      color: #ccc;
+      color: var(--text-secondary);
       font-size: 0.9rem;
       line-height: 1.4;
     }
     .zf-option.selected .zf-option-text {
-      color: #fff;
+      color: var(--text-primary);
     }
     
     .zf-option-wert {
@@ -8730,13 +8731,13 @@
       justify-content: center;
       background: var(--border);
       border-radius: 50%;
-      color: #888;
+      color: var(--text-muted);
       font-size: 0.75rem;
       font-weight: 600;
     }
     .zf-option.selected .zf-option-wert {
       background: #E53935;
-      color: #fff;
+      color: var(--text-primary);
     }
     
     .zimmer-finder-actions {
@@ -8762,7 +8763,7 @@
       flex: 1;
       background: linear-gradient(135deg, #E53935, #C62828);
       border: none;
-      color: #fff;
+      color: var(--text-primary);
     }
     .zf-btn.primary:hover {
       transform: scale(1.02);
@@ -8775,10 +8776,10 @@
     .zf-btn.secondary {
       background: transparent;
       border: 1px solid #555;
-      color: #aaa;
+      color: var(--text-secondary);
     }
     .zf-btn.secondary:hover {
-      border-color: #888;
+      border-color: var(--text-muted);
       color: #ddd;
     }
     
@@ -8799,7 +8800,7 @@
       padding: 0.2rem 0.6rem;
       background: #E53935;
       border-radius: 12px;
-      color: #fff;
+      color: var(--text-primary);
       font-size: 0.7rem;
       font-weight: 600;
       margin-bottom: 0.6rem;
@@ -8814,12 +8815,12 @@
       font-size: 1.5rem;
     }
     .zf-zimmer-header h3 {
-      color: #fff;
+      color: var(--text-primary);
       font-size: 1rem;
       margin: 0 0 0.2rem 0;
     }
     .zf-achse {
-      color: #888;
+      color: var(--text-muted);
       font-size: 0.75rem;
     }
     
@@ -8833,7 +8834,7 @@
       border-radius: 6px;
     }
     .zf-pos-label {
-      color: #888;
+      color: var(--text-muted);
       font-size: 0.75rem;
     }
     .zf-pos-wert {
@@ -8844,7 +8845,7 @@
       justify-content: center;
       background: #E53935;
       border-radius: 50%;
-      color: #fff;
+      color: var(--text-primary);
       font-weight: 700;
       font-size: 0.8rem;
     }
@@ -8874,7 +8875,7 @@
     }
     
     .zf-weitere-titel {
-      color: #888;
+      color: var(--text-muted);
       font-size: 0.8rem;
       margin-bottom: 0.4rem;
     }
@@ -8902,7 +8903,7 @@
       font-weight: 500;
     }
     .zf-weiteres-pos {
-      color: #888;
+      color: var(--text-muted);
       font-size: 0.7rem;
       display: block;
     }
@@ -8933,7 +8934,7 @@
       border: 1px solid var(--accent, #666);
       border-radius: 15px;
       font-size: 0.75rem;
-      color: #ccc;
+      color: var(--text-secondary);
     }
     
     /* ═══════════════════════════════════════════════════════════════
@@ -8971,7 +8972,7 @@
       cursor: pointer;
       z-index: 1;
     }
-    .wg-debatte-close:hover { color: #fff; }
+    .wg-debatte-close:hover { color: var(--text-primary); }
     
     .wg-debatte-header {
       display: flex;
@@ -8985,12 +8986,12 @@
       font-size: 2rem;
     }
     .wg-debatte-header h3 {
-      color: #fff;
+      color: var(--text-primary);
       font-size: 1.1rem;
       margin: 0 0 0.2rem 0;
     }
     .wg-debatte-header p {
-      color: #888;
+      color: var(--text-muted);
       font-size: 0.8rem;
       margin: 0;
     }
@@ -9012,7 +9013,7 @@
       border: 1px solid var(--accent, #666);
       border-radius: 20px;
       font-size: 0.75rem;
-      color: #ccc;
+      color: var(--text-secondary);
     }
     .debatte-person span:first-child {
       font-size: 1rem;
@@ -9048,7 +9049,7 @@
       justify-content: center;
       font-size: 0.7rem;
       font-weight: 600;
-      color: #fff;
+      color: var(--text-primary);
     }
     .spannung-name {
       color: #E53935;
@@ -9073,7 +9074,7 @@
       border: 1px solid var(--accent, #666);
       border-radius: 12px;
       font-size: 0.7rem;
-      color: #ccc;
+      color: var(--text-secondary);
     }
     .spannung-kontrahenten .vs {
       color: #666;
@@ -9093,7 +9094,7 @@
     .keine-spannungen {
       text-align: center;
       padding: 1.5rem;
-      color: #888;
+      color: var(--text-muted);
     }
     .keine-spannungen p:first-child {
       font-size: 1.1rem;
@@ -9136,12 +9137,12 @@
       font-size: 1.25rem;
     }
     .section-header h4 {
-      color: #fff;
+      color: var(--text-primary);
       font-size: 0.9rem;
       margin: 0;
     }
     .section-header p {
-      color: #888;
+      color: var(--text-muted);
       font-size: 0.75rem;
       margin: 0;
     }
@@ -9172,7 +9173,7 @@
       align-items: center;
       gap: 0.4rem;
       padding: 0.3rem 0;
-      color: #aaa;
+      color: var(--text-secondary);
       font-size: 0.8rem;
     }
     .gem-icon {
@@ -9200,7 +9201,7 @@
       flex-shrink: 0;
     }
     .dialog-frage span:last-child {
-      color: #ccc;
+      color: var(--text-secondary);
       font-size: 0.85rem;
       font-style: italic;
       line-height: 1.4;
@@ -9219,7 +9220,7 @@
       font-size: 1rem;
     }
     .solidaritaet-note p {
-      color: #aaa;
+      color: var(--text-secondary);
       font-size: 0.8rem;
       margin: 0;
       line-height: 1.4;
@@ -9256,9 +9257,9 @@
       cursor: pointer;
     }
     .oeko-art:hover { border-color: #4CAF50; }
-    .oeko-art.dominant { border-color: #4CAF50; background: #2a3a2a; }
+    .oeko-art.dominant { border-color: #4CAF50; background: rgba(76, 175, 80, 0.1); }
     .oeko-art.pioneer { border-color: #FF9800; background: #3a3020; }
-    .oeko-art.symbiont { border-color: #2196F3; background: #202a3a; }
+    .oeko-art.symbiont { border-color: #2196F3; background: rgba(33, 150, 243, 0.1); }
     .oeko-art.endangered { border-color: #f44336; background: #3a2020; opacity: 0.7; }
     
     /* Chemie-Container */
@@ -9287,11 +9288,11 @@
     }
     .element:hover { transform: scale(1.1); z-index: 10; }
     .element .symbol { font-size: 1.2rem; font-weight: bold; }
-    .element .name { font-size: 0.6rem; color: #888; margin-top: 0.25rem; }
-    .element.edelgas { border-color: #9C27B0; background: #2a202a; }
+    .element .name { font-size: 0.6rem; color: var(--text-muted); margin-top: 0.25rem; }
+    .element.edelgas { border-color: #9C27B0; background: rgba(156, 39, 176, 0.1); }
     .element.alkali { border-color: #f44336; background: #3a2020; }
     .element.katalysator { border-color: #FF9800; background: #3a3020; }
-    .element.stabil { border-color: #4CAF50; background: #2a3a2a; }
+    .element.stabil { border-color: #4CAF50; background: rgba(76, 175, 80, 0.1); }
     
     .reaktionsgleichung {
       background: var(--bg-primary);
@@ -9302,8 +9303,8 @@
       font-family: monospace;
     }
     .reaktionsgleichung h3 { color: #FF9800; margin-bottom: 1rem; }
-    .reaktion { margin-bottom: 1rem; color: #aaa; }
-    .reaktion .formel { font-size: 1.1rem; color: #fff; }
+    .reaktion { margin-bottom: 1rem; color: var(--text-secondary); }
+    .reaktion .formel { font-size: 1.1rem; color: var(--text-primary); }
     .reaktion .ergebnis { color: #666; font-size: 0.85rem; }
     
     /* Epochen-Container */
@@ -9323,21 +9324,21 @@
     .epoche-btn {
       background: var(--bg-tertiary);
       border: 1px solid #444;
-      color: #aaa;
+      color: var(--text-secondary);
       padding: 0.75rem 1.5rem;
       cursor: pointer;
       border-radius: 4px;
       font-size: 0.85rem;
     }
     .epoche-btn:hover { border-color: var(--border-light); }
-    .epoche-btn.active { border-color: #E53935; color: #fff; background: #2a2020; }
+    .epoche-btn.active { border-color: #E53935; color: var(--text-primary); background: rgba(229, 57, 53, 0.1); }
     .epochen-inhalt {
       background: var(--bg-secondary);
       border-radius: 8px;
       padding: 2rem;
     }
     .epochen-inhalt h3 { color: #E53935; margin-bottom: 1rem; }
-    .epochen-inhalt p { color: #aaa; line-height: 1.6; margin-bottom: 1rem; }
+    .epochen-inhalt p { color: var(--text-secondary); line-height: 1.6; margin-bottom: 1rem; }
     .epochen-knoten {
       display: flex;
       flex-wrap: wrap;
@@ -9363,7 +9364,7 @@
       flex-direction: column;
       padding: 2rem;
       overflow-y: auto;
-      background: linear-gradient(180deg, var(--bg-primary) 0%, #0d1117 100%);
+      background: var(--bg-secondary);
     }
     
     .stammbaum-header {
@@ -9559,16 +9560,16 @@
       font-size: 0.85rem;
       cursor: pointer;
     }
-    .dialog-sprecher.links { background: #E53935; color: #fff; }
-    .dialog-sprecher.rechts { background: #2196F3; color: #fff; }
+    .dialog-sprecher.links { background: #E53935; color: var(--text-primary); }
+    .dialog-sprecher.rechts { background: #2196F3; color: var(--text-primary); }
     .dialog-zeile {
       margin-bottom: 1rem;
       padding: 1rem;
       border-radius: 8px;
     }
-    .dialog-zeile.links { background: #2a2020; border-left: 3px solid #E53935; margin-right: 20%; }
-    .dialog-zeile.rechts { background: #202a30; border-left: 3px solid #2196F3; margin-left: 20%; }
-    .dialog-zeile .autor { font-weight: 500; color: #aaa; margin-bottom: 0.5rem; }
+    .dialog-zeile.links { background: rgba(229, 57, 53, 0.1); border-left: 3px solid #E53935; margin-right: 20%; }
+    .dialog-zeile.rechts { background: rgba(33, 150, 243, 0.1); border-left: 3px solid #2196F3; margin-left: 20%; }
+    .dialog-zeile .autor { font-weight: 500; color: var(--text-secondary); margin-bottom: 0.5rem; }
     .dialog-zeile .text { line-height: 1.6; }
     
     /* Zitate-Container */
@@ -9598,7 +9599,7 @@
     .zitat-quelle {
       display: flex;
       justify-content: space-between;
-      color: #888;
+      color: var(--text-muted);
       font-size: 0.85rem;
     }
     .zitat-autor { cursor: pointer; }
@@ -9611,7 +9612,7 @@
       flex-direction: column;
       padding: 1.5rem;
       overflow-y: auto;
-      background: linear-gradient(180deg, var(--bg-primary) 0%, #0d0d12 100%);
+      background: var(--bg-secondary);
     }
     
     /* Generator-Header - kompakt */
@@ -9629,7 +9630,7 @@
       font-size: 2rem;
     }
     .konfig-generator-header h2 {
-      color: #fff;
+      color: var(--text-primary);
       font-size: 1.2rem;
       font-weight: 600;
       margin-bottom: 0.15rem;
@@ -9820,7 +9821,7 @@
     .sp-btn-num.selected {
       background: #C62828;
       border-color: #C62828;
-      color: #fff;
+      color: var(--text-primary);
       font-weight: 600;
     }
     
@@ -9853,7 +9854,7 @@
     .sp-btn.primary {
       background: #C62828;
       border-color: #C62828;
-      color: #fff;
+      color: var(--text-primary);
     }
     
     .sp-btn.primary:hover {
@@ -9938,7 +9939,7 @@
     .konfig-option.selected { 
       background: #C62828; 
       border-color: #C62828; 
-      color: #fff;
+      color: var(--text-primary);
       font-weight: 600;
     }
     .konfig-pole-labels {
@@ -10040,7 +10041,7 @@
     .konfig-btn.primary {
       background: #C62828;
       border-color: #C62828;
-      color: #fff;
+      color: var(--text-primary);
     }
     .konfig-btn.primary:hover {
       background: #E53935;
@@ -10137,7 +10138,7 @@
     .personen-filter button {
       background: var(--bg-tertiary);
       border: 1px solid var(--border);
-      color: #aaa;
+      color: var(--text-secondary);
       padding: 0.4rem 0.8rem;
       border-radius: 4px;
       cursor: pointer;
@@ -10178,9 +10179,9 @@
       flex-shrink: 0;
     }
     .person-card .info { flex: 1; }
-    .person-card .name { font-weight: 600; color: #fff; }
+    .person-card .name { font-weight: 600; color: var(--text-primary); }
     .person-card .leben { font-size: 0.8rem; color: #666; }
-    .person-card .bio { font-size: 0.85rem; color: #aaa; line-height: 1.4; margin-bottom: 0.75rem; }
+    .person-card .bio { font-size: 0.85rem; color: var(--text-secondary); line-height: 1.4; margin-bottom: 0.75rem; }
     .person-card .positionen {
       display: flex;
       flex-wrap: wrap;
@@ -10317,12 +10318,12 @@
       transform: translateY(-50%);
       pointer-events: none;
       font-size: 0.7rem;
-      color: #888;
+      color: var(--text-muted);
     }
     .filter-dropdown label {
       display: block;
       font-size: 0.7rem;
-      color: #888;
+      color: var(--text-muted);
       margin-bottom: 0.25rem;
       text-transform: uppercase;
       letter-spacing: 0.5px;
@@ -10390,7 +10391,7 @@
     .mediathek-card-icon { font-size: 2rem; margin-bottom: 0.5rem; }
     .mediathek-card-title { font-weight: 600; font-size: 1.1rem; margin-bottom: 0.25rem; }
     .mediathek-card-author { color: #666; font-size: 0.9rem; margin-bottom: 0.5rem; }
-    .mediathek-card-meta { font-size: 0.8rem; color: #888; margin-bottom: 0.5rem; }
+    .mediathek-card-meta { font-size: 0.8rem; color: var(--text-muted); margin-bottom: 0.5rem; }
     .mediathek-card-essence { font-size: 0.85rem; color: #555; font-style: italic; }
     .mediathek-card-tags { display: flex; flex-wrap: wrap; gap: 0.3rem; margin-top: 0.5rem; }
     .mediathek-tag {
@@ -10401,7 +10402,7 @@
       color: #666;
     }
     .mediathek-empty { text-align: center; padding: 3rem; color: #666; }
-    .mediathek-count { color: #888; font-size: 0.9rem; margin-bottom: 1rem; }
+    .mediathek-count { color: var(--text-muted); font-size: 0.9rem; margin-bottom: 1rem; }
     
     /* Mediathek-Karten (neue Struktur) */
     .mediathek-karte {
@@ -10618,7 +10619,7 @@
     }
     .zf-extra-count {
       font-size: 0.75rem;
-      color: #888;
+      color: var(--text-muted);
     }
     .zf-extra-preview {
       margin-top: 0.5rem;
@@ -10881,11 +10882,7 @@
 </head>
 <body class="palette-expanded">
   <header>
-    <div>
-      <h1>DAS WESEN DES LINKEN DENKENS</h1>
-      <div class="stats" id="stats"></div>
-    </div>
-    <div style="display: flex; gap: 0.5rem; align-items: center;">
+    <div style="display: flex; gap: 0.5rem; align-items: center; margin-left: auto;">
       <div class="suche-wrapper">
         <input type="text" id="suche-input" placeholder="🔍 Suchen..." 
                style="background: var(--bg-secondary); border: 1px solid var(--border); color: var(--text-primary); padding: 0.4rem 0.8rem; border-radius: 20px; width: 200px; font-size: 0.85rem;">
@@ -10893,6 +10890,7 @@
       </div>
       <button class="info-toggle" onclick="document.getElementById('konzept-box').classList.toggle('open')">ℹ️ Was ist das?</button>
     </div>
+    <div class="stats" id="stats" style="display: none;"></div>
   </header>
   
   <!-- NEUE LINSEN-PALETTE -->
@@ -11107,7 +11105,7 @@
           <div class="desc">Verfallen, archäologisch</div>
         </div>
       </div>
-      <button onclick="closeThemeModal()" style="margin-top: 1.5rem; padding: 0.5rem 1rem; background: var(--accent); border: none; color: #fff; cursor: pointer; border-radius: var(--radius);">Schließen</button>
+      <button onclick="closeThemeModal()" style="margin-top: 1.5rem; padding: 0.5rem 1rem; background: var(--accent); border: none; color: var(--text-primary); cursor: pointer; border-radius: var(--radius);">Schließen</button>
     </div>
   </div>
   
@@ -11121,7 +11119,7 @@
         <h3 style="margin-bottom: 0.5rem; font-size: 0.9rem;">🔗 Link kopieren</h3>
         <div style="display: flex; gap: 0.5rem;">
           <input type="text" id="share-url" readonly style="flex: 1; padding: 0.5rem; background: var(--bg-tertiary); border: 1px solid var(--border); color: var(--text-primary); font-family: var(--font-mono); font-size: 0.8rem; border-radius: var(--radius);">
-          <button onclick="copyShareUrl()" style="padding: 0.5rem 1rem; background: var(--accent); border: none; color: #fff; cursor: pointer; border-radius: var(--radius);">Kopieren</button>
+          <button onclick="copyShareUrl()" style="padding: 0.5rem 1rem; background: var(--accent); border: none; color: var(--text-primary); cursor: pointer; border-radius: var(--radius);">Kopieren</button>
         </div>
         <p id="copy-feedback" style="color: var(--accent-secondary); font-size: 0.8rem; margin-top: 0.5rem; display: none;">✓ Link kopiert!</p>
       </div>
@@ -11142,7 +11140,7 @@
         <button onclick="createShareImage()" style="padding: 0.5rem 1rem; background: var(--bg-tertiary); border: 1px solid var(--border); color: var(--text-primary); cursor: pointer; border-radius: var(--radius);">🖼️ Screenshot erstellen</button>
       </div>
       
-      <button onclick="closeShareModal()" style="margin-top: 1.5rem; padding: 0.5rem 1rem; background: var(--accent); border: none; color: #fff; cursor: pointer; border-radius: var(--radius);">Schließen</button>
+      <button onclick="closeShareModal()" style="margin-top: 1.5rem; padding: 0.5rem 1rem; background: var(--accent); border: none; color: var(--text-primary); cursor: pointer; border-radius: var(--radius);">Schließen</button>
     </div>
   </div>
   
@@ -11226,7 +11224,7 @@
         <div class="legende-section">
           <div class="legende-section-titel">⚪ Kleine weiße Kugeln = Personen (Nachname)</div>
           <div class="legende-item"><div class="legende-kugel" style="background: #fff; width: 10px; height: 10px; border: 1px solid #666;"></div> Denker*innen & Aktivist*innen</div>
-          <div style="font-size: 0.65rem; color: #888; margin-top: 0.3rem;">
+          <div style="font-size: 0.65rem; color: var(--text-muted); margin-top: 0.3rem;">
             Filter "👤 Personen" + "🌀 Epoche" aktivieren<br>
             → Netzwerk wächst historisch von 1840-2025
           </div>
@@ -11249,7 +11247,7 @@
             <span>kalt</span>
             <span>heiß</span>
           </div>
-          <div style="font-size: 0.65rem; color: #888; margin-top: 0.3rem;">
+          <div style="font-size: 0.65rem; color: var(--text-muted); margin-top: 0.3rem;">
             Größe = Relevanz in aktuellen Debatten
           </div>
         </div>
@@ -11265,7 +11263,7 @@
             <div class="legende-linie orange" style="opacity: 0.5;"></div>
             <span>Spannung/Widerspruch</span>
           </div>
-          <div style="font-size: 0.65rem; color: #888; margin-top: 0.3rem;">
+          <div style="font-size: 0.65rem; color: var(--text-muted); margin-top: 0.3rem;">
             Klick auf Linie für Details
           </div>
         </div>
@@ -11368,7 +11366,7 @@
         <span>kalt</span>
         <span>heiß</span>
       </div>
-      <div style="font-size: 0.65rem; color: #888; margin-top: 0.3rem;">
+      <div style="font-size: 0.65rem; color: var(--text-muted); margin-top: 0.3rem;">
         Größe = Relevanz in aktuellen Debatten
       </div>
     </div>
@@ -11379,7 +11377,7 @@
         <div class="legende-linie orange" style="border-style: dashed;"></div>
         <span>Historische Debatte</span>
       </div>
-      <div style="font-size: 0.65rem; color: #888; margin-top: 0.3rem;">
+      <div style="font-size: 0.65rem; color: var(--text-muted); margin-top: 0.3rem;">
         Orange = umstrittene Verbindung
       </div>
     </div>
@@ -13519,13 +13517,13 @@ function showReaktion(idA, idB) {
       ${analyse.direkteVerbindung ? `
         <div style="background: var(--bg-tertiary); padding: 1rem; border-radius: 4px; border-left: 3px solid ${analyse.direkteVerbindung.typ === 'debatte' ? '#FF9800' : '#4CAF50'};">
           <strong>${analyse.direkteVerbindung.typ === 'debatte' ? '⚔️ Debatte' : '🤝 Affinität'}</strong>
-          <p style="margin: 0.5rem 0 0 0; color: #aaa;">${analyse.direkteVerbindung.beschreibung || ''}</p>
+          <p style="margin: 0.5rem 0 0 0; color: var(--text-secondary);">${analyse.direkteVerbindung.beschreibung || ''}</p>
           <p style="margin: 0.5rem 0 0 0; font-size: 0.85rem;">Stärke: ${Math.round(analyse.direkteVerbindung.staerke * 100)}%</p>
         </div>
       ` : `
         <div style="background: var(--bg-tertiary); padding: 1rem; border-radius: 4px; border-left: 3px solid #666;">
           <strong>Keine direkte Verbindung dokumentiert</strong>
-          ${analyse.pfad ? `<p style="margin: 0.5rem 0 0 0; color: #888; font-size: 0.85rem;">
+          ${analyse.pfad ? `<p style="margin: 0.5rem 0 0 0; color: var(--text-muted); font-size: 0.85rem;">
             Pfad: ${analyse.pfad.map(id => knotenData[id]?.name || id).join(' → ')}
           </p>` : ''}
         </div>
@@ -13550,17 +13548,17 @@ function showReaktion(idA, idB) {
       <h2>Synthese / Spannung</h2>
       <p style="line-height: 1.6;">${synthese.text}</p>
       ${synthese.frage ? `
-        <div style="background: var(--bg-tertiary); padding: 0.75rem; border-left: 3px solid #FF9800; margin-top: 1rem; font-style: italic; color: #aaa;">
+        <div style="background: var(--bg-tertiary); padding: 0.75rem; border-left: 3px solid #FF9800; margin-top: 1rem; font-style: italic; color: var(--text-secondary);">
           ${synthese.frage}
         </div>
       ` : ''}
     </section>
     
     <div style="margin-top: 2rem; display: flex; gap: 0.5rem;">
-      <button onclick="showKnoten('${idA}')" style="flex: 1; background: var(--border); border: none; color: #fff; padding: 0.75rem; cursor: pointer; border-radius: 4px;">
+      <button onclick="showKnoten('${idA}')" style="flex: 1; background: var(--border); border: none; color: var(--text-primary); padding: 0.75rem; cursor: pointer; border-radius: 4px;">
         → ${a.name}
       </button>
-      <button onclick="showKnoten('${idB}')" style="flex: 1; background: var(--border); border: none; color: #fff; padding: 0.75rem; cursor: pointer; border-radius: 4px;">
+      <button onclick="showKnoten('${idB}')" style="flex: 1; background: var(--border); border: none; color: var(--text-primary); padding: 0.75rem; cursor: pointer; border-radius: 4px;">
         → ${b.name}
       </button>
     </div>
@@ -13719,7 +13717,7 @@ function initListe() {
   header.style.cssText = 'text-align: center; margin-bottom: 2rem;';
   header.innerHTML = `
     <h2 style="font-size: 1.5rem; font-weight: 300; color: #f5f5f5; margin-bottom: 0.5rem;">📋 Alphabetisches Verzeichnis</h2>
-    <p style="color: #888; font-size: 0.9rem;">Alle Positionen, Personen und Begriffe des linken Denkens</p>
+    <p style="color: var(--text-muted); font-size: 0.9rem;">Alle Positionen, Personen und Begriffe des linken Denkens</p>
   `;
   container.appendChild(header);
   
@@ -13845,9 +13843,9 @@ function initListe() {
     item.innerHTML = `
       <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.3rem;">
         <span style="font-size: 1rem; font-weight: 500; color: #f5f5f5;">${eintrag.displayName}</span>
-        <span style="font-size: 0.7rem; padding: 0.2rem 0.5rem; background: ${eintrag.typ === 'position' ? '#E53935' : '#2196F3'}; color: #fff; border-radius: 3px;">${eintrag.typ === 'position' ? 'POSITION' : 'PERSON'}</span>
+        <span style="font-size: 0.7rem; padding: 0.2rem 0.5rem; background: ${eintrag.typ === 'position' ? '#E53935' : '#2196F3'}; color: var(--text-primary); border-radius: 3px;">${eintrag.typ === 'position' ? 'POSITION' : 'PERSON'}</span>
       </div>
-      ${eintrag.beschreibung ? `<div style="font-size: 0.85rem; color: #aaa; line-height: 1.4;">${eintrag.beschreibung.substring(0, 120)}${eintrag.beschreibung.length > 120 ? '...' : ''}</div>` : ''}
+      ${eintrag.beschreibung ? `<div style="font-size: 0.85rem; color: var(--text-secondary); line-height: 1.4;">${eintrag.beschreibung.substring(0, 120)}${eintrag.beschreibung.length > 120 ? '...' : ''}</div>` : ''}
     `;
     
     item.onmouseover = () => { item.style.background = 'var(--bg-tertiary)'; item.style.transform = 'translateX(5px)'; };
@@ -14202,7 +14200,7 @@ function initKarte() {
   header.style.cssText = 'text-align: center; margin-bottom: 2rem;';
   header.innerHTML = `
     <h2 style="font-size: 1.5rem; font-weight: 300; color: #f5f5f5; margin-bottom: 0.5rem;">🗺️ Politischer Kompass der Linken</h2>
-    <p style="color: #888; font-size: 0.9rem;">Reform ↔ Revolution × Klasse ↔ Identität</p>
+    <p style="color: var(--text-muted); font-size: 0.9rem;">Reform ↔ Revolution × Klasse ↔ Identität</p>
   `;
   container.appendChild(header);
   
@@ -14212,19 +14210,19 @@ function initKarte() {
   legende.innerHTML = `
     <div style="display: flex; align-items: center; gap: 0.5rem; padding: 0.5rem 1rem; background: rgba(229,57,53,0.15); border-radius: 8px;">
       <div style="width: 14px; height: 14px; background: rgba(229,57,53,0.85); border-radius: 3px;"></div>
-      <span style="font-size: 0.8rem; color: #aaa;">Reform + Klasse</span>
+      <span style="font-size: 0.8rem; color: var(--text-secondary);">Reform + Klasse</span>
     </div>
     <div style="display: flex; align-items: center; gap: 0.5rem; padding: 0.5rem 1rem; background: rgba(136,14,79,0.15); border-radius: 8px;">
       <div style="width: 14px; height: 14px; background: rgba(136,14,79,0.85); border-radius: 3px;"></div>
-      <span style="font-size: 0.8rem; color: #aaa;">Revolution + Klasse</span>
+      <span style="font-size: 0.8rem; color: var(--text-secondary);">Revolution + Klasse</span>
     </div>
     <div style="display: flex; align-items: center; gap: 0.5rem; padding: 0.5rem 1rem; background: rgba(76,175,80,0.15); border-radius: 8px;">
       <div style="width: 14px; height: 14px; background: rgba(76,175,80,0.85); border-radius: 3px;"></div>
-      <span style="font-size: 0.8rem; color: #aaa;">Reform + Identität</span>
+      <span style="font-size: 0.8rem; color: var(--text-secondary);">Reform + Identität</span>
     </div>
     <div style="display: flex; align-items: center; gap: 0.5rem; padding: 0.5rem 1rem; background: rgba(156,39,176,0.15); border-radius: 8px;">
       <div style="width: 14px; height: 14px; background: rgba(156,39,176,0.85); border-radius: 3px;"></div>
-      <span style="font-size: 0.8rem; color: #aaa;">Revolution + Identität</span>
+      <span style="font-size: 0.8rem; color: var(--text-secondary);">Revolution + Identität</span>
     </div>
   `;
   container.appendChild(legende);
@@ -14239,11 +14237,11 @@ function initKarte() {
   // Achsenbeschriftungen - einfach und klar ohne Pfeile
   canvas.innerHTML = `
     <!-- X-Achse -->
-    <div style="position: absolute; left: 0; bottom: -2rem; font-size: 0.9rem; color: #aaa; font-weight: 500;">Reform</div>
-    <div style="position: absolute; right: 0; bottom: -2rem; font-size: 0.9rem; color: #aaa; font-weight: 500;">Revolution</div>
+    <div style="position: absolute; left: 0; bottom: -2rem; font-size: 0.9rem; color: var(--text-secondary); font-weight: 500;">Reform</div>
+    <div style="position: absolute; right: 0; bottom: -2rem; font-size: 0.9rem; color: var(--text-secondary); font-weight: 500;">Revolution</div>
     <!-- Y-Achse -->
-    <div style="position: absolute; left: -3.5rem; top: 0; font-size: 0.9rem; color: #aaa; transform: rotate(-90deg); transform-origin: right; font-weight: 500;">Klasse</div>
-    <div style="position: absolute; left: -3.5rem; bottom: 0; font-size: 0.9rem; color: #aaa; transform: rotate(-90deg); transform-origin: right; font-weight: 500;">Identität</div>
+    <div style="position: absolute; left: -3.5rem; top: 0; font-size: 0.9rem; color: var(--text-secondary); transform: rotate(-90deg); transform-origin: right; font-weight: 500;">Klasse</div>
+    <div style="position: absolute; left: -3.5rem; bottom: 0; font-size: 0.9rem; color: var(--text-secondary); transform: rotate(-90deg); transform-origin: right; font-weight: 500;">Identität</div>
     <!-- Mittellinien - durchsichtig für weniger visuelle Verwirrung -->
     <div style="position: absolute; left: 50%; top: 0; bottom: 0; width: 1px; background: rgba(255,255,255,0.05);"></div>
     <div style="position: absolute; top: 50%; left: 0; right: 0; height: 1px; background: rgba(255,255,255,0.05);"></div>
@@ -14355,7 +14353,7 @@ function initKarte() {
         padding: 0.5rem 0.7rem;
         border-radius: 8px;
         font-size: 0.7rem;
-        color: #fff;
+        color: var(--text-primary);
         cursor: pointer;
         white-space: nowrap;
         z-index: 1;
@@ -14389,7 +14387,7 @@ function initKarte() {
       top: -40px;
       transform: translateX(-50%);
       background: rgba(0,0,0,0.9);
-      color: #fff;
+      color: var(--text-primary);
       padding: 0.5rem 0.8rem;
       border-radius: 6px;
       font-size: 0.75rem;
@@ -14752,7 +14750,7 @@ function initBibliothek() {
           ${b.notiz ? `<div class="kontext" style="color: #4CAF50;">${b.notiz}</div>` : ''}
         </div>
         <div class="buch-meta">
-          <div style="color: #888;">${sterne}</div>
+          <div style="color: var(--text-muted);">${sterne}</div>
           ${b.url ? `<a href="${b.url}" target="_blank" onclick="event.stopPropagation();">Lesen →</a>` : ''}
         </div>
       </div>
@@ -14772,7 +14770,7 @@ function initBibliothek() {
           <div class="kontext">→ ${b.kontext}</div>
         </div>
         <div class="buch-meta">
-          <div style="color: #888;">${sterne}</div>
+          <div style="color: var(--text-muted);">${sterne}</div>
         </div>
       </div>
     `;
@@ -15084,7 +15082,7 @@ function showRandomKnoten() {
       ${zitat ? `
         <div class="zitat">
           "${zitat.text}"
-          <div style="font-size: 0.8rem; color: #888; margin-top: 0.5rem; font-style: normal;">— ${zitat.autor}</div>
+          <div style="font-size: 0.8rem; color: var(--text-muted); margin-top: 0.5rem; font-style: normal;">— ${zitat.autor}</div>
         </div>
       ` : ''}
       <button class="zufall-btn" onclick="showRandomKnoten()">🎲 Nächster Zufall</button>
@@ -15214,13 +15212,13 @@ function updateKosmos() {
     html += '<p style="color: #4CAF50; margin: 0.5rem 0;">🎯 Genau hier stehst du:</p>';
     html += '<div class="kosmos-nachbarn">';
     nahe.forEach(d => {
-      html += `<span class="kosmos-nachbar" onclick="showKnoten('${d.id}')" style="background: #4CAF50; color: #fff;">${d.name}</span>`;
+      html += `<span class="kosmos-nachbar" onclick="showKnoten('${d.id}')" style="background: #4CAF50; color: var(--text-primary);">${d.name}</span>`;
     });
     html += '</div>';
   }
   
   if (nah.length) {
-    html += '<p style="color: #aaa; margin: 1rem 0 0.5rem;">📍 Direkte Nachbarn:</p>';
+    html += '<p style="color: var(--text-secondary); margin: 1rem 0 0.5rem;">📍 Direkte Nachbarn:</p>';
     html += '<div class="kosmos-nachbarn">';
     nah.slice(0, 10).forEach(d => {
       html += `<span class="kosmos-nachbar" onclick="showKnoten('${d.id}')">${d.name}</span>`;
@@ -16965,7 +16963,7 @@ function renderProfilEditor(profil) {
   })).sort((a, b) => a.id.localeCompare(b.id));
   
   if (achsenListe.length === 0) {
-    return `<p style="color: #888; padding: 1rem;">Lade Achsen-Daten...</p>`;
+    return `<p style="color: var(--text-muted); padding: 1rem;">Lade Achsen-Daten...</p>`;
   }
   
   const links = achsenListe.slice(0, 13);
@@ -17007,7 +17005,7 @@ function renderSpeColumn(achsen, profil) {
     return `
       <div class="spe-row" data-achse="${achse.id}" style="padding:0.4rem 0.5rem;border-radius:5px;margin-bottom:0.35rem;${rowBg}">
         <div style="display:flex;align-items:center;gap:0.4rem;margin-bottom:0.3rem;">
-          <span style="font-size:0.55rem;color:#555;background:#111;padding:0.1rem 0.3rem;border-radius:3px;font-weight:600;">${achse.id}</span>
+          <span style="font-size:0.55rem;color:#555;background: var(--bg-tertiary);padding:0.1rem 0.3rem;border-radius:3px;font-weight:600;">${achse.id}</span>
           <span style="font-size:0.75rem;color:#aaa;">${achse.name}</span>
         </div>
         <div style="display:flex;gap:3px;">${btns}</div>
@@ -17052,7 +17050,7 @@ function updateProfilPosition(achse, pos) {
       btn.style.color = '#fff';
       btn.classList.add('sel');
     } else {
-      btn.style.background = '#1e1e2e';
+      btn.style.background = 'var(--bg-secondary)';
       btn.style.borderColor = 'var(--border)';
       btn.style.color = '#777';
       btn.classList.remove('sel');
@@ -18855,7 +18853,7 @@ function initOekosystem() {
   });
   
   let html = '<h2 style="color: #4CAF50; margin-bottom: 0.5rem;">🌿 Das Ökosystem des linken Denkens</h2>';
-  html += '<p style="color: #888; margin-bottom: 2rem;">Positionen als Arten. Wer dominiert das Ökosystem? Wer kämpft um Ressourcen? Wer lebt in Symbiose? Wer ist vom Aussterben bedroht?</p>';
+  html += '<p style="color: var(--text-muted); margin-bottom: 2rem;">Positionen als Arten. Wer dominiert das Ökosystem? Wer kämpft um Ressourcen? Wer lebt in Symbiose? Wer ist vom Aussterben bedroht?</p>';
   
   const zonen = [
     { titel: '🌳 Dominante Arten', beschreibung: 'Die großen Bäume des Waldes — stark vernetzt, prägen das Ökosystem', arten: dominant, klasse: 'dominant' },
@@ -18896,7 +18894,7 @@ function initOekosystem() {
     if (a && b) {
       html += `<div style="background: var(--bg-tertiary); padding: 0.75rem; border-radius: 4px; border-left: 3px solid #4CAF50;">
         <strong style="color: #4CAF50;">Symbiose:</strong> ${a.name} ↔ ${b.name}
-        <div style="color: #888; font-size: 0.8rem; margin-top: 0.25rem;">${v.beschreibung}</div>
+        <div style="color: var(--text-muted); font-size: 0.8rem; margin-top: 0.25rem;">${v.beschreibung}</div>
       </div>`;
     }
   });
@@ -18943,7 +18941,7 @@ function initChemie() {
   });
   
   let html = '<h2 style="color: #FF9800; margin-bottom: 0.5rem;">⚗️ Das Labor der Ideen</h2>';
-  html += '<p style="color: #888; margin-bottom: 2rem;">Positionen als chemische Elemente. Manche reagieren heftig miteinander, manche sind stabil, manche katalysieren Verbindungen.</p>';
+  html += '<p style="color: var(--text-muted); margin-bottom: 2rem;">Positionen als chemische Elemente. Manche reagieren heftig miteinander, manche sind stabil, manche katalysieren Verbindungen.</p>';
   
   // Legende
   html += `<div style="display: flex; gap: 1rem; margin-bottom: 1.5rem; flex-wrap: wrap;">
@@ -18990,7 +18988,7 @@ function initChemie() {
   html += '</div>';
   
   // Interaktiver Hinweis
-  html += `<div style="margin-top: 2rem; padding: 1rem; background: var(--bg-tertiary); border-radius: 8px; color: #888;">
+  html += `<div style="margin-top: 2rem; padding: 1rem; background: var(--bg-tertiary); border-radius: 8px; color: var(--text-muted);">
     <strong style="color: #FF9800;">💡 Tipp:</strong> Gehe zum 3D-Netzwerk und ziehe zwei Elemente aufeinander, um ihre Reaktion zu analysieren.
   </div>`;
   
@@ -19049,7 +19047,7 @@ function initEpochen() {
   ];
   
   let html = '<h2 style="color: #E53935; margin-bottom: 0.5rem;">🌀 Epochen des linken Denkens</h2>';
-  html += '<p style="color: #888; margin-bottom: 2rem;">Dasselbe Haus in verschiedenen historischen Momenten. Wer war schon da? Wer wurde gerade geboren? Wer ist verschwunden?</p>';
+  html += '<p style="color: var(--text-muted); margin-bottom: 2rem;">Dasselbe Haus in verschiedenen historischen Momenten. Wer war schon da? Wer wurde gerade geboren? Wer ist verschwunden?</p>';
   
   html += '<div class="epochen-nav">';
   epochen.forEach((ep, i) => {
@@ -19077,7 +19075,7 @@ function showEpoche(id) {
   
   let html = `<h3>${ep.name}</h3>`;
   html += `<p>${ep.beschreibung}</p>`;
-  html += `<div style="background: var(--bg-primary); padding: 1rem; border-radius: 4px; margin: 1rem 0; font-style: italic; color: #888; border-left: 3px solid #E53935;">"${ep.geist}"</div>`;
+  html += `<div style="background: var(--bg-primary); padding: 1rem; border-radius: 4px; margin: 1rem 0; font-style: italic; color: var(--text-muted); border-left: 3px solid #E53935;">"${ep.geist}"</div>`;
   
   if (ep.geboren && ep.geboren.length > 0) {
     html += '<p style="color: #4CAF50; margin-top: 1.5rem;"><strong>🌱 In dieser Zeit geboren:</strong></p>';
@@ -19261,12 +19259,12 @@ function initDialoge() {
   ];
   
   let html = '<h2 style="color: #2196F3; margin-bottom: 0.5rem;">🗣️ Imaginäre Dialoge</h2>';
-  html += '<p style="color: #888; margin-bottom: 2rem;">Gespräche, die so nie stattfanden — aber hätten stattfinden können.</p>';
+  html += '<p style="color: var(--text-muted); margin-bottom: 2rem;">Gespräche, die so nie stattfanden — aber hätten stattfinden können.</p>';
   
   dialoge.forEach(d => {
     html += '<div class="dialog-box">';
     html += `<div class="dialog-header">
-      <h3 style="color: #fff; margin: 0;">${d.titel}</h3>
+      <h3 style="color: var(--text-primary); margin: 0;">${d.titel}</h3>
       <div>
         <span class="dialog-sprecher links" onclick="showKnoten('${d.sprecher1.position}')">${d.sprecher1.name}</span>
         <span style="color: #666; margin: 0 0.5rem;">vs.</span>
@@ -19286,7 +19284,7 @@ function initDialoge() {
     html += '</div>';
   });
   
-  html += `<div style="margin-top: 1rem; padding: 1rem; background: var(--bg-tertiary); border-radius: 8px; color: #888; max-width: 600px; margin-left: auto; margin-right: auto;">
+  html += `<div style="margin-top: 1rem; padding: 1rem; background: var(--bg-tertiary); border-radius: 8px; color: var(--text-muted); max-width: 600px; margin-left: auto; margin-right: auto;">
     <strong style="color: #2196F3;">📝 Hinweis:</strong> Diese Dialoge sind fiktiv, aber basieren auf realen Positionen und Argumenten. Sie dienen der Veranschaulichung, nicht der historischen Dokumentation.
   </div>`;
   
@@ -19327,7 +19325,7 @@ function initZitate() {
   };
   
   let html = '<h2 style="color: #FF9800; margin-bottom: 0.5rem;">💬 Zitate-Sammlung</h2>';
-  html += '<p style="color: #888; margin-bottom: 2rem;">Die Stimmen des linken Denkens — thematisch sortiert.</p>';
+  html += '<p style="color: var(--text-muted); margin-bottom: 2rem;">Die Stimmen des linken Denkens — thematisch sortiert.</p>';
   
   // Zufällige Auswahl wenn zu viele
   const shuffled = alleZitate.sort(() => Math.random() - 0.5);
@@ -19349,7 +19347,7 @@ function initZitate() {
   
   html += `<div style="margin-top: 1rem; text-align: center; color: #666;">
     ${alleZitate.length} Zitate aus ${Object.keys(knotenData).length} Positionen
-    <br><button onclick="initZitate()" style="margin-top: 0.5rem; background: var(--border); border: none; color: #aaa; padding: 0.5rem 1rem; cursor: pointer; border-radius: 4px;">🎲 Neue Auswahl</button>
+    <br><button onclick="initZitate()" style="margin-top: 0.5rem; background: var(--border); border: none; color: var(--text-secondary); padding: 0.5rem 1rem; cursor: pointer; border-radius: 4px;">🎲 Neue Auswahl</button>
   </div>`;
   
   container.innerHTML = html;
@@ -19426,7 +19424,7 @@ function initFieber() {
   }).sort((a, b) => b.temp - a.temp);
   
   let html = '<h2 style="color: #f44336; margin-bottom: 0.5rem;">🌡️ Fieberkurve des linken Denkens</h2>';
-  html += '<p style="color: #888; margin-bottom: 2rem;">Was wird gerade heiß diskutiert? Basierend auf Vernetzung und aktuellen Debatten.</p>';
+  html += '<p style="color: var(--text-muted); margin-bottom: 2rem;">Was wird gerade heiß diskutiert? Basierend auf Vernetzung und aktuellen Debatten.</p>';
   
   // Legende
   html += `<div style="display: flex; gap: 2rem; margin-bottom: 2rem; justify-content: center;">
@@ -19459,7 +19457,7 @@ function initFieber() {
   const heiss = temperaturen.filter(t => t.temp >= 60).length;
   const kalt = temperaturen.filter(t => t.temp < 10).length;
   
-  html += `<div style="margin-top: 2rem; padding: 1rem; background: var(--bg-tertiary); border-radius: 8px; color: #888; max-width: 600px; margin-left: auto; margin-right: auto;">
+  html += `<div style="margin-top: 2rem; padding: 1rem; background: var(--bg-tertiary); border-radius: 8px; color: var(--text-muted); max-width: 600px; margin-left: auto; margin-right: auto;">
     <strong style="color: #f44336;">Diagnose:</strong> ${heiss} heiße Positionen, ${kalt} kalte. 
     Die heißesten Debatten finden um Grundfragen von Subjekt, Staat und Transformation statt.
   </div>`;
@@ -19860,7 +19858,7 @@ function initPersonen() {
   // Wenn noch keine Daten, erst laden
   if (personenData.length === 0) {
     container.innerHTML = `
-      <div style="text-align: center; padding: 3rem; color: #888;">
+      <div style="text-align: center; padding: 3rem; color: var(--text-muted);">
         <div style="font-size: 2rem; margin-bottom: 1rem;">⏳</div>
         <div>Lade Personen-Daten...</div>
       </div>
@@ -19888,7 +19886,7 @@ function initPersonen() {
   };
   
   let html = '<h2 style="color: #9C27B0; margin-bottom: 0.5rem; text-align: center;">👤 Die Bewohner*innen des Hauses</h2>';
-  html += '<p style="color: #888; margin-bottom: 1.5rem; text-align: center;">Wer denkt, streitet und arbeitet hier?</p>';
+  html += '<p style="color: var(--text-muted); margin-bottom: 1.5rem; text-align: center;">Wer denkt, streitet und arbeitet hier?</p>';
   
   // Filter
   html += '<div class="personen-filter">';
@@ -19950,7 +19948,7 @@ function showPerson(id) {
   const idToName = (bid) => {
     const b = personenData.find(x => x.id === bid);
     if (b) {
-      return `<span style="cursor: pointer; text-decoration: underline; color: #aaa;" onclick="showPerson('${bid}')">${b.name}</span>`;
+      return `<span style="cursor: pointer; text-decoration: underline; color: var(--text-secondary);" onclick="showPerson('${bid}')">${b.name}</span>`;
     } else {
       // ID zu lesbarem Namen konvertieren (z.B. "von_parijs" → "Von Parijs")
       const readable = bid.split('_').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ');
@@ -19977,7 +19975,7 @@ function showPerson(id) {
     <h3 style="color: #FF9800; font-size: 0.9rem; margin-bottom: 0.5rem;">💬 Zitate:</h3>
     <div style="margin-bottom: 1.5rem;">
       ${p.zitate.slice(0, 2).map(z => `
-        <blockquote style="border-left: 2px solid #FF9800; padding-left: 1rem; margin: 0.5rem 0; color: #ccc; font-style: italic;">
+        <blockquote style="border-left: 2px solid #FF9800; padding-left: 1rem; margin: 0.5rem 0; color: var(--text-secondary); font-style: italic;">
           "${z.text}"
           <footer style="color: #666; font-size: 0.8rem; font-style: normal; margin-top: 0.3rem;">— ${z.quelle}${z.jahr ? ` (${z.jahr})` : ''}</footer>
         </blockquote>
@@ -19988,7 +19986,7 @@ function showPerson(id) {
   // Werke HTML
   const werkeHtml = p.hauptwerke && p.hauptwerke.length > 0 ? `
     <h3 style="color: #2196F3; font-size: 0.9rem; margin-bottom: 0.5rem;">📚 Hauptwerke:</h3>
-    <div style="margin-bottom: 1.5rem; color: #aaa; font-size: 0.85rem;">
+    <div style="margin-bottom: 1.5rem; color: var(--text-secondary); font-size: 0.85rem;">
       ${p.hauptwerke.slice(0, 4).map(w => `<div>• ${w.titel} (${w.jahr})</div>`).join('')}
     </div>
   ` : '';
@@ -19996,7 +19994,7 @@ function showPerson(id) {
   // Beeinflusst von HTML
   const beeinflusstVonHtml = p.beeinflusst_von && p.beeinflusst_von.length > 0 ? `
     <h3 style="color: #9C27B0; font-size: 0.9rem; margin-bottom: 0.5rem;">← Beeinflusst von:</h3>
-    <div style="color: #888; margin-bottom: 1rem; font-size: 0.85rem;">
+    <div style="color: var(--text-muted); margin-bottom: 1rem; font-size: 0.85rem;">
       ${p.beeinflusst_von.map(idToName).join(', ')}
     </div>
   ` : '';
@@ -20004,7 +20002,7 @@ function showPerson(id) {
   // Beeinflusste HTML
   const beeinflussteHtml = p.beeinflusst && p.beeinflusst.length > 0 ? `
     <h3 style="color: #4CAF50; font-size: 0.9rem; margin-bottom: 0.5rem;">→ Beeinflusste:</h3>
-    <div style="color: #888; margin-bottom: 1rem; font-size: 0.85rem;">
+    <div style="color: var(--text-muted); margin-bottom: 1rem; font-size: 0.85rem;">
       ${p.beeinflusst.map(idToName).join(', ')}
     </div>
   ` : '';
@@ -20012,7 +20010,7 @@ function showPerson(id) {
   // Debattierte mit HTML
   const debattenHtml = p.debattiert_mit && p.debattiert_mit.length > 0 ? `
     <h3 style="color: #f44336; font-size: 0.9rem; margin-bottom: 0.5rem;">⚔️ Debattierte mit:</h3>
-    <div style="color: #888; margin-bottom: 1rem; font-size: 0.85rem;">
+    <div style="color: var(--text-muted); margin-bottom: 1rem; font-size: 0.85rem;">
       ${p.debattiert_mit.map(idToName).join(', ')}
     </div>
   ` : '';
@@ -20020,20 +20018,20 @@ function showPerson(id) {
   // Tags HTML
   const tagsHtml = p.tags && p.tags.length > 0 ? `
     <div style="display: flex; flex-wrap: wrap; gap: 0.3rem; margin-top: 1rem;">
-      ${p.tags.map(t => `<span style="background: var(--border); color: #888; padding: 0.2rem 0.5rem; border-radius: 3px; font-size: 0.7rem;">#${t}</span>`).join('')}
+      ${p.tags.map(t => `<span style="background: var(--border); color: var(--text-muted); padding: 0.2rem 0.5rem; border-radius: 3px; font-size: 0.7rem;">#${t}</span>`).join('')}
     </div>
   ` : '';
   
   detail.innerHTML = `
     <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 1rem;">
       <div>
-        <h2 style="color: #fff; margin: 0;">${p.name}</h2>
+        <h2 style="color: var(--text-primary); margin: 0;">${p.name}</h2>
         <div style="color: #666;">${lebenStr} ${lebt ? '🟢' : ''} ${p.herkunft ? `· ${p.herkunft}` : ''}</div>
       </div>
       <button onclick="this.closest('.person-detail').remove(); document.querySelector('.person-overlay').remove();" style="background: none; border: none; color: #666; font-size: 1.5rem; cursor: pointer;">×</button>
     </div>
     
-    <p style="color: #aaa; line-height: 1.6; margin-bottom: 1.5rem;">${p.bio}</p>
+    <p style="color: var(--text-secondary); line-height: 1.6; margin-bottom: 1.5rem;">${p.bio}</p>
     
     ${zitateHtml}
     
@@ -21102,13 +21100,13 @@ function showWelcomeBanner(zimmer, knoten, archetyp) {
       <div style="display: flex; align-items: center; gap: 1rem;">
         <span style="font-size: 2rem;">🏠</span>
         <div style="flex: 1;">
-          <div style="color: #fff; font-weight: 700; font-size: 1.1rem; margin-bottom: 0.25rem;">
+          <div style="color: var(--text-primary); font-weight: 700; font-size: 1.1rem; margin-bottom: 0.25rem;">
             Willkommen in deinem Zimmer!
           </div>
           <div style="color: #AAA; font-size: 0.9rem;">
             ${zimmer}
           </div>
-          <div style="color: #888; font-size: 0.8rem; margin-top: 0.5rem;">
+          <div style="color: var(--text-muted); font-size: 0.8rem; margin-top: 0.5rem;">
             Deine Positionen: ${knoten.join(' · ')}
           </div>
         </div>
@@ -22347,10 +22345,10 @@ function openReaktor(idA, idB) {
     const v = analyse.direkteVerbindung;
     const typ = v.typ === 'debatte' ? 'debatte' : 'direkt';
     html += `<div class="reaktor-verbindung ${typ}">`;
-    html += `<div style="font-size: 1.1rem; color: #fff; margin-bottom: 0.5rem;">`;
+    html += `<div style="font-size: 1.1rem; color: var(--text-primary); margin-bottom: 0.5rem;">`;
     html += v.typ === 'debatte' ? '⚔️ Debatte' : '🤝 Affinität';
     html += `</div>`;
-    html += `<div style="font-size: 0.9rem; color: #aaa;">${v.beschreibung || ''}</div>`;
+    html += `<div style="font-size: 0.9rem; color: var(--text-secondary);">${v.beschreibung || ''}</div>`;
     html += `<div style="margin-top: 0.5rem;">`;
     html += `<span style="color: ${v.staerke > 0.7 ? '#4CAF50' : v.staerke > 0.4 ? '#FF9800' : '#f44336'};">`;
     html += `Stärke: ${Math.round(v.staerke * 100)}%</span>`;
@@ -22358,7 +22356,7 @@ function openReaktor(idA, idB) {
     html += `</div>`;
   } else {
     html += `<div class="reaktor-verbindung keine">`;
-    html += `<div style="color: #888;">Keine direkte Verbindung dokumentiert</div>`;
+    html += `<div style="color: var(--text-muted);">Keine direkte Verbindung dokumentiert</div>`;
     html += `<div style="font-size: 0.8rem; color: #666; margin-top: 0.5rem;">`;
     html += `Achsen-Distanz: ${analyse.achsenDistanz !== null ? analyse.achsenDistanz + ' Schritte' : 'verschiedene Achsen'}`;
     html += `</div>`;
@@ -22386,8 +22384,8 @@ function openReaktor(idA, idB) {
   // Kürzester Pfad
   if (analyse.pfad && analyse.pfad.length > 2) {
     html += `<div style="margin-top: 1rem; padding-top: 1rem; border-top: 1px solid var(--border);">`;
-    html += `<div style="font-size: 0.75rem; color: #888; margin-bottom: 0.5rem;">Kürzester Pfad (${analyse.pfad.length - 1} Schritte):</div>`;
-    html += `<div style="font-size: 0.85rem; color: #aaa;">`;
+    html += `<div style="font-size: 0.75rem; color: var(--text-muted); margin-bottom: 0.5rem;">Kürzester Pfad (${analyse.pfad.length - 1} Schritte):</div>`;
+    html += `<div style="font-size: 0.85rem; color: var(--text-secondary);">`;
     html += analyse.pfad.map(id => knotenData[id]?.name || id).join(' → ');
     html += `</div></div>`;
   }
@@ -22407,8 +22405,8 @@ function openReaktor(idA, idB) {
   // Gemeinsame Bewohner
   if (analyse.gemeinsamePersonen.length > 0) {
     html += `<div style="margin-top: 1rem; font-size: 0.85rem;">`;
-    html += `<span style="color: #888;">Personen in beiden:</span> `;
-    html += `<span style="color: #ccc;">${analyse.gemeinsamePersonen.join(', ')}</span>`;
+    html += `<span style="color: var(--text-muted);">Personen in beiden:</span> `;
+    html += `<span style="color: var(--text-secondary);">${analyse.gemeinsamePersonen.join(', ')}</span>`;
     html += `</div>`;
   }
   
