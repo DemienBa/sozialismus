@@ -11473,33 +11473,35 @@ let personSpheresCreated = false; // Flag ob Personen-Sphären schon erstellt wu
 // DIE 26 ACHSEN - Definition für das neue System
 // ═══════════════════════════════════════════════════════════════
 
+// KORRIGIERT: Alle pole-Arrays jetzt in richtiger Reihenfolge (Position 1→5)
+// pol_0 und pol_1 bleiben für Rückwärtskompatibilität, aber pole-Arrays sind jetzt korrekt
 window.achsenMeta = {
-  '00': { id: '00', name: 'Reform/Revolution', kurzname: 'Strategie', pol_0: 'Revolution', pol_1: 'Reform', stockwerk: 'dachgeschoss', pole: ['Revolution', 'Hegemonie', 'Doppelstrategie', 'Strukturref.', 'Strikte Reform'] },
-  '01': { id: '01', name: 'Eigentum', kurzname: 'Eigentum', pol_0: 'Staatsbesitz', pol_1: 'Commons', stockwerk: 'erdgeschoss', pole: ['Staatsbesitz', 'Öffentlich', 'Plurale Formen', 'Genossenschaften', 'Commons'] },
-  '02': { id: '02', name: 'Planung', kurzname: 'Planung', pol_0: 'Vollplanung', pol_1: 'Reg. Markt', stockwerk: 'erdgeschoss', pole: ['Vollplanung', 'Demokrat. Plan', 'Marktsozialismus', 'Gemischt', 'Reg. Markt'] },
-  '03': { id: '03', name: 'Sozialstaat', kurzname: 'Soziales', pol_0: 'BGE', pol_1: 'Aktivierend', stockwerk: 'erster_stock', pole: ['BGE', 'Sanktionsfrei', 'Garantiert', 'Modernisiert', 'Aktivierend'] },
-  '04': { id: '04', name: 'Steuern', kurzname: 'Steuern', pol_0: 'Radikal', pol_1: 'Moderat', stockwerk: 'erster_stock', pole: ['Radikal', 'Vermögensst.', 'Progressiv', 'Moderat', 'Niedrig'] },
-  '05': { id: '05', name: 'Wohnen', kurzname: 'Wohnen', pol_0: 'Enteignung', pol_1: 'Markt', stockwerk: 'erdgeschoss', pole: ['Dekommodifiz.', 'Öffentlich', 'Mietregulierung', 'Mehr bauen', 'Markt'] },
-  '06': { id: '06', name: 'Gesundheit', kurzname: 'Gesundheit', pol_0: 'Öffentlich', pol_1: 'Privat', stockwerk: 'erster_stock', pole: ['Voll öffentlich', 'Bürgerversich.', 'Krankenkasse', 'Wettbewerb', 'Privat'] },
-  '07': { id: '07', name: 'Bildung', kurzname: 'Bildung', pol_0: 'Radikal', pol_1: 'Vielfalt', stockwerk: 'erster_stock', pole: ['Radikal demokr.', 'Gesamtschule', 'Kostenlos', 'Reform', 'Vielfalt'] },
-  '08': { id: '08', name: 'Ökologie', kurzname: 'Ökologie', pol_0: 'Ökomodernismus', pol_1: 'Tiefenökologie', stockwerk: 'souterrain', pole: ['Ökomodernismus', 'Grüner Soz.', 'Ökosozialismus', 'Degrowth', 'Tiefenökologie'] },
-  '09': { id: '09', name: 'Feminismus', kurzname: 'Feminismus', pol_0: 'Klassenfem.', pol_1: 'Radikal', stockwerk: 'souterrain', pole: ['Klassenfem.', 'Sozialist.', 'Reprod.-Theorie', 'Intersekt.', 'Radikal'] },
-  '10': { id: '10', name: 'Antirassismus', kurzname: 'Antira', pol_0: 'Klassenkampf', pol_1: 'Eigenständig', stockwerk: 'souterrain', pole: ['Klassenkampf', 'Klasse+Anti', 'Strukturell', 'Dekolonial', 'Eigenständig'] },
-  '11': { id: '11', name: 'Technologie', kurzname: 'Tech', pol_0: 'Skepsis', pol_1: 'Akzeleration', stockwerk: 'souterrain', pole: ['Tech-Skepsis', 'Demokratisieren', 'Aneignen', 'Optimismus', 'Akzeleration'] },
-  '12': { id: '12', name: 'Demokratie', kurzname: 'Demokratie', pol_0: 'Rätedemokratie', pol_1: 'Parlament', stockwerk: 'erster_stock', pole: ['Rätedemokratie', 'Basisdemo', 'Radikal', 'Erweitert', 'Parlament'] },
-  '13': { id: '13', name: 'Aktionsformen', kurzname: 'Aktion', pol_0: 'Militanz', pol_1: 'Legal', stockwerk: 'keller', pole: ['Militanz', 'Direkte Aktion', 'Ziv. Ungehorsam', 'Symbolisch', 'Nur legal'] },
-  '14': { id: '14', name: 'Kulturkampf', kurzname: 'Kultur', pol_0: 'Klasse zuerst', pol_1: 'Identität', stockwerk: 'dachgeschoss', pole: ['Klasse zuerst', 'Klasse+', 'Verbindend', 'Intersekt.', 'Identität'] },
-  '15': { id: '15', name: 'EU', kurzname: 'EU', pol_0: 'Lexit', pol_1: 'Föd. Europa', stockwerk: 'keller', pole: ['Lexit', 'Dagegen kämpfen', 'Demokratisieren', 'Soziales Europa', 'Föd. Europa'] },
-  '16': { id: '16', name: 'Arbeit', kurzname: 'Arbeit', pol_0: 'Vollbesch.', pol_1: 'Post-Work', stockwerk: 'erdgeschoss', pole: ['Vollbesch.', 'Gute Arbeit', 'AZ-Verkürzung', 'Grundeinkommen', 'Post-Work'] },
-  '17': { id: '17', name: 'Wachstum', kurzname: 'Wachstum', pol_0: 'Degrowth', pol_1: 'Grün. Wachstum', stockwerk: 'dachgeschoss', pole: ['Degrowth', 'Post-Wachstum', 'Selektiv', 'Nachhaltig', 'Grün. Wachstum'] },
-  '18': { id: '18', name: 'Nahost', kurzname: 'Nahost', pol_0: 'Pro-Palästina', pol_1: 'Pro-Israel', stockwerk: 'keller', pole: ['Pro-Palästina', 'Pal.-solidarisch', 'Völkerrecht', 'Israel-solid.', 'Pro-Israel'] },
-  '19': { id: '19', name: 'Migration', kurzname: 'Migration', pol_0: 'Link. Nation.', pol_1: 'No Border', stockwerk: 'keller', pole: ['Link. Nation.', 'International', 'Proletarisch', 'Antiimperial.', 'No Border'] },
-  '20': { id: '20', name: 'Digitalität', kurzname: 'Digital', pol_0: 'Commons', pol_1: 'Regulierung', stockwerk: 'erdgeschoss', pole: ['Dig. Commons', 'Plattform-Soz.', 'Starke Regul.', 'Datensouverän.', 'Lib. Regulierung'] },
-  '21': { id: '21', name: 'Care', kurzname: 'Care', pol_0: 'Vergesellsch.', pol_1: 'Familie', stockwerk: 'souterrain', pole: ['Vergesellsch.', 'Öffentlich', 'Aufwerten', 'Flexibel', 'Familie'] },
-  '22': { id: '22', name: 'Land/Stadt', kurzname: 'Land/Stadt', pol_0: 'Dezentral', pol_1: 'Urban', stockwerk: 'keller', pole: ['Dezentral', 'Gleichwertig', 'Beide stärken', 'Städte progressiv', 'Urban'] },
-  '23': { id: '23', name: 'Geschichte', kurzname: 'Geschichte', pol_0: 'Kritisch', pol_1: 'Verteidigen', stockwerk: 'dachgeschoss', pole: ['Kritisch', 'Differenziert', 'Pragmatisch', 'Gegen Angriffe', 'Verteidigen'] },
-  '24': { id: '24', name: 'Geopolitik', kurzname: 'Geopolitik', pol_0: 'Anti-West', pol_1: 'Pro-West', stockwerk: 'dachgeschoss', pole: ['Anti-Hegemonie', 'Alle Imperien', 'Antimilitarist.', 'Demokratien', 'Pro-West'] },
-  '25': { id: '25', name: 'Spiritualität', kurzname: 'Zukunft', pol_0: 'Pessimismus', pol_1: 'Utopie', stockwerk: 'dachgeschoss', pole: ['Pessimismus', 'Krit. Realismus', 'Dialektisch', 'Revolutionär', 'Utopie'] }
+  '00': { id: '00', name: 'Reform/Revolution', kurzname: 'Strategie', pol_0: 'Reform', pol_1: 'Revolution', stockwerk: 'dachgeschoss', pole: ['Strikte Reform', 'Strukturref.', 'Doppelstrategie', 'Hegemonie', 'Revolution'] },
+  '01': { id: '01', name: 'Eigentum', kurzname: 'Eigentum', pol_0: 'Commons', pol_1: 'Staatsbesitz', stockwerk: 'erdgeschoss', pole: ['Commons', 'Genossenschaften', 'Plurale Formen', 'Öffentlich', 'Staatsbesitz'] },
+  '02': { id: '02', name: 'Planung', kurzname: 'Planung', pol_0: 'Reg. Markt', pol_1: 'Vollplanung', stockwerk: 'erdgeschoss', pole: ['Reg. Markt', 'Gemischt', 'Marktsozialismus', 'Demokrat. Plan', 'Vollplanung'] },
+  '03': { id: '03', name: 'Sozialstaat', kurzname: 'Soziales', pol_0: 'Aktivierend', pol_1: 'BGE', stockwerk: 'erster_stock', pole: ['Aktivierend', 'Modernisiert', 'Garantiert', 'Sanktionsfrei', 'BGE'] },
+  '04': { id: '04', name: 'Steuern', kurzname: 'Steuern', pol_0: 'Niedrig', pol_1: 'Radikal', stockwerk: 'erster_stock', pole: ['Niedrig', 'Moderat', 'Progressiv', 'Vermögensst.', 'Radikal'] },
+  '05': { id: '05', name: 'Wohnen', kurzname: 'Wohnen', pol_0: 'Markt', pol_1: 'Enteignung', stockwerk: 'erdgeschoss', pole: ['Markt', 'Mehr bauen', 'Mietregulierung', 'Öffentlich', 'Dekommodifiz.'] },
+  '06': { id: '06', name: 'Gesundheit', kurzname: 'Gesundheit', pol_0: 'Privat', pol_1: 'Öffentlich', stockwerk: 'erster_stock', pole: ['Privat', 'Wettbewerb', 'Krankenkasse', 'Bürgerversich.', 'Voll öffentlich'] },
+  '07': { id: '07', name: 'Bildung', kurzname: 'Bildung', pol_0: 'Vielfalt', pol_1: 'Radikal', stockwerk: 'erster_stock', pole: ['Vielfalt', 'Reform', 'Kostenlos', 'Gesamtschule', 'Radikal demokr.'] },
+  '08': { id: '08', name: 'Ökologie', kurzname: 'Ökologie', pol_0: 'Tiefenökologie', pol_1: 'Ökomodernismus', stockwerk: 'souterrain', pole: ['Tiefenökologie', 'Degrowth', 'Ökosozialismus', 'Grüner Soz.', 'Ökomodernismus'] },
+  '09': { id: '09', name: 'Feminismus', kurzname: 'Feminismus', pol_0: 'Radikal', pol_1: 'Klassenfem.', stockwerk: 'souterrain', pole: ['Radikal', 'Intersekt.', 'Reprod.-Theorie', 'Sozialist.', 'Klassenfem.'] },
+  '10': { id: '10', name: 'Antirassismus', kurzname: 'Antira', pol_0: 'Eigenständig', pol_1: 'Klassenkampf', stockwerk: 'souterrain', pole: ['Eigenständig', 'Dekolonial', 'Strukturell', 'Klasse+Anti', 'Klassenkampf'] },
+  '11': { id: '11', name: 'Technologie', kurzname: 'Tech', pol_0: 'Akzeleration', pol_1: 'Skepsis', stockwerk: 'souterrain', pole: ['Akzeleration', 'Optimismus', 'Aneignen', 'Demokratisieren', 'Tech-Skepsis'] },
+  '12': { id: '12', name: 'Demokratie', kurzname: 'Demokratie', pol_0: 'Parlament', pol_1: 'Rätedemokratie', stockwerk: 'erster_stock', pole: ['Parlament', 'Erweitert', 'Radikal', 'Basisdemo', 'Rätedemokratie'] },
+  '13': { id: '13', name: 'Aktionsformen', kurzname: 'Aktion', pol_0: 'Legal', pol_1: 'Militanz', stockwerk: 'keller', pole: ['Nur legal', 'Symbolisch', 'Ziv. Ungehorsam', 'Direkte Aktion', 'Militanz'] },
+  '14': { id: '14', name: 'Kulturkampf', kurzname: 'Kultur', pol_0: 'Identität', pol_1: 'Klasse zuerst', stockwerk: 'dachgeschoss', pole: ['Identität', 'Intersekt.', 'Verbindend', 'Klasse+', 'Klasse zuerst'] },
+  '15': { id: '15', name: 'EU', kurzname: 'EU', pol_0: 'Föd. Europa', pol_1: 'Lexit', stockwerk: 'keller', pole: ['Föd. Europa', 'Soziales Europa', 'Demokratisieren', 'Dagegen kämpfen', 'Lexit'] },
+  '16': { id: '16', name: 'Arbeit', kurzname: 'Arbeit', pol_0: 'Post-Work', pol_1: 'Vollbesch.', stockwerk: 'erdgeschoss', pole: ['Post-Work', 'Grundeinkommen', 'AZ-Verkürzung', 'Gute Arbeit', 'Vollbesch.'] },
+  '17': { id: '17', name: 'Wachstum', kurzname: 'Wachstum', pol_0: 'Grün. Wachstum', pol_1: 'Degrowth', stockwerk: 'dachgeschoss', pole: ['Grün. Wachstum', 'Nachhaltig', 'Selektiv', 'Post-Wachstum', 'Degrowth'] },
+  '18': { id: '18', name: 'Nahost', kurzname: 'Nahost', pol_0: 'Pro-Israel', pol_1: 'Pro-Palästina', stockwerk: 'keller', pole: ['Pro-Israel', 'Israel-solid.', 'Völkerrecht', 'Pal.-solidarisch', 'Pro-Palästina'] },
+  '19': { id: '19', name: 'Migration', kurzname: 'Migration', pol_0: 'No Border', pol_1: 'Link. Nation.', stockwerk: 'keller', pole: ['No Border', 'Antiimperial.', 'Proletarisch', 'International', 'Link. Nation.'] },
+  '20': { id: '20', name: 'Digitalität', kurzname: 'Digital', pol_0: 'Regulierung', pol_1: 'Commons', stockwerk: 'erdgeschoss', pole: ['Lib. Regulierung', 'Datensouverän.', 'Starke Regul.', 'Plattform-Soz.', 'Dig. Commons'] },
+  '21': { id: '21', name: 'Care', kurzname: 'Care', pol_0: 'Familie', pol_1: 'Vergesellsch.', stockwerk: 'souterrain', pole: ['Familie', 'Flexibel', 'Aufwerten', 'Öffentlich', 'Vergesellsch.'] },
+  '22': { id: '22', name: 'Land/Stadt', kurzname: 'Land/Stadt', pol_0: 'Urban', pol_1: 'Dezentral', stockwerk: 'keller', pole: ['Urban', 'Städte progressiv', 'Beide stärken', 'Gleichwertig', 'Dezentral'] },
+  '23': { id: '23', name: 'Geschichte', kurzname: 'Geschichte', pol_0: 'Verteidigen', pol_1: 'Kritisch', stockwerk: 'dachgeschoss', pole: ['Verteidigen', 'Gegen Angriffe', 'Pragmatisch', 'Differenziert', 'Kritisch'] },
+  '24': { id: '24', name: 'Geopolitik', kurzname: 'Geopolitik', pol_0: 'Pro-West', pol_1: 'Anti-West', stockwerk: 'dachgeschoss', pole: ['Pro-West', 'Demokratien', 'Antimilitarist.', 'Alle Imperien', 'Anti-Hegemonie'] },
+  '25': { id: '25', name: 'Spiritualität', kurzname: 'Zukunft', pol_0: 'Utopie', pol_1: 'Pessimismus', stockwerk: 'dachgeschoss', pole: ['Utopie', 'Revolutionär', 'Dialektisch', 'Krit. Realismus', 'Pessimismus'] }
 };
 
 window.stockwerke = {
@@ -15137,34 +15139,35 @@ window.hausStruktur = [
 ];
 
 // Globale achsenMeta falls noch nicht definiert
+// KORRIGIERT: Alle pole-Arrays jetzt in richtiger Reihenfolge (Position 1→5)
 if (!window.achsenMeta) {
   window.achsenMeta = {
-    '00': { pole: ['Revolution', 'Hegemonie', 'Doppelstrategie', 'Strukturref.', 'Strikte Reform'] },
-    '01': { pole: ['Staatsbesitz', 'Öffentlich', 'Plurale Formen', 'Genossenschaften', 'Commons'] },
-    '02': { pole: ['Vollplanung', 'Demokrat. Plan', 'Marktsozialismus', 'Gemischt', 'Reg. Markt'] },
-    '03': { pole: ['BGE', 'Sanktionsfrei', 'Garantiert', 'Modernisiert', 'Aktivierend'] },
-    '04': { pole: ['Radikal', 'Vermögensst.', 'Progressiv', 'Moderat', 'Niedrig'] },
-    '05': { pole: ['Dekommodifiz.', 'Öffentlich', 'Mietregulierung', 'Mehr bauen', 'Markt'] },
-    '06': { pole: ['Voll öffentlich', 'Bürgerversich.', 'Krankenkasse', 'Wettbewerb', 'Privat'] },
-    '07': { pole: ['Radikal demokr.', 'Gesamtschule', 'Kostenlos', 'Reform', 'Vielfalt'] },
-    '08': { pole: ['Ökomodernismus', 'Grüner Soz.', 'Ökosozialismus', 'Degrowth', 'Tiefenökologie'] },
-    '09': { pole: ['Klassenfem.', 'Sozialist.', 'Reprod.-Theorie', 'Intersekt.', 'Radikal'] },
-    '10': { pole: ['Klassenkampf', 'Klasse+Anti', 'Strukturell', 'Dekolonial', 'Eigenständig'] },
-    '11': { pole: ['Tech-Skepsis', 'Demokratisieren', 'Aneignen', 'Optimismus', 'Akzeleration'] },
-    '12': { pole: ['Rätedemokratie', 'Basisdemo', 'Radikal', 'Erweitert', 'Parlament'] },
-    '13': { pole: ['Militanz', 'Direkte Aktion', 'Ziv. Ungehorsam', 'Symbolisch', 'Nur legal'] },
-    '14': { pole: ['Klasse zuerst', 'Klasse+', 'Verbindend', 'Intersekt.', 'Identität'] },
-    '15': { pole: ['Lexit', 'Dagegen kämpfen', 'Demokratisieren', 'Soziales Europa', 'Föd. Europa'] },
-    '16': { pole: ['Vollbesch.', 'Gute Arbeit', 'AZ-Verkürzung', 'Grundeinkommen', 'Post-Work'] },
-    '17': { pole: ['Degrowth', 'Post-Wachstum', 'Selektiv', 'Nachhaltig', 'Grün. Wachstum'] },
-    '18': { pole: ['Pro-Palästina', 'Pal.-solidarisch', 'Völkerrecht', 'Israel-solid.', 'Pro-Israel'] },
-    '19': { pole: ['Link. Nation.', 'International', 'Proletarisch', 'Antiimperial.', 'No Border'] },
-    '20': { pole: ['Dig. Commons', 'Plattform-Soz.', 'Starke Regul.', 'Datensouverän.', 'Lib. Regulierung'] },
-    '21': { pole: ['Vergesellsch.', 'Öffentlich', 'Aufwerten', 'Flexibel', 'Familie'] },
-    '22': { pole: ['Dezentral', 'Gleichwertig', 'Beide stärken', 'Städte progressiv', 'Urban'] },
-    '23': { pole: ['Kritisch', 'Differenziert', 'Pragmatisch', 'Gegen Angriffe', 'Verteidigen'] },
-    '24': { pole: ['Anti-Hegemonie', 'Alle Imperien', 'Antimilitarist.', 'Demokratien', 'Pro-West'] },
-    '25': { pole: ['Pessimismus', 'Krit. Realismus', 'Dialektisch', 'Revolutionär', 'Utopie'] }
+    '00': { pole: ['Strikte Reform', 'Strukturref.', 'Doppelstrategie', 'Hegemonie', 'Revolution'] },
+    '01': { pole: ['Commons', 'Genossenschaften', 'Plurale Formen', 'Öffentlich', 'Staatsbesitz'] },
+    '02': { pole: ['Reg. Markt', 'Gemischt', 'Marktsozialismus', 'Demokrat. Plan', 'Vollplanung'] },
+    '03': { pole: ['Aktivierend', 'Modernisiert', 'Garantiert', 'Sanktionsfrei', 'BGE'] },
+    '04': { pole: ['Niedrig', 'Moderat', 'Progressiv', 'Vermögensst.', 'Radikal'] },
+    '05': { pole: ['Markt', 'Mehr bauen', 'Mietregulierung', 'Öffentlich', 'Dekommodifiz.'] },
+    '06': { pole: ['Privat', 'Wettbewerb', 'Krankenkasse', 'Bürgerversich.', 'Voll öffentlich'] },
+    '07': { pole: ['Vielfalt', 'Reform', 'Kostenlos', 'Gesamtschule', 'Radikal demokr.'] },
+    '08': { pole: ['Tiefenökologie', 'Degrowth', 'Ökosozialismus', 'Grüner Soz.', 'Ökomodernismus'] },
+    '09': { pole: ['Radikal', 'Intersekt.', 'Reprod.-Theorie', 'Sozialist.', 'Klassenfem.'] },
+    '10': { pole: ['Eigenständig', 'Dekolonial', 'Strukturell', 'Klasse+Anti', 'Klassenkampf'] },
+    '11': { pole: ['Akzeleration', 'Optimismus', 'Aneignen', 'Demokratisieren', 'Tech-Skepsis'] },
+    '12': { pole: ['Parlament', 'Erweitert', 'Radikal', 'Basisdemo', 'Rätedemokratie'] },
+    '13': { pole: ['Nur legal', 'Symbolisch', 'Ziv. Ungehorsam', 'Direkte Aktion', 'Militanz'] },
+    '14': { pole: ['Identität', 'Intersekt.', 'Verbindend', 'Klasse+', 'Klasse zuerst'] },
+    '15': { pole: ['Föd. Europa', 'Soziales Europa', 'Demokratisieren', 'Dagegen kämpfen', 'Lexit'] },
+    '16': { pole: ['Post-Work', 'Grundeinkommen', 'AZ-Verkürzung', 'Gute Arbeit', 'Vollbesch.'] },
+    '17': { pole: ['Grün. Wachstum', 'Nachhaltig', 'Selektiv', 'Post-Wachstum', 'Degrowth'] },
+    '18': { pole: ['Pro-Israel', 'Israel-solid.', 'Völkerrecht', 'Pal.-solidarisch', 'Pro-Palästina'] },
+    '19': { pole: ['No Border', 'Antiimperial.', 'Proletarisch', 'International', 'Link. Nation.'] },
+    '20': { pole: ['Lib. Regulierung', 'Datensouverän.', 'Starke Regul.', 'Plattform-Soz.', 'Dig. Commons'] },
+    '21': { pole: ['Familie', 'Flexibel', 'Aufwerten', 'Öffentlich', 'Vergesellsch.'] },
+    '22': { pole: ['Urban', 'Städte progressiv', 'Beide stärken', 'Gleichwertig', 'Dezentral'] },
+    '23': { pole: ['Verteidigen', 'Gegen Angriffe', 'Pragmatisch', 'Differenziert', 'Kritisch'] },
+    '24': { pole: ['Pro-West', 'Demokratien', 'Antimilitarist.', 'Alle Imperien', 'Anti-Hegemonie'] },
+    '25': { pole: ['Utopie', 'Revolutionär', 'Dialektisch', 'Krit. Realismus', 'Pessimismus'] }
   };
 }
 
