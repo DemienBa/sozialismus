@@ -1,78 +1,318 @@
 {
-  codes: {
-    name: "Die 10 Codes",
-    subtitle: "Die Grammatik des Linken Wesens",
-    beschreibung: "Wie man die Welt liest und sich in ihr verständigt.",
-    icon: "📖",
-    farbe: "#E53935",
-    essays: [
-      { id: "hegemonie", titel: "Hegemonie", icon: "👁️", kurz: "Macht funktioniert am besten, wenn man sie nicht sieht. Hegemonie ist der 'gesunde Menschenverstand', der uns sagt, dass die Dinge eben so sind, wie sie sind. Das linke Wesen beginnt dort, wo dieser Konsens als Konstrukt entlarvt wird.", lang: null },
-      { id: "intersektionalitaet", titel: "Intersektionalität", icon: "🌈", kurz: "Ein Prisma der Macht. Es erkennt an, dass Schmerz und Privileg keine Monolithe sind, sondern sich überkreuzen. Wer nur Klasse sieht, übersieht Geschlecht; wer nur Geschlecht sieht, übersieht Herkunft.", lang: null },
-      { id: "reproduktionsarbeit", titel: "Reproduktionsarbeit", icon: "💜", kurz: "Das Fundament, auf dem die Fabrik steht. Alles Sorgen, Pflegen und Erziehen, das meist unsichtbar und unbezahlt bleibt, aber den Kapitalismus erst am Laufen hält. Ohne 'Care' kein Mehrwert.", lang: null },
-      { id: "entfremdung", titel: "Entfremdung", icon: "😶‍🌫️", kurz: "Das Gefühl, im eigenen Leben nur Gast zu sein. Wenn die Arbeit, die Produkte und die sozialen Beziehungen sich wie fremde Mächte anfühlen, die über uns bestimmen, statt dass wir sie gestalten.", lang: null },
-      { id: "dekommodifizierung", titel: "Dekommodifizierung", icon: "🔓", kurz: "Der Entzug aus der Marktlogik. Es ist der Versuch, Dinge (Wasser, Wohnen, Wissen) wieder zu 'Gemeingütern' zu machen, die nicht mehr gekauft werden müssen, sondern einfach da sind, weil man sie zum Leben braucht.", lang: null },
-      { id: "extraktivismus", titel: "Extraktivismus", icon: "⛏️", kurz: "Der koloniale Blick auf die Welt als Materiallager. Ob es um Kohle in der Erde oder Daten in unseren Köpfen geht – es ist die Logik des Heraussaugens ohne Rücksicht auf Regeneration.", lang: null },
-      { id: "gentrifizierung", titel: "Gentrifizierung", icon: "🏘️", kurz: "Stadtplanung als Verdrängungskampf. Wenn der Kiez zum 'Produkt' wird, das sich die, die ihn aufgebaut haben, nicht mehr leisten können. Ein Code für den Verlust von Heimat durch Kapital.", lang: null },
-      { id: "dialektik", titel: "Dialektik", icon: "⚖️", kurz: "Das Denken in Spannungsbögen. Nichts ist nur eines. Jede Lösung produziert neue Probleme, jeder Erfolg trägt den Keim des Scheiterns in sich. Wer dialektisch denkt, bleibt beweglich und misstraut einfachen Antworten.", lang: null },
-      { id: "klassismus", titel: "Klassismus", icon: "🚧", kurz: "Die unsichtbare Barriere. Die Abwertung von Menschen aufgrund ihres sozialen Status oder ihrer Bildungsferne – ein Code, der oft auch innerhalb linker Kreise als blinder Fleck existiert.", lang: null },
-      { id: "prekarisierung", titel: "Prekarisierung", icon: "⏳", kurz: "Das Ende der Planbarkeit. Wenn das gesamte Leben – vom Job bis zur Liebe – zum flüchtigen Projekt wird, stirbt die Fähigkeit zur langfristigen Solidarität.", lang: null }
+  "codes": {
+    "name": "Die 10 Codes",
+    "subtitle": "Die Grammatik des Linken Wesens",
+    "beschreibung": "Wie man die Welt liest und sich in ihr verständigt.",
+    "icon": "📖",
+    "farbe": "#E53935",
+    "essays": [
+      {
+        "id": "hegemonie",
+        "titel": "Hegemonie",
+        "icon": "👁️",
+        "kurz": "Macht funktioniert am besten, wenn man sie nicht sieht. Antonio Gramsci prägte den Begriff der Hegemonie, um zu beschreiben, wie Herrschaft nicht nur durch Zwang, sondern vor allem durch Konsens funktioniert. Der „gesunde Menschenverstand\" ist nie neutral – er ist das Ergebnis jahrzehntelanger ideologischer Arbeit.",
+        "lang": "Wenn wir sagen „so sind die Dinge eben\", akzeptieren wir eine bestimmte Ordnung als natürlich, die in Wahrheit historisch gewachsen und veränderbar ist. Die neoliberale Hegemonie hat uns beigebracht, dass der Markt effizienter ist als der Staat, dass Wettbewerb uns zu besseren Menschen macht, dass individuelle Freiheit wichtiger ist als kollektive Sicherheit.\n\nDas linke Wesen beginnt dort, wo dieser Konsens als Konstrukt entlarvt wird. Es fragt: Wem nützt diese „Selbstverständlichkeit\"? Welche Alternativen werden unsichtbar gemacht? Hegemonie zu verstehen bedeutet nicht, paranoide Verschwörungstheorien zu entwickeln, sondern die subtilen Mechanismen zu erkennen, durch die bestimmte Interessen als Allgemeinwohl erscheinen.\n\nGegen-Hegemonie aufzubauen ist langwierige kulturelle Arbeit: durch Bildung, Medien, Kunst, durch neue Erzählungen darüber, was „normal\" sein könnte. Es geht nicht darum, eine Wahrheit gegen eine andere zu setzen, sondern den Raum des Denkbaren zu erweitern."
+      },
+      {
+        "id": "intersektionalitaet",
+        "titel": "Intersektionalität",
+        "icon": "🌈",
+        "kurz": "Ein Prisma der Macht. Kimberlé Crenshaw entwickelte das Konzept der Intersektionalität ursprünglich, um die spezifische Diskriminierung Schwarzer Frauen zu beschreiben, die weder in feministischen noch in antirassistischen Bewegungen ausreichend sichtbar war. Es erkennt an, dass Unterdrückung nicht eindimensional ist.",
+        "lang": "Wer nur Klasse sieht, übersieht Geschlecht; wer nur Geschlecht sieht, übersieht Herkunft; wer nur Herkunft sieht, übersieht Behinderung, sexuelle Orientierung, Alter. Die verschiedenen Achsen der Unterdrückung überlagern, verstärken und verändern sich gegenseitig. Eine wohlhabende weiße Frau erlebt Sexismus anders als eine arme migrantische Frau.\n\nIntersektionalität bedeutet nicht, einen Wettbewerb um die größte Unterdrückung zu veranstalten. Sie ist kein Identitäts-Schach, bei dem man Punkte sammelt. Vielmehr geht es darum, Komplexität anzuerkennen und Solidarität trotzdem – oder gerade deswegen – möglich zu machen.\n\nFür linke Politik heißt das: Es gibt keine Befreiung der Arbeiterklasse ohne Antirassismus und Feminismus. Keine feministische Befreiung ohne Klassenkampf. Keine antirassistische Bewegung ohne Sensibilität für Klassenunterschiede. Die Befreiung ist unteilbar, weil die Unterdrückung es auch ist."
+      },
+      {
+        "id": "reproduktionsarbeit",
+        "titel": "Reproduktionsarbeit",
+        "icon": "💜",
+        "kurz": "Das Fundament, auf dem die Fabrik steht. Während Marx die Ausbeutung in der Produktion analysierte, blieb lange unsichtbar, dass Kapitalismus auf einer zweiten, unbezahlten Form von Arbeit basiert: Sorgearbeit, Hausarbeit, Erziehung, emotionale Arbeit – alles, was Menschen am Leben hält und arbeitsfähig macht.",
+        "lang": "Silvia Federici und andere Feministinnen der autonomen Bewegung machten deutlich: Reproduktionsarbeit ist nicht „natürlich weiblich\", sondern historisch den Frauen zugewiesen worden, um männliche Arbeitskraft für den Kapitalismus verfügbar zu machen. Die Trennung von Produktion (bezahlt, öffentlich, männlich) und Reproduktion (unbezahlt, privat, weiblich) ist konstitutiv für die kapitalistische Ordnung.\n\nOhne Care gibt es keinen Mehrwert. Wer putzt, kocht, pflegt, tröstet und erzieht, produziert nicht „nichts\" – sondern die Arbeitskraft selbst. Diese Arbeit wurde und wird systematisch entwertet, weil ihre Anerkennung die gesamte Logik des Systems infrage stellen würde.\n\nEine sozialistische Politik muss Reproduktionsarbeit ins Zentrum rücken: Sie vergesellschaften (öffentliche Kitas, Kantinen, Pflegeeinrichtungen), umverteilen (zwischen den Geschlechtern) und aufwerten (durch Bezahlung und Anerkennung). Ohne diese Perspektive bleibt Sozialismus ein maskulinistisches Projekt."
+      },
+      {
+        "id": "entfremdung",
+        "titel": "Entfremdung",
+        "icon": "😶‍🌫️",
+        "kurz": "Das Gefühl, im eigenen Leben nur Gast zu sein. Marx beschrieb Entfremdung als zentrale Erfahrung der kapitalistischen Moderne: Der Arbeiter ist entfremdet vom Produkt seiner Arbeit (es gehört jemand anderem), vom Arbeitsprozess (er wird fremdbestimmt), von anderen Menschen (Konkurrenz statt Kooperation) und schließlich von sich selbst (die eigene Arbeitskraft wird zur Ware).",
+        "lang": "Diese Entfremdung hat sich verallgemeinert. Wir sind entfremdet von der Natur (sie wird zur Ressource), von unserer Zeit (sie wird vermarktet), von unseren Beziehungen (sie werden instrumentalisiert), von unserer Kreativität (sie wird verwertbar gemacht). Selbst unsere Gefühle, unsere Aufmerksamkeit, unsere Träume werden kolonisiert.\n\nDie neoliberale Ideologie des „unternehmerischen Selbst\" verschlimmert die Entfremdung paradoxerweise durch Pseudo-Autonomie: Wir sollen flexibel, authentisch, leidenschaftlich sein – aber nur, um uns besser zu verkaufen. Die Grenze zwischen Arbeit und Leben verschwimmt, nicht weil wir freier würden, sondern weil alles zur Arbeit wird.\n\nGegen Entfremdung steht die Idee der Aneignung: Kontrolle über die eigene Arbeit, über die gemeinsam produzierten Güter, über die Zeit. Sozialismus ist nicht nur eine Frage der Umverteilung, sondern der Rückgewinnung von Selbstbestimmung und Sinn."
+      },
+      {
+        "id": "dekommodifizierung",
+        "titel": "Dekommodifizierung",
+        "icon": "🔓",
+        "kurz": "Der Entzug aus der Marktlogik. Kommodifizierung bedeutet, dass etwas zur Ware wird, die gekauft und verkauft werden kann. Dekommodifizierung ist der umgekehrte Prozess: Dinge aus der Verwertungslogik herauszulösen und als Gemeingut oder Grundrecht zu etablieren.",
+        "lang": "Der Wohlfahrtsstaat war historisch das wichtigste Instrument der Dekommodifizierung: Bildung, Gesundheit, Renten sollten nicht vom Einkommen abhängen, sondern als soziale Rechte garantiert sein. Das Ziel war nicht Gleichmacherei, sondern Entlastung vom Marktzwang. Wer nicht fürchten muss, ohne Job obdachlos, krank oder hungrig zu werden, ist freier, sich gegen Ausbeutung zu wehren.\n\nNeoliberalismus hat diese Errungenschaften systematisch zurückgedrängt: Privatisierung, Kommerzialisierung, Finanzialisierung. Immer mehr Bereiche des Lebens werden dem Profitmotiv unterworfen – von Wasser über Wissen bis zu Genen.\n\nLinke Politik muss Dekommodifizierung neu denken: Nicht nur durch staatliche Daseinsvorsorge, sondern auch durch Commons, Genossenschaften, Open Source, kostenlose öffentliche Infrastruktur. Es geht darum, Bereiche zu schaffen, in denen Menschen existieren können, ohne sich permanent verkaufen zu müssen. Das bedingungslose Grundeinkommen ist eine radikale Form der Dekommodifizierung: die Entkopplung von Existenz und Erwerbsarbeit."
+      },
+      {
+        "id": "extraktivismus",
+        "titel": "Extraktivismus",
+        "icon": "⛏️",
+        "kurz": "Der koloniale Blick auf die Welt als Materiallager. Extraktivismus bezeichnet eine Wirtschaftsweise, die auf der Ausbeutung natürlicher Ressourcen basiert, ohne Rücksicht auf ökologische oder soziale Folgen. Es ist die Logik des Heraussaugens, Verbrauchens, Wegwerfens.",
+        "lang": "Historisch ist Extraktivismus untrennbar mit Kolonialismus verbunden: Silber aus Potosí, Kautschuk aus dem Kongo, Öl aus Nigeria – immer auf Kosten lokaler Bevölkerungen und Ökosysteme. Diese Struktur setzt sich fort: Lithium für unsere Smartphones, Soja für unsere Massentierhaltung, Billigkleidung aus Textilfabriken in Bangladesch.\n\nAber Extraktivismus beschränkt sich nicht auf materielle Ressourcen. Auch Daten werden extraktiv ausgebeutet: Facebook, Google, Amazon saugen unsere Aufmerksamkeit, unser Verhalten, unsere sozialen Beziehungen ab, ohne dass wir daran teilhaben. Auch Arbeitskraft wird extraktiv verbraucht, besonders im Globalen Süden, besonders von Frauen, besonders von Migrant*innen.\n\nEine post-extraktivistische Ökonomie würde auf Regeneration statt auf Extraktion setzen: Kreislaufwirtschaft, demokratische Kontrolle über Ressourcen, Respekt für ökologische Grenzen. Es geht nicht um „grünen Kapitalismus\", sondern um eine grundlegend andere Beziehung zur Natur und zu anderen Menschen."
+      },
+      {
+        "id": "gentrifizierung",
+        "titel": "Gentrifizierung",
+        "icon": "🏘️",
+        "kurz": "Stadtplanung als Verdrängungskampf. Gentrifizierung beschreibt den Prozess, bei dem ärmere Stadtteile durch Investitionen aufgewertet werden – und die bisherigen Bewohner*innen sich die steigenden Mieten nicht mehr leisten können. Was als „Aufwertung\" daherkommt, ist in Wahrheit Enteignung.",
+        "lang": "Der Mechanismus ist bekannt: Künstler*innen und Subkultur ziehen in günstige, „heruntergekommene\" Viertel. Sie schaffen Atmosphäre, Cafés, Galerien. Investoren entdecken das Potenzial. Luxussanierungen, teure Neubauten, Boutiquen verdrängen Tante-Emma-Läden. Die Mieten explodieren. Die ursprüngliche Bevölkerung wird ausquartiert.\n\nGentrifizierung ist kein Naturgesetz, sondern politisch gemacht: durch Privatisierung öffentlichen Wohnraums, durch Steuererleichterungen für Investoren, durch fehlende Mietpreisbindung. Sie ist ein Code für den Verlust von Heimat, für die Zerstörung gewachsener Nachbarschaften, für Klassenkampf im urbanen Raum.\n\nWiderstand gegen Gentrifizierung bedeutet: Mietpreisbindung, Enteignung von Immobilienkonzernen (wie in Berlin diskutiert), kommunale Wohnungsbaupolitik, Syndikatsmodelle. Es geht um das Recht auf Stadt – nicht als Ware, sondern als Lebensraum."
+      },
+      {
+        "id": "dialektik",
+        "titel": "Dialektik",
+        "icon": "⚖️",
+        "kurz": "Das Denken in Spannungsbögen. Dialektik ist kein esoterischer Trick, sondern eine Denkweise, die Widersprüche ernst nimmt, statt sie aufzulösen. Hegel und Marx zeigten: Nichts ist nur eines. Jede These trägt ihre Antithese in sich, jede Lösung produziert neue Probleme, jeder Fortschritt neue Konflikte.",
+        "lang": "Der Kapitalismus zum Beispiel ist dialektisch: Er schafft Reichtum und Armut zugleich, befreit durch Technologie und entfremdet durch Lohnarbeit, ermöglicht Individualisierung und zerstört Gemeinschaft. Die Widersprüche sind nicht Fehler im System, sondern sein Wesen.\n\nDialektisches Denken bewahrt vor zwei Fallen: vor naivem Optimismus („der Fortschritt wird's schon richten\") und vor resigniertem Pessimismus („es ist alles schlecht\"). Es hält die Ambivalenz aus. Es erkennt, dass das, was heute fortschrittlich ist, morgen reaktionär sein kann – und umgekehrt.\n\nFür politisches Handeln bedeutet das: Keine einfachen Antworten. Keine Reinheitsgebote. Keine Endlösungen. Sondern ein ständiges Navigieren durch Widersprüche, ein Bewusstsein dafür, dass jede Strategie Nebenwirkungen hat, dass jeder Sieg vorläufig ist. Wer dialektisch denkt, bleibt beweglich und misstraut den eigenen Gewissheiten."
+      },
+      {
+        "id": "klassismus",
+        "titel": "Klassismus",
+        "icon": "🚧",
+        "kurz": "Die unsichtbare Barriere. Klassismus bezeichnet die Diskriminierung aufgrund sozialer Herkunft oder Bildungsferne. Es ist die am wenigsten benannte, aber allgegenwärtige Form der Abwertung: durch Sprache, Habitus, Geschmack, durch Codes, die nur die „richtige\" Klasse beherrscht.",
+        "lang": "Klassismus zeigt sich nicht in offener Gewalt, sondern in subtilen Ausschlüssen: Wer den falschen Dialekt spricht, wird nicht ernst genommen. Wer keine „kulturellen Kompetenzen\" mitbringt, bleibt draußen. Wer nicht die „richtige\" Ernährung, Musik, Kleidung, Freizeitgestaltung hat, wird belächelt. Es ist die Verachtung für die „Unterschicht\", die sich als Sorge um „Bildungsferne\" tarnt.\n\nDas Perfide: Auch linke Räume sind nicht frei von Klassismus. Im Gegenteil. Akademische Sprache, Theorielastigkeit, subkulturelle Codes können zu neuen Barrieren werden. Wer nicht mitkommt, gilt als „nicht politisiert genug\". Dabei wird übersehen, dass Klassenkampf nicht in Seminaren stattfindet, sondern im Alltag derer, die ausgebeutet werden.\n\nGegen Klassismus hilft nur radikale Selbstreflexion: Welche Räume schaffen wir? Wessen Wissen zählt? Wer darf sprechen? Solidarität bedeutet nicht, für die „Armen\" zu sprechen, sondern mit ihnen – oder besser: ihnen zuzuhören und die eigenen Privilegien zu checken."
+      },
+      {
+        "id": "prekarisierung",
+        "titel": "Prekarisierung",
+        "icon": "⏳",
+        "kurz": "Das Ende der Planbarkeit. Prekarisierung beschreibt die systematische Ausweitung unsicherer Arbeitsverhältnisse: befristete Verträge, Leiharbeit, Minijobs, Scheinselbstständigkeit, Plattformökonomie. Was früher Ausnahme war, wird zur Norm.",
+        "lang": "Die Folgen sind nicht nur materiell (weniger Geld, keine Rücklagen), sondern auch psychisch und sozial: Wer nicht weiß, ob der Vertrag verlängert wird, kann keine Wohnung suchen, keine Familie gründen, keine langfristigen Pläne machen. Prekarität zerstört die Fähigkeit zur Solidarität, weil jede*r ums eigene Überleben kämpft.\n\nNeoliberale Ideologie verkauft Prekarität als „Flexibilität\" und „Chance\". In Wahrheit ist sie ein Herrschaftsinstrument: Unsichere Arbeiter*innen sind erpressbar, sie organisieren sich nicht, sie wagen keinen Widerstand. Prekarisierung ist die Rache des Kapitals für die Erfolge der Arbeiterbewegung im 20. Jahrhundert.\n\nGegen Prekarisierung kämpfen heißt: Normalarbeitsverhältnisse verteidigen und ausweiten, Leiharbeit abschaffen, Solo-Selbstständige organisieren (wie bei Gorillas, Deliveroo), bedingungslose soziale Absicherung für alle. Es geht um die Rückgewinnung von Planbarkeit – als Voraussetzung für ein selbstbestimmtes Leben."
+      }
     ]
   },
-  anthropologie: {
-    name: "Die 10 Punkte der Anthropologie",
-    subtitle: "Das Menschenbild",
-    beschreibung: "Was wir glauben, dass der Mensch sein könnte.",
-    icon: "🧬",
-    farbe: "#2196F3",
-    essays: [
-      { id: "plastizitaet", titel: "Plastizität", icon: "🧠", kurz: "Der Mensch ist kein fertiger Stein, sondern formbarer Lehm. Unsere 'Natur' ist nicht gierig oder faul, sondern eine Antwort auf die Umstände, in denen wir leben. Ändere die Welt, und du änderst das Wesen.", lang: null },
-      { id: "kooperation", titel: "Kooperation vor Konkurrenz", icon: "🤝", kurz: "Wir sind die Enkel derer, die geteilt haben. Das linke Wesen glaubt, dass Hilfe evolutionär klüger ist als der Kampf jeder gegen jeden. Kooperation ist unsere wahre Überlebensstrategie.", lang: null },
-      { id: "beduerfnisorientierung", titel: "Bedürfnisorientierung", icon: "🎯", kurz: "Weg von der Leistungstabelle. Der Maßstab für ein gutes Leben sollte nicht sein, was jemand liefert, sondern was er braucht, um würdevoll und frei zu existieren.", lang: null },
-      { id: "relationalitaet", titel: "Relationalität", icon: "🕸️", kurz: "Das 'Ich' ist eine Erfindung des 'Wir'. Wir existieren nur durch die Blicke und die Fürsorge anderer. Autonomie ist eine Illusion; wir sind radikal voneinander abhängig.", lang: null },
-      { id: "vernunftbegabung", titel: "Vernunftbegabung", icon: "💡", kurz: "Trotz aller Rückschläge bleibt der Glaube, dass wir fähig sind, unsere Angelegenheiten durch Argumente und Einsicht selbst zu regeln, statt durch blinden Gehorsam oder Marktmechanismen.", lang: null },
-      { id: "koerperliche-integritaet", titel: "Körperliche Integrität", icon: "🛡️", kurz: "Radikale Selbstbestimmung. Der Körper ist kein Territorium des Staates oder der Kirche. Ob Identität oder Reproduktion – die Grenze der Haut ist unantastbar.", lang: null },
-      { id: "arbeit-als-gestaltung", titel: "Arbeit als Gestaltung", icon: "🔨", kurz: "Der Mensch will wirken. Wir hassen nicht die Arbeit, sondern die Plackerei. Wahre Arbeit ist der schöpferische Ausdruck unseres Beitrags zur Gemeinschaft.", lang: null },
-      { id: "antideterminismus", titel: "Antideterminismus", icon: "🔮", kurz: "Biologie ist kein Schicksal. Weder Gene noch Herkunft dürfen bestimmen, wer wir sind. Das linke Wesen ist der Einspruch gegen jede Form von Vorbestimmung.", lang: null },
-      { id: "universalismus", titel: "Universalismus", icon: "🌍", kurz: "Empathie kennt keine Pässe. Wenn jemand am anderen Ende der Welt leidet, betrifft das meine Menschlichkeit. Ein Schmerz ist ein Schmerz, egal wo er registriert wird.", lang: null },
-      { id: "spielbein", titel: "Spielbein statt Standbein", icon: "🎭", kurz: "Die Ablehnung der Einseitigkeit. Der Mensch sollte fischen, dichten und programmieren können, ohne jemals nur 'Fischer', 'Dichter' oder 'Programmierer' sein zu müssen.", lang: null }
+  "anthropologie": {
+    "name": "Die 10 Punkte der Anthropologie",
+    "subtitle": "Das Menschenbild",
+    "beschreibung": "Was wir glauben, dass der Mensch sein könnte.",
+    "icon": "🧬",
+    "farbe": "#2196F3",
+    "essays": [
+      {
+        "id": "plastizitaet",
+        "titel": "Plastizität",
+        "icon": "🧬",
+        "kurz": "Der Mensch ist kein fixes Wesen. Die linke Anthropologie beginnt mit der Ablehnung jeder „Natur des Menschen\", die als unveränderlich behauptet wird. Was Menschen sind, hängt von den Bedingungen ab, unter denen sie leben. Marx sprach vom „ensemble der gesellschaftlichen Verhältnisse\" – wir sind nicht Individuen, die dann in Gesellschaft treten, sondern durch und durch soziale Wesen.",
+        "lang": "Plastizität bedeutet: Menschen können sich verändern, weil sie veränderbar sind. Der „homo oeconomicus\", der nur an seinen eigenen Vorteil denkt, ist keine anthropologische Konstante, sondern Produkt einer Gesellschaft, die Egoismus belohnt und Solidarität bestraft. Andere Gesellschaften produzieren andere Menschen.\n\nDiese Einsicht ist zutiefst emanzipatorisch: Wenn der Mensch nicht „von Natur aus\" gierig, faul oder gewalttätig ist, dann sind andere Formen des Zusammenlebens möglich. Der Kapitalismus legitimiert sich gern mit angeblichen anthropologischen Wahrheiten („Menschen sind eben so\"). Die linke Antwort: Zeigt uns andere Verhältnisse, und wir zeigen euch andere Menschen.\n\nAber Plastizität hat auch eine dunkle Seite: Menschen können zu fast allem geformt werden, auch zu Grausamkeit, Unterwerfung, Selbstausbeutung. Deshalb ist die Frage nach den Bedingungen so entscheidend. Welche Strukturen fördern Kooperation? Welche produzieren Entfremdung? Linke Politik ist die bewusste Gestaltung der Verhältnisse, die uns gestalten."
+      },
+      {
+        "id": "kooperation",
+        "titel": "Kooperation",
+        "icon": "🤝",
+        "kurz": "Solidarität ist älter als Konkurrenz. Die Evolutionsbiologie hat lange das Bild vom „Kampf ums Dasein\" dominiert – als wäre die Natur ein einziger Wettbewerb. Neuere Forschung zeigt: Kooperation war evolutionär mindestens so erfolgreich wie Konkurrenz. Menschen haben überlebt, weil sie zusammengearbeitet haben, nicht trotzdem.",
+        "lang": "Peter Kropotkin argumentierte schon im 19. Jahrhundert gegen den Sozialdarwinismus: Gegenseitige Hilfe, nicht Konkurrenz, sei das dominierende Prinzip in der Natur. Von Ameisen über Wölfe bis zu Menschen – Kooperation sichert das Überleben. Auch in menschlichen Gesellschaften sind es die kooperativen Strukturen (Familien, Gemeinden, Gewerkschaften), die das Leben lebenswert machen.\n\nDer Kapitalismus erzählt uns, dass Konkurrenz uns zu Höchstleistungen antreibt. In Wahrheit produziert sie Erschöpfung, Misstrauen, soziale Kälte. Kooperation ist nicht naiv-utopisch, sondern realistisch: Komplexe Probleme (Klimakrise, Pandemien, globale Ungerechtigkeit) lassen sich nur gemeinsam lösen.\n\nEine sozialistische Anthropologie setzt auf Kooperationsfähigkeit: durch Strukturen, die sie fördern (demokratische Betriebe, Commons, Solidarökonomie), und durch Bildung, die sie einübt. Konkurrenz ist antrainiert – und kann wieder verlernt werden."
+      },
+      {
+        "id": "beduerfnisorientierung",
+        "titel": "Bedürfnisorientierung",
+        "icon": "🌱",
+        "kurz": "Von jedem nach seinen Fähigkeiten, jedem nach seinen Bedürfnissen. Marx' berühmte Formel beschreibt eine Ökonomie, die nicht an Profit, sondern an menschlichen Bedürfnissen ausgerichtet ist. Aber: Was sind Bedürfnisse? Wer definiert sie? Und wessen Bedürfnisse zählen?",
+        "lang": "Die kapitalistische Ökonomie fingiert, dass der Markt Bedürfnisse befriedigt. Tatsächlich produziert er sie: durch Werbung, durch geplante Obsoleszenz, durch künstliche Knappheit. Wir konsumieren nicht, was wir brauchen, sondern was wir zu brauchen glauben. Bedürfnisse werden kolonisiert, kommodifiziert, instrumentalisiert.\n\nEine bedürfnisorientierte Ökonomie würde fragen: Was brauchen Menschen wirklich, um ein gutes Leben zu führen? Nicht: Was können wir ihnen verkaufen? Das bedeutet auch: Unterscheidung zwischen Grundbedürfnissen (Nahrung, Wohnung, Gesundheit, Bildung, Zugehörigkeit) und induzierten Luxusbedürfnissen. Nicht alles, was gewünscht wird, muss befriedigt werden – manche Bedürfnisse sind toxisch (z.B. das Bedürfnis nach Herrschaft über andere).\n\nBedürfnisorientierung ist radikal demokratisch: Sie verlangt, dass Menschen kollektiv entscheiden, was produziert wird und wie. Sie respektiert Vielfalt: Nicht alle brauchen das gleiche. Sie anerkennt Grenzen: auf einem endlichen Planeten können nicht alle Bedürfnisse grenzenlos befriedigt werden. Aber sie besteht darauf: Kein Mensch darf darben, während andere im Überfluss schwelgen."
+      },
+      {
+        "id": "relationalitaet",
+        "titel": "Relationalität",
+        "icon": "🕸️",
+        "kurz": "Kein Mensch ist eine Insel. Die neoliberale Ideologie kultiviert das autonome Individuum: selbstverantwortlich, unabhängig, unternehmerisch. Diese Figur ist eine Fiktion. Menschen sind durch und durch relational – wir werden erst zu Menschen in Beziehungen zu anderen.",
+        "lang": "Von der Geburt bis zum Tod sind wir angewiesen auf Care, auf Anerkennung, auf soziale Einbettung. Das „Selbst\" ist keine Monade, sondern ein Knoten in einem Netz von Beziehungen. Wer wir sind, hängt davon ab, mit wem wir zusammen sind, in welchen Strukturen wir leben, welche Geschichten uns prägen.\n\nDiese Einsicht hat politische Konsequenzen: Wenn Menschen relational sind, dann ist „individuelle Freiheit\" ohne soziale Sicherheit eine Lüge. Freiheit ist nicht Abwesenheit von Bindung, sondern die Qualität unserer Beziehungen. Emanzipation bedeutet nicht Isolation, sondern solidarische Verbundenheit.\n\nRelationalität fordert auch eine Ethik der Verantwortung: Wir sind nicht nur für uns selbst verantwortlich, sondern füreinander. Das Leiden anderer geht uns an, nicht aus Mitleid, sondern weil ihre Existenz mit unserer verwoben ist. Der Slogan „Kein Mensch ist illegal\" drückt das aus: Die Würde des Einzelnen ist unteilbar von der Würde aller."
+      },
+      {
+        "id": "historizitaet",
+        "titel": "Historizität",
+        "icon": "⏳",
+        "kurz": "Menschen sind geschichtliche Wesen. Wir erben Strukturen, Institutionen, Ideologien – und können sie verändern. Historizität bedeutet: Nichts ist „schon immer so gewesen\". Der Kapitalismus ist keine Naturordnung, sondern ein historisches Phänomen mit Anfang und (potenziellem) Ende.",
+        "lang": "Diese Perspektive ist entscheidend gegen TINA – „There Is No Alternative\". Doch: Es gab Alternativen, und es wird sie geben. Die Frage ist nur, welche wir erkämpfen. Geschichte ist nicht determiniert, aber auch nicht beliebig. Sie ist das Ergebnis sozialer Kämpfe, struktureller Zwänge und kontingenter Ereignisse.\n\nWalter Benjamins „Engel der Geschichte\" schaut auf die Trümmer der Vergangenheit, während der Fortschritt ihn vorwärts treibt. Linke Geschichtsphilosophie ist nicht naiv-optimistisch („alles wird besser\"), aber auch nicht zynisch-nihilistisch („nichts ändert sich je\"). Sie hält die Dialektik aus: Fortschritt und Katastrophe, Emanzipation und neue Herrschaft existieren zugleich.\n\nHistorizität bedeutet auch: Die Vergangenheit ist nicht abgeschlossen. Gescheiterte Aufstände, unterdrückte Utopien, vergessene Kämpfe können reaktiviert werden. Ernst Blochs „Prinzip Hoffnung\": In der Geschichte schlummert ungelebtes Potenzial. Unsere Aufgabe ist es, die „unabgegoltenen Versprechen\" der Vergangenheit einzulösen."
+      },
+      {
+        "id": "koerperlichkeit",
+        "titel": "Körperlichkeit",
+        "icon": "💪",
+        "kurz": "Menschen sind nicht nur Geist. Die westliche Philosophie hat lange den Körper abgewertet zugunsten des Geistes. Linke Anthropologie besteht auf der Materialität des Daseins: Wir sind Körper, die essen, schlafen, altern, leiden, begehren müssen. Politik, die das ignoriert, ist weltfremd.",
+        "lang": "Der Körper ist zugleich Ort der Herrschaft und des Widerstands. Foucault zeigte: Moderne Macht diszipliniert Körper (durch Arbeit, Schule, Gefängnis). Feminismus ergänzt: Der weibliche Körper wird kontrolliert (durch Abtreibungsverbote, Schönheitsnormen, sexualisierte Gewalt). Rassismus markiert Körper als „anders\" und inferiorisiert sie.\n\nAber der Körper ist auch widerständig: Streiks, Besetzungen, Blockaden sind körperliche Praxen. Queere Körper, die normative Geschlechterordnungen sprengen. Behinderte Körper, die die Norm der Produktivität herausfordern. Alte Körper, die sich der Jugendlichkeitszwang entziehen.\n\nEine materialistische Politik nimmt Körper ernst: Sie kämpft für Gesundheitsversorgung, gegen Arbeitsbedingungen, die Körper zerstören, für sexuelle Selbstbestimmung, für Ernährungssouveränität. Sie weiß: Emanzipation ist nicht nur Bewusstseinsveränderung, sondern auch bessere Lebensbedingungen für konkrete Körper."
+      },
+      {
+        "id": "sprachlichkeit",
+        "titel": "Sprachlichkeit",
+        "icon": "💬",
+        "kurz": "Menschen sind sprechende Wesen. Sprache ist nicht nur Kommunikationsmittel, sondern konstituiert unsere Wirklichkeit. Wie wir über die Welt sprechen, verändert, wie wir sie wahrnehmen und in ihr handeln. „Flüchtlingskrise\" oder „Fluchtursachen\"? „Arbeitgeber\" oder „Arbeitnehmer\"? Die Worte sind nicht neutral.",
+        "lang": "Ideologiekritik beginnt mit Sprachkritik: Welche Begriffe naturalisieren Herrschaft? „Humankapital\", „Sozialschmarotzer\", „Leistungsträger\" – jedes dieser Worte transportiert eine Weltsicht. Linke Sprache versucht, diese Codes aufzubrechen: „Geflüchtete statt „Migranten\", „Arbeitgeber\" statt „Arbeitnehmer\" (wer gibt hier eigentlich was?), „Reiche\" statt „Leistungsträger\".\n\nAber Sprache ist auch umkämpft: Political Correctness wird als „Sprachpolizei\" diffamiert. Dabei geht es nicht um Verbot, sondern um Respekt. Sprache kann verletzen, ausgrenzen, entmenschlichen. Sie kann aber auch Anerkennung schaffen, Realitäten sichtbar machen, Solidarität stiften.\n\nEine emanzipatorische Sprachpraxis ist selbstreflexiv: Sie weiß, dass jede Sprache Macht ausübt, auch die eigene. Sie bleibt offen für Kritik, für neue Begriffe, für marginalisierte Stimmen. Sie vermeidet akademische Abgehobenheit, ohne in Populismus zu verfallen. Denn: Wer die Sprache beherrscht, beherrscht die Diskurse."
+      },
+      {
+        "id": "endlichkeit",
+        "titel": "Endlichkeit",
+        "icon": "⚰️",
+        "kurz": "Menschen sind sterblich. Diese banale Wahrheit wird im Kapitalismus verdrängt: Jugendlichkeitskult, Anti-Aging, Selbstoptimierung – alles Versuche, den Tod zu leugnen. Aber Endlichkeit ist nicht nur Tod, sondern auch Begrenzung: unserer Zeit, unserer Energie, unserer Ressourcen.",
+        "lang": "Linke Politik muss Endlichkeit anerkennen. Das bedeutet ökologisch: Wir leben auf einem endlichen Planeten. Unbegrenztes Wachstum ist unmöglich. Degrowth, Post-Wachstum, Suffizienz sind keine asketischen Zumutungen, sondern realistische Antworten auf Endlichkeit.\n\nDas bedeutet auch sozial: Solidarität mit den Alten, den Kranken, den Sterbenden. Care-Arbeit ernst nehmen. Nicht nur die „produktiven\" Jahre zählen. Ein gutes Leben ist auch ein gutes Sterben – in Würde, ohne Vereinsamung, ohne Ökonomisierung (Stichwort: Pflegenotstand).\n\nUnd es bedeutet existenziell: Politik darf sich nicht als „Lösung aller Probleme\" verkaufen. Der Tod bleibt. Leid bleibt. Scheitern bleibt. Aber: Wir können die Bedingungen verändern, unter denen Menschen leiden. Wir können vermeidbares Leid verhindern. Und wir können würdevolle Formen des Umgangs mit Unvermeidbarem entwickeln."
+      },
+      {
+        "id": "widerspruechlichkeit",
+        "titel": "Widersprüchlichkeit",
+        "icon": "⚡",
+        "kurz": "Menschen sind keine kohärenten Einheiten. Wir tragen Widersprüche in uns: moralische, emotionale, politische. Wir handeln oft gegen unsere eigenen Überzeugungen. Wir sind zugleich Täter*innen und Opfer, privilegiert und benachteiligt, solidarisch und egoistisch.",
+        "lang": "Die linke Anthropologie akzeptiert diese Ambivalenz, statt sie zu moralisieren. Niemand ist „rein\". Der antirassistische Aktivist kann sexistisch sein. Die Feministin kann klassistisch sein. Der Sozialist kann ökologisch blind sein. Das macht uns nicht zu Heuchler*innen, sondern zu komplexen Subjekten in widersprüchlichen Verhältnissen.\n\nPolitisch bedeutet das: Keine Reinheitsgebote. Keine Cancel Culture, die bei der ersten Verfehlung zuschlägt. Sondern Kritik, die auf Veränderung zielt, nicht auf Vernichtung. Fehlerfreundlichkeit. Die Fähigkeit, sich zu entschuldigen und weiterzumachen.\n\nAber auch: Keine Beliebigkeit. Widersprüchlichkeit ist keine Ausrede. Wir müssen unsere blinden Flecken erkennen und an ihnen arbeiten. Selbstkritik ist keine Schwäche, sondern Stärke. Wer die eigenen Widersprüche leugnet, wird dogmatisch. Wer sie aushält, bleibt lernfähig."
+      },
+      {
+        "id": "wuerde",
+        "titel": "Würde",
+        "icon": "👑",
+        "kurz": "Jeder Mensch besitzt intrinsischen Wert. Diese Grundüberzeugung verbindet linke Politik mit humanistischer Ethik: Menschen sind keine Mittel, sondern Zweck. Ihre Würde ist unantastbar – nicht weil sie „produktiv\", „nützlich\" oder „erfolgreich\" sind, sondern weil sie Menschen sind.",
+        "lang": "Der Kapitalismus macht Würde von Leistung abhängig: Wer nichts leistet, ist nichts wert. Arbeitslose werden stigmatisiert, Obdachlose entmenschlicht, Alte entsorgt. Die Logik der Verwertung durchdringt alle Lebensbereiche. Würde wird zur Ware: Man muss sie sich verdienen, erkämpfen, beweisen.\n\nLinke Politik besteht auf bedingungsloser Würde: unabhängig von Herkunft, Klasse, Geschlecht, Fähigkeiten, Aussehen, Produktivität. Das ist der Kern des Universalismus: Alle Menschen sind gleich viel wert. Nicht identisch, aber gleichwertig.\n\nDaraus folgt praktisch: Soziale Rechte statt Almosen. Keine Beschämung von Bedürftigen. Keine Unterscheidung zwischen „deserving\" und „undeserving poor\". Und: Würde ist nicht nur negativ (Schutz vor Erniedrigung), sondern positiv (Ermöglichung selbstbestimmten Lebens). Sozialismus ist die Verallgemeinerung der Würde auf alle."
+      }
     ]
   },
-  praktiken: {
-    name: "Die 10 Praktiken",
-    subtitle: "Das Gelebte Wesen",
-    beschreibung: "Wie sich Überzeugung in Handlung übersetzt.",
-    icon: "✊",
-    farbe: "#4CAF50",
-    essays: [
-      { id: "organisierung", titel: "Organisierung (Organizing)", icon: "📢", kurz: "Die Verwandlung von Einzelwut in kollektive Kraft. Es ist die mühsame Arbeit des Zuhörens, Verknüpfens und Aufbauens von Machtbasen von unten nach oben.", lang: null },
-      { id: "direkte-aktion", titel: "Direkte Aktion", icon: "⚡", kurz: "Das Handeln ohne Erlaubnis. Eine Suppenküche eröffnen, ein Haus besetzen oder ein Feld bepflanzen – Fakten schaffen, statt auf die Politik zu warten.", lang: null },
-      { id: "konsensprinzip", titel: "Konsensprinzip", icon: "🔄", kurz: "Die hohe Schule der Demokratie. Nicht 51 gegen 49, sondern die Suche nach einem Weg, den alle mitgehen können. Es dauert länger, aber es hält besser.", lang: null },
-      { id: "ziviler-ungehorsam", titel: "Ziviler Ungehorsam", icon: "🪧", kurz: "Wenn das Gesetz das Unrecht schützt, ist der Bruch des Gesetzes ein Akt der Moral. Friedlich, öffentlich und bereit, die Konsequenzen zu tragen.", lang: null },
-      { id: "commons", titel: "Commons-Verwaltung", icon: "🌾", kurz: "Gemeinsames Eigentum pflegen. Ob ein Gemeinschaftsgarten oder ein Wikipedia-Artikel – die Praxis des Teilens und Erhaltens jenseits von Profitinteressen.", lang: null },
-      { id: "selbstreflexion", titel: "Kritische Selbstreflexion", icon: "🪞", kurz: "Die Arbeit am eigenen Ich. Die ständige Prüfung: Wo reproduziere ich selbst Macht? Wo sind meine eigenen blinden Flecken in Bezug auf Privilegien?", lang: null },
-      { id: "internationale-solidaritaet", titel: "Internationale Solidarität", icon: "🌐", kurz: "Den Blick weiten. Unterstützung von Kämpfen weltweit, weil man verstanden hat, dass die eigene Freiheit im Norden oft auf der Unfreiheit im Süden basiert.", lang: null },
-      { id: "kultur-hacking", titel: "Kultur-Hacking", icon: "🎨", kurz: "Die Umdeutung der Symbole. Werbeflächen kapern, Slogans verdrehen – den öffentlichen Raum aus der Umklammerung der Konzerne zurückerobern.", lang: null },
-      { id: "streik", titel: "Streik", icon: "✋", kurz: "Die mächtigste Geste der Unterbrechung. Zu zeigen, dass ohne unsere Kooperation gar nichts geht. Die Rückgewinnung der Zeit und der Autonomie.", lang: null },
-      { id: "alternative-infrastrukturen", titel: "Alternative Infrastrukturen", icon: "🏗️", kurz: "Den Keim der neuen Welt in der alten pflanzen. Kollektivbetriebe, Volksküchen und freie Schulen als Testlabore für das Morgen.", lang: null }
+  "praktiken": {
+    "name": "Die 10 Praktiken",
+    "subtitle": "Das Gelebte Wesen",
+    "beschreibung": "Wie sich Überzeugung in Handlung übersetzt.",
+    "icon": "✊",
+    "farbe": "#4CAF50",
+    "essays": [
+      {
+        "id": "organisierung",
+        "titel": "Organisierung",
+        "icon": "📋",
+        "kurz": "Ohne Organisation kein Wandel. Empörung allein reicht nicht. Wut verpufft, wenn sie nicht kanalisiert wird. Linke Geschichte ist eine Geschichte erfolgreicher Organisierung: Gewerkschaften, Parteien, Räte, Basiskomitees. Organisierung bedeutet: Kollektive Strukturen schaffen, die über individuelle Aktionen hinausgehen.",
+        "lang": "Gute Organisierung ist demokratisch (alle können mitentscheiden), inklusiv (niemand wird ausgeschlossen), resilient (sie überlebt Repression) und strategisch (sie hat ein Ziel). Sie baut Macht auf – nicht als Selbstzweck, sondern um Veränderung durchzusetzen.\n\nOrganisierung ist mühsam: Meetings, Protokolle, Konflikte, Kompromisse. Sie ist das Gegenteil von heroischem Aktivismus, der sich selbst feiert. Sie ist kollektiv, geduldig, langfristig. Aber sie ist auch wirksam: Jeder erkämpfte Tarifvertrag, jede verhinderte Abschiebung, jede gerettete Kita ist Ergebnis geduldiger Organisierungsarbeit.\n\nNeue Formen entstehen: Plattformkooperativen gegen digitale Monopole, Mieter*innen-Syndikate gegen Immobilienspekulation, Care-Kollektive gegen Pflegenotstand. Organisierung passt sich an – aber die Grundprinzipien bleiben: Zusammenschluss, Koordination, Solidarität."
+      },
+      {
+        "id": "direkte-aktion",
+        "titel": "Direkte Aktion",
+        "icon": "🎯",
+        "kurz": "Selbst handeln statt bitten. Direkte Aktion bedeutet: Nicht auf Erlaubnis warten, nicht auf Stellvertreter*innen hoffen, sondern die Dinge selbst in die Hand nehmen. Streiks, Besetzungen, Blockaden, Sabotage – all das sind Formen direkter Aktion.",
+        "lang": "Der Gedanke dahinter: Macht liegt nicht bei Parlamenten oder Konzernen, sondern bei denen, die die Arbeit machen, die Räume nutzen, die Waren bewegen. Diese Macht kann aktiviert werden. Ein Hafenstreik stoppt den globalen Handel. Eine Hausbesetzung schafft Wohnraum. Eine Blockade verhindert Abschiebungen.\n\nDirekte Aktion ist nicht dasselbe wie Gewalt, obwohl sie oft so dargestellt wird. Sie ist aber auch nicht unbedingt friedlich: Manchmal bedeutet Widerstand, Regeln zu brechen, Eigentum zu beschädigen, Konfrontation zu suchen. Die Frage ist: Gegen wen richtet sich die Aktion, und dient sie der Befreiung oder der Herrschaft?\n\nKritiker*innen werfen direkter Aktion Vanguardismus vor: Eine kleine Gruppe maßt sich an, für alle zu handeln. Das Risiko ist real. Deshalb braucht direkte Aktion demokratische Legitimation und Massenbasis. Sie ist am stärksten, wenn sie Teil einer breiteren Bewegung ist."
+      },
+      {
+        "id": "konsensprinzip",
+        "titel": "Konsensprinzip",
+        "icon": "🤝",
+        "kurz": "Entscheidungen gemeinsam treffen. In hierarchischen Organisationen entscheidet die Spitze. In bürgerlichen Demokratien entscheidet die Mehrheit. Das Konsensprinzip geht weiter: Entscheidungen werden so lange diskutiert und modifiziert, bis alle zustimmen können.",
+        "lang": "Das klingt utopisch – und ist oft zeitaufwendig. Aber es hat Vorteile: Minderheiten werden nicht übergangen. Kritische Stimmen werden gehört. Entscheidungen sind besser durchdacht. Und: Wer mitentschieden hat, trägt die Entscheidung auch mit.\n\nKonsens ist nicht Einstimmigkeit. Es bedeutet nicht, dass alle begeistert sind, sondern dass niemand fundamentale Einwände hat. „Ich kann damit leben\" reicht. Wichtig ist: Konsens braucht Vertrauen, Zeit und gute Moderation. Er funktioniert in kleinen Gruppen besser als in Massenversammlungen.\n\nKritik am Konsensprinzip: Es begünstigt die Eloquenten, die Geduldigen, die Privilegierten. Es kann Entscheidungen verzögern, wenn Dringlichkeit geboten ist. Deshalb nutzen viele Bewegungen Hybridmodelle: Konsens bei Grundsatzfragen, Mehrheitsentscheidungen bei Detailfragen. Oder: Konsenssuche mit zeitlichem Limit, danach Abstimmung."
+      },
+      {
+        "id": "solidaritaet",
+        "titel": "Solidarität",
+        "icon": "💕",
+        "kurz": "Für andere einstehen, ohne Gegenleistung zu erwarten. Solidarität ist das Herzstück linker Praxis. Sie ist mehr als Mitleid (das von oben herab schaut) und mehr als Eigeninteresse (das nur für sich selbst sorgt). Solidarität erkennt: Deine Befreiung ist mit meiner verknüpft.",
+        "lang": "Internationale Solidarität: mit Streikenden in anderen Ländern, mit Geflüchteten, mit Unterdrückten weltweit. „Workers of the world, unite!\" ist kein nostalgischer Slogan, sondern strategische Notwendigkeit im globalen Kapitalismus. Wenn Nike-Arbeiter*innen in Vietnam streiken, geht das deutsche Gewerkschaften an.\n\nAber Solidarität ist auch lokal: mit der Nachbarin, die abgeschoben werden soll. Mit dem Kollegen, der gemobbt wird. Mit der Kassiererin, die unterbezahlt ist. Solidarität ist Alltagspraxis, nicht nur politische Geste.\n\nFalsche Solidarität ist Vereinnahmung: „Wir kämpfen für euch!\" Echte Solidarität bedeutet: Mit Menschen kämpfen, nicht für sie. Ihre Stimmen verstärken, nicht ersetzen. Privilegien nutzen, um Räume zu öffnen, nicht um sie zu besetzen."
+      },
+      {
+        "id": "kritik---selbstkritik",
+        "titel": "Kritik & Selbstkritik",
+        "icon": "🔍",
+        "kurz": "Permanente Reflexion. Linke Bewegungen scheitern oft nicht am äußeren Druck, sondern an inneren Widersprüchen. Deshalb ist Kritikfähigkeit überlebenswichtig. Kritik meint nicht Abrechnung, sondern konstruktive Analyse: Was läuft falsch? Warum? Was können wir besser machen?",
+        "lang": "Selbstkritik ist noch schwieriger: Die eigenen Fehler eingestehen. Die eigenen blinden Flecken erkennen. Die eigene Position hinterfragen. Das ist unbequem – aber notwendig, um nicht dogmatisch zu werden.\n\nGute Kritik ist spezifisch (nicht „alles ist schlecht\"), lösungsorientiert (nicht nur meckern, sondern Alternativen vorschlagen) und solidarisch (nicht destruktiv, sondern aufbauend). Sie trennt zwischen Struktur und Person: Nicht „du bist ein Idiot\", sondern „diese Entscheidung war problematisch, weil...\".\n\nKritikkultur braucht Vertrauen. Wenn jede Kritik als Angriff verstanden wird, verstummen Menschen. Wenn jede Selbstkritik als Schwäche ausgelegt wird, wird niemand Fehler zugeben. Eine reife Bewegung hält Kritik aus und wächst daran."
+      },
+      {
+        "id": "prefigurative-politik",
+        "titel": "Prefigurative Politik",
+        "icon": "🌱",
+        "kurz": "Die Zukunft schon heute leben. Prefigurative Politik bedeutet: Die Welt, die wir wollen, nicht nur zu fordern, sondern schon jetzt ansatzweise zu realisieren. Wer für Demokratie kämpft, muss demokratisch organisiert sein. Wer Gleichberechtigung will, muss sie in den eigenen Strukturen umsetzen.",
+        "lang": "Beispiele: Kollektiv organisierte Betriebe sind prefigurativ – sie zeigen, dass Wirtschaft auch ohne Bosse funktioniert. Wohnprojekte, die gemeinschaftlich entscheiden, sind prefigurativ. Open-Source-Projekte, die Wissen teilen statt horten, sind prefigurativ.\n\nDer Gedanke: Wir müssen nicht auf die Revolution warten, um solidarisch zu leben. Wir können Inseln der Utopie im Hier und Jetzt schaffen. Diese Inseln sind nicht die Lösung – aber sie sind Übungsräume, Prototypen, Ermutigung.\n\nKritik an Prefiguration: Sie kann zur Nische werden, zum politischen Rückzug. „Wir machen unser Ding, der Rest ist uns egal.\" Das Risiko ist real. Deshalb muss Prefiguration immer mit Konfrontation gekoppelt sein: Wir leben anders UND wir fordern, dass alle so leben können."
+      },
+      {
+        "id": "aufklaerung---bildung",
+        "titel": "Aufklärung & Bildung",
+        "icon": "📚",
+        "kurz": "Wissen ist Macht. Linke Politik war immer auch Bildungsbewegung: Arbeiter*innen-Bildungsvereine, feministische Lesekreise, Volkshochschulen. Der Gedanke: Wer die Verhältnisse versteht, kann sie verändern. Wer manipuliert wird, bleibt ohnmächtig.",
+        "lang": "Bildung ist nicht dasselbe wie Akademisierung. Im Gegenteil: Linke Bildung kämpft gegen elitäre Wissensmonopole. Sie macht komplexe Theorie zugänglich. Sie erkennt auch nicht-akademisches Wissen an: Erfahrungswissen, praktisches Können, emotionale Intelligenz.\n\nAufklärung bedeutet auch: Ideologiekritik. Welche Interessen stecken hinter scheinbar neutralen Fakten? Wer profitiert von welcher Erzählung? Medienkompetenz ist heute linke Bildungsaufgabe: Fake News erkennen, Algorithmen verstehen, Propaganda durchschauen.\n\nAber: Aufklärung allein befreit nicht. Wissen ohne Handeln ist wirkungslos. Und: Aufklärung kann auch bevormunden. Nicht „die Massen\" müssen aufgeklärt werden (von oben herab), sondern gemeinsames Lernen muss stattfinden (auf Augenhöhe)."
+      },
+      {
+        "id": "care---fuersorge",
+        "titel": "Care & Fürsorge",
+        "icon": "💚",
+        "kurz": "Politik ist auch Alltag. Linke Bewegungen können nur funktionieren, wenn Menschen sich umeinander kümmern. Wer Care-Arbeit abwertet, reproduziert patriarchale Strukturen – auch in linken Räumen.",
+        "lang": "Care in der politischen Arbeit bedeutet: auf Erschöpfung achten, Pausen einfordern, Kinderbetreuung bei Demos organisieren, barrierefreie Räume schaffen, emotionale Arbeit anerkennen. Es bedeutet auch: Konflikte empathisch bearbeiten, Traumata ernst nehmen, psychische Gesundheit thematisieren.\n\nAktivismus, der Menschen ausbrennt, ist nicht emanzipatorisch. Burnout-Kultur ist keine Auszeichnung, sondern Symptom kapitalistische Logik im Widerstand. „Wer sich nicht um sich selbst kümmert, kann sich nicht um die Revolution kümmern\" – das ist nicht Individualismus, sondern Realismus.\n\nCare-Politik fordert auch: Anerkennung für die, die im Hintergrund arbeiten. Nicht nur die Redner*innen auf der Bühne sind wichtig, sondern auch die, die das Buffet vorbereiten, die Protokolle schreiben, die Verzweifelten auffangen. Ohne diese unsichtbare Arbeit kollabiert jede Bewegung."
+      },
+      {
+        "id": "aesthetik---kultur",
+        "titel": "Ästhetik & Kultur",
+        "icon": "🎨",
+        "kurz": "Politik braucht Symbole. Die Linke hat immer gewusst: Kultur ist umkämpftes Terrain. Lieder, Plakate, Parolen, Performances – all das ist politisch. Ästhetik ist nicht Beiwerk, sondern Kampffeld.",
+        "lang": "Gute linke Ästhetik mobilisiert Emotionen: Hoffnung, Wut, Trotz, Solidarität. Sie macht komplexe Ideen sinnlich erfahrbar. Sie schafft Identifikation. „Bella Ciao\", die geballte Faust, Che Guevaras Konterfei – solche Symbole tragen Bedeutungen über Generationen.\n\nAber Ästhetik kann auch zur Pose werden: Revolutionsfolklore ohne Inhalt, Vintage-Marxismus als hippes Lifestyle-Accessoire. Die Frage ist: Dient die Ästhetik der Mobilisierung oder der Selbstinszenierung?\n\nZeitgenössische linke Kultur muss sich auch kritisch mit ihrer eigenen Geschichte auseinandersetzen: Welche Ästhetiken waren ausschließend? Welche reproduzierten Herrschaft? Wie können wir Kulturen schaffen, die inklusiv, divers, zugänglich sind – ohne beliebig zu werden?"
+      },
+      {
+        "id": "hoffnung---utopie",
+        "titel": "Hoffnung & Utopie",
+        "icon": "🌅",
+        "kurz": "Ohne Hoffnung kein Widerstand. Ernst Bloch sprach vom „Prinzip Hoffnung\" – der Fähigkeit, sich eine bessere Zukunft vorzustellen und auf sie hin zu handeln. Utopie ist nicht naiv, sondern notwendig. Sie ist der Überschuss über das Bestehende, die Weigerung, sich mit dem Gegebenen abzufinden.",
+        "lang": "Aber Hoffnung muss realistisch sein: „Hoffnung ist nicht die Überzeugung, dass etwas gut ausgeht, sondern die Gewissheit, dass etwas Sinn macht, egal wie es ausgeht\" (Václav Havel). Linke Hoffnung ist nicht Optimismus. Sie weiß um die Möglichkeit des Scheiterns. Aber sie handelt trotzdem.\n\nKonkrete Utopie (Bloch) unterscheidet sich von abstrakter Utopie: Sie fantasiert nicht ins Blaue, sondern erkennt im Bestehenden schon Ansätze des Neuen. Genossenschaften, Commons, partizipative Demokratie – all das existiert bereits, wenn auch marginal. Die Aufgabe ist, diese Keime zu stärken.\n\nUtopie ohne Strategie ist Eskapismus. Strategie ohne Utopie ist Technokratie. Linke Politik hält beides zusammen: den langen Marsch durch die Institutionen UND das Fernziel einer befreiten Gesellschaft. Kleine Schritte, große Ziele."
+      }
     ]
   },
-  fehlleistungen: {
-    name: "Die 10 Fehlleistungen & Paradoxien",
-    subtitle: "Der Spiegel",
-    beschreibung: "Wo das linke Wesen über sich selbst stolpert.",
-    icon: "⚠️",
-    farbe: "#FF9800",
-    essays: [
-      { id: "reinheitsfalle", titel: "Die Reinheitsfalle", icon: "❄️", kurz: "Der Drang, so perfekt 'links' zu sein, dass man niemanden mehr neben sich duldet. Wer nur mit den 100-prozentigen spricht, endet als einsamer Heiliger in einer Sekte.", lang: null },
-      { id: "akademischer-elitismus", titel: "Akademischer Elitismus", icon: "🎓", kurz: "Wenn die Sprache der Befreiung so kompliziert wird, dass sie zur neuen Zugangshürde wird. Theorie, die niemanden mehr erreicht, befreit auch niemanden.", lang: null },
-      { id: "autoritaere-versuchung", titel: "Autoritäre Versuchung", icon: "👮", kurz: "Das Paradoxon der Macht. Der Glaube, man müsse die Freiheit erst einmal unterdrücken, um sie später einzuführen. Ein Weg, der fast immer in die Tyrannei führt.", lang: null },
-      { id: "identitaets-partikularismus", titel: "Identitäts-Partikularismus", icon: "🧩", kurz: "Wenn wir uns in so viele Untergruppen aufspalten, dass wir das Gemeinsame (die Klassenfrage, das System) aus den Augen verlieren.", lang: null },
-      { id: "lifestyle-linkstum", titel: "Lifestyle-Linkstum", icon: "🛍️", kurz: "Wenn politischer Protest zum reinen Distinktionsmerkmal wird. Der Jutebeutel als Statussymbol, während die reale politische Arbeit liegen bleibt.", lang: null },
-      { id: "dogmatismus", titel: "Dogmatismus", icon: "📜", kurz: "Das Festhalten an Theorien aus dem 19. Jahrhundert, als wären sie religiöse Offenbarungen. Wer die Welt nicht mehr anschaut, sondern nur noch zitiert, wird blind.", lang: null },
-      { id: "verschwoerungsmythen", titel: "Verschwörungsmythen von links", icon: "🕵️", kurz: "Komplexe globale Prozesse auf 'die bösen Pläne' von fünf Personen zu reduzieren. Es ist bequemer als eine strukturelle Analyse, aber falsch.", lang: null },
-      { id: "burnout-kultur", titel: "Burnout-Kultur", icon: "🔥", kurz: "Der Glaube, dass man nur ein guter Aktivist ist, wenn man sich komplett aufreibt. Eine Bewegung von Erschöpften kann keine lebendige Zukunft bauen.", lang: null },
-      { id: "staatsglaeubigkeit", titel: "Staatsgläubigkeit", icon: "🏛️", kurz: "Das Misstrauen gegenüber dem Staat als Machtapparat, gepaart mit der gleichzeitigen Erwartung, dass derselbe Staat alle Probleme per Gesetz lösen soll.", lang: null },
-      { id: "paternalismus", titel: "Paternalismus", icon: "👨‍👧", kurz: "'Wir wissen, was das Volk braucht.' Über Menschen zu entscheiden, ohne sie einzubeziehen, wiederholt genau die Herrschaftsstrukturen, die man bekämpfen will.", lang: null }
+  "fehlleistungen": {
+    "name": "Die 10 Fehlleistungen & Paradoxien",
+    "subtitle": "Der Spiegel",
+    "beschreibung": "Wo das linke Wesen über sich selbst stolpert.",
+    "icon": "⚠️",
+    "farbe": "#FF9800",
+    "essays": [
+      {
+        "id": "die-reinheitsfalle",
+        "titel": "Die Reinheitsfalle",
+        "icon": "❄️",
+        "kurz": "Wer nur mit den 100-Prozentigen spricht, endet allein. Die Versuchung ist groß: politisch „rein\" zu bleiben, keine Kompromisse einzugehen, sich von allen abzugrenzen, die nicht exakt die eigene Linie teilen. Das Ergebnis: Sekten statt Bewegungen.",
+        "lang": "Die Reinheitsfalle zeigt sich in permanenten Spaltungen: über theoretische Nuancen, über historische Bewertungen, über taktische Fragen. Jede Abweichung wird als Verrat gebrandmarkt. Bündnisse scheitern an Maximalforderungen. Am Ende bleibt eine kleine, dogmatische Gruppe übrig, die für sich beansprucht, die einzig wahre Linke zu sein.\n\nDas Problem: Politik ist schmutzig. Kompromisse sind unvermeidlich. Bündnisse mit „Reformist*innen\" manchmal notwendig. Wer absolute Reinheit fordert, macht sich handlungsunfähig.\n\nDie Alternative: Prinzipientreue ohne Dogmatismus. Klare Positionen, aber Offenheit für Bündnisse. Kritik an Fehlern, aber keine ewige Exkommunikation. Die Fähigkeit zu unterscheiden: Was ist Grundsatz, was ist Taktik?"
+      },
+      {
+        "id": "akademischer-elitismus",
+        "titel": "Akademischer Elitismus",
+        "icon": "🎓",
+        "kurz": "Wenn die Sprache der Befreiung niemanden mehr erreicht. Linke Theorie ist oft komplex – zu Recht, weil sie komplexe Verhältnisse analysiert. Aber manchmal wird Komplexität zum Selbstzweck. Dann ist Theorie keine Waffe mehr, sondern Distinktionsmerkmal.",
+        "lang": "Akademischer Elitismus zeigt sich in: unverständlichen Texten voller Jargon, in Veranstaltungen, die Vorwissen voraussetzen, in Debatten, die nur für Eingeweihte nachvollziehbar sind. Es entsteht eine neue Hierarchie: die Gebildeten oben, die „Ungebildeten\" unten.\n\nDas Perfide: Diese neue Elite legitimiert sich durch linke Theorie. „Wer Adorno nicht gelesen hat, kann nicht mitreden.\" „Wer Intersektionalität nicht erklären kann, ist nicht politisiert.\" So werden die ausgegrenzt, um deren Befreiung es eigentlich gehen sollte.\n\nDie Lösung: Theorie übersetzen, nicht vereinfachen. Bildungsarbeit auf Augenhöhe. Anerkennung für nicht-akademisches Wissen. Und: Die Frage stellen – wer spricht, wer schweigt, wer wird gehört?"
+      },
+      {
+        "id": "autoritaere-versuchung",
+        "titel": "Autoritäre Versuchung",
+        "icon": "👮",
+        "kurz": "Die Freiheit unterdrücken, um sie einzuführen. Das ist das zentrale Paradoxon autoritärer Linker: Sie wollen Emanzipation erkämpfen – aber mit Mitteln, die Emanzipation verunmöglichen. Vanguardismus, Zentralismus, Repression gegen Abweichler*innen – all das wurde im Namen des Sozialismus praktiziert.",
+        "lang": "Die Logik: Die Massen sind noch nicht „bereit\" für Sozialismus. Also muss eine Avantgarde (die Partei, der Staat) sie erziehen, notfalls mit Zwang. Der Übergang wird zur Dauerherrschaft. Die Diktatur des Proletariats zur Diktatur über das Proletariat.\n\nGeschichte zeigt: Autoritärer Sozialismus endet im Totalitarismus. Stalin, Mao, Pol Pot – das sind keine „Ausrutscher\", sondern logische Konsequenzen einer Praxis, die Menschen als Mittel benutzt. Emanzipation kann nicht oktroyiert werden. Freiheit kann nicht erzwungen werden.\n\nDie Alternative: Libertärer Sozialismus. Rätedemokratie. Selbstverwaltung. Die Überzeugung, dass Menschen zur Freiheit fähig sind – jetzt, nicht erst nach der Revolution. Dass Mittel und Zweck zusammenhängen müssen."
+      },
+      {
+        "id": "identitaets-partikularismus",
+        "titel": "Identitäts-Partikularismus",
+        "icon": "🧩",
+        "kurz": "Wenn wir uns in so viele Untergruppen aufspalten, dass das Gemeinsame verschwindet. Identity Politics ist notwendig: Sie gibt marginalisierten Gruppen Stimme, macht spezifische Unterdrückung sichtbar, stärkt Selbstbewusstsein. Aber sie kann auch fragmentieren.",
+        "lang": "Partikularismus bedeutet: Jede Gruppe kämpft nur für sich. Schwarze für Schwarze, Frauen für Frauen, LGBTQ+ für LGBTQ+. Die Klassenfrage – das Gemeinsame aller Ausgebeuteten – gerät aus dem Blick. Solidarität wird schwierig, weil jede*r nur die eigene Unterdrückung sieht.\n\nDas Ergebnis: endlose Identitätsdebatten, wer am meisten unterdrückt ist. Oppression Olympics. Sprechverbote: „Als Weißer kannst du nicht über Rassismus reden.\" „Als Mann hast du bei Feminismus nichts zu sagen.\" Legitime Kritik an falscher Anmaßung wird zur Barriere.\n\nDie Lösung: Intersektionalität ernst nehmen – also die Überschneidungen sehen, nicht die Trennungen. Universalismus nicht gegen Partikularismus ausspielen, sondern verbinden. Die Klassenfrage stellen UND Rassismus/Sexismus/etc. bekämpfen."
+      },
+      {
+        "id": "lifestyle-linkstum",
+        "titel": "Lifestyle-Linkstum",
+        "icon": "🛍️",
+        "kurz": "Wenn der Jutebeutel zum Statussymbol wird. Es gibt eine Form von Linkssein, die vor allem Distinktion ist: Man kauft bio, fährt Lastenrad, hört linke Podcasts – aber die reale politische Arbeit bleibt liegen. Politik wird zum Lifestyle, zur Identität, zum Konsumverhalten.",
+        "lang": "Lifestyle-Linke erkennt man daran: Sie reden viel über ihre Werte, aber tun wenig. Sie sind gut vernetzt in Szeneläden, aber kennen keine einzige Kolleg*in aus dem eigenen Betrieb. Sie diskutieren abstrakte Theorie, aber haben noch nie eine Demo organisiert.\n\nDas Problem: Lifestyle-Linkstum ist unpolitisch, trotz politischer Attitüde. Es kostet nichts, riskiert nichts, verändert nichts. Es ist Kapitalismus mit gutem Gewissen. Und es ist klassistisch: Wer kann sich Bio leisten? Wer hat Zeit für ehrenamtliche Arbeit?\n\nDie Alternative: Politisches Engagement, das mehr ist als Selbstdarstellung. Organisierung im eigenen Umfeld. Bereitschaft, unbequem zu sein, Privilegien aufzugeben, Konflikte einzugehen. Solidarität als Praxis, nicht als Label."
+      },
+      {
+        "id": "dogmatismus",
+        "titel": "Dogmatismus",
+        "icon": "📜",
+        "kurz": "Das Festhalten an Theorien aus dem 19. Jahrhundert, als wären sie religiöse Offenbarungen. Marx, Lenin, Gramsci – all das sind wichtige Denker. Aber sie sind nicht unfehlbar, nicht zeitlos, nicht sakrosankt. Wer ihre Schriften wie Bibeltexte zitiert, wird blind für neue Realitäten.",
+        "lang": "Dogmatismus zeigt sich in: endlosen Klassikerzitaten statt eigenständiger Analyse, in der Weigerung, neue Theorien zur Kenntnis zu nehmen, in der Überzeugung, alle Antworten lägen bereits vor. „Marx hat schon alles gesagt!\" – aber Marx konnte weder Internet noch Klimakrise noch Care-Revolution voraussehen.\n\nDas Problem: Dogmatismus macht träge. Wenn alle Antworten feststehen, warum noch nachdenken? Die Welt wird in vorgefertigte Kategorien gezwängt. Was nicht passt, wird ignoriert oder uminterpretiert. Innovation wird verdächtig.\n\nDie Alternative: Theorie als Werkzeugkasten, nicht als Dogma. Marx lesen, aber auch aktualisieren. Klassiker studieren, aber nicht anbeten. Die Fähigkeit, zu sagen: „Das war richtig im 19. Jahrhundert, aber heute brauchen wir andere Antworten.\""
+      },
+      {
+        "id": "verschwoerungsmythen-von-links",
+        "titel": "Verschwörungsmythen von links",
+        "icon": "🕵️",
+        "kurz": "Komplexe globale Prozesse auf die bösen Pläne von fünf Personen zu reduzieren. Es gibt auch linke Verschwörungstheorien: „Die Bilderberger steuern alles!\" „George Soros finanziert alle NGOs!\" „Die Pharmaindustrie hat Corona erfunden!\" Solche Erzählungen sind bequem – und falsch.",
+        "lang": "Das Problem: Verschwörungsdenken personalisiert strukturelle Macht. Statt Kapitalismus als System zu analysieren, werden einzelne Bösewichte konstruiert. Das ist nicht nur theoretisch falsch, sondern politisch gefährlich: Es führt zu Antisemitismus (die „jüdische Weltverschwörung\"), zu Elitenfeindlichkeit ohne Systemkritik, zu Populismus.\n\nVerschwörungstheorien haben oft einen wahren Kern: Ja, Eliten haben Macht. Ja, sie koordinieren sich (WEF, G7). Aber nein, sie steuern nicht alles. Kapitalismus ist kein Plan, sondern ein anarchisches System. Krisen sind nicht gewollt, sondern systemische Widersprüche.\n\nDie Alternative: Strukturelle Analyse statt Personalisierung. Ideologiekritik statt Verschwörungsglauben. Die Komplexität aushalten. Und: Klare Abgrenzung zu rechten Verschwörungsideologien, auch wenn sie sich links geben."
+      },
+      {
+        "id": "burnout-kultur",
+        "titel": "Burnout-Kultur",
+        "icon": "🔥",
+        "kurz": "Der Glaube, dass man nur ein guter Aktivist ist, wenn man sich komplett aufreibt. Linke Bewegungen haben oft eine toxische Arbeitskultur: Niemand soll Schwäche zeigen. Wer Pausen braucht, gilt als nicht engagiert genug. Erschöpfung wird zur Auszeichnung.",
+        "lang": "Das Ergebnis: Menschen brennen aus, verlassen die Bewegung, werden depressiv. Die Bewegung verliert ihre besten Leute. Burnout ist nicht individuelles Versagen, sondern strukturelles Problem.\n\nDie Ursachen: Kapitalistische Leistungslogik auch in linken Räumen. Fehlende Ressourcen (ehrenamtlich neben Vollzeitjob). Heroische Selbstbilder („Wir retten die Welt!\"). Schuldgefühle („Wenn ich jetzt pause, leiden andere\").\n\nDie Lösung: Care-Kultur etablieren. Pausen legitimieren. Aufgaben umverteilen. Anerkennen: Eine Bewegung von Erschöpften kann keine lebendige Zukunft bauen. Nachhaltigkeit bedeutet auch: nachhaltig mit der eigenen Energie umgehen."
+      },
+      {
+        "id": "staatsglaeubigkeit",
+        "titel": "Staatsgläubigkeit",
+        "icon": "🏛️",
+        "kurz": "Das Misstrauen gegenüber dem Staat als Machtapparat, gepaart mit der gleichzeitigen Erwartung, dass derselbe Staat alle Probleme lösen soll. Viele Linke haben ein widersprüchliches Verhältnis zum Staat: Einerseits wird er als Instrument der Herrschenden kritisiert, andererseits soll er Umverteilung, Regulierung, Daseinsvorsorge organisieren.",
+        "lang": "Das Dilemma ist real: Ohne Staat keine sozialen Rechte, keine Umverteilung, keine öffentliche Infrastruktur. Aber: Der Staat ist nicht neutral. Er ist historisch als Instrument der Herrschenden entstanden. Polizei, Militär, Bürokratie – all das dient auch der Kontrolle.\n\nNaive Staatsgläubigkeit übersieht: Gesetze können zurückgenommen werden. Der Wohlfahrtsstaat wurde erkämpft, nicht geschenkt. Und: Staatliche Lösungen können bevormundend, ineffizient, bürokratisch sein. Manchmal sind dezentrale, selbstverwaltete Strukturen besser.\n\nDie Balance: Den Staat nutzen (für Umverteilung, Regulierung), aber nicht ihm vertrauen. Soziale Rechte erkämpfen, aber nicht nur auf Staat setzen. Autonome Strukturen aufbauen. Und: Den Staat demokratisieren, statt ihn nur zu benutzen."
+      },
+      {
+        "id": "paternalismus",
+        "titel": "Paternalismus",
+        "icon": "👨‍👧",
+        "kurz": "\"Wir wissen, was das Volk braucht.\" Über Menschen zu entscheiden, ohne sie einzubeziehen, wiederholt genau die Herrschaftsstrukturen, die man bekämpfen will. Paternalismus ist die Haltung: „Wir Aufgeklärten müssen die Unmündigen führen.\"",
+        "lang": "Paternalismus zeigt sich in: Expertinnen, die „für\" Betroffene sprechen. Stellvertreterinnen, die „im Namen des Volkes\" entscheiden. Aktivistinnen, die besser wissen, was Arbeiterinnen, Migrant*innen, Frauen brauchen – ohne sie zu fragen.\n\nDas Problem: Paternalismus entmündigt. Er reproduziert Hierarchien: oben die, die wissen; unten die, die geführt werden müssen. Er führt zu Entscheidungen, die an den realen Bedürfnissen vorbeigehen. Und: Er ist Herrschaft, auch wenn sie sich emanzipatorisch gibt.\n\nDie Alternative: „Nichts über uns ohne uns.\" Betroffene zu Expert*innen machen. Solidarität statt Stellvertretung. Zuhören statt Belehren. Und: Die eigene Privilegien reflektieren – wer kann für wen sprechen, und wer sollte lieber schweigen und Platz machen?"
+      }
     ]
   }
 }
