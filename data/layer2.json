@@ -1,0 +1,1208 @@
+{
+  "00": {
+    "titel": "REFORM/REVOLUTION",
+    "frage": "Wie lässt sich der Kapitalismus am besten überwinden?",
+    "polLinks": "Revolution",
+    "polRechts": "Reform",
+    "stufen": [
+      {
+        "wert": 1,
+        "label": "Strikte Reform",
+        "beschreibung": "Veränderung kommt durch Wahlen, Gesetze und geduldige Überzeugungsarbeit. Der Kapitalismus lässt sich demokratisch überwinden - Schritt für Schritt, Mehrheit für Mehrheit. Revolution bedeutet Chaos, Gewalt und am Ende oft neue Tyrannei. Der lange Marsch durch die Institutionen ist mühsam, aber der einzige Weg, der funktioniert.",
+        "vertiefung": "Klassiker: Eduard Bernstein (1850-1932), Karl Kautsky (1854-1938). „Das Ziel, was immer es sei, ist mir nichts, die Bewegung ist mir alles....\" – Eduard Bernstein",
+        "beispiel": "Schwedisches Modell (Schweden, 1932-1976): Die SAP regierte fast ununterbrochen und baute einen umfassenden Wohlfahrtsstaat auf. Der Meidner-Plan hätte Unternehmen schrittweise vergesellschafte"
+      },
+      {
+        "wert": 2,
+        "label": "Strukturreformen",
+        "beschreibung": "Nicht jede Reform ist gleich. Es gibt Reformen, die das System stabilisieren - und solche, die es an seine Grenzen bringen. Wir brauchen Reformen, die die Logik des Kapitalismus sprengen: Wirtschaftsdemokratie, Vergesellschaftung, bedingungsloses Grundeinkommen. Reformen, die den Appetit auf mehr wecken.",
+        "vertiefung": "Klassiker: André Gorz (1923-2007), Rudolf Meidner (1914-2005). „Eine nicht-reformistische Reform wird nicht danach beurteilt, was sie erhält, sondern danach, was sie ermöglicht....\" – André Gorz",
+        "beispiel": "Meidner-Plan (Schweden, 1976-1983): Ein Plan zur schrittweisen Überführung von Unternehmen in Arbeitnehmerfonds. Wurde nach massivem Widerstand des Kapitals verwässert und aufgegeben."
+      },
+      {
+        "wert": 3,
+        "label": "Doppelstrategie",
+        "beschreibung": "Die Frage 'Reform ODER Revolution' ist falsch gestellt. Wir brauchen beides - je nach Situation. Reformen verbessern das Leben hier und jetzt, schärfen das Bewusstsein und bauen Gegenmacht auf. Aber wenn sich ein Fenster öffnet, müssen wir bereit sein, grundlegend zu brechen. Rosa Luxemburg nannte das die 'Dialektik von Reform und Revolution'.",
+        "vertiefung": "Klassiker: Rosa Luxemburg (1871-1919), Antonio Gramsci (1891-1937). „Die gesetzliche Reform und die Revolution sind nicht verschiedene Methoden des geschichtlichen Fortschritts, sondern ver...\" – Rosa Luxemburg",
+        "beispiel": "Podemos/Momentum (Spanien/UK, 2014-2019): Bewegungsparteien, die parlamentarische und außerparlamentarische Kämpfe verbinden wollten. Mit wechselhaftem Erfolg."
+      },
+      {
+        "wert": 4,
+        "label": "Hegemoniale Strategie",
+        "beschreibung": "Bevor wir die Macht übernehmen können, müssen wir die Köpfe gewinnen. Gramsci lehrte uns: Die herrschende Klasse herrscht nicht nur mit Gewalt, sondern vor allem durch Hegemonie - durch die Kontrolle über das, was als 'normal' und 'vernünftig' gilt. Unsere Aufgabe ist der 'Stellungskrieg': Schritt für Schritt müssen wir Positionen in der Zivilgesellschaft erobern, bis der Kapitalismus ideologisch ",
+        "vertiefung": "Klassiker: Antonio Gramsci (1891-1937), Louis Althusser (1918-1990). „Die Krise besteht gerade darin, dass das Alte stirbt und das Neue nicht geboren werden kann....\" – Antonio Gramsci",
+        "beispiel": "Podemos (Spanien, 2014-heute): Versuch, einen 'linken Populismus' aufzubauen, der die hegemoniale Position erobert. Von der Straße ins Parlament."
+      },
+      {
+        "wert": 5,
+        "label": "Revolutionärer Bruch",
+        "beschreibung": "Reformen sind Illusionen - sie machen das System erträglicher und verlängern so seine Existenz. Der kapitalistische Staat kann nicht reformiert, nur zerschlagen werden. Die Geschichte zeigt: Jede herrschende Klasse hat ihre Privilegien mit allen Mitteln verteidigt. Nur ein revolutionärer Bruch, getragen von den Massen, kann eine neue Gesellschaft gebären. Die Frage ist nicht ob, sondern wann.",
+        "vertiefung": "Klassiker: Wladimir Lenin (1870-1924), Che Guevara (1928-1967). „Es gibt Jahrzehnte, in denen nichts passiert, und es gibt Wochen, in denen Jahrzehnte passieren....\" – Wladimir Lenin",
+        "beispiel": "Oktoberrevolution (Russland, 1917): Die Bolschewiki nutzten die Krise des Ersten Weltkriegs, um die Macht zu ergreifen. 'Alle Macht den Räten!' - mit allen bekannten Folgen."
+      }
+    ],
+    "linkePosition": {
+      "position": "Die Linke steht bei etwa 0.4 auf dieser Achse",
+      "begruendung": "Die Meta-Achse: Wie kommen wir vom Kapitalismus zum Sozialismus? Durch Bruch oder schrittweise Veränderung?"
+    }
+  },
+  "01": {
+    "titel": "EIGENTUM",
+    "frage": "Wie sollte mit den großen Produktionsmitteln umgegangen werden?",
+    "polLinks": "Regulierter Markt",
+    "polRechts": "Vergesellschaftung",
+    "stufen": [
+      {
+        "wert": 1,
+        "label": "Commons",
+        "beschreibung": "Warum muss alles jemandem gehören? Die wichtigsten Ressourcen - Wasser, Land, Wissen, Atmosphäre - gehören allen oder niemandem. Commons sind Güter, die von Gemeinschaften selbst verwaltet werden, nach eigenen Regeln, jenseits von Staat und Markt. Nicht Eigentum, sondern Nutzungsrechte. Nicht Besitz, sondern Sorge. Das älteste und zugleich radikalste Modell.",
+        "vertiefung": "Klassiker: Peter Kropotkin (1842-1921), Elinor Ostrom (1933-2012). „Die Tragödie der Allmende ist ein Mythos - Gemeinschaften können ihre Ressourcen sehr wohl selbst verwalten....\" – Elinor Ostrom",
+        "beispiel": "Wikipedia (Global/Online, 2001-heute): Das größte Commons der Welt: Wissen, das niemandem gehört und allen zur Verfügung steht."
+      },
+      {
+        "wert": 2,
+        "label": "Genossenschaftseigentum",
+        "beschreibung": "Warum sollte jemand, der nichts tut außer Kapital zu besitzen, über meine Arbeit bestimmen? Die Antwort ist einfach: Gar nicht. Die Unternehmen gehören den Beschäftigten - demokratisch verwaltet, mit gleichen Stimmrechten. Nicht der Staat kontrolliert die Wirtschaft, sondern die Arbeiterinnen selbst. Ein Mensch, eine Stimme - auch in der Wirtschaft.",
+        "vertiefung": "Klassiker: Robert Owen (1771-1858), Charles Fourier (1772-1837). „Eigentum ist Diebstahl!...\" – Pierre-Joseph Proudhon",
+        "beispiel": "Mondragón (Baskenland, Spanien, 1956-heute): 80.000 Arbeiter-Eigentümer in über 80 Genossenschaften. Industrie, Banken, Bildung - alles in Arbeiterhand."
+      },
+      {
+        "wert": 3,
+        "label": "Plurale Eigentumsformen",
+        "beschreibung": "Es gibt keine ideale Eigentumsform für alles. Manche Dinge gehören dem Staat, manche den Kommunen, manche den Beschäftigten, manche allen, manche niemandem. Eine sozialistische Wirtschaft ist ein Ökosystem verschiedener Eigentumsformen: Staatsunternehmen, Genossenschaften, Kommunalbetriebe, Commons, Kleinunternehmen. Einheit in der Vielfalt.",
+        "vertiefung": "Klassiker: G.D.H. Cole (1889-1959), Karl Polanyi (1886-1964). „Der Sozialismus der Zukunft wird nicht eine einzige Form des Eigentums kennen, sondern viele - je nach Funktion und Bedü...\" – G.D.H. Cole",
+        "beispiel": "Preston Model (Preston, England, 2012-heute): Community Wealth Building: Die Stadt lenkt Aufträge an lokale Genossenschaften und Sozialunternehmen."
+      },
+      {
+        "wert": 4,
+        "label": "Öffentliches Eigentum",
+        "beschreibung": "Verstaatlichung allein reicht nicht - der abstrakte Staat ist oft genauso entfremdet wie der private Konzern. Öffentliches Eigentum muss demokratisch sein: Mitbestimmung der Beschäftigten, der Nutzerinnen, der Kommunen. Nicht der Staat besitzt, sondern die Öffentlichkeit - und die Öffentlichkeit hat Mitsprache.",
+        "vertiefung": "Klassiker: G.D.H. Cole (1889-1959), Tony Benn (1925-2014). „Wenn es Eigentum geben muss, dann nur als treuhänderische Verwaltung für die Gemeinschaft....\" – Tony Benn",
+        "beispiel": "Lucas Aerospace Plan (Großbritannien, 1976): Arbeiter eines Rüstungskonzerns erstellten einen alternativen Produktionsplan für sozial nützliche Güter. Wurde nie umgesetzt."
+      },
+      {
+        "wert": 5,
+        "label": "Staatsbesitz",
+        "beschreibung": "Die Kommandohöhen der Wirtschaft gehören in öffentliche Hand: Energie, Verkehr, Banken, Telekommunikation. Der Staat als Eigentümer kann langfristig planen, Gewinne für die Allgemeinheit sichern und strategische Entscheidungen treffen. Nicht alles muss verstaatlicht werden - aber das Wichtigste schon.",
+        "vertiefung": "Klassiker: Clement Attlee (1883-1967), Herbert Morrison (1888-1965). „Es gibt gewisse Industrien, die so wichtig für das nationale Leben sind, dass sie nicht dem Privatprofit überlassen werd...\" – Clement Attlee",
+        "beispiel": "Britische Verstaatlichungen (Großbritannien, 1945-1951): Kohle, Stahl, Eisenbahn, Energie - die Labour-Regierung überführte 20% der Wirtschaft in Staatsbesitz."
+      }
+    ],
+    "linkePosition": {
+      "position": "Die Linke steht bei etwa 0.25 auf dieser Achse",
+      "begruendung": "Wem gehören die Produktionsmittel? Sollen Industrie, Wohnungen, Banken vergesellschaftet werden?"
+    }
+  },
+  "02": {
+    "titel": "PLANUNG",
+    "frage": "Wie sollte die Wirtschaft koordiniert werden?",
+    "polLinks": "Demokratische Planwirtschaft",
+    "polRechts": "Markt mit Regulierung",
+    "stufen": [
+      {
+        "wert": 1,
+        "label": "Regulierter Markt",
+        "beschreibung": "Der Markt ist effizient - aber er braucht Leitplanken. Mindestlohn, Arbeitsrecht, Umweltauflagen, progressive Besteuerung. Der Staat korrigiert die schlimmsten Auswüchse, ohne den Preismechanismus außer Kraft zu setzen. Skandinavien zeigt: Kapitalismus mit menschlichem Antlitz ist möglich. Nicht perfekt, aber besser als alle Alternativen.",
+        "vertiefung": "Klassiker: John Maynard Keynes (1883-1946), Karl Polanyi (1886-1964). „Der Kapitalismus ist der erstaunliche Glaube, dass die übelsten Menschen aus den übelsten Motiven irgendwie für das Wohl...\" – John Maynard Keynes",
+        "beispiel": "Nordisches Modell (Skandinavien, 1950-heute): Hohe Steuern, starke Gewerkschaften, universelle Sozialleistungen - innerhalb einer kapitalistischen Wirtschaft."
+      },
+      {
+        "wert": 2,
+        "label": "Gemischte Wirtschaft",
+        "beschreibung": "Manche Dinge gehören nicht auf den Markt: Gesundheit, Bildung, Energie, Wasser, Wohnen. Diese Sektoren müssen öffentlich sein - effizient, demokratisch kontrolliert, am Gemeinwohl orientiert. Der Rest kann Markt bleiben, aber unter strengen Regeln. Das ist keine Utopie, sondern der Nachkriegskonsens, bevor der Neoliberalismus ihn zerstörte.",
+        "vertiefung": "Klassiker: Aneurin Bevan (1897-1960), Tony Benn (1925-2014). „Der NHS wird so lange bestehen, wie es Menschen gibt, die den Mut haben, für ihn zu kämpfen....\" – Aneurin Bevan",
+        "beispiel": "NHS (National Health Service) (Großbritannien, 1948-heute): Kostenlose Gesundheitsversorgung für alle, finanziert aus Steuern. Das Kronjuwel des britischen Sozialstaats."
+      },
+      {
+        "wert": 3,
+        "label": "Marktsozialismus",
+        "beschreibung": "Was, wenn wir den Markt behalten, aber die Kapitalisten abschaffen? Unternehmen gehören denen, die darin arbeiten - als Genossenschaften. Sie konkurrieren auf dem Markt, aber die Profite fließen nicht an Aktionäre, sondern werden demokratisch verteilt. Der Markt als Koordinationsmechanismus, aber ohne Ausbeutung. Das Beste aus zwei Welten?",
+        "vertiefung": "Klassiker: Oskar Lange (1904-1965), Jaroslav Vaněk (1930-2017). „Wirtschaftsdemokratie bedeutet: Ein Mensch, eine Stimme - nicht nur am Wahltag, sondern jeden Tag am Arbeitsplatz....\" – David Schweickart",
+        "beispiel": "Mondragón-Kooperativen (Baskenland, Spanien, 1956-heute): Ein Netzwerk von über 80 Genossenschaften mit 80.000 Beschäftigten. Die größte Genossenschaftsgruppe der Welt."
+      },
+      {
+        "wert": 4,
+        "label": "Demokratische Planung",
+        "beschreibung": "Märkte sind blind - sie produzieren Krisen, Ungleichheit, Umweltzerstörung. Aber die sowjetische Zentralplanung war ein bürokratisches Monster. Die Lösung: Demokratische Planung von unten. Räte auf allen Ebenen diskutieren und entscheiden über Produktion und Verteilung. Moderne Technologie macht Echtzeit-Koordination möglich, die früher undenkbar war.",
+        "vertiefung": "Klassiker: Otto Neurath (1882-1945), Karl Polanyi (1886-1964). „Participatory Economics: Produktion für Bedürfnisse, nicht für Profit - koordiniert durch demokratische Räte....\" – Michael Albert & Robin Hahnel",
+        "beispiel": "Partizipative Haushalte (Porto Alegre / Global, 1989-heute): Bürgerinnen entscheiden direkt über Teile des öffentlichen Haushalts. Ein Modell demokratischer Ressourcenverteilung."
+      },
+      {
+        "wert": 5,
+        "label": "Vollständige Planung",
+        "beschreibung": "Der Markt ist Anarchie - und Anarchie können wir uns nicht leisten. Klimakrise, Ressourcenknappheit, globale Ungleichheit erfordern bewusste, gesamtgesellschaftliche Steuerung. Moderne Computer und KI machen möglich, was Marx und Engels nur träumen konnten: Eine rationale Koordination der gesamten Produktion nach menschlichen Bedürfnissen, nicht nach Profitlogik.",
+        "vertiefung": "Klassiker: Karl Marx (1818-1883), Friedrich Engels (1820-1895). „An die Stelle der Regierung über Personen tritt die Verwaltung von Sachen und die Leitung von Produktionsprozessen....\" – Friedrich Engels",
+        "beispiel": "Sowjetische Planwirtschaft (UdSSR, 1928-1991): Der größte Versuch zentraler Planung. Industrialisierung im Eiltempo - aber auch Bürokratie, Mangelwirtschaft und fehlende Demokratie."
+      }
+    ],
+    "linkePosition": {
+      "position": "Die Linke steht bei etwa 0.35 auf dieser Achse",
+      "begruendung": "Soll die Wirtschaft demokratisch geplant werden oder über Märkte koordiniert?"
+    }
+  },
+  "03": {
+    "titel": "SOZIALSTAAT",
+    "frage": "Wie sollte der Sozialstaat organisiert sein?",
+    "polLinks": "Aktivierender Sozialstaat",
+    "polRechts": "Universelle Grundsicherung",
+    "stufen": [
+      {
+        "wert": 1,
+        "label": "Aktivierender Sozialstaat",
+        "beschreibung": "Der Sozialstaat soll Menschen zur Arbeit befähigen und motivieren. Wer Hilfe will, muss auch etwas tun. Eigenverantwortung stärken.",
+        "vertiefung": "„Es gibt kein Recht auf Faulheit....\" – Gerhard Schröder",
+        "beispiel": "Agenda 2010 (Deutschland, 2003-2005): Rot-grüne Regierung führt Hartz-Reformen ein – Zusammenlegung von Arbeitslosen- und Sozialhilfe, Sanktionen, Ein-Euro-Jobs."
+      },
+      {
+        "wert": 2,
+        "label": "Modernisierter Sozialstaat",
+        "beschreibung": "Der Sozialstaat soll Menschen unterstützen, aber auch aktivieren. Mehr Förderung, weniger Bürokratie, bessere Vermittlung – aber die Grundlogik bleibt.",
+        "vertiefung": "Der Sozialstaat soll Menschen unterstützen, aber auch aktivieren. Mehr Förderung, weniger Bürokratie, bessere Vermittlung – aber die Grundlogik bleibt",
+        "beispiel": "Bürgergeld-Reform (Deutschland, 2023): Hartz IV wird zum Bürgergeld – höhere Sätze, weniger Sanktionen, mehr Schonvermögen."
+      },
+      {
+        "wert": 3,
+        "label": "Garantierte Grundsicherung",
+        "beschreibung": "Die Grundsicherung muss ein Leben in Würde ermöglichen – nicht nur Überleben. Regelsätze nach wissenschaftlichen Kriterien, nicht nach Kassenlage.",
+        "vertiefung": "Klassiker: William Beveridge (1879-1963). „Armut ist keine Naturkatastrophe, sondern politisch gemacht....\" – Ulrich Schneider",
+        "beispiel": "Regelsatz-Neuberechnung (Deutschland, 2021): Wohlfahrtsverbände fordern mindestens 600€ statt der 449€ Bürgergeld."
+      },
+      {
+        "wert": 4,
+        "label": "Sanktionsfreie Grundsicherung",
+        "beschreibung": "Die bestehende Grundsicherung wird von Sanktionen befreit. Niemand soll hungern müssen, weil er einen Termin verpasst hat. Der Staat als Helfer, nicht als Kontrolleur.",
+        "vertiefung": "„Sanktionen sind verfassungswidrig – sie verletzen die Menschenwürde....\" – Bundesverfassungsgericht",
+        "beispiel": "BVerfG-Urteil zu Sanktionen (Deutschland, 2019): Das Bundesverfassungsgericht beschränkte Hartz-IV-Sanktionen auf maximal 30%."
+      },
+      {
+        "wert": 5,
+        "label": "Bedingungsloses Grundeinkommen",
+        "beschreibung": "Jeder Mensch erhält ein existenzsicherndes Einkommen – ohne Bedürftigkeitsprüfung, ohne Arbeitszwang. Das BGE befreit von der Erpressbarkeit durch den Arbeitsmarkt und ermöglicht echte Wahlfreiheit.",
+        "vertiefung": "Klassiker: Thomas Morus (1478-1535), Thomas Paine (1737-1809). „Ein Grundeinkommen ist die Anerkennung, dass jeder Mensch einen Wert hat....\" – Philippe Van Parijs",
+        "beispiel": "Finnisches BGE-Experiment (Finnland, 2017-2018): 2000 Arbeitslose erhielten 560€ monatlich ohne Bedingungen."
+      }
+    ],
+    "linkePosition": {
+      "position": "Die Linke steht bei etwa 0.2 auf dieser Achse",
+      "begruendung": "Wie soll soziale Sicherheit organisiert werden? Bedingungslos oder an Bedingungen geknüpft?"
+    }
+  },
+  "04": {
+    "titel": "STEUERN",
+    "frage": "Wie sollte das Steuersystem aussehen?",
+    "polLinks": "Moderate Steuerpolitik",
+    "polRechts": "Radikale Umverteilung",
+    "stufen": [
+      {
+        "wert": 1,
+        "label": "Standort sichern",
+        "beschreibung": "Deutschland muss international wettbewerbsfähig bleiben. Zu hohe Steuern vertreiben Unternehmen und Arbeitsplätze. Lieber niedrigere Steuern und mehr Wachstum.",
+        "vertiefung": "„Hohe Steuern vernichten Arbeitsplätze....\" – Arbeitgeberverbände",
+        "beispiel": "Irisches Steuermodell (Irland, 1990er-heute): Irland lockte mit 12,5% Körperschaftssteuer Tech-Konzerne an – auf Kosten anderer EU-Länder."
+      },
+      {
+        "wert": 2,
+        "label": "Moderate Steuerreform",
+        "beschreibung": "Die Steuerlast für mittlere Einkommen ist zu hoch. Entlastung für Arbeitnehmer:innen, aber keine großen Experimente. Stabilität statt Radikalreformen.",
+        "vertiefung": "Die Steuerlast für mittlere Einkommen ist zu hoch. Entlastung für Arbeitnehmer:innen, aber keine großen Experimente. Stabilität statt Radikalreformen.",
+        "beispiel": "Kalte Progression abbauen (Deutschland, laufend): Regelmäßige Anpassung der Steuerstufen an die Inflation."
+      },
+      {
+        "wert": 3,
+        "label": "Faire Besteuerung",
+        "beschreibung": "Bevor wir neue Steuern einführen, müssen die bestehenden konsequent durchgesetzt werden. Steuerflucht bekämpfen, Konzerne zur Kasse bitten, internationale Kooperation.",
+        "vertiefung": "„Steuervermeidung ist legalisierter Diebstahl an der Allgemeinheit....\" – Oxfam",
+        "beispiel": "Panama Papers (Global, 2016): Leak enthüllt weltweite Steuerflucht durch Briefkastenfirmen."
+      },
+      {
+        "wert": 4,
+        "label": "Vermögen besteuern",
+        "beschreibung": "Deutschland erhebt seit 1997 keine Vermögenssteuer mehr. Das muss sich ändern. Große Vermögen ab 1-2 Millionen Euro sollen jährlich besteuert werden.",
+        "vertiefung": "„Die reichsten 10% besitzen 67% des Vermögens....\" – DIW",
+        "beispiel": "Schweizer Vermögenssteuer (Schweiz, laufend): Die Schweiz erhebt auf Kantonsebene Vermögenssteuern – und ist trotzdem reich."
+      },
+      {
+        "wert": 5,
+        "label": "Radikale Umverteilung",
+        "beschreibung": "Die Reichen zahlen zu wenig! Wir brauchen eine echte Vermögenssteuer, hohe Erbschaftssteuern, progressive Einkommenssteuer. Umverteilung von oben nach unten, jetzt.",
+        "vertiefung": "„Ein progressives Steuersystem ist das beste Mittel gegen Ungleichheit....\" – Thomas Piketty",
+        "beispiel": "Vermögenssteuer USA (1916-) (USA, 1916-heute): Die USA erheben eine Estate Tax auf große Vermögen – bis zu 40%."
+      }
+    ],
+    "linkePosition": {
+      "position": "Die Linke steht bei etwa 0.2 auf dieser Achse",
+      "begruendung": "Wie stark soll von oben nach unten umverteilt werden?"
+    }
+  },
+  "05": {
+    "titel": "WOHNEN",
+    "frage": "Wie sollte Wohnraum organisiert werden?",
+    "polLinks": "Regulierter Markt",
+    "polRechts": "Dekommodifizierung",
+    "stufen": [
+      {
+        "wert": 1,
+        "label": "Markt mit leichter Regulierung",
+        "beschreibung": "Der Markt regelt Angebot und Nachfrage am besten. Eigentumsbildung fördern, Regulierung lockern, mehr Wettbewerb.",
+        "vertiefung": "„Mietpreisbremse ist Investitionsbremse....\" – Immobilienverband",
+        "beispiel": "Funktioniert der Wohnungsmarkt?"
+      },
+      {
+        "wert": 2,
+        "label": "Mehr bauen",
+        "beschreibung": "Das Problem ist das Angebot. Wir müssen mehr bauen – schneller, günstiger, auch privat. Bürokratie abbauen, Genehmigungen beschleunigen.",
+        "vertiefung": "„Bauen, bauen, bauen!...\" – Christian Lindner",
+        "beispiel": "Für wen wird gebaut?"
+      },
+      {
+        "wert": 3,
+        "label": "Strenge Mietregulierung",
+        "beschreibung": "Der Markt versagt bei Wohnungen. Wir brauchen strenge Regulierung: Mietpreisbremse ohne Ausnahmen, Mietendeckel, starken Kündigungsschutz.",
+        "vertiefung": "Der Markt versagt bei Wohnungen. Wir brauchen strenge Regulierung: Mietpreisbremse ohne Ausnahmen, Mietendeckel, starken Kündigungsschutz.",
+        "beispiel": "Berliner Mietendeckel (Berlin, 2020-2021): Mieten wurden für 5 Jahre eingefroren – bis das Bundesverfassungsgericht das Gesetz kippte."
+      },
+      {
+        "wert": 4,
+        "label": "Starker öffentlicher Wohnungsbau",
+        "beschreibung": "Der Staat muss selbst bauen – viel mehr als bisher. Mindestens 400.000 Sozialwohnungen pro Jahr. Öffentliche Wohnungsbaugesellschaften stärken.",
+        "vertiefung": "„Wir brauchen eine Bauwende – sozial, ökologisch, gemeinnützig....\" – Deutscher Mieterbund",
+        "beispiel": "Wiener Modell (Wien, 1919-heute): 60% der Wiener:innen leben in geförderten Wohnungen. Mieten bleiben bezahlbar."
+      },
+      {
+        "wert": 5,
+        "label": "Vollständige Dekommodifizierung",
+        "beschreibung": "Wohnen darf keine Ware sein! Alle Wohnungen in öffentliche oder genossenschaftliche Hand. Kein Profit mit Mieten, Spekulation beenden.",
+        "vertiefung": "Klassiker: Friedrich Engels (1820-1895). „Die Wohnungsnot, welche heutzutage in den Städten herrscht, ist keine Naturnotwendigkeit....\" – Friedrich Engels",
+        "beispiel": "Volksentscheid DWE (Berlin, 2021): 59% stimmten für die Enteignung großer Wohnungskonzerne."
+      }
+    ],
+    "linkePosition": {
+      "position": "Die Linke steht bei etwa 0.2 auf dieser Achse",
+      "begruendung": "Soll Wohnen dem Markt entzogen werden oder reguliert bleiben?"
+    }
+  },
+  "06": {
+    "titel": "GESUNDHEIT",
+    "frage": "Wie sollte das Gesundheitssystem organisiert sein?",
+    "polLinks": "Regulierter Markt",
+    "polRechts": "Vergesellschaftung",
+    "stufen": [
+      {
+        "wert": 1,
+        "label": "Freie Wahl, private Initiative",
+        "beschreibung": "Menschen sollen selbst entscheiden, wie sie sich versichern. Private Vorsorge fördern, Eigenverantwortung stärken. Der Staat soll Rahmen setzen, nicht alles selbst machen.",
+        "vertiefung": "Am Rand des linken Spektrums. Kritik: Führt zu Zwei-Klassen-Medizin, Benachteiligung von Ärmeren und Kranken.",
+        "beispiel": "Du meinst: 'Wer mehr will, soll mehr zahlen können. Der Staat sichert nur das Minimum.'"
+      },
+      {
+        "wert": 2,
+        "label": "Regulierter Wettbewerb",
+        "beschreibung": "Wettbewerb kann Qualität verbessern – aber nur mit klaren Regeln. Mindeststandards, Qualitätskontrollen, Transparenz. Private Anbieter zulassen, aber streng regulieren.",
+        "vertiefung": "Niederländisches Modell: Versicherungspflicht, aber Wahlfreiheit zwischen Anbietern. Kritik von links: Gesundheit ist kein Markt.",
+        "beispiel": "Du glaubst: 'Ein bisschen Wettbewerb schadet nicht, solange die Qualität stimmt und niemand ausgeschlossen wird.'"
+      },
+      {
+        "wert": 3,
+        "label": "Öffentliche Krankenhäuser, gemischtes System",
+        "beschreibung": "Krankenhäuser gehören in öffentliche Hand – keine Rendite mit Kranken! Aber niedergelassene Ärzt:innen können weiter privat praktizieren. Mehr Geld für Pflege, weniger für Verwaltung.",
+        "vertiefung": "Fallpauschalen abschaffen, Bedarfsplanung statt Profitlogik. Krankenhausschließungen stoppen, ländliche Versorgung sichern.",
+        "beispiel": "Du sagst: 'Jedes Krankenhaus, das schließt, ist ein Skandal. Und jedes, das Gewinn macht, auch.'"
+      },
+      {
+        "wert": 4,
+        "label": "Solidarische Bürgerversicherung",
+        "beschreibung": "Eine Versicherung für alle: Arm und Reich, Beamte und Arbeiter:innen, Selbstständige und Angestellte. Schluss mit Zwei-Klassen-Medizin! Private Krankenversicherung abschaffen, alle zahlen nach Einkommen.",
+        "vertiefung": "Offizielle Position der Partei Die Linke. Die PKV zieht Besserverdienende aus der Solidargemeinschaft – das schwächt die GKV.",
+        "beispiel": "Du rechnest vor: 'Wenn alle einzahlen würden, könnten wir bessere Leistungen für weniger Beitrag haben.'"
+      },
+      {
+        "wert": 5,
+        "label": "Vollständig öffentliches Gesundheitssystem",
+        "beschreibung": "Gesundheit ist keine Ware! Komplette Vergesellschaftung: Krankenhäuser, Pharmaindustrie, Arztpraxen – alles in öffentlicher Hand. Keine Profite mit Krankheit. Kostenloser Zugang für alle, finanziert über Steuern.",
+        "vertiefung": "Das britische NHS als Vorbild – aber ohne Unterfinanzierung. Kubanisches Modell: Prävention statt Reparatur. Pharma-Konzerne enteignen.",
+        "beispiel": "Du sagst: 'Warum verdienen Aktionäre an meiner Krankheit? Gesundheit muss Grundrecht sein, nicht Geschäftsmodell.'"
+      }
+    ],
+    "linkePosition": {
+      "position": "Die Linke steht bei etwa 0.25 auf dieser Achse",
+      "begruendung": "Solidarische Bürgerversicherung, keine private KV, Krankenhäuser in öffentlicher Hand."
+    }
+  },
+  "07": {
+    "titel": "BILDUNG",
+    "frage": "Wie sollte das Bildungssystem aussehen?",
+    "polLinks": "Reformiertes System",
+    "polRechts": "Radikal demokratisch",
+    "stufen": [
+      {
+        "wert": 1,
+        "label": "Vielfalt und Wahlfreiheit",
+        "beschreibung": "Verschiedene Schulformen für verschiedene Kinder. Wahlfreiheit für Eltern: Staatlich, privat, konfessionell. Wettbewerb kann Qualität verbessern. Differenzierung ist keine Diskriminierung.",
+        "vertiefung": "Am Rand des linken Spektrums. Kritik: Verfestigt soziale Ungleichheit, Privatschulen für die Reichen.",
+        "beispiel": "Du glaubst: 'Nicht jedes Kind ist gleich. Das Gymnasium ist gut für die, die es schaffen.'"
+      },
+      {
+        "wert": 2,
+        "label": "Reform des bestehenden Systems",
+        "beschreibung": "Das Schulsystem braucht Reformen, aber keine Revolution. Digitalisierung, neue Lernmethoden, mehr Durchlässigkeit. An bewährten Strukturen festhalten, sie aber verbessern.",
+        "vertiefung": "Konservativere Position: Nicht alles umwerfen, schrittweise verbessern. Gymnasium als Erfolgsmodell erhalten.",
+        "beispiel": "Du meinst: 'Wir brauchen mehr Tablets, nicht mehr Ideologie. Pragmatische Verbesserungen statt Systemwechsel.'"
+      },
+      {
+        "wert": 3,
+        "label": "Kostenlos und besser ausgestattet",
+        "beschreibung": "Bildung muss kostenlos sein – von der Kita bis zur Uni. Mehr Lehrer:innen, kleinere Klassen, moderne Ausstattung. Ganztagsschulen mit gutem Essen und vielfältigen Angeboten.",
+        "vertiefung": "Offizielle Position der Partei: Bildung ist Menschenrecht. Investitionsoffensive statt Sparzwang.",
+        "beispiel": "Du forderst: '10 Milliarden mehr für Schulen – jetzt! Jedes Kind verdient die beste Bildung.'"
+      },
+      {
+        "wert": 4,
+        "label": "Eine Schule für alle",
+        "beschreibung": "Gemeinschaftsschule bis Klasse 10 – keine frühe Selektion in Gymnasium und Hauptschule. Inklusion statt Aussortieren. Kein Kind zurücklassen. Individuelle Förderung statt Gleichmacherei.",
+        "vertiefung": "Skandinavisches Modell: Gemeinsames Lernen, späte Differenzierung. Das deutsche Bildungssystem sortiert nach Herkunft.",
+        "beispiel": "Du zeigst: 'In Deutschland entscheidet der Geldbeutel der Eltern über die Bildungschancen. Das muss sich ändern.'"
+      },
+      {
+        "wert": 5,
+        "label": "Radikal demokratische Bildung",
+        "beschreibung": "Bildung zur Befreiung, nicht zur Anpassung! Schüler:innen mitbestimmen lassen – über Inhalte, Methoden, Strukturen. Noten abschaffen, Konkurrenz durch Kooperation ersetzen. Schule als Ort der Emanzipation.",
+        "vertiefung": "Paulo Freire: Pädagogik der Unterdrückten. Summerhill, demokratische Schulen. Bildung als Praxis der Freiheit.",
+        "beispiel": "Du sagst: 'Warum entscheiden Erwachsene, was Kinder lernen müssen? Echte Demokratie beginnt in der Schule.'"
+      }
+    ],
+    "linkePosition": {
+      "position": "Die Linke steht bei etwa 0.3 auf dieser Achse",
+      "begruendung": "Gemeinschaftsschule, kostenlose Bildung, mehr Mitbestimmung."
+    }
+  },
+  "08": {
+    "titel": "ÖKOLOGIE",
+    "frage": "Wie lässt sich die Klimakrise lösen?",
+    "polLinks": "Grüner Kapitalismus",
+    "polRechts": "Ökosozialismus",
+    "stufen": [
+      {
+        "wert": 1,
+        "label": "Tiefenökologie",
+        "beschreibung": "Der Anthropozentrismus ist das Problem. Nicht der Mensch steht im Mittelpunkt, sondern das Netz des Lebens. Die Natur hat einen Wert an sich, nicht nur für uns. Flüsse, Wälder, Ökosysteme - sie haben Rechte. Tiefenökologie fordert eine Revolution des Denkens: Vom Beherrscher der Natur zum Teil von ihr. Ökozentrische Wende, bioregionales Denken, Ehrfurcht vor dem Leben.",
+        "vertiefung": "Klassiker: Arne Næss (1912-2009), Murray Bookchin (1921-2006). „Die tiefenökologische Bewegung fragt: Warum? Und: Was für eine Gesellschaft?...\" – Arne Næss",
+        "beispiel": "Rechte der Natur in Ecuador (Ecuador, 2008): Die Verfassung erkennt die Rechte der Pachamama (Mutter Erde) an. Die Natur als Rechtssubjekt."
+      },
+      {
+        "wert": 2,
+        "label": "Degrowth",
+        "beschreibung": "Das Problem ist nicht nur der Kapitalismus, sondern das Wachstum selbst. Auf einem endlichen Planeten kann es kein unendliches Wachstum geben. Degrowth bedeutet: Weniger produzieren, weniger konsumieren, weniger arbeiten - und trotzdem besser leben. Convivialität statt Konsum. Genug statt Mehr. Das gute Leben im Einklang mit der Erde, nicht gegen sie.",
+        "vertiefung": "Klassiker: Ivan Illich (1926-2002), André Gorz (1923-2007). „Degrowth ist kein negatives Wachstum, sondern eine andere Art zu leben....\" – Serge Latouche",
+        "beispiel": "Transition Towns (Global, 2006-heute): Lokale Gemeinschaften, die sich auf das Ende des Wachstums vorbereiten. Resilienz statt Effizienz."
+      },
+      {
+        "wert": 3,
+        "label": "Ökosozialismus",
+        "beschreibung": "Es gibt keinen grünen Kapitalismus. Die Wachstumslogik des Kapitals ist mit ökologischen Grenzen unvereinbar. Marx hatte recht: Der Kapitalismus zerstört seine eigenen Grundlagen - Mensch und Natur. Ökosozialismus verbindet die beste Tradition der Arbeiterbewegung mit ökologischer Einsicht. Nicht Reform, sondern Systemwechsel. Die Erde ist keine Ware.",
+        "vertiefung": "Klassiker: Karl Marx (1818-1883), William Morris (1834-1896). „Der Kapitalismus erzeugt einen unheilbaren Riss im Stoffwechsel zwischen Mensch und Natur....\" – Karl Marx",
+        "beispiel": "Ökosozialistische Internationale (Global, 2001-heute): Netzwerk ökosozialistischer Gruppen weltweit. Belem-Deklaration 2008 als Gründungsdokument."
+      },
+      {
+        "wert": 4,
+        "label": "Grüner Sozialismus",
+        "beschreibung": "Der Kapitalismus zerstört die Erde, weil er Profite über alles stellt. Nur eine demokratisch geplante Wirtschaft kann die ökologischen Grenzen respektieren. Green New Deal, Klimajobs, gerechter Übergang - wir brauchen massive staatliche Intervention und internationale Kooperation. Nicht der Markt, sondern bewusste Planung rettet das Klima. Und die Kosten tragen die, die den Schaden verursacht habe",
+        "vertiefung": "Klassiker: Rudolf Bahro (1935-1997). „Das ändert alles: Der Kapitalismus gegen das Klima....\" – Naomi Klein",
+        "beispiel": "Green New Deal (USA/EU, 2019-heute): Massive öffentliche Investitionen in Klimaschutz, verbunden mit sozialer Gerechtigkeit. Ökologie und Jobs zusammen."
+      },
+      {
+        "wert": 5,
+        "label": "Ökomodernismus",
+        "beschreibung": "Die Lösung der Klimakrise liegt nicht im Verzicht, sondern in besserer Technologie. Kernkraft, Gentechnik, synthetisches Fleisch, Carbon Capture - der menschliche Erfindungsgeist kann alles lösen. Wachstum und Ökologie sind kein Widerspruch, wenn wir Produktion und Umweltschäden entkoppeln. Nicht weniger Moderne, sondern mehr. Vollautomatisierter Luxus-Kommunismus ist grün.",
+        "vertiefung": "„Fully Automated Luxury Communism: Mehr für alle, nicht weniger. Und grün obendrein....\" – Aaron Bastani",
+        "beispiel": "Ecomodernist Manifesto (Global, 2015): Ein Manifest für 'guten Anthropozän': Technologie, Intensivierung, Entkopplung von Natur und Wirtschaft."
+      }
+    ],
+    "linkePosition": {
+      "position": "Die Linke steht bei etwa 0.25 auf dieser Achse",
+      "begruendung": "Braucht Klimaschutz Systemwandel oder reichen grüne Technologien?"
+    }
+  },
+  "09": {
+    "titel": "FEMINISMUS",
+    "frage": "Was ist das Ziel feministischer Politik?",
+    "polLinks": "Liberaler Feminismus",
+    "polRechts": "Materialistisch-intersektional",
+    "stufen": [
+      {
+        "wert": 1,
+        "label": "Radikaler Feminismus",
+        "beschreibung": "Das Patriarchat ist älter als der Kapitalismus - und es wird ihn überleben, wenn wir es nicht gezielt bekämpfen. Männer als Klasse unterdrücken Frauen als Klasse. Heterosexualität, Familie, Mutterschaft - alles Institutionen männlicher Herrschaft. Radikaler Feminismus bedeutet: An die Wurzel gehen. Nicht Gleichstellung im System, sondern Abschaffung des Systems. Separatismus kann notwendig sein.",
+        "vertiefung": "Klassiker: Shulamith Firestone (1945-2012), Kate Millett (1934-2017). „Das Persönliche ist politisch....\" – Carol Hanisch",
+        "beispiel": "Consciousness Raising Groups (USA/Global, 1960er-1970er): Frauen kommen zusammen, teilen Erfahrungen, erkennen: Das Private ist politisch. Geburtsstunde der zweiten Welle."
+      },
+      {
+        "wert": 2,
+        "label": "Intersektionaler Feminismus",
+        "beschreibung": "Es gibt nicht 'die Frau'. Schwarze Frauen, migrantische Frauen, queere Frauen, behinderte Frauen, arme Frauen - sie alle erfahren Unterdrückung anders. Intersektionalität bedeutet: Diese Achsen der Unterdrückung sind nicht addierbar, sondern verwoben. Ein Feminismus, der nur weiße Mittelklasse-Frauen meint, ist kein Feminismus. Die am meisten Marginalisierten müssen im Zentrum stehen.",
+        "vertiefung": "Klassiker: Combahee River Collective, Audre Lorde (1934-1992). „Es gibt keine Hierarchie der Unterdrückung....\" – Audre Lorde",
+        "beispiel": "Black Lives Matter (USA/Global, 2013-heute): Gegründet von drei schwarzen queeren Frauen. Intersektionalität in Aktion: Race, Geschlecht, Sexualität, Klasse."
+      },
+      {
+        "wert": 3,
+        "label": "Soziale Reproduktion",
+        "beschreibung": "Der Kapitalismus funktioniert nur, weil Frauen jeden Tag unbezahlt die Arbeitskraft reproduzieren: Kochen, Putzen, Pflegen, Erziehen, emotional Unterstützen. Diese Arbeit ist unsichtbar, aber unverzichtbar. Social Reproduction Theory zeigt: Reproduktionsarbeit ist nicht neben dem Kapitalismus, sondern sein Fundament. Der Streik der Frauen würde alles zum Stillstand bringen.",
+        "vertiefung": "Klassiker: Mariarosa Dalla Costa (*1943), Selma James (*1930). „Jeder Streik muss ein Generalstreik sein - oder er ignoriert die Hälfte der Arbeit....\" – Silvia Federici",
+        "beispiel": "Feministischer Streik 8M (Spanien/International, 2018-heute): Am 8. März legen Frauen nicht nur die Lohnarbeit nieder, sondern auch die Reproduktionsarbeit. Der Streik, der alles lahmlegt."
+      },
+      {
+        "wert": 4,
+        "label": "Sozialistischer Feminismus",
+        "beschreibung": "Klasse und Geschlecht sind zwei Systeme der Unterdrückung - und sie verstärken sich gegenseitig. Frauen werden im Kapitalismus doppelt ausgebeutet: Als Lohnarbeiterinnen und als unbezahlte Reproduktionsarbeiterinnen. Beide Kämpfe müssen zusammen geführt werden. Weder Klassenkampf ohne Feminismus noch Feminismus ohne Klassenkampf. Dual Systems Theory: Kapitalismus plus Patriarchat.",
+        "vertiefung": "Klassiker: Juliet Mitchell (*1940), Heidi Hartmann (*1945). „Die unglückliche Ehe von Marxismus und Feminismus: Der Marxismus hat den Feminismus dominiert wie der Mann die Frau....\" – Heidi Hartmann",
+        "beispiel": "Wages for Housework (International, 1972-1980er): Kampagne für Lohn für Hausarbeit. Sichtbarmachung der unbezahlten Reproduktionsarbeit von Frauen."
+      },
+      {
+        "wert": 5,
+        "label": "Klassenfeminismus",
+        "beschreibung": "Die Unterdrückung der Frau ist eine Funktion des Kapitalismus - und wird mit ihm verschwinden. Frauen in die Produktion, gleicher Lohn, Vergesellschaftung der Hausarbeit: Das sind die Forderungen. Separater Feminismus spaltet die Arbeiterklasse. Die proletarische Frau hat mehr mit dem proletarischen Mann gemeinsam als mit der bürgerlichen Feministin. Erst die Revolution, dann die Befreiung aller.",
+        "vertiefung": "Klassiker: Clara Zetkin (1857-1933), Alexandra Kollontai (1872-1952). „Die Befreiung der Frau ist untrennbar von der Befreiung der Arbeit....\" – Clara Zetkin",
+        "beispiel": "Internationaler Frauentag (Global, 1911-heute): Von Clara Zetkin initiiert als Kampftag der Arbeiterinnen. Ursprünglich ein Tag des Klassenkampfs, nicht der Blumen."
+      }
+    ],
+    "linkePosition": {
+      "position": "Die Linke steht bei etwa 0.3 auf dieser Achse",
+      "begruendung": "Ist Patriarchat mit Kapitalismus verwoben oder geht es um Gleichstellung im Bestehenden?"
+    }
+  },
+  "10": {
+    "titel": "ANTIRASSISMUS",
+    "frage": "Was ist die Wurzel von Rassismus und wie bekämpfen wir ihn?",
+    "polLinks": "Integrationistisch",
+    "polRechts": "Strukturell-dekolonial",
+    "stufen": [
+      {
+        "wert": 1,
+        "label": "Eigenständiger antirassistischer Kampf",
+        "beschreibung": "Rassismus ist nicht nur ein Nebenwiderspruch – er hat eigene Geschichte, eigene Dynamiken, eigene Kämpfe. Betroffene müssen im Zentrum stehen, nicht weiße Verbündete. Allyship ja, aber: 'Nothing about us without us.' Weiße Linke müssen ihre Privilegien reflektieren.",
+        "vertiefung": "Critical Race Theory, Black Lives Matter. Die Frage 'Wer darf sprechen?' ist politisch. Repräsentation ist nicht alles, aber ohne sie geht nichts.",
+        "beispiel": "BLM-Proteste 2020: Millionen weltweit auf der Straße. Ein eigenständiger Kampf, der Klassenfragen berührt, aber nicht darin aufgeht."
+      },
+      {
+        "wert": 2,
+        "label": "Dekoloniale Perspektive",
+        "beschreibung": "Rassismus begann nicht mit Vorurteilen – er begann mit Kolonialismus. Die Erfindung von 'Rassen' diente der Rechtfertigung von Ausbeutung, Versklavung, Völkermord. Diese Geschichte wirkt bis heute: in Grenzen, Handelsbeziehungen, Wissensproduktion. Dekolonisierung ist nicht abgeschlossen.",
+        "vertiefung": "Postkoloniale Theorie: Fanon, Said, Spivak. Die Welt ist noch immer nach kolonialen Linien strukturiert. Wer produziert, wer konsumiert? Wer spricht, wer wird besprochen?",
+        "beispiel": "Deutschlands koloniale Vergangenheit: Völkermord an Herero und Nama. Raubkunst in deutschen Museen. Straßennamen, die Kolonialverbrecher ehren."
+      },
+      {
+        "wert": 3,
+        "label": "Struktureller Rassismus",
+        "beschreibung": "Rassismus ist nicht nur Vorurteil – er ist in Institutionen eingebaut: Polizei, Arbeitsmarkt, Bildung, Wohnen. Ein:e Arbeitgeber:in muss nicht rassistisch denken, um rassistisch zu handeln. Das System produziert rassistische Ergebnisse. Antirassismus muss strukturell sein.",
+        "vertiefung": "Institutioneller Rassismus: Der NSU konnte jahrelang morden, weil die Polizei nicht wahrhaben wollte, dass Deutsche so etwas tun. Racial Profiling ist Alltag.",
+        "beispiel": "Studie zeigt: Bewerber:innen mit türkischem Namen werden seltener eingeladen – bei gleicher Qualifikation. Das ist struktureller Rassismus."
+      },
+      {
+        "wert": 4,
+        "label": "Klassen- und Antirassismus verbinden",
+        "beschreibung": "Rassismus hat materielle Wurzeln. Die Erfindung der 'weißen Rasse' diente der Kontrolle: Arme Weiße bekamen einen Status, der sie davon abhielt, sich mit versklavten Schwarzen zu verbünden. Die Lösung muss beides angehen: Klassenkampf UND Antirassismus.",
+        "vertiefung": "W.E.B. Du Bois nannte das den 'psychological wage' – den psychologischen Lohn des Weißseins. Klassiker: Du Bois, C.L.R. James, Angela Davis.",
+        "beispiel": "Amazon-Organisierung: Um zu gewinnen, müssen alle zusammenstehen – polnische Leiharbeiter:innen, syrische Geflüchtete, deutsche Stammbelegschaft."
+      },
+      {
+        "wert": 5,
+        "label": "Klassenkampf überwindet Rassismus",
+        "beschreibung": "Rassismus ist ein Werkzeug der Herrschenden. Er spaltet die Arbeiter:innenklasse in 'einheimisch' und 'fremd', lenkt vom eigentlichen Gegner ab: dem Kapital. Die Lösung ist einfach: Gemeinsamer Kampf vereint alle Arbeiter:innen, egal welcher Hautfarbe. Im gemeinsamen Streik verschwindet der Rassismus.",
+        "vertiefung": "Klassiker: Karl Marx, Rosa Luxemburg. 'Die Arbeit in weißer Haut kann sich nicht emanzipieren, solange die Arbeit in schwarzer Haut gebrandmarkt ist.' – Marx",
+        "beispiel": "IWW organisierte um 1900 schwarze und weiße Arbeiter:innen gemeinsam – ein radikaler Akt im Amerika der Lynchmorde."
+      }
+    ],
+    "linkePosition": {
+      "position": "Die Linke steht bei etwa 0.35-0.5 auf dieser Achse",
+      "begruendung": "Gegen strukturellen Rassismus, Kolonialgeschichte aufarbeiten, aber Klassenfrage nicht aus den Augen verlieren."
+    }
+  },
+  "11": {
+    "titel": "TECHNOLOGIE",
+    "frage": "Welche Rolle spielt Technologie für gesellschaftlichen Wandel?",
+    "polLinks": "Akzelerationismus",
+    "polRechts": "Tech-Skepsis",
+    "stufen": [
+      {
+        "wert": 1,
+        "label": "Akzelerationismus",
+        "beschreibung": "Technologischen Fortschritt beschleunigen, um postkapitalistische Möglichkeiten zu schaffen. Automatisierung, KI und neue Technologien können uns von Arbeit befreien.",
+        "vertiefung": "Nick Srnicek, Alex Williams: 'Akzelerationistisches Manifest' (2013)",
+        "beispiel": "Fully Automated Luxury Communism als Vision."
+      },
+      {
+        "wert": 2,
+        "label": "Techno-Optimismus",
+        "beschreibung": "Technologie ist der Schlüssel zur Lösung sozialer Probleme. Erneuerbare Energien, digitale Demokratie, Plattform-Kooperativismus.",
+        "vertiefung": "Paul Mason: 'Postkapitalismus' (2015)",
+        "beispiel": "Projekt Cybersyn in Chile (1971-73)."
+      },
+      {
+        "wert": 3,
+        "label": "Kritische Aneignung",
+        "beschreibung": "Technologie ist ambivalent - entscheidend ist, wer sie kontrolliert. Open Source, dezentrale Netze, Technologie im Dienst sozialer Bewegungen.",
+        "vertiefung": "Donna Haraway: 'Cyborg Manifesto' (1985)",
+        "beispiel": "Signal, Tor, Platform Cooperativism."
+      },
+      {
+        "wert": 4,
+        "label": "Demokratische Kontrolle",
+        "beschreibung": "Tech-Konzerne regulieren, Plattformen vergesellschaften, digitale Infrastruktur als öffentliches Gut. Mitbestimmung bei Technologie-Entwicklung.",
+        "vertiefung": "Evgeny Morozov: Kritik des 'Solutionismus'",
+        "beispiel": "EU-Regulierung von Big Tech, DSGVO."
+      },
+      {
+        "wert": 5,
+        "label": "Tech-Skepsis",
+        "beschreibung": "Technologie ist nicht neutral - sie reproduziert Machtverhältnisse. Algorithmen diskriminieren, Plattformen zerstören Demokratie. Weniger Tech, mehr menschliche Beziehungen.",
+        "vertiefung": "Jacques Ellul: 'The Technological Society'",
+        "beispiel": "Recht auf analoges Leben, Digital Detox."
+      }
+    ]
+  },
+  "12": {
+    "titel": "DEMOKRATIE",
+    "frage": "Wie sollte Demokratie organisiert sein?",
+    "polLinks": "Parlamentarismus",
+    "polRechts": "Rätedemokratie",
+    "stufen": [
+      {
+        "wert": 1,
+        "label": "Parlamentarismus",
+        "beschreibung": "Repräsentative Demokratie mit Wahlen, Parteien, Gewaltenteilung. Der Weg zum Sozialismus führt durch die Institutionen.",
+        "vertiefung": "Karl Kautsky: 'Die Diktatur des Proletariats' (1918)",
+        "beispiel": "Skandinavische Sozialdemokratie."
+      },
+      {
+        "wert": 2,
+        "label": "Erweiterte Demokratie",
+        "beschreibung": "Parlamentarismus plus: Volksentscheide, Bürgerräte, partizipative Budgets. Demokratie in alle Lebensbereiche ausdehnen.",
+        "vertiefung": "Carole Pateman: 'Participation and Democratic Theory'",
+        "beispiel": "Porto Alegre Bürgerhaushalt."
+      },
+      {
+        "wert": 3,
+        "label": "Radikale Demokratie",
+        "beschreibung": "Demokratie als permanenter Konflikt und Erweiterung. Wer gilt als politisches Subjekt? Alle Kämpfe sind demokratische Kämpfe.",
+        "vertiefung": "Chantal Mouffe: 'Agonistischer Pluralismus'",
+        "beispiel": "Soziale Bewegungen: Occupy, Indignados."
+      },
+      {
+        "wert": 4,
+        "label": "Basisdemokratie",
+        "beschreibung": "Wahre Demokratie von unten: rotierende Mandate, imperative Mandate, permanente Kontrolle durch die Basis.",
+        "vertiefung": "Rosa Luxemburg: 'Freiheit der Andersdenkenden'",
+        "beispiel": "Zapatisten in Chiapas."
+      },
+      {
+        "wert": 5,
+        "label": "Rätedemokratie",
+        "beschreibung": "Arbeiterräte, Soldatenräte, Nachbarschaftsräte: Betroffene entscheiden selbst. Keine Trennung von Legislative und Exekutive.",
+        "vertiefung": "Anton Pannekoek: 'Arbeiterräte' (1946)",
+        "beispiel": "Räterepublik München 1919."
+      }
+    ]
+  },
+  "13": {
+    "titel": "AKTIONSFORMEN",
+    "frage": "Welche Aktionsformen sind legitim?",
+    "polLinks": "Nur legale Mittel",
+    "polRechts": "Militanz",
+    "stufen": [
+      {
+        "wert": 1,
+        "label": "Nur legale Mittel",
+        "beschreibung": "Demonstrationen, Petitionen, Wahlen. Der Rechtsstaat ist eine Errungenschaft - auch für die Linke.",
+        "vertiefung": "Jürgen Habermas: Diskursethik",
+        "beispiel": "Gewerkschaftliche Tarifarbeit."
+      },
+      {
+        "wert": 2,
+        "label": "Symbolischer Protest",
+        "beschreibung": "Gewaltfreie Grenzüberschreitungen: Sitzblockaden, Die-Ins, kreative Störaktionen für Aufmerksamkeit.",
+        "vertiefung": "Gene Sharp: '198 Methoden des gewaltfreien Widerstands'",
+        "beispiel": "Extinction Rebellion."
+      },
+      {
+        "wert": 3,
+        "label": "Ziviler Ungehorsam",
+        "beschreibung": "Ungerechte Gesetze offen brechen, gewaltfrei, bereit für Konsequenzen. Appell an das Gewissen der Gesellschaft.",
+        "vertiefung": "Martin Luther King: 'Letter from Birmingham Jail'",
+        "beispiel": "Montgomery Bus Boycott."
+      },
+      {
+        "wert": 4,
+        "label": "Direkte Aktion",
+        "beschreibung": "Nicht appellieren, sondern handeln: Besetzungen, Blockaden, Sabotage. Fakten schaffen statt auf Politik warten.",
+        "vertiefung": "Emma Goldman: 'Anarchism and Other Essays'",
+        "beispiel": "Hambacher Forst Besetzung."
+      },
+      {
+        "wert": 5,
+        "label": "Militanz",
+        "beschreibung": "Gegen strukturelle Gewalt ist Gegenwehr legitim. Sachbeschädigung, Selbstverteidigung, notfalls mehr. Taktische Frage, keine moralische.",
+        "vertiefung": "Frantz Fanon: 'Die Verdammten dieser Erde'",
+        "beispiel": "Black Panther Party."
+      }
+    ]
+  },
+  "14": {
+    "titel": "KULTURKAMPF",
+    "frage": "Worauf sollte sich linke Politik konzentrieren?",
+    "polLinks": "Identität/Kultur",
+    "polRechts": "Klasse",
+    "stufen": [
+      {
+        "wert": 1,
+        "label": "Identität zentral",
+        "beschreibung": "Eigene Unterdrückungserfahrung als Ausgangspunkt. Betroffene müssen selbst sprechen und führen. Kulturelle Repräsentation ist zentral.",
+        "vertiefung": "Judith Butler: Performativität von Identität",
+        "beispiel": "Pride, MeToo, Decolonize."
+      },
+      {
+        "wert": 2,
+        "label": "Intersektionale Politik",
+        "beschreibung": "Unterdrückung hat viele überlappende Formen. Schwarze Arbeiterin erfährt Rassismus, Sexismus UND Klassismus gleichzeitig.",
+        "vertiefung": "Kimberlé Crenshaw: Intersektionalität",
+        "beispiel": "Black Lives Matter."
+      },
+      {
+        "wert": 3,
+        "label": "Verbindende Politik",
+        "beschreibung": "Weder 'Klasse zuerst' noch 'Identität zuerst' - beides verbinden. Universalismus, der niemanden zurücklässt.",
+        "vertiefung": "Nancy Fraser: 'Fortschritt, nicht Neoliberalismus'",
+        "beispiel": "Bernie Sanders Kampagne."
+      },
+      {
+        "wert": 4,
+        "label": "Klassenorientiert",
+        "beschreibung": "Rassismus und Sexismus dienen dem Kapital zur Spaltung. Antirassismus und Feminismus müssen klassenorientiert sein.",
+        "vertiefung": "Stuart Hall: 'Rasse ist die Modalität, in der Klasse gelebt wird'",
+        "beispiel": "Rainbow Coalition Chicago 1969."
+      },
+      {
+        "wert": 5,
+        "label": "Klasse zuerst",
+        "beschreibung": "Der Hauptwiderspruch ist der Klassenwiderspruch. Identitätspolitik spaltet die Arbeiterklasse. Erst Kapitalismus überwinden.",
+        "vertiefung": "Adolph Reed Jr.: Kritik der Identitätspolitik",
+        "beispiel": "Klassische Arbeiterbewegung."
+      }
+    ]
+  },
+  "15": {
+    "titel": "EU",
+    "frage": "Wie sollte die Linke zur Europäischen Union stehen?",
+    "polLinks": "Föderales Europa",
+    "polRechts": "Lexit",
+    "stufen": [
+      {
+        "wert": 1,
+        "label": "Föderales Europa",
+        "beschreibung": "Nationalstaaten sind zu klein für die großen Probleme: Klima, Migration, Konzerne. Wir brauchen mehr Europa, nicht weniger: Eine echte europäische Regierung, gewählt vom Volk. Vereinigte Staaten von Europa – aber sozial und demokratisch.",
+        "vertiefung": "Die föderalistische Linke: Europa als Projekt der Überwindung nationaler Grenzen. Aber nicht als Elitenprojekt, sondern von unten.",
+        "beispiel": "Du träumst von einem Europa ohne Grenzen, mit gemeinsamer Sozialpolitik, einer echten europäischen Demokratie."
+      },
+      {
+        "wert": 2,
+        "label": "Soziales Europa",
+        "beschreibung": "Europa ist eine Chance für progressive Politik. Gemeinsam sind wir stärker gegen globale Konzerne. Ein europäischer Mindestlohn, eine europäische Arbeitslosenversicherung, gemeinsame Standards. Wir müssen Europa von links gestalten, nicht den Rechten überlassen.",
+        "vertiefung": "Diem25 (Varoufakis): Gesamteuropäische Bewegung für Demokratisierung. Die Idee: Transnationale Listen, ein europäischer Green New Deal, Eurobonds.",
+        "beispiel": "Du sagst: 'Konzerne operieren global. Gewerkschaften müssen das auch. Ein deutscher Mindestlohn allein reicht nicht – wir brauchen einen europäischen.'"
+      },
+      {
+        "wert": 3,
+        "label": "EU demokratisieren",
+        "beschreibung": "Die EU hat echte Demokratiedefizite, aber sie ist auch eine Errungenschaft: Frieden, Freizügigkeit, Kooperation. Die Lösung ist nicht Austritt, sondern Demokratisierung: Mehr Macht fürs Europaparlament, weniger für Kommission und EZB, Abschaffung der Austeritätsregeln.",
+        "vertiefung": "Die offizielle Position der Partei Die Linke: EU reformieren, nicht verlassen. 'Neustart der EU als demokratische, soziale, ökologische Friedensunion.'",
+        "beispiel": "Du sagst: 'Wir können die EU nicht ignorieren. 500 Millionen Menschen, gemeinsame Herausforderungen. Aber so, wie sie ist, geht es nicht weiter.'"
+      },
+      {
+        "wert": 4,
+        "label": "In der EU gegen die EU",
+        "beschreibung": "Die EU ist schlecht, aber Austritt ist schlimmer. Die Verträge schränken linke Politik ein – aber sie können auch umgangen, gedehnt, herausgefordert werden. Die Linke sollte in der EU bleiben, aber ständig gegen ihre neoliberalen Regeln ankämpfen.",
+        "vertiefung": "Brexit hat gezeigt: Austritt führt nicht nach links. Portugal hat unter Costa gezeigt: Man kann Austerität teilweise umgehen, ohne auszutreten.",
+        "beispiel": "Die Partei der Europäischen Linken: Kritik an der EU, aber kein Austritt. Zusammenarbeit mit Syriza, Podemos, La France Insoumise."
+      },
+      {
+        "wert": 5,
+        "label": "Raus aus der EU (Lexit)",
+        "beschreibung": "Die EU ist nicht reformierbar. Sie ist ein neoliberales Projekt, gebaut auf Maastricht-Kriterien, Schuldenregeln, Binnenmarkt-Logik. Sie verhindert linke Politik: Verstaatlichung, expansive Fiskalpolitik, demokratische Kontrolle. 'Lexit' – ein linker Austritt – ist der einzige Weg.",
+        "vertiefung": "Griechenland wählte Syriza, ein linkes Programm – und wurde von der Troika gezwungen, Austerität umzusetzen. Die Botschaft: Egal, wie ihr wählt, die EU-Regeln gelten.",
+        "beispiel": "Du argumentierst: 'Solange wir in der EU sind, können wir die Bahn nicht verstaatlichen, ohne Konkurrenz zuzulassen. Die EU ist das Problem.'"
+      }
+    ],
+    "linkePosition": {
+      "position": "Die Linke steht bei etwa 0.4-0.5 auf dieser Achse",
+      "begruendung": "EU demokratisieren und sozial machen, aber kein Austritt. Kritische Solidarität."
+    }
+  },
+  "16": {
+    "titel": "ARBEIT",
+    "frage": "Was ist das Ziel linker Arbeitspolitik?",
+    "polLinks": "Gute Arbeit für alle",
+    "polRechts": "Befreiung von Arbeit",
+    "stufen": [
+      {
+        "wert": 1,
+        "label": "Post-Work",
+        "beschreibung": "Die Frage ist nicht, wie wir Arbeit besser machen, sondern warum wir überhaupt so viel arbeiten. Lohnarbeit ist ein historisches Phänomen - und sie kann enden. Automatisierung, KI, Roboter könnten uns von der Plackerei befreien. Was bleibt, ist freie Tätigkeit: Schaffen aus Lust, nicht aus Zwang. Der Kommunismus ist das Ende der Arbeit, wie wir sie kennen.",
+        "vertiefung": "Klassiker: Karl Marx (1818-1883), Herbert Marcuse (1898-1979). „In einer kommunistischen Gesellschaft gibt es keine Maler, sondern höchstens Menschen, die unter anderem auch malen....\" – Karl Marx",
+        "beispiel": "Degrowth-Bewegung (Global, 2000er-heute): Weniger produzieren, weniger konsumieren, weniger arbeiten. Befreiung vom Wachstumszwang."
+      },
+      {
+        "wert": 2,
+        "label": "Grundeinkommen",
+        "beschreibung": "Warum muss man arbeiten, um zu leben? Ein bedingungsloses Grundeinkommen - für alle, ohne Bedürftigkeitsprüfung, ohne Arbeitszwang - würde alles ändern. Niemand müsste mehr einen miesen Job annehmen. Sorgearbeit, ehrenamtliche Arbeit, Kunst würden endlich anerkannt. Die Verhandlungsmacht der Arbeiter*innen würde explodieren. Freiheit beginnt, wo der Zwang endet.",
+        "vertiefung": "Klassiker: Thomas Paine (1737-1809), Charles Fourier (1772-1837). „Die Erde gehört in ihrer natürlichen, unkultivierten Form allen Menschen. Jeder hat Anspruch auf seinen Anteil....\" – Thomas Paine",
+        "beispiel": "Finnisches Grundeinkommensexperiment (Finnland, 2017-2018): 2.000 Arbeitslose erhielten 560€ monatlich, bedingungslos. Ergebnis: Mehr Wohlbefinden, nicht weniger Arbeit."
+      },
+      {
+        "wert": 3,
+        "label": "Arbeitszeitverkürzung",
+        "beschreibung": "Wir sind produktiver als je zuvor - aber wir arbeiten immer noch so viel wie vor 50 Jahren. Warum? Der technische Fortschritt sollte Zeit freisetzen, nicht immer mehr Konsum ermöglichen. 30-Stunden-Woche, 4-Tage-Woche, Sabbaticals für alle. Mehr Zeit für Familie, Gemeinschaft, Politik, Muße. Arbeitszeitverkürzung bei vollem Lohnausgleich - das ist die Forderung der Stunde.",
+        "vertiefung": "Klassiker: Paul Lafargue (1842-1911), Bertrand Russell (1872-1970). „Das Recht auf Faulheit ist das Recht, Mensch zu sein....\" – Paul Lafargue",
+        "beispiel": "Schwedischer 6-Stunden-Tag (Schweden (Experimente), 2015-2017): Pflegeheime und andere Einrichtungen testeten den 6-Stunden-Tag. Ergebnis: Zufriedenere Beschäftigte, bessere Arbeit."
+      },
+      {
+        "wert": 4,
+        "label": "Gute Arbeit",
+        "beschreibung": "Es reicht nicht, irgendeinen Job zu haben - die Arbeit muss gut sein. Faire Löhne, sichere Bedingungen, Mitbestimmung, Vereinbarkeit mit dem Leben. Schluss mit prekären Verträgen, Leiharbeit, Ausbeutung. Der Kampf geht nicht nur um mehr Jobs, sondern um bessere Jobs. Und für die, die keine finden: Ein würdiges Einkommen.",
+        "vertiefung": "Klassiker: William Morris (1834-1896), John Ruskin (1819-1900). „Keine Arbeit, die nicht Freude macht, ist das Tun wert....\" – William Morris",
+        "beispiel": "IG Metall Arbeitszeitkampagne (Deutschland, 2018): 28-Stunden-Woche mit Lohnausgleich für Schichtarbeiterinnen und Pflegende. Gute Arbeit statt mehr Arbeit."
+      },
+      {
+        "wert": 5,
+        "label": "Vollbeschäftigung",
+        "beschreibung": "Arbeit ist mehr als Einkommen - sie ist Würde, Teilhabe, Identität. Der Staat muss Vollbeschäftigung garantieren: Durch Konjunkturpolitik, öffentliche Beschäftigung, Arbeitszeitverkürzung. Arbeitslosigkeit ist kein Naturgesetz, sondern politisches Versagen. Jeder Mensch hat das Recht auf einen Job - und die Pflicht, zur Gemeinschaft beizutragen.",
+        "vertiefung": "Klassiker: John Maynard Keynes (1883-1946), William Beveridge (1879-1963). „Die herausragende Schwäche unserer Wirtschaftsgesellschaft ist ihr Versagen, Vollbeschäftigung herzustellen....\" – John Maynard Keynes",
+        "beispiel": "New Deal (WPA, CCC) (USA, 1933-1943): Millionen Arbeitslose bauten Straßen, Brücken, Parks. Staatliche Jobgarantie als Krisenreaktion."
+      }
+    ],
+    "linkePosition": {
+      "position": "Die Linke steht bei etwa 0.35 auf dieser Achse",
+      "begruendung": "Soll Lohnarbeit überwunden oder verbessert werden?"
+    }
+  },
+  "17": {
+    "titel": "WACHSTUM",
+    "frage": "Wie sollte sich die Wirtschaft entwickeln?",
+    "polLinks": "Grünes Wachstum",
+    "polRechts": "Degrowth",
+    "stufen": [
+      {
+        "wert": 1,
+        "label": "Grünes Wachstum",
+        "beschreibung": "Innovation und Marktkräfte lösen die Klimakrise. Carbon Capture, Wasserstoff, Kernfusion – wir brauchen mehr Technologie, nicht weniger Wachstum.",
+        "vertiefung": "„Wachstum ist die Lösung, nicht das Problem....\" – Öko-Modernismus",
+        "beispiel": "Carbon Capture (Global, 2020er): Technologien zur CO2-Abscheidung als Hoffnungsträger."
+      },
+      {
+        "wert": 2,
+        "label": "Nachhaltiges Wachstum",
+        "beschreibung": "Wachstum und Umweltschutz sind vereinbar – durch technischen Fortschritt, Effizienz, erneuerbare Energien. Wir müssen nicht verzichten, sondern besser werden.",
+        "vertiefung": "„Der European Green Deal ist unsere Wachstumsstrategie....\" – Ursula von der Leyen",
+        "beispiel": "European Green Deal (EU, 2019-heute): Klimaneutral bis 2050 durch grünes Wachstum und Investitionen."
+      },
+      {
+        "wert": 3,
+        "label": "Selektives Wachstum",
+        "beschreibung": "Manche Bereiche müssen schrumpfen (fossile Industrie), andere wachsen (Pflege, Bildung, Erneuerbare). Es geht nicht um weniger, sondern um anders.",
+        "vertiefung": "„Wirtschaft muss in der Donut leben – zwischen sozialem Fundament und ökologischer Decke....\" – Kate Raworth",
+        "beispiel": "Amsterdam Donut-City (Amsterdam, 2020-heute): Erste Stadt, die ihre Wirtschaftspolitik an der Donut-Ökonomie ausrichtet."
+      },
+      {
+        "wert": 4,
+        "label": "Post-Wachstum",
+        "beschreibung": "Wir müssen die Abhängigkeit vom Wachstum überwinden – ohne sofortiges Schrumpfen. Resilienz statt Effizienz, Suffizienz statt Konsum, regionale Kreisläufe.",
+        "vertiefung": "„Grünes Wachstum ist eine Illusion....\" – Tim Jackson",
+        "beispiel": "Repair-Cafés (Global, 2009-heute): Reparieren statt Wegwerfen – gelebte Postwachstumspraxis."
+      },
+      {
+        "wert": 5,
+        "label": "Degrowth",
+        "beschreibung": "Unendliches Wachstum auf einem endlichen Planeten ist unmöglich. Wir müssen die Wirtschaft schrumpfen – geplant, gerecht, demokratisch. Weniger produzieren, weniger konsumieren, besser leben.",
+        "vertiefung": "Klassiker: Nicholas Georgescu-Roegen (1906-1994), Ivan Illich (1926-2002). „Degrowth ist kein negatives Wachstum, sondern ein Ausstieg aus dem Wachstumszwang....\" – Giorgos Kallis",
+        "beispiel": "Transition Towns (Global, 2006-heute): Lokale Gemeinschaften bereiten sich auf das Ende des Wachstums vor."
+      }
+    ],
+    "linkePosition": {
+      "position": "Die Linke steht bei etwa 0.35 auf dieser Achse",
+      "begruendung": "Ist Wirtschaftswachstum mit Nachhaltigkeit vereinbar?"
+    }
+  },
+  "18": {
+    "titel": "NAHOST",
+    "frage": "Wie sollte die Linke zum Nahost-Konflikt stehen?",
+    "polLinks": "Israel-Solidarität",
+    "polRechts": "Palästina-Solidarität",
+    "stufen": [
+      {
+        "wert": 1,
+        "label": "Antisemitismuskritischer Fokus",
+        "beschreibung": "Fokus auf Antisemitismusbekämpfung, Israel-Solidarität im Zentrum. Antisemitismus ist das zentrale Problem, auch in der Linken. Viele Formen der 'Israelkritik' reproduzieren antisemitische Muster. Israel hat das Recht auf Selbstverteidigung.",
+        "vertiefung": "'Antideutsche' Positionen, Teile der jüdischen Linken. Diese Position lehnt antipalästinensischen Rassismus ab – unterscheidet sich von Positionen, die palästinensische Rechte grundsätzlich negieren.",
+        "beispiel": "Forderungen: Klare Verurteilung von Hamas/Hisbollah/Iran, keine Bündnisse mit Israel-Delegitimierern, Antisemitismus-Sensibilität."
+      },
+      {
+        "wert": 2,
+        "label": "Israel-solidarisch mit Besatzungskritik",
+        "beschreibung": "Grundsätzliche Israel-Solidarität, Kritik an Besatzung und Netanyahu-Regierung. Israel ist die einzige Demokratie in der Region. Der Holocaust begründet eine besondere deutsche Verantwortung. Die Besatzung schadet Israel selbst.",
+        "vertiefung": "Teile der SPD-Linken, gewerkschaftliche Positionen, israelische Friedensbewegung. Anders als Position 5 wird hier die Besatzung klar kritisiert.",
+        "beispiel": "Forderungen: Sicherheit für Israel, Kritik an der ultrarechten Regierung, Zwei-Staaten-Lösung mit Sicherheitsgarantien."
+      },
+      {
+        "wert": 3,
+        "label": "Völkerrechtlich / Äquidistant",
+        "beschreibung": "Völkerrecht für alle, gegen Antisemitismus UND antipalästinensischen Rassismus. Beide Seiten haben legitime Sicherheitsinteressen. Hamas-Terror und israelische Kriegsverbrechen sind gleichermaßen zu verurteilen. Die Lösung kann nur politisch sein.",
+        "vertiefung": "Offizielle Linie der Partei Die Linke (Hallescher Beschluss). 'Niemals darf ein Menschenrechtsverbrechen als Rechtfertigung für ein anderes herangezogen werden.'",
+        "beispiel": "Forderungen: Sofortiger Waffenstillstand, Freilassung aller Geiseln, Zwei-Staaten-Lösung, humanitäre Hilfe für Gaza, keine Waffenlieferungen."
+      },
+      {
+        "wert": 4,
+        "label": "Palästina-solidarisch mit Israelkritik",
+        "beschreibung": "Starke Palästina-Solidarität bei Anerkennung des Existenzrechts Israels. Die israelische Besatzung ist völkerrechtswidrig und muss enden. Israel begeht Kriegsverbrechen, die benannt werden müssen. Die deutsche 'Staatsräson' verhindert legitime Kritik.",
+        "vertiefung": "Linke Friedensbewegung, Teile der Partei Die Linke, Menschenrechtsorganisationen. Anders als Position 1 wird hier das Existenzrecht Israels explizit anerkannt und die Zwei-Staaten-Lösung befürwortet.",
+        "beispiel": "Forderungen: Sofortiger Waffenstillstand, Stopp aller Waffenlieferungen, Anerkennung Palästinas, Zwei-Staaten-Lösung in den Grenzen von 1967."
+      },
+      {
+        "wert": 5,
+        "label": "Antikolonialer Fokus",
+        "beschreibung": "Der Konflikt ist primär ein Konflikt zwischen Kolonisierenden und Kolonisierten. Die Besatzung und Siedlungspolitik sind die Hauptursache der Gewalt. BDS ist ein legitimes Mittel. Palästinensischer Widerstand ist grundsätzlich legitim (bei Ablehnung von Terror gegen Zivilist:innen).",
+        "vertiefung": "Teile der antiimperialistischen Linken, Palästina-Solidaritätsgruppen, postkoloniale Perspektiven. Unterscheidet sich von Positionen, die das Existenzrecht Israels negieren – diese liegen außerhalb der Achse.",
+        "beispiel": "Forderungen: Ende der Besatzung, Ein-Staaten-Lösung mit gleichen Rechten, Rückkehrrecht, internationale Sanktionen gegen Israel."
+      }
+    ],
+    "linkePosition": {
+      "position": "Die Linke steht bei etwa 0.35-0.5 auf dieser Achse (Hallescher Beschluss)",
+      "begruendung": "Für Deeskalation und Abrüstung, Völkerrecht, gegen jeden Rassismus und Antisemitismus. Das Existenzrecht Israels ist nicht verhandelbar."
+    }
+  },
+  "19": {
+    "titel": "MIGRATION",
+    "frage": "Wie sollte Migrationspolitik aussehen?",
+    "polLinks": "Regulierung",
+    "polRechts": "Offene Grenzen",
+    "stufen": [
+      {
+        "wert": 1,
+        "label": "No Border",
+        "beschreibung": "Grenzen sind Gewalt. Sie töten an den Mauern, in den Meeren, in den Wüsten. Bewegungsfreiheit ist ein Menschenrecht - für alle, nicht nur für Touristen und Geschäftsleute. No Border bedeutet: Grenzen öffnen, Festungen schleifen, niemand ist illegal. Die Arbeiterklasse ist global - ihre Bewegungsfreiheit sollte es auch sein.",
+        "vertiefung": "„Kein Mensch ist illegal....\" – Kein Mensch ist illegal (Kampagne)",
+        "beispiel": "No Border Camps (Europa, 1998-heute): Aktionscamps an den Grenzen Europas. Solidarität mit Geflüchteten, direkte Aktionen gegen Abschiebungen."
+      },
+      {
+        "wert": 2,
+        "label": "Antiimperialismus",
+        "beschreibung": "Die Welt ist nicht flach - sie ist hierarchisch. Der globale Norden lebt auf Kosten des globalen Südens. Antiimperialismus bedeutet: Gegen Krieg, gegen Intervention, gegen ungleiche Tauschbeziehungen. Solidarität mit den Befreiungsbewegungen, Kritik an der eigenen Regierung. Nicht alle Staaten sind gleich schuldig - der Westen trägt besondere Verantwortung.",
+        "vertiefung": "Klassiker: Wladimir Lenin (1870-1924), Frantz Fanon (1925-1961). „Der Imperialismus ist das höchste Stadium des Kapitalismus....\" – Wladimir Lenin",
+        "beispiel": "Blockfreie Bewegung (Global, 1961-heute): Staaten der 'Dritten Welt' organisieren sich jenseits von Ost und West. Antiimperialismus als Staatspolitik."
+      },
+      {
+        "wert": 3,
+        "label": "Proletarischer Internationalismus",
+        "beschreibung": "Die Arbeiterklasse hat kein Vaterland. Das Kapital ist international organisiert - wir müssen es auch sein. Proletarischer Internationalismus bedeutet: Solidarität über Grenzen hinweg, gemeinsamer Kampf gegen den gemeinsamen Feind. Gegen Krieg, gegen Imperialismus, für die Weltrevolution. Die Internationale als Praxis, nicht nur als Lied.",
+        "vertiefung": "Klassiker: Karl Marx (1818-1883), Friedrich Engels (1820-1895). „Proletarier aller Länder, vereinigt euch!...\" – Karl Marx & Friedrich Engels",
+        "beispiel": "Erste Internationale (London/Global, 1864-1876): Marx organisiert die erste internationale Arbeiterorganisation. Arbeiter aller Länder, vereinigt euch - zum ersten Mal real."
+      },
+      {
+        "wert": 4,
+        "label": "Internationale Kooperation",
+        "beschreibung": "Weder Nationalismus noch Auflösung der Grenzen. Starke Nationalstaaten, die international kooperieren: Klimaabkommen, Steueroasen schließen, Arbeitsstandards durchsetzen. Die Globalisierung braucht Regeln - und die können nur Staaten gemeinsam setzen. Reform der internationalen Institutionen, nicht ihre Abschaffung. Internationaler Sozialstaat.",
+        "vertiefung": "Klassiker: Karl Kautsky (1854-1938), Willy Brandt (1913-1992). „Das Trilemma der Globalisierung: Demokratie, Nationalstaat, tiefe Globalisierung - wähle zwei....\" – Dani Rodrik",
+        "beispiel": "Pariser Klimaabkommen (Global, 2015): Fast alle Staaten einigen sich auf Klimaziele. Schwach, aber ein Zeichen: Internationale Kooperation ist möglich."
+      },
+      {
+        "wert": 5,
+        "label": "Linker Nationalismus",
+        "beschreibung": "Der Nationalstaat ist das einzige Werkzeug, das wir haben. Die Globalisierung hat die demokratische Kontrolle ausgehebelt - nur der Nationalstaat kann sie zurückholen. Linker Patriotismus bedeutet: Die Nation gegen das internationale Kapital verteidigen. Brexit von links, Industriepolitik, geschützte Arbeitsmärkte. Die Internationale beginnt zu Hause.",
+        "vertiefung": "Klassiker: Friedrich List (1789-1846). „Die kosmopolitische Linke hat die Arbeiterklasse verraten....\" – Sahra Wagenknecht",
+        "beispiel": "Lexit-Debatte (Großbritannien/EU, 2016-heute): Linke Argumente für den Brexit: Die EU als neoliberales Projekt, das Verstaatlichungen verhindert."
+      }
+    ],
+    "linkePosition": {
+      "position": "Die Linke steht bei etwa 0.3 auf dieser Achse",
+      "begruendung": "Sollen alle Menschen frei migrieren können oder braucht es Regulierung?"
+    }
+  },
+  "20": {
+    "titel": "DIGITALITÄT",
+    "frage": "Wie sollte mit digitalen Plattformen und Big Tech umgegangen werden?",
+    "polLinks": "Regulierung Big Tech",
+    "polRechts": "Digitale Commons",
+    "stufen": [
+      {
+        "wert": 1,
+        "label": "Liberale Regulierung",
+        "beschreibung": "Innovation nicht abwürgen. Wettbewerb fördern statt Verstaatlichung. Start-ups stärken, Monopole verhindern. Der Markt kann digitale Probleme lösen – mit dem richtigen Rahmen.",
+        "vertiefung": "Am Rand des linken Spektrums. Kritik: Naiv gegenüber Machtkonzentration, tech-optimistisch.",
+        "beispiel": "Du glaubst: 'Regulierung ja, aber nicht zu viel. Sonst wandern die Firmen ab und wir haben nichts.'"
+      },
+      {
+        "wert": 2,
+        "label": "Datensouveränität",
+        "beschreibung": "Menschen müssen die Kontrolle über ihre Daten haben. Recht auf Löschung, Recht auf Portabilität, Recht zu wissen, was mit den Daten passiert. Algorithmen müssen transparent sein.",
+        "vertiefung": "DSGVO als Modell. Aber: Individuelle Rechte reichen nicht gegen strukturelle Macht der Konzerne.",
+        "beispiel": "Du installierst Datenschutz-Tools, liest die AGBs, forderst Auskunft. Aber ändert das die Macht von Google?"
+      },
+      {
+        "wert": 3,
+        "label": "Starke Regulierung",
+        "beschreibung": "Big Tech zerschlagen, streng regulieren, Steuern zahlen lassen. Kartellrecht anwenden, Interoperabilität erzwingen, Datenschutz durchsetzen. Die Konzerne sind zu mächtig – der Staat muss eingreifen.",
+        "vertiefung": "Offizielle Position vieler Parteien: DSGVO war ein Anfang. Aber reicht Regulierung, oder braucht es mehr?",
+        "beispiel": "Du sagst: 'Facebook muss Instagram verkaufen, Google darf nicht gleichzeitig Suchmaschine und Werbeplattform sein.'"
+      },
+      {
+        "wert": 4,
+        "label": "Plattform-Sozialismus",
+        "beschreibung": "Die großen Plattformen vergesellschaften, aber ihre Strukturen nutzen. Demokratische Kontrolle über Algorithmen. Gig-Worker zu Genoss:innen machen. Die Infrastruktur ist da – sie muss nur anders genutzt werden.",
+        "vertiefung": "Nick Srnicek, Trebor Scholz: Plattform-Kooperativismus. Uber, aber als Genossenschaft. Amazon, aber demokratisch.",
+        "beispiel": "Deliveroo-Fahrer:innen gründen eine Genossenschaft, entwickeln eigene App. Die Technik ist nicht das Problem, die Eigentumsverhältnisse sind es."
+      },
+      {
+        "wert": 5,
+        "label": "Digitale Commons",
+        "beschreibung": "Das Internet war einmal ein Versprechen der Freiheit – jetzt gehört es wenigen Konzernen. Vergesellschaftung digitaler Infrastruktur! Daten sind Gemeingut, nicht Ware. Öffentliche Plattformen statt Facebook, Google, Amazon.",
+        "vertiefung": "Evgeny Morozov, McKenzie Wark: Daten als Produktionsmittel. Wer die Daten kontrolliert, kontrolliert die Gesellschaft.",
+        "beispiel": "Du sagst: 'Warum gibt es kein öffentlich-rechtliches Facebook? Warum gehören unsere Daten Konzernen?'"
+      }
+    ],
+    "linkePosition": {
+      "position": "Die Linke steht bei etwa 0.3-0.4 auf dieser Achse",
+      "begruendung": "Datensouveränität, öffentliche Alternativen, Zerschlagung von Monopolen."
+    }
+  },
+  "21": {
+    "titel": "CARE",
+    "frage": "Wie sollte Sorgearbeit organisiert werden?",
+    "polLinks": "Aufwertung",
+    "polRechts": "Vergesellschaftung",
+    "stufen": [
+      {
+        "wert": 1,
+        "label": "Familiäre Fürsorge stärken",
+        "beschreibung": "Familie ist der beste Ort für Fürsorge. Familien finanziell unterstützen, damit Care zu Hause möglich ist. Nicht alles dem Staat überlassen. Subsidiarität.",
+        "vertiefung": "Am Rand des linken Spektrums. Kritik: Festschreibung traditioneller Geschlechterrollen, Privatisierung von Sorge.",
+        "beispiel": "Du glaubst: 'Kinder sind bei ihren Eltern am besten aufgehoben. Der Staat soll helfen, nicht ersetzen.'"
+      },
+      {
+        "wert": 2,
+        "label": "Flexible Lösungen",
+        "beschreibung": "Care ist vielfältig – verschiedene Modelle für verschiedene Bedürfnisse. Mehr Wahlfreiheit: Wer zu Hause pflegen will, soll unterstützt werden. Wer externe Betreuung will, auch. Keine Ideologie.",
+        "vertiefung": "Konservativere Position: Familie als Ort der Fürsorge. Aber auch: Menschen sollen wählen können.",
+        "beispiel": "Du sagst: 'Manche pflegen lieber selbst, andere brauchen Entlastung. Beides muss möglich sein.'"
+      },
+      {
+        "wert": 3,
+        "label": "Care aufwerten",
+        "beschreibung": "Care-Berufe verdienen mehr Anerkennung und bessere Bezahlung. Pflegemindestlohn rauf, Erzieher:innen-Gehälter rauf. Die Menschen, die sich um andere kümmern, müssen selbst gut leben können.",
+        "vertiefung": "Offizielle Position der Partei: Care-Berufe aufwerten, mehr Personal, bessere Bezahlung. Innerhalb des Systems reformieren.",
+        "beispiel": "Du sagst: 'Pfleger:innen haben während Corona Applaus bekommen. Jetzt brauchen sie 500 Euro mehr im Monat.'"
+      },
+      {
+        "wert": 4,
+        "label": "Öffentliche Care-Infrastruktur",
+        "beschreibung": "Massiver Ausbau öffentlicher Pflege, Kinderbetreuung, Gesundheit. Gut bezahlt, gut ausgestattet, für alle zugänglich. Care-Berufe aufwerten durch bessere Löhne und Arbeitsbedingungen.",
+        "vertiefung": "Postwachstums-Perspektive: Care statt Konsum. Mehr Pfleger:innen, weniger SUVs. Die Wirtschaft auf das Wesentliche ausrichten.",
+        "beispiel": "Du forderst: '500.000 neue Stellen in Pflege und Erziehung, finanziert durch Vermögensteuer.'"
+      },
+      {
+        "wert": 5,
+        "label": "Vergesellschaftung von Care",
+        "beschreibung": "Care-Arbeit muss aus der Familie befreit werden. Kostenlose Kitas für alle, 24h geöffnet. Pflege als öffentliche Aufgabe. Hausarbeit entlohnen oder abschaffen. Die Reproduktion der Gesellschaft darf nicht auf unbezahlter Frauenarbeit basieren.",
+        "vertiefung": "Silvia Federici: Lohn für Hausarbeit. Die feministische Linke: Care-Revolution. Reproduktionsarbeit als Klassenfrage.",
+        "beispiel": "Du sagst: 'Warum ist Kinderbetreuung Privatsache? Ohne sie funktioniert nichts – also muss sie öffentlich sein.'"
+      }
+    ],
+    "linkePosition": {
+      "position": "Die Linke steht bei etwa 0.35 auf dieser Achse",
+      "begruendung": "Care-Berufe aufwerten, mehr öffentliche Angebote, Vergesellschaftung langfristig."
+    }
+  },
+  "22": {
+    "titel": "LAND/STADT",
+    "frage": "Wo sollte linke Politik ihren Schwerpunkt setzen?",
+    "polLinks": "Urbaner Fokus",
+    "polRechts": "Dezentralisierung",
+    "stufen": [
+      {
+        "wert": 1,
+        "label": "Urbaner Fokus",
+        "beschreibung": "Urbanisierung ist nicht aufzuhalten – und das ist gut so. Städte sind die Zukunft: effizienter, diverser, innovativer. Ländliche Räume sind oft strukturkonservativ. Die Linke sollte dort stark sein, wo die Zukunft liegt.",
+        "vertiefung": "Eine Position am Rand des linken Spektrums. Kritik: Arroganz gegenüber ländlicher Bevölkerung, Verlust von Wählerstimmen.",
+        "beispiel": "Du glaubst: Investitionen in sterbende Dörfer sind verschwendet. Besser: gute Städte für alle, die kommen wollen."
+      },
+      {
+        "wert": 2,
+        "label": "Städte als progressive Zentren",
+        "beschreibung": "Städte sind Orte der Emanzipation und Diversität. Hier konzentrieren sich progressive Kräfte, hier entstehen neue Ideen, hier ist der Widerstand stark. Urbane Politik als Vorbild – Mietendeckel, autofreie Zonen, Willkommenskultur.",
+        "vertiefung": "Die Geschichte zeigt: Revolutionen beginnen in Städten. Paris 1871, Petrograd 1917, die 68er. Das Land ist oft konservativer.",
+        "beispiel": "Berlin hat den Mietendeckel versucht, Barcelona hat Tourismus reguliert. Städte können Labore sein für progressive Politik."
+      },
+      {
+        "wert": 3,
+        "label": "Beide Räume stärken",
+        "beschreibung": "Land und Stadt haben verschiedene Bedürfnisse, verschiedene Stärken. Strukturschwache Regionen fördern, aber auch urbane Probleme ernst nehmen: Mieten, Verdichtung, Verkehr. Keine Seite gegeneinander ausspielen.",
+        "vertiefung": "Die offizielle Position der Partei: Je nach Kontext. Urbanisierung nicht erzwingen, aber auch nicht verhindern. Regionale Unterschiede respektieren.",
+        "beispiel": "In Sachsen-Anhalt andere Probleme als in Berlin-Kreuzberg. Beides ernst nehmen, ohne das eine gegen das andere auszuspielen."
+      },
+      {
+        "wert": 4,
+        "label": "Gleichwertige Lebensverhältnisse",
+        "beschreibung": "Land und Stadt verbinden. Massive Investitionen in ländliche Regionen: ÖPNV aufs Land, schnelles Internet überall, Daseinsvorsorge vor Ort. Das Grundgesetz fordert gleichwertige Lebensverhältnisse – nehmen wir das ernst!",
+        "vertiefung": "Strukturschwache Regionen fördern, Abwanderung stoppen. Nicht jeder will in die Stadt. Und warum sollte das Krankenhaus 50 km entfernt sein?",
+        "beispiel": "Die Linke fordert: Kostenloser ÖPNV – aber was nützt das, wenn auf dem Land kein Bus fährt? Hier muss investiert werden."
+      },
+      {
+        "wert": 5,
+        "label": "Dezentralisierung / Ländliche Räume",
+        "beschreibung": "Linke Politik muss aufs Land! Dezentralisierung, regionale Wirtschaft. Landkommunen, ländliche Genossenschaften. Städte sind nicht die einzige Zukunft. Die urbane Linke hat das Land vergessen – und verliert es an die Rechten.",
+        "vertiefung": "Murray Bookchin: Kommunalismus, föderale Strukturen, regionale Selbstversorgung. Gegen die Konzentration in Metropolen.",
+        "beispiel": "Solidarische Landwirtschaft, Dorfläden in Genossenschaftshand, dezentrale Energieversorgung. Die Zukunft liegt nicht nur in Berlin."
+      }
+    ],
+    "linkePosition": {
+      "position": "Die Linke steht bei etwa 0.5 auf dieser Achse",
+      "begruendung": "Gleichwertige Lebensverhältnisse, beide Räume stärken."
+    }
+  },
+  "23": {
+    "titel": "GESCHICHTE",
+    "frage": "Wie sollte die Linke mit ihrer eigenen Geschichte umgehen?",
+    "polLinks": "Verteidigung",
+    "polRechts": "Kritische Aufarbeitung",
+    "stufen": [
+      {
+        "wert": 1,
+        "label": "Stolz auf linke Tradition",
+        "beschreibung": "Die Linke hat viel erreicht: Sozialstaat, Arbeitnehmerrechte, Gleichheit, Frieden. Diese Tradition verteidigen gegen antikommunistische Propaganda. Ohne die Arbeiterbewegung gäbe es keine Demokratie.",
+        "vertiefung": "Am Rand des linken Spektrums. Kritik: Relativierung von Unrecht, Verlust von Glaubwürdigkeit bei Jüngeren.",
+        "beispiel": "Du betonst: 'Alles, was wir haben, wurde von der Linken erkämpft. 8-Stunden-Tag, Wahlrecht, Sozialversicherung.'"
+      },
+      {
+        "wert": 2,
+        "label": "Verteidigung gegen Verzerrung",
+        "beschreibung": "Linke Geschichte wird verzerrt dargestellt. Der Realsozialismus hatte Errungenschaften, die im Westen oft verschwiegen werden. Kritik wird oft als Munition für die Rechte benutzt. Wir sollten unsere Geschichte nicht den Gegnern überlassen.",
+        "vertiefung": "'Geschichte wird von Siegern geschrieben.' Die antikommunistische Propaganda übertreibt. Vergleiche mit Nazi-Deutschland sind unangemessen.",
+        "beispiel": "Du verteidigst: 'Ja, es gab Probleme. Aber die DDR hat den Faschismus bekämpft, während im Westen Nazis Karriere machten.'"
+      },
+      {
+        "wert": 3,
+        "label": "Pragmatischer Umgang",
+        "beschreibung": "Geschichte kennen, aber nicht ständig führen. Nach vorne schauen. Aus Fehlern lernen, ohne sich ständig zu rechtfertigen. Die Linke von heute ist nicht die SED von gestern.",
+        "vertiefung": "Du sagst: 'Ich will über Mindestlohn reden, nicht über Stalin.' Die Vergangenheitsdebatte lähmt manchmal.",
+        "beispiel": "Auf die Frage 'Und was ist mit der DDR?' antwortest du: 'Was ist mit der Gegenwart? Kinderarmut, Pflegenotstand, Klimakrise?'"
+      },
+      {
+        "wert": 4,
+        "label": "Differenzierte Betrachtung",
+        "beschreibung": "Fehler UND Errungenschaften benennen. Die DDR war kein 'Unrechtsstaat' im Ganzen, hatte aber gravierende Probleme. Der Realsozialismus hat auch Positives gebracht: Bildung, Gesundheit, Gleichstellung. Differenzierung statt Pauschalurteile.",
+        "vertiefung": "Die offizielle Position der Partei: Fehler benennen, aber nicht alles verdammen. Die DDR war komplexer als ihre Stasi.",
+        "beispiel": "Du differenzierst: Kinderbetreuung war gut, Mauer war schlecht. Beides gehört zur Geschichte."
+      },
+      {
+        "wert": 5,
+        "label": "Kritische Aufarbeitung",
+        "beschreibung": "Stalinismus, DDR-Unrecht, Gewalt müssen benannt werden. Ohne ehrliche Aufarbeitung keine Glaubwürdigkeit. Aus Fehlern lernen heißt: sie erst einmal anerkennen. Wer die Verbrechen relativiert, macht sich mitschuldig.",
+        "vertiefung": "Die Linke muss sich der Geschichte stellen: Gulag, Mauertote, Stasi. Das war keine 'Entgleisung', sondern systemisch.",
+        "beispiel": "Du sagst: 'Wer den Stalinismus nicht aufarbeitet, kann von den Verbrechen des Kapitalismus nicht glaubwürdig sprechen.'"
+      }
+    ],
+    "linkePosition": {
+      "position": "Die Linke steht bei etwa 0.35-0.5 auf dieser Achse",
+      "begruendung": "Differenzierte Betrachtung: Fehler benennen, Errungenschaften anerkennen."
+    }
+  },
+  "24": {
+    "titel": "GEOPOLITIK",
+    "frage": "Wie sollte sich die Linke in der Weltpolitik positionieren?",
+    "polLinks": "Westliche Demokratien",
+    "polRechts": "Multipolar/NATO-Kritik",
+    "stufen": [
+      {
+        "wert": 1,
+        "label": "Westliche Demokratien verteidigen",
+        "beschreibung": "Putin und Xi sind keine Verbündeten. Ukraine unterstützen, auch militärisch. Demokratien gegen Autokraten verteidigen. Die Linke darf nicht naiv sein gegenüber Diktaturen.",
+        "vertiefung": "Am Rand des linken Spektrums, aber real vertreten. Teile der Grünen, 'Antideutsche'. Kritik: Übernahme westlicher Propaganda.",
+        "beispiel": "Du sagst: 'Pazifismus ist schön, aber was sagst du den Ukrainern, die sich verteidigen wollen?'"
+      },
+      {
+        "wert": 2,
+        "label": "Demokratien verteidigen (kritisch)",
+        "beschreibung": "Bei allen Fehlern des Westens: Demokratien sind zu verteidigen. Aber NATO-Kritik bleibt berechtigt. Differenzierte Position: Ukraine unterstützen, aber nicht bedingungslos aufrüsten.",
+        "vertiefung": "Position vieler SPD-Linker, Teile der Grünen. 'Wertegeleitete Außenpolitik' – aber was sind die Werte?",
+        "beispiel": "Du sagst: 'Ich mag die NATO nicht, aber wenn Putin in die Ukraine einmarschiert, muss Europa handeln.'"
+      },
+      {
+        "wert": 3,
+        "label": "Antimilitaristisch, für Diplomatie",
+        "beschreibung": "Gegen Aufrüstung und Waffenexporte. Für Diplomatie und zivile Konfliktlösung. Keine Kriegslogik. Aber auch: Klare Kritik an russischem Angriffskrieg. Frieden schaffen ohne Waffen – aber wie genau?",
+        "vertiefung": "Offizielle Position der Partei Die Linke: Gegen Aufrüstung, gegen Waffenlieferungen, für Verhandlungen. Umstritten seit Ukraine-Krieg.",
+        "beispiel": "Du sagst: 'Waffen bringen keinen Frieden. Aber was ist die Alternative, wenn Putin nicht verhandelt?'"
+      },
+      {
+        "wert": 4,
+        "label": "Gegen alle Imperialismen",
+        "beschreibung": "NATO kritisieren UND Putin/Xi kritisieren. Keine Seite unterstützen. Abrüstung weltweit. Keine Waffenlieferungen an niemanden. Gegen alle Großmächte, für die kleinen Leute überall.",
+        "vertiefung": "Die Position vieler Friedensbewegter: Weder Washington noch Moskau. Schwierigkeit: Was tun, wenn ein Aggressor angreift?",
+        "beispiel": "Du sagst: 'Putins Angriff ist ein Verbrechen. Aber NATO-Osterweiterung war keine gute Idee. Beide haben Schuld.'"
+      },
+      {
+        "wert": 5,
+        "label": "Gegen westliche Hegemonie",
+        "beschreibung": "USA/NATO sind nicht 'die Guten'. Imperialismus hat viele Gesichter, aber der mächtigste ist der westliche. Eine multipolare Welt statt US-Hegemonie. 'Der Hauptfeind steht im eigenen Land.' NATO auflösen, nicht erweitern.",
+        "vertiefung": "Klassische antiimperialistische Position. Kritik: Relativierung von russischen/chinesischen Verbrechen, 'Campismus'.",
+        "beispiel": "Du argumentierst: 'Die USA haben mehr Länder bombardiert als jeder andere Staat. Warum sollen wir mit ihnen verbündet sein?'"
+      }
+    ],
+    "linkePosition": {
+      "position": "Die Linke steht bei etwa 0.3-0.5 auf dieser Achse",
+      "begruendung": "NATO-kritisch, Abrüstung, gegen alle Imperialismen – aber klare Kritik an russischem Angriffskrieg."
+    }
+  },
+  "25": {
+    "titel": "SPIRITUALITÄT",
+    "frage": "Welche Rolle spielt Spiritualität für linke Politik?",
+    "polLinks": "Spirituell offen",
+    "polRechts": "Materialistisch",
+    "stufen": [
+      {
+        "wert": 1,
+        "label": "Utopischer Horizont",
+        "beschreibung": "Die Utopie ist kein Fluchtort, sondern Kompass. Wir brauchen konkrete Bilder einer anderen Welt - nicht als Bauplan, sondern als Orientierung. Was wäre, wenn...? Die Utopie ist die Kritik des Bestehenden in Form eines Traums. Ohne Utopie gibt es keine Richtung. Die Frage ist nicht, ob die Utopie realistisch ist, sondern ob die Realität ohne Utopie aushaltbar ist.",
+        "vertiefung": "Klassiker: Thomas Morus (1478-1535), Charles Fourier (1772-1837). „Eine Karte der Welt, auf der Utopia nicht verzeichnet ist, ist keinen Blick wert....\" – Oscar Wilde",
+        "beispiel": "Utopische Literatur (Global, 1516-heute): Von Morus bis Le Guin: Literatur als Labor für andere Welten."
+      },
+      {
+        "wert": 2,
+        "label": "Revolutionärer Optimismus",
+        "beschreibung": "Die Weltgeschichte ist auf unserer Seite. Der Kapitalismus gräbt sein eigenes Grab, die Widersprüche verschärfen sich, die Revolution wird kommen. Nicht naiver Glaube, sondern Analyse: Die objektiven Bedingungen reifen. Was fehlt, ist die subjektive Bereitschaft. Unsere Aufgabe: Sie herstellen. Der Kommunismus ist die Zukunft - wir müssen sie nur ergreifen.",
+        "vertiefung": "Klassiker: Wladimir Lenin (1870-1924), Che Guevara (1928-1967). „Es gibt Jahrzehnte, in denen nichts passiert, und es gibt Wochen, in denen Jahrzehnte passieren....\" – Wladimir Lenin",
+        "beispiel": "Oktoberrevolution (Russland, 1917): Der Beweis: Es ist möglich. Die Bolschewiki zeigten, dass die Revolution keine Utopie ist."
+      },
+      {
+        "wert": 3,
+        "label": "Dialektische Hoffnung",
+        "beschreibung": "Hoffnung ist nicht naiver Optimismus, sondern erwächst aus dem Wissen um das, was fehlt. Walter Benjamin: In jedem Moment schlummert die Möglichkeit der Erlösung. Ernst Bloch: Das Noch-Nicht-Bewusste, die Tagträume, die Utopie. Hoffnung ist eine Arbeit - sie muss gelernt werden. Die Welt ist voller uneingelöster Versprechen.",
+        "vertiefung": "Klassiker: Ernst Bloch (1885-1977), Walter Benjamin (1892-1940). „Denken heißt Überschreiten....\" – Ernst Bloch",
+        "beispiel": "Utopisches Denken (Überall, Immer): Die Welt denken, wie sie sein könnte. Nicht als Flucht, sondern als Orientierung."
+      },
+      {
+        "wert": 4,
+        "label": "Kritischer Realismus",
+        "beschreibung": "Weder Optimismus noch Pessimismus - sondern Analyse. Die Verhältnisse sind mächtig, aber nicht unveränderlich. Wir müssen verstehen, wie der Kapitalismus funktioniert, wo seine Risse sind, was möglich ist. Keine Garantien, aber auch kein Fatalismus. Gramsci's Formel: Pessimismus des Verstandes, Optimismus des Willens.",
+        "vertiefung": "Klassiker: Antonio Gramsci (1891-1937), Rosa Luxemburg (1871-1919). „Pessimismus des Verstandes, Optimismus des Willens....\" – Antonio Gramsci",
+        "beispiel": "Konjunkturanalyse (Global, Laufend): Die Lage nüchtern analysieren. Wo stehen wir? Was ist möglich? Welche Kräfte sind im Spiel?"
+      },
+      {
+        "wert": 5,
+        "label": "Pessimismus",
+        "beschreibung": "Seien wir ehrlich: Die Geschichte endet nicht gut. Der Kapitalismus zerstört die Erde, der Faschismus kehrt zurück, die Linke ist schwach. Pessimismus ist keine Resignation, sondern Realismus. Adorno nach Auschwitz: Kann es nach dem Zivilisationsbruch noch Hoffnung geben? Vielleicht ist das Beste, worauf wir hoffen können, das Verhindern des Schlimmsten.",
+        "vertiefung": "Klassiker: Theodor W. Adorno (1903-1969), Walter Benjamin (1892-1940). „Es ist leichter, sich das Ende der Welt vorzustellen als das Ende des Kapitalismus....\" – Mark Fisher",
+        "beispiel": "Negative Dialektik (Frankfurt, 1960er): Denken, das sich weigert, falsche Versöhnung zu bieten. Die Wunde offenhalten."
+      }
+    ],
+    "linkePosition": {
+      "position": "Die Linke steht bei etwa 0.5 auf dieser Achse",
+      "begruendung": "Welche Rolle spielt Spiritualität für linke Politik?"
+    }
+  }
+}

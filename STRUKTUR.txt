@@ -1,0 +1,69 @@
+📂 LINKESWESEN - KOMPLETTE STRUKTUR
+
+linkeswesen/
+├── index.html                         ← Generator Einstieg
+│
+├── js/
+│   └── app.js                         ← Generator React App (3409 Zeilen)
+│
+├── css/
+│   └── style.css                      ← Generator Styling
+│
+├── data/                              ← Generator Daten
+│   ├── layer1.json                    ✅ 20 Grundfragen
+│   ├── layer2.json                    ✅ 26 Achsen
+│   ├── analysen-layer1.json           ✅ Layer 1 Auswertungen
+│   ├── analysen-layer2.json           ✅ Layer 2 Auswertungen
+│   ├── analysen-layer3.json           ✅ Archetyp-Analysen
+│   ├── literatur.json                 ✅ Literaturempfehlungen
+│   ├── knoten_content_26.json         ✅ (für Wesen)
+│   ├── personen.json                  ✅ (für Wesen)
+│   ├── ressourcen.json                ✅ (für Wesen)
+│   ├── zimmer_beschreibungen.json     ✅ (für Wesen)
+│   └── mediathek.json                 ✅ (für Wesen)
+│
+└── linkes-wesen-26/                   ← Das Wesen
+    ├── index.html
+    ├── js/
+    │   └── app.js                     ← Wesen App (11196 Zeilen)
+    ├── css/
+    │   ├── base.css
+    │   ├── navigation.css
+    │   ├── ansichten.css
+    │   ├── responsive.css
+    │   └── grundlagen.css
+    └── data/
+        ├── knoten_content_26.json     ← 130 Positionen, 26 Achsen
+        ├── personen.json              ← 209 Denker*innen
+        ├── ressourcen.json            ← Praktische Ressourcen
+        ├── satzbausteine.json         ← Text-Generator
+        ├── zimmer_beschreibungen.json ← 12 Zimmer
+        ├── mediathek.json             ← 923 Medien!
+        └── grundlagen.json            ← 41 Essays
+
+═══════════════════════════════════════════════════════════════════════════
+
+✅ GENERATOR:
+- Alle 3 Layer funktionsfähig
+- Parameter mit Beschreibungen
+- Profil-Empfang implementiert
+- Verbindung zum Wesen
+
+✅ WESEN:
+- 26-Achsen-Kompass
+- Mediathek (923 Einträge)
+- Grundlagen-Modul
+- Verbindung zum Generator
+
+✅ VERBINDUNGEN:
+- Generator → Wesen (mit Profil)
+- Wesen → Generator (mit Profil)
+- Bidirektional!
+
+═══════════════════════════════════════════════════════════════════════════
+
+🚀 STARTEN:
+cd linkeswesen
+python -m http.server 5500
+
+Browser: http://127.0.0.1:5500/
