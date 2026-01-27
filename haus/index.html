@@ -10698,6 +10698,297 @@
       #mediathek-container { padding: 1rem; }
       .mediathek-grid { grid-template-columns: 1fr; }
     }
+
+/* ═══════════════════════════════════════════════════════════════
+   GRUNDLAGEN: NEUE 2-SPALTEN-UI
+   ═══════════════════════════════════════════════════════════════ */
+/* ═══════════════════════════════════════════════════════════════
+   GRUNDLAGEN: 2-SPALTEN-LAYOUT
+   ═══════════════════════════════════════════════════════════════ */
+
+.grundlagen-two-column {
+  display: grid;
+  grid-template-columns: 380px 1fr;
+  height: calc(100vh - 60px);
+  gap: 0;
+  overflow: hidden;
+}
+
+/* ───────────────────────────────────────────────────────────────
+   LINKE SIDEBAR: Essays-Liste (fixiert)
+   ─────────────────────────────────────────────────────────────── */
+
+.grundlagen-sidebar {
+  background: var(--bg-secondary);
+  border-right: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow: hidden;
+}
+
+.grundlagen-sidebar-header {
+  padding: 1.5rem;
+  border-bottom: 1px solid var(--border);
+  flex-shrink: 0;
+}
+
+.sidebar-back-btn {
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border);
+  color: var(--text-primary);
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: all 0.2s;
+  width: 100%;
+  text-align: left;
+}
+
+.sidebar-back-btn:hover {
+  background: var(--bg-primary);
+  border-color: var(--accent);
+}
+
+.grundlagen-essays-list {
+  flex: 1;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding: 0.5rem;
+}
+
+/* Scrollbar styling für Sidebar */
+.grundlagen-essays-list::-webkit-scrollbar {
+  width: 8px;
+}
+
+.grundlagen-essays-list::-webkit-scrollbar-track {
+  background: var(--bg-tertiary);
+}
+
+.grundlagen-essays-list::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 4px;
+}
+
+.grundlagen-essays-list::-webkit-scrollbar-thumb:hover {
+  background: var(--text-secondary);
+}
+
+/* ───────────────────────────────────────────────────────────────
+   ESSAYS NAV ITEMS (in Sidebar)
+   ─────────────────────────────────────────────────────────────── */
+
+.essay-nav-item {
+  display: flex;
+  gap: 0.75rem;
+  padding: 1rem;
+  margin-bottom: 0.5rem;
+  background: var(--bg-tertiary);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s;
+  border-left: 3px solid transparent;
+}
+
+.essay-nav-item:hover {
+  background: var(--bg-primary);
+  transform: translateX(4px);
+}
+
+.essay-nav-item.active {
+  background: var(--bg-primary);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+.essay-nav-icon {
+  font-size: 1.5rem;
+  flex-shrink: 0;
+  width: 2rem;
+  text-align: center;
+}
+
+.essay-nav-text {
+  flex: 1;
+  min-width: 0;
+}
+
+.essay-nav-title {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 0.25rem;
+  line-height: 1.3;
+}
+
+.essay-nav-preview {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  line-height: 1.4;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* ───────────────────────────────────────────────────────────────
+   RECHTE SPALTE: Content Area
+   ─────────────────────────────────────────────────────────────── */
+
+.grundlagen-content-area {
+  background: var(--bg-primary);
+  overflow-y: auto;
+  overflow-x: hidden;
+  height: 100%;
+}
+
+/* Scrollbar styling für Content */
+.grundlagen-content-area::-webkit-scrollbar {
+  width: 12px;
+}
+
+.grundlagen-content-area::-webkit-scrollbar-track {
+  background: var(--bg-secondary);
+}
+
+.grundlagen-content-area::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 6px;
+  border: 2px solid var(--bg-secondary);
+}
+
+.grundlagen-content-area::-webkit-scrollbar-thumb:hover {
+  background: var(--text-secondary);
+}
+
+/* ───────────────────────────────────────────────────────────────
+   ESSAY CONTENT
+   ─────────────────────────────────────────────────────────────── */
+
+.essay-content-wrapper {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.essay-header {
+  margin-bottom: 2rem;
+  padding-bottom: 2rem;
+}
+
+.essay-meta-tag {
+  display: inline-block;
+  padding: 0.4rem 1rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.essay-title {
+  color: var(--text-primary);
+  font-size: 2.2rem;
+  line-height: 1.2;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.essay-title-icon {
+  font-size: 2.5rem;
+}
+
+.essay-intro {
+  background: var(--bg-secondary);
+  padding: 1.5rem;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: var(--text-primary);
+  font-style: italic;
+}
+
+.essay-body {
+  color: var(--text-primary);
+  line-height: 1.8;
+}
+
+.essay-paragraph {
+  margin-bottom: 1.5rem;
+  line-height: 1.8;
+  font-size: 1rem;
+}
+
+.essay-section-heading {
+  color: var(--accent);
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+  line-height: 1.3;
+}
+
+.essay-subsection-heading {
+  color: var(--text-primary);
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+  line-height: 1.3;
+}
+
+/* ───────────────────────────────────────────────────────────────
+   PLACEHOLDER STATES
+   ─────────────────────────────────────────────────────────────── */
+
+.essay-placeholder-welcome {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  text-align: center;
+  padding: 2rem;
+}
+
+.essay-placeholder {
+  text-align: center;
+  padding: 4rem 2rem;
+  color: var(--text-secondary);
+  background: var(--bg-secondary);
+  border-radius: 12px;
+  border: 1px dashed var(--border);
+}
+
+/* ───────────────────────────────────────────────────────────────
+   RESPONSIVE: Mobile
+   ─────────────────────────────────────────────────────────────── */
+
+@media (max-width: 768px) {
+  .grundlagen-two-column {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr;
+  }
+  
+  .grundlagen-sidebar {
+    max-height: 40vh;
+    border-right: none;
+    border-bottom: 1px solid var(--border);
+  }
+  
+  .essay-content-wrapper {
+    padding: 1.5rem 1rem;
+  }
+  
+  .essay-title {
+    font-size: 1.8rem;
+  }
+}
+
+
   </style>
 </head>
 <body class="palette-expanded">
@@ -23078,134 +23369,228 @@ const grundlagenData = {
 let selectedGrundlagenKategorie = null;
 let selectedGrundlagenEssay = null;
 
+// ═══════════════════════════════════════════════════════════════
+// NEUE GRUNDLAGEN-UI: 2-SPALTEN-LAYOUT
+// Links: Fixierte Essays-Liste mit Kategorien
+// Rechts: Essay-Volltext (scrollbar)
+// ═══════════════════════════════════════════════════════════════
+
 function initGrundlagen() {
-  console.log('📚 initGrundlagen() aufgerufen');
   const container = document.getElementById('grundlagen-container');
-  console.log('Container gefunden:', container);
-  console.log('selectedGrundlagenKategorie:', selectedGrundlagenKategorie);
   
+  // Wenn keine Kategorie gewählt: zeige Übersicht
   if (!selectedGrundlagenKategorie) {
-    console.log('→ Rendering Übersicht...');
-    renderGrundlagenUebersicht(container);
-  } else if (!selectedGrundlagenEssay) {
-    renderGrundlagenKategorie(container, selectedGrundlagenKategorie);
+    renderGrundlagenWelcome(container);
   } else {
-    renderGrundlagenEssay(container, selectedGrundlagenKategorie, selectedGrundlagenEssay);
+    // Sonst: 2-Spalten-Layout
+    renderGrundlagenTwoColumn(container);
   }
 }
 
-function renderGrundlagenUebersicht(container) {
-  console.log('🎨 renderGrundlagenUebersicht() gestartet');
-  console.log('grundlagenData keys:', Object.keys(grundlagenData));
+function renderGrundlagenWelcome(container) {
+  let html = `
+    <div style="max-width: 1200px; margin: 0 auto; padding: 2rem;">
+      <div style="text-align: center; margin-bottom: 3rem;">
+        <h1 style="color: var(--accent); font-size: 2.5rem; margin-bottom: 0.5rem;">🧭 Grundlagen</h1>
+        <p style="color: var(--text-secondary); font-size: 1.1rem; line-height: 1.6; margin-bottom: 0.5rem;">
+          Die Grammatik des linken Wesens – Codes, Anthropologie, Praktiken und blinde Flecken
+        </p>
+        <p style="color: var(--text-secondary); opacity: 0.7; font-size: 0.9rem;">
+          41 Essays · 5 Kategorien · Wähle eine Kategorie um zu beginnen
+        </p>
+      </div>
+      
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem;">
+  `;
   
-  let html = `<div style="max-width: 1200px; margin: 0 auto; padding: 2rem;">
-    <h1 style="color: var(--accent); text-align: center; margin-bottom: 0.5rem; font-size: 2.5rem;">🧭 Grundlagen</h1>
-    <p style="color: var(--text-secondary); text-align: center; margin-bottom: 3rem; font-size: 1.1rem; line-height: 1.6;">
-      Die Grammatik des linken Wesens – Codes, Anthropologie, Praktiken und blinde Flecken.<br>
-      <span style="font-size: 0.9rem; opacity: 0.8;">Wähle einen Bereich, um mehr zu erfahren.</span>
-    </p>
-    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin-bottom: 3rem;">`;
-  
-  Object.entries(grundlagenData).forEach(([key, kategorie]) => {
-    console.log(`📦 Kategorie "${key}":`, kategorie);
-    html += `<div onclick="selectGrundlagenKategorie('${key}')" 
-      style="background: var(--bg-secondary); border: 2px solid ${kategorie.farbe}; border-radius: 12px; padding: 2rem; cursor: pointer; transition: all 0.3s; box-shadow: 0 2px 8px rgba(0,0,0,0.2);"
-      onmouseover="this.style.transform='translateY(-4px)'; this.style.boxShadow='0 8px 16px rgba(0,0,0,0.3)';"
-      onmouseout="this.style.transform=''; this.style.boxShadow='0 2px 8px rgba(0,0,0,0.2)';">
-      <div style="font-size: 3rem; text-align: center; margin-bottom: 1rem;">${kategorie.icon}</div>
-      <h3 style="color: ${kategorie.farbe}; text-align: center; margin-bottom: 0.5rem; font-size: 1.3rem;">${kategorie.name}</h3>
-      <p style="color: var(--text-secondary); text-align: center; font-style: italic; font-size: 0.9rem; margin-bottom: 1rem;">${kategorie.subtitle}</p>
-      <p style="color: var(--text-secondary); text-align: center; font-size: 0.85rem; line-height: 1.5;">${kategorie.beschreibung}</p>
-      <div style="text-align: center; margin-top: 1rem; color: ${kategorie.farbe}; font-weight: 600;">${kategorie.essays.length} Essays →</div>
-    </div>`;
+  Object.entries(grundlagenData).forEach(([key, kat]) => {
+    html += `
+      <div onclick="selectGrundlagenKategorie('${key}')" 
+           style="background: var(--bg-secondary); border: 2px solid ${kat.farbe}; border-radius: 12px; padding: 2rem; cursor: pointer; transition: all 0.3s; box-shadow: 0 2px 8px rgba(0,0,0,0.2);"
+           onmouseover="this.style.transform='translateY(-4px)'; this.style.boxShadow='0 8px 16px rgba(0,0,0,0.3)';"
+           onmouseout="this.style.transform=''; this.style.boxShadow='0 2px 8px rgba(0,0,0,0.2)';">
+        <div style="font-size: 3rem; text-align: center; margin-bottom: 1rem;">${kat.icon}</div>
+        <h3 style="color: ${kat.farbe}; text-align: center; margin-bottom: 0.5rem; font-size: 1.3rem;">${kat.name}</h3>
+        <p style="color: var(--text-secondary); text-align: center; font-style: italic; font-size: 0.9rem; margin-bottom: 1rem;">${kat.subtitle}</p>
+        <p style="color: var(--text-secondary); text-align: center; font-size: 0.85rem; line-height: 1.5;">${kat.beschreibung}</p>
+        <div style="text-align: center; margin-top: 1rem; color: ${kat.farbe}; font-weight: 600;">${kat.essays.length} Essay${kat.essays.length > 1 ? 's' : ''} →</div>
+      </div>
+    `;
   });
   
-  html += `</div>
-    <div style="background: var(--bg-secondary); border-radius: 12px; padding: 2rem; border: 1px solid var(--border);">
-      <h3 style="color: var(--text-primary); margin-bottom: 1rem;">💡 Über diese Sektion</h3>
-      <p style="color: var(--text-secondary); line-height: 1.7; margin-bottom: 1rem;">Diese 40 Essays bilden eine Einführung in das linke Denken. Sie sind bewusst kurz gehalten (300-600 Worte), um einen schnellen Einstieg zu ermöglichen, ohne in akademische Tiefe zu verfallen.</p>
-      <p style="color: var(--text-secondary); line-height: 1.7;">Jeder Essay kann für sich stehen, aber zusammen ergeben sie ein Gesamtbild – eine Landkarte der Begriffe, Werte, Praktiken und Widersprüche, die das linke Wesen ausmachen.</p>
+  html += `
+      </div>
+      
+      <div style="background: var(--bg-secondary); border-radius: 12px; padding: 2rem; border: 1px solid var(--border); margin-top: 3rem;">
+        <h3 style="color: var(--text-primary); margin-bottom: 1rem;">💡 Über diese Sektion</h3>
+        <p style="color: var(--text-secondary); line-height: 1.7; margin-bottom: 1rem;">
+          Diese 41 Essays bilden eine Einführung in das linke Denken. Sie sind bewusst kurz gehalten (300-600 Worte), 
+          um einen schnellen Einstieg zu ermöglichen, ohne in akademische Tiefe zu verfallen.
+        </p>
+        <p style="color: var(--text-secondary); line-height: 1.7;">
+          Jeder Essay kann für sich stehen, aber zusammen ergeben sie ein Gesamtbild – eine Landkarte der Begriffe, 
+          Werte, Praktiken und Widersprüche, die das linke Wesen ausmachen.
+        </p>
+      </div>
     </div>
-  </div>`;
+  `;
+  
   container.innerHTML = html;
-  console.log('✅ HTML in Container eingefügt, Länge:', html.length);
 }
 
-function selectGrundlagenKategorie(kategorie) {
-  selectedGrundlagenKategorie = kategorie;
-  selectedGrundlagenEssay = null;
-  initGrundlagen();
-}
-
-function renderGrundlagenKategorie(container, kategorieKey) {
-  const kategorie = grundlagenData[kategorieKey];
-  let html = `<div style="max-width: 1200px; margin: 0 auto; padding: 2rem;">
-    <button onclick="backToGrundlagenUebersicht()" style="background: var(--bg-tertiary); border: 1px solid var(--border); color: var(--text-primary); padding: 0.5rem 1rem; border-radius: 8px; cursor: pointer; margin-bottom: 2rem; transition: all 0.2s;" onmouseover="this.style.background='var(--bg-secondary)'" onmouseout="this.style.background='var(--bg-tertiary)'">← Zurück zur Übersicht</button>
-    <div style="text-align: center; margin-bottom: 3rem;">
-      <div style="font-size: 4rem; margin-bottom: 1rem;">${kategorie.icon}</div>
-      <h1 style="color: ${kategorie.farbe}; margin-bottom: 0.5rem; font-size: 2.2rem;">${kategorie.name}</h1>
-      <p style="color: var(--text-secondary); font-style: italic; font-size: 1.1rem; margin-bottom: 0.5rem;">${kategorie.subtitle}</p>
-      <p style="color: var(--text-secondary); font-size: 0.95rem;">${kategorie.beschreibung}</p>
+function renderGrundlagenTwoColumn(container) {
+  const kategorie = grundlagenData[selectedGrundlagenKategorie];
+  
+  let html = `
+    <div class="grundlagen-two-column">
+      <!-- LINKE SIDEBAR: Essays-Liste (fixiert) -->
+      <div class="grundlagen-sidebar">
+        <div class="grundlagen-sidebar-header">
+          <button onclick="backToGrundlagenUebersicht()" class="sidebar-back-btn">
+            ← Kategorien
+          </button>
+          <div style="margin: 1rem 0; padding-bottom: 1rem; border-bottom: 2px solid ${kategorie.farbe};">
+            <div style="font-size: 2rem; margin-bottom: 0.5rem;">${kategorie.icon}</div>
+            <h2 style="color: ${kategorie.farbe}; font-size: 1.2rem; margin: 0;">${kategorie.name}</h2>
+            <p style="color: var(--text-secondary); font-size: 0.85rem; margin-top: 0.25rem;">${kategorie.essays.length} Essays</p>
+          </div>
+        </div>
+        
+        <!-- Essays-Liste -->
+        <div class="grundlagen-essays-list">
+          ${renderEssaysNavList(kategorie)}
+        </div>
+      </div>
+      
+      <!-- RECHTE SPALTE: Essay-Content (scrollbar) -->
+      <div class="grundlagen-content-area">
+        ${renderEssayContent()}
+      </div>
     </div>
-    <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 1.5rem;">`;
+  `;
+  
+  container.innerHTML = html;
+}
+
+function renderEssaysNavList(kategorie) {
+  let html = '';
   
   kategorie.essays.forEach(essay => {
-    html += `<div onclick="selectGrundlagenEssay('${kategorieKey}', '${essay.id}')" style="background: var(--bg-secondary); border: 1px solid var(--border); border-left: 4px solid ${kategorie.farbe}; border-radius: 8px; padding: 1.5rem; cursor: pointer; transition: all 0.2s;" onmouseover="this.style.borderLeftWidth='8px'; this.style.transform='translateX(4px)';" onmouseout="this.style.borderLeftWidth='4px'; this.style.transform='';">
-      <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.75rem;">
-        <span style="font-size: 1.8rem;">${essay.icon}</span>
-        <h3 style="color: var(--text-primary); font-size: 1.1rem; margin: 0;">${essay.titel}</h3>
+    const isActive = selectedGrundlagenEssay === essay.id;
+    html += `
+      <div class="essay-nav-item ${isActive ? 'active' : ''}" 
+           onclick="selectGrundlagenEssay('${selectedGrundlagenKategorie}', '${essay.id}')"
+           style="border-left: 3px solid ${isActive ? kategorie.farbe : 'transparent'};">
+        <div class="essay-nav-icon">${essay.icon}</div>
+        <div class="essay-nav-text">
+          <div class="essay-nav-title">${essay.titel}</div>
+          <div class="essay-nav-preview">${essay.kurz.substring(0, 90)}...</div>
+        </div>
       </div>
-      <p style="color: var(--text-secondary); font-size: 0.9rem; line-height: 1.6; margin: 0;">${essay.kurz}</p>
-      <div style="margin-top: 1rem; color: ${kategorie.farbe}; font-size: 0.85rem; font-weight: 600;">Mehr lesen →</div>
-    </div>`;
+    `;
   });
   
-  html += `</div></div>`;
-  container.innerHTML = html;
+  return html;
+}
+
+function renderEssayContent() {
+  // Wenn kein Essay gewählt: Platzhalter
+  if (!selectedGrundlagenEssay) {
+    return `
+      <div class="essay-placeholder-welcome">
+        <div style="font-size: 3rem; margin-bottom: 1rem;">👈</div>
+        <h2 style="color: var(--text-secondary);">Wähle ein Essay</h2>
+        <p style="color: var(--text-secondary); opacity: 0.7;">
+          Klicke auf ein Essay in der Liste links, um es zu lesen.
+        </p>
+      </div>
+    `;
+  }
+  
+  const kategorie = grundlagenData[selectedGrundlagenKategorie];
+  const essay = kategorie.essays.find(e => e.id === selectedGrundlagenEssay);
+  
+  if (!essay) {
+    return '<p style="color: var(--text-secondary); text-align: center; padding: 2rem;">Essay nicht gefunden.</p>';
+  }
+  
+  let html = `
+    <div class="essay-content-wrapper">
+      <!-- Essay Header -->
+      <div class="essay-header" style="border-bottom: 3px solid ${kategorie.farbe};">
+        <div class="essay-meta-tag" style="background: ${kategorie.farbe}22; color: ${kategorie.farbe}; border: 1px solid ${kategorie.farbe};">
+          ${kategorie.icon} ${kategorie.name}
+        </div>
+        <h1 class="essay-title">
+          <span class="essay-title-icon">${essay.icon}</span>
+          ${essay.titel}
+        </h1>
+      </div>
+      
+      <!-- Essay Intro (hervorgehoben) -->
+      <div class="essay-intro" style="border-left: 4px solid ${kategorie.farbe};">
+        ${essay.kurz}
+      </div>
+      
+      <!-- Essay Body -->
+      <div class="essay-body">
+        ${essay.lang ? formatEssayText(essay.lang) : renderEssayPlaceholder()}
+      </div>
+    </div>
+  `;
+  
+  return html;
+}
+
+function formatEssayText(text) {
+  // Formatiere den Essay-Text mit Absätzen und Überschriften
+  return text
+    .split('\n\n')
+    .map(paragraph => {
+      paragraph = paragraph.trim();
+      if (!paragraph) return '';
+      
+      // Römische Zahlen als Überschriften (I., II., III., etc.)
+      if (paragraph.match(/^[IVX]+\.\s+/)) {
+        return `<h2 class="essay-section-heading">${paragraph}</h2>`;
+      }
+      
+      // Unterpunkte als kleinere Überschriften (1., 2., 3., etc.)
+      if (paragraph.match(/^\d+\.\s+[A-Z]/)) {
+        return `<h3 class="essay-subsection-heading">${paragraph}</h3>`;
+      }
+      
+      // Normale Absätze
+      return `<p class="essay-paragraph">${paragraph}</p>`;
+    })
+    .filter(p => p)
+    .join('\n');
+}
+
+function renderEssayPlaceholder() {
+  return `
+    <div class="essay-placeholder">
+      <div style="font-size: 2.5rem; margin-bottom: 1rem;">📝</div>
+      <p style="font-size: 1.1rem; margin-bottom: 0.5rem; font-weight: 600;">Ausführlicher Essay folgt bald</p>
+      <p style="font-size: 0.9rem; opacity: 0.7;">Dieser Essay befindet sich noch in Arbeit und wird in Kürze ergänzt.</p>
+    </div>
+  `;
+}
+
+function selectGrundlagenKategorie(key) {
+  selectedGrundlagenKategorie = key;
+  selectedGrundlagenEssay = null;  // Kein Essay vorausgewählt
+  initGrundlagen();
 }
 
 function selectGrundlagenEssay(kategorie, essayId) {
   selectedGrundlagenKategorie = kategorie;
   selectedGrundlagenEssay = essayId;
   initGrundlagen();
-}
-
-function renderGrundlagenEssay(container, kategorieKey, essayId) {
-  const kategorie = grundlagenData[kategorieKey];
-  const essay = kategorie.essays.find(e => e.id === essayId);
-  if (!essay) {
-    container.innerHTML = '<p style="color: var(--text-secondary); text-align: center; padding: 2rem;">Essay nicht gefunden.</p>';
-    return;
-  }
   
-  let html = `<div style="max-width: 800px; margin: 0 auto; padding: 2rem;">
-    <button onclick="selectGrundlagenKategorie('${kategorieKey}')" style="background: var(--bg-tertiary); border: 1px solid var(--border); color: var(--text-primary); padding: 0.5rem 1rem; border-radius: 8px; cursor: pointer; margin-bottom: 2rem; transition: all 0.2s;" onmouseover="this.style.background='var(--bg-secondary)'" onmouseout="this.style.background='var(--bg-tertiary)'">← Zurück zu ${kategorie.name}</button>
-    <div style="text-align: center; margin-bottom: 3rem;">
-      <div style="font-size: 4rem; margin-bottom: 1rem;">${essay.icon}</div>
-      <h1 style="color: ${kategorie.farbe}; margin-bottom: 1rem; font-size: 2.5rem;">${essay.titel}</h1>
-      <div style="display: inline-block; background: ${kategorie.farbe}22; border: 1px solid ${kategorie.farbe}; color: ${kategorie.farbe}; padding: 0.4rem 1rem; border-radius: 20px; font-size: 0.85rem; font-weight: 600;">${kategorie.name}</div>
-    </div>
-    <div style="background: var(--bg-secondary); border-left: 4px solid ${kategorie.farbe}; border-radius: 8px; padding: 2rem; margin-bottom: 2rem;">
-      <p style="color: var(--text-primary); font-size: 1.05rem; line-height: 1.8; font-style: italic;">${essay.kurz}</p>
-    </div>
-    <div style="background: var(--bg-secondary); border-radius: 8px; padding: 2rem; border: 1px solid var(--border);">`;
-  
-  if (essay.lang) {
-    html += `<div style="color: var(--text-primary); line-height: 1.8; font-size: 1rem;">${essay.lang}</div>`;
-  } else {
-    html += `<div style="text-align: center; padding: 3rem; color: var(--text-secondary);">
-      <div style="font-size: 2rem; margin-bottom: 1rem;">📝</div>
-      <p style="font-size: 1.1rem; margin-bottom: 0.5rem;">Ausführlicher Essay folgt bald</p>
-      <p style="font-size: 0.9rem; opacity: 0.7;">Dieser Essay befindet sich noch in Arbeit und wird in Kürze ergänzt.</p>
-    </div>`;
-  }
-  
-  html += `</div>
-    <div style="margin-top: 2rem; text-align: center;">
-      <button onclick="selectGrundlagenKategorie('${kategorieKey}')" style="background: ${kategorie.farbe}; color: white; border: none; padding: 0.75rem 1.5rem; border-radius: 8px; font-size: 1rem; cursor: pointer; font-weight: 600; transition: all 0.2s;" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 4px 12px rgba(0,0,0,0.3)'" onmouseout="this.style.transform=''; this.style.boxShadow=''">Weitere Essays aus ${kategorie.name}</button>
-    </div>
-  </div>`;
-  container.innerHTML = html;
+  // Scroll zum Top der Content-Area
+  const contentArea = document.querySelector('.grundlagen-content-area');
+  if (contentArea) contentArea.scrollTop = 0;
 }
 
 function backToGrundlagenUebersicht() {
@@ -23213,6 +23598,8 @@ function backToGrundlagenUebersicht() {
   selectedGrundlagenEssay = null;
   initGrundlagen();
 }
+
+
 
 // ═══════════════════════════════════════════════════════════════════════════
 
