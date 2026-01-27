@@ -22,22 +22,22 @@
   
   <style>
     /* ══════════════════════════════════════════════════════════════════════
-       THEME-SYSTEM: CSS-Variablen
+       THEME-SYSTEM: CSS-Variablen (Hell, wie der Generator)
        ══════════════════════════════════════════════════════════════════════ */
     
     :root {
-      --bg-primary: #1a1a1a;
-      --bg-secondary: #222;
-      --bg-tertiary: #2a2a2a;
-      --text-primary: #f5f5f5;
-      --text-secondary: #aaa;
-      --text-muted: #666;
+      --bg-primary: #ffffff;
+      --bg-secondary: #f8f7f5;
+      --bg-tertiary: #f0eeeb;
+      --text-primary: #2a2a2a;
+      --text-secondary: #666;
+      --text-muted: #999;
       --accent: #E53935;
       --accent-secondary: #4CAF50;
       --accent-tertiary: #2196F3;
-      --border: #333;
-      --border-light: #444;
-      --glow: rgba(229, 57, 53, 0.3);
+      --border: #e5e2de;
+      --border-light: #d5d2ce;
+      --glow: rgba(229, 57, 53, 0.15);
       --font-main: 'Helvetica Neue', Arial, sans-serif;
       --font-display: 'Helvetica Neue', Arial, sans-serif;
       --font-mono: 'Courier New', monospace;
@@ -436,7 +436,7 @@
       background: rgba(255,255,255,0.02);
     }
     .linse.gruppe-header:hover {
-      border-color: #666;
+      border-color: var(--border-light);
       background: rgba(255,255,255,0.05);
     }
     .gruppe-pfeil {
@@ -788,7 +788,7 @@
       gap: 1rem;
       padding: 0.5rem 2rem;
       background: rgba(255, 152, 0, 0.05);
-      border-bottom: 1px solid #333;
+      border-bottom: 1px solid var(--border);
     }
     
     .filter-bar.visible {
@@ -1052,8 +1052,8 @@
     
     #detail-panel {
       width: 420px;
-      background: #222;
-      border-left: 1px solid #333;
+      background: var(--bg-secondary);
+      border-left: 1px solid var(--border);
       overflow-y: auto;
       padding: 1.5rem;
       display: none;
@@ -1073,7 +1073,7 @@
     
     .achse-tag {
       display: inline-block;
-      background: #333;
+      background: var(--border);
       padding: 0.2rem 0.5rem;
       font-size: 0.7rem;
       border-radius: 3px;
@@ -1097,7 +1097,7 @@
     }
     
     .zitat {
-      background: #2a2a2a;
+      background: var(--bg-tertiary);
       padding: 1rem;
       border-left: 3px solid #E53935;
       margin-bottom: 0.75rem;
@@ -1120,7 +1120,7 @@
     }
     
     .bewohner span {
-      background: #333;
+      background: var(--border);
       padding: 0.3rem 0.6rem;
       font-size: 0.8rem;
       border-radius: 3px;
@@ -1138,7 +1138,7 @@
     
     .bewohner .person-link {
       display: inline-block;
-      background: #333;
+      background: var(--border);
       padding: 0.3rem 0.6rem;
       font-size: 0.8rem;
       border-radius: 3px;
@@ -1149,7 +1149,7 @@
     }
     
     .literatur-item {
-      background: #2a2a2a;
+      background: var(--bg-tertiary);
       padding: 0.75rem;
       margin-bottom: 0.5rem;
       border-radius: 4px;
@@ -1192,7 +1192,7 @@
     }
     
     .verbindung {
-      background: #333;
+      background: var(--border);
       padding: 0.3rem 0.6rem;
       font-size: 0.8rem;
       border-radius: 3px;
@@ -1228,7 +1228,7 @@
     }
     
     .atmosphaere {
-      background: #1a1a1a;
+      background: var(--bg-primary);
       padding: 1rem;
       border-radius: 4px;
       font-size: 0.85rem;
@@ -1248,8 +1248,8 @@
     }
     
     .debatte-card {
-      background: #222;
-      border: 1px solid #333;
+      background: var(--bg-secondary);
+      border: 1px solid var(--border);
       border-radius: 8px;
       padding: 1.5rem;
       margin-bottom: 1.5rem;
@@ -1943,7 +1943,7 @@
     }
     
     .debatte-seite {
-      background: #2a2a2a;
+      background: var(--bg-tertiary);
       padding: 1rem;
       border-radius: 4px;
     }
@@ -1984,7 +1984,7 @@
     .debatte-historisch {
       margin-top: 1rem;
       padding-top: 1rem;
-      border-top: 1px solid #333;
+      border-top: 1px solid var(--border);
       font-size: 0.85rem;
       color: #888;
     }
@@ -1992,7 +1992,7 @@
     .debatte-texte {
       margin-top: 1rem;
       padding-top: 1rem;
-      border-top: 1px solid #333;
+      border-top: 1px solid var(--border);
     }
     
     .debatte-texte a {
@@ -2108,7 +2108,7 @@
     .legende-section {
       margin-bottom: 0.6rem;
       padding-bottom: 0.5rem;
-      border-bottom: 1px solid #333;
+      border-bottom: 1px solid var(--border);
     }
     .legende-section:last-of-type {
       border-bottom: none;
@@ -2161,7 +2161,7 @@
       display: none;
       padding: 1.5rem;
       overflow-y: auto;
-      background: linear-gradient(135deg, var(--bg-primary) 0%, #1a1a1a 100%);
+      background: linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
     }
     
     #liste-container.active {
@@ -2443,7 +2443,7 @@
       display: none;
       padding: 1.5rem;
       overflow: auto;
-      background: linear-gradient(135deg, var(--bg-primary) 0%, #0d1117 100%);
+      background: linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
     }
     #karte-container.active { display: block; }
     
@@ -2717,7 +2717,7 @@
       display: none;
       padding: 1.5rem;
       overflow-y: auto;
-      background: linear-gradient(180deg, var(--bg-primary) 0%, #12121a 100%);
+      background: linear-gradient(180deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
     }
     #zeitleiste-container.active { display: block; }
     
@@ -2951,7 +2951,7 @@
       display: none;
       padding: 1rem;
       overflow: auto;
-      background: linear-gradient(180deg, #1a1a2e 0%, #16213e 50%, #1a1a2e 100%);
+      background: linear-gradient(180deg, var(--bg-secondary) 0%, var(--bg-tertiary) 50%, var(--bg-secondary) 100%);
     }
     #stammbaum-container.active { display: block; }
     
@@ -3083,7 +3083,7 @@
       color: #E53935;
       margin-bottom: 1rem;
       padding-bottom: 0.5rem;
-      border-bottom: 1px solid #333;
+      border-bottom: 1px solid var(--border);
     }
     
     .buch-item {
@@ -3091,13 +3091,13 @@
       justify-content: space-between;
       align-items: flex-start;
       padding: 0.75rem;
-      background: #222;
+      background: var(--bg-secondary);
       margin-bottom: 0.5rem;
       border-radius: 4px;
     }
     
     .buch-item:hover {
-      background: #2a2a2a;
+      background: var(--bg-tertiary);
     }
     
     .buch-info .titel {
@@ -3147,8 +3147,8 @@
     }
     
     .praxis-card {
-      background: #222;
-      border: 1px solid #333;
+      background: var(--bg-secondary);
+      border: 1px solid var(--border);
       border-radius: 4px;
       padding: 1rem;
     }
@@ -3208,7 +3208,7 @@
     }
     
     .fragen-intro {
-      background: linear-gradient(135deg, #2a2a2a 0%, #1a1a1a 100%);
+      background: linear-gradient(135deg, var(--bg-secondary) 0%, var(--bg-primary) 100%);
       border: 1px solid #444;
       border-radius: 12px;
       padding: 1.25rem;
@@ -3263,7 +3263,7 @@
       gap: 0.5rem;
       margin-bottom: 1rem;
       padding-bottom: 0.5rem;
-      border-bottom: 1px solid #333;
+      border-bottom: 1px solid var(--border);
     }
     
     .fragen-kategorie-header h3 {
@@ -3273,7 +3273,7 @@
     }
     
     .fragen-kategorie-count {
-      background: #333;
+      background: var(--border);
       color: #888;
       padding: 0.15rem 0.4rem;
       border-radius: 10px;
@@ -3287,7 +3287,7 @@
     }
     
     .frage-item {
-      background: #222;
+      background: var(--bg-secondary);
       padding: 1rem;
       border-radius: 8px;
       border-left: 3px solid #FF9800;
@@ -3299,7 +3299,7 @@
     }
     
     .frage-item:hover {
-      background: #2a2a2a;
+      background: var(--bg-tertiary);
       transform: translateY(-2px);
       box-shadow: 0 4px 12px rgba(255, 152, 0, 0.15);
     }
@@ -3325,7 +3325,7 @@
       align-items: center;
       margin-top: 0.5rem;
       padding-top: 0.5rem;
-      border-top: 1px solid #333;
+      border-top: 1px solid var(--border);
     }
     
     .frage-tag {
@@ -3354,7 +3354,7 @@
     }
     
     .fragen-zukunft {
-      background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+      background: linear-gradient(135deg, var(--bg-secondary) 0%, var(--bg-tertiary) 100%);
       border: 2px dashed #FF9800;
       border-radius: 12px;
       padding: 1.5rem;
@@ -3396,7 +3396,7 @@
     
     .zufall-card {
       max-width: 500px;
-      background: #222;
+      background: var(--bg-secondary);
       border: 2px solid #E53935;
       border-radius: 8px;
       padding: 2rem;
@@ -3447,7 +3447,7 @@
     }
     
     .zufall-card .zitat {
-      background: #1a1a1a;
+      background: var(--bg-primary);
       padding: 1rem;
       border-left: 3px solid #E53935;
       font-style: italic;
@@ -3471,7 +3471,7 @@
     }
     
     .zufall-btn.secondary {
-      background: #333;
+      background: var(--border);
     }
     
     .zufall-btn.secondary:hover {
@@ -3508,7 +3508,7 @@
     }
     
     .kosmos-slider-group {
-      background: #222;
+      background: var(--bg-secondary);
       padding: 1rem;
       margin-bottom: 0.75rem;
       border-radius: 4px;
@@ -3542,7 +3542,7 @@
     .kosmos-result {
       margin-top: 2rem;
       padding: 1.5rem;
-      background: #222;
+      background: var(--bg-secondary);
       border-radius: 8px;
       border: 1px solid #E53935;
     }
@@ -3559,7 +3559,7 @@
     }
     
     .kosmos-nachbar {
-      background: #333;
+      background: var(--border);
       padding: 0.4rem 0.8rem;
       border-radius: 4px;
       font-size: 0.85rem;
@@ -3582,7 +3582,7 @@
       bottom: 0;
       left: 0;
       right: 0;
-      background: #1a1a1a;
+      background: var(--bg-primary);
       border-top: 2px solid #E53935;
       padding: 1.5rem 2rem;
       display: none;
@@ -3648,7 +3648,7 @@
     }
     
     .reaktor-verbindung {
-      background: #222;
+      background: var(--bg-secondary);
       padding: 1rem;
       border-radius: 4px;
     }
@@ -3683,7 +3683,7 @@
     }
     
     .reaktor-nachbar {
-      background: #333;
+      background: var(--border);
       padding: 0.3rem 0.6rem;
       font-size: 0.75rem;
       border-radius: 3px;
@@ -3695,7 +3695,7 @@
     }
     
     .reaktor-synthese {
-      background: #222;
+      background: var(--bg-secondary);
       padding: 1rem;
       border-radius: 4px;
       font-size: 0.9rem;
@@ -3704,7 +3704,7 @@
     }
     
     .reaktor-frage {
-      background: #2a2a2a;
+      background: var(--bg-tertiary);
       padding: 0.75rem;
       border-left: 3px solid #FF9800;
       font-style: italic;
@@ -3796,14 +3796,14 @@
       cursor: pointer;
       border-radius: 3px;
     }
-    .info-toggle:hover { background: #333; color: #fff; }
+    .info-toggle:hover { background: var(--border); color: #fff; }
     
     .konzept-box {
       position: fixed;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%) scale(0.9);
-      background: #222;
+      background: var(--bg-secondary);
       border: 1px solid #444;
       border-radius: 8px;
       padding: 2rem;
@@ -3863,8 +3863,8 @@
     }
     .haus-tab {
       padding: 0.35rem 0.7rem;
-      background: #252525;
-      border: 1px solid #333;
+      background: var(--bg-tertiary);
+      border: 1px solid var(--border);
       border-radius: 16px;
       color: #888;
       font-size: 0.7rem;
@@ -3913,8 +3913,8 @@
     
     /* Etagen */
     .haus-etage {
-      background: #1a1a1a;
-      border: 1px solid #2a2a2a;
+      background: var(--bg-primary);
+      border: 1px solid var(--border);
       border-left: 4px solid #444;
       border-radius: 8px;
       padding: 0.75rem 1rem;
@@ -3943,7 +3943,7 @@
     /* Einzelnes Zimmer */
     .haus-zimmer {
       /* Warmer Gradient statt flaches Grau */
-      background: linear-gradient(135deg, #2a2520 0%, #252222 100%);
+      background: linear-gradient(135deg, var(--bg-secondary) 0%, var(--bg-tertiary) 100%);
       border: 1px solid #3a3530;
       border-radius: 8px;
       padding: 0.5rem 0.6rem;
@@ -4056,8 +4056,8 @@
     }
     .spektrum-pos {
       flex: 1;
-      background: #2a2a2a;
-      border: 1px solid #333;
+      background: var(--bg-tertiary);
+      border: 1px solid var(--border);
       border-radius: 3px;
       padding: 0.25rem 0;
       text-align: center;
@@ -4065,7 +4065,7 @@
       transition: all 0.1s;
       position: relative;
     }
-    .spektrum-pos:hover { border-color: #666; background: #333; }
+    .spektrum-pos:hover { border-color: var(--border-light); background: var(--border); }
     
     /* Im Erkunden-Modus: Positionen nicht klickbar */
     .haus-banner.funktional ~ .haus-gebaeude .spektrum-pos {
@@ -4073,8 +4073,8 @@
       pointer-events: none;
     }
     .haus-banner.funktional ~ .haus-gebaeude .spektrum-pos:hover {
-      border-color: #333;
-      background: #2a2a2a;
+      border-color: var(--border);
+      background: var(--bg-tertiary);
     }
     .haus-banner.funktional ~ .haus-gebaeude .haus-zimmer {
       cursor: pointer;
@@ -4083,8 +4083,8 @@
     
     /* Meine Position: NUR roter Punkt, keine ausgefüllte Fläche */
     .spektrum-pos.meine { 
-      background: #2a2a2a; /* Gleich wie andere */
-      border-color: #333;
+      background: var(--bg-tertiary); /* Gleich wie andere */
+      border-color: var(--border);
     }
     .spektrum-pos.meine::after {
       content: '';
@@ -4115,7 +4115,7 @@
     .zimmer-zusatz {
       margin-top: 0.3rem;
       padding-top: 0.3rem;
-      border-top: 1px solid #333;
+      border-top: 1px solid var(--border);
       font-size: 0.65rem;
       color: #888;
     }
@@ -4134,8 +4134,8 @@
       overflow-y: auto;
     }
     .zimmer-detail-popup {
-      background: #1a1a1a;
-      border: 1px solid #333;
+      background: var(--bg-primary);
+      border: 1px solid var(--border);
       border-radius: 12px;
       padding: 1.5rem;
       max-width: 500px;
@@ -4173,7 +4173,7 @@
       gap: 0.5rem;
       margin-bottom: 1rem;
       padding: 0.75rem;
-      background: #222;
+      background: var(--bg-secondary);
       border-radius: 8px;
     }
     .spektrum-label-links,
@@ -4190,8 +4190,8 @@
     }
     .spektrum-pos-detail {
       flex: 1;
-      background: #2a2a2a;
-      border: 1px solid #333;
+      background: var(--bg-tertiary);
+      border: 1px solid var(--border);
       border-radius: 4px;
       padding: 0.4rem 0.2rem;
       text-align: center;
@@ -4201,7 +4201,7 @@
     }
     .spektrum-pos-detail:hover {
       border-color: #555;
-      background: #333;
+      background: var(--border);
     }
     .spektrum-pos-detail.meine {
       border-color: #C62828;
@@ -4254,7 +4254,7 @@
       margin-bottom: 0.5rem;
     }
     .handlungen-alle-btn:hover {
-      border-color: #666;
+      border-color: var(--border-light);
       color: #aaa;
     }
     .handlungen-leer {
@@ -4302,7 +4302,7 @@
     
     /* Position Details */
     .position-details {
-      background: #222;
+      background: var(--bg-secondary);
       border-radius: 8px;
       padding: 1rem;
       margin-bottom: 1rem;
@@ -4365,7 +4365,7 @@
     }
     
     .zimmer-einbringen {
-      background: #222;
+      background: var(--bg-secondary);
       border-radius: 8px;
       padding: 0.75rem;
       margin-bottom: 0.75rem;
@@ -4461,7 +4461,7 @@
     }
     
     .aufgaben-kategorie, .handlungen-kategorie {
-      background: #222;
+      background: var(--bg-secondary);
       border-radius: 8px;
       margin-bottom: 0.5rem;
       overflow: hidden;
@@ -4475,7 +4475,7 @@
       transition: background 0.2s;
     }
     .aufgaben-header:hover, .handlungen-header:hover {
-      background: #2a2a2a;
+      background: var(--bg-tertiary);
     }
     .aufgaben-icon, .handlungen-icon {
       font-size: 1rem;
@@ -4514,7 +4514,7 @@
       display: flex;
       align-items: center;
       padding: 0.6rem 0.75rem;
-      border-top: 1px solid #2a2a2a;
+      border-top: 1px solid var(--border);
       cursor: pointer;
       transition: background 0.2s;
       color: #bbb;
@@ -4537,7 +4537,7 @@
       color: #666;
       font-size: 0.75rem;
       font-style: italic;
-      border-top: 1px solid #2a2a2a;
+      border-top: 1px solid var(--border);
     }
     
     /* Ressourcen-Links */
@@ -4546,7 +4546,7 @@
       flex-wrap: wrap;
       gap: 0.4rem;
       padding: 0.5rem 0.75rem;
-      border-top: 1px solid #333;
+      border-top: 1px solid var(--border);
       margin-top: 0.3rem;
     }
     .ressource-link {
@@ -4610,8 +4610,8 @@
       overflow-y: auto;
     }
     .aufgabe-detail-popup {
-      background: #1a1a1a;
-      border: 1px solid #333;
+      background: var(--bg-primary);
+      border: 1px solid var(--border);
       border-radius: 12px;
       padding: 1.5rem;
       max-width: 550px;
@@ -4637,7 +4637,7 @@
     }
     .aufgabe-kategorie-badge {
       display: inline-block;
-      background: #333;
+      background: var(--border);
       color: #aaa;
       padding: 0.25rem 0.6rem;
       border-radius: 12px;
@@ -4672,7 +4672,7 @@
     .aufgabe-texte {
       margin: 1rem 0;
       padding: 0.75rem;
-      background: #222;
+      background: var(--bg-secondary);
       border-radius: 6px;
     }
     .aufgabe-texte .texte-label {
@@ -4715,7 +4715,7 @@
     }
     
     .aufgabe-zurueck-btn {
-      background: #333;
+      background: var(--border);
       border: none;
       color: #aaa;
       padding: 0.6rem 1rem;
@@ -4746,7 +4746,7 @@
       justify-content: space-between;
       gap: 1rem;
       padding: 0.75rem 1rem;
-      background: #1a1a1a;
+      background: var(--bg-primary);
       border-radius: 8px;
       margin-bottom: 1rem;
     }
@@ -4778,8 +4778,8 @@
     }
     
     .wg-karte {
-      background: #1a1a1a;
-      border: 1px solid #333;
+      background: var(--bg-primary);
+      border: 1px solid var(--border);
       border-radius: 12px;
       padding: 1rem;
       transition: all 0.2s;
@@ -4802,7 +4802,7 @@
       gap: 0.6rem;
       margin-bottom: 0.75rem;
       padding-bottom: 0.6rem;
-      border-bottom: 1px solid #333;
+      border-bottom: 1px solid var(--border);
     }
     .wg-icon {
       font-size: 1.5rem;
@@ -4833,8 +4833,8 @@
       align-items: center;
       gap: 0.6rem;
       padding: 0.5rem 0.6rem;
-      background: #222;
-      border: 1px solid #333;
+      background: var(--bg-secondary);
+      border: 1px solid var(--border);
       border-left: 3px solid var(--accent, #666);
       border-radius: 6px;
       transition: all 0.15s;
@@ -4885,7 +4885,7 @@
     .wg-footer {
       margin-top: 0.75rem;
       padding-top: 0.6rem;
-      border-top: 1px solid #333;
+      border-top: 1px solid var(--border);
     }
     .wg-potential {
       color: #666;
@@ -4962,8 +4962,8 @@
     }
     
     .talkshow-gaeste {
-      background: #1a1a1a;
-      border: 1px solid #333;
+      background: var(--bg-primary);
+      border: 1px solid var(--border);
       border-radius: 12px;
       padding: 1rem;
       margin-bottom: 1rem;
@@ -4979,8 +4979,8 @@
       gap: 0.75rem;
     }
     .gast-karte {
-      background: #222;
-      border: 1px solid #333;
+      background: var(--bg-secondary);
+      border: 1px solid var(--border);
       border-left: 3px solid var(--accent, #666);
       border-radius: 8px;
       padding: 0.75rem;
@@ -5022,7 +5022,7 @@
     .talkshow-user.kein-archetyp {
       justify-content: flex-start;
       background: rgba(255,255,255,0.03);
-      border-color: #333;
+      border-color: var(--border);
     }
     .talkshow-user.kein-archetyp span {
       font-size: 1.5rem;
@@ -5037,7 +5037,7 @@
       align-items: center;
       gap: 0.6rem;
       padding: 0.4rem 0.75rem;
-      background: #222;
+      background: var(--bg-secondary);
       border: 1px solid var(--accent, #4CAF50);
       border-radius: 20px;
     }
@@ -5132,7 +5132,7 @@
       margin-bottom: 1.5rem;
     }
     .modus-btn {
-      background: #2a2a2a;
+      background: var(--bg-tertiary);
       border: 1px solid #444;
       color: #aaa;
       padding: 0.6rem 1.2rem;
@@ -5142,7 +5142,7 @@
       transition: all 0.2s;
     }
     .modus-btn:hover {
-      background: #333;
+      background: var(--border);
       color: #fff;
     }
     .modus-btn.active {
@@ -5201,8 +5201,8 @@
       gap: 1rem;
     }
     .spannung-karte {
-      background: #222;
-      border: 1px solid #333;
+      background: var(--bg-secondary);
+      border: 1px solid var(--border);
       border-radius: 12px;
       padding: 1rem;
     }
@@ -5300,7 +5300,7 @@
       gap: 0.5rem;
       margin-bottom: 0.75rem;
       padding-bottom: 0.5rem;
-      border-bottom: 1px solid #333;
+      border-bottom: 1px solid var(--border);
     }
     .debatte-runde-nummer {
       background: #9C27B0;
@@ -5383,8 +5383,8 @@
       overflow-y: auto;
     }
     .talkshow-popup {
-      background: #1a1a1a;
-      border: 1px solid #333;
+      background: var(--bg-primary);
+      border: 1px solid var(--border);
       border-radius: 16px;
       max-width: 600px;
       width: 100%;
@@ -5411,7 +5411,7 @@
       gap: 0.75rem;
       padding: 1.25rem;
       background: linear-gradient(135deg, rgba(156,39,176,0.15), transparent);
-      border-bottom: 1px solid #333;
+      border-bottom: 1px solid var(--border);
     }
     .talkshow-popup-logo {
       font-size: 2rem;
@@ -5432,7 +5432,7 @@
       justify-content: center;
       gap: 0.5rem;
       padding: 0.75rem 1rem;
-      border-bottom: 1px solid #333;
+      border-bottom: 1px solid var(--border);
       flex-wrap: wrap;
     }
     .popup-gast {
@@ -5440,7 +5440,7 @@
       align-items: center;
       gap: 0.35rem;
       padding: 0.35rem 0.6rem;
-      background: #222;
+      background: var(--bg-secondary);
       border: 1px solid var(--accent, #666);
       border-radius: 20px;
       font-size: 0.75rem;
@@ -5452,7 +5452,7 @@
     
     .talkshow-thema {
       padding: 1rem;
-      border-bottom: 1px solid #333;
+      border-bottom: 1px solid var(--border);
     }
     .thema-header {
       display: flex;
@@ -5493,7 +5493,7 @@
       align-items: flex-start;
       gap: 0.5rem;
       padding: 0.5rem 0.6rem;
-      background: #222;
+      background: var(--bg-secondary);
       border-left: 3px solid var(--accent, #666);
       border-radius: 6px;
     }
@@ -5524,7 +5524,7 @@
     .talkshow-abschluss {
       padding: 1rem;
       background: rgba(76,175,80,0.05);
-      border-bottom: 1px solid #333;
+      border-bottom: 1px solid var(--border);
     }
     .abschluss-header {
       display: flex;
@@ -5574,7 +5574,7 @@
     .talkshow-einschalten {
       padding: 1rem;
       background: rgba(76,175,80,0.08);
-      border-bottom: 1px solid #333;
+      border-bottom: 1px solid var(--border);
     }
     .einschalten-header {
       display: flex;
@@ -5624,7 +5624,7 @@
        DEIN PLATZ IM LINKEN WESEN
        ═══════════════════════════════════════════════════════════════ */
     .dein-platz {
-      background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+      background: linear-gradient(135deg, var(--bg-secondary) 0%, var(--bg-tertiary) 100%);
       border: 2px solid #E53935;
       border-radius: 16px;
       padding: 1.5rem;
@@ -5663,7 +5663,7 @@
     
     .empfohlenes-zimmer {
       background: rgba(255,255,255,0.03);
-      border: 1px solid #333;
+      border: 1px solid var(--border);
       border-radius: 12px;
       padding: 1rem;
       cursor: pointer;
@@ -5687,7 +5687,7 @@
       font-size: 1.5rem;
     }
     .empf-zimmer-achse {
-      background: #333;
+      background: var(--border);
       padding: 0.15rem 0.4rem;
       border-radius: 4px;
       font-size: 0.7rem;
@@ -5755,7 +5755,7 @@
     .empf-zimmer-action {
       margin-top: 0.75rem;
       padding-top: 0.5rem;
-      border-top: 1px solid #333;
+      border-top: 1px solid var(--border);
       text-align: center;
     }
     .empf-zimmer-action span {
@@ -5865,7 +5865,7 @@
     }
     
     .empf-popup-aufgaben {
-      background: #222;
+      background: var(--bg-secondary);
       border-radius: 10px;
       padding: 1rem;
       margin-bottom: 1rem;
@@ -5984,7 +5984,7 @@
     }
     
     .profil-header-card {
-      background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+      background: linear-gradient(135deg, var(--bg-secondary) 0%, var(--bg-tertiary) 100%);
       border: 2px solid #E53935;
       border-radius: 16px;
       padding: 1.25rem;
@@ -6222,10 +6222,10 @@
     
     /* Keller - Schwarz/Dunkelgrau */
     .haus-etage:nth-child(5) {
-      background: linear-gradient(180deg, #1a1a1a 0%, #0a0a0a 100%);
-      border-left: 8px solid #2a2a2a;
-      border-right: 8px solid #2a2a2a;
-      border-bottom: 12px solid #2a2a2a;
+      background: linear-gradient(180deg, var(--bg-tertiary) 0%, var(--bg-secondary) 100%);
+      border-left: 8px solid var(--border);
+      border-right: 8px solid var(--border);
+      border-bottom: 12px solid var(--border);
       padding: 1rem 1.5rem;
       margin: 0 -2rem -1rem -2rem;
       border-radius: 0 0 8px 8px;
@@ -6453,7 +6453,7 @@
       flex: 1;
       height: 24px;
       background: rgba(0,0,0,0.4);
-      border: 1px solid #2a2a2a;
+      border: 1px solid var(--border);
       border-radius: 2px;
       display: flex;
       align-items: center;
@@ -6487,7 +6487,7 @@
       justify-content: center;
       padding: 0.5rem 0.4rem;
       background: rgba(0,0,0,0.3);
-      border: 1px solid #333;
+      border: 1px solid var(--border);
       border-radius: 4px;
       cursor: pointer;
       transition: all 0.2s;
@@ -6620,8 +6620,8 @@
     
     .modal-box {
       position: relative;
-      background: #1a1a1a;
-      border: 1px solid #333;
+      background: var(--bg-primary);
+      border: 1px solid var(--border);
       border-radius: 12px;
       max-width: 800px;
       width: 100%;
@@ -6636,7 +6636,7 @@
       align-items: center;
       justify-content: space-between;
       padding: 1.5rem 2rem;
-      border-bottom: 1px solid #333;
+      border-bottom: 1px solid var(--border);
     }
     
     .modal-title {
@@ -6765,7 +6765,7 @@
       background: rgba(0,0,0,0.4);
       padding: 0.3rem;
       border-radius: 8px;
-      border: 1px solid #333;
+      border: 1px solid var(--border);
     }
     
     .haus-ansicht-toggle .toggle-btn {
@@ -6812,7 +6812,7 @@
     
     .sp-editor {
       background: rgba(0,0,0,0.4);
-      border: 1px solid #333;
+      border: 1px solid var(--border);
       border-radius: 10px;
       padding: 1rem;
       max-width: 850px;
@@ -6824,13 +6824,13 @@
       justify-content: flex-end;
       margin-bottom: 0.75rem;
       padding-bottom: 0.5rem;
-      border-bottom: 1px solid #333;
+      border-bottom: 1px solid var(--border);
     }
     
     .sp-editor-count {
       font-size: 0.75rem;
       color: #888;
-      background: #222;
+      background: var(--bg-secondary);
       padding: 0.2rem 0.6rem;
       border-radius: 10px;
     }
@@ -6887,7 +6887,7 @@
     .sp-row-id {
       font-size: 0.6rem;
       color: #666;
-      background: #222;
+      background: var(--bg-secondary);
       padding: 0.1rem 0.2rem;
       border-radius: 2px;
       min-width: 1.2rem;
@@ -6924,7 +6924,7 @@
     .sp-num {
       flex: 1;
       padding: 0.3rem 0;
-      background: #2a2a2a;
+      background: var(--bg-tertiary);
       border: 1px solid #3a3a3a;
       color: #777;
       font-size: 0.7rem;
@@ -6951,13 +6951,13 @@
       gap: 0.5rem;
       margin-top: 0.75rem;
       padding-top: 0.75rem;
-      border-top: 1px solid #333;
+      border-top: 1px solid var(--border);
       flex-wrap: wrap;
     }
     
     .sp-btn {
       padding: 0.45rem 0.9rem;
-      background: #2a2a2a;
+      background: var(--bg-tertiary);
       border: 1px solid #444;
       color: #ccc;
       font-size: 0.75rem;
@@ -6997,7 +6997,7 @@
     
     .profil-achse-card {
       background: rgba(0,0,0,0.3);
-      border: 1px solid #333;
+      border: 1px solid var(--border);
       border-radius: 8px;
       padding: 0.75rem;
       transition: all 0.2s;
@@ -7019,7 +7019,7 @@
     .profil-achse-id {
       font-size: 0.65rem;
       color: #666;
-      background: #222;
+      background: var(--bg-secondary);
       padding: 0.15rem 0.35rem;
       border-radius: 3px;
     }
@@ -7060,7 +7060,7 @@
     .profil-pos {
       flex: 1;
       padding: 0.4rem 0.2rem;
-      background: #2a2a2a;
+      background: var(--bg-tertiary);
       border: 1px solid #444;
       color: #888;
       font-size: 0.75rem;
@@ -7116,7 +7116,7 @@
     }
     
     .profil-cancel-btn {
-      background: #333;
+      background: var(--border);
       color: #aaa;
     }
     .profil-cancel-btn:hover {
@@ -7203,7 +7203,7 @@
     }
     
     .profil-start-btn.secondary {
-      background: #333;
+      background: var(--border);
       color: #ccc;
       border: 1px solid #444;
     }
@@ -7213,8 +7213,8 @@
     
     /* Mein Sozialismus Section */
     .ms-section {
-      background: #1a1a1a;
-      border: 1px solid #333;
+      background: var(--bg-primary);
+      border: 1px solid var(--border);
       border-radius: 12px;
       padding: 1rem;
     }
@@ -7227,7 +7227,7 @@
       text-align: center;
       margin-bottom: 0.75rem;
       padding-bottom: 0.5rem;
-      border-bottom: 1px solid #333;
+      border-bottom: 1px solid var(--border);
     }
     
     .ms-section.kompakt .ms-section-header {
@@ -7295,8 +7295,8 @@
     }
     
     .ms-kat-kompakt {
-      background: #222;
-      border: 1px solid #333;
+      background: var(--bg-secondary);
+      border: 1px solid var(--border);
       border-radius: 6px;
       overflow: hidden;
     }
@@ -7306,8 +7306,8 @@
       align-items: center;
       gap: 0.3rem;
       padding: 0.35rem 0.5rem;
-      background: #2a2a2a;
-      border-bottom: 1px solid #333;
+      background: var(--bg-tertiary);
+      border-bottom: 1px solid var(--border);
     }
     .ms-kat-icon {
       font-size: 0.85rem;
@@ -7320,7 +7320,7 @@
     .ms-kat-count {
       font-size: 0.65rem;
       color: #666;
-      background: #333;
+      background: var(--border);
       padding: 0.1rem 0.3rem;
       border-radius: 3px;
     }
@@ -7345,7 +7345,7 @@
       align-items: center;
       gap: 0.3rem;
       padding: 0.25rem 0.4rem;
-      background: #1a1a1a;
+      background: var(--bg-primary);
       border-radius: 4px;
       margin-bottom: 0.25rem;
     }
@@ -7394,7 +7394,7 @@
     }
     
     .ms-btn-sm {
-      background: #333;
+      background: var(--border);
       border: none;
       color: #aaa;
       padding: 0.3rem 0.5rem;
@@ -7413,8 +7413,8 @@
     
     /* Kompakte Vorschau */
     .ms-vorschau-kompakt {
-      background: #222;
-      border: 1px solid #333;
+      background: var(--bg-secondary);
+      border: 1px solid var(--border);
       border-radius: 6px;
       padding: 0.5rem;
       margin-bottom: 0.5rem;
@@ -7444,7 +7444,7 @@
     .ms-freitext-editor textarea {
       width: 100%;
       min-height: 80px;
-      background: #1a1a1a;
+      background: var(--bg-primary);
       border: 1px solid #444;
       border-radius: 4px;
       color: #ccc;
@@ -7462,7 +7462,7 @@
     }
     
     .ms-export-btn {
-      background: #2a2a2a;
+      background: var(--bg-tertiary);
       border: 1px solid #444;
       color: #aaa;
       padding: 0.35rem 0.6rem;
@@ -7558,8 +7558,8 @@
     }
     
     .ms-kat-gross {
-      background: #1a1a1a;
-      border: 1px solid #333;
+      background: var(--bg-primary);
+      border: 1px solid var(--border);
       border-radius: 10px;
       overflow: hidden;
     }
@@ -7569,8 +7569,8 @@
       align-items: center;
       gap: 0.75rem;
       padding: 0.75rem 1rem;
-      background: #222;
-      border-bottom: 1px solid #333;
+      background: var(--bg-secondary);
+      border-bottom: 1px solid var(--border);
     }
     .ms-kat-icon-gross {
       font-size: 1.25rem;
@@ -7588,7 +7588,7 @@
       font-size: 0.75rem;
     }
     .ms-kat-count-gross {
-      background: #333;
+      background: var(--border);
       color: #888;
       padding: 0.2rem 0.5rem;
       border-radius: 4px;
@@ -7612,7 +7612,7 @@
       align-items: center;
       gap: 0.5rem;
       padding: 0.5rem 0.75rem;
-      background: #252525;
+      background: var(--bg-tertiary);
       border-radius: 6px;
       margin-bottom: 0.4rem;
     }
@@ -7647,7 +7647,7 @@
       opacity: 1;
     }
     .ms-item-btns-gross button {
-      background: #333;
+      background: var(--border);
       border: none;
       color: #888;
       padding: 0.25rem 0.4rem;
@@ -7678,7 +7678,7 @@
       background: #C62828;
     }
     .ms-add-btn-gross.secondary {
-      background: #333;
+      background: var(--border);
       color: #aaa;
     }
     .ms-add-btn-gross.secondary:hover {
@@ -7693,8 +7693,8 @@
     }
     
     .ms-vorschau-gross {
-      background: #1a1a1a;
-      border: 1px solid #333;
+      background: var(--bg-primary);
+      border: 1px solid var(--border);
       border-radius: 10px;
       padding: 1rem;
     }
@@ -7705,7 +7705,7 @@
       justify-content: space-between;
       margin-bottom: 0.75rem;
       padding-bottom: 0.5rem;
-      border-bottom: 1px solid #333;
+      border-bottom: 1px solid var(--border);
     }
     .ms-vorschau-header-gross h4 {
       color: #fff;
@@ -7713,7 +7713,7 @@
       margin: 0;
     }
     .ms-edit-btn {
-      background: #333;
+      background: var(--border);
       border: none;
       color: #aaa;
       padding: 0.3rem 0.6rem;
@@ -7743,7 +7743,7 @@
       border-radius: 6px;
       cursor: pointer;
       font-size: 0.85rem;
-      background: #333;
+      background: var(--border);
       color: #aaa;
     }
     .ms-btn-gross.primary {
@@ -7752,8 +7752,8 @@
     }
     
     .ms-export-gross {
-      background: #1a1a1a;
-      border: 1px solid #333;
+      background: var(--bg-primary);
+      border: 1px solid var(--border);
       border-radius: 10px;
       padding: 1rem;
     }
@@ -7769,7 +7769,7 @@
     .ms-export-btn-gross {
       flex: 1;
       padding: 0.5rem;
-      background: #252525;
+      background: var(--bg-tertiary);
       border: 1px solid #444;
       color: #aaa;
       border-radius: 6px;
@@ -7777,7 +7777,7 @@
       font-size: 0.8rem;
     }
     .ms-export-btn-gross:hover {
-      background: #333;
+      background: var(--border);
       color: #fff;
     }
     
@@ -7798,7 +7798,7 @@
       color: #E53935;
     }
     .ms-export-btn:hover {
-      background: #333;
+      background: var(--border);
       border-color: #555;
       color: #fff;
     }
@@ -7818,8 +7818,8 @@
     }
     
     .ms-share-popup {
-      background: #1a1a1a;
-      border: 1px solid #333;
+      background: var(--bg-primary);
+      border: 1px solid var(--border);
       border-radius: 12px;
       padding: 1.25rem;
       max-width: 400px;
@@ -7857,8 +7857,8 @@
       align-items: center;
       gap: 0.25rem;
       padding: 0.6rem;
-      background: #222;
-      border: 1px solid #333;
+      background: var(--bg-secondary);
+      border: 1px solid var(--border);
       border-radius: 6px;
       color: #aaa;
       text-decoration: none;
@@ -7866,7 +7866,7 @@
       transition: all 0.2s;
     }
     .ms-share-btn:hover {
-      background: #2a2a2a;
+      background: var(--bg-tertiary);
       border-color: #444;
       color: #fff;
     }
@@ -7885,8 +7885,8 @@
     }
     .ms-share-copy textarea {
       flex: 1;
-      background: #222;
-      border: 1px solid #333;
+      background: var(--bg-secondary);
+      border: 1px solid var(--border);
       border-radius: 4px;
       color: #aaa;
       padding: 0.5rem;
@@ -7895,7 +7895,7 @@
       resize: none;
     }
     .ms-share-copy button {
-      background: #333;
+      background: var(--border);
       border: none;
       color: #aaa;
       padding: 0.5rem;
@@ -7925,7 +7925,7 @@
       text-align: center;
       margin-bottom: 1.5rem;
       padding-bottom: 1rem;
-      border-bottom: 1px solid #333;
+      border-bottom: 1px solid var(--border);
     }
     .ms-intro h3 {
       color: #E53935;
@@ -7953,8 +7953,8 @@
     }
     
     .ms-kategorie {
-      background: #1a1a1a;
-      border: 1px solid #333;
+      background: var(--bg-primary);
+      border: 1px solid var(--border);
       border-radius: 12px;
       overflow: hidden;
     }
@@ -7964,8 +7964,8 @@
       align-items: center;
       gap: 0.75rem;
       padding: 0.75rem 1rem;
-      background: #222;
-      border-bottom: 1px solid #333;
+      background: var(--bg-secondary);
+      border-bottom: 1px solid var(--border);
     }
     .ms-kategorie-icon {
       font-size: 1.25rem;
@@ -7996,7 +7996,7 @@
       font-size: 0.8rem;
       text-align: center;
       padding: 1rem;
-      border: 2px dashed #333;
+      border: 2px dashed var(--border);
       border-radius: 8px;
       display: none;
     }
@@ -8010,15 +8010,15 @@
       align-items: center;
       gap: 0.5rem;
       padding: 0.6rem 0.75rem;
-      background: #252525;
-      border: 1px solid #333;
+      background: var(--bg-tertiary);
+      border: 1px solid var(--border);
       border-radius: 8px;
       cursor: grab;
       transition: all 0.2s;
     }
     .ms-item:hover {
       border-color: #555;
-      background: #2a2a2a;
+      background: var(--bg-tertiary);
     }
     .ms-item.dragging {
       opacity: 0.5;
@@ -8039,7 +8039,7 @@
       gap: 0.5rem;
     }
     .ms-item-achse {
-      background: #333;
+      background: var(--border);
       padding: 0.15rem 0.4rem;
       border-radius: 4px;
       font-size: 0.65rem;
@@ -8093,7 +8093,7 @@
     .ms-add-btn, .ms-add-custom-btn {
       flex: 1;
       padding: 0.75rem;
-      background: #222;
+      background: var(--bg-secondary);
       border: 1px dashed #444;
       border-radius: 8px;
       color: #888;
@@ -8108,7 +8108,7 @@
     
     /* Vorschau */
     .ms-vorschau {
-      background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+      background: linear-gradient(135deg, var(--bg-secondary) 0%, var(--bg-tertiary) 100%);
       border: 2px solid #E53935;
       border-radius: 12px;
       padding: 1.25rem;
@@ -8156,7 +8156,7 @@
       width: 100%;
       min-height: 100px;
       background: #111;
-      border: 1px solid #333;
+      border: 1px solid var(--border);
       border-radius: 8px;
       color: #ccc;
       padding: 0.75rem;
@@ -8199,7 +8199,7 @@
     }
     .ms-btn-secondary {
       padding: 0.75rem 1rem;
-      background: #222;
+      background: var(--bg-secondary);
       border: 1px solid #444;
       border-radius: 25px;
       color: #ccc;
@@ -8237,8 +8237,8 @@
       padding: 1rem;
     }
     .ms-edit-popup {
-      background: #1a1a1a;
-      border: 1px solid #333;
+      background: var(--bg-primary);
+      border: 1px solid var(--border);
       border-radius: 12px;
       padding: 1.5rem;
       max-width: 400px;
@@ -8258,7 +8258,7 @@
     .ms-edit-popup textarea {
       width: 100%;
       background: #111;
-      border: 1px solid #333;
+      border: 1px solid var(--border);
       border-radius: 8px;
       color: #ccc;
       padding: 0.75rem;
@@ -8286,7 +8286,7 @@
       color: #fff;
     }
     .ms-edit-buttons button.secondary {
-      background: #333;
+      background: var(--border);
       border: 1px solid #444;
       color: #ccc;
     }
@@ -8304,8 +8304,8 @@
     }
     
     .ms-auswahl-popup-neu {
-      background: #1a1a1a;
-      border: 1px solid #333;
+      background: var(--bg-primary);
+      border: 1px solid var(--border);
       border-radius: 12px;
       max-width: 700px;
       width: 100%;
@@ -8319,7 +8319,7 @@
       align-items: center;
       justify-content: space-between;
       padding: 1rem 1.25rem;
-      border-bottom: 1px solid #333;
+      border-bottom: 1px solid var(--border);
     }
     .ms-auswahl-header h4 {
       color: #fff;
@@ -8345,7 +8345,7 @@
       color: #888;
       font-size: 0.8rem;
       background: rgba(229,57,53,0.05);
-      border-bottom: 1px solid #333;
+      border-bottom: 1px solid var(--border);
     }
     
     .ms-auswahl-liste-neu {
@@ -8366,7 +8366,7 @@
       font-size: 0.85rem;
       font-weight: 600;
       padding: 0.4rem 0;
-      border-bottom: 1px solid #333;
+      border-bottom: 1px solid var(--border);
       margin-bottom: 0.5rem;
     }
     
@@ -8377,8 +8377,8 @@
     }
     
     .ms-auswahl-zimmer-card {
-      background: #222;
-      border: 1px solid #333;
+      background: var(--bg-secondary);
+      border: 1px solid var(--border);
       border-radius: 6px;
       overflow: hidden;
     }
@@ -8388,13 +8388,13 @@
       align-items: center;
       gap: 0.4rem;
       padding: 0.4rem 0.6rem;
-      background: #2a2a2a;
-      border-bottom: 1px solid #333;
+      background: var(--bg-tertiary);
+      border-bottom: 1px solid var(--border);
     }
     .ms-auswahl-achse-id {
       font-size: 0.6rem;
       color: #666;
-      background: #1a1a1a;
+      background: var(--bg-primary);
       padding: 0.1rem 0.3rem;
       border-radius: 3px;
     }
@@ -8438,7 +8438,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      background: #333;
+      background: var(--border);
       border-radius: 3px;
       font-size: 0.65rem;
       color: #888;
@@ -8462,8 +8462,8 @@
       align-items: center;
       justify-content: space-between;
       padding: 0.75rem 1.25rem;
-      border-top: 1px solid #333;
-      background: #222;
+      border-top: 1px solid var(--border);
+      background: var(--bg-secondary);
     }
     
     .ms-auswahl-count {
@@ -8492,7 +8492,7 @@
       background: #C62828;
     }
     .ms-auswahl-btn.secondary {
-      background: #333;
+      background: var(--border);
       color: #aaa;
     }
     .ms-auswahl-btn.secondary:hover {
@@ -8534,7 +8534,7 @@
     .ms-schreib-einladung {
       margin: 0.75rem 0 0 0;
       padding-top: 0.5rem;
-      border-top: 1px solid #333;
+      border-top: 1px solid var(--border);
       font-size: 0.75rem;
       color: #666;
       text-align: center;
@@ -8542,8 +8542,8 @@
     
     /* Alte Styles für Kompatibilität */
     .ms-auswahl-popup {
-      background: #1a1a1a;
-      border: 1px solid #333;
+      background: var(--bg-primary);
+      border: 1px solid var(--border);
       border-radius: 12px;
       padding: 1.5rem;
       max-width: 500px;
@@ -8604,7 +8604,7 @@
     }
     
     .zimmer-finder-modal {
-      background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+      background: linear-gradient(135deg, var(--bg-secondary) 0%, var(--bg-tertiary) 100%);
       border: 2px solid #E53935;
       border-radius: 16px;
       max-width: 550px;
@@ -8676,7 +8676,7 @@
       gap: 0.75rem;
       padding: 0.75rem 1rem;
       background: rgba(255,255,255,0.03);
-      border: 1px solid #333;
+      border: 1px solid var(--border);
       border-radius: 10px;
       cursor: pointer;
       transition: all 0.2s;
@@ -8728,7 +8728,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      background: #333;
+      background: var(--border);
       border-radius: 50%;
       color: #888;
       font-size: 0.75rem;
@@ -8890,7 +8890,7 @@
       gap: 0.5rem;
       padding: 0.4rem 0.6rem;
       background: rgba(255,255,255,0.03);
-      border: 1px solid #333;
+      border: 1px solid var(--border);
       border-radius: 6px;
     }
     .zf-weiteres-icon {
@@ -8929,7 +8929,7 @@
       align-items: center;
       gap: 0.3rem;
       padding: 0.25rem 0.5rem;
-      background: #222;
+      background: var(--bg-secondary);
       border: 1px solid var(--accent, #666);
       border-radius: 15px;
       font-size: 0.75rem;
@@ -8951,8 +8951,8 @@
       padding: 1rem;
     }
     .wg-debatte-popup {
-      background: #1a1a1a;
-      border: 1px solid #333;
+      background: var(--bg-primary);
+      border: 1px solid var(--border);
       border-radius: 16px;
       max-width: 500px;
       width: 100%;
@@ -8979,7 +8979,7 @@
       gap: 0.75rem;
       padding: 1.25rem;
       background: linear-gradient(135deg, rgba(156,39,176,0.15), rgba(103,58,183,0.05));
-      border-bottom: 1px solid #333;
+      border-bottom: 1px solid var(--border);
     }
     .wg-debatte-icon {
       font-size: 2rem;
@@ -9000,7 +9000,7 @@
       justify-content: center;
       gap: 0.5rem;
       padding: 1rem;
-      border-bottom: 1px solid #333;
+      border-bottom: 1px solid var(--border);
       flex-wrap: wrap;
     }
     .debatte-person {
@@ -9008,7 +9008,7 @@
       align-items: center;
       gap: 0.35rem;
       padding: 0.35rem 0.6rem;
-      background: #222;
+      background: var(--bg-secondary);
       border: 1px solid var(--accent, #666);
       border-radius: 20px;
       font-size: 0.75rem;
@@ -9026,8 +9026,8 @@
     }
     
     .spannung-karte {
-      background: #222;
-      border: 1px solid #333;
+      background: var(--bg-secondary);
+      border: 1px solid var(--border);
       border-left: 3px solid #E53935;
       border-radius: 8px;
       padding: 0.75rem;
@@ -9103,7 +9103,7 @@
     .wg-debatte-footer {
       padding: 0.75rem 1rem;
       background: rgba(156,39,176,0.1);
-      border-top: 1px solid #333;
+      border-top: 1px solid var(--border);
       text-align: center;
     }
     .wg-debatte-footer span {
@@ -9113,7 +9113,7 @@
     
     /* Sections im Debatte-Popup */
     .wg-debatte-section {
-      border-bottom: 1px solid #333;
+      border-bottom: 1px solid var(--border);
     }
     .wg-debatte-section:last-of-type {
       border-bottom: none;
@@ -9240,7 +9240,7 @@
       color: #4CAF50;
       margin-bottom: 1rem;
       padding-bottom: 0.5rem;
-      border-bottom: 1px solid #333;
+      border-bottom: 1px solid var(--border);
     }
     .oeko-arten {
       display: flex;
@@ -9248,8 +9248,8 @@
       gap: 0.75rem;
     }
     .oeko-art {
-      background: #252525;
-      border: 1px solid #333;
+      background: var(--bg-tertiary);
+      border: 1px solid var(--border);
       border-radius: 4px;
       padding: 0.5rem 0.75rem;
       font-size: 0.8rem;
@@ -9277,7 +9277,7 @@
       margin: 0 auto;
     }
     .element {
-      background: #252525;
+      background: var(--bg-tertiary);
       border: 1px solid #444;
       border-radius: 4px;
       padding: 0.5rem;
@@ -9294,8 +9294,8 @@
     .element.stabil { border-color: #4CAF50; background: #2a3a2a; }
     
     .reaktionsgleichung {
-      background: #1a1a1a;
-      border: 1px solid #333;
+      background: var(--bg-primary);
+      border: 1px solid var(--border);
       border-radius: 8px;
       padding: 1.5rem;
       margin-top: 2rem;
@@ -9321,7 +9321,7 @@
       flex-wrap: wrap;
     }
     .epoche-btn {
-      background: #252525;
+      background: var(--bg-tertiary);
       border: 1px solid #444;
       color: #aaa;
       padding: 0.75rem 1.5rem;
@@ -9329,10 +9329,10 @@
       border-radius: 4px;
       font-size: 0.85rem;
     }
-    .epoche-btn:hover { border-color: #666; }
+    .epoche-btn:hover { border-color: var(--border-light); }
     .epoche-btn.active { border-color: #E53935; color: #fff; background: #2a2020; }
     .epochen-inhalt {
-      background: #222;
+      background: var(--bg-secondary);
       border-radius: 8px;
       padding: 2rem;
     }
@@ -9345,7 +9345,7 @@
       margin-top: 1rem;
     }
     .epochen-knoten span {
-      background: #333;
+      background: var(--border);
       padding: 0.3rem 0.6rem;
       border-radius: 3px;
       font-size: 0.8rem;
@@ -9541,7 +9541,7 @@
     .dialog-box {
       max-width: 800px;
       margin: 0 auto 2rem;
-      background: #222;
+      background: var(--bg-secondary);
       border-radius: 8px;
       padding: 1.5rem;
     }
@@ -9551,7 +9551,7 @@
       align-items: center;
       margin-bottom: 1rem;
       padding-bottom: 1rem;
-      border-bottom: 1px solid #333;
+      border-bottom: 1px solid var(--border);
     }
     .dialog-sprecher {
       padding: 0.3rem 0.6rem;
@@ -9580,7 +9580,7 @@
       overflow-y: auto;
     }
     .zitat-card {
-      background: #222;
+      background: var(--bg-secondary);
       border-left: 3px solid #E53935;
       padding: 1.5rem;
       margin-bottom: 1.5rem;
@@ -9813,7 +9813,7 @@
     
     .sp-btn-num:hover {
       background: var(--bg-hover);
-      border-color: #666;
+      border-color: var(--border-light);
       color: var(--text-primary);
     }
     
@@ -9847,7 +9847,7 @@
     
     .sp-btn:hover {
       background: var(--bg-hover);
-      border-color: #666;
+      border-color: var(--border-light);
     }
     
     .sp-btn.primary {
@@ -9932,7 +9932,7 @@
       transition: all 0.15s;
     }
     .konfig-option:hover { 
-      border-color: #666;
+      border-color: var(--border-light);
       color: var(--text-primary);
     }
     .konfig-option.selected { 
@@ -9997,7 +9997,7 @@
     }
     .nachbar-card:hover {
       transform: translateX(3px);
-      border-color: #666;
+      border-color: var(--border-light);
     }
     .nachbar-card.exakt {
       border-color: #C62828;
@@ -10035,7 +10035,7 @@
       transition: all 0.2s;
     }
     .konfig-btn:hover {
-      border-color: #666;
+      border-color: var(--border-light);
     }
     .konfig-btn.primary {
       background: #C62828;
@@ -10103,7 +10103,7 @@
     .fieber-bar {
       flex: 1;
       height: 24px;
-      background: #252525;
+      background: var(--bg-tertiary);
       border-radius: 4px;
       overflow: hidden;
     }
@@ -10135,15 +10135,15 @@
       margin-right: auto;
     }
     .personen-filter button {
-      background: #252525;
-      border: 1px solid #333;
+      background: var(--bg-tertiary);
+      border: 1px solid var(--border);
       color: #aaa;
       padding: 0.4rem 0.8rem;
       border-radius: 4px;
       cursor: pointer;
       font-size: 0.8rem;
     }
-    .personen-filter button:hover { border-color: #666; }
+    .personen-filter button:hover { border-color: var(--border-light); }
     .personen-filter button.active { background: #E53935; border-color: #E53935; color: #fff; }
     .personen-grid {
       display: grid;
@@ -10153,8 +10153,8 @@
       margin: 0 auto;
     }
     .person-card {
-      background: #222;
-      border: 1px solid #333;
+      background: var(--bg-secondary);
+      border: 1px solid var(--border);
       border-radius: 8px;
       padding: 1rem;
       cursor: pointer;
@@ -10170,7 +10170,7 @@
       width: 50px;
       height: 50px;
       border-radius: 50%;
-      background: #333;
+      background: var(--border);
       display: flex;
       align-items: center;
       justify-content: center;
@@ -10198,8 +10198,8 @@
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      background: #1a1a1a;
-      border: 1px solid #333;
+      background: var(--bg-primary);
+      border: 1px solid var(--border);
       border-radius: 12px;
       padding: 2rem;
       max-width: 600px;
@@ -13517,13 +13517,13 @@ function showReaktion(idA, idB) {
     <section>
       <h2>Verbindung</h2>
       ${analyse.direkteVerbindung ? `
-        <div style="background: #2a2a2a; padding: 1rem; border-radius: 4px; border-left: 3px solid ${analyse.direkteVerbindung.typ === 'debatte' ? '#FF9800' : '#4CAF50'};">
+        <div style="background: var(--bg-tertiary); padding: 1rem; border-radius: 4px; border-left: 3px solid ${analyse.direkteVerbindung.typ === 'debatte' ? '#FF9800' : '#4CAF50'};">
           <strong>${analyse.direkteVerbindung.typ === 'debatte' ? '⚔️ Debatte' : '🤝 Affinität'}</strong>
           <p style="margin: 0.5rem 0 0 0; color: #aaa;">${analyse.direkteVerbindung.beschreibung || ''}</p>
           <p style="margin: 0.5rem 0 0 0; font-size: 0.85rem;">Stärke: ${Math.round(analyse.direkteVerbindung.staerke * 100)}%</p>
         </div>
       ` : `
-        <div style="background: #2a2a2a; padding: 1rem; border-radius: 4px; border-left: 3px solid #666;">
+        <div style="background: var(--bg-tertiary); padding: 1rem; border-radius: 4px; border-left: 3px solid #666;">
           <strong>Keine direkte Verbindung dokumentiert</strong>
           ${analyse.pfad ? `<p style="margin: 0.5rem 0 0 0; color: #888; font-size: 0.85rem;">
             Pfad: ${analyse.pfad.map(id => knotenData[id]?.name || id).join(' → ')}
@@ -13538,7 +13538,7 @@ function showReaktion(idA, idB) {
       <div style="display: flex; flex-wrap: wrap; gap: 0.5rem;">
         ${analyse.gemeinsameNachbarn.map(n => `
           <span onclick="showReaktion('${idA}', '${n.id}')" 
-                style="background: #333; padding: 0.3rem 0.6rem; border-radius: 3px; cursor: pointer; font-size: 0.85rem;">
+                style="background: var(--border); padding: 0.3rem 0.6rem; border-radius: 3px; cursor: pointer; font-size: 0.85rem;">
             ${n.name}
           </span>
         `).join('')}
@@ -13550,17 +13550,17 @@ function showReaktion(idA, idB) {
       <h2>Synthese / Spannung</h2>
       <p style="line-height: 1.6;">${synthese.text}</p>
       ${synthese.frage ? `
-        <div style="background: #2a2a2a; padding: 0.75rem; border-left: 3px solid #FF9800; margin-top: 1rem; font-style: italic; color: #aaa;">
+        <div style="background: var(--bg-tertiary); padding: 0.75rem; border-left: 3px solid #FF9800; margin-top: 1rem; font-style: italic; color: #aaa;">
           ${synthese.frage}
         </div>
       ` : ''}
     </section>
     
     <div style="margin-top: 2rem; display: flex; gap: 0.5rem;">
-      <button onclick="showKnoten('${idA}')" style="flex: 1; background: #333; border: none; color: #fff; padding: 0.75rem; cursor: pointer; border-radius: 4px;">
+      <button onclick="showKnoten('${idA}')" style="flex: 1; background: var(--border); border: none; color: #fff; padding: 0.75rem; cursor: pointer; border-radius: 4px;">
         → ${a.name}
       </button>
-      <button onclick="showKnoten('${idB}')" style="flex: 1; background: #333; border: none; color: #fff; padding: 0.75rem; cursor: pointer; border-radius: 4px;">
+      <button onclick="showKnoten('${idB}')" style="flex: 1; background: var(--border); border: none; color: #fff; padding: 0.75rem; cursor: pointer; border-radius: 4px;">
         → ${b.name}
       </button>
     </div>
@@ -13712,7 +13712,7 @@ function initListe() {
   
   // Container leeren und neu aufbauen
   container.innerHTML = '';
-  container.style.cssText = 'display: block; padding: 2rem; overflow-y: auto; background: #1a1a1a; flex: 1;';
+  container.style.cssText = 'display: block; padding: 2rem; overflow-y: auto; background: var(--bg-primary); flex: 1;';
   
   // Header
   const header = document.createElement('div');
@@ -13833,14 +13833,14 @@ function initListe() {
     if (ersterbuchstabe !== aktuellerBuchstabe) {
       aktuellerBuchstabe = ersterbuchstabe;
       const buchstabenHeader = document.createElement('div');
-      buchstabenHeader.style.cssText = 'font-size: 1.5rem; font-weight: bold; color: #E53935; margin-top: 2rem; margin-bottom: 0.5rem; padding-bottom: 0.5rem; border-bottom: 2px solid #333;';
+      buchstabenHeader.style.cssText = 'font-size: 1.5rem; font-weight: bold; color: #E53935; margin-top: 2rem; margin-bottom: 0.5rem; padding-bottom: 0.5rem; border-bottom: 2px solid var(--border);';
       buchstabenHeader.textContent = aktuellerBuchstabe;
       liste.appendChild(buchstabenHeader);
     }
     
     // Eintrag
     const item = document.createElement('div');
-    item.style.cssText = 'padding: 0.75rem 1rem; margin-bottom: 0.5rem; background: #222; border-left: 3px solid ' + (eintrag.typ === 'position' ? '#E53935' : '#2196F3') + '; border-radius: 4px; cursor: pointer; transition: all 0.2s;';
+    item.style.cssText = 'padding: 0.75rem 1rem; margin-bottom: 0.5rem; background: var(--bg-secondary); border-left: 3px solid ' + (eintrag.typ === 'position' ? '#E53935' : '#2196F3') + '; border-radius: 4px; cursor: pointer; transition: all 0.2s;';
     
     item.innerHTML = `
       <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.3rem;">
@@ -13850,8 +13850,8 @@ function initListe() {
       ${eintrag.beschreibung ? `<div style="font-size: 0.85rem; color: #aaa; line-height: 1.4;">${eintrag.beschreibung.substring(0, 120)}${eintrag.beschreibung.length > 120 ? '...' : ''}</div>` : ''}
     `;
     
-    item.onmouseover = () => { item.style.background = '#2a2a2a'; item.style.transform = 'translateX(5px)'; };
-    item.onmouseout = () => { item.style.background = '#222'; item.style.transform = 'translateX(0)'; };
+    item.onmouseover = () => { item.style.background = 'var(--bg-tertiary)'; item.style.transform = 'translateX(5px)'; };
+    item.onmouseout = () => { item.style.background = 'var(--bg-secondary)'; item.style.transform = 'translateX(0)'; };
     
     if (eintrag.typ === 'position') {
       item.onclick = () => showKnoten(eintrag.id);
@@ -14114,7 +14114,7 @@ function initKarte() {
   }
   
   container.innerHTML = '';
-  container.style.cssText = 'display: block; padding: 2rem; overflow-y: auto; background: #1a1a1a; flex: 1;';
+  container.style.cssText = 'display: block; padding: 2rem; overflow-y: auto; background: var(--bg-primary); flex: 1;';
   
   // Y-Positionen: Klasse (0) bis Identität (5)
   const yPositionen = {
@@ -14231,7 +14231,7 @@ function initKarte() {
   
   // Canvas für 2D-Karte
   const canvasWrapper = document.createElement('div');
-  canvasWrapper.style.cssText = 'max-width: 1000px; margin: 0 auto; position: relative; background: #222; border-radius: 12px; padding: 3rem; border: 1px solid #333;';
+  canvasWrapper.style.cssText = 'max-width: 1000px; margin: 0 auto; position: relative; background: var(--bg-secondary); border-radius: 12px; padding: 3rem; border: 1px solid var(--border);';
   
   const canvas = document.createElement('div');
   canvas.style.cssText = 'width: 100%; height: 600px; position: relative; background: linear-gradient(to right, rgba(76,175,80,0.05) 0%, rgba(229,57,53,0.05) 100%);';
@@ -16973,18 +16973,18 @@ function renderProfilEditor(profil) {
   const anzahl = Object.keys(profil).length;
   
   let html = `
-    <div class="spe-header" style="display:flex;justify-content:space-between;align-items:center;margin-bottom:0.75rem;padding-bottom:0.5rem;border-bottom:1px solid #333;">
+    <div class="spe-header" style="display:flex;justify-content:space-between;align-items:center;margin-bottom:0.75rem;padding-bottom:0.5rem;border-bottom:1px solid var(--border);">
       <span style="font-size:0.85rem;color:#999;">🎛️ Schnell-Profil</span>
-      <span id="spe-counter" style="font-size:0.7rem;color:#666;background:#1a1a1a;padding:0.2rem 0.5rem;border-radius:10px;">${anzahl}/26 gewählt</span>
+      <span id="spe-counter" style="font-size:0.7rem;color:#666;background: var(--bg-primary);padding:0.2rem 0.5rem;border-radius:10px;">${anzahl}/26 gewählt</span>
     </div>
     <div class="spe-grid">
       <div class="spe-column">${renderSpeColumn(links, profil)}</div>
       <div class="spe-column">${renderSpeColumn(rechts, profil)}</div>
     </div>
-    <div class="spe-footer" style="display:flex;flex-wrap:wrap;gap:0.4rem;margin-top:0.75rem;padding-top:0.5rem;border-top:1px solid #333;">
+    <div class="spe-footer" style="display:flex;flex-wrap:wrap;gap:0.4rem;margin-top:0.75rem;padding-top:0.5rem;border-top:1px solid var(--border);">
       <button type="button" onclick="speichereProfilUndRender()" style="padding:0.4rem 0.8rem;background:#C62828;border:none;color:#fff;font-size:0.75rem;border-radius:6px;cursor:pointer;">✓ Speichern</button>
-      <button type="button" onclick="toggleProfilEditor()" style="padding:0.4rem 0.8rem;background:#2a2a2a;border:1px solid #444;color:#ccc;font-size:0.75rem;border-radius:6px;cursor:pointer;">✕ Schließen</button>
-      <button type="button" onclick="resetProfil()" style="padding:0.4rem 0.8rem;background:#2a2a2a;border:1px solid #444;color:#ccc;font-size:0.75rem;border-radius:6px;cursor:pointer;">🗑️ Reset</button>
+      <button type="button" onclick="toggleProfilEditor()" style="padding:0.4rem 0.8rem;background: var(--bg-tertiary);border:1px solid #444;color:#ccc;font-size:0.75rem;border-radius:6px;cursor:pointer;">✕ Schließen</button>
+      <button type="button" onclick="resetProfil()" style="padding:0.4rem 0.8rem;background: var(--bg-tertiary);border:1px solid #444;color:#ccc;font-size:0.75rem;border-radius:6px;cursor:pointer;">🗑️ Reset</button>
     </div>
   `;
   return html;
@@ -16999,7 +16999,7 @@ function renderSpeColumn(achsen, profil) {
       const sel = wert === n;
       const style = sel 
         ? 'flex:1;padding:0.35rem 0.1rem;background:#C62828;border:1px solid #C62828;color:#fff;font-size:0.6rem;border-radius:4px;cursor:pointer;text-align:center;'
-        : 'flex:1;padding:0.35rem 0.1rem;background:#1e1e2e;border:1px solid #333;color:#777;font-size:0.6rem;border-radius:4px;cursor:pointer;text-align:center;';
+        : 'flex:1;padding:0.35rem 0.1rem;background:var(--bg-secondary);border:1px solid var(--border);color:#777;font-size:0.6rem;border-radius:4px;cursor:pointer;text-align:center;';
       return `<button type="button" class="spe-btn ${sel ? 'sel' : ''}" data-achse="${achse.id}" data-pos="${n}" onclick="updateProfilPosition('${achse.id}', ${n})" style="${style}" title="${pole[n-1] || n}">${label}</button>`;
     }).join('');
     
@@ -17053,7 +17053,7 @@ function updateProfilPosition(achse, pos) {
       btn.classList.add('sel');
     } else {
       btn.style.background = '#1e1e2e';
-      btn.style.borderColor = '#333';
+      btn.style.borderColor = 'var(--border)';
       btn.style.color = '#777';
       btn.classList.remove('sel');
     }
@@ -17452,8 +17452,9 @@ function exportAlsBild() {
   canvas.width = width;
   canvas.height = height;
   
-  // Hintergrund
-  ctx.fillStyle = '#1a1a1a';
+  // Hintergrund (lese CSS-Variable aus)
+  const bgColor = getComputedStyle(document.documentElement).getPropertyValue('--bg-primary').trim() || '#ffffff';
+  ctx.fillStyle = bgColor;
   ctx.fillRect(0, 0, width, height);
   
   // Roter Akzent
@@ -17461,6 +17462,10 @@ function exportAlsBild() {
   ctx.fillRect(0, 0, 6, height);
   
   // Text rendern
+  const textColor = getComputedStyle(document.documentElement).getPropertyValue('--text-primary').trim() || '#2a2a2a';
+  const textSecondary = getComputedStyle(document.documentElement).getPropertyValue('--text-secondary').trim() || '#666666';
+  const textMuted = getComputedStyle(document.documentElement).getPropertyValue('--text-muted').trim() || '#999999';
+  
   let y = padding;
   lines.forEach(line => {
     if (line.style === 'space') {
@@ -17470,19 +17475,19 @@ function exportAlsBild() {
     
     if (line.style === 'title') {
       ctx.font = 'bold 32px system-ui, sans-serif';
-      ctx.fillStyle = '#ffffff';
+      ctx.fillStyle = textColor;
     } else if (line.style === 'category') {
       ctx.font = 'bold 20px system-ui, sans-serif';
       ctx.fillStyle = '#E53935';
     } else if (line.style === 'item') {
       ctx.font = '18px system-ui, sans-serif';
-      ctx.fillStyle = '#cccccc';
+      ctx.fillStyle = textSecondary;
     } else if (line.style === 'footer') {
       ctx.font = '14px system-ui, sans-serif';
-      ctx.fillStyle = '#666666';
+      ctx.fillStyle = textMuted;
     } else {
       ctx.font = '18px system-ui, sans-serif';
-      ctx.fillStyle = '#cccccc';
+      ctx.fillStyle = textSecondary;
     }
     
     ctx.fillText(line.text, padding, y);
@@ -18875,7 +18880,7 @@ function initOekosystem() {
   });
   
   // Nahrungsketten / Beziehungen
-  html += `<div style="margin-top: 2rem; padding-top: 1rem; border-top: 1px solid #333;">
+  html += `<div style="margin-top: 2rem; padding-top: 1rem; border-top: 1px solid var(--border);">
     <h3 style="color: #4CAF50;">🔗 Ökologische Beziehungen</h3>
     <p style="color: #666; margin: 1rem 0;">Einige bemerkenswerte Symbiosen und Konkurrenzen:</p>
     <div style="display: grid; gap: 1rem;">`;
@@ -18889,7 +18894,7 @@ function initOekosystem() {
     const a = knotenData[v.von];
     const b = knotenData[v.zu];
     if (a && b) {
-      html += `<div style="background: #252525; padding: 0.75rem; border-radius: 4px; border-left: 3px solid #4CAF50;">
+      html += `<div style="background: var(--bg-tertiary); padding: 0.75rem; border-radius: 4px; border-left: 3px solid #4CAF50;">
         <strong style="color: #4CAF50;">Symbiose:</strong> ${a.name} ↔ ${b.name}
         <div style="color: #888; font-size: 0.8rem; margin-top: 0.25rem;">${v.beschreibung}</div>
       </div>`;
@@ -18985,7 +18990,7 @@ function initChemie() {
   html += '</div>';
   
   // Interaktiver Hinweis
-  html += `<div style="margin-top: 2rem; padding: 1rem; background: #252525; border-radius: 8px; color: #888;">
+  html += `<div style="margin-top: 2rem; padding: 1rem; background: var(--bg-tertiary); border-radius: 8px; color: #888;">
     <strong style="color: #FF9800;">💡 Tipp:</strong> Gehe zum 3D-Netzwerk und ziehe zwei Elemente aufeinander, um ihre Reaktion zu analysieren.
   </div>`;
   
@@ -19072,7 +19077,7 @@ function showEpoche(id) {
   
   let html = `<h3>${ep.name}</h3>`;
   html += `<p>${ep.beschreibung}</p>`;
-  html += `<div style="background: #1a1a1a; padding: 1rem; border-radius: 4px; margin: 1rem 0; font-style: italic; color: #888; border-left: 3px solid #E53935;">"${ep.geist}"</div>`;
+  html += `<div style="background: var(--bg-primary); padding: 1rem; border-radius: 4px; margin: 1rem 0; font-style: italic; color: #888; border-left: 3px solid #E53935;">"${ep.geist}"</div>`;
   
   if (ep.geboren && ep.geboren.length > 0) {
     html += '<p style="color: #4CAF50; margin-top: 1.5rem;"><strong>🌱 In dieser Zeit geboren:</strong></p>';
@@ -19281,7 +19286,7 @@ function initDialoge() {
     html += '</div>';
   });
   
-  html += `<div style="margin-top: 1rem; padding: 1rem; background: #252525; border-radius: 8px; color: #888; max-width: 600px; margin-left: auto; margin-right: auto;">
+  html += `<div style="margin-top: 1rem; padding: 1rem; background: var(--bg-tertiary); border-radius: 8px; color: #888; max-width: 600px; margin-left: auto; margin-right: auto;">
     <strong style="color: #2196F3;">📝 Hinweis:</strong> Diese Dialoge sind fiktiv, aber basieren auf realen Positionen und Argumenten. Sie dienen der Veranschaulichung, nicht der historischen Dokumentation.
   </div>`;
   
@@ -19344,7 +19349,7 @@ function initZitate() {
   
   html += `<div style="margin-top: 1rem; text-align: center; color: #666;">
     ${alleZitate.length} Zitate aus ${Object.keys(knotenData).length} Positionen
-    <br><button onclick="initZitate()" style="margin-top: 0.5rem; background: #333; border: none; color: #aaa; padding: 0.5rem 1rem; cursor: pointer; border-radius: 4px;">🎲 Neue Auswahl</button>
+    <br><button onclick="initZitate()" style="margin-top: 0.5rem; background: var(--border); border: none; color: #aaa; padding: 0.5rem 1rem; cursor: pointer; border-radius: 4px;">🎲 Neue Auswahl</button>
   </div>`;
   
   container.innerHTML = html;
@@ -19454,7 +19459,7 @@ function initFieber() {
   const heiss = temperaturen.filter(t => t.temp >= 60).length;
   const kalt = temperaturen.filter(t => t.temp < 10).length;
   
-  html += `<div style="margin-top: 2rem; padding: 1rem; background: #252525; border-radius: 8px; color: #888; max-width: 600px; margin-left: auto; margin-right: auto;">
+  html += `<div style="margin-top: 2rem; padding: 1rem; background: var(--bg-tertiary); border-radius: 8px; color: #888; max-width: 600px; margin-left: auto; margin-right: auto;">
     <strong style="color: #f44336;">Diagnose:</strong> ${heiss} heiße Positionen, ${kalt} kalte. 
     Die heißesten Debatten finden um Grundfragen von Subjekt, Staat und Transformation statt.
   </div>`;
@@ -19786,7 +19791,7 @@ function showStammbaumPerson(personId) {
     ${person.werke?.length ? `
       <h3>📚 Hauptwerke</h3>
       <div class="bewohner">
-        ${person.werke.map(w => `<span style="background:#2a2a2a;padding:0.3rem 0.6rem;border-radius:3px;font-size:0.85rem;">${w}</span>`).join('')}
+        ${person.werke.map(w => `<span style="background: var(--bg-tertiary);padding:0.3rem 0.6rem;border-radius:3px;font-size:0.85rem;">${w}</span>`).join('')}
       </div>
     ` : ''}
     
@@ -20015,7 +20020,7 @@ function showPerson(id) {
   // Tags HTML
   const tagsHtml = p.tags && p.tags.length > 0 ? `
     <div style="display: flex; flex-wrap: wrap; gap: 0.3rem; margin-top: 1rem;">
-      ${p.tags.map(t => `<span style="background: #333; color: #888; padding: 0.2rem 0.5rem; border-radius: 3px; font-size: 0.7rem;">#${t}</span>`).join('')}
+      ${p.tags.map(t => `<span style="background: var(--border); color: #888; padding: 0.2rem 0.5rem; border-radius: 3px; font-size: 0.7rem;">#${t}</span>`).join('')}
     </div>
   ` : '';
   
@@ -20060,7 +20065,7 @@ function showPerson(id) {
     
     ${tagsHtml}
     
-    <div style="margin-top: 1.5rem; padding-top: 1rem; border-top: 1px solid #333; color: #666; font-size: 0.8rem;">
+    <div style="margin-top: 1.5rem; padding-top: 1rem; border-top: 1px solid var(--border); color: #666; font-size: 0.8rem;">
       Klicke auf Positionen oder Namen um mehr zu erfahren.
     </div>
   `;
@@ -21085,7 +21090,7 @@ function showWelcomeBanner(zimmer, knoten, archetyp) {
       top: 60px;
       left: 50%;
       transform: translateX(-50%);
-      background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+      background: linear-gradient(135deg, var(--bg-secondary) 0%, var(--bg-tertiary) 100%);
       border: 2px solid #C62828;
       border-radius: 12px;
       padding: 1.25rem 2rem;
@@ -22380,7 +22385,7 @@ function openReaktor(idA, idB) {
   
   // Kürzester Pfad
   if (analyse.pfad && analyse.pfad.length > 2) {
-    html += `<div style="margin-top: 1rem; padding-top: 1rem; border-top: 1px solid #333;">`;
+    html += `<div style="margin-top: 1rem; padding-top: 1rem; border-top: 1px solid var(--border);">`;
     html += `<div style="font-size: 0.75rem; color: #888; margin-bottom: 0.5rem;">Kürzester Pfad (${analyse.pfad.length - 1} Schritte):</div>`;
     html += `<div style="font-size: 0.85rem; color: #aaa;">`;
     html += analyse.pfad.map(id => knotenData[id]?.name || id).join(' → ');
