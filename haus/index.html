@@ -10700,346 +10700,179 @@
     }
 
 /* ═══════════════════════════════════════════════════════════════
-   GRUNDLAGEN: NEUES LAYOUT (Oben TOC, Unten Essay)
+   GRUNDLAGEN: INLINE-EXPANSION LAYOUT
+   Tabs oben, Essays als Grid, Langtext klappt unter der Zeile auf
    ═══════════════════════════════════════════════════════════════ */
 
-.grundlagen-vertical-layout {
-  display: flex;
-  flex-direction: column;
-  height: calc(100vh - 60px);
-  overflow: hidden;
+.grundlagen-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 1rem;
 }
 
 /* ───────────────────────────────────────────────────────────────
-   OBERER BEREICH: Inhaltsverzeichnis (2 Spalten Grid)
+   KATEGORIE-TABS (oben)
    ─────────────────────────────────────────────────────────────── */
 
-.grundlagen-toc-header {
-  background: var(--bg-secondary);
-  border-bottom: 1px solid var(--border);
-  padding: 1rem 1.5rem;
+.gl-tabs {
   display: flex;
-  align-items: center;
-  gap: 1.5rem;
-  flex-shrink: 0;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--border);
 }
 
-.grundlagen-toc-header .back-btn {
+.gl-tab {
+  padding: 0.6rem 1.2rem;
   background: var(--bg-tertiary);
   border: 1px solid var(--border);
-  color: var(--text-primary);
-  padding: 0.4rem 0.8rem;
   border-radius: 6px;
   cursor: pointer;
-  font-size: 0.85rem;
   transition: all 0.2s;
-  white-space: nowrap;
-}
-
-.grundlagen-toc-header .back-btn:hover {
-  background: var(--bg-primary);
-  border-color: var(--accent);
-}
-
-.grundlagen-toc-header .kategorie-info {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
   display: flex;
   align-items: center;
-  gap: 0.75rem;
+  gap: 0.4rem;
 }
 
-.grundlagen-toc-header .kategorie-icon {
-  font-size: 1.5rem;
-}
-
-.grundlagen-toc-header .kategorie-name {
-  font-size: 1.1rem;
-  font-weight: 600;
+.gl-tab:hover {
+  background: var(--bg-secondary);
+  border-color: var(--border-light);
   color: var(--text-primary);
 }
 
-.grundlagen-toc-header .kategorie-count {
-  font-size: 0.85rem;
-  color: var(--text-secondary);
+.gl-tab.active {
+  background: var(--bg-primary);
+  border-color: var(--accent);
+  color: var(--accent);
+  font-weight: 600;
 }
 
-.grundlagen-toc-area {
-  background: var(--bg-secondary);
-  overflow-y: auto;
-  max-height: 45vh;
-  padding: 1rem;
-  border-bottom: 2px solid var(--border);
-  flex-shrink: 0;
-}
-
-.grundlagen-toc-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 0.75rem;
-  max-width: 1600px;
-  margin: 0 auto;
+.gl-tab-icon {
+  font-size: 1rem;
 }
 
 /* ───────────────────────────────────────────────────────────────
-   TOC ITEMS: Kompakte Karten mit voller Zusammenfassung
+   ESSAYS GRID (2 Spalten)
    ─────────────────────────────────────────────────────────────── */
 
-.toc-item {
-  display: flex;
-  gap: 0.75rem;
-  padding: 0.85rem 1rem;
-  background: var(--bg-tertiary);
+.gl-essays-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+/* Essay-Zeile (für Inline-Expansion) */
+.gl-essay-row {
+  display: contents;
+}
+
+/* Essay-Karte */
+.gl-essay-card {
+  padding: 1rem;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
   border-radius: 8px;
   cursor: pointer;
   transition: all 0.2s;
-  border: 2px solid transparent;
 }
 
-.toc-item:hover {
-  background: var(--bg-primary);
+.gl-essay-card:hover {
+  background: var(--bg-tertiary);
   border-color: var(--border-light);
 }
 
-.toc-item.active {
-  background: var(--bg-primary);
+.gl-essay-card.active {
+  background: var(--bg-tertiary);
   border-color: var(--accent);
-  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+  box-shadow: 0 0 0 1px var(--accent);
 }
 
-.toc-item-icon {
-  font-size: 1.3rem;
-  flex-shrink: 0;
-  width: 1.8rem;
-  text-align: center;
-  padding-top: 0.1rem;
+.gl-essay-card-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
 }
 
-.toc-item-content {
-  flex: 1;
-  min-width: 0;
+.gl-essay-card-icon {
+  font-size: 1.2rem;
 }
 
-.toc-item-title {
-  font-size: 0.9rem;
+.gl-essay-card-title {
+  font-size: 0.95rem;
   font-weight: 600;
   color: var(--text-primary);
-  margin-bottom: 0.35rem;
-  line-height: 1.3;
 }
 
-.toc-item-summary {
-  font-size: 0.8rem;
+.gl-essay-card-summary {
+  font-size: 0.85rem;
   color: var(--text-secondary);
   line-height: 1.5;
 }
 
 /* ───────────────────────────────────────────────────────────────
-   UNTERER BEREICH: Essay-Content (nur Lang-Text)
+   INLINE-EXPANSION: Langtext unter der Zeile
    ─────────────────────────────────────────────────────────────── */
 
-.grundlagen-essay-area {
-  flex: 1;
-  overflow-y: auto;
-  background: var(--bg-primary);
-}
-
-.grundlagen-essay-area::-webkit-scrollbar {
-  width: 10px;
-}
-
-.grundlagen-essay-area::-webkit-scrollbar-track {
+.gl-expansion {
+  grid-column: 1 / -1;
   background: var(--bg-secondary);
+  border-left: 3px solid var(--accent);
+  border-radius: 0 8px 8px 0;
+  padding: 1.5rem 2rem;
+  margin: 0.5rem 0;
+  animation: expandIn 0.2s ease-out;
 }
 
-.grundlagen-essay-area::-webkit-scrollbar-thumb {
-  background: var(--border);
-  border-radius: 5px;
+@keyframes expandIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
-.grundlagen-essay-area::-webkit-scrollbar-thumb:hover {
-  background: var(--text-secondary);
-}
-
-.essay-only-body {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 2rem 2.5rem;
+.gl-expansion-body {
+  color: var(--text-primary);
   line-height: 1.8;
-  color: var(--text-primary);
-  font-size: 1.05rem;
-}
-
-.essay-only-body p {
-  margin-bottom: 1.25rem;
-}
-
-.essay-only-body h2 {
-  color: var(--accent);
-  font-size: 1.2rem;
-  margin: 2rem 0 1rem 0;
-  padding-bottom: 0.5rem;
-  border-bottom: 1px solid var(--border);
-}
-
-.essay-only-body h3 {
-  color: var(--text-primary);
-  font-size: 1.05rem;
-  margin: 1.5rem 0 0.75rem 0;
-}
-
-.essay-select-prompt {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100%;
-  color: var(--text-secondary);
-  text-align: center;
-  padding: 2rem;
-}
-
-.essay-select-prompt .icon {
-  font-size: 3rem;
-  margin-bottom: 1rem;
-  opacity: 0.5;
-}
-
-.essay-select-prompt h3 {
-  font-size: 1.2rem;
-  margin-bottom: 0.5rem;
-  color: var(--text-secondary);
-}
-
-.essay-select-prompt p {
   font-size: 0.95rem;
-  opacity: 0.7;
+  max-width: 900px;
+}
+
+.gl-expansion-body p {
+  margin-bottom: 1rem;
+}
+
+.gl-expansion-body p:last-child {
+  margin-bottom: 0;
 }
 
 /* ───────────────────────────────────────────────────────────────
-   RESPONSIVE: Auf kleinen Screens 1 Spalte
+   RESPONSIVE
    ─────────────────────────────────────────────────────────────── */
 
-@media (max-width: 900px) {
-  .grundlagen-toc-grid {
+@media (max-width: 800px) {
+  .gl-essays-grid {
     grid-template-columns: 1fr;
   }
   
-  .grundlagen-toc-area {
-    max-height: 50vh;
+  .gl-tabs {
+    gap: 0.3rem;
   }
   
-  .essay-only-body {
-    padding: 1.5rem;
+  .gl-tab {
+    padding: 0.5rem 0.8rem;
+    font-size: 0.8rem;
   }
-}
-
-/* ───────────────────────────────────────────────────────────────
-   ESSAY CONTENT
-   ─────────────────────────────────────────────────────────────── */
-
-.essay-content-wrapper {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 2rem;
-}
-
-.essay-header {
-  margin-bottom: 2rem;
-  padding-bottom: 2rem;
-}
-
-.essay-meta-tag {
-  display: inline-block;
-  padding: 0.4rem 1rem;
-  border-radius: 20px;
-  font-size: 0.85rem;
-  font-weight: 600;
-  margin-bottom: 1rem;
-}
-
-.essay-title {
-  color: var(--text-primary);
-  font-size: 2.2rem;
-  line-height: 1.2;
-  margin: 0;
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-}
-
-.essay-title-icon {
-  font-size: 2.5rem;
-}
-
-.essay-intro {
-  background: var(--bg-secondary);
-  padding: 1.5rem;
-  border-radius: 8px;
-  margin-bottom: 2rem;
-  font-size: 1.05rem;
-  line-height: 1.7;
-  color: var(--text-primary);
-  font-style: italic;
-}
-
-.essay-body {
-  color: var(--text-primary);
-  line-height: 1.8;
-}
-
-.essay-paragraph {
-  margin-bottom: 1.5rem;
-  line-height: 1.8;
-  font-size: 1rem;
-}
-
-.essay-section-heading {
-  color: var(--accent);
-  font-size: 1.5rem;
-  font-weight: 700;
-  margin-top: 2.5rem;
-  margin-bottom: 1rem;
-  line-height: 1.3;
-}
-
-.essay-subsection-heading {
-  color: var(--text-primary);
-  font-size: 1.2rem;
-  font-weight: 600;
-  margin-top: 2rem;
-  margin-bottom: 0.75rem;
-  line-height: 1.3;
-}
-
-/* ───────────────────────────────────────────────────────────────
-   PLACEHOLDER STATES
-   ─────────────────────────────────────────────────────────────── */
-
-.essay-placeholder-welcome {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100%;
-  text-align: center;
-  padding: 2rem;
-}
-
-.essay-placeholder {
-  text-align: center;
-  padding: 4rem 2rem;
-  color: var(--text-secondary);
-  background: var(--bg-secondary);
-  border-radius: 12px;
-  border: 1px dashed var(--border);
-}
-
-/* ───────────────────────────────────────────────────────────────
-   RESPONSIVE: Mobile - Grundlagen bereits in Hauptsektion definiert
-   ─────────────────────────────────────────────────────────────── */
-
-@media (max-width: 768px) {
-  .essay-title {
-    font-size: 1.8rem;
+  
+  .gl-expansion {
+    padding: 1rem;
   }
 }
 
@@ -23339,7 +23172,8 @@ function oeffneMediathekFuerExtra(extraId) {
 }
 
 // ══════════════════════════════════════════════════════════════════════
-// GRUNDLAGEN: Die Grammatik des linken Wesens  
+// GRUNDLAGEN: Inline-Expansion Layout
+// Tabs oben, Essays als Grid, Langtext klappt unter der Zeile auf
 // ══════════════════════════════════════════════════════════════════════
 
 let grundlagenData = {};
@@ -23350,7 +23184,6 @@ fetch('data/grundlagen.json')
   .then(data => {
     grundlagenData = data;
     console.log('✅ Grundlagen geladen:', Object.keys(grundlagenData));
-    // Falls wir schon auf der Grundlagen-Seite sind, neu rendern
     if (document.getElementById('grundlagen-container')) {
       initGrundlagen();
     }
@@ -23359,71 +23192,38 @@ fetch('data/grundlagen.json')
     console.error('❌ Fehler beim Laden von grundlagen.json:', error);
   });
 
-let selectedGrundlagenKategorie = null;
-let selectedGrundlagenEssay = null;
-
-// ═══════════════════════════════════════════════════════════════
-// NEUE GRUNDLAGEN-UI: 2-SPALTEN-LAYOUT
-// Links: Fixierte Essays-Liste mit Kategorien
-// Rechts: Essay-Volltext (scrollbar)
-// ═══════════════════════════════════════════════════════════════
+let activeGrundlagenTab = null;  // Aktive Kategorie
+let activeGrundlagenEssay = null;  // Aktiver Essay (für Expansion)
 
 function initGrundlagen() {
   const container = document.getElementById('grundlagen-container');
+  if (!container) return;
   
-  // Wenn keine Kategorie gewählt: zeige Übersicht
-  if (!selectedGrundlagenKategorie) {
-    renderGrundlagenWelcome(container);
-  } else {
-    // Sonst: 2-Spalten-Layout
-    renderGrundlagenTwoColumn(container);
+  // Erste Kategorie als Default
+  if (!activeGrundlagenTab && Object.keys(grundlagenData).length > 0) {
+    activeGrundlagenTab = Object.keys(grundlagenData)[0];
   }
+  
+  renderGrundlagenPage(container);
 }
 
-function renderGrundlagenWelcome(container) {
+function renderGrundlagenPage(container) {
+  const kategorie = grundlagenData[activeGrundlagenTab];
+  if (!kategorie) {
+    container.innerHTML = '<p style="padding: 2rem; color: var(--text-secondary);">Keine Grundlagen geladen.</p>';
+    return;
+  }
+  
   let html = `
-    <div style="max-width: 1200px; margin: 0 auto; padding: 2rem;">
-      <div style="text-align: center; margin-bottom: 3rem;">
-        <h1 style="color: var(--accent); font-size: 2.5rem; margin-bottom: 0.5rem;">🧭 Grundlagen</h1>
-        <p style="color: var(--text-secondary); font-size: 1.1rem; line-height: 1.6; margin-bottom: 0.5rem;">
-          Die Grammatik des linken Wesens – Codes, Anthropologie, Praktiken und blinde Flecken
-        </p>
-        <p style="color: var(--text-secondary); opacity: 0.7; font-size: 0.9rem;">
-          41 Essays · 5 Kategorien · Wähle eine Kategorie um zu beginnen
-        </p>
+    <div class="grundlagen-container">
+      <!-- TABS: Kategorien -->
+      <div class="gl-tabs">
+        ${renderGrundlagenTabs()}
       </div>
       
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem;">
-  `;
-  
-  Object.entries(grundlagenData).forEach(([key, kat]) => {
-    html += `
-      <div onclick="selectGrundlagenKategorie('${key}')" 
-           style="background: var(--bg-secondary); border: 2px solid ${kat.farbe}; border-radius: 12px; padding: 2rem; cursor: pointer; transition: all 0.3s; box-shadow: 0 2px 8px rgba(0,0,0,0.2);"
-           onmouseover="this.style.transform='translateY(-4px)'; this.style.boxShadow='0 8px 16px rgba(0,0,0,0.3)';"
-           onmouseout="this.style.transform=''; this.style.boxShadow='0 2px 8px rgba(0,0,0,0.2)';">
-        <div style="font-size: 3rem; text-align: center; margin-bottom: 1rem;">${kat.icon}</div>
-        <h3 style="color: ${kat.farbe}; text-align: center; margin-bottom: 0.5rem; font-size: 1.3rem;">${kat.name}</h3>
-        <p style="color: var(--text-secondary); text-align: center; font-style: italic; font-size: 0.9rem; margin-bottom: 1rem;">${kat.subtitle}</p>
-        <p style="color: var(--text-secondary); text-align: center; font-size: 0.85rem; line-height: 1.5;">${kat.beschreibung}</p>
-        <div style="text-align: center; margin-top: 1rem; color: ${kat.farbe}; font-weight: 600;">${kat.essays.length} Essay${kat.essays.length > 1 ? 's' : ''} →</div>
-      </div>
-    `;
-  });
-  
-  html += `
-      </div>
-      
-      <div style="background: var(--bg-secondary); border-radius: 12px; padding: 2rem; border: 1px solid var(--border); margin-top: 3rem;">
-        <h3 style="color: var(--text-primary); margin-bottom: 1rem;">💡 Über diese Sektion</h3>
-        <p style="color: var(--text-secondary); line-height: 1.7; margin-bottom: 1rem;">
-          Diese 41 Essays bilden eine Einführung in das linke Denken. Sie sind bewusst kurz gehalten (300-600 Worte), 
-          um einen schnellen Einstieg zu ermöglichen, ohne in akademische Tiefe zu verfallen.
-        </p>
-        <p style="color: var(--text-secondary); line-height: 1.7;">
-          Jeder Essay kann für sich stehen, aber zusammen ergeben sie ein Gesamtbild – eine Landkarte der Begriffe, 
-          Werte, Praktiken und Widersprüche, die das linke Wesen ausmachen.
-        </p>
+      <!-- ESSAYS GRID mit Inline-Expansion -->
+      <div class="gl-essays-grid">
+        ${renderEssaysWithExpansion(kategorie)}
       </div>
     </div>
   `;
@@ -23431,53 +23231,17 @@ function renderGrundlagenWelcome(container) {
   container.innerHTML = html;
 }
 
-function renderGrundlagenTwoColumn(container) {
-  const kategorie = grundlagenData[selectedGrundlagenKategorie];
-  
-  let html = `
-    <div class="grundlagen-vertical-layout">
-      <!-- HEADER: Zurück-Button + Kategorie-Info -->
-      <div class="grundlagen-toc-header" style="border-bottom: 2px solid ${kategorie.farbe};">
-        <button onclick="backToGrundlagenUebersicht()" class="back-btn">
-          ← Kategorien
-        </button>
-        <div class="kategorie-info">
-          <span class="kategorie-icon">${kategorie.icon}</span>
-          <span class="kategorie-name" style="color: ${kategorie.farbe};">${kategorie.name}</span>
-          <span class="kategorie-count">· ${kategorie.essays.length} Essays</span>
-        </div>
-      </div>
-      
-      <!-- OBEN: Inhaltsverzeichnis in 2 Spalten -->
-      <div class="grundlagen-toc-area">
-        <div class="grundlagen-toc-grid">
-          ${renderTocItems(kategorie)}
-        </div>
-      </div>
-      
-      <!-- UNTEN: Essay-Content (nur Lang-Text) -->
-      <div class="grundlagen-essay-area">
-        ${renderEssayBodyOnly()}
-      </div>
-    </div>
-  `;
-  
-  container.innerHTML = html;
-}
-
-function renderTocItems(kategorie) {
+function renderGrundlagenTabs() {
   let html = '';
   
-  kategorie.essays.forEach(essay => {
-    const isActive = selectedGrundlagenEssay === essay.id;
+  Object.entries(grundlagenData).forEach(([key, kat]) => {
+    const isActive = activeGrundlagenTab === key;
     html += `
-      <div class="toc-item ${isActive ? 'active' : ''}" 
-           onclick="selectGrundlagenEssay('${selectedGrundlagenKategorie}', '${essay.id}')">
-        <div class="toc-item-icon">${essay.icon}</div>
-        <div class="toc-item-content">
-          <div class="toc-item-title">${essay.titel}</div>
-          <div class="toc-item-summary">${essay.kurz}</div>
-        </div>
+      <div class="gl-tab ${isActive ? 'active' : ''}" 
+           onclick="switchGrundlagenTab('${key}')"
+           style="${isActive ? 'border-color: ' + kat.farbe + '; color: ' + kat.farbe : ''}">
+        <span class="gl-tab-icon">${kat.icon}</span>
+        <span>${kat.name}</span>
       </div>
     `;
   });
@@ -23485,102 +23249,123 @@ function renderTocItems(kategorie) {
   return html;
 }
 
-function renderEssayBodyOnly() {
-  // Wenn kein Essay gewählt: Platzhalter
-  if (!selectedGrundlagenEssay) {
-    return `
-      <div class="essay-select-prompt">
-        <div class="icon">☝️</div>
-        <h3>Wähle einen Essay</h3>
-        <p>Klicke oben auf einen Eintrag, um den vollständigen Text zu lesen.</p>
+function renderEssaysWithExpansion(kategorie) {
+  let html = '';
+  const essays = kategorie.essays;
+  
+  // Essays paarweise durchgehen (für 2-Spalten-Grid mit Expansion dazwischen)
+  for (let i = 0; i < essays.length; i += 2) {
+    const essay1 = essays[i];
+    const essay2 = essays[i + 1];
+    
+    // Erste Karte
+    html += renderEssayCard(essay1, kategorie);
+    
+    // Zweite Karte (falls vorhanden)
+    if (essay2) {
+      html += renderEssayCard(essay2, kategorie);
+    } else {
+      // Leerer Platzhalter für ungerade Anzahl
+      html += '<div></div>';
+    }
+    
+    // Expansion nach diesem Paar (wenn einer der beiden aktiv ist)
+    if (activeGrundlagenEssay === essay1.id || (essay2 && activeGrundlagenEssay === essay2.id)) {
+      const activeEssay = activeGrundlagenEssay === essay1.id ? essay1 : essay2;
+      html += renderExpansion(activeEssay);
+    }
+  }
+  
+  return html;
+}
+
+function renderEssayCard(essay, kategorie) {
+  const isActive = activeGrundlagenEssay === essay.id;
+  
+  return `
+    <div class="gl-essay-card ${isActive ? 'active' : ''}" 
+         onclick="toggleGrundlagenEssay('${essay.id}')"
+         style="${isActive ? 'border-color: ' + kategorie.farbe : ''}">
+      <div class="gl-essay-card-header">
+        <span class="gl-essay-card-icon">${essay.icon}</span>
+        <span class="gl-essay-card-title">${essay.titel}</span>
       </div>
-    `;
-  }
-  
-  const kategorie = grundlagenData[selectedGrundlagenKategorie];
-  const essay = kategorie.essays.find(e => e.id === selectedGrundlagenEssay);
-  
-  if (!essay) {
-    return '<div class="essay-select-prompt"><p>Essay nicht gefunden.</p></div>';
-  }
-  
-  // NUR den Lang-Text anzeigen - keine Wiederholung von Titel/Icon/Kurz
+      <div class="gl-essay-card-summary">${essay.kurz}</div>
+    </div>
+  `;
+}
+
+function renderExpansion(essay) {
   if (!essay.lang) {
     return `
-      <div class="essay-select-prompt">
-        <div class="icon">📝</div>
-        <h3>Essay in Arbeit</h3>
-        <p>Der ausführliche Text zu "${essay.titel}" wird bald ergänzt.</p>
+      <div class="gl-expansion">
+        <div class="gl-expansion-body" style="text-align: center; color: var(--text-secondary);">
+          <p>📝 Der ausführliche Text zu "${essay.titel}" wird bald ergänzt.</p>
+        </div>
       </div>
     `;
   }
   
   return `
-    <div class="essay-only-body">
-      ${formatEssayText(essay.lang)}
+    <div class="gl-expansion">
+      <div class="gl-expansion-body">
+        ${formatGrundlagenText(essay.lang)}
+      </div>
     </div>
   `;
 }
 
-// Behalte die alte Funktion für Kompatibilität, aber sie wird nicht mehr verwendet
-function renderEssayContent() {
-  return renderEssayBodyOnly();
-}
-
-function formatEssayText(text) {
-  // Formatiere den Essay-Text mit Absätzen und Überschriften
+function formatGrundlagenText(text) {
+  // Einfach nur Absätze - keine künstlichen Überschriften
   return text
     .split('\n\n')
     .map(paragraph => {
       paragraph = paragraph.trim();
       if (!paragraph) return '';
-      
-      // Römische Zahlen als Überschriften (I., II., III., etc.)
-      if (paragraph.match(/^[IVX]+\.\s+/)) {
-        return `<h2 class="essay-section-heading">${paragraph}</h2>`;
-      }
-      
-      // Unterpunkte als kleinere Überschriften (1., 2., 3., etc.)
-      if (paragraph.match(/^\d+\.\s+[A-Z]/)) {
-        return `<h3 class="essay-subsection-heading">${paragraph}</h3>`;
-      }
-      
-      // Normale Absätze
-      return `<p class="essay-paragraph">${paragraph}</p>`;
+      return `<p>${paragraph}</p>`;
     })
     .filter(p => p)
     .join('\n');
 }
 
-function renderEssayPlaceholder() {
-  return `
-    <div class="essay-placeholder">
-      <div style="font-size: 2.5rem; margin-bottom: 1rem;">📝</div>
-      <p style="font-size: 1.1rem; margin-bottom: 0.5rem; font-weight: 600;">Ausführlicher Essay folgt bald</p>
-      <p style="font-size: 0.9rem; opacity: 0.7;">Dieser Essay befindet sich noch in Arbeit und wird in Kürze ergänzt.</p>
-    </div>
-  `;
+function switchGrundlagenTab(key) {
+  activeGrundlagenTab = key;
+  activeGrundlagenEssay = null;  // Reset expansion bei Tab-Wechsel
+  initGrundlagen();
 }
 
-function selectGrundlagenKategorie(key) {
-  selectedGrundlagenKategorie = key;
-  selectedGrundlagenEssay = null;  // Kein Essay vorausgewählt
+function toggleGrundlagenEssay(essayId) {
+  // Toggle: Wenn schon aktiv, schließen; sonst öffnen
+  if (activeGrundlagenEssay === essayId) {
+    activeGrundlagenEssay = null;
+  } else {
+    activeGrundlagenEssay = essayId;
+  }
   initGrundlagen();
+  
+  // Scroll zur Expansion wenn geöffnet
+  if (activeGrundlagenEssay) {
+    setTimeout(() => {
+      const expansion = document.querySelector('.gl-expansion');
+      if (expansion) {
+        expansion.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      }
+    }, 50);
+  }
+}
+
+// Legacy-Funktionen für Kompatibilität
+function selectGrundlagenKategorie(key) {
+  switchGrundlagenTab(key);
 }
 
 function selectGrundlagenEssay(kategorie, essayId) {
-  selectedGrundlagenKategorie = kategorie;
-  selectedGrundlagenEssay = essayId;
-  initGrundlagen();
-  
-  // Scroll zum Top der Content-Area
-  const contentArea = document.querySelector('.grundlagen-content-area');
-  if (contentArea) contentArea.scrollTop = 0;
+  activeGrundlagenTab = kategorie;
+  toggleGrundlagenEssay(essayId);
 }
 
 function backToGrundlagenUebersicht() {
-  selectedGrundlagenKategorie = null;
-  selectedGrundlagenEssay = null;
+  activeGrundlagenEssay = null;
   initGrundlagen();
 }
 
@@ -23603,6 +23388,8 @@ window.setMediathekAnsicht = setMediathekAnsicht;
 
 // Grundlagen exports
 window.initGrundlagen = initGrundlagen;
+window.switchGrundlagenTab = switchGrundlagenTab;
+window.toggleGrundlagenEssay = toggleGrundlagenEssay;
 window.selectGrundlagenKategorie = selectGrundlagenKategorie;
 window.selectGrundlagenEssay = selectGrundlagenEssay;
 window.backToGrundlagenUebersicht = backToGrundlagenUebersicht;
