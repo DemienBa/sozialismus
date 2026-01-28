@@ -11074,7 +11074,7 @@
       <h2>🎨 Ästhetik wählen</h2>
       <p style="color: var(--text-secondary); margin-bottom: 1.5rem;">Wie soll das Wesen erscheinen?</p>
       <div class="theme-grid">
-        <div class="theme-option active" data-theme="default" onclick="setTheme('default')">
+        <div class="theme-option active" data-theme="myzel" onclick="setTheme('myzel')">
           <div class="icon">🏛️</div>
           <div class="name">Monument</div>
           <div class="desc">Klassisch, dokumentarisch</div>
@@ -20867,7 +20867,7 @@ highlightCombinable('ansicht', 'netzwerk');
 // THEME-SYSTEM
 // ══════════════════════════════════════════════════════════════════════
 
-let currentTheme = localStorage.getItem('wesen-theme') || 'default';
+let currentTheme = localStorage.getItem('wesen-theme') || 'myzel';
 
 function setTheme(theme) {
   // Entferne alle Theme-Klassen
