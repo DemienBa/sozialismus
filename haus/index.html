@@ -10987,12 +10987,6 @@
         </div>
         <div class="gruppe-inhalt" id="gruppe-ansicht-inhalt">
           <div class="linse-wrapper sub">
-            <div class="linse werkzeug sub" onclick="openThemeModal()" title="Ästhetik">
-              🎨
-              <span class="linse-label">Ästhetik</span>
-            </div>
-          </div>
-          <div class="linse-wrapper sub">
             <div class="linse ansicht sub" data-typ="ansicht" data-id="netzwerk" onclick="setAnsicht('netzwerk')" title="Netzwerk">
               🕸️
               <span class="linse-label">Netzwerk</span>
@@ -11020,6 +11014,12 @@
             <div class="linse werkzeug sub" data-typ="werkzeug" data-id="zufall" onclick="zeigeZufall()" title="Zufällige Position">
               🎲
               <span class="linse-label">Zufall</span>
+            </div>
+          </div>
+          <div class="linse-wrapper sub">
+            <div class="linse werkzeug sub" onclick="openThemeModal()" title="Ästhetik">
+              🎨
+              <span class="linse-label">Ästhetik</span>
             </div>
           </div>
         </div>
@@ -11625,7 +11625,7 @@ if (document.readyState === 'loading') {
     loadZimmerBeschreibungen();
     loadRessourcen();
     loadSatzbausteine();
-    // Personen NICHT hier laden - wird später nach Netzwerk-Init geladen
+    loadPersonenData(); // Personen beim Start laden
   });
 } else {
   // DOM ist schon bereit - kurz warten damit alle Skripte geladen sind
@@ -11634,7 +11634,7 @@ if (document.readyState === 'loading') {
     loadZimmerBeschreibungen();
     loadRessourcen();
     loadSatzbausteine();
-    // Personen NICHT hier laden - wird später nach Netzwerk-Init geladen
+    loadPersonenData(); // Personen beim Start laden
   }, 100);
 }
 
